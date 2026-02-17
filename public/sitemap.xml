@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core Pages -->
+  <url>
+    <loc>https://www.sociobhaarat.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/testimonials</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/hiring</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Digital Marketing -->
+  <url>
+    <loc>https://www.sociobhaarat.com/digital-marketing/content-marketing</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/digital-marketing/social-media</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/digital-marketing/website-seo</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/digital-marketing/google-map-marketing</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/digital-marketing/paid-marketing</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/digital-marketing/orm-services</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Design & Development -->
+  <url>
+    <loc>https://www.sociobhaarat.com/design-development/web-development</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/design-development/wordpress-development</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/design-development/app-development</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/design-development/ui-ux-design</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/design-development/ecommerce-development</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- WhatsApp Marketing -->
+  <url>
+    <loc>https://www.sociobhaarat.com/whatsapp-marketing/bulk-broadcasting</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/whatsapp-marketing/custom-chatbot</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/whatsapp-marketing/number-verification</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Performance Marketing -->
+  <url>
+    <loc>https://www.sociobhaarat.com/performance-marketing</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Packages -->
+  <url>
+    <loc>https://www.sociobhaarat.com/packages/digital-marketing</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/packages/website-development</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/packages/whatsapp-marketing</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/packages/performance-marketing</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Our Work -->
+  <url>
+    <loc>https://www.sociobhaarat.com/our-work/meta-ads</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/our-work/web-development</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/our-work/content-work</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.sociobhaarat.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
