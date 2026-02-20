@@ -9,14 +9,73 @@ const SocialMedia = () => {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
-            Social Media <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Marketing</span>
+            Grow Your Brand with Strategic <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Social Media Marketing</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-            Build a powerful social presence that drives engagement, loyalty, and conversions across all major platforms.
+            We help businesses connect with their target audience, increase brand awareness, and drive measurable growth through result-oriented social media strategies
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8" onClick={() => navigate("/contact")} >
             Start Growing Today
           </Button>
+        </div>
+      </section>
+
+      {/* Why choose Us Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="font-display text-4xl font-bold mb-6">
+            Why Sociobhaarat Excels in Social Media Marketing
+          </h2>
+
+          <p className="text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
+            We combine creativity, strategy, and data-driven execution to deliver impactful social media campaigns that generate real business results.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Experienced Social Media Experts",
+              "Customized Marketing Strategies",
+              "Creative & Engaging Content",
+              "Targeted Paid Advertising Campaigns",
+              "Real-Time Performance Tracking",
+              "Transparent Reporting & Analytics",
+            ].map((item, index) => (
+              <div key={index} className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-lg transition">
+                <Check className="h-8 w-8 text-primary mb-4 mx-auto" />
+                <p className="font-semibold">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why do you need Social Media Marketing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="font-display text-4xl font-bold mb-6">
+            Why Do You Need Social Media Marketing?
+          </h2>
+
+          <p className="text-muted-foreground text-lg mb-12 max-w-3xl mx-auto">
+            Social media is where your customers spend their time, discover brands, and make purchasing decisions.
+            A strong social presence helps you stay visible, relevant, and competitive.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Boost Brand Awareness",
+              "Increase Customer Engagement",
+              "Generate Qualified Leads",
+              "Build Brand Trust & Authority",
+              "Drive Website Traffic",
+              "Convert Followers into Loyal Customers",
+            ].map((point, index) => (
+              <div key={index} className="bg-card p-6 rounded-xl border border-border">
+                <TrendingUp className="h-8 w-8 text-secondary mb-4 mx-auto" />
+                <p className="font-semibold">{point}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -59,6 +118,28 @@ const SocialMedia = () => {
                 <div>
                   <h3 className="font-bold text-lg mb-2">{service}</h3>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="font-display text-4xl font-bold mb-12">
+            Our Impact in Numbers
+          </h2>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { number: "150+", label: "Brands Served" },
+              { number: "500K+", label: "Leads Generated" },
+              { number: "10M+", label: "Audience Reached" },
+              { number: "98%", label: "Client Satisfaction" },
+            ].map((item, index) => (
+              <div key={index} className="bg-card p-8 rounded-xl border border-border shadow-md">
+                <h3 className="text-3xl font-bold text-primary mb-2">{item.number}</h3>
+                <p className="text-muted-foreground">{item.label}</p>
               </div>
             ))}
           </div>
