@@ -9,14 +9,107 @@ const PaidMarketing = () => {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
-            Paid <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Marketing Services</span>
+            Drive Instant Traffic & <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Leads with Paid Marketing</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-            Drive instant traffic and conversions with strategic paid advertising campaigns across Google, Facebook, Instagram, and more.
+            We create high-converting Meta and Google ad campaigns that drive targeted traffic, generate quality leads, and maximize return on investment through data-driven paid marketing strategies
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"  onClick={() => navigate("/contact")} >
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8" onClick={() => navigate("/contact")} >
             Start Your Campaign
           </Button>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="font-display text-4xl font-bold mb-4">
+            Why Choose Us
+          </h2>
+          <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
+            We combine performance-driven strategies, audience targeting precision,
+            and continuous optimization to deliver profitable and scalable paid advertising campaigns.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Certified Ads Specialists",
+              "Advanced Audience Targeting",
+              "ROI-Focused Campaign Strategy",
+              "A/B Testing & Optimization",
+              "Budget Control & Scaling",
+              "Transparent Reporting & Insights",
+            ].map((point, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition"
+              >
+                <h3 className="font-semibold text-lg">{point}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* Why Paid Marketing Matters */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="font-display text-4xl font-bold mb-4">
+            Why Paid Marketing Matters
+          </h2>
+          <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Paid marketing helps businesses reach their ideal customers instantly and
+            generate faster results compared to organic strategies. With precise
+            targeting and measurable performance, Meta and Google Ads increase visibility,
+            drive traffic, and boost conversions efficiently.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Instant visibility on search & social platforms",
+              "Highly targeted audience reach",
+              "Faster lead generation",
+              "Measurable ROI",
+              "Scalable growth opportunities",
+            ].map((point, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-xl p-6 shadow-sm"
+              >
+                <p className="font-medium">{point}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our services */}   
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-display text-4xl font-bold mb-12 text-center">
+            Our Paid Marketing Services
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "Meta (Facebook & Instagram) Ads",
+              "Google Search Ads",
+              "Google Display Ads",
+              "YouTube Video Ads",
+              "Remarketing & Retargeting Campaigns",
+              "Conversion Tracking Setup",
+              "Landing Page Optimization",
+              "Performance Analysis & Reporting",
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition"
+              >
+                <h3 className="font-semibold text-lg">{service}</h3>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
