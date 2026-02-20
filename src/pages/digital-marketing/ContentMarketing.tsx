@@ -12,12 +12,12 @@ const ContentMarketing = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
-                Content <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Marketing Services</span>
+                Engage, Educate & Convert with  <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Powerful Content</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Drive engagement, build authority, and convert your audience with strategic content that resonates. Our content marketing services deliver measurable results through compelling storytelling and data-driven strategies.
+                We create high-quality, value-driven content that builds brand authority, attracts the right audience, and converts readers into loyal customers
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"  onClick={() => navigate("/contact")} >
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8" onClick={() => navigate("/contact")} >
                 Get Started Today
               </Button>
             </div>
@@ -47,6 +47,39 @@ const ContentMarketing = () => {
         </div>
       </section>
 
+      {/* Why choose us */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="font-display text-4xl font-bold mb-6">
+            Why Choose Our Content Marketing Services?
+          </h2>
+
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+            We combine creativity, research, and SEO-driven strategies to deliver
+            impactful content that builds trust and drives measurable business growth.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "SEO-Optimized Content Creation",
+              "Industry-Focused Research",
+              "Consistent Brand Voice",
+              "Multi-Platform Content Strategy",
+              "Conversion-Focused Writing",
+              "Performance Tracking & Reporting",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-card p-6 rounded-xl shadow-lg border border-border hover:shadow-xl transition"
+              >
+                <Check className="h-8 w-8 text-primary mb-4 mx-auto" />
+                <p className="font-semibold">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* What is Content Marketing */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
@@ -57,6 +90,38 @@ const ContentMarketing = () => {
           <p className="text-lg text-muted-foreground leading-relaxed">
             Unlike traditional advertising, content marketing provides value to your audience through educational, entertaining, or inspiring content that builds trust and establishes your brand as an industry authority. This approach generates 3x more leads than traditional marketing while costing 62% less.
           </p>
+        </div>
+      </section>
+
+      {/* Why Content Marketing Matters*/}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-display text-4xl font-bold mb-6 text-center">
+            Why Content Marketing Matters
+          </h2>
+
+          <p className="text-lg text-muted-foreground text-center max-w-4xl mx-auto mb-12 leading-relaxed">
+            Content marketing helps businesses build trust, establish authority,
+            and attract potential customers organically. High-quality content improves
+            search engine rankings and keeps your audience engaged. A strong content
+            strategy not only drives traffic but also nurtures leads and increases
+            long-term brand loyalty.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "Improve search engine visibility",
+              "Build brand credibility",
+              "Increase website traffic",
+              "Generate qualified leads",
+              "Support social media & paid campaigns",
+            ].map((point, index) => (
+              <div key={index} className="flex items-start gap-4 bg-card p-6 rounded-lg border border-border">
+                <TrendingUp className="h-6 w-6 text-primary mt-1" />
+                <p>{point}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -80,6 +145,32 @@ const ContentMarketing = () => {
                 <Check className="h-8 w-8 text-primary mb-4" />
                 <h3 className="font-bold text-xl mb-3">{service.title}</h3>
                 <p className="text-muted-foreground">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-display text-4xl font-bold mb-12 text-center">
+            Our Content Marketing Impact
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              "Increase organic traffic by up to 300%",
+              "Generate 3x more leads than traditional marketing",
+              "Build long-term brand authority and trust",
+              "Improve search engine rankings",
+              "Engage and educate your target audience",
+              "Create evergreen assets that deliver ROI over time",
+              "Support your sales team with valuable resources",
+              "Reduce customer acquisition costs",
+            ].map((benefit, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <Check className="h-6 w-6 text-primary mt-1" />
+                <p className="text-lg">{benefit}</p>
               </div>
             ))}
           </div>
