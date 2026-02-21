@@ -20,6 +20,36 @@ const ORMServices = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/40">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-display text-4xl font-bold mb-6 text-center">
+            Why Choose Us
+          </h2>
+
+          <p className="text-center text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+            We combine strategic monitoring, professional response management, and advanced SEO techniques to protect and enhance your brand’s online image.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "24/7 Reputation Monitoring",
+              "Expert Review Response Management",
+              "Negative Content Suppression",
+              "SEO-Based Brand Protection",
+              "Crisis Management Strategies",
+              "Transparent Reporting & Analysis",
+            ].map((point, index) => (
+              <div key={index} className="bg-card p-6 rounded-xl border border-border shadow-md">
+                <div className="flex items-start gap-4">
+                  <Shield className="h-6 w-6 text-primary mt-1" />
+                  <p className="text-lg font-medium">{point}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-display text-4xl font-bold mb-8 text-center">Why ORM Matters</h2>

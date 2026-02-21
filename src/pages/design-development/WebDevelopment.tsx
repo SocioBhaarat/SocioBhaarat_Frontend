@@ -56,7 +56,7 @@ const WebDevelopment = () => {
                 desc: "Clear communication, milestone tracking, and on-time project completion."
               },
             ].map((feature, index) => (
-              <div key={index} className="bg-card p-6 rounded-lg shadow-lg border border-border text-center">
+              <div key={index} className="bg-card p-6 rounded-lg hover:shadow-lg border border-border text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="h-8 w-8 text-primary" />
                 </div>
@@ -71,7 +71,7 @@ const WebDevelopment = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">Our Development Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               "Corporate Websites",
               "E-commerce Platforms",
@@ -83,14 +83,16 @@ const WebDevelopment = () => {
               "Website Maintenance",
               "Performance Optimization",
             ].map((service, index) => (
-              <div key={index} className="bg-card p-6 rounded-lg shadow-lg border border-border">
-                <Check className="h-8 w-8 text-primary mb-4" />
-                <h3 className="font-bold text-lg">{service}</h3>
+              <div key={index} className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-lg transition text-center">
+                <Check className="h-8 w-8 text-primary mb-4 mx-auto" />
+                <p className="font-semibold mx-auto ">{service}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-display text-4xl font-bold mb-10 text-center">
@@ -129,10 +131,11 @@ const WebDevelopment = () => {
           </p>
 
           <div className="relative">
-            {/* Vertical Line */}
-            <div className="hidden md:block absolute left-1/2 top-0 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary via-secondary to-accent rounded-full"></div>
 
-            <div className="space-y-16">
+            {/* Blue Vertical Line */}
+            <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-[3px] bg-blue-500/30 rounded-full"></div>
+
+            <div className="space-y-14">
               {[
                 {
                   title: "Requirement Analysis & Planning",
@@ -161,24 +164,24 @@ const WebDevelopment = () => {
               ].map((step, index) => (
                 <div
                   key={index}
-                  className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  className={`relative flex flex-col md:flex-row items-center md:items-stretch ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                     }`}
                 >
-                  {/* Step Content */}
-                  <div className="md:w-1/2 px-6">
-                    <div className="bg-card p-8 rounded-2xl shadow-lg border border-border hover:shadow-2xl transition duration-300">
+                  {/* Content Card */}
+                  <div className="md:w-1/2 px-4">
+                    <div className="bg-card p-8 rounded-2xl shadow-md border border-border hover:shadow-xl transition-all duration-300">
                       <h3 className="font-bold text-xl mb-4">
                         {step.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed text-sm">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         {step.desc}
                       </p>
                     </div>
                   </div>
 
-                  {/* Center Circle */}
-                  <div className="relative z-10 my-6 md:my-0">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary via-secondary to-accent flex items-center justify-center text-white font-bold text-lg shadow-xl">
+                  {/* Blue Step Circle */}
+                  <div className="relative z-10 flex items-center justify-center my-6 md:my-0">
+                    <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-lg shadow-lg ring-4 ring-blue-100">
                       {index + 1}
                     </div>
                   </div>
