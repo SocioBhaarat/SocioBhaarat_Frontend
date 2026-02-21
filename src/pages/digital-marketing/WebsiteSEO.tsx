@@ -4,8 +4,42 @@ import { useNavigate } from "react-router-dom";
 
 const WebsiteSEO = () => {
   const navigate = useNavigate();
+
+  const services = [
+    { icon: Search, title: "Keyword Research", desc: "In-depth keyword analysis to target the right search terms" },
+    { icon: FileText, title: "On-Page SEO", desc: "Optimize content, meta tags, and site structure" },
+    { icon: Link2, title: "Link Building", desc: "High-quality backlinks from authoritative websites" },
+    { icon: TrendingUp, title: "Technical SEO", desc: "Site speed, mobile optimization, and crawlability" },
+    {
+      icon: BarChart3, title: "SEO Analytics & Reporting", desc: "Transparent monthly reports with traffic, rankings, and performance insights.",
+    },
+    {
+      icon: ShieldCheck, title: "Local SEO", desc: "Optimize Google Business Profile and local listings to attract nearby customers.",
+    },
+  ]
+
+  const whyChooseUs = [
+    "Experienced SEO Specialists",
+    "In-Depth Keyword Research",
+    "White-Hat SEO Techniques",
+    "Technical & On-Page Optimization",
+    "High-Quality Link Building",
+    "Transparent Monthly Reporting",
+  ]
+
+  const WhyMatters = [
+    "Most online journeys start with search engines, making SEO essential for visibility.",
+    "Higher rankings increase trust and credibility among users.",
+    "SEO generates more qualified leads compared to traditional marketing.",
+    "Organic traffic is cost-effective and sustainable long-term.",
+    "Local SEO helps businesses attract nearby customers.",
+    "SEO improves overall website performance and user experience.",
+  ]
+
   return (
     <div className="min-h-screen bg-background">
+
+      {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
@@ -20,7 +54,7 @@ const WebsiteSEO = () => {
         </div>
       </section>
 
-    {/* Why Choose Us */}
+      {/* Why Choose Us */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl text-center">
           <h2 className="font-display text-4xl font-bold mb-6">Why Choose Us</h2>
@@ -30,14 +64,7 @@ const WebsiteSEO = () => {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "Experienced SEO Specialists",
-              "In-Depth Keyword Research",
-              "White-Hat SEO Techniques",
-              "Technical & On-Page Optimization",
-              "High-Quality Link Building",
-              "Transparent Monthly Reporting",
-            ].map((point, index) => (
+            {whyChooseUs.map((point, index) => (
               <div
                 key={index}
                 className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-lg transition"
@@ -62,14 +89,7 @@ const WebsiteSEO = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              "Most online journeys start with search engines, making SEO essential for visibility.",
-              "Higher rankings increase trust and credibility among users.",
-              "SEO generates more qualified leads compared to traditional marketing.",
-              "Organic traffic is cost-effective and sustainable long-term.",
-              "Local SEO helps businesses attract nearby customers.",
-              "SEO improves overall website performance and user experience.",
-            ].map((point, index) => (
+            {WhyMatters.map((point, index) => (
               <div key={index} className="flex items-start gap-4">
                 <Check className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                 <p className="text-lg">{point}</p>
@@ -79,23 +99,12 @@ const WebsiteSEO = () => {
         </div>
       </section>
 
-
+      {/*Our  Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">Our SEO Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Search, title: "Keyword Research", desc: "In-depth keyword analysis to target the right search terms" },
-              { icon: FileText, title: "On-Page SEO", desc: "Optimize content, meta tags, and site structure" },
-              { icon: Link2, title: "Link Building", desc: "High-quality backlinks from authoritative websites" },
-              { icon: TrendingUp, title: "Technical SEO", desc: "Site speed, mobile optimization, and crawlability" },
-              {
-                icon: BarChart3, title: "SEO Analytics & Reporting", desc: "Transparent monthly reports with traffic, rankings, and performance insights.",
-              },
-              {
-                icon: ShieldCheck, title: "Local SEO",desc: "Optimize Google Business Profile and local listings to attract nearby customers.",
-              },
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <div key={index} className="bg-card p-6 rounded-lg shadow-lg border border-border text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="h-8 w-8 text-primary" />
@@ -108,6 +117,7 @@ const WebsiteSEO = () => {
         </div>
       </section>
 
+      {/* Why Matters */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-display text-4xl font-bold mb-8 text-center">Why SEO Matters</h2>
