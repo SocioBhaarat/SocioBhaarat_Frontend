@@ -112,9 +112,12 @@ const WebDevelopment = () => {
               "WordPress",
               "And many more...",
             ].map((tech, index) => (
-              <div key={index} className="bg-card p-4 rounded-lg shadow border border-border text-center font-semibold hover:bg-primary/5 transition">
+              <span
+                key={index}
+                className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition"
+              >
                 {tech}
-              </div>
+              </span>
             ))}
           </div>
         </div>
