@@ -2,10 +2,83 @@ import { Button } from "@/components/ui/button";
 import { Check, Code, Cpu, Layers, Rocket, Shield, Smartphone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+
+
 const AppDevelopment = () => {
   const navigate = useNavigate();
+
+  const process = [
+    "Requirement Analysis & Planning",
+    "Wireframing & UI/UX Design",
+    "App Development",
+    "Testing & Quality Assurance",
+    "Deployment (Play Store / App Store)",
+    "Post-Launch Support & Updates",
+  ]
+
+  const Technologies = [
+    "Flutter",
+    "React Native",
+    "Kotlin",
+    "Swift",
+    "Node.js",
+    "Firebase",
+    "MongoDB",
+    "MySQL",
+  ]
+
+  const whyChooseUs = [
+    "Experienced Mobile App Developers",
+    "Custom App Solutions",
+    "User-Centric UI/UX Design",
+    "Cross-Platform & Native Development",
+    "Secure & Scalable Architecture",
+    "Timely Delivery & Transparent Process",
+  ]
+
+  const services = [
+    {
+      title: "Android App Development",
+      icon: <Smartphone className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "iOS App Development",
+      icon: <Layers className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "Cross-Platform App Development",
+      icon: <Code className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "Hybrid App Development",
+      icon: <Cpu className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "E-commerce App Development",
+      icon: <Rocket className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "On-Demand Service Apps",
+      icon: <Shield className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "App UI/UX Design",
+      icon: <Layers className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "App Testing & QA",
+      icon: <Check className="h-6 w-6 text-primary" />,
+    },
+    {
+      title: "App Maintenance & Updates",
+      icon: <Smartphone className="h-6 w-6 text-primary" />,
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-background">
+
+      {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
@@ -33,14 +106,7 @@ const AppDevelopment = () => {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "Experienced Mobile App Developers",
-              "Custom App Solutions",
-              "User-Centric UI/UX Design",
-              "Cross-Platform & Native Development",
-              "Secure & Scalable Architecture",
-              "Timely Delivery & Transparent Process",
-            ].map((item, index) => (
+            {whyChooseUs.map((item, index) => (
               <div
                 key={index}
                 className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-lg transition"
@@ -76,44 +142,7 @@ const AppDevelopment = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {[
-              {
-                title: "Android App Development",
-                icon: <Smartphone className="h-6 w-6 text-primary" />,
-              },
-              {
-                title: "iOS App Development",
-                icon: <Layers className="h-6 w-6 text-primary" />,
-              },
-              {
-                title: "Cross-Platform App Development",
-                icon: <Code className="h-6 w-6 text-primary" />,
-              },
-              {
-                title: "Hybrid App Development",
-                icon: <Cpu className="h-6 w-6 text-primary" />,
-              },
-              {
-                title: "E-commerce App Development",
-                icon: <Rocket className="h-6 w-6 text-primary" />,
-              },
-              {
-                title: "On-Demand Service Apps",
-                icon: <Shield className="h-6 w-6 text-primary" />,
-              },
-              {
-                title: "App UI/UX Design",
-                icon: <Layers className="h-6 w-6 text-primary" />,
-              },
-              {
-                title: "App Testing & QA",
-                icon: <Check className="h-6 w-6 text-primary" />,
-              },
-              {
-                title: "App Maintenance & Updates",
-                icon: <Smartphone className="h-6 w-6 text-primary" />,
-              },
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <div
                 key={index}
                 className="group bg-card p-6 rounded-2xl border border-border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
@@ -139,16 +168,7 @@ const AppDevelopment = () => {
           </h2>
 
           <div className="flex flex-wrap justify-center gap-4">
-            {[
-              "Flutter",
-              "React Native",
-              "Kotlin",
-              "Swift",
-              "Node.js",
-              "Firebase",
-              "MongoDB",
-              "MySQL",
-            ].map((tech, index) => (
+            {Technologies.map((tech, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition"
@@ -168,14 +188,7 @@ const AppDevelopment = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left ">
-            {[
-              "Requirement Analysis & Planning",
-              "Wireframing & UI/UX Design",
-              "App Development",
-              "Testing & Quality Assurance",
-              "Deployment (Play Store / App Store)",
-              "Post-Launch Support & Updates",
-            ].map((step, index) => (
+            {process.map((step, index) => (
               <div key={index} className="flex items-start gap-4">
                 <Check className="h-6 w-6 text-primary mt-1" />
                 <p className="font-medium">{step}</p>

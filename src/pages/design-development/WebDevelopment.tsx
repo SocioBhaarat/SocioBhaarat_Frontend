@@ -1,11 +1,99 @@
 import { Button } from "@/components/ui/button";
-import { Check, Code, Smartphone, Zap, Lock, Rocket, Globe, Layers } from "lucide-react";
+import { Check, Code, Smartphone, Zap, Lock, Rocket, Globe, Layers, Layout, Palette, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const WebDevelopment = () => {
   const navigate = useNavigate();
+  const services = [
+    "Corporate Websites",
+    "E-commerce Platforms",
+    "Landing Pages",
+    "Web Applications",
+    "Progressive Web Apps (PWA)",
+    "API Development & Integration",
+    "Website Redesign",
+    "Website Maintenance",
+    "Performance Optimization",
+  ]
+
+  const process = [
+    {
+      title: "Requirement Analysis & Planning",
+      desc: "We understand your goals, target audience, and business requirements to create a strategic roadmap."
+    },
+    {
+      title: "UI/UX Design",
+      desc: "Crafting intuitive, engaging, and user-focused designs that align with your brand identity."
+    },
+    {
+      title: "Frontend & Backend Development",
+      desc: "Developing scalable, secure, and high-performance architecture using modern technologies."
+    },
+    {
+      title: "Testing & Quality Assurance",
+      desc: "Comprehensive testing to ensure performance, security, responsiveness, and bug-free deployment."
+    },
+    {
+      title: "Deployment",
+      desc: "Smooth and optimized deployment with performance checks and final verification."
+    },
+    {
+      title: "Ongoing Support & Optimization",
+      desc: "Continuous monitoring, updates, and improvements to keep your website future-ready."
+    },
+  ]
+
+  const whyChooseUs = [
+    {
+      icon: Code,
+      title: "Experienced Web Developers",
+      desc: "Skilled professionals with hands-on expertise in modern frameworks and scalable architecture."
+    },
+    {
+      icon: Layers,
+      title: "Custom-Built Solutions",
+      desc: "Every website is tailored to your business needs with flexible and future-ready development."
+    },
+    {
+      icon: Smartphone,
+      title: "Responsive & Mobile-First Design",
+      desc: "Seamless experience across all devices with optimized layouts and smooth interactions."
+    },
+    {
+      icon: Globe,
+      title: "SEO-Optimized Development",
+      desc: "Built with technical SEO best practices to improve search visibility and performance."
+    },
+    {
+      icon: Lock,
+      title: "Secure & Scalable Architecture",
+      desc: "Strong security standards and scalable backend systems that grow with your business."
+    },
+    {
+      icon: Rocket,
+      title: "Transparent & Timely Delivery",
+      desc: "Clear communication, milestone tracking, and on-time project completion."
+    },
+  ]
+
+  const Technologies = [
+    "React.js",
+    "Next.js",
+    "Three.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "MySQL",
+    "GSAP",
+    "Framer",
+    "WordPress",
+    "And many more...",
+  ]
+
   return (
     <div className="min-h-screen bg-background">
+
+      {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
@@ -20,42 +108,12 @@ const WebDevelopment = () => {
         </div>
       </section>
 
+      {/* Why Choose Us */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">Why Choose Our Web Development Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Code,
-                title: "Experienced Web Developers",
-                desc: "Skilled professionals with hands-on expertise in modern frameworks and scalable architecture."
-              },
-              {
-                icon: Layers,
-                title: "Custom-Built Solutions",
-                desc: "Every website is tailored to your business needs with flexible and future-ready development."
-              },
-              {
-                icon: Smartphone,
-                title: "Responsive & Mobile-First Design",
-                desc: "Seamless experience across all devices with optimized layouts and smooth interactions."
-              },
-              {
-                icon: Globe,
-                title: "SEO-Optimized Development",
-                desc: "Built with technical SEO best practices to improve search visibility and performance."
-              },
-              {
-                icon: Lock,
-                title: "Secure & Scalable Architecture",
-                desc: "Strong security standards and scalable backend systems that grow with your business."
-              },
-              {
-                icon: Rocket,
-                title: "Transparent & Timely Delivery",
-                desc: "Clear communication, milestone tracking, and on-time project completion."
-              },
-            ].map((feature, index) => (
+            {whyChooseUs.map((feature, index) => (
               <div key={index} className="bg-card p-6 rounded-lg hover:shadow-lg border border-border text-center">
                 <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="h-8 w-8 text-primary" />
@@ -68,21 +126,12 @@ const WebDevelopment = () => {
         </div>
       </section>
 
+      {/* services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">Our Development Services</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "Corporate Websites",
-              "E-commerce Platforms",
-              "Landing Pages",
-              "Web Applications",
-              "Progressive Web Apps (PWA)",
-              "API Development & Integration",
-              "Website Redesign",
-              "Website Maintenance",
-              "Performance Optimization",
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <div key={index} className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-lg transition text-center">
                 <Check className="h-8 w-8 text-primary mb-4 mx-auto" />
                 <p className="font-semibold mx-auto ">{service}</p>
@@ -92,26 +141,14 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-
+      {/* Technologies */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-display text-4xl font-bold mb-10 text-center">
             Technologies We Use
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              "React.js",
-              "Next.js",
-              "Three.js",
-              "Node.js",
-              "Express.js",
-              "MongoDB",
-              "MySQL",
-              "GSAP",
-              "Framer",
-              "WordPress",
-              "And many more...",
-            ].map((tech, index) => (
+            {Technologies.map((tech, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition"
@@ -139,32 +176,7 @@ const WebDevelopment = () => {
             <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 h-full w-[3px] bg-blue-500/30 rounded-full"></div>
 
             <div className="space-y-14">
-              {[
-                {
-                  title: "Requirement Analysis & Planning",
-                  desc: "We understand your goals, target audience, and business requirements to create a strategic roadmap."
-                },
-                {
-                  title: "UI/UX Design",
-                  desc: "Crafting intuitive, engaging, and user-focused designs that align with your brand identity."
-                },
-                {
-                  title: "Frontend & Backend Development",
-                  desc: "Developing scalable, secure, and high-performance architecture using modern technologies."
-                },
-                {
-                  title: "Testing & Quality Assurance",
-                  desc: "Comprehensive testing to ensure performance, security, responsiveness, and bug-free deployment."
-                },
-                {
-                  title: "Deployment",
-                  desc: "Smooth and optimized deployment with performance checks and final verification."
-                },
-                {
-                  title: "Ongoing Support & Optimization",
-                  desc: "Continuous monitoring, updates, and improvements to keep your website future-ready."
-                },
-              ].map((step, index) => (
+              {process.map((step, index) => (
                 <div
                   key={index}
                   className={`relative flex flex-col md:flex-row items-center md:items-stretch ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"

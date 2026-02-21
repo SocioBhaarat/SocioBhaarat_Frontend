@@ -41,8 +41,30 @@ const UIUXDesign = () => {
     { step: "Handoff & Support", description: "Seamless transition to development team" }
   ];
 
+  const whyChooseUs = [
+    "Experienced UI/UX Designers",
+    "User-Centered Design Approach",
+    "Research-Driven Strategy",
+    "Modern & Clean Visual Design",
+    "Prototyping & Usability Testing",
+    "Transparent & Collaborative Process",
+  ]
+
+  const Technologies = [
+    "Figma",
+    "Adobe XD",
+    "Sketch",
+    "Framer",
+    "Miro",
+    "InVision",
+    "Photoshop",
+    "Illustrator"
+  ]
+
   return (
     <div className="min-h-screen bg-background">
+
+      {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
@@ -72,14 +94,7 @@ const UIUXDesign = () => {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "Experienced UI/UX Designers",
-              "User-Centered Design Approach",
-              "Research-Driven Strategy",
-              "Modern & Clean Visual Design",
-              "Prototyping & Usability Testing",
-              "Transparent & Collaborative Process",
-            ].map((item, index) => (
+            {whyChooseUs.map((item, index) => (
               <div
                 key={index}
                 className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-lg transition"
@@ -152,16 +167,7 @@ const UIUXDesign = () => {
           </h2>
 
           <div className="flex flex-wrap justify-center gap-4">
-            {[
-              "Figma",
-              "Adobe XD",
-              "Sketch",
-              "Framer",
-              "Miro",
-              "InVision",
-              "Photoshop",
-              "Illustrator"
-            ].map((tool, index) => (
+            {Technologies.map((tool, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition"
@@ -173,11 +179,12 @@ const UIUXDesign = () => {
         </div>
       </section>
 
+      {/* CTA Button */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-6 text-primary-foreground">Ready to Build with WordPress?</h2>
+          <h2 className="font-display text-4xl font-bold mb-6 text-primary-foreground">Ready to Transform Your Digital Experience?</h2>
           <p className="text-xl text-primary-foreground/90 mb-8">
-            Get a free consultation for your WordPress development needs.
+            Let’s design user experiences that drive engagement and conversions.
           </p>
           <Button size="lg" variant="secondary" className="rounded-full px-8" onClick={() => window.open("https://wa.me/919589581364", "_blank")}>
             Get Free Consultation

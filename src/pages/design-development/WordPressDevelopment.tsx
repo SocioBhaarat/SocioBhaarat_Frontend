@@ -4,8 +4,77 @@ import { useNavigate } from "react-router-dom";
 
 const WordPressDevelopment = () => {
   const navigate = useNavigate();
+  const services = [
+    {
+      title: "Custom WordPress Website Development",
+      icon: <Code2 className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: "WordPress Theme Design & Customization",
+      icon: <Palette className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: "Plugin Development & Integration",
+      icon: <Puzzle className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: "WooCommerce Development",
+      icon: <ShoppingCart className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: "Business & Corporate Websites",
+      icon: <Building2 className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: "Blog & News Portal Development",
+      icon: <Newspaper className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: "WordPress Migration Services",
+      icon: <RefreshCw className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: "Website Speed Optimization",
+      icon: <Gauge className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: "WordPress Maintenance & Security",
+      icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+    },
+  ]
+
+  const process = [
+    "Requirement Analysis & Planning",
+    "UI/UX Design",
+    "Frontend & Backend Development",
+    "Testing & Quality Assurance",
+    "Deployment",
+    "Ongoing Support & Optimization",
+  ]
+
+  const whyChooseUs = [
+    "Experienced WordPress Developers",
+    "Custom Theme Development",
+    "Plugin Integration & Customization",
+    "SEO-Optimized Structure",
+    "Mobile-Responsive Design",
+    "Secure & Performance-Focused Development",
+    "Transparent Communication & Support",
+  ]
+
+  const Technologies = [
+    "WordPress CMS",
+    "Elementor / WPBakery",
+    "WooCommerce",
+    "PHP",
+    "MySQL",
+    "HTML5 / CSS3 / JavaScript",
+    "Yoast & RankMath SEO",
+  ]
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
@@ -32,15 +101,7 @@ const WordPressDevelopment = () => {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "Experienced WordPress Developers",
-              "Custom Theme Development",
-              "Plugin Integration & Customization",
-              "SEO-Optimized Structure",
-              "Mobile-Responsive Design",
-              "Secure & Performance-Focused Development",
-              "Transparent Communication & Support",
-            ].map((item, index) => (
+            {whyChooseUs.map((item, index) => (
               <div
                 key={index}
                 className="bg-card p-6 rounded-xl border border-border shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center"
@@ -90,7 +151,6 @@ const WordPressDevelopment = () => {
       </section>
 
       {/* SERVICES */}
-
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">
@@ -98,44 +158,7 @@ const WordPressDevelopment = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Custom WordPress Website Development",
-                icon: <Code2 className="h-8 w-8 text-primary" />,
-              },
-              {
-                title: "WordPress Theme Design & Customization",
-                icon: <Palette className="h-8 w-8 text-primary" />,
-              },
-              {
-                title: "Plugin Development & Integration",
-                icon: <Puzzle className="h-8 w-8 text-primary" />,
-              },
-              {
-                title: "WooCommerce Development",
-                icon: <ShoppingCart className="h-8 w-8 text-primary" />,
-              },
-              {
-                title: "Business & Corporate Websites",
-                icon: <Building2 className="h-8 w-8 text-primary" />,
-              },
-              {
-                title: "Blog & News Portal Development",
-                icon: <Newspaper className="h-8 w-8 text-primary" />,
-              },
-              {
-                title: "WordPress Migration Services",
-                icon: <RefreshCw className="h-8 w-8 text-primary" />,
-              },
-              {
-                title: "Website Speed Optimization",
-                icon: <Gauge className="h-8 w-8 text-primary" />,
-              },
-              {
-                title: "WordPress Maintenance & Security",
-                icon: <ShieldCheck className="h-8 w-8 text-primary" />,
-              },
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <div
                 key={index}
                 className="group bg-card p-6 rounded-xl shadow-md border border-border 
@@ -161,15 +184,7 @@ const WordPressDevelopment = () => {
             Technologies & Tools We Use
           </h2>
           <div className="flex flex-wrap justify-center gap-4 text-muted-foreground">
-            {[
-              "WordPress CMS",
-              "Elementor / WPBakery",
-              "WooCommerce",
-              "PHP",
-              "MySQL",
-              "HTML5 / CSS3 / JavaScript",
-              "Yoast & RankMath SEO",
-            ].map((tech, index) => (
+            {Technologies.map((tech, index) => (
               <span
                 key={index}
                 className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition"
@@ -189,14 +204,7 @@ const WordPressDevelopment = () => {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6 text-left">
-            {[
-              "Requirement Analysis & Planning",
-              "UI/UX Design",
-              "Frontend & Backend Development",
-              "Testing & Quality Assurance",
-              "Deployment",
-              "Ongoing Support & Optimization",
-            ].map((step, index) => (
+            {process.map((step, index) => (
               <div key={index} className="flex items-start gap-4">
                 <Check className="h-6 w-6 text-primary mt-1" />
                 <p className="font-medium">{step}</p>
@@ -206,6 +214,7 @@ const WordPressDevelopment = () => {
         </div>
       </section>
 
+      {/* Final CTA Button */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="font-display text-4xl font-bold mb-6 text-primary-foreground">Ready to Build with WordPress?</h2>
