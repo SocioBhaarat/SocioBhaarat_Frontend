@@ -92,18 +92,41 @@ const WebDevelopment = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background ">
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
-            Build <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"> Powerful, Scalable & High-Performance</span> Websites
+      <section
+        className="relative pt-36 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: "url('https://img.freepik.com/premium-vector/web-development-concept-with-plexus-background-seo-website-app-design-digital-network-design_618588-1215.jpg')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/50"></div>
+
+        
+
+        <div className="relative z-10 container mx-auto max-w-6xl text-center text-white">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Build{" "}
+            <span className="text-amber-400">
+              {/* text-amber-500 */}
+              Powerful, Scalable & High-Performance
+            </span>{" "}
+            Websites
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-            We design and develop modern, responsive, and conversion-focused websites that help businesses establish a strong digital presence and drive measurable growth
+
+          <p className="text-lg sm:text-xl text-white/80 mb-10 leading-relaxed max-w-3xl mx-auto">
+            We design and develop modern, responsive, and conversion-focused websites
+            that help businesses establish a strong digital presence and drive
+            measurable growth.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8" onClick={() => navigate("/contact")} >
+
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg shadow-xl"
+            onClick={() => navigate("/contact")}
+          >
             Start Your Project
           </Button>
         </div>
@@ -113,14 +136,25 @@ const WebDevelopment = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">Why Choose Our Web Development Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((feature, index) => (
-              <div key={index} className="bg-card p-6 rounded-lg hover:shadow-lg border border-border text-center">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div
+                key={index}
+                className="relative bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/40 p-8 rounded-2xl border border-border text-center shadow-sm transition-all duration-300 ease-out 
+               hover:-translate-y-2 hover:shadow-xl"
+              >
+                {/* Icon */}
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5">
                   <feature.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.desc}</p>
+
+                <h3 className="font-bold text-xl mb-3">
+                  {feature.title}
+                </h3>
+
+                <p className="text-muted-foreground">
+                  {feature.desc}
+                </p>
               </div>
             ))}
           </div>

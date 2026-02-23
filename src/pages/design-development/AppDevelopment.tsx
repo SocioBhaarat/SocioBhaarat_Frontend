@@ -80,15 +80,40 @@ const AppDevelopment = () => {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
-            Build <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Smart, Scalable & High-Performance</span> Mobile Applications
+      <section
+        className="relative pt-36 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://img.freepik.com/free-vector/background-abstract-pixel-rain_23-2148376182.jpg')",
+        }}
+      >
+        {/* Dark Overlay for Readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60"></div>
+
+        {/* Optional Soft Glow */}
+        <div className="absolute -top-20 -left-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-secondary/30 rounded-full blur-3xl opacity-30"></div>
+
+        <div className="relative z-10 container mx-auto max-w-6xl text-center text-white">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Build{" "}
+            <span className="text-amber-400">
+              Smart, Scalable & High-Performance
+            </span>{" "}
+            Mobile Applications
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-            We design and develop user-friendly, secure, and high-performance mobile applications that enhance customer engagement, streamline operations, and drive business growth
+
+          <p className="text-lg sm:text-xl text-white/80 mb-10 leading-relaxed max-w-3xl mx-auto">
+            We design and develop user-friendly, secure, and high-performance mobile
+            applications that enhance customer engagement, streamline operations,
+            and drive business growth.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8" onClick={() => navigate("/contact")} >
+
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg shadow-xl"
+            onClick={() => navigate("/contact")}
+          >
             Start Your App Project
           </Button>
         </div>
