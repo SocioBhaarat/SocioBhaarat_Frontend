@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import QuoteSection from "@/components/ui/QuoteSection";
 import { Check, TrendingUp, Target, DollarSign, BarChart } from "lucide-react";
 import { platform } from "os";
 import { useNavigate } from "react-router-dom";
@@ -199,6 +200,10 @@ const PaidMarketing = () => {
           </div>
         </div>
       </section>
+
+      <QuoteSection
+        quote="Strategic ad campaigns that maximize ROI and accelerate business growth."
+      />
 
       {/* Final CTA Button */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">

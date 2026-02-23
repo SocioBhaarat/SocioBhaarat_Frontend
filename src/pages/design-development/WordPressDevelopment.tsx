@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import QuoteSection from "@/components/ui/QuoteSection";
 import { Building2, Check, Code2, Gauge, Layers, Newspaper, Palette, Puzzle, RefreshCw, Rocket, Shield, ShieldCheck, ShoppingCart, Smartphone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -213,6 +214,10 @@ const WordPressDevelopment = () => {
           </div>
         </div>
       </section>
+
+      <QuoteSection
+        quote="Flexible, powerful WordPress solutions built to scale with your vision."
+      />
 
       {/* Final CTA Button */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import QuoteSection from "@/components/ui/QuoteSection";
 import { Palette, Users, Smartphone, Zap, Layout, Target, Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -179,6 +180,10 @@ const UIUXDesign = () => {
         </div>
       </section>
 
+      <QuoteSection
+        quote="Design is not decoration — it’s how users experience your brand."
+      />
+
       {/* CTA Button */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto max-w-4xl text-center">
@@ -191,6 +196,8 @@ const UIUXDesign = () => {
           </Button>
         </div>
       </section>
+
+
 
       {/* <div className="pt-32 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">

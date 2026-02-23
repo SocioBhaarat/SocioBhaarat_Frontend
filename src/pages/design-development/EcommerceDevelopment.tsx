@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import QuoteSection from "@/components/ui/QuoteSection";
 import {
   ShoppingCart,
   CreditCard,
@@ -194,6 +195,10 @@ const EcommerceDevelopment = () => {
           </div>
         </div>
       </section>
+
+      <QuoteSection
+        quote="Turning visitors into customers with conversion-focused digital stores."
+      />
 
       {/* FINAL CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">

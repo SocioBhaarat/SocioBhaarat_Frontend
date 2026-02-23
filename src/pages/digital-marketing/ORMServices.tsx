@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import QuoteSection from "@/components/ui/QuoteSection";
 import { Check, Shield, Star, AlertTriangle, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -180,6 +181,10 @@ const ORMServices = () => {
         </div>
       </section>
 
+      <QuoteSection
+        quote="Your reputation is your digital asset — we protect, manage, and strengthen it."
+      />
+
       {/* Final CTA Button */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto max-w-4xl text-center">
@@ -192,7 +197,7 @@ const ORMServices = () => {
           </Button>
         </div>
       </section>
-      
+
     </div>
   );
 };

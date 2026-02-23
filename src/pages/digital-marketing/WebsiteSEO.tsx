@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import QuoteSection from "@/components/ui/QuoteSection";
 import { Check, Search, TrendingUp, FileText, Link2, ShieldCheck, BarChart3 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -138,6 +139,10 @@ const WebsiteSEO = () => {
           </div>
         </div>
       </section>
+
+      <QuoteSection
+        quote="Optimized for search. Built for visibility. Designed for growth."
+      />
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto max-w-4xl text-center">

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import QuoteSection from "@/components/ui/QuoteSection";
 import { Check, Code, Cpu, Layers, Rocket, Shield, Smartphone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -197,6 +198,10 @@ const AppDevelopment = () => {
           </div>
         </div>
       </section>
+
+      <QuoteSection
+        quote="From concept to code, we create apps people love to use."
+      />
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
         <div className="container mx-auto max-w-4xl text-center">
