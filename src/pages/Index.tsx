@@ -1,4 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -28,30 +33,110 @@ import {
   Utensils,
   Globe,
   BarChart3,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useRef, useEffect } from "react";
 
 const Index = () => {
   const navigate = useNavigate();
-  const Industries = [
-    { name: "Real Estate", icon: Building2 },
-    { name: "Hospitality", icon: Hotel },
-    { name: "Retail & Fashion", icon: ShoppingBag },
-    { name: "Healthcare", icon: HeartPulse },
-    { name: "Education", icon: GraduationCap },
-    { name: "Manufacturing", icon: Factory },
-    { name: "Restaurants & Hotels", icon: Utensils },
-    { name: "Coaching & Consultancies", icon: Briefcase },
-    { name: "Startups", icon: Rocket },
-    { name: "CA Firms", icon: FileText },
-    { name: "Doctor’s Clinics", icon: Stethoscope },
-    { name: "Advocates", icon: Scale },
-    { name: "Salon & Parlours", icon: Scissors },
-    { name: "Cloth & Saree Showrooms", icon: Shirt },
-    { name: "E-commerce", icon: ShoppingCart },
-  ]
+  // const Industries = [
+  //   { name: "Real Estate", icon: Building2 },
+  //   { name: "Hospitality", icon: Hotel },
+  //   { name: "Retail & Fashion", icon: ShoppingBag },
+  //   { name: "Healthcare", icon: HeartPulse },
+  //   { name: "Education", icon: GraduationCap },
+  //   { name: "Manufacturing", icon: Factory },
+  //   { name: "Restaurants & Hotels", icon: Utensils },
+  //   { name: "Coaching & Consultancies", icon: Briefcase },
+  //   { name: "Startups", icon: Rocket },
+  //   { name: "CA Firms", icon: FileText },
+  //   { name: "Doctor’s Clinics", icon: Stethoscope },
+  //   { name: "Advocates", icon: Scale },
+  //   { name: "Salon & Parlours", icon: Scissors },
+  //   { name: "Cloth & Saree Showrooms", icon: Shirt },
+  //   { name: "E-commerce", icon: ShoppingCart },
+  // ]
+  const industries = [
+    {
+      name: "Real Estate",
+      image:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+    },
+    {
+      name: "Hospitality",
+      image:
+        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+    },
+    {
+      name: "Retail & Fashion",
+      image:
+        "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+    },
+    {
+      name: "Healthcare",
+      image:
+        "https://images.unsplash.com/photo-1580281657527-47f249e8f4df",
+    },
+    {
+      name: "Education",
+      image:
+        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+    },
+    {
+      name: "Manufacturing",
+      image:
+        "https://images.unsplash.com/photo-1581091215367-59ab6b3a4c4d",
+    },
+    {
+      name: "Restaurants & Hotels",
+      image:
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+    },
+    {
+      name: "Coaching & Consultancies",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    },
+    {
+      name: "Startups",
+      image:
+        "https://images.unsplash.com/photo-1551434678-e076c223a692",
+    },
+    {
+      name: "CA Firms",
+      image:
+        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c",
+    },
+    {
+      name: "Doctor’s Clinics",
+      image:
+        "https://images.unsplash.com/photo-1584982751601-97dcc096659c",
+    },
+    {
+      name: "Advocates",
+      image:
+        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f",
+    },
+    {
+      name: "Salon & Parlours",
+      image:
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e",
+    },
+    {
+      name: "Cloth & Saree Showrooms",
+      image:
+        "https://images.unsplash.com/photo-1520975922284-6b6b5a9b3f65",
+    },
+    {
+      name: "E-commerce",
+      image:
+        "https://images.unsplash.com/photo-1515169067865-5387ec356754",
+    },
+  ];
   const services = [
     {
       icon: <Megaphone className="h-7 w-7" />,
@@ -308,7 +393,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted">
         <div className="mx-auto max-w-4xl space-y-12">
 
           {/* Heading */}
@@ -439,10 +524,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+      {/* Industries */}
+      {/* <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
         <div className="container mx-auto max-w-6xl">
-
-          {/* Heading */}
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
               Industries <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">We Serve</span>
@@ -452,7 +536,6 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Grid */}
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {Industries.map((industry, i) => {
               const Icon = industry.icon;
@@ -472,9 +555,88 @@ const Index = () => {
             })}
           </div>
         </div>
+      </section> */}
+
+      <section className="py-24 bg-muted rounded-2xl overflow-hidden">
+        <div className="container mx-auto max-w-7xl">
+
+          <div className="flex flex-col lg:flex-row">
+
+            {/* LEFT SIDE (30%) */}
+            <div className="lg:w-[30%] w-full mb-12 lg:mb-0 lg:pr-12">
+              <h2 className="text-4xl sm:text-5xl font-bold mb-6 sm:mt-12">
+                Industries <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">We Serve</span>
+              </h2>
+
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                Our digital marketing solutions meet needs of various industries.
+                With advanced techniques we help businesses enhance engagement
+                and drive growth.
+              </p>
+            </div>
+
+            {/* RIGHT SIDE (70%) */}
+            <div className="lg:w-[70%] w-full relative">
+
+              <Swiper
+            modules={[Navigation, Autoplay]}
+            slidesPerView={3}
+            spaceBetween={30}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              nextEl: ".next-btn",
+              prevEl: ".prev-btn",
+            }}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+              >
+                {industries.map((industry, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="h-[420px] rounded-3xl overflow-hidden relative shadow-xl">
+                      <img
+                        src={industry.image}
+                        alt={industry.name}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+
+                      <div className="absolute inset-0 bg-black/30" />
+
+                      <div className="absolute bottom-6 left-6 right-6 bg-white rounded-xl py-3 px-5 shadow-md">
+                        <h3 className="text-primary font-semibold text-lg">
+                          {industry.name}
+                        </h3>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              {/* Navigation Buttons */}
+              <div className="flex gap-4 justify-end mt-6">
+                <button className="prev-btn w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">
+                  <ChevronLeft size={18} />
+                </button>
+
+                <button className="next-btn w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/20">
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl space-y-16">
 
           {/* Heading */}
@@ -529,7 +691,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted">
         <div className="container mx-auto max-w-6xl">
 
           {/* Heading Block */}
@@ -570,12 +732,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-muted/20 overflow-hidden">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
-        {/* Soft Background Glow */}
+        {/* Soft Background Glow
         <div className="absolute inset-0 -z-10 flex justify-center">
           <div className="w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full"></div>
-        </div>
+        </div> */}
 
         <div className="container mx-auto max-w-5xl">
           <div className="relative bg-card/60 backdrop-blur-xl border border-border rounded-3xl p-10 sm:p-16 shadow-xl text-center">

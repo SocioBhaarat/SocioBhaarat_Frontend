@@ -6,22 +6,58 @@ const PerformanceMarketing = () => {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
-            Performance <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Marketing Services</span>
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-            Pay only for results. Our data-driven performance marketing strategies deliver measurable ROI through optimized campaigns across Google Ads, Facebook Ads, and more.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"  onClick={() => navigate("/contact")} >
-              Get Free Audit
-            </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8">
-              View Case Studies
-            </Button>
+      <section className="relative  pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-[#f8fafc] via-background to-[#eef2ff]">
+
+        {/* Background Glow */}
+        <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full -z-10"></div>
+
+        <div className="container mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* Left Content */}
+          <div className="max-w-xl">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              Drive Measurable Growth with{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-primary to-yellow-500 bg-clip-text text-transparent">
+                Data-Driven Performance Marketing
+              </span>
+            </h1>
+
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              We create ROI-focused marketing campaigns that deliver measurable results, maximize conversions, and scale your business efficiently through strategic paid advertising and continuous optimization.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 shadow-lg"
+                onClick={() => navigate("/contact")}
+              >
+                Get Free Audit
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8"
+              >
+                View Case Studies
+              </Button>
+            </div>
           </div>
+
+          {/* Right Illustration */}
+          <div className="relative">
+
+            {/* Floating background card */}
+            <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-3xl shadow-2xl scale-105 -z-10"></div>
+
+            <img
+              src="https://img.freepik.com/free-vector/performance-marketing-concept-illustration_114360-1432.jpg"
+              alt="Performance Marketing Illustration"
+              className="relative w-full max-w-lg mx-auto rounded-2xl"
+            />
+          </div>
+
         </div>
       </section>
 
@@ -55,6 +91,64 @@ const PerformanceMarketing = () => {
         </div>
       </section>
 
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl text-center">
+
+          <h2 className="font-display text-4xl font-bold mb-6">
+            Why Sociobhaarat is the Best for Your Performance Marketing
+          </h2>
+
+          <p className="text-muted-foreground mb-12 max-w-3xl mx-auto">
+            We combine advanced targeting, real-time analytics, and continuous optimization to ensure every marketing investment delivers maximum performance.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "ROI-Focused Campaign Strategy",
+              "Data-Driven Decision Making",
+              "Advanced Audience Targeting",
+              "Continuous A/B Testing",
+              "Conversion Rate Optimization",
+              "Transparent Reporting & Insights",
+            ].map((item, index) => (
+              <div key={index} className="bg-card p-6 rounded-2xl border border-border shadow-md hover:shadow-xl transition">
+                <Check className="h-6 w-6 text-primary mb-4 mx-auto" />
+                <h3 className="font-semibold text-lg">{item}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-6xl text-center">
+
+          <h2 className="font-display text-4xl font-bold mb-6">
+            Why Do You Need Performance Marketing?
+          </h2>
+
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
+            Performance marketing allows businesses to track, measure, and optimize every marketing effort in real time. Unlike traditional marketing, you pay based on actual results such as clicks, leads, or conversions. With the right strategy, performance marketing ensures scalable growth, better ROI, and faster business expansion.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              "Measurable and trackable results",
+              "Faster lead generation",
+              "Higher conversion rates",
+              "Budget optimization",
+              "Scalable marketing growth",
+            ].map((item, index) => (
+              <div key={index} className="bg-primary/5 p-6 rounded-xl border border-border hover:bg-primary/10 transition">
+                <h3 className="font-semibold">{item}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">Our Performance Marketing Process</h2>
@@ -78,10 +172,14 @@ const PerformanceMarketing = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="font-display text-4xl font-bold mb-12 text-center">What's Included in Our Service</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-7xl">
+
+          <h2 className="font-display text-4xl font-bold text-center mb-16">
+            Our Performance Marketing Services
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               "Google Ads Management (Search, Display, Shopping)",
               "Facebook & Instagram Ads",
@@ -96,9 +194,12 @@ const PerformanceMarketing = () => {
               "Weekly Performance Reports",
               "Dedicated Account Manager",
             ].map((service, index) => (
-              <div key={index} className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border">
-                <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span>{service}</span>
+              <div
+                key={index}
+                className="bg-card p-6 rounded-2xl border border-border shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300"
+              >
+                <Check className="h-6 w-6 text-primary mb-4" />
+                <h3 className="font-semibold text-lg">{service}</h3>
               </div>
             ))}
           </div>
