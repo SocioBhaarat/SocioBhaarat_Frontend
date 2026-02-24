@@ -43,6 +43,63 @@ import { useRef, useEffect } from "react";
 
 const Index = () => {
   const navigate = useNavigate();
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 60 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const fadeRight = {
+    hidden: { opacity: 0, x: 60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardAnimation = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+
+  const benefitAnimation = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   // const Industries = [
   //   { name: "Real Estate", icon: Building2 },
   //   { name: "Hospitality", icon: Hotel },
@@ -295,7 +352,14 @@ const Index = () => {
           </div>
 
           {/* Numbers Heading */}
-          <div className="text-center mb-14">
+          {/* Heading */}
+          <motion.div
+            className="text-center mb-14"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
               Let’s Talk About{" "}
               <span className="text-primary">Numbers</span>
@@ -303,11 +367,16 @@ const Index = () => {
             <p className="text-muted-foreground mt-3">
               Real results. Measurable growth. Proven impact.
             </p>
-          </div>
+          </motion.div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {[
               { icon: TrendingUp, label: "Revenue Growth", value: "0X → 5X" },
               { icon: Users, label: "Leads Generated", value: "10,000+" },
@@ -316,36 +385,44 @@ const Index = () => {
             ].map((item, i) => {
               const Icon = item.icon;
               return (
-                <Card
-                  key={i}
-                  className="border border-border bg-card/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 rounded-2xl"
-                >
-                  <CardContent className="p-8 text-center">
-                    <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                      <Icon className="h-7 w-7 text-primary" />
-                    </div>
+                <motion.div key={i} variants={cardAnimation}>
+                  <Card className="border border-border bg-card/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 rounded-2xl">
+                    <CardContent className="p-8 text-center">
+                      <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                        <Icon className="h-7 w-7 text-primary" />
+                      </div>
 
-                    <div className="text-3xl font-bold text-foreground">
-                      {item.value}
-                    </div>
-                    <div className="text-sm text-muted-foreground mt-2">
-                      {item.label}
-                    </div>
-                  </CardContent>
-                </Card>
+                      <div className="text-3xl font-bold text-foreground">
+                        {item.value}
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-2">
+                        {item.label}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               );
             })}
-
-          </div>
+          </motion.div>
 
         </div>
       </section>
 
+
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className="container mx-auto max-w-6xl">
+        <motion.div
+          className="container mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
 
           {/* Heading */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
             <h2 className="font-display text-3xl sm:text-4xl font-bold mb-6 text-foreground leading-tight">
               Bhopal & Jabalpur’s{" "}
               <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
@@ -356,13 +433,16 @@ const Index = () => {
             <p className="text-lg italic text-muted-foreground">
               Built for real, measurable growth.
             </p>
-          </div>
+          </motion.div>
 
           {/* Content Grid */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
             {/* Text Content */}
-            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+            <motion.div
+              variants={fadeLeft}
+              className="space-y-6 text-lg leading-relaxed text-muted-foreground"
+            >
               <p>
                 <strong>Socio Bhaarat</strong> is a performance-driven digital
                 marketing and IT agency helping businesses scale with strategy,
@@ -377,27 +457,42 @@ const Index = () => {
                 presence. We combine local market understanding with data-backed
                 execution to help businesses grow faster and smarter.
               </p>
-            </div>
+            </motion.div>
 
             {/* Image */}
-            <div className="flex justify-center">
-              <img
+            <motion.div
+              variants={fadeRight}
+              className="flex justify-center"
+            >
+              <motion.img
                 src="./images/IndexPageImg.webp"
                 alt="Socio Bhaarat digital marketing team"
                 className="w-full max-w-md rounded-2xl shadow-xl object-contain"
+                initial={{ scale: 0.9 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
               />
-            </div>
+            </motion.div>
 
           </div>
-
-        </div>
+        </motion.div>
       </section>
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted">
-        <div className="mx-auto max-w-4xl space-y-12">
+        <motion.div
+          className="mx-auto max-w-4xl space-y-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
 
           {/* Heading */}
-          <div className="text-center space-y-4">
+          <motion.div
+            variants={fadeUp}
+            className="text-center space-y-4"
+          >
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground leading-tight">
               Why Your Business Needs{" "}
               <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
@@ -409,16 +504,22 @@ const Index = () => {
               Your customers are online. If your business isn’t visible there,
               you're losing opportunities every single day.
             </p>
-          </div>
+          </motion.div>
 
           {/* Short Explanation */}
-          <p className="text-lg leading-relaxed text-foreground/90 text-center">
+          <motion.p
+            variants={fadeUp}
+            className="text-lg leading-relaxed text-foreground/90 text-center"
+          >
             Today, customers search, compare, and decide online before making any purchase.
             Your digital presence directly impacts your growth, credibility, and revenue.
-          </p>
+          </motion.p>
 
           {/* Key Benefits */}
-          <div className="grid sm:grid-cols-2 gap-6 text-base">
+          <motion.div
+            variants={staggerContainer}
+            className="grid sm:grid-cols-2 gap-6 text-base"
+          >
             {[
               "Reach the right audience at the right time",
               "Generate consistent high-quality leads",
@@ -427,21 +528,34 @@ const Index = () => {
               "Outperform competitors digitally",
               "Scale profitably with targeted ads",
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3">
+              <motion.div
+                key={i}
+                variants={benefitAnimation}
+                className="flex items-start gap-3"
+              >
                 <span className="text-primary font-bold text-lg">✔</span>
                 <p>{item}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-        </div>
+        </motion.div>
       </section>
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/20">
-        <div className="container mx-auto max-w-6xl">
+        <motion.div
+          className="container mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
 
           {/* Heading */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground leading-tight">
               How Socio Bhaarat{" "}
               <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
@@ -451,13 +565,15 @@ const Index = () => {
             <p className="mt-4 text-lg text-muted-foreground">
               A structured, data-driven approach designed to turn strategy into measurable results.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-14 items-center">
 
             {/* Steps */}
-            <div className="relative space-y-10">
-
+            <motion.div
+              variants={staggerContainer}
+              className="relative space-y-10"
+            >
               {[
                 {
                   title: "Research & Strategy",
@@ -480,12 +596,22 @@ const Index = () => {
                   desc: "Once campaigns prove profitable, we strategically scale them 2x–5x for sustainable growth."
                 },
               ].map((step, i) => (
-                <div key={i} className="flex items-start gap-6 group">
+                <motion.div
+                  key={i}
+                  variants={fadeLeft}
+                  className="flex items-start gap-6 group"
+                >
 
                   {/* Step Number */}
-                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                  <motion.div
+                    initial={{ scale: 0.8 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}
+                    className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-lg group-hover:bg-primary group-hover:text-white transition-all duration-300"
+                  >
                     {i + 1}
-                  </div>
+                  </motion.div>
 
                   {/* Content */}
                   <div>
@@ -496,20 +622,25 @@ const Index = () => {
                       {step.desc}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
 
               {/* Highlight Statement */}
-              <div className="mt-8 p-6 rounded-2xl bg-card border border-border shadow-sm">
+              <motion.div
+                variants={fadeUp}
+                className="mt-8 p-6 rounded-2xl bg-card border border-border shadow-sm"
+              >
                 <p className="text-lg font-semibold text-foreground text-center">
                   We’re not just a marketing agency — we become your long-term digital growth partner.
                 </p>
-              </div>
-
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Image */}
-            <div className="flex justify-center">
+            <motion.div
+              variants={fadeRight}
+              className="flex justify-center"
+            >
               <div className="relative">
                 <img
                   src="./images/IndexPageImg2.webp"
@@ -518,10 +649,10 @@ const Index = () => {
                 />
                 <div className="absolute -z-10 -inset-6 bg-primary/10 blur-3xl rounded-full"></div>
               </div>
-            </div>
+            </motion.div>
 
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Industries */}
@@ -579,23 +710,23 @@ const Index = () => {
             <div className="lg:w-[70%] w-full relative">
 
               <Swiper
-            modules={[Navigation, Autoplay]}
-            slidesPerView={3}
-            spaceBetween={30}
-            loop={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            navigation={{
-              nextEl: ".next-btn",
-              prevEl: ".prev-btn",
-            }}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
+                modules={[Navigation, Autoplay]}
+                slidesPerView={3}
+                spaceBetween={30}
+                loop={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                navigation={{
+                  nextEl: ".next-btn",
+                  prevEl: ".prev-btn",
+                }}
+                breakpoints={{
+                  0: { slidesPerView: 1 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 },
+                }}
               >
                 {industries.map((industry, index) => (
                   <SwiperSlide key={index}>
@@ -637,20 +768,32 @@ const Index = () => {
       </section>
 
       <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl space-y-16">
+        <motion.div
+          className="container mx-auto max-w-6xl space-y-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
 
           {/* Heading */}
-          <div className="text-center space-y-4">
+          <motion.div
+            variants={fadeUp}
+            className="text-center space-y-4"
+          >
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
               What Makes Us <span className="text-primary">Different?</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We focus on measurable growth, real impact, and long-term brand value — not vanity metrics.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Stats – Clean 2 Lines */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {/* Stats */}
+          <motion.div
+            variants={staggerContainer}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+          >
             {[
               { value: "50+", label: "Businesses Served Across MP", icon: Users },
               { value: "10,000+", label: "Leads Delivered", icon: TrendingUp },
@@ -662,8 +805,9 @@ const Index = () => {
             ].map((item, i) => {
               const Icon = item.icon;
               return (
-                <div
+                <motion.div
                   key={i}
+                  variants={cardAnimation}
                   className="group py-6 border-b border-border hover:border-primary transition-colors duration-300"
                 >
                   <div className="flex justify-center mb-3">
@@ -675,27 +819,40 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground mt-1">
                     {item.label}
                   </p>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
 
           {/* About Content */}
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+          <motion.div
+            variants={fadeUp}
+            className="max-w-4xl mx-auto text-center space-y-6"
+          >
             <p className="text-lg leading-relaxed text-muted-foreground">
               Socio Bhaarat stands apart because we build scalable digital systems — not just campaigns.
               As a homegrown agency rooted in Bhopal & Jabalpur, we deeply understand local consumer
               psychology and MP’s evolving business landscape.
             </p>
-          </div>
-        </div>
+          </motion.div>
+
+        </motion.div>
       </section>
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted">
-        <div className="container mx-auto max-w-6xl">
+        <motion.div
+          className="container mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
 
           {/* Heading Block */}
-          <div className="text-center max-w-3xl mx-auto space-y-6 mb-16">
+          <motion.div
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto space-y-6 mb-16"
+          >
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground leading-tight">
               Digital Marketing & IT Services{" "}
               <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
@@ -703,22 +860,28 @@ const Index = () => {
               </span>
             </h2>
 
-            <p className="text-lg text-muted-foreground">
-              <span className="italic">
-                All services listed above are part of our complete digital growth ecosystem.
-              </span>
+            <p className="text-lg text-muted-foreground italic">
+              All services listed above are part of our complete digital growth ecosystem.
             </p>
-          </div>
+          </motion.div>
 
           {/* Services Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            variants={staggerContainer}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <motion.div key={index} variants={cardAnimation}>
+                <ServiceCard {...service} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          {/* Single CTA */}
-          <div className="text-center mt-16">
+          {/* CTA */}
+          <motion.div
+            variants={fadeUp}
+            className="text-center mt-16"
+          >
             <Link to="/services">
               <Button
                 size="lg"
@@ -728,8 +891,9 @@ const Index = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-          </div>
-        </div>
+          </motion.div>
+
+        </motion.div>
       </section>
 
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
