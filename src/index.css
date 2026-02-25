@@ -116,3 +116,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+.slider-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 45s linear infinite;
+  will-change: transform;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

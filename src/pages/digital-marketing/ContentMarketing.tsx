@@ -1,9 +1,50 @@
 import { Button } from "@/components/ui/button";
+import QuoteSection from "@/components/ui/QuoteSection";
 import { Check, FileText, Target, TrendingUp, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const ContentMarketing = () => {
   const navigate = useNavigate();
+
+  const services = [
+    { title: "Blog Writing & Publishing", desc: "SEO-optimized blog posts that drive organic traffic and establish thought leadership" },
+    { title: "Video Content Creation", desc: "Engaging video content for YouTube, social media, and your website" },
+    { title: "Infographic Design", desc: "Visually compelling infographics that simplify complex information" },
+    { title: "E-books & Whitepapers", desc: "In-depth resources that generate leads and showcase expertise" },
+    { title: "Email Newsletter Content", desc: "Engaging email content that nurtures leads and drives conversions" },
+    { title: "Case Studies", desc: "Compelling success stories that build credibility and trust" },
+    { title: "Social Media Content", desc: "Platform-specific content that drives engagement and brand awareness" },
+    { title: "Podcast Production", desc: "Audio content that reaches your audience on-the-go" },
+    { title: "Content Strategy & Planning", desc: "Comprehensive content roadmaps aligned with your business goals" },
+  ]
+
+  const process = [
+    { step: "01", title: "Research & Strategy", desc: "We analyze your audience, competitors, and industry to create a winning content strategy" },
+    { step: "02", title: "Content Creation", desc: "Our expert writers and designers craft high-quality, engaging content" },
+    { step: "03", title: "Optimization & Publishing", desc: "We optimize content for SEO and publish across relevant channels" },
+    { step: "04", title: "Analysis & Refinement", desc: "We track performance and continuously refine our approach for better results" },
+  ]
+
+  const whyChooseUs = [
+    "SEO-Optimized Content Creation",
+    "Industry-Focused Research",
+    "Consistent Brand Voice",
+    "Multi-Platform Content Strategy",
+    "Conversion-Focused Writing",
+    "Performance Tracking & Reporting",
+  ]
+
+  const impact = [
+    "Increase organic traffic by up to 300%",
+    "Generate 3x more leads than traditional marketing",
+    "Build long-term brand authority and trust",
+    "Improve search engine rankings",
+    "Engage and educate your target audience",
+    "Create evergreen assets that deliver ROI over time",
+    "Support your sales team with valuable resources",
+    "Reduce customer acquisition costs",
+  ]
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -12,12 +53,12 @@ const ContentMarketing = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
-                Content <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Marketing Services</span>
+                Engage, Educate & Convert with  <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Powerful Content</span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Drive engagement, build authority, and convert your audience with strategic content that resonates. Our content marketing services deliver measurable results through compelling storytelling and data-driven strategies.
+                We create high-quality, value-driven content that builds brand authority, attracts the right audience, and converts readers into loyal customers
               </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"  onClick={() => navigate("/contact")} >
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8" onClick={() => navigate("/contact")} >
                 Get Started Today
               </Button>
             </div>
@@ -47,6 +88,32 @@ const ContentMarketing = () => {
         </div>
       </section>
 
+      {/* Why choose us */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="font-display text-4xl font-bold mb-6">
+            Why Choose Our Content Marketing Services?
+          </h2>
+
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+            We combine creativity, research, and SEO-driven strategies to deliver
+            impactful content that builds trust and drives measurable business growth.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <div
+                key={index}
+                className="bg-card p-6 rounded-xl shadow-lg border border-border hover:shadow-xl transition"
+              >
+                <Check className="h-8 w-8 text-primary mb-4 mx-auto" />
+                <p className="font-semibold">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* What is Content Marketing */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
@@ -60,26 +127,66 @@ const ContentMarketing = () => {
         </div>
       </section>
 
+      {/* Why Content Marketing Matters*/}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-display text-4xl font-bold mb-6 text-center">
+            Why Content Marketing Matters
+          </h2>
+
+          <p className="text-lg text-muted-foreground text-center max-w-4xl mx-auto mb-12 leading-relaxed">
+            Content marketing helps businesses build trust, establish authority,
+            and attract potential customers organically. High-quality content improves
+            search engine rankings and keeps your audience engaged. A strong content
+            strategy not only drives traffic but also nurtures leads and increases
+            long-term brand loyalty.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "Improve search engine visibility",
+              "Build brand credibility",
+              "Increase website traffic",
+              "Generate qualified leads",
+              "Support social media & paid campaigns",
+            ].map((point, index) => (
+              <div key={index} className="flex items-start gap-4 bg-card p-6 rounded-lg border border-border">
+                <TrendingUp className="h-6 w-6 text-primary mt-1" />
+                <p>{point}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Our Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">Our Content Marketing Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Blog Writing & Publishing", desc: "SEO-optimized blog posts that drive organic traffic and establish thought leadership" },
-              { title: "Video Content Creation", desc: "Engaging video content for YouTube, social media, and your website" },
-              { title: "Infographic Design", desc: "Visually compelling infographics that simplify complex information" },
-              { title: "E-books & Whitepapers", desc: "In-depth resources that generate leads and showcase expertise" },
-              { title: "Email Newsletter Content", desc: "Engaging email content that nurtures leads and drives conversions" },
-              { title: "Case Studies", desc: "Compelling success stories that build credibility and trust" },
-              { title: "Social Media Content", desc: "Platform-specific content that drives engagement and brand awareness" },
-              { title: "Podcast Production", desc: "Audio content that reaches your audience on-the-go" },
-              { title: "Content Strategy & Planning", desc: "Comprehensive content roadmaps aligned with your business goals" },
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <div key={index} className="bg-card p-6 rounded-lg shadow-lg border border-border hover:shadow-xl transition-shadow">
                 <Check className="h-8 w-8 text-primary mb-4" />
                 <h3 className="font-bold text-xl mb-3">{service.title}</h3>
                 <p className="text-muted-foreground">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Impact and Benefits */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-display text-4xl font-bold mb-12 text-center">
+            Our Content Marketing Impact
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {impact.map((benefit, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <Check className="h-6 w-6 text-primary mt-1" />
+                <p className="text-lg">{benefit}</p>
               </div>
             ))}
           </div>
@@ -91,12 +198,7 @@ const ContentMarketing = () => {
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-display text-4xl font-bold mb-12 text-center">Our Content Marketing Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Research & Strategy", desc: "We analyze your audience, competitors, and industry to create a winning content strategy" },
-              { step: "02", title: "Content Creation", desc: "Our expert writers and designers craft high-quality, engaging content" },
-              { step: "03", title: "Optimization & Publishing", desc: "We optimize content for SEO and publish across relevant channels" },
-              { step: "04", title: "Analysis & Refinement", desc: "We track performance and continuously refine our approach for better results" },
-            ].map((item, index) => (
+            {process.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="bg-primary text-primary-foreground w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
                   {item.step}
@@ -132,6 +234,10 @@ const ContentMarketing = () => {
           </div>
         </div>
       </section>
+
+      <QuoteSection
+        quote="Content that informs, engages, and drives measurable results."
+      />
 
       {/* CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
