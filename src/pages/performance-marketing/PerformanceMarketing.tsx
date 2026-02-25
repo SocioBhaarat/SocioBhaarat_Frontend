@@ -6,7 +6,7 @@ const PerformanceMarketing = () => {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
-      <section className="relative  pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-[#f8fafc] via-background to-[#eef2ff]">
+      <section className="relative pt-6  pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-[#f8fafc] via-background to-[#eef2ff]">
 
         {/* Background Glow */}
         <div className="absolute top-20 left-1/3 w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full -z-10"></div>
@@ -104,71 +104,205 @@ const PerformanceMarketing = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              "ROI-Focused Campaign Strategy",
-              "Data-Driven Decision Making",
-              "Advanced Audience Targeting",
-              "Continuous A/B Testing",
-              "Conversion Rate Optimization",
-              "Transparent Reporting & Insights",
+              {
+                icon: Target,
+                title: "ROI-Focused Campaign Strategy",
+                desc: "Every campaign is built with profitability in mind, ensuring your marketing spend directly contributes to revenue growth."
+              },
+              {
+                icon: BarChart,
+                title: "Data-Driven Decision Making",
+                desc: "We use real-time analytics and performance metrics to continuously optimize campaigns for maximum efficiency."
+              },
+              {
+                icon: TrendingUp,
+                title: "Advanced Audience Targeting",
+                desc: "Laser-focused targeting strategies to reach high-intent users and reduce wasted ad spend."
+              },
+              {
+                icon: FileSearch,
+                title: "Continuous A/B Testing",
+                desc: "We constantly test creatives, copies, and audiences to improve CTR, conversions, and ROAS."
+              },
+              {
+                icon: DollarSign,
+                title: "Conversion Rate Optimization",
+                desc: "Optimized landing pages and funnels that convert traffic into qualified leads and sales."
+              },
+              {
+                icon: Briefcase,
+                title: "Transparent Reporting & Insights",
+                desc: "Detailed weekly reports with actionable insights so you always know where your money goes."
+              },
             ].map((item, index) => (
-              <div key={index} className="bg-card p-6 rounded-2xl border border-border shadow-md hover:shadow-xl transition">
-                <Check className="h-6 w-6 text-primary mb-4 mx-auto" />
-                <h3 className="font-semibold text-lg">{item}</h3>
+              <div
+                key={index}
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-background via-secondary/5 to-primary/10 border border-border shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2"
+              >
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition">
+                  <item.icon className="h-7 w-7 text-white" />
+                </div>
+
+                <h3 className="font-semibold text-xl mb-3">{item.title}</h3>
+
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Soft Background Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 blur-3xl rounded-full -z-10"></div>
+
         <div className="container mx-auto max-w-6xl text-center">
 
           <h2 className="font-display text-4xl font-bold mb-6">
             Why Do You Need Performance Marketing?
           </h2>
 
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
-            Performance marketing allows businesses to track, measure, and optimize every marketing effort in real time. Unlike traditional marketing, you pay based on actual results such as clicks, leads, or conversions. With the right strategy, performance marketing ensures scalable growth, better ROI, and faster business expansion.
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-16 leading-relaxed">
+            Performance marketing allows businesses to track, measure, and optimize every campaign in real time. You pay only for measurable actions like clicks, leads, or sales — ensuring better ROI, controlled budgets, and scalable business growth.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+
             {[
-              "Measurable and trackable results",
-              "Faster lead generation",
-              "Higher conversion rates",
-              "Budget optimization",
-              "Scalable marketing growth",
+              {
+                icon: BarChart,
+                title: "Measurable Results",
+                desc: "Track every click, lead, and conversion with real-time analytics and performance dashboards."
+              },
+              {
+                icon: Target,
+                title: "Faster Lead Generation",
+                desc: "Reach high-intent audiences instantly and generate qualified leads consistently."
+              },
+              {
+                icon: TrendingUp,
+                title: "Higher Conversions",
+                desc: "Optimized funnels and A/B testing strategies to maximize your conversion rates."
+              },
+              {
+                icon: DollarSign,
+                title: "Budget Optimization",
+                desc: "Allocate budget efficiently by scaling winning campaigns and cutting wasted spend."
+              },
+              {
+                icon: Briefcase,
+                title: "Scalable Growth",
+                desc: "Expand campaigns strategically while maintaining profitability and strong ROAS."
+              },
             ].map((item, index) => (
-              <div key={index} className="bg-primary/5 p-6 rounded-xl border border-border hover:bg-primary/10 transition">
-                <h3 className="font-semibold">{item}</h3>
+              <div
+                key={index}
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-background via-primary/5 to-secondary/10 border border-border shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-3"
+              >
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:scale-110 transition">
+                  <item.icon className="h-7 w-7 text-white" />
+                </div>
+
+                {/* Title */}
+                <h3 className="font-semibold text-lg mb-3">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
 
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="font-display text-4xl font-bold mb-12 text-center">Our Performance Marketing Process</h2>
-          <div className="grid md:grid-cols-5 gap-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
+
+        {/* Background Glow */}
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full -z-10"></div>
+
+        <div className="container mx-auto max-w-7xl">
+
+          <h2 className="font-display text-4xl font-bold mb-20 text-center">
+            Our Performance Marketing Process
+          </h2>
+
+          <div className="grid md:grid-cols-5 gap-10 relative">
+
             {[
-              { icon: FileSearch, title: "Business Audit", desc: "Comprehensive analysis of your business, competitors, and market opportunities" },
-              { icon: Target, title: "Strategy Development", desc: "Custom performance marketing strategy aligned with your goals and budget" },
-              { icon: BarChart, title: "Campaign Setup", desc: "Platform setup, pixel installation, and campaign structure optimization" },
-              { icon: TrendingUp, title: "Launch & Optimize", desc: "Campaign launch with continuous A/B testing and optimization" },
-              { icon: DollarSign, title: "Scale & Report", desc: "Scale winning campaigns and provide detailed performance reports" },
+              {
+                icon: FileSearch,
+                title: "Business Audit",
+                desc: "We analyze your business model, competitors, audience behavior, and market opportunities to build a strong foundation.",
+                gradient: "from-blue-500 to-indigo-600"
+              },
+              {
+                icon: Target,
+                title: "Strategy Development",
+                desc: "We craft a customized paid media strategy aligned with your revenue goals and budget allocation.",
+                gradient: "from-purple-500 to-pink-500"
+              },
+              {
+                icon: BarChart,
+                title: "Campaign Setup",
+                desc: "Ad account structure, pixel tracking, audience segmentation, and conversion tracking setup.",
+                gradient: "from-orange-500 to-red-500"
+              },
+              {
+                icon: TrendingUp,
+                title: "Launch & Optimize",
+                desc: "Campaign launch with ongoing A/B testing, bid adjustments, and creative optimization.",
+                gradient: "from-emerald-500 to-teal-500"
+              },
+              {
+                icon: DollarSign,
+                title: "Scale & Report",
+                desc: "We scale profitable campaigns and provide transparent weekly performance reports.",
+                gradient: "from-yellow-500 to-amber-600"
+              },
             ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="h-8 w-8 text-primary" />
+              <div
+                key={index}
+                className="group relative flex flex-col items-center text-center p-8 rounded-2xl bg-gradient-to-br from-background via-secondary/5 to-primary/10 border border-border shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-3 backdrop-blur"
+              >
+
+                {/* Step Number */}
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-background px-4 py-1 text-xs font-bold rounded-full border border-border shadow-sm">
+                  0{index + 1}
                 </div>
-                <h3 className="font-bold text-lg mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.desc}</p>
+
+                {/* Icon Wrapper (Perfect Centering) */}
+                <div className="flex justify-center w-full">
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${item.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <item.icon className="h-8 w-8 text-white" />
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="font-bold text-lg mb-3">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+                  {item.desc}
+                </p>
+
               </div>
             ))}
+
           </div>
+
         </div>
       </section>
 
@@ -181,57 +315,130 @@ const PerformanceMarketing = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              "Google Ads Management (Search, Display, Shopping)",
-              "Facebook & Instagram Ads",
-              "LinkedIn Advertising",
-              "YouTube Video Ads",
-              "Programmatic Advertising",
-              "Landing Page Optimization",
-              "Conversion Rate Optimization (CRO)",
-              "Retargeting & Remarketing Campaigns",
-              "A/B Testing & Experimentation",
-              "Analytics & Attribution Tracking",
-              "Weekly Performance Reports",
-              "Dedicated Account Manager",
+              {
+                icon: Target,
+                title: "Google Ads Management",
+                desc: "Search, Display & Shopping campaigns optimized for high-intent traffic and maximum ROI."
+              },
+              {
+                icon: TrendingUp,
+                title: "Meta Ads (Facebook & Instagram)",
+                desc: "Creative-driven campaigns designed to generate leads and boost brand visibility."
+              },
+              {
+                icon: Briefcase,
+                title: "LinkedIn Advertising",
+                desc: "B2B lead generation campaigns targeting decision-makers and professionals."
+              },
+              {
+                icon: BarChart,
+                title: "YouTube Video Ads",
+                desc: "Engaging video campaigns that increase brand awareness and conversions."
+              },
+              {
+                icon: DollarSign,
+                title: "Retargeting Campaigns",
+                desc: "Re-engage visitors and turn warm prospects into paying customers."
+              },
+              {
+                icon: FileSearch,
+                title: "Analytics & CRO",
+                desc: "In-depth tracking, attribution modeling, and landing page optimization."
+              },
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-card p-6 rounded-2xl border border-border shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300"
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-background via-secondary/5 to-primary/10 border border-border shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-3 backdrop-blur"
               >
-                <Check className="h-6 w-6 text-primary mb-4" />
-                <h3 className="font-semibold text-lg">{service}</h3>
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-center mb-6 shadow-lg group-hover:rotate-6 transition">
+                  <service.icon className="h-7 w-7 text-white" />
+                </div>
+
+                <h3 className="font-semibold text-xl mb-3">{service.title}</h3>
+
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {service.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-muted/30">
+
+        {/* Soft Background Glow */}
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-secondary/10 blur-3xl rounded-full -z-10"></div>
+
         <div className="container mx-auto max-w-6xl">
-          <h2 className="font-display text-4xl font-bold mb-12 text-center">Industries We Serve Best</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <h2 className="font-display text-4xl font-bold mb-16 text-center">
+            Industries We Serve Best
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
             {[
-              { icon: ShoppingCart, title: "E-commerce", desc: "Drive sales and increase ROAS for online stores" },
-              { icon: Briefcase, title: "B2B Services", desc: "Generate high-quality leads for service businesses" },
-              { icon: Heart, title: "Healthcare", desc: "Patient acquisition and appointment bookings" },
-              { icon: Home, title: "Real Estate", desc: "Property leads and site visits" },
+              {
+                icon: ShoppingCart,
+                title: "E-commerce",
+                desc: "Scale online stores with high-converting ad funnels, dynamic retargeting, and optimized ROAS strategies.",
+                gradient: "from-pink-500 to-orange-500"
+              },
+              {
+                icon: Briefcase,
+                title: "B2B Services",
+                desc: "Generate qualified leads and book appointments with precision-targeted LinkedIn and Google campaigns.",
+                gradient: "from-blue-600 to-indigo-600"
+              },
+              {
+                icon: Heart,
+                title: "Healthcare",
+                desc: "Increase patient bookings and consultations through localized and intent-based ad campaigns.",
+                gradient: "from-rose-500 to-red-500"
+              },
+              {
+                icon: Home,
+                title: "Real Estate",
+                desc: "Drive property inquiries and site visits using hyper-targeted ads and smart remarketing funnels.",
+                gradient: "from-emerald-500 to-teal-500"
+              },
             ].map((industry, index) => (
-              <div key={index} className="bg-card p-6 rounded-lg shadow-lg border border-border text-center">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="h-8 w-8 text-primary" />
+              <div
+                key={index}
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-background via-secondary/5 to-primary/10 border border-border shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-3 backdrop-blur"
+              >
+                {/* Icon */}
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${industry.gradient} flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition`}
+                >
+                  <industry.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-bold text-xl mb-3">{industry.title}</h3>
-                <p className="text-muted-foreground">{industry.desc}</p>
+
+                {/* Title */}
+                <h3 className="font-bold text-xl mb-4 text-center">
+                  {industry.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-muted-foreground text-sm leading-relaxed text-center">
+                  {industry.desc}
+                </p>
+
+                {/* Subtle Hover Glow */}
+                <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-primary/30 transition"></div>
               </div>
             ))}
+
           </div>
+
         </div>
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-4xl">
           <h2 className="font-display text-4xl font-bold mb-8 text-center">Transparent Pricing & Payment Terms</h2>
-          <div className="bg-card p-8 rounded-lg shadow-lg border border-border">
+          <div className="bg-gradient-to-br from-background via-secondary/5 to-primary/10 p-8 rounded-lg shadow-lg border border-border">
             <div className="space-y-6">
               <div>
                 <h3 className="font-bold text-xl mb-3">Our Pricing Model</h3>
