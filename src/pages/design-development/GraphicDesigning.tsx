@@ -76,7 +76,7 @@ const GraphicDesigning = () => {
               
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1]">
                 {heroData.heading.split("Visual")[0]}
-                <span className="text-primary italic font-serif italic">Visual Identities</span> That Scale.
+                <span className="text-primary font-serif italic">Visual Identities</span> That Scale.
               </h1>
 
               <p className="text-lg text-muted-foreground mb-10 leading-relaxed max-w-lg">
