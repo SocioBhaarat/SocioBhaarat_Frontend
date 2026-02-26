@@ -1,242 +1,206 @@
 import { Button } from "@/components/ui/button";
 import QuoteSection from "@/components/ui/QuoteSection";
-import { Check, Code, Cpu, Layers, Rocket, Shield, Smartphone } from "lucide-react";
+import { 
+  Check, Code, Cpu, Layers, Rocket, Shield, Smartphone, 
+  ArrowRight, Search, Layout, Database, Terminal, 
+  MonitorSmartphone,Lock, Zap, SmartphoneNfc, AppWindow,
+  Palette
+} from "lucide-react";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
-
 
 const AppDevelopment = () => {
   const navigate = useNavigate();
 
+  /* DATA */
   const process = [
-    "Requirement Analysis & Planning",
-    "Wireframing & UI/UX Design",
-    "App Development",
-    "Testing & Quality Assurance",
-    "Deployment (Play Store / App Store)",
-    "Post-Launch Support & Updates",
-  ]
+    { title: "Requirement Analysis", desc: "Defining goals, user personas, and a technical roadmap.", icon: <Search /> },
+    { title: "Wireframing & UI/UX", desc: "Creating intuitive designs focused on mobile usability.", icon: <Layout /> },
+    { title: "App Development", desc: "Writing clean, scalable code for Android and iOS.", icon: <Code /> },
+    { title: "Testing & QA", desc: "Ensuring 100% bug-free performance on all devices.", icon: <Shield /> },
+    { title: "Deployment", desc: "Handling App Store and Play Store submission process.", icon: <Rocket /> },
+    { title: "Support & Updates", desc: "Continuous monitoring and post-launch maintenance.", icon: <Zap /> },
+  ];
 
-  const Technologies = [
-    "Flutter",
-    "React Native",
-    "Kotlin",
-    "Swift",
-    "Node.js",
-    "Firebase",
-    "MongoDB",
-    "MySQL",
-  ]
+  const technologies = [
+    "Flutter", "React Native", "Kotlin", "Swift", 
+    "Node.js", "Firebase", "MongoDB", "MySQL", 
+    "AWS", "GraphQL", "Redux", "Docker"
+  ];
 
   const whyChooseUs = [
-    "Experienced Mobile App Developers",
-    "Custom App Solutions",
-    "User-Centric UI/UX Design",
-    "Cross-Platform & Native Development",
-    "Secure & Scalable Architecture",
-    "Timely Delivery & Transparent Process",
-  ]
+    { title: "Experienced Developers", icon: SmartphoneNfc },
+    { title: "Custom App Solutions", icon: Layers },
+    { title: "User-Centric UI/UX", icon: Palette },
+    { title: "Cross-Platform Experts", icon: MonitorSmartphone },
+    { title: "Secure Architecture", icon: Lock },
+    { title: "Timely Delivery", icon: Rocket },
+  ];
 
   const services = [
-    {
-      title: "Android App Development",
-      icon: <Smartphone className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: "iOS App Development",
-      icon: <Layers className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: "Cross-Platform App Development",
-      icon: <Code className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: "Hybrid App Development",
-      icon: <Cpu className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: "E-commerce App Development",
-      icon: <Rocket className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: "On-Demand Service Apps",
-      icon: <Shield className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: "App UI/UX Design",
-      icon: <Layers className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: "App Testing & QA",
-      icon: <Check className="h-6 w-6 text-primary" />,
-    },
-    {
-      title: "App Maintenance & Updates",
-      icon: <Smartphone className="h-6 w-6 text-primary" />,
-    },
-  ]
+    { title: "Android Development", icon: <Smartphone />, desc: "Native apps built for the diverse Android ecosystem." },
+    { title: "iOS Development", icon: <AppWindow />, desc: "High-end apps following Apple's premium human interface guidelines." },
+    { title: "Cross-Platform Apps", icon: <Code />, desc: "Single codebase for iOS & Android using Flutter or React Native." },
+    { title: "Hybrid App Solutions", icon: <Cpu />, desc: "Efficient web-tech based apps for faster time-to-market." },
+    { title: "E-commerce Apps", icon: <Rocket />, desc: "Mobile shopping experiences designed to convert users into buyers." },
+    { title: "On-Demand Services", icon: <Zap />, desc: "Real-time apps like food delivery, cleaning, or ride-sharing." },
+  ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background selection:bg-primary/20">
 
-      {/* Hero Section */}
-      <section
-        className="relative pt-36 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://img.freepik.com/free-vector/background-abstract-pixel-rain_23-2148376182.jpg')",
-        }}
-      >
-        {/* Dark Overlay for Readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60"></div>
+      {/*  HERO SECTION  */}
+      <section className="relative pt-44 pb-32 px-4 overflow-hidden bg-gradient-to-br from-secondary/60 to-accent/35">
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+        {/* <div className="absolute inset-0 z-0 opacity-50">
+            <img 
+                src="https://img.freepik.com/free-vector/background-abstract-pixel-rain_23-2148376182.jpg" 
+                className="w-full h-full object-cover" 
+                alt="App Dev Background" 
+            />
+        </div> */}
 
-        {/* Optional Soft Glow */}
-        <div className="absolute -top-20 -left-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl opacity-30"></div>
-        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-secondary/30 rounded-full blur-3xl opacity-30"></div>
-
-        <div className="relative z-10 container mx-auto max-w-6xl text-center text-white">
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            Build{" "}
-            <span className="text-amber-400">
-              Smart, Scalable & High-Performance
-            </span>{" "}
-            Mobile Applications
-          </h1>
-
-          <p className="text-lg sm:text-xl text-white/80 mb-10 leading-relaxed max-w-3xl mx-auto">
-            We design and develop user-friendly, secure, and high-performance mobile
-            applications that enhance customer engagement, streamline operations,
-            and drive business growth.
-          </p>
-
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-6 text-lg shadow-xl"
-            onClick={() => navigate("/contact")}
+        <div className="relative z-10 container mx-auto max-w-6xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
           >
-            Start Your App Project
-          </Button>
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold mb-8 text-black leading-[1.1]">
+              Build <span className=" text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Smart & Scalable</span> Mobile Applications
+            </h1>
+
+            <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed italic">
+              We design and develop user-friendly, secure, and high-performance mobile applications that streamline operations and drive business growth.
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                size="lg"
+                className="rounded-full px-10 h-16 text-lg shadow-2xl hover:scale-105 transition-transform"
+                onClick={() => navigate("/contact")}
+              >
+                Launch Your App Project <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      {/*  WHY CHOOSE US  */}
+      <section className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-4">
-            Why Sociobhaarat is the Best for App Development
-          </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-12">
-            We combine innovation, strategy, and cutting-edge technology to
-            create mobile applications that deliver seamless user experiences
-            and real business impact.
-          </p>
-
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">The Mobile Mastery</h2>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-lg transition"
+                whileHover={{ y: -8 }}
+                className="bg-card p-8 rounded-[2.5rem] border border-border/50 hover:border-primary/50 transition-all group shadow-sm hover:shadow-xl"
               >
-                <Check className="h-8 w-8 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold">{item}</h3>
-              </div>
+                <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all shadow-inner">
+                  <item.icon className="h-7 w-7" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 tracking-tight">{item.title}</h3>
+                <p className="text-muted-foreground text-sm italic">Engineering seamless experiences for modern users.</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* WHY YOU NEED APP DEVELOPMENT */}
-      {/* <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-6">
-            Why Your Business Needs Mobile App Development
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            A mobile app helps you increase brand visibility, improve customer
-            engagement, offer personalized experiences, streamline operations,
-            and generate higher revenue through direct customer interaction.
-          </p>
-        </div>
-      </section> */}
-
-      {/* OUR SERVICES */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/*  SERVICES GRID  */}
+      <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="font-display text-4xl font-bold mb-12 text-center">
-            Our App Development Services
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center italic">Specialized App Solutions</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="group bg-card p-6 rounded-2xl border border-border shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                whileHover={{ y: -10 }}
+                className="group p-10 rounded-[2.5rem] bg-muted/20 border border-border/60 hover:border-primary/40 transition-all duration-300"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-primary/10 mb-4 group-hover:bg-primary/20 transition mx-auto ">
+                <div className="mb-6 p-4 w-fit rounded-2xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
                   {service.icon}
                 </div>
-
-                <h3 className="font-semibold text-lg group-hover:text-primary transition text-center">
-                  {service.title}
-                </h3>
-              </div>
+                <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TECHNOLOGIES */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-12">
-            Technologies We Use
-          </h2>
-
+      {/*  TECHNOLOGY */}
+      <section className="py-24 px-4 bg-muted/30 border-y border-border">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Our Technology Stack</h2>
+            <div className="h-1.5 w-24 bg-primary rounded-full mx-auto" />
+          </div>
           <div className="flex flex-wrap justify-center gap-4">
-            {Technologies.map((tech, index) => (
-              <span
+            {technologies.map((tech, index) => (
+              <motion.span
                 key={index}
-                className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition"
+                whileHover={{ scale: 1.1, backgroundColor: "hsl(var(--primary))", color: "hsl(var(--primary-foreground))" }}
+                className="px-6 py-3 bg-card border border-border rounded-2xl text-sm font-bold shadow-sm transition-all"
               >
                 {tech}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>
       </section>
 
       {/* DEVELOPMENT PROCESS */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 bg-background relative overflow-hidden">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="font-display text-4xl font-bold mb-12 text-center">
-            Our Development Process
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left ">
+          <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center tracking-tight">The Production Roadmap</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
             {process.map((step, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <Check className="h-6 w-6 text-primary mt-1" />
-                <p className="font-medium">{step}</p>
-              </div>
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="relative p-8 rounded-[2rem] bg-muted/10 border border-border group hover:bg-card transition-all"
+              >
+                <div className="absolute top-0 right-0 p-8 text-6xl font-black text-primary/5 group-hover:text-primary/10 transition-colors italic select-none">
+                  0{index + 1}
+                </div>
+                <div className="mb-6 text-primary">{step.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed italic">{step.desc}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <QuoteSection
-        quote="From concept to code, we create apps people love to use."
-      />
+      <QuoteSection quote="From concept to code, we create mobile experiences that people love to use daily." />
 
-      <section className="my-16 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-6 text-primary-foreground">Ready to Build with WordPress?</h2>
-          <p className="text-xl text-primary-foreground/90 mb-8">
-            Get a free consultation for your WordPress development needs.
-          </p>
-          <Button size="lg" variant="secondary" className="rounded-full px-8" onClick={() => window.open("https://wa.me/919589581364", "_blank")}>
-            Get Free Consultation
-          </Button>
+      {/*  FINAL CTA  */}
+      <section className="my-24 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-12 md:p-24 text-center rounded-[4rem] shadow-2xl relative overflow-hidden text-white">
+             <div className="absolute top-0 right-0 p-10 opacity-10">
+                <Smartphone className="w-64 h-64 rotate-12" />
+             </div>
+             <h2 className="text-4xl md:text-6xl font-extrabold mb-8 italic">Ready to Build Your App?</h2>
+             <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto font-medium">
+               Get a free consultation and a technical roadmap for your Android or iOS project.
+             </p>
+             <Button 
+                size="lg" 
+                variant="secondary" 
+                className="rounded-full h-16 px-12 text-xl font-bold hover:scale-105 transition-all shadow-xl" 
+                onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+             >
+                Start Free Consultation
+             </Button>
+          </div>
         </div>
       </section>
     </div>

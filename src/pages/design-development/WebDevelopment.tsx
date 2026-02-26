@@ -1,17 +1,18 @@
 import { Button } from "@/components/ui/button";
 import QuoteSection from "@/components/ui/QuoteSection";
-import { 
-  Check, Code, Smartphone, Zap, Lock, Rocket, Globe, Layers, 
-  Layout, Palette, Users, ArrowRight, MousePointer2, Settings2, 
+import {
+  Check, Code, Smartphone, Zap, Lock, Rocket, Globe, Layers,
+  Layout, Palette, Users, ArrowRight, MousePointer2, Settings2,
   Terminal, Database, Cpu, MonitorCheck
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const WebDevelopment = () => {
   const navigate = useNavigate();
 
-  /* ================= DATA ================= */
+  /* DATA */
   const services = [
     { title: "Corporate Websites", icon: <Globe /> },
     { title: "E-commerce Platforms", icon: <MonitorCheck /> },
@@ -43,24 +44,25 @@ const WebDevelopment = () => {
   ];
 
   const technologies = [
-    "React.js", "Next.js", "Three.js", "Node.js", "Express.js", 
-    "MongoDB", "MySQL", "GSAP", "Framer Motion", "WordPress", 
+    "React.js", "Next.js", "Three.js", "Node.js", "Express.js",
+    "MongoDB", "MySQL", "GSAP", "Framer Motion", "WordPress",
     "Tailwind CSS", "TypeScript"
   ];
 
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-44 pb-32 px-4 overflow-hidden bg-black">
-        <div className="absolute inset-0 z-0 opacity-40">
+      {/* HERO SECTION */}
+      <section className="relative pt-44 pb-32 px-4 overflow-hidden bg-gradient-to-br from-secondary/60 to-accent/35 ">
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+        {/* <div className="absolute inset-0 z-0 opacity-40">
             <img 
                 src="https://img.freepik.com/premium-vector/web-development-concept-with-plexus-background-seo-website-app-design-digital-network-design_618588-1215.jpg" 
                 className="w-full h-full object-cover" 
                 alt="Web Dev Background" 
             />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-background z-1"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-background z-1"></div> */}
 
         <div className="relative z-10 container mx-auto max-w-6xl text-center">
           <motion.div
@@ -68,8 +70,8 @@ const WebDevelopment = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold mb-8 text-white leading-[1.1]">
-              Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 italic">Powerful & Scalable</span> Digital Foundations
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold mb-8 text- leading-[1.1]">
+              Build <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent italic">Powerful & Scalable</span> Digital Foundations
             </h1>
 
             <p className="text-lg sm:text-xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -92,14 +94,14 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US ================= */}
+      {/* WHY CHOOSE US */}
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Engineering Excellence</h2>
             <p className="text-muted-foreground">Why SocioBhaarat is the trusted partner for web innovation.</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((feature, index) => (
               <motion.div
@@ -118,29 +120,72 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      {/* ================= SERVICES ================= */}
+      {/* SERVICES */}
       <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center italic">Specialized Solutions</h2>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Background Decorative Element */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[100px] rounded-full -z-10" />
+
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="text-primary font-bold tracking-widest uppercase text-xs"
+            >
+              Enterprise Grade
+            </motion.span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-3 italic tracking-tight">
+              Specialized Solutions
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <motion.div 
-                key={index} 
-                whileHover={{ scale: 1.02 }}
-                className="bg-card p-8 rounded-3xl border border-border/50 flex flex-col items-center text-center group transition-all"
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="group relative bg-card/60 backdrop-blur-sm p-10 rounded-[2.5rem] border border-border/50 hover:border-primary/30 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/5"
               >
-                <div className="text-primary mb-4 p-3 bg-primary/5 rounded-xl group-hover:bg-primary group-hover:text-white transition-all">
-                  {service.icon}
+                {/* 1. Subtle watermark icon in the background */}
+                <div className="absolute -right-4 -bottom-4 text-primary/5 group-hover:text-primary/10 transition-colors transform group-hover:scale-110 duration-700">
+                  {/* Clones the icon for background effect */}
+                  {React.cloneElement(service.icon as React.ReactElement, { size: 140 })}
                 </div>
-                <p className="font-bold text-lg">{service.title}</p>
+
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  {/* 2. Floating Icon Container */}
+                  <div className="mb-8 p-4 rounded-2xl bg-gradient-to-br from-background to-muted border border-border shadow-inner group-hover:bg-primary group-hover:scale-110 transition-all duration-500">
+                    <div className="w-8 h-8 flex items-center justify-center">
+                      {service.icon}
+                    </div>
+                  </div>
+
+                  {/* 3. Typography & Content */}
+                  <h3 className="font-bold text-xl mb-4 tracking-tight group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    Industrial-strength {service.title.toLowerCase()} tailored for high-growth business scalability.
+                  </p>
+
+                  {/* 4. Interactive "More" Indicator */}
+                  <div className="h-1 w-0 bg-primary rounded-full group-hover:w-12 transition-all duration-500" />
+                </div>
+
+                {/* 5. Hover Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ================= TECHNOLOGIES ================= */}
+      {/* TECHNOLOGIES */}
       <section className="py-24 px-4 bg-background border-y border-border">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
@@ -161,7 +206,7 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      {/* ================= DEVELOPMENT PROCESS ================= */}
+      {/* DEVELOPMENT PROCESS */}
       <section className="py-24 px-4 bg-muted/20 relative">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
@@ -179,7 +224,7 @@ const WebDevelopment = () => {
                   key={index}
                   className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
                 >
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     className="md:w-1/2"
@@ -187,7 +232,7 @@ const WebDevelopment = () => {
                     <div className="bg-card p-10 rounded-[2.5rem] shadow-sm border border-border group hover:border-primary/30 transition-all">
                       <div className="flex items-center gap-4 mb-4">
                         <span className="text-5xl font-black text-primary/10 group-hover:text-primary/20 transition-colors uppercase italic select-none">
-                            Step {index + 1}
+                          Step {index + 1}
                         </span>
                       </div>
                       <h3 className="font-bold text-2xl mb-4 tracking-tight">{step.title}</h3>
@@ -213,25 +258,25 @@ const WebDevelopment = () => {
         quote="We don’t just build websites. We engineer high-velocity digital ecosystems."
       />
 
-      {/* ================= FINAL CTA ================= */}
+      {/* FINAL CTA */}
       <section className="my-24 px-4">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-12 md:p-20 text-center rounded-[3.5rem] shadow-2xl relative overflow-hidden">
-             <div className="absolute top-0 right-0 p-10 opacity-10">
-                <Code className="w-64 h-64" />
-             </div>
-             <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-white italic tracking-tight">Ready to Digitize Your Vision?</h2>
-             <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-               Join 500+ brands powered by SocioBhaarat engineering. Let's discuss your roadmap today.
-             </p>
-             <Button 
-                size="lg" 
-                variant="secondary" 
-                className="rounded-full h-16 px-12 text-xl font-bold shadow-xl hover:scale-105 transition-all" 
-                onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-             >
-                Launch Your Project Now
-             </Button>
+            <div className="absolute top-0 right-0 p-10 opacity-10">
+              <Code className="w-64 h-64" />
+            </div>
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-8 text-white italic tracking-tight">Ready to Digitize Your Vision?</h2>
+            <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Join 500+ brands powered by SocioBhaarat engineering. Let's discuss your roadmap today.
+            </p>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="rounded-full h-16 px-12 text-xl font-bold shadow-xl hover:scale-105 transition-all"
+              onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+            >
+              Launch Your Project Now
+            </Button>
           </div>
         </div>
       </section>

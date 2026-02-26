@@ -1,257 +1,279 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import QuoteSection from "@/components/ui/QuoteSection";
-import { Palette, Users, Smartphone, Zap, Layout, Target, Check } from "lucide-react";
+import {
+  Palette, Users, Smartphone, Zap, Layout, Target,
+  Check, ArrowRight, Sparkles, Search, MousePointer2,
+  Layers, ShieldCheck, Brush, PenTool,
+  Rocket
+} from "lucide-react";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const UIUXDesign = () => {
   const navigate = useNavigate();
+
+  /* DATA */
   const services = [
     {
-      icon: Palette,
-      title: "User Interface Design",
-      description: "Beautiful, intuitive interfaces that users love",
+      icon: <Palette />,
+      title: "Interface Design",
+      description: "Beautiful, intuitive interfaces that users love.",
       features: ["Visual Design", "Design Systems", "Brand Integration", "Responsive Layouts"]
     },
     {
-      icon: Users,
-      title: "User Experience Design",
-      description: "Research-driven UX that converts visitors into customers",
+      icon: <Users />,
+      title: "Experience Strategy",
+      description: "Research-driven UX that converts visitors into customers.",
       features: ["User Research", "Wireframing", "Prototyping", "Usability Testing"]
     },
     {
-      icon: Smartphone,
+      icon: <Smartphone />,
       title: "Mobile App Design",
-      description: "Native and cross-platform app designs",
-      features: ["iOS Design", "Android Design", "App Prototypes", "Animation Design"]
+      description: "Native and cross-platform app designs for iOS & Android.",
+      features: ["iOS/Android Design", "App Prototypes", "Micro-animations", "Animation Design"]
     },
     {
-      icon: Layout,
-      title: "Web Design",
-      description: "Modern, conversion-focused website designs",
-      features: ["Landing Pages", "E-commerce Design", "Dashboard Design", "Micro-interactions"]
+      icon: <Layout />,
+      title: "Web Platforms",
+      description: "Modern, conversion-focused website and dashboard designs.",
+      features: ["Landing Pages", "E-commerce Design", "Dashboards", "Micro-interactions"]
     }
   ];
 
-  const process = [
-    { step: "Research & Discovery", description: "Understanding your users and business goals" },
-    { step: "Wireframing", description: "Creating the blueprint of your digital product" },
-    { step: "Visual Design", description: "Bringing your brand to life with stunning visuals" },
-    { step: "Prototyping", description: "Interactive prototypes for testing and validation" },
-    { step: "User Testing", description: "Validating designs with real users" },
-    { step: "Handoff & Support", description: "Seamless transition to development team" }
+  const steps = [
+    {
+      id: "01",
+      title: "Research & Discovery",
+      desc: "Understanding user pain points, business goals, and conducting competitor analysis.",
+      icon: <Search className="w-6 h-6 text-blue-900" />,
+    },
+    {
+      id: "02",
+      title: "Wireframing & Architecture",
+      desc: "Creating low-fidelity blueprints to define the structural flow and information hierarchy.",
+      icon: <Layout className="w-6 h-6 text-blue-900" />,
+    },
+    {
+      id: "03",
+      title: "Visual Design",
+      desc: "Applying brand identity, typography, and colors to create high-fidelity UI screens.",
+      icon: <Palette className="w-6 h-6 text-blue-900" />,
+    },
+    {
+      id: "04",
+      title: "Interactive Prototyping",
+      desc: "Building clickable prototypes to simulate real user interactions and transitions.",
+      icon: <MousePointer2 className="w-6 h-6 text-blue-900" />,
+    },
+    {
+      id: "05",
+      title: "Usability Testing",
+      desc: "Validating designs with real users to identify friction points and areas for improvement.",
+      icon: <Users className="w-6 h-6 text-blue-900" />,
+    },
+    {
+      id: "06",
+      title: "Design Handoff",
+      desc: "Providing developers with documented assets, specs, and style guides for production.",
+      icon: <Rocket className="w-6 h-6 text-blue-900" />,
+    },
   ];
 
-  const whyChooseUs = [
-    "Experienced UI/UX Designers",
-    "User-Centered Design Approach",
-    "Research-Driven Strategy",
-    "Modern & Clean Visual Design",
-    "Prototyping & Usability Testing",
-    "Transparent & Collaborative Process",
-  ]
-
-  const Technologies = [
-    "Figma",
-    "Adobe XD",
-    "Sketch",
-    "Framer",
-    "Miro",
-    "InVision",
-    "Photoshop",
-    "Illustrator"
-  ]
+  const technologies = [
+    "Figma", "Adobe XD", "Sketch", "Framer", "Miro", "InVision", "Photoshop", "Illustrator"
+  ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background selection:bg-orange-100">
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="font-display text-5xl sm:text-6xl font-bold mb-6">
-            Design <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Experiences That Users Love</span>
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-            We create intuitive, engaging, and visually compelling user interfaces that enhance user satisfaction and drive meaningful interactions across web and mobile platforms.
-          </p>
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"
-            onClick={() => navigate("/contact")}
+      {/* HERO SECTION */}
+      <section className="relative pt-44 pb-32 px-4 overflow-hidden bg-[#fafafa] bg-gradient-to-br from-secondary/60 to-accent/35">
+        {/* Dynamic Mesh Gradient Blobs */}
+
+        {/* Subtle Designer's Grid */}
+        <div className="absolute inset-0 z-0 opacity-[0.05] bg-[radial-gradient(#000_1px,transparent_1px)] bg-[size:30px_30px]" />
+
+        <div className="relative z-10 container mx-auto max-w-6xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            Start Your Design Project
-          </Button>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md text-orange-600 text-[10px] font-bold mb-10 tracking-[0.2em] uppercase shadow-sm">
+              <Sparkles className="w-3 h-3" />
+              SocioBhaarat Creative Lab
+            </div>
+
+            <h1 className="font-display ext-4xl sm:text-6xl lg:text-7xl font-black mb-8 text-slate-900 leading-[1.05] tracking-tighter">
+              Design <span className="relative inline-block">
+                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-500 to-blue-600">
+                  Experiences
+                </span>
+                <div className="absolute bottom-2 left-0 w-full h-3 bg-yellow-200/50 -z-10 skew-x-12" />
+              </span> That Breathe.
+            </h1>
+
+            <p className="text-lg sm:text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+              "Design is not decoration — it’s the bridge between a brand's logic and a user's soul."
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center gap-5">
+              <Button
+                size="lg"
+                className="rounded-full px-12 h-16 text-lg font-bold bg-orange-500 hover:bg-orange-600 shadow-xl shadow-orange-200 transition-all hover:scale-105"
+                onClick={() => navigate("/contact")}
+              >
+                Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-4">
-            Why Choose Sociobhaarat for UI/UX Design
-          </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-12">
-            We blend creativity, research, and strategy to design digital experiences that are visually stunning, functional, user-friendly, and conversion-focused.
-          </p>
+      {/* WHY CHOOSE US (SPOTLIGHT) */}
+      <section className="py-24 px-4 bg-muted/30 border-y border-border overflow-hidden">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">The Designer's Edge</h2>
+              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                We blend the psychology of user behavior with the art of visual storytelling to create products that don't just work—they resonate.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="p-4 bg-background rounded-2xl border border-border shadow-sm">
+                  <div className="text-3xl font-black text-orange-500">500+</div>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Successful Projects</p>
+                </div>
+                <div className="p-4 bg-background rounded-2xl border border-border shadow-sm">
+                  <div className="text-3xl font-black text-blue-600">98%</div>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Client Satisfaction</p>
+                </div>
+              </div>
+            </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((item, index) => (
+            <div className="grid gap-4">
+              {[
+                { title: "Experienced UI/UX Team", icon: <Users /> },
+                { title: "User-Centered Approach", icon: <Target /> },
+                { title: "Research-Driven Strategy", icon: <Search /> },
+                { title: "Clean Visual Aesthetic", icon: <Palette /> },
+                { title: "Prototyping & Testing", icon: <Layers /> },
+                { title: "Collaborative Process", icon: <MousePointer2 /> }
+              ].map((item, idx) => (
+                <motion.div key={idx} whileHover={{ x: 10 }} className="flex items-center gap-5 p-5 rounded-2xl bg-card border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all group">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">{item.icon}</div>
+                  <h4 className="font-bold text-sm">{item.title}</h4>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES (BENTO GRID) */}
+      <section className="py-24 px-4 bg-background">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center italic">Specialized Design Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div key={index} whileHover={{ scale: 1.01 }} className="group relative p-10 rounded-[3.5rem] bg-muted/20 border border-border/60 overflow-hidden">
+                <div className="absolute top-0 right-0 p-8 text-primary/10 group-hover:scale-125 transition-transform">{service.icon}</div>
+                <h3 className="text-3xl font-extrabold mb-4">{service.title}</h3>
+                <p className="text-muted-foreground text-lg mb-8 leading-relaxed italic">{service.description}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider opacity-70">
+                      <Zap className="h-4 w-4 text-orange-500" /> {feature}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PATH TO DISCOVERY (ROADMAP) */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-7xl">
+          {/* Section Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+              The Design Roadmap
+            </h2>
+          </div>
+
+          {/* Roadmap Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {steps.map((step) => (
               <div
-                key={index}
-                className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-lg transition"
+                key={step.id}
+                className="relative p-10 bg-white rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 group overflow-hidden"
               >
-                <Check className="h-8 w-8 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold">{item}</h3>
+                {/* Background Step Number */}
+                <span className="absolute top-6 right-10 text-7xl font-bold text-gray-50 italic select-none group-hover:text-blue-50/50 transition-colors duration-300">
+                  {step.id}
+                </span>
+
+                {/* Icon Container */}
+                <div className="mb-6 relative z-10">
+                  {step.icon}
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-500 italic leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* OUR SERVICES*/}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="font-display text-4xl font-bold mb-12 text-center">
-            Our UI/UX Design Services
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
-              >
-                <service.icon className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm">
-                      <Zap className="h-4 w-4 text-secondary mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* DESIGN PROCESS */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="font-display text-4xl font-bold mb-12 text-center">
-            Our Design Process
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {process.map((item, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-md transition">
-                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {index + 1}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{item.step}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TOOLS WE USE */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-12">
-            Tools & Technologies We Use
-          </h2>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            {Technologies.map((tool, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-card border border-border rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <QuoteSection
-        quote="Design is not decoration — it’s how users experience your brand."
-      />
-
-      {/* CTA Button */}
-      <section className=" my-16 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
+      {/* TECH CLOUD */}
+      <section className="py-24 px-4 bg-background border-y border-border">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-6 text-primary-foreground">Ready to Transform Your Digital Experience?</h2>
-          <p className="text-xl text-primary-foreground/90 mb-8">
-            Let’s design user experiences that drive engagement and conversions.
-          </p>
-          <Button size="lg" variant="secondary" className="rounded-full px-8" onClick={() => window.open("https://wa.me/919589581364", "_blank")}>
-            Get Free Consultation
-          </Button>
+          <h2 className="text-3xl font-bold mb-12 italic">The Designer's Toolkit</h2>
+          <div className="flex flex-wrap justify-center gap-6">
+            {technologies.map((tool, index) => (
+              <motion.span key={index} whileHover={{ scale: 1.1, color: "#f97316" }} className="px-8 py-4 bg-card border-2 border-border rounded-2xl text-lg font-bold shadow-sm transition-all cursor-default">
+                {tool}
+              </motion.span>
+            ))}
+          </div>
         </div>
       </section>
 
+      <QuoteSection quote="Design is not decoration — it’s the bridge between a brand's logic and a user's soul." />
 
-
-      {/* <div className="pt-32 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              UI/UX Design Services
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Create exceptional digital experiences that delight users and drive business growth with our expert UI/UX design services.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {services.map((service, index) => (
-              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
-                <service.icon className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm">
-                      <Zap className="h-4 w-4 text-secondary mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Design Process</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {process.map((item, index) => (
-                <Card key={index} className="p-6 text-center">
-                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                    {index + 1}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{item.step}</h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
-                </Card>
-              ))}
+      {/* FINAL CTA */}
+      <section className="my-24 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-12 md:p-24 text-center rounded-[4rem] shadow-2xl relative overflow-hidden text-white">
+            <div className="absolute top-0 right-0 p-10 opacity-10">
+              <Smartphone className="w-64 h-64 rotate-12" />
             </div>
-          </div>
-
-          <Card className="bg-primary text-primary-foreground p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Create Amazing User Experiences?</h2>
-            <p className="text-lg mb-8 opacity-90">Let's discuss your design project and create something extraordinary</p>
-            <Button size="lg" variant="secondary" onClick={() => navigate("/contact")} >
-              Get Started Today
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-8 italic">Ready to Build Your App?</h2>
+            <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto font-medium">
+              Get a free consultation and a technical roadmap for your Android or iOS project.
+            </p>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="rounded-full h-16 px-12 text-xl font-bold hover:scale-105 transition-all shadow-xl"
+              onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+            >
+              Start Free Consultation
             </Button>
-          </Card>
+          </div>
         </div>
-      </div> */}
+      </section>
     </div>
   );
 };
