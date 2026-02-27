@@ -10,55 +10,10 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { motion } from 'framer-motion';
+import { fadeUp, staggerContainer, fadeLeft, fadeRight, cardAnimation } from '@/components/ui/animation';
 
 function Index() {
   const navigate = useNavigate();
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 60 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -60 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const fadeRight = {
-    hidden: { opacity: 0, x: 60 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const cardAnimation = {
-    hidden: { opacity: 0, y: 40, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
 
   const industries = [
     {
@@ -69,7 +24,7 @@ function Index() {
     {
       name: "Hospitality",
       image:
-        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+        "https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg",
     },
     {
       name: "Retail & Fashion",
@@ -84,12 +39,12 @@ function Index() {
     {
       name: "Education",
       image:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
+        "https://img.freepik.com/free-photo/education-concept-student-studying-brainstorming-campus-concept-close-up-students-discussing-their-subject-books-textbooks-selective-focus_1418-627.jpg",
     },
     {
       name: "Manufacturing",
       image:
-        "https://images.unsplash.com/photo-1581091215367-59ab6b3a4c4d",
+        "https://img.freepik.com/premium-photo/mechanical-arm-welds-car-frame-factory_1208049-4.jpg",
     },
     {
       name: "Restaurants & Hotels",
@@ -129,12 +84,12 @@ function Index() {
     {
       name: "Cloth & Saree Showrooms",
       image:
-        "https://images.unsplash.com/photo-1520975922284-6b6b5a9b3f65",
+        "https://images.pexels.com/photos/4940756/pexels-photo-4940756.jpeg",
     },
     {
       name: "E-commerce",
       image:
-        "https://images.unsplash.com/photo-1515169067865-5387ec356754",
+        "https://img.freepik.com/free-photo/laptop-shopping-bags-online-shopping-concept_1423-190.jpg",
     },
   ];
   const services = [
@@ -215,23 +170,6 @@ function Index() {
         "Technical SEO",
       ],
       gradient: "green" as const,
-    },
-  ];
-  const stats = [
-    {
-      value: "500+",
-      label: "Projects Completed",
-      icon: <Award className="h-6 w-6" />,
-    },
-    {
-      value: "98%",
-      label: "Client Satisfaction",
-      icon: <Users className="h-6 w-6" />,
-    },
-    {
-      value: "24/7",
-      label: "Support Available",
-      icon: <Clock className="h-6 w-6" />,
     },
   ];
 
@@ -396,15 +334,6 @@ function Index() {
                   presence. We combine local market understanding with data-backed
                   execution to help businesses grow faster and smarter.
                 </p>
-              </div>
-
-              <div className="flex gap-4 pt-4">
-                <Button size="lg" className="rounded-full px-8 shadow-lg hover:shadow-primary/30 transition-all">
-                  Our Success Stories
-                </Button>
-                <Button variant="outline" size="lg" className="rounded-full px-8">
-                  Meet the Team
-                </Button>
               </div>
             </motion.div>
 
