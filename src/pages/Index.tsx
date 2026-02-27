@@ -533,10 +533,6 @@ function Index() {
               variants={fadeRight}
             >
               <div className="relative">
-                {/* Decorative Back Layers */}
-                <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-blue-400/20 blur-3xl rounded-full animate-pulse" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-primary/5 rounded-[4rem] rotate-6" />
-
                 <div className="relative z-10 overflow-hidden rounded-[3.5rem] shadow-2xl border-8 border-white">
                   <img
                     src="./images/IndexPageImg2.webp"
@@ -564,7 +560,7 @@ function Index() {
               <Rocket className="w-24 h-24 rotate-12" />
             </div>
             <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed italic">
-              "Your growth isn't a single event—it's a <span className="text-primary font-bold">continuous evolution</span> powered by data and creativity."
+              "Your growth isn't a single event—it's a <span className="text-secondary font-bold">continuous evolution</span> powered by data and creativity."
             </p>
           </motion.div>
         </motion.div>
