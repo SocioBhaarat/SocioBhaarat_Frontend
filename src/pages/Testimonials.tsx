@@ -4,44 +4,38 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Rajesh Kumar",
-      role: "CEO, Tech Solutions India",
-      content: "Socio Bhaarat transformed our digital presence completely. Their social media strategies helped us reach 10x more customers in just 6 months. Highly recommended!",
+      name: "Shourya Academy",
+      content: "Partnering with SocioBhaarat has been highly beneficial for Shourya Academy. From social media management and ad campaigns to professional video shoots and both online and offline marketing assistance, their team supported our promotions end-to-end and helped us reach more students with better engagement and consistent enquiries.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
     },
     {
-      name: "Priya Sharma",
-      role: "Founder, Fashion Hub",
-      content: "The team at Socio Bhaarat is incredibly professional and creative. Their graphic design work has elevated our brand to a whole new level. We couldn't be happier!",
+      name: "Lotus Consultancy",
+      content: "We at Lotus Consultancy had a great experience working with SocioBhaarat. Their team helped us with WhatsApp marketing, built our website, provided reliable tech support, and even recovered our hacked Instagram account smoothly. Their prompt response and technical expertise makes them a dependable digital partner for businesses.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
     },
     {
-      name: "Amit Patel",
-      role: "Director, Real Estate Plus",
-      content: "Working with Socio Bhaarat has been a game-changer for our business. Their performance marketing campaigns delivered exceptional ROI. True professionals!",
+      name: "Yuvraaj associates",
+      content: "Working with SocioBhaarat has been excellent for Yuvraaj Associates. Their social media, ads, shoots, and lead generation strategies boosted our visibility, genuine enquiries, and overall business growth, making them a reliable long-term digital marketing partner.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
     },
     {
-      name: "Sneha Deshmukh",
-      role: "Owner, Café Delight",
-      content: "From strategy to execution, everything was perfect. Our social media engagement has increased by 300% since we started working with them.",
+      name: "Sn Constructions",
+      content: "SocioBhaarat handled our shoots, social media management, ads, lead generation, and Google presence with a result-focused approach. We received quality enquiries, improved sales performance, and successfully closed 2 confirmed orders through their marketing efforts.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
     },
     {
-      name: "Vikram Singh",
-      role: "Marketing Head, Education First",
-      content: "The content marketing strategies provided by Socio Bhaarat are top-notch. They understand our brand and deliver quality work consistently.",
+      name: "Apple properties",
+      content: "SocioBhaarat managed our shoots and ad campaigns with excellent execution and professionalism. Their creative approach and targeted marketing delivered strong visibility and overall very good results for our business.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     },
     {
-      name: "Anita Reddy",
-      role: "Co-founder, Health & Wellness",
-      content: "Exceptional service and outstanding results! Their SEO strategies helped us rank on the first page for our target keywords. Couldn't ask for more!",
+      name: "Build wells",
+      content: "From video shoot and editing to social media management and ad campaigns, SocioBhaarat executed everything seamlessly. Their performance marketing approach brought us genuine leads, improved brand visibility, and directly contributed to consistent sales growth.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80",
     },
@@ -100,7 +94,6 @@ const Testimonials = () => {
                     />
                     <div>
                       <h3 className="font-semibold text-foreground">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                     </div>
                   </div>
                   <div className="flex mb-3">
