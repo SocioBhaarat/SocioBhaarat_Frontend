@@ -1,3 +1,4 @@
+import { staggerContainer, fadeUp, cardAnimation, fadeLeft } from "@/components/ui/animation";
 import { Button } from "@/components/ui/button";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
@@ -7,51 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 const ORMServices = () => {
   const navigate = useNavigate();
-  const fadeUp = {
-    hidden: { opacity: 0, y: 60 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -60 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const fadeRight = {
-    hidden: { opacity: 0, x: 60 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const cardAnimation = {
-    hidden: { opacity: 0, y: 40, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
 
   const services = [
     {
@@ -214,7 +170,6 @@ const ORMServices = () => {
 
       {/* Why Choose Us */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
-        {/* 1. ATMOSPHERIC BACKGROUND ELEMENTS */}
 
 
         <motion.div
@@ -230,7 +185,7 @@ const ORMServices = () => {
               The SocioBhaarat Advantage
             </span>
             <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter italic">
-              Why Brands <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500">Trust Us</span>
+              Why Brands <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 pr-2">Trust Us</span>
             </h2>
             <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto italic">
               "We combine strategic monitoring and professional response management to protect and enhance your brand’s image across Madhya Pradesh."
