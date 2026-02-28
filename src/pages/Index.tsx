@@ -700,19 +700,12 @@ function Index() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-6 sm:py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <Card className="bg-primary text-primary-foreground p-8 md:p-24 text-center rounded-[2.5rem] md:rounded-[4rem] shadow-2xl relative overflow-hidden border-none group">
 
-            {/* Dynamic Background Accents - Scaled for Mobile */}
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-48 h-48 md:w-64 md:h-64 bg-white/10 rounded-full blur-2xl md:blur-3xl group-hover:scale-110 transition-transform duration-700" />
-            <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-48 h-48 md:w-64 md:h-64 bg-black/10 rounded-full blur-2xl md:blur-3xl" />
-
-            {/* Technical Grid Pattern Overlay */}
-            <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:40px_40px]" />
-
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-4 md:mb-8 italic leading-tight tracking-tighter uppercase">
+              <h2 className="text-2xl sm:text-3xl md:text-6xl font-black mb-4 md:mb-8 italic leading-tight tracking-tighter uppercase">
                 Ready to Scale <br className="md:hidden" />
                 Your <span className="underline decoration-white/30 underline-offset-4">Online Empire?</span>
               </h2>

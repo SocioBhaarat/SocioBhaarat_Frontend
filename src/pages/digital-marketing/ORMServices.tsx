@@ -170,8 +170,6 @@ const ORMServices = () => {
 
       {/* Why Choose Us */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
-
-
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
           initial="hidden"
@@ -184,10 +182,10 @@ const ORMServices = () => {
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] mb-2 block">
               The SocioBhaarat Advantage
             </span>
-            <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter italic">
-              Why Brands <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 pr-2">Trust Us</span>
+            <h2 className="font-display text-4xl sm:text-5xl  md:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
+              Why Brands <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic pr-1 inline-block tracking-tight font font-medium">Trust Us</span>
             </h2>
-            <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto italic">
+            <p className="text-md md:text-lg text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto italic">
               "We combine strategic monitoring and professional response management to protect and enhance your brand’s image across Madhya Pradesh."
             </p>
           </motion.div>
@@ -245,13 +243,6 @@ const ORMServices = () => {
 
       {/* Why ORM Matters */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
-        {/* 1. ATMOSPHERIC BACKGROUND DESIGN */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-orange-500/5 blur-[120px] rounded-full" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 blur-[150px] rounded-full" />
-          {/* Subtle Dot Grid */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#000_1px,transparent_1px)] bg-[size:32px_32px]" />
-        </div>
 
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
@@ -267,12 +258,12 @@ const ORMServices = () => {
               Market Authority & Revenue
             </div>
 
-            <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
               The Science of <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Digital Trust</span>
             </h2>
 
-            <p className="text-xl text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto">
+            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto">
               "In today’s digital world, customers trust online reviews as much as personal recommendations. A single negative search result can divert 70% of potential leads to your competitors."
             </p>
           </motion.div>
