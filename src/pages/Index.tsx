@@ -276,26 +276,15 @@ function Index() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+        {/* Atmospheric Background Layers */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* 1. Primary Mesh Gradients to fill white space */}
-          <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-600/10 blur-[140px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-orange-500/10 blur-[130px] rounded-full" />
+          <div className="absolute top-[-10%] left-[-10%] w-[80%] md:w-[60%] h-[60%] bg-blue-600/10 blur-[80px] md:blur-[140px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[70%] md:w-[50%] h-[50%] bg-orange-500/10 blur-[80px] md:blur-[130px] rounded-full" />
 
-          {/* 2. Secondary Atmospheric Accent */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[40%] bg-primary/5 blur-[100px] rounded-full" />
-
-          {/* 3. Global Tech-Grid (Covers the entire section) */}
-          <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px]" />
-
-          {/* 4. Subtle Section Watermark */}
-          <div className="absolute -left-10 bottom-10 text-[12rem] font-black text-primary/[0.02] select-none italic">
-            SOCIO
-          </div>
+          {/* Technical Grid Overlay - Helps fill white space professionally */}
+          <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         </div>
-
-        {/* Existing Subtle Background Accent */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-muted/20 -skew-x-12 translate-x-1/2 -z-10" />
 
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
@@ -304,75 +293,70 @@ function Index() {
           viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
         >
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Change: flex-col-reverse ensures text comes first on mobile, image on bottom or top depending on preference */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-            {/* 1. LEFT COLUMN: Text & Narrative */}
-            <motion.div variants={fadeLeft} className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest border border-primary/20">
+            {/* 1. LEFT COLUMN: Narrative */}
+            <motion.div variants={fadeLeft} className="space-y-6 md:space-y-8 order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] md:text-xs font-bold uppercase tracking-widest border border-primary/20">
                 <Sparkles className="w-3 h-3" />
                 The SocioBhaarat Identity
               </div>
 
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-[1.1]">
-                Bhopal & Jabalpur’s <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic">
-                  Performance Architecture
-                </span>
+              <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-foreground leading-[1.1] tracking-tighter">
+                Bhopal & Jabalpur’s <br className="hidden md:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic">Performance</span> <br className="md:hidden" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic">Architecture</span>
               </h2>
 
-              <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-                <p className="border-l-4 border-primary/30 pl-6 italic">
-                  <strong>Socio Bhaarat</strong> is a performance-driven digital
-                  marketing and IT agency helping businesses scale with strategy,
-                  creativity, and technology. Since 2022, we’ve partnered with 50+
-                  brands across Madhya Pradesh.
+              <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground">
+                <p className="border-l-4 border-primary/30 pl-4 md:pl-6 italic font-medium">
+                  <strong>Socio Bhaarat</strong> is a performance-driven agency helping businesses scale with strategy,
+                  creativity, and technology.
                 </p>
 
-                <p>
-                  From paid advertising and SEO to branding and website development,
-                  our focus is simple — deliver <strong>measurable results</strong>, not just online
-                  presence. We combine local market understanding with data-backed
-                  execution to help businesses grow faster and smarter.
+                <p className="text-sm md:text-base">
+                  From paid advertising and SEO to branding and web dev, we focus on <strong>measurable results</strong>.
+                  We combine local market understanding with data-backed execution to help Madhya Pradesh businesses grow faster.
                 </p>
               </div>
             </motion.div>
 
             {/* 2. RIGHT COLUMN: Visual & Social Proof */}
-            <motion.div variants={fadeRight} className="relative flex justify-center lg:justify-end">
-              <div className="relative group">
+            <motion.div variants={fadeRight} className="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-12 lg:mb-0">
+              <div className="relative w-full max-w-[320px] md:max-w-md">
                 {/* Main Image Container */}
-                <div className="relative z-10 overflow-hidden rounded-[3rem] shadow-2xl border border-white/10">
+                <div className="relative z-10 overflow-hidden rounded-[2.5rem] md:rounded-[3rem] shadow-2xl border border-white/10 aspect-[4/5] lg:aspect-auto">
                   <motion.img
-                    src="./images/IndexPageImg.webp"
+                    src="./images/IndexAbout.png"
                     alt="Socio Bhaarat digital marketing team"
-                    className="w-full max-w-md object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     initial={{ scale: 1.1 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.8 }}
                   />
                 </div>
 
-                {/* Floating Metric Card */}
+                {/* Floating Metric Card - Adjusted for Mobile Visibility */}
                 <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute -bottom-6 -left-6 md:-left-12 z-20 bg-card/80 backdrop-blur-xl border border-border p-6 rounded-3xl shadow-2xl max-w-[240px]"
+                  className="absolute -bottom-6 -left-4 md:-bottom-10 md:-left-12 z-20 bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-border p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-2xl max-w-[200px] md:max-w-xs"
                 >
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-600">
-                      <Users className="w-5 h-5" />
+                  <div className="flex items-center gap-3 mb-2 md:mb-3">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-600">
+                      <Users className="w-4 h-4 md:w-5 md:h-5" />
                     </div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Trusted By</p>
+                    <p className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">Trusted By</p>
                   </div>
-                  <p className="text-2xl font-black text-foreground">50+ Local Brands</p>
-                  <p className="text-xs text-muted-foreground mt-1">Leading the digital shift across Madhya Pradesh.</p>
+                  <p className="text-lg md:text-2xl font-black text-foreground">50+ Local Brands</p>
+                  <p className="text-[9px] md:text-xs text-muted-foreground mt-1 leading-tight">Leading the digital shift across MP.</p>
                 </motion.div>
 
-                {/* Decorative Back Elements - Updated with Blue/Orange hints */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl -z-10 animate-pulse" />
-                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl -z-10" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-primary/10 rounded-[3rem] rotate-3 -z-10" />
+                {/* Decorative Back Elements - Scaled for Mobile */}
+                <div className="absolute -top-6 -right-6 w-24 h-24 md:w-40 md:h-40 bg-blue-500/10 rounded-full blur-2xl md:blur-3xl -z-10" />
+                <div className="absolute -bottom-6 -left-6 w-20 h-20 md:w-32 md:h-32 bg-orange-500/10 rounded-full blur-xl md:blur-2xl -z-10" />
               </div>
             </motion.div>
 
@@ -402,7 +386,7 @@ function Index() {
 
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
               Why Your Business Needs <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-primary to-blue-600 italic">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-primary to-blue-600 italic pr-2">
                 Digital Marketing
               </span>
             </h2>
@@ -475,7 +459,7 @@ function Index() {
           <motion.div variants={fadeUp} className="text-center max-w-3xl mx-auto mb-20 space-y-4">
             <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
               The Roadmap to <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-primary animate-gradient-x italic">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-primary animate-gradient-x italic pr-2">
                 Digital Dominance
               </span>
             </h2>
@@ -716,22 +700,37 @@ function Index() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 px-4">
+      <section className="py-12 md:py-24 px-4 sm:px-6">
         <div className="container mx-auto max-w-5xl">
-          <Card className="bg-primary text-primary-foreground p-12 md:p-24 text-center rounded-[4rem] shadow-[0_50px_100px_-20px_rgba(var(--primary),0.3)] relative overflow-hidden border-none">
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+          <Card className="bg-primary text-primary-foreground p-8 md:p-24 text-center rounded-[2.5rem] md:rounded-[4rem] shadow-2xl relative overflow-hidden border-none group">
+
+            {/* Dynamic Background Accents - Scaled for Mobile */}
+            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-48 h-48 md:w-64 md:h-64 bg-white/10 rounded-full blur-2xl md:blur-3xl group-hover:scale-110 transition-transform duration-700" />
+            <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-48 h-48 md:w-64 md:h-64 bg-black/10 rounded-full blur-2xl md:blur-3xl" />
+
+            {/* Technical Grid Pattern Overlay */}
+            <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:40px_40px]" />
+
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-6xl font-extrabold mb-8 italic">Ready to Scale Your Online Empire?</h2>
-              <p className="text-xl opacity-90 max-w-2xl mx-auto mb-12 font-medium">
-                Let's discuss how we can help you achieve your digital marketing goals and drive sustainable revenue.
+              <h2 className="text-3xl md:text-6xl font-black mb-4 md:mb-8 italic leading-tight tracking-tighter uppercase">
+                Ready to Scale <br className="md:hidden" />
+                Your <span className="underline decoration-white/30 underline-offset-4">Online Empire?</span>
+              </h2>
+
+              <p className="text-sm md:text-xl opacity-90 max-w-2xl mx-auto mb-8 md:mb-12 font-medium italic leading-relaxed">
+                "Let's discuss how we can engineer your digital marketing goals and drive sustainable revenue across Madhya Pradesh."
               </p>
-              <Button
-                size="lg" variant="secondary"
-                className="rounded-full h-16 px-12 text-xl font-black bg-white text-primary hover:bg-gray-100 transition-all shadow-xl"
-                onClick={() => navigate("/contact")}
-              >
-                Claim Your Free Audit
-              </Button>
+
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl font-black bg-white text-primary hover:bg-slate-50 transition-all shadow-xl hover:scale-105 active:scale-95"
+                  onClick={() => navigate("/contact")}
+                >
+                  Claim Your Free Audit
+                </Button>
+              </div>
             </div>
           </Card>
         </div>
