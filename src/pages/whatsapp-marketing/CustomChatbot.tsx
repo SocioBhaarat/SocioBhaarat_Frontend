@@ -201,10 +201,10 @@ const WhatsAppChatbot = () => {
       </section>
 
       {/* WHY CHOOSE US (Sleek Grid) */}
-      <section className="py-24 px-4 bg-secondary/5">
+      <section className="py-24 px-4 ">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Built for Scale & Performance</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Scale & Performance</span> </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">We don't just build bots; we build conversational experiences that drive revenue.</p>
           </div>
 
@@ -228,85 +228,77 @@ const WhatsAppChatbot = () => {
 
 
       {/* WHY YOU NEED IT (Enhanced) */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
-        {/* Decorative Background Element */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-[#25D366]/5 blur-[120px] rounded-full -z-10" />
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-muted">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-            {/* Left Column: Visual Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute -inset-4 bg-gradient-to-br from-[#25D366]/20 to-primary/10 rounded-[2.5rem] blur-xl opacity-50 -z-10" />
-              <div className="bg-card border border-border p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
-                {/* Subtle watermark icon */}
-                <MessageCircle className="absolute -right-8 -bottom-8 w-40 h-40 text-secondary/5 rotate-12" />
-
-                <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                  <div className="h-10 w-1 bg-secondary rounded-full" />
-                  Key Business Benefits
-                </h3>
-
-                <div className="space-y-6">
-                  {whyNeedPoints.slice(0, 4).map((point, index) => (
-                    <motion.div
-                      key={index}
-                      whileHover={{ x: 10 }}
-                      className="flex items-center gap-4 group"
-                    >
-                      <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all">
-                        <Check className="w-6 h-6" strokeWidth={3} />
-                      </div>
-                      <span className="text-lg font-semibold">{point}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right Column: Narrative Content */}
+            {/* 1. NARRATIVE CONTENT (Appears first on mobile) */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-8"
+              className="order-1 lg:order-2 space-y-6 md:space-y-8"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider">
-                <Zap className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-[10px] md:text-sm font-black uppercase tracking-[0.2em] border border-primary/20 backdrop-blur-md">
+                <Zap className="w-3 md:w-4 h-4" />
                 <span>Efficiency at Scale</span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                Why Do You Need <br />
-                <span className="text-secondary">WhatsApp Chatbots?</span>
+              <h2 className="text-3xl md:text-5xl font-black leading-[1.1] tracking-tighter text-slate-900">
+                Why Do You Need <br className="hidden md:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] via-primary to-orange-500 italic font-serif font-medium px-2">
+                  WhatsApp Chatbots?
+                </span>
               </h2>
 
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-slate-500 text-base md:text-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
                 {whyNeedIntro}
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+              {/* Secondary Points Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 pt-4">
                 {whyNeedPoints.slice(4).map((point, index) => (
-                  <div key={index} className="flex flex-col gap-2">
-                    <div className="h-1 w-12 bg-border group-hover:bg-primary transition-colors" />
-                    <span className="font-bold text-sm uppercase tracking-tighter opacity-80">{point}</span>
+                  <div key={index} className="flex flex-col gap-2 group">
+                    <div className="h-1 w-10 bg-border group-hover:bg-primary transition-all duration-500" />
+                    <span className="font-black text-[10px] md:text-xs uppercase tracking-tight opacity-80 text-slate-700">
+                      {point}
+                    </span>
                   </div>
                 ))}
               </div>
+            </motion.div>
 
-              <div className="pt-8">
-                <Button
-                  variant="outline"
-                  className="rounded-full px-8 border-2 hover:bg-primary hover:text-white transition-all"
-                  onClick={() => navigate("/contact")}
-                >
-                  Explore Use Cases
-                </Button>
+            {/* 2. VISUAL CARD (Appears below text on mobile) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-2 lg:order-1 relative"
+            >
+              <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-br from-[#25D366]/20 to-primary/10 rounded-[2.5rem] blur-xl opacity-50 -z-10" />
+              <div className="bg-card border-2 border-border/50 p-6 sm:p-8 md:p-10 rounded-[2.5rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+                {/* Subtle watermark icon */}
+                <MessageCircle className="absolute -right-8 -bottom-8 w-32 h-32 md:w-40 md:h-40 text-secondary/5 rotate-12 pointer-events-none" />
+
+                <h3 className="text-xl md:text-2xl font-black mb-6 md:mb-8 flex items-center gap-3 tracking-tighter uppercase italic">
+                  <div className="h-8 md:h-10 w-1.5 bg-secondary rounded-full" />
+                  Key Business Benefits
+                </h3>
+
+                <div className="space-y-4 md:space-y-6">
+                  {whyNeedPoints.slice(0, 4).map((point, index) => (
+                    <motion.div
+                      key={index}
+                      whileHover={{ x: 10 }}
+                      className="flex items-center gap-3 md:gap-4 group/item"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary group-hover/item:bg-secondary group-hover/item:text-white transition-all duration-300 shadow-sm">
+                        <Check className="w-5 h-5 md:w-6 md:h-6" strokeWidth={4} />
+                      </div>
+                      <span className="text-base md:text-lg font-bold text-slate-800 tracking-tight italic">{point}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </motion.div>
 
@@ -316,29 +308,28 @@ const WhatsAppChatbot = () => {
 
 
       {/* OUR SERVICES (Spotlight Layout) */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
-            <div className="text-left">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                Our WhatsApp Chatbot Services
+      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background relative overflow-hidden">
+        {/* Technical Background Architecture (SocioBhaarat Engineering Lab) */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+
+        <div className="container mx-auto max-w-6xl relative z-10">
+          {/* Header Architecture: Fluid Stack */}
+          <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-12 md:mb-16 gap-6">
+            <div className="text-left border-l-4 border-primary pl-6 md:pl-8">
+              <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter text-slate-900 leading-tight">
+                Our <br className="block md:hidden" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                  WhatsApp Chatbot
+                </span> Services
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl">
-                From simple FAQs to complex e-commerce automation, we build bots that handle the heavy lifting while you focus on growth.
+              <p className="text-slate-500 text-base md:text-lg font-medium italic max-w-2xl leading-relaxed">
+                "From simple FAQs to complex e-commerce automation, we build bots that handle the heavy lifting while you focus on growth."
               </p>
-            </div>
-            <div className="hidden md:block">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-secondary/20 flex items-center justify-center">
-                    <Bot className="w-5 h-5 text-secondary" />
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Adaptive Grid: 1 col on mobile, 2 on tablet, 4 on desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -347,23 +338,23 @@ const WhatsAppChatbot = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -5, backgroundColor: "hsl(var(--card))" }}
-                className="group relative p-8 rounded-[2rem] bg-card/50 border border-border/50 hover:border-primary/30 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                className="group relative p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-card/50 border-2 border-border/50 hover:border-primary/30 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-sm"
               >
                 {/* Subtle Background Glow on Hover */}
-                <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+                <div className="absolute -right-4 -top-4 w-20 h-20 md:w-24 md:h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors pointer-events-none" />
 
                 <div className="relative z-10">
-                  <div className="mb-6 inline-flex p-3 rounded-xl bg-background border border-border group-hover:text-primary group-hover:border-primary/50 transition-all shadow-sm">
-                    <Bot className="h-6 w-6" />
+                  {/* Icon Container: Scaled for mobile */}
+                  <div className="mb-4 md:mb-6 inline-flex p-2.5 md:p-3 rounded-xl bg-background border border-border group-hover:text-primary group-hover:border-primary/50 group-hover:shadow-md transition-all">
+                    <Bot className="h-5 w-5 md:h-6 shrink-0" />
                   </div>
-                  <h3 className="text-lg font-bold leading-tight group-hover:text-primary transition-colors">
+
+                  <h3 className="text-base md:text-lg font-black leading-tight text-slate-800 uppercase italic tracking-tight group-hover:text-primary transition-colors">
                     {service}
                   </h3>
-                </div>
 
-                <div className="mt-6 flex items-center text-xs font-bold uppercase tracking-widest text-muted-foreground group-hover:text-primary transition-colors">
-                  <span>Details</span>
-                  <div className="ml-2 h-[1px] w-0 group-hover:w-8 bg-primary transition-all duration-300" />
+                  {/* Added Lab Detail Line */}
+                  <div className="h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-500 mt-4" />
                 </div>
               </motion.div>
             ))}
@@ -371,35 +362,56 @@ const WhatsAppChatbot = () => {
         </div>
       </section>
 
-      {/* FEATURES (Detailed View) */}
-      <section className="py-24 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center tracking-tight">Powerful Capabilities</h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+      {/* FEATURES */}
+      <section className="py-16 md:py-24 px-4 bg-background relative overflow-hidden">
+
+        <div className="container mx-auto max-w-6xl relative z-10 ">
+
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 text-center italic">
+            Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Capabilities</span>
+          </h2>
+
+
+          {/* Adaptive Grid: 1 col on mobile, 2 on tablet+ */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-7">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                className="h-full"
               >
-                <Card className="p-8 h-full rounded-[2.5rem] border-2 border-transparent hover:border-primary/20 transition-all bg-gradient-to-br from-card to-background overflow-hidden relative">
-                  <div className="absolute top-0 right-0 p-8 opacity-5">
-                    <feature.icon className="w-32 h-32" />
+                <Card className="p-6 sm:p-8 md:p-10 h-full rounded-[2rem] md:rounded-[2.5rem] border-2 border-gray-200 hover:border-primary/20 transition-all bg-gradient-to-br from-card to-background overflow-hidden relative group">
+
+                  {/* Responsive Watermark Icon: Scaled for mobile */}
+                  <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 pointer-events-none">
+                    <feature.icon className="w-24 h-24 md:w-32 md:h-32 rotate-12" />
                   </div>
 
-                  <feature.icon className="h-12 w-12 text-primary mb-6" />
-                  <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground mb-8 leading-relaxed">{feature.description}</p>
+                  <div className="relative z-10">
+                    <feature.icon className="h-10 w-10 md:h-12 md:w-12 text-primary mb-6 group-hover:scale-110 transition-transform duration-300" />
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {feature.benefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm font-medium">
-                        <div className="h-2 w-2 rounded-full bg-secondary" />
-                        {benefit}
-                      </div>
-                    ))}
+                    <h3 className="text-xl md:text-2xl font-black mb-3 text-slate-800 uppercase tracking-tight italic">
+                      {feature.title}
+                    </h3>
+
+                    <p className="text-slate-500 text-sm md:text-base mb-8 leading-relaxed font-medium italic border-l-2 border-primary/10 pl-4">
+                      {feature.description}
+                    </p>
+
+                    {/* Internal Benefit Grid: 1 col on narrow mobile, 2 on small tablets+ */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 md:gap-4">
+                      {feature.benefits.map((benefit, idx) => (
+                        <div key={idx} className="flex items-center gap-3 p-2 rounded-xl hover:bg-primary/5 transition-colors group/item">
+                          <div className="h-2 w-2 rounded-full bg-secondary shrink-0 group-hover/item:scale-125 transition-transform" />
+                          <span className="text-[11px] md:text-sm font-bold text-slate-600 tracking-tight uppercase">
+                            {benefit}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </Card>
               </motion.div>
@@ -409,30 +421,49 @@ const WhatsAppChatbot = () => {
       </section>
 
       {/* PROCESS (The Timeline) */}
-      <section className="py-24 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Our Development Journey</h2>
-          <div className="relative">
-            {/* Vertical Line */}
-            <div className="absolute left-[20px] md:left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" />
+      <section className="py-16 md:py-24 px-4 bg-muted/30 relative overflow-hidden">
+        {/* Technical Background Architecture */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-            <div className="space-y-12">
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <div className="text-center mb-16 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 italic">
+              Our Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Journey</span>
+            </h2>
+          </div>
+
+          <div className="relative">
+            <div className=" hidden sm:block absolute left-[24px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-border to-transparent -translate-x-1/2" />
+
+            <div className="space-y-12 md:space-y-16">
               {developmentProcess.map((step, index) => (
                 <motion.div
                   key={index}
-                  className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className={`flex items-start md:items-center gap-8 relative ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
+                    }`}
                 >
-                  <div className="flex-1 w-full md:text-right">
-                    <div className={index % 2 === 0 ? 'md:text-left' : 'md:text-right'}>
-                      <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                      <p className="text-muted-foreground text-sm">Strategy tailored to ensure your bot speaks your brand's voice perfectly.</p>
+                  {/* TEXT CONTAINER */}
+                  <div className={`flex-1 pt-1 md:pt-0 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'
+                    }`}>
+                    <div className="bg-card/50 md:bg-transparent p-4 md:p-0 rounded-2xl border border-border/50 md:border-none shadow-sm md:shadow-none">
+                      <h3 className="text-lg md:text-xl font-black text-slate-800 uppercase italic mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">
+                        Strategy tailored to ensure your bot speaks your brand's voice perfectly.
+                      </p>
                     </div>
                   </div>
 
-                  <div className="z-10 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg shadow-primary/30">
+                  {/* STEP INDICATOR (The Dot) */}
+                  <div className="z-20 shrink-0 w-12 h-12 rounded-2xl md:rounded-full bg-primary text-white flex items-center justify-center font-black shadow-xl shadow-primary/30 text-lg italic border-4 border-background transition-transform hover:scale-110">
                     {index + 1}
                   </div>
 
+                  {/* SPACER (Hidden on mobile to maintain left-alignment) */}
                   <div className="flex-1 hidden md:block" />
                 </motion.div>
               ))}
@@ -445,8 +476,6 @@ const WhatsAppChatbot = () => {
       <section className="py-12 md:py-24 px-4 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
               <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">

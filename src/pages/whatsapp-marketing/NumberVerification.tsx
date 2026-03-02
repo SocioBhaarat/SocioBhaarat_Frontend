@@ -152,7 +152,7 @@ const NumberVerification = () => {
                 </Button>
 
                 {/* Social Proof Avatars */}
-                <div className="flex -space-x-3 items-center">
+                {/* <div className="flex -space-x-3 items-center">
                   {[1, 2, 3].map(i => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[10px] font-bold text-primary shadow-sm">
                       <Check className="w-4 h-4" />
@@ -161,7 +161,7 @@ const NumberVerification = () => {
                   <span className="pl-6 text-[11px] md:text-sm font-black text-slate-400 uppercase tracking-widest italic">
                     Used by 500+ Brands
                   </span>
-                </div>
+                </div> */}
               </div>
             </motion.div>
 
@@ -205,9 +205,9 @@ const NumberVerification = () => {
       </section>
 
       {/* WHY CHOOSE US (Technical Grid) */}
-      <section className="py-24 px-4 bg-secondary/5">
+      <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">The Sociobhaarat Edge</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Socio Bhaarat</span> Edge</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChoosePoints.map((item, index) => (
@@ -232,7 +232,7 @@ const NumberVerification = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-5xl font-bold">Why Verification Matters?</h2>
+              <h2 className="text-3xl md:text-5xl font-bold">Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Verification</span> Matters?</h2>
               <p className="text-lg text-muted-foreground">
                 Sending campaigns to invalid numbers isn't just a waste of money—it risks your official WhatsApp API standing.
               </p>
@@ -267,8 +267,6 @@ const NumberVerification = () => {
 
       {/* ENHANCED SERVICES SECTION */}
       <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
-        {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/circuit-board.png')]" />
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
@@ -280,7 +278,7 @@ const NumberVerification = () => {
               <Zap className="w-3 h-3" />
               <span>PRO-GRADE TOOLS</span>
             </motion.div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Verification Suite</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Verification Suite</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Precision-engineered tools to audit, clean, and verify your global WhatsApp databases in seconds.
             </p>
@@ -316,11 +314,6 @@ const NumberVerification = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                   {service.desc}
                 </p>
-
-                <div className="flex items-center gap-2 text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-3 h-3" />
-                </div>
               </motion.div>
             ))}
           </div>
@@ -328,38 +321,53 @@ const NumberVerification = () => {
       </section>
 
       {/* FEATURES */}
-      <section className="py-24 px-4 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold">Platform Capabilities</h2>
+      <section className="py-16 md:py-24 px-4 bg-background relative overflow-hidden">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 italic">
+              Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium"> Capabilities</span>
+            </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          {/* Adaptive Grid: 1 col on mobile/tablet, 2 on desktop */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
                 className="h-full"
               >
-                <Card className="p-10 h-full rounded-[2.5rem] bg-card hover:shadow-2xl hover:shadow-primary/5 transition-all border-border/50">
-                  <div className="flex flex-col md:flex-row gap-8 items-start">
-                    <div className="p-4 rounded-3xl bg-primary/10 text-primary">
-                      <feature.icon className="h-10 w-10" />
+                <Card className="p-6 sm:p-8 md:p-10 h-full rounded-[2rem] md:rounded-[2.5rem] bg-card hover:shadow-2xl hover:shadow-primary/5 transition-all border-2 border-border/50 group">
+                  <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+
+                    {/* Icon Container: Shrink-0 ensures it doesn't compress */}
+                    <div className="p-4 rounded-3xl bg-primary/10 text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
+                      <feature.icon className="h-8 w-8 md:h-10 md:w-10" />
                     </div>
-                    <div className="space-y-4">
-                      <h3 className="text-2xl font-bold">{feature.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">
+
+                    <div className="space-y-4 w-full">
+                      <h3 className="text-xl md:text-2xl font-black text-slate-800 italic ">
+                        {feature.title}
+                      </h3>
+                      <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium italic">
                         {feature.description}
                       </p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 pt-4 border-t border-border/50">
+
+                      {/* Internal Benefit Grid: Stays 2 columns where possible, stacks on tiny screens */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 pt-5 border-t border-border/50">
                         {feature.benefits.map((benefit, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-sm font-semibold italic text-foreground/70">
-                            <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                          <div key={idx} className="flex items-center gap-2 text-xs md:text-sm font-black italic text-slate-600/80">
+                            <div className="h-1.5 w-1.5 rounded-full bg-secondary shrink-0" />
                             {benefit}
                           </div>
                         ))}
                       </div>
                     </div>
+                  </div>
+
+                  {/* Subtle ID Watermark */}
+                  <div className="absolute bottom-2 right-6 text-slate-900/[0.03] text-6xl font-black italic select-none hidden md:block">
+                    0{index + 1}
                   </div>
                 </Card>
               </motion.div>
@@ -368,11 +376,8 @@ const NumberVerification = () => {
         </div>
       </section>
 
-
-      {/* ENHANCED VERIFICATION ROADMAP */}
+      {/* VERIFICATION ROADMAP */}
       <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
-        {/* Decorative Background Accents */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
@@ -383,7 +388,7 @@ const NumberVerification = () => {
             >
               Step-by-Step Guide
             </motion.span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-3">The Roadmap to Green Tick</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mt-3">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Roadmap</span> to Green Tick</h2>
           </div>
 
           <div className="relative">
@@ -402,11 +407,6 @@ const NumberVerification = () => {
                 >
                   {/* Step Card */}
                   <div className="bg-card border border-border/60 rounded-[2.5rem] p-8 text-center transition-all duration-500 hover:border-primary/50 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] group-hover:-translate-y-2 relative z-10 overflow-hidden">
-
-                    {/* Corner Number Decor */}
-                    <div className="absolute -top-2 -right-2 text-6xl font-black text-primary/5 italic select-none">
-                      0{index + 1}
-                    </div>
 
                     {/* Icon / Number Circle */}
                     <div className="relative mb-8">
@@ -430,7 +430,7 @@ const NumberVerification = () => {
                     </p>
 
                     {/* Status Badge Mockup */}
-                    <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter ${index === 3 ? 'bg-green-500/10 text-green-500' : 'bg-secondary/10 text-secondary'
+                    <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase ${index === 3 ? 'bg-green-500/10 text-green-500' : 'bg-secondary/10 text-secondary'
                       }`}>
                       <div className={`h-1.5 w-1.5 rounded-full animate-pulse ${index === 3 ? 'bg-green-500' : 'bg-secondary'
                         }`} />
