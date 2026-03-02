@@ -3,7 +3,8 @@ import ServiceCard from "@/components/ServiceCard";
 import {
   Megaphone, Palette, Target, Code, BarChart, TrendingUp,
   Mail, Video, MessageSquare, Globe, Layout, Search,
-  Settings, Smartphone, ShieldCheck, Bot, ShoppingCart, Eye
+  Settings, Smartphone, ShieldCheck, Bot, ShoppingCart, Eye,
+  Sparkles
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -179,19 +180,53 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
       {/* Dynamic Header */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="container mx-auto text-center max-w-4xl">
-          <motion.h1
+
+      <section className="relative pt-12 pb-36 px-4  flex items-center justify-center overflow-hidden bg-[#fafafa]">
+
+        {/* 1. TECHNICAL BACKGROUND (Architectural Layer) */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Signature Blueprint Grid */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:45px_45px]" />
+
+          {/* Dual-Tone Mesh Blobs - Representing the Tech & Marketing Fusion */}
+          <div className="absolute top-[-10%] left-[-5%] w-[55%] h-[50%] bg-blue-600/5 blur-[100px] md:blur-[140px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-[45%] h-[40%] bg-orange-500/10 blur-[100px] rounded-full" />
+        </div>
+
+        {/* 2. CONTENT ARCHITECTURE */}
+        <div className="container mx-auto max-w-6xl px-4 relative z-10 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-extrabold mb-8"
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center"
           >
-            Digital <span className="text-primary italic">Excellence</span> Delivered
-          </motion.h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Socio Bhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with precision.
-          </p>
+            {/* Precision Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-slate-200 backdrop-blur-md text-primary text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
+              <Sparkles className="w-4 h-4 text-[#FFC105]" />
+              Unified Growth Lab
+            </div>
+
+            {/* High-Authority Typography */}
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8 md:mb-10">
+              Digital <br />
+              <span className="relative inline-block">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                  Excellence
+                </span>
+                {/* Technical Underline Architecture */}
+                <div className="absolute bottom-2 left-0 w-full h-1 md:h-3 bg-primary/10 -skew-x-12 -z-10" />
+              </span> <br className="hidden md:block" /> Delivered.
+            </h1>
+
+            <p className="text-base md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium italic border-x-0 md:border-x border-slate-200 md:px-12">
+              "SocioBhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with industrial-grade precision."
+            </p>
+          </motion.div>
         </div>
+
+        {/* Smooth Bottom Transition Shade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
       </section>
 
       {/* Dynamic Categories Section */}

@@ -1,337 +1,3 @@
-// import { Button } from "@/components/ui/button";
-// import { Card } from "@/components/ui/card";
-// import { motion } from "framer-motion";
-// import {
-//   CheckCircle,
-//   Shield,
-//   Zap,
-//   Phone,
-//   BadgeCheck,
-//   Users
-// } from "lucide-react";
-// import { useNavigate } from "react-router-dom";
-
-// const NumberVerification = () => {
-//   const navigate = useNavigate();
-
-// /* ================= HERO DATA ================= */
-
-// const heroData = {
-//   heading: "Accurate WhatsApp Number & Profile Verification for Businesses",
-//   subtext:
-//     "Ensure your marketing campaigns reach real and active users with our reliable WhatsApp number and name verification services. Improve delivery rates, reduce bounce rates, and maintain a clean customer database.",
-//   cta: "Start Verification"
-// };
-
-// /* ================= WHY CHOOSE US ================= */
-
-// const whyChooseIntro =
-//   "We provide secure, fast, and accurate WhatsApp verification solutions that help businesses validate contacts before launching campaigns.";
-
-// const whyChoosePoints = [
-//   "Real-Time WhatsApp Number Verification",
-//   "Accurate Name & Profile Validation",
-//   "Bulk Database Verification",
-//   "High Accuracy & Fast Processing",
-//   "Secure & Confidential Data Handling",
-//   "API Integration Available"
-// ];
-
-// /* ================= WHY YOU NEED ================= */
-
-// const whyNeedIntro =
-//   "Sending campaigns to invalid or inactive numbers wastes time and money. Verifying WhatsApp numbers ensures higher delivery rates, better engagement, and improved campaign ROI.";
-
-// const whyNeedPoints = [
-//   "Improve Message Delivery Rate",
-//   "Reduce Campaign Costs",
-//   "Remove Invalid or Inactive Numbers",
-//   "Increase Engagement & Conversion",
-//   "Maintain Clean CRM Database",
-//   "Boost Marketing Performance"
-// ];
-
-// /* ================= SERVICES ================= */
-
-// const services = [
-//   "Bulk WhatsApp Number Verification",
-//   "Individual Number Validation",
-//   "Name & Profile Data Matching",
-//   "Database Cleaning & Filtering",
-//   "API-Based Verification Solutions",
-//   "CRM Integration Support",
-//   "Real-Time Status Reports",
-//   "Detailed Verification Analytics",
-//   "WhatsApp Campaign Automation",
-//   "Chatbot Maintenance & Optimization"
-// ];
-
-// /* ================= FEATURES (UNCHANGED DESIGN) ================= */
-
-// const features = [
-//   {
-//     icon: BadgeCheck,
-//     title: "Official Business Verification",
-//     description:
-//       "Get your WhatsApp Business account officially verified with the green tick",
-//     benefits: [
-//       "Verified Badge",
-//       "Increased Trust",
-//       "Better Deliverability",
-//       "Official Business Profile"
-//     ]
-//   },
-//   {
-//     icon: Shield,
-//     title: "Custom Name Verification",
-//     description: "Display your business name instead of phone number",
-//     benefits: [
-//       "Brand Recognition",
-//       "Professional Appearance",
-//       "Customer Confidence",
-//       "Easy Identification"
-//     ]
-//   },
-//   {
-//     icon: Phone,
-//     title: "Number Authentication",
-//     description:
-//       "Secure authentication and verification for your business number",
-//     benefits: [
-//       "Security Compliance",
-//       "Account Protection",
-//       "Identity Verification",
-//       "API Access"
-//     ]
-//   },
-//   {
-//     icon: Users,
-//     title: "Multi-User Access",
-//     description:
-//       "Enable multiple team members to use verified business account",
-//     benefits: [
-//       "Team Collaboration",
-//       "Role Management",
-//       "Activity Tracking",
-//       "Centralized Control"
-//     ]
-//   }
-// ];
-
-// /* ================= VERIFICATION PROCESS (UNCHANGED DESIGN) ================= */
-
-// const process = [
-//   { step: "Documentation", description: "Submit required business documents" },
-//   {
-//     step: "Verification Request",
-//     description: "We submit verification to WhatsApp"
-//   },
-//   {
-//     step: "Review Process",
-//     description: "WhatsApp reviews your application"
-//   },
-//   { step: "Approval", description: "Get verified badge and custom name" }
-// ];
-
-//   return (
-//     <div className="min-h-screen bg-background">
-
-//       {/* ================= HERO ================= */}
-//       <section className="pt-10 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-//         <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
-
-//           <motion.div
-//             initial={{ opacity: 0, x: -40 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.7 }}
-//           >
-//             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-//               Accurate <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-//                 WhatsApp Number & Profile Verification
-//               </span> for Businesses
-//             </h1>
-
-//             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-//               Ensure your marketing campaigns reach real and active users with our reliable WhatsApp number and name verification services. Improve delivery rates, reduce bounce rates.
-//             </p>
-
-//             <Button
-//               size="sm"
-//               className="rounded-full px-8 shadow-lg "
-//               onClick={() => navigate("/contact")}
-//             >
-//               Start Verification
-//             </Button>
-//           </motion.div>
-
-//           <motion.div
-//             initial={{ opacity: 0, x: 40 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.7 }}
-//             className="flex justify-center"
-//           >
-//             <img
-//               src="https://img.freepik.com/free-vector/identity-verification-concept-illustration_114360-5580.jpg"
-//               alt="Number Verification"
-//               className="rounded-2xl shadow-2xl"
-//             />
-//           </motion.div>
-//         </div>
-//       </section>
-
-//       {/* ================= WHY CHOOSE US ================= */}
-//       <section className="py-20 px-4 bg-muted/30">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-6">
-//             Why Choose Sociobhaarat?
-//           </h2>
-//           <p className="text-muted-foreground max-w-3xl mx-auto mb-12">
-//             {whyChooseIntro}
-//           </p>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-//             {whyChoosePoints.map((point, index) => (
-//               <Card key={index} className="p-6 text-center">
-//                 <CheckCircle className="h-6 w-6 text-primary mx-auto mb-3" />
-//                 <p className="font-medium">{point}</p>
-//               </Card>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= WHY YOU NEED ================= */}
-//       <section className="py-20 px-4">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-6">
-//             Why Do You Need WhatsApp Verification?
-//           </h2>
-//           <p className="text-muted-foreground max-w-3xl mx-auto mb-12">
-//             {whyNeedIntro}
-//           </p>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-//             {whyNeedPoints.map((point, index) => (
-//               <Card key={index} className="p-6 text-center">
-//                 <CheckCircle className="h-6 w-6 text-secondary mx-auto mb-3" />
-//                 <p className="font-medium">{point}</p>
-//               </Card>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= SERVICES ================= */}
-//       <section className="py-20 px-4 bg-muted/30">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-12">Our Verification Services</h2>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-//             {services.map((service, index) => (
-//               <Card key={index} className="p-6 text-center">
-//                 <Shield className="h-6 w-6 text-primary mx-auto mb-3" />
-//                 <p className="font-medium">{service}</p>
-//               </Card>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= FEATURES ================= */}
-//       <section className="py-20 px-4">
-//         <div className="container mx-auto max-w-6xl">
-//           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12">
-//             Features
-//           </h2>
-
-//           <div className="grid md:grid-cols-2 gap-8">
-//             {features.map((feature, index) => (
-//               <Card
-//                 key={index}
-//                 className="p-8 hover:shadow-lg transition-shadow"
-//               >
-//                 <feature.icon className="h-12 w-12 text-primary mb-4" />
-//                 <h3 className="text-2xl font-bold mb-3">
-//                   {feature.title}
-//                 </h3>
-//                 <p className="text-muted-foreground mb-4">
-//                   {feature.description}
-//                 </p>
-
-//                 <ul className="space-y-2">
-//                   {feature.benefits.map((benefit, idx) => (
-//                     <li
-//                       key={idx}
-//                       className="flex items-center text-sm"
-//                     >
-//                       <CheckCircle className="h-4 w-4 text-secondary mr-2" />
-//                       {benefit}
-//                     </li>
-//                   ))}
-//                 </ul>
-//               </Card>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= VERIFICATION PROCESS ================= */}
-//       <section className="py-20 px-4 bg-muted/30">
-//         <div className="container mx-auto max-w-6xl">
-//           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12">
-//             Verification Process
-//           </h2>
-
-//           <div className="grid md:grid-cols-4 gap-6">
-//             {process.map((item, index) => (
-//               <Card key={index} className="p-6 text-center">
-//                 <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-//                   {index + 1}
-//                 </div>
-
-//                 <h3 className="text-xl font-bold mb-2">
-//                   {item.step}
-//                 </h3>
-
-//                 <p className="text-muted-foreground text-sm">
-//                   {item.description}
-//                 </p>
-//               </Card>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= CTA ================= */}
-//       <section className="py-20 px-4">
-//         <div className="container mx-auto max-w-6xl">
-//           <Card className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground p-12 text-center">
-//             <Zap className="h-16 w-16 mx-auto mb-6" />
-//             <h2 className="text-3xl font-bold mb-4">
-//               Get Verified Today!
-//             </h2>
-//             <p className="text-lg mb-8 opacity-90">
-//               Join thousands of verified businesses on WhatsApp
-//             </p>
-
-//             <Button
-//               size="lg"
-//               variant="secondary"
-//               onClick={() => navigate("/contact")}
-//             >
-//               Start Verification Process
-//             </Button>
-//           </Card>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default NumberVerification;
-
-
-
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -342,14 +8,15 @@ import {
   Settings2,
   Code2,
   Layers,
-  Rocket
+  Rocket,
+  Check
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const NumberVerification = () => {
   const navigate = useNavigate();
 
-  /* ================= DATA ================= */
+  /* DATA */
   const whyChoosePoints = [
     { title: "Real-Time Verification", icon: <Zap /> },
     { title: "Profile Validation", icon: <BadgeCheck /> },
@@ -366,7 +33,7 @@ const NumberVerification = () => {
     { step: "Approval", desc: "Green tick & custom name" }
   ];
 
-  /* ================= SERVICES ================= */
+  /* SERVICES */
 
   const services = [
     { name: "Bulk Number Verification", icon: <Database className="w-6 h-6" />, desc: "High-speed auditing for lists up to 1M+ contacts." },
@@ -380,7 +47,7 @@ const NumberVerification = () => {
     { name: "Optimization Audit", icon: <Settings2 className="w-6 h-6" />, desc: "Monthly cleanup to maintain high sender reputation." },
   ]
 
-  /* ================= FEATURES (UNCHANGED DESIGN) ================= */
+  /* FEATURES (UNCHANGED DESIGN) */
 
   const features = [
     {
@@ -436,75 +103,108 @@ const NumberVerification = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      {/* HERO SECTION */}
+      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
 
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Blueprint Grid Overlay - Representing Data Validation Grids */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+
+          {/* Atmospheric Mesh Blobs */}
+          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
+        </div>
+
+        {/* 2. MAIN CONTENT GRID */}
+        <div className="container mx-auto px-4 relative z-10 mt-12">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+
+            {/* LEFT COLUMN: Narrative */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 space-y-8 text-left"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 border border-primary/20 uppercase tracking-widest">
-                <Shield className="w-3 h-3" />
-                Enterprise Grade Validation
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                <Shield className="w-3 h-3" /> Enterprise Grade Validation
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1]">
-                Accurate <span className="text-primary italic">Verification</span> for WhatsApp
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+                Accurate <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                  WhatsApp Verification
+                </span> Solutions.
               </h1>
 
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed max-w-lg">
-                Ensure your marketing campaigns reach real, active users. Reduce bounce rates by 99% and maintain a high-trust customer database with official green-tick support.
+              <p className="text-base md:text-xl text-slate-500 leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
+                "Reduce bounce rates by 99% and maintain a high-trust customer database with official green-tick architecture and real-time active user validation."
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap items-center gap-6 pt-4">
                 <Button
                   size="lg"
-                  className="rounded-full px-10 h-14 shadow-2xl shadow-primary/20 text-lg hover:scale-105 transition-transform"
+                  className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
                   onClick={() => navigate("/contact")}
                 >
-                  Start Verification Now
+                  Start Verification <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <div className="flex -space-x-3 items-center ml-4">
+
+                {/* Social Proof Avatars */}
+                <div className="flex -space-x-3 items-center">
                   {[1, 2, 3].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-muted flex items-center justify-center text-[10px] font-bold">✓</div>
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[10px] font-bold text-primary shadow-sm">
+                      <Check className="w-4 h-4" />
+                    </div>
                   ))}
-                  <span className="pl-6 text-sm font-medium text-muted-foreground">Used by 500+ Brands</span>
+                  <span className="pl-6 text-[11px] md:text-sm font-black text-slate-400 uppercase tracking-widest italic">
+                    Used by 500+ Brands
+                  </span>
                 </div>
               </div>
             </motion.div>
 
+            {/* RIGHT COLUMN: Visual Proof (Security Bento) */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="relative group"
+              initial={{ opacity: 0, scale: 0.9, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="lg:col-span-5 relative hidden lg:block"
             >
-              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity" />
-              <img
-                src="https://img.freepik.com/free-vector/identity-verification-concept-illustration_114360-5580.jpg"
-                alt="Verification Process"
-                className="relative rounded-[2.5rem] shadow-2xl border border-white/10 group-hover:translate-y-[-10px] transition-transform duration-500"
-              />
-              {/* Floating Verification Badge UI */}
-              <div className="absolute -bottom-6 -left-6 bg-card border border-border p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow">
-                <div className="h-10 w-10 bg-green-500 rounded-full flex items-center justify-center text-white">
-                  <BadgeCheck />
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase text-muted-foreground">Status</p>
-                  <p className="font-bold">Verified User</p>
+              <div className="relative group">
+                {/* Decorative Glow */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
+                <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80"
+                    alt="Secure Data Verification Interface"
+                    className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                  />
+
+                  {/* Floating Verification Badge UI */}
+                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg shadow-green-200">
+                        <BadgeCheck className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Database Status</p>
+                        <p className="text-xl font-black text-slate-900 italic">Verified User</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
+
           </div>
         </div>
+
       </section>
 
-      {/* ================= WHY CHOOSE US (Technical Grid) ================= */}
+      {/* WHY CHOOSE US (Technical Grid) */}
       <section className="py-24 px-4 bg-secondary/5">
         <div className="container mx-auto max-w-6xl text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-16">The Sociobhaarat Edge</h2>
@@ -527,7 +227,7 @@ const NumberVerification = () => {
         </div>
       </section>
 
-      {/* ================= WHY YOU NEED (Metric-Style) ================= */}
+      {/* WHY YOU NEED (Metric-Style) */}
       <section className="py-24 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -565,7 +265,7 @@ const NumberVerification = () => {
         </div>
       </section>
 
-      {/* ================= ENHANCED SERVICES SECTION ================= */}
+      {/* ENHANCED SERVICES SECTION */}
       <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/circuit-board.png')]" />
@@ -627,7 +327,7 @@ const NumberVerification = () => {
         </div>
       </section>
 
-      {/* ================= FEATURES ================= */}
+      {/* FEATURES */}
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
@@ -669,7 +369,7 @@ const NumberVerification = () => {
       </section>
 
 
-      {/* ================= ENHANCED VERIFICATION ROADMAP ================= */}
+      {/* ENHANCED VERIFICATION ROADMAP */}
       <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
         {/* Decorative Background Accents */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
@@ -747,39 +447,39 @@ const NumberVerification = () => {
         </div>
       </section>
 
-      {/* ================= FINAL CTA ================= */}
-      <section className="py-24 px-4">
+      {/* FINAL CTA */}
+      <section className="py-12 md:py-24 px-4 sm:px-6">
         <div className="container mx-auto max-w-5xl">
-          <Card className="bg-gradient-to-br from-[#121212] to-primary p-12 md:p-20 text-center relative overflow-hidden border-none text-white rounded-[3rem]">
-            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-3xl"
-            />
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
-            <div className="relative z-10 space-y-8">
-              <SearchCheck className="h-16 w-16 mx-auto text-white animate-pulse" />
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
                 Ready to Verify Your Assets?
               </h2>
-              <p className="text-lg opacity-80 max-w-xl mx-auto">
-                Stop guessing and start validating. Join thousands of brands cleaning their databases today.
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Stop guessing and start validating. Join thousands of brands cleaning their databases today."
               </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
               <div className="flex justify-center">
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="rounded-full h-16 px-12 text-lg font-bold hover:scale-105 transition-transform"
-                  onClick={() => navigate("/contact")}
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                 >
-                  Start Verification Process <ArrowRight className="ml-2 w-5 h-5" />
+                  Start Verification Process
                 </Button>
               </div>
             </div>
-          </Card>
+
+          </div>
         </div>
       </section>
+
     </div>
   );
 };

@@ -1,215 +1,12 @@
-// import { Button } from "@/components/ui/button";
-// import { Check, Zap, Shield, BarChart3, Target, MessageSquare } from "lucide-react";
-// import { useNavigate } from "react-router-dom";
-// import { motion } from "framer-motion";
-
-// const BulkBroadcasting = () => {
-//   const navigate = useNavigate();
-
-//   /* ================= DATA VARIABLES ================= */
-
-//   const heroData = {
-//     heading: "Reach Thousands Instantly with Smart Bulk Broadcasting",
-//     subtext:
-//       "We help businesses connect with their audience instantly through reliable, fast, and targeted bulk broadcasting services. Whether it’s promotions, updates, or alerts — deliver your message at scale with confidence.",
-//     cta: "Start Broadcasting",
-//     image:
-//       "https://img.freepik.com/free-vector/bulk-sms-marketing-concept-illustration_114360-1884.jpg",
-//   };
-
-//   const whyChooseIntro =
-//     "We combine advanced technology, strategic targeting, and real-time analytics to ensure your bulk messaging campaigns achieve maximum reach and engagement.";
-
-//   const whyChoosePoints = [
-//     "High Delivery Rate",
-//     "Instant Message Broadcasting",
-//     "Targeted Audience Segmentation",
-//     "Secure & Compliant Messaging",
-//     "Real-Time Campaign Tracking",
-//     "Affordable & Scalable Solutions",
-//   ];
-
-//   const whyNeedIntro =
-//     "Bulk broadcasting enables businesses to communicate quickly and effectively with large audiences. It is one of the fastest and most cost-effective ways to promote offers, send alerts, and maintain customer engagement.";
-
-  // const whyNeedPoints = [
-  //   "Instant Customer Communication",
-  //   "Promote Offers & Discounts",
-  //   "Send Transactional Alerts",
-  //   "Increase Customer Engagement",
-  //   "Improve Brand Awareness",
-  //   "Cost-Effective Marketing Channel",
-  // ];
-
-//   const services = [
-//     "Bulk SMS Marketing",
-//     "WhatsApp Bulk Messaging",
-//     "Email Broadcasting Campaigns",
-//     "Promotional & Transactional SMS",
-//     "OTP & Notification Services",
-//     "API Integration for Messaging",
-//     "Campaign Analytics & Reporting",
-//     "Database Management & Segmentation",
-//     "Analytics & Performance Reporting",
-//     "Crisis Management & Reputation Monitoring",
-//   ];
-
-//   const features = [
-//     "Send to unlimited contacts",
-//     "Schedule messages",
-//     "Rich media support (images, videos, PDFs)",
-//     "Contact list management",
-//     "Delivery reports",
-//     "Personalized messages",
-//   ];
-
-//   /* ================= UI ================= */
-
-//   return (
-//     <div className="min-h-screen bg-background overflow-hidden">
-
-//       {/* ================= HERO SECTION ================= */}
-//       <section className="pt-10 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-//         <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
-
-//           <motion.div
-//             initial={{ opacity: 0, x: -40 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.7 }}
-//           >
-//             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-//               {heroData.heading.split("Smart")[0]}
-//               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-//                 Smart Bulk Broadcasting
-//               </span>
-//             </h1>
-
-//             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-//               {heroData.subtext}
-//             </p>
-
-//             <Button
-//               size="sm"
-//               className="rounded-full px-8 shadow-lg"
-//               onClick={() => navigate("/contact")}
-//             >
-//               {heroData.cta}
-//             </Button>
-//           </motion.div>
-
-//           <motion.div
-//             initial={{ opacity: 0, x: 40 }}
-//             animate={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.7 }}
-//             className="flex justify-center"
-//           >
-//             <img
-//               src={heroData.image}
-//               alt="Bulk Broadcasting"
-//               className="rounded-2xl shadow-2xl"
-//             />
-//           </motion.div>
-//         </div>
-//       </section>
-
-//       {/* ================= WHY CHOOSE US ================= */}
-//       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-6">Why Choose Sociobhaarat?</h2>
-//           <p className="text-muted-foreground max-w-3xl mx-auto mb-12">
-//             {whyChooseIntro}
-//           </p>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//             {whyChoosePoints.map((point, index) => (
-//               <motion.div
-//                 key={index}
-//                 whileHover={{ y: -5 }}
-//                 className="bg-card p-6 rounded-2xl shadow-md border border-border hover:shadow-xl transition-all"
-//               >
-//                 <Zap className="h-8 w-8 text-primary mb-4 mx-auto" />
-//                 <h3 className="font-semibold text-lg">{point}</h3>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= WHY YOU NEED IT ================= */}
-//       <section className="py-20 px-4 sm:px-6 lg:px-8">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-6">Why Do You Need Bulk Broadcasting?</h2>
-//           <p className="text-muted-foreground max-w-3xl mx-auto mb-12">
-//             {whyNeedIntro}
-//           </p>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//             {whyNeedPoints.map((point, index) => (
-//               <motion.div
-//                 key={index}
-//                 whileHover={{ scale: 1.03 }}
-//                 className="bg-card p-6 rounded-2xl shadow-md border border-border"
-//               >
-//                 <Target className="h-8 w-8 text-secondary mb-4 mx-auto" />
-//                 <h3 className="font-semibold text-lg">{point}</h3>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= OUR SERVICES ================= */}
-//       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-12">Our Bulk Messaging Services</h2>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//             {services.map((service, index) => (
-//               <motion.div
-//                 key={index}
-//                 whileHover={{ y: -6 }}
-//                 className="bg-background p-6 rounded-2xl shadow-lg border border-border"
-//               >
-//                 <MessageSquare className="h-8 w-8 text-primary mb-4 mx-auto" />
-//                 <h3 className="font-semibold">{service}</h3>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= FEATURES ================= */}
-//       <section className="py-20 px-4 sm:px-6 lg:px-8">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-12">Powerful Features</h2>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//             {features.map((feature, index) => (
-//               <motion.div
-//                 key={index}
-//                 whileHover={{ scale: 1.05 }}
-//                 className="bg-card p-6 rounded-2xl shadow-md border border-border"
-//               >
-//                 <Check className="h-8 w-8 text-primary mb-4 mx-auto" />
-//                 <h3 className="font-semibold">{feature}</h3>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//     </div>
-//   );
-// };
-
-// export default BulkBroadcasting;
 
 
 
 import { Button } from "@/components/ui/button";
 import {
   Check, Zap, Shield, BarChart3, Target, MessageSquare,
-  Send, Users, Bell, Globe, Smartphone, Mail, Key, Layers, Rocket
+  Send, Users, Globe, Smartphone, Mail, Key, Layers, Rocket,
+  ArrowRight,
+  Radio
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -217,7 +14,7 @@ import { motion } from "framer-motion";
 const BulkBroadcasting = () => {
   const navigate = useNavigate();
 
-  /* ================= DATA VARIABLES ================= */
+  /* DATA VARIABLES */
   const heroData = {
     heading: "Reach Thousands Instantly with Smart Bulk Broadcasting",
     subtext:
@@ -265,62 +62,91 @@ const BulkBroadcasting = () => {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
 
-      {/* ================= HERO SECTION (Kept Structure) ================= */}
-      <section className="relative pt-20 pb-24 px-4 overflow-hidden">
-        {/* Animated Background Element */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-30">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/20 blur-[120px]" />
+      {/* HERO SECTION (Kept Structure) */}
+      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
+
+        {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Blueprint Grid Overlay - Representing Messaging Infrastructure */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+
+          {/* Atmospheric Mesh Blobs */}
+          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
         </div>
 
-        <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-6 tracking-tight leading-[1.1]">
-              {heroData.heading.split("Smart")[0]}
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-secondary">
-                Smart Bulk Broadcasting
-              </span>
-            </h1>
+        {/* 2. MAIN CONTENT GRID */}
+        <div className="container mx-auto px-4 relative z-10 mt-12">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl">
-              {heroData.subtext}
-            </p>
+            {/* LEFT COLUMN: Narrative */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 space-y-8 text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                <Radio className="w-3 h-3" /> Mass Outreach Architecture
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="rounded-full px-10 h-14 text-lg font-semibold shadow-[0_10px_20px_-10px_rgba(var(--primary),0.5)] hover:scale-105 transition-transform"
-                onClick={() => navigate("/contact")}
-              >
-                {heroData.cta}
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full h-14 px-10 border-2">
-                View Pricing
-              </Button>
-            </div>
-          </motion.div>
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+                {heroData.heading.split("Smart")[0]} <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                  Smart Broadcasting
+                </span> Solutions.
+              </h1>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative group"
-          >
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all opacity-50" />
-            <img
-              src={heroData.image}
-              alt="Broadcasting Illustration"
-              className="relative rounded-3xl shadow-2xl border border-white/10 hover:rotate-1 transition-transform duration-500"
-            />
-          </motion.div>
+              <p className="text-base md:text-xl text-slate-500 leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
+                {heroData.subtext}
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  onClick={() => navigate("/contact")}
+                >
+                  {heroData.cta} <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* RIGHT COLUMN: Visual Proof (Broadcasting Bento) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="lg:col-span-5 relative hidden lg:block"
+            >
+              <div className="relative group">
+                {/* Decorative Glow */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
+                <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&q=80"
+                    alt="Advanced Messaging Dashboard"
+                    className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                  />
+
+                  {/* Floating Mini-Metric Overlay */}
+                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Efficiency</p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-xl font-black text-slate-900">98% Delivery</p>
+                      <Zap size={16} className="text-yellow-500 fill-yellow-500" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US (Modern Grid) ================= */}
+      {/* WHY CHOOSE US (Modern Grid) */}
       <section className="py-24 px-4 bg-secondary/5 relative">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -427,7 +253,7 @@ const BulkBroadcasting = () => {
         </div>
       </section>
 
-      {/* ================= SERVICES (Glassmorphism Cards) ================= */}
+      {/* SERVICES (Glassmorphism Cards) */}
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
@@ -455,7 +281,7 @@ const BulkBroadcasting = () => {
         </div>
       </section>
 
-      {/* ================= FEATURES (The Bento Section) ================= */}
+      {/* FEATURES (The Bento Section) */}
       <section className="py-24 px-4 bg-primary/5">
         <div className="container mx-auto max-w-6xl">
           <div className="bg-card border border-border rounded-[2.5rem] overflow-hidden p-8 md:p-16 relative">
@@ -493,19 +319,38 @@ const BulkBroadcasting = () => {
         </div>
       </section>
 
-      {/* ================= FINAL CTA ================= */}
-      <section className="py-20 text-center px-4">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="max-w-3xl mx-auto space-y-8"
-        >
-          <h2 className="text-4xl font-bold">Ready to Scale Your Growth?</h2>
-          <p className="text-muted-foreground">Join 500+ businesses using Sociobhaarat to reach their customers daily.</p>
-          <Button size="lg" className="rounded-full h-16 px-12 text-xl" onClick={() => navigate("/contact")}>
-            Get Started for Free
-          </Button>
-        </motion.div>
+      {/* FINAL CTA */}
+
+      <section className="py-12 md:py-24 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
+
+
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to Scale Your Growth?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Join 500+ businesses using Sociobhaarat to reach their customers daily."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Get Started for Free
+                </Button>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </section>
 
     </div>

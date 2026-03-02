@@ -1,295 +1,12 @@
-// import { Button } from "@/components/ui/button";
-// import { Check, Bot, MessageCircle, Zap, Shield, BarChart3, TrendingUp, Users } from "lucide-react";
-// import { motion } from "framer-motion";
-// import { useNavigate } from "react-router-dom";
-// import { Card } from "@/components/ui/card";
-
-// const WhatsAppChatbot = () => {
-//   const navigate = useNavigate();
-
-//   /* ================= DATA ================= */
-
-//   const heroData = {
-//     heading: "Automate Customer Engagement with Smart WhatsApp Chatbots",
-//     subtext:
-//       "We design and develop intelligent WhatsApp chatbots that automate customer communication, generate leads, handle queries instantly, and boost conversions — all within the world’s most popular messaging platform.",
-//     cta: "Get Free Consultation",
-//   };
-
-//   const socialLogos = [
-//     "https://cdn-icons-png.flaticon.com/512/733/733585.png", // WhatsApp
-//     "https://cdn-icons-png.flaticon.com/512/733/733547.png", // Facebook
-//     "https://cdn-icons-png.flaticon.com/512/733/733558.png", // Instagram
-//     "https://cdn-icons-png.flaticon.com/512/5968/5968764.png", // API/Meta style
-//   ];
-
-//   const whyChooseIntro =
-//     "We combine automation, AI-driven workflows, and marketing strategy to create powerful WhatsApp chatbot solutions that enhance customer experience and increase sales.";
-
-//   const whyChoosePoints = [
-//     "Custom Chatbot Development",
-//     "Automated Lead Generation",
-//     "24/7 Instant Customer Support",
-//     "WhatsApp Business API Integration",
-//     "CRM & Payment Gateway Integration",
-//     "Real-Time Analytics & Reporting",
-//   ];
-
-// const whyNeedIntro =
-//   "Customers expect instant responses and seamless communication. A WhatsApp chatbot helps you automate conversations, nurture leads, and provide round-the-clock assistance without increasing operational costs.";
-
-// const whyNeedPoints = [
-//   "Instant Automated Responses",
-//   "Improved Customer Engagement",
-//   "Higher Lead Conversion Rate",
-//   "Reduced Manual Workload",
-//   "Personalized Marketing Campaigns",
-//   "Faster Customer Support",
-// ];
-
-// const services = [
-//   "Custom Chatbot Flow Design",
-//   "Lead Capture & Qualification Bots",
-//   "E-commerce Chatbot Integration",
-//   "Booking & Appointment Bot",
-//   "Automated FAQ & Support Bots",
-//   "Payment & Order Tracking Integration",
-//   "WhatsApp Campaign Automation",
-//   "Chatbot Maintenance & Optimization",
-// ];
-
-//   const developmentProcess = [
-//     "Business Requirement Analysis",
-//     "Chatbot Strategy & Flow Planning",
-//     "UI/Conversation Design",
-//     "API & System Integration",
-//     "Testing & Deployment",
-//     "Performance Monitoring & Optimization",
-//   ];
-
-//   const features = [
-//     {
-//       icon: MessageCircle,
-//       title: "24/7 Automated Responses",
-//       description: "Never miss a customer query with round-the-clock automated support",
-//       benefits: ["Instant Replies", "Multi-language Support", "Smart Routing", "Context Awareness"]
-//     },
-//     {
-//       icon: Users,
-//       title: "Customer Engagement",
-//       description: "Engage customers with personalized conversations",
-//       benefits: ["Personalized Greetings", "Product Recommendations", "Order Updates", "FAQ Automation"]
-//     },
-//     {
-//       icon: Zap,
-//       title: "Lead Generation",
-//       description: "Capture and qualify leads automatically through WhatsApp",
-//       benefits: ["Lead Capture Forms", "Qualification Questions", "CRM Integration", "Auto Follow-ups"]
-//     },
-//     {
-//       icon: TrendingUp,
-//       title: "Sales Automation",
-//       description: "Automate your sales process and close deals faster",
-//       benefits: ["Product Catalogs", "Order Booking", "Payment Links", "Upselling"]
-//     }
-//   ];
-
-//   /* ================= UI ================= */
-
-//   return (
-//     <div className="min-h-screen bg-background overflow-hidden">
-
-//       {/* ================= HERO ================= */}
-//       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-//         <div className="container mx-auto max-w-6xl text-center">
-
-//           <motion.h1
-//             initial={{ opacity: 0, y: 30 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.7 }}
-//             className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-//           >
-//             {heroData.heading.split("Smart")[0]}
-//             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-//                 Smart Bulk Broadcasting
-//               </span>
-//           </motion.h1>
-
-//           <motion.p
-//             initial={{ opacity: 0, y: 30 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ delay: 0.2 }}
-//             className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8"
-//           >
-//             {heroData.subtext}
-//           </motion.p>
-
-//           <motion.div
-//             initial={{ opacity: 0 }}
-//             animate={{ opacity: 1 }}
-//             transition={{ delay: 0.4 }}
-//           >
-//             <Button
-//               size="lg"
-//               className="rounded-full px-8 shadow-lg"
-//               onClick={() => navigate("/contact")}
-//             >
-//               {heroData.cta}
-//             </Button>
-//           </motion.div>
-
-//           {/* Social Logos */}
-//           <div className="flex justify-center gap-6 mt-12">
-//             {socialLogos.map((logo, index) => (
-//               <motion.img
-//                 key={index}
-//                 src={logo}
-//                 alt="Social"
-//                 whileHover={{ scale: 1.1 }}
-//                 className="h-10 w-10 opacity-80 hover:opacity-100 transition"
-//               />
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= WHY CHOOSE US ================= */}
-//       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-6">
-//             Why Sociobhaarat for WhatsApp Chatbots?
-//           </h2>
-//           <p className="text-muted-foreground max-w-3xl mx-auto mb-12">
-//             {whyChooseIntro}
-//           </p>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//             {whyChoosePoints.map((point, index) => (
-//               <motion.div
-//                 key={index}
-//                 whileHover={{ y: -6 }}
-//                 className="bg-card p-6 rounded-2xl shadow-md border border-border hover:shadow-xl transition-all"
-//               >
-//                 <Zap className="h-8 w-8 text-primary mb-4 mx-auto" />
-//                 <h3 className="font-semibold">{point}</h3>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-// {/* ================= WHY YOU NEED ================= */}
-// <section className="py-20 px-4 sm:px-6 lg:px-8">
-//   <div className="container mx-auto max-w-6xl text-center">
-//     <h2 className="text-4xl font-bold mb-6">
-//       Why Do You Need WhatsApp Chatbots?
-//     </h2>
-//     <p className="text-muted-foreground max-w-3xl mx-auto mb-12">
-//       {whyNeedIntro}
-//     </p>
-
-//     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//       {whyNeedPoints.map((point, index) => (
-//         <motion.div
-//           key={index}
-//           whileHover={{ scale: 1.03 }}
-//           className="bg-card p-6 rounded-2xl shadow-md border border-border"
-//         >
-//           <MessageCircle className="h-8 w-8 text-secondary mb-4 mx-auto" />
-//           <h3 className="font-semibold">{point}</h3>
-//         </motion.div>
-//       ))}
-//     </div>
-//   </div>
-// </section>
-
-//       {/* ================= OUR SERVICES (SAME CARD STYLE) ================= */}
-//       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-12">
-//             Our WhatsApp Chatbot Services
-//           </h2>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//             {services.map((service, index) => (
-//               <motion.div
-//                 key={index}
-//                 whileHover={{ y: -6 }}
-//                 className="bg-card p-6 rounded-2xl shadow-md border border-border hover:shadow-xl transition-all"
-//               >
-//                 <Bot className="h-8 w-8 text-primary mb-4 mx-auto" />
-//                 <h3 className="font-semibold">{service}</h3>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* ================= DEVELOPMENT PROCESS ================= */}
-//       <section className="py-20 px-4 sm:px-6 lg:px-8">
-//         <div className="container mx-auto max-w-6xl text-center">
-//           <h2 className="text-4xl font-bold mb-12">Our Development Process</h2>
-
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//             {developmentProcess.map((step, index) => (
-//               <motion.div
-//                 key={index}
-//                 whileHover={{ scale: 1.04 }}
-//                 className="bg-card p-6 rounded-2xl shadow-md border border-border"
-//               >
-//                 <BarChart3 className="h-8 w-8 text-accent mb-4 mx-auto" />
-//                 <h3 className="font-semibold">{step}</h3>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/*FEATURES */}
-//       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-//         <div className="container mx-auto max-w-6xl">
-//           <h2 className="text-4xl font-bold mb-12 text-center">Powerful Features</h2>
-
-//           <div className="grid md:grid-cols-2 gap-8 mb-16">
-//             {features.map((feature, index) => (
-//               <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
-//                 <feature.icon className="h-12 w-12 text-primary mb-4" />
-//                 <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-//                 <p className="text-muted-foreground mb-4">{feature.description}</p>
-//                 <ul className="space-y-2">
-//                   {feature.benefits.map((benefit, idx) => (
-//                     <li key={idx} className="flex items-center text-sm">
-//                       <Zap className="h-4 w-4 text-secondary mr-2" />
-//                       {benefit}
-//                     </li>
-//                   ))}
-//                 </ul>
-//               </Card>
-//             ))}
-//           </div>
-
-//         </div>
-//       </section>
-//       <Card className="bg-primary text-primary-foreground p-12 text-center">
-//         <h2 className="text-3xl font-bold mb-4">Ready to Automate Your WhatsApp?</h2>
-//         <p className="text-lg mb-8 opacity-90">Get a custom chatbot built specifically for your business needs</p>
-//         <Button size="lg" variant="secondary" onClick={() => navigate("/contact")} >
-//           Schedule a Demo
-//         </Button>
-//       </Card>
-//     </div>
-//   );
-// };
-
-// export default WhatsAppChatbot;
-
 
 
 import { Button } from "@/components/ui/button";
 import {
   Check, Bot, MessageCircle, Zap, Shield, BarChart3,
   TrendingUp, Users, Smartphone, Code2, Headphones,
-  Settings2, Rocket, Search, MessageSquareCode
+  Settings2, Rocket, Search, MessageSquareCode,
+  ArrowRight,
+  MessageSquare
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -298,7 +15,7 @@ import { Card } from "@/components/ui/card";
 const WhatsAppChatbot = () => {
   const navigate = useNavigate();
 
-  /* ================= DATA ================= */
+  /* DATA */
   const heroData = {
     heading: "Automate Customer Engagement with Smart WhatsApp Chatbots",
     subtext: "We design and develop intelligent WhatsApp chatbots that automate customer communication, generate leads, handle queries instantly, and boost conversions — all within the world’s most popular messaging platform.",
@@ -383,56 +100,97 @@ const WhatsAppChatbot = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-32 pb-24 px-4 overflow-hidden bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent">
-        <div className="container mx-auto max-w-6xl text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold mb-8"
-          >
-            <Bot className="w-4 h-4" />
-            <span>AI-POWERED AUTOMATION</span>
-          </motion.div>
+      {/* HERO SECTION */}
+      <section className="relative pb-24 px-4 flex items-start overflow-hidden bg-[#fafafa]">
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1]"
-          >
-            {heroData.heading.split("WhatsApp")[0]}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] to-primary">
-              WhatsApp Chatbots
-            </span>
-          </motion.h1>
+        {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Blueprint Grid Overlay - Logic Architecture */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed"
-          >
-            {heroData.subtext}
-          </motion.p>
+          {/* Atmospheric Mesh Blobs */}
+          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <Button
-              size="lg"
-              className="rounded-full px-10 h-14 text-lg shadow-xl hover:scale-105 transition-transform"
-              onClick={() => navigate("/contact")}
+        </div>
+
+        {/* 2. MAIN CONTENT GRID */}
+        <div className="container mx-auto px-4 relative z-10 mt-12">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+
+            {/* LEFT COLUMN: Strategic Narrative */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 space-y-8 text-left"
             >
-              {heroData.cta}
-            </Button>
-          </motion.div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                <Bot className="w-3 h-3" /> AI-Powered Automation Lab
+              </div>
 
-          {/* Partner/Social Trust Bar */}
-          <div className="mt-20 border-t border-border pt-12">
-            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-8 font-bold">Integrated Across Ecosystems</p>
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+                Automate <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] via-primary to-orange-500 italic font-serif font-medium uppercase">
+                  WhatsApp Chatbots
+                </span> At Scale.
+              </h1>
+
+              <p className="text-base md:text-xl text-slate-500 max-w-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
+                "Deploy intelligent conversational agents that handle 90% of your customer queries instantly while driving conversions on autopilot."
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  onClick={() => navigate("/contact")}
+                >
+                  Launch Your Bot <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* RIGHT COLUMN: Visual Proof (Chatbot Bento) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="lg:col-span-5 relative hidden lg:block"
+            >
+              <div className="relative group">
+                {/* Decorative Glow */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
+                <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?w=800&q=80"
+                    alt="AI Chatbot Logic and Interface"
+                    className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                  />
+
+                  {/* Floating Mini-Metric Overlay */}
+                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                        <MessageSquare className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Efficiency</p>
+                        <p className="text-xl font-black text-slate-900">90% Auto-Reply</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Framed Layer for Identity */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
+              </div>
+            </motion.div>
+
+          </div>
+          <div className="mt-10 border-t border-border pt-12">
+            <p className="text-xs text-center uppercase tracking-widest text-muted-foreground mb-8 font-bold">Integrated Across Ecosystems</p>
             <div className="flex justify-center items-center gap-8 md:gap-16 grayscale opacity-60 hover:grayscale-0 transition-all">
               {socialLogos.map((logo, index) => (
                 <img key={index} src={logo.src} alt={logo.label} className="h-8 md:h-10 w-auto" />
@@ -442,7 +200,7 @@ const WhatsAppChatbot = () => {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US (Sleek Grid) ================= */}
+      {/* WHY CHOOSE US (Sleek Grid) */}
       <section className="py-24 px-4 bg-secondary/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -469,7 +227,7 @@ const WhatsAppChatbot = () => {
       </section>
 
 
-      {/* ================= WHY YOU NEED IT (Enhanced) ================= */}
+      {/* WHY YOU NEED IT (Enhanced) */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
         {/* Decorative Background Element */}
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-[#25D366]/5 blur-[120px] rounded-full -z-10" />
@@ -557,7 +315,7 @@ const WhatsAppChatbot = () => {
       </section>
 
 
-      {/* ================= OUR SERVICES (Spotlight Layout) ================= */}
+      {/* OUR SERVICES (Spotlight Layout) */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
@@ -613,7 +371,7 @@ const WhatsAppChatbot = () => {
         </div>
       </section>
 
-      {/* ================= FEATURES (Detailed View) ================= */}
+      {/* FEATURES (Detailed View) */}
       <section className="py-24 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center tracking-tight">Powerful Capabilities</h2>
@@ -650,7 +408,7 @@ const WhatsAppChatbot = () => {
         </div>
       </section>
 
-      {/* ================= PROCESS (The Timeline) ================= */}
+      {/* PROCESS (The Timeline) */}
       <section className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Our Development Journey</h2>
@@ -683,27 +441,39 @@ const WhatsAppChatbot = () => {
         </div>
       </section>
 
-      {/* ================= FINAL CTA ================= */}
-      <section className="py-24 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <Card className="bg-[#25D366] text-white p-12 md:p-20 text-center rounded-[3rem] shadow-2xl relative overflow-hidden border-none">
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+      {/* FINAL CTA */}
+      <section className="py-12 md:py-24 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
+
+            {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-extrabold mb-6">Ready to Automate?</h2>
-              <p className="text-xl mb-10 opacity-90 font-medium">Get a custom chatbot built specifically for your business needs.</p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" variant="secondary" className="rounded-full h-14 px-10 text-lg font-bold" onClick={() => navigate("/contact")}>
-                  Schedule a Demo
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full h-14 px-10 text-lg border-2 bg-transparent hover:bg-white hover:text-[#25D366]">
-                  Contact Sales
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to Automate?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Get a custom chatbot built specifically for your business needs."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Get Started for Free
                 </Button>
               </div>
             </div>
-          </Card>
+
+          </div>
         </div>
       </section>
+
 
     </div>
   );

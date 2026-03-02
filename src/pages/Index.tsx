@@ -185,7 +185,7 @@ function Index() {
             className="w-full h-full object-cover scale-105"
           >
             {/* <source src="https://res.cloudinary.com/dtlqkeane/video/upload/q_auto:good,f_mp4,vc_h264,br_1200k,w_1280,fps_24/3141208-uhd_3840_2160_25fps_evhgy7.mp4" type="video/mp4" /> */}
-            <source  src="/Hero_Video.mp4" type="video/mp4" />
+            <source src="/Hero_Video.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background" />
         </div>
@@ -226,6 +226,163 @@ function Index() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+  
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+
+        {/* 1. CINEMATIC BACKGROUND ENGINE */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay loop muted playsInline preload="auto"
+            className="w-full h-full object-cover opacity-60 scale-110"
+          >
+            {/* SUGGESTED: A high-speed abstract data visualization or 
+           time-lapse of a modern digital city */}
+            <source src="/Hero_Video.mp4" type="video/mp4" />
+          </video>
+
+          {/* Technical Blueprint Overlay */}
+          <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]" />
+
+          {/* Cinematic Color Grading Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#fafafa]" />
+        </div>
+
+        {/* 2. MAIN GROWTH NARRATIVE */}
+        <div className="container mx-auto px-4 relative z-10 pt-20">
+          <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex flex-col items-center"
+            >
+              {/* Animated Badge */}
+              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl text-primary-foreground text-[10px] md:text-xs font-black uppercase tracking-[0.3em] mb-10 shadow-2xl">
+                <Sparkles className="w-4 h-4 text-[#FFC105] animate-pulse" />
+                Madhya Pradesh's Premier Growth Lab
+              </div>
+
+              {/* High-Authority Heading */}
+              <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-white leading-[0.95] tracking-tighter mb-8">
+                SCALE YOUR <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC105] via-orange-400 to-primary italic font-serif font-medium">
+                  Digital Identity.
+                </span>
+              </h1>
+
+              <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-3xl leading-relaxed italic mb-12 border-x border-white/10 px-8">
+                "Empowering Jabalpur & Bhopal's top-tier brands with industrial-grade marketing automation and data-backed technical excellence."
+              </p>
+
+              {/* High-Conversion Action Zone */}
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <Button
+                  size="lg"
+                  className="group relative rounded-full px-12 h-16 md:h-20 text-xl font-black bg-primary hover:bg-primary/90 shadow-[0_0_50px_-12px_rgba(var(--primary),0.5)] overflow-hidden transition-all"
+                  onClick={() => navigate("/contact")}
+                >
+                  <span className="relative z-10 flex items-center">
+                    Engineer Your Growth <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                  </span>
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                </Button>
+
+                {/* Real-time Trust Indicator */}
+                <div className="flex items-center gap-4 text-left">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-10 h-10 rounded-full border-2 border-black bg-slate-800 flex items-center justify-center text-[10px] font-bold text-white">
+                        {i}0+
+                      </div>
+                    ))}
+                  </div>
+                  <div className="leading-tight">
+                    <p className="text-white font-bold text-sm">Active Strategies</p>
+                    <p className="text-gray-500 text-[10px] uppercase tracking-widest">Across Central India</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+
+
+        {/* 3. SCROLL INDICATOR ARCHITECTURE */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
+          <span className="text-[10px] text-white/30 uppercase tracking-[0.4em] font-black italic">Explore Lab</span>
+        </div>
+      </section>
+
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+        {/* Background Glows */}
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/20 blur-[120px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-600/20 blur-[120px]" />
+
+        <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
+
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-8">
+            <div className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold tracking-wide text-blue-400 uppercase bg-blue-400/10 rounded-full border border-blue-400/20">
+              Next-Gen Digital Marketing
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+              Elevate Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Digital Pulse.</span>
+            </h1>
+
+            <p className="text-lg text-slate-400 max-w-xl mx-auto lg:mx-0">
+              We blend data-driven strategy with boundary-pushing creativity to help brands dominate the digital landscape. Your growth, engineered.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-blue-600/25">
+                Start Your Project
+              </button>
+              <button className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl border border-slate-700 transition-all">
+                View Our Work
+              </button>
+            </div>
+
+            {/* Social Proof Mini */}
+            <div className="pt-8 flex items-center justify-center lg:justify-start space-x-4 text-slate-500 text-sm">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-700" />
+                ))}
+              </div>
+              <p>Trusted by 500+ global brands</p>
+            </div>
+          </div>
+
+          {/* Right Image/Graphic */}
+          <div className="w-full lg:w-1/2 mt-16 lg:mt-0 relative flex justify-center">
+            <div className="relative w-full max-w-lg">
+              {/* Glass Card Decoration */}
+              <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl animate-bounce-slow" />
+
+              {/* Main Visual Placeholder */}
+              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-slate-800 to-slate-900 p-2">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"
+                  alt="Digital Marketing Dashboard"
+                  className="rounded-2xl opacity-90 hover:opacity-100 transition-opacity"
+                />
+              </div>
+
+              {/* Floating Stats */}
+              <div className="absolute -bottom-6 -right-6 bg-blue-600 p-6 rounded-2xl shadow-xl z-20 animate-float">
+                <p className="text-white text-xs uppercase font-bold tracking-tighter">Avg. ROI</p>
+                <p className="text-white text-3xl font-black">+320%</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
