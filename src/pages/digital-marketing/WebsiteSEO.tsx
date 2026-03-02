@@ -42,7 +42,7 @@ const WebsiteSEO = () => {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-start pt-12 overflow-hidden bg-[#fafafa]">
+      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
         {/* Technical Background Design */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
@@ -58,7 +58,7 @@ const WebsiteSEO = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
                 <Sparkles className="w-3 h-3" /> MP's Leading SEO Architecture
               </div>
-              <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Rank Higher <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">& Grow Organically</span>.
               </h1>

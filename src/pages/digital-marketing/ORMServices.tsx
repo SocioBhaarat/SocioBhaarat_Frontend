@@ -85,7 +85,7 @@ const ORMServices = () => {
     <div className="min-h-screen bg-[#fafafa] selection:bg-primary/10">
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
+      <section className="relative min-h-[80vh] flex items-start overflow-hidden bg-[#fafafa]">
 
         {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -95,12 +95,12 @@ const ORMServices = () => {
           {/* Atmospheric Mesh Blobs */}
           <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-          
+
         </div>
-        
+
 
         {/* 2. MAIN CONTENT GRID */}
-        <div className="container mx-auto px-4 relative z-10 mt-24">
+        <div className="container mx-auto px-4 relative z-10 mt-12">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
 
             {/* LEFT COLUMN: Narrative (Text Upwards) */}
@@ -114,7 +114,7 @@ const ORMServices = () => {
                 <Shield className="w-3 h-3" /> Brand Protection Lab
               </div>
 
-              <h1 className="font-display text-5xl sm:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Secure Your <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Digital Legacy</span>.
               </h1>

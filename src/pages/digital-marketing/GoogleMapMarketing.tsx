@@ -70,19 +70,19 @@ const GoogleMapMarketing = () => {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
+      <section className="relative min-h-[80vh] flex items-start overflow-hidden bg-[#fafafa]">
 
         {/* Technical Background Design */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           {/* The Map Grid - Technical Overlay */}
-          <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
 
           {/* Atmospheric Mesh Gradients */}
           <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/10 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 mt-24">
+        <div className="container mx-auto px-4 relative z-10 mt-12">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
 
             {/* Left Column: Narrative (Positioned Upwards) */}
@@ -91,7 +91,7 @@ const GoogleMapMarketing = () => {
                 <MapPin className="w-3 h-3" /> Dominating the Local Pack
               </div>
 
-              <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Rank Higher on <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Google Maps</span>.
               </h1>
