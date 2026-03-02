@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 const VideoMarketing = () => {
     const navigate = useNavigate();
 
-    /* ================= DATA VARIABLES ================= */
+    /* DATA VARIABLES */
     const heroData = {
         heading: "Tell Your Brand Story with High-Impact Video Marketing",
         subtext: "We create captivating video content that stops the scroll, explains your value, and converts viewers into loyal customers across YouTube, Instagram, and LinkedIn.",
@@ -56,7 +56,7 @@ const VideoMarketing = () => {
     return (
         <div className="min-h-screen bg-background selection:bg-primary/20">
 
-            {/* ================= HERO SECTION ================= */}
+            {/* HERO SECTION */}
             <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gradient-to-b from-primary/5 via-background to-transparent">
                 <div className="container mx-auto max-w-6xl relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -115,7 +115,7 @@ const VideoMarketing = () => {
                 </div>
             </section>
 
-      {/* ================= WHY CHOOSE SOCIO BHAARAT (Enhanced) ================= */}
+      {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
             <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
                 {/* Decorative Background Elements */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full -z-10" />
@@ -206,7 +206,7 @@ const VideoMarketing = () => {
                 </div>
             </section>
 
-            {/* ================= WHY YOU NEED IT ================= */}
+            {/* WHY YOU NEED IT */}
             <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
                 <div className="container mx-auto max-w-6xl">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -268,7 +268,7 @@ const VideoMarketing = () => {
                 </div>
             </section>
 
-            {/* ================= SERVICES ================= */}
+            {/* SERVICES */}
             <section className="py-24 px-4">
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-16">
@@ -297,7 +297,7 @@ const VideoMarketing = () => {
                 </div>
             </section>
 
-            {/* ================= THE ROADMAP ================= */}
+            {/* THE ROADMAP */}
             <section className="py-24 px-4 bg-muted/50">
                 <div className="container mx-auto max-w-6xl">
                     <h2 className="text-4xl font-bold text-center mb-16">The Production Workflow</h2>
@@ -318,31 +318,39 @@ const VideoMarketing = () => {
                 </div>
             </section>
 
-            {/* ================= FINAL CTA ================= */}
-            <section className="py-24 px-4">
-                <div className="container mx-auto max-w-5xl">
-                    <Card className="bg-gradient-to-br from-primary via-primary/90 to-indigo-900 text-white p-12 md:p-20 text-center rounded-[3rem] shadow-2xl relative overflow-hidden border-none">
-                        <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                            className="absolute -top-32 -right-32 w-80 h-80 bg-white/5 rounded-full blur-3xl"
-                        />
+            {/* FINAL CTA */}
 
-                        <div className="relative z-10">
-                            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Ready to Lights, Camera, Action?</h2>
-                            <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto font-medium">Create video content that resonates, educates, and sells. Let’s start your first production today.</p>
-                            <div className="flex flex-col sm:flex-row justify-center gap-4">
-                                <Button size="lg" variant="secondary" className="rounded-full h-16 px-12 text-xl font-bold hover:scale-105 transition-transform" onClick={() => navigate("/contact")}>
-                                    Get a Production Quote
-                                </Button>
-                                <Button size="lg" variant="outline" className="rounded-full h-16 px-12 text-xl border-2 bg-transparent hover:bg-white hover:text-primary transition-all">
-                                    Browse Portfolio
-                                </Button>
-                            </div>
-                        </div>
-                    </Card>
-                </div>
-            </section>
+            <section className="py-12 md:py-24 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
+
+
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to Lights, Camera, Action?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Create video content that resonates, educates, and sells. Let’s start your first production today."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Claim Free Audit
+                </Button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
         </div>
     );

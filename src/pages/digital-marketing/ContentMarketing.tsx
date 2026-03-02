@@ -367,15 +367,35 @@ const ContentMarketing = () => {
         quote="Content that informs, engages, and drives measurable results." />
 
       {/* CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-secondary">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="font-display text-4xl font-bold mb-6 text-primary-foreground">Ready to Transform Your Content Strategy?</h2>
-          <p className="text-xl text-primary-foreground/90 mb-8">
-            Let's create content that drives real business results. Get a free content audit today.
-          </p>
-          <Button size="lg" variant="secondary" className="rounded-full px-8" onClick={() => window.open("https://wa.me/919589581364", "_blank")}>
-            Get Your Free Content Audit
-          </Button>
+      <section className="py-12 md:py-24 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
+
+
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to Transform Your Content Strategy?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Let's create content that drives real business results. Get a free content audit today."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Get Your Free Content Audit
+                </Button>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
     </div>

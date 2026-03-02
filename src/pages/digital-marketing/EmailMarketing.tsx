@@ -55,7 +55,7 @@ const EmailMarketing = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
-      {/* ================= HERO SECTION ================= */}
+      {/* HERO SECTION */}
       <section className="relative pt-24 pb-20 px-4 overflow-hidden">
         {/* Abstract Background Shapes */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
@@ -120,7 +120,7 @@ const EmailMarketing = () => {
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US ================= */}
+      {/* WHY CHOOSE US */}
       <section className="py-24 px-4 bg-secondary/5">
         <div className="container mx-auto max-w-6xl text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-16">Expert Email Management</h2>
@@ -143,7 +143,7 @@ const EmailMarketing = () => {
         </div>
       </section>
 
-      {/* ================= WHY YOU NEED EMAIL MARKETING ================= */ }
+      {/* WHY YOU NEED EMAIL MARKETING */ }
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
         {/* Modern Gradient Background Accents */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 -z-10" />
@@ -241,7 +241,7 @@ const EmailMarketing = () => {
         </div>
       </section>
 
-      {/* ================= ENHANCED SERVICES ================= */}
+      {/* ENHANCED SERVICES */}
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -267,7 +267,7 @@ const EmailMarketing = () => {
         </div>
       </section>
 
-      {/* ================= THE PROCESS ================= */}
+      {/* THE PROCESS */}
       <section className="py-24 px-4 bg-muted/50">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center mb-16">Lifecycle Strategy</h2>
@@ -290,28 +290,38 @@ const EmailMarketing = () => {
         </div>
       </section>
 
-      {/* ================= FINAL CTA ================= */}
-      <section className="py-24 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <Card className="bg-primary text-white p-12 md:p-20 text-center rounded-[3rem] shadow-2xl relative overflow-hidden border-none">
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+      {/* FINAL CTA */}
+      <section className="py-12 md:py-24 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
+
+            {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-extrabold mb-6 italic">Ready to Own Your Audience?</h2>
-              <p className="text-xl mb-10 opacity-90 font-medium">Stop relying solely on social algorithms. Build a list you truly own.</p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" variant="secondary" className="rounded-full h-14 px-10 text-lg font-bold" onClick={() => navigate("/contact")}>
-                  Get Your Free Audit
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full h-14 px-10 text-lg border-2 bg-transparent hover:bg-white hover:text-primary transition-all">
-                  See Case Studies
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to Own Your Audience?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Stop relying solely on social algorithms. Build a list you truly own."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Claim Your Free Audit
                 </Button>
               </div>
             </div>
-          </Card>
+
+          </div>
         </div>
       </section>
-
     </div>
   );
 };

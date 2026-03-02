@@ -370,35 +370,35 @@ const PaidMarketing = () => {
       />
 
       {/* Final CTA Button */}
+      <section className="py-12 md:py-24 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
-      <section className="my-24 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="relative p-12 md:p-24 bg-gradient-to-br from-blue-600 via-primary to-orange-500 text-center rounded-[4rem] shadow-2xl overflow-hidden border-none text-white"
-          >
 
-            <div className="relative z-10 max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter mb-8 leading-tight">
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
                 Ready to Scale Your Business?
               </h2>
-              <p className="text-xl md:text-2xl text-white/90 mb-12 font-medium italic">
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
                 "Get a free paid advertising audit and custom strategy today."
               </p>
 
-              <div className="flex flex-col sm:flex-row justify-center gap-6">
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="rounded-full h-16 px-12 text-xl font-bold bg-white text-primary border-none shadow-xl hover:scale-110 transition-all hover:bg-slate-50"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
                   onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                 >
                   Claim Your Free Ad Audit
                 </Button>
               </div>
             </div>
-          </motion.div>
+
+          </div>
         </div>
       </section>
 

@@ -98,7 +98,7 @@ const WebsiteSEO = () => {
       <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter text-slate-900 leading-none">Why Choose Our <span className="text-primary font-serif font-medium italic text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">SEO Strategy</span>?</h2>
+            <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter text-slate-900 leading-none">Why Choose Our <span className="text-primary font-serif font-medium italic bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">SEO Strategy</span>?</h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto italic border-l-4 border-primary/30 pl-6">Built for measurable, ethical growth in the Madhya Pradesh digital ecosystem.</p>
           </div>
 
@@ -229,6 +229,37 @@ const WebsiteSEO = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+      <section className="py-12 md:py-24 px-4 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
+
+
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to Rank #1 <br /> on Google?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Get a comprehensive SEO audit and a custom-built growth strategy for your brand in <span className="underline decoration-white/30 underline-offset-8">Bhopal & Jabalpur</span>."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Claim Your Free Audit
+                </Button>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
     </div>

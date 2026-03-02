@@ -445,18 +445,35 @@ const SocialMedia = () => {
       <QuoteSection
         quote="Building meaningful connections that turn followers into loyal customers."
       />
-
-      <section className="my-24 px-4">
+      {/* Final CTA Button */}
+      <section className="py-12 md:py-24 px-4 sm:px-6">
         <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-blue-600 via-primary to-orange-500 p-12 md:p-24 text-center rounded-[5rem] shadow-2xl relative overflow-hidden text-white border-none">
-            <div className="absolute inset-0" />
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
+
+
+            {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-6xl font-extrabold mb-8 italic tracking-tighter leading-tight text-white">Ready to Dominate Social Media?</h2>
-              <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-medium italic">"Let's create a social media strategy that drives real business results."</p>
-              <Button size="lg" variant="secondary" className="rounded-full h-16 px-12 text-xl font-bold shadow-xl hover:scale-110 transition-all bg-white text-primary border-none" onClick={() => window.open("https://wa.me/919589581364", "_blank")}>
-                Claim Free Social Audit
-              </Button>
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to Dominate Social Media?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Let's create a social media strategy that drives real business results."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Claim Free Social Audit
+                </Button>
+              </div>
             </div>
+
           </div>
         </div>
       </section>

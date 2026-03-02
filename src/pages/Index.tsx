@@ -184,7 +184,8 @@ function Index() {
             autoPlay loop muted playsInline preload="auto"
             className="w-full h-full object-cover scale-105"
           >
-            <source src="https://res.cloudinary.com/dtlqkeane/video/upload/q_auto:good,f_mp4,vc_h264,br_1200k,w_1280,fps_24/3141208-uhd_3840_2160_25fps_evhgy7.mp4" type="video/mp4" />
+            {/* <source src="https://res.cloudinary.com/dtlqkeane/video/upload/q_auto:good,f_mp4,vc_h264,br_1200k,w_1280,fps_24/3141208-uhd_3840_2160_25fps_evhgy7.mp4" type="video/mp4" /> */}
+            <source  src="/Hero_Video.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background" />
         </div>
@@ -305,8 +306,8 @@ function Index() {
 
               <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-foreground leading-[1.1] tracking-tighter">
                 Bhopal & Jabalpur’s <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic">Performance</span> <br className="md:hidden" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic">Architecture</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic pr-2">Performance</span> <br className="md:hidden" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic pr-2">Architecture</span>
               </h2>
 
               <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground">
