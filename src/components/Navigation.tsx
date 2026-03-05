@@ -35,6 +35,13 @@ const Navigation = () => {
         name: "Content Marketing",
         path: "/digital-marketing/content-marketing",
       },
+      {
+        name: "Email Marketing",
+        path: "/digital-marketing/email-marketing",
+      },{
+        name: "Video Marketing",
+        path: "/digital-marketing/video-marketing",
+      },
     ],
     designDev: [
       { name: "Web Development", path: "/design-development/web-development" },
@@ -47,6 +54,10 @@ const Navigation = () => {
       {
         name: "E-commerce Development",
         path: "/design-development/ecommerce-development",
+      },
+      {
+        name: "Graphic Designing",
+        path: "/design-development/graphic-designing",
       },
     ],
     whatsapp: [

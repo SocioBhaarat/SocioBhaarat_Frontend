@@ -16,6 +16,7 @@ import WebsiteSEO from "./pages/digital-marketing/WebsiteSEO";
 import GoogleMapMarketing from "./pages/digital-marketing/GoogleMapMarketing";
 import PaidMarketing from "./pages/digital-marketing/PaidMarketing";
 import ORMServices from "./pages/digital-marketing/ORMServices";
+import EmailMarketing from "./pages/digital-marketing/EmailMarketing";
 import WebDevelopment from "./pages/design-development/WebDevelopment";
 import WordPressDevelopment from "./pages/design-development/WordPressDevelopment";
 import AppDevelopment from "./pages/design-development/AppDevelopment";
@@ -39,6 +40,9 @@ import ScrollToTop from "./hooks/ScrollToTop";
 import { Analytics } from "@vercel/analytics/react"
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import VideoMarketing from "./pages/digital-marketing/VideoMarketing";
+import GraphicDesigning from "./pages/design-development/GraphicDesigning";
+import Home from "./pages/Home";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +63,7 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/hiring" element={<Hiring />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/home" element={<Home />} />
           
           {/* Digital Marketing */}
           <Route path="/digital-marketing/content-marketing" element={<ContentMarketing />} />
@@ -67,6 +72,8 @@ const App = () => (
           <Route path="/digital-marketing/google-map-marketing" element={<GoogleMapMarketing />} />
           <Route path="/digital-marketing/paid-marketing" element={<PaidMarketing />} />
           <Route path="/digital-marketing/orm-services" element={<ORMServices />} />
+          <Route path="/digital-marketing/email-marketing" element={<EmailMarketing/>} />
+          <Route path="/digital-marketing/video-marketing" element={<VideoMarketing/>} />
           
           {/* Design & Development */}
           <Route path="/design-development/web-development" element={<WebDevelopment />} />
@@ -74,6 +81,7 @@ const App = () => (
           <Route path="/design-development/app-development" element={<AppDevelopment />} />
           <Route path="/design-development/ui-ux-design" element={<UIUXDesign />} />
           <Route path="/design-development/ecommerce-development" element={<EcommerceDevelopment />} />
+          <Route path="/design-development/graphic-designing" element={<GraphicDesigning/>} />
           
           {/* WhatsApp Marketing */}
           <Route path="/whatsapp-marketing/bulk-broadcasting" element={<BulkBroadcasting />} />
