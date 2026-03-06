@@ -282,7 +282,7 @@ const WebDevelopment = () => {
                 className="group relative p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col justify-between"
               >
                 {/* Subtle Background Watermark - Adjusted for Mobile */}
-                <div className="absolute -top-2 -right-2 text-6xl md:text-8xl font-black text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
+                <div className="absolute -top-2 -right-0 text-6xl md:text-8xl font-black text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
                   0{index + 1}
                 </div>
 
