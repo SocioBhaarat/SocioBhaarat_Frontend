@@ -229,163 +229,6 @@ function Index() {
         </div>
       </section>
 
-  
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
-
-        {/* 1. CINEMATIC BACKGROUND ENGINE */}
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay loop muted playsInline preload="auto"
-            className="w-full h-full object-cover opacity-60 scale-110"
-          >
-            {/* SUGGESTED: A high-speed abstract data visualization or 
-           time-lapse of a modern digital city */}
-            <source src="/Hero_Video.mp4" type="video/mp4" />
-          </video>
-
-          {/* Technical Blueprint Overlay */}
-          <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]" />
-
-          {/* Cinematic Color Grading Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#fafafa]" />
-        </div>
-
-        {/* 2. MAIN GROWTH NARRATIVE */}
-        <div className="container mx-auto px-4 relative z-10 pt-20">
-          <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex flex-col items-center"
-            >
-              {/* Animated Badge */}
-              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl text-primary-foreground text-[10px] md:text-xs font-black uppercase tracking-[0.3em] mb-10 shadow-2xl">
-                <Sparkles className="w-4 h-4 text-[#FFC105] animate-pulse" />
-                Madhya Pradesh's Premier Growth Lab
-              </div>
-
-              {/* High-Authority Heading */}
-              <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-white leading-[0.95] tracking-tighter mb-8">
-                SCALE YOUR <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC105] via-orange-400 to-primary italic font-serif font-medium">
-                  Digital Identity.
-                </span>
-              </h1>
-
-              <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-3xl leading-relaxed italic mb-12 border-x border-white/10 px-8">
-                "Empowering Jabalpur & Bhopal's top-tier brands with industrial-grade marketing automation and data-backed technical excellence."
-              </p>
-
-              {/* High-Conversion Action Zone */}
-              <div className="flex flex-col sm:flex-row items-center gap-6">
-                <Button
-                  size="lg"
-                  className="group relative rounded-full px-12 h-16 md:h-20 text-xl font-black bg-primary hover:bg-primary/90 shadow-[0_0_50px_-12px_rgba(var(--primary),0.5)] overflow-hidden transition-all"
-                  onClick={() => navigate("/contact")}
-                >
-                  <span className="relative z-10 flex items-center">
-                    Engineer Your Growth <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
-                  </span>
-                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                </Button>
-
-                {/* Real-time Trust Indicator */}
-                <div className="flex items-center gap-4 text-left">
-                  <div className="flex -space-x-3">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="w-10 h-10 rounded-full border-2 border-black bg-slate-800 flex items-center justify-center text-[10px] font-bold text-white">
-                        {i}0+
-                      </div>
-                    ))}
-                  </div>
-                  <div className="leading-tight">
-                    <p className="text-white font-bold text-sm">Active Strategies</p>
-                    <p className="text-gray-500 text-[10px] uppercase tracking-widest">Across Central India</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-
-
-        {/* 3. SCROLL INDICATOR ARCHITECTURE */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
-          <span className="text-[10px] text-white/30 uppercase tracking-[0.4em] font-black italic">Explore Lab</span>
-        </div>
-      </section>
-
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
-        {/* Background Glows */}
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/20 blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-600/20 blur-[120px]" />
-
-        <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between">
-
-          {/* Left Content */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-8">
-            <div className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold tracking-wide text-blue-400 uppercase bg-blue-400/10 rounded-full border border-blue-400/20">
-              Next-Gen Digital Marketing
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
-              Elevate Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Digital Pulse.</span>
-            </h1>
-
-            <p className="text-lg text-slate-400 max-w-xl mx-auto lg:mx-0">
-              We blend data-driven strategy with boundary-pushing creativity to help brands dominate the digital landscape. Your growth, engineered.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-blue-600/25">
-                Start Your Project
-              </button>
-              <button className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl border border-slate-700 transition-all">
-                View Our Work
-              </button>
-            </div>
-
-            {/* Social Proof Mini */}
-            <div className="pt-8 flex items-center justify-center lg:justify-start space-x-4 text-slate-500 text-sm">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-700" />
-                ))}
-              </div>
-              <p>Trusted by 500+ global brands</p>
-            </div>
-          </div>
-
-          {/* Right Image/Graphic */}
-          <div className="w-full lg:w-1/2 mt-16 lg:mt-0 relative flex justify-center">
-            <div className="relative w-full max-w-lg">
-              {/* Glass Card Decoration */}
-              <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl animate-bounce-slow" />
-
-              {/* Main Visual Placeholder */}
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-slate-800 to-slate-900 p-2">
-                <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426"
-                  alt="Digital Marketing Dashboard"
-                  className="rounded-2xl opacity-90 hover:opacity-100 transition-opacity"
-                />
-              </div>
-
-              {/* Floating Stats */}
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 p-6 rounded-2xl shadow-xl z-20 animate-float">
-                <p className="text-white text-xs uppercase font-bold tracking-tighter">Avg. ROI</p>
-                <p className="text-white text-3xl font-black">+320%</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       {/* STATS SPOTLIGHT */}
       <section className="relative py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -394,8 +237,8 @@ function Index() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
               className="space-y-6"
             >
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-                We believe in <span className="text-primary italic">impactful</span> metrics.
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+                We believe in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">impactful</span> metrics.
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Since 2022, we've transformed the digital landscape for 50+ brands across MP. Our focus isn't just clicks—it's sustainable revenue and brand authority.
@@ -424,8 +267,8 @@ function Index() {
                   className="p-8 rounded-[2.5rem] bg-card border border-border shadow-sm hover:shadow-xl transition-all group"
                 >
                   <stat.icon className={`w-8 h-8 ${stat.color} mb-4 group-hover:scale-110 transition-transform`} />
-                  <div className="text-4xl font-black tracking-tighter">{stat.value}</div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mt-2">{stat.label}</p>
+                  <div className="text-3xl font-semibold tracking-tighter">{stat.value}</div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mt-2">{stat.label}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -440,9 +283,7 @@ function Index() {
           <div className="absolute top-[-10%] left-[-10%] w-[80%] md:w-[60%] h-[60%] bg-blue-600/10 blur-[80px] md:blur-[140px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[70%] md:w-[50%] h-[50%] bg-orange-500/10 blur-[80px] md:blur-[130px] rounded-full" />
 
-          {/* Technical Grid Overlay - Helps fill white space professionally */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
-        </div>
+      </div>
 
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
@@ -461,10 +302,10 @@ function Index() {
                 The SocioBhaarat Identity
               </div>
 
-              <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-foreground leading-[1.1] tracking-tighter">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
                 Bhopal & Jabalpur’s <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic pr-2">Performance</span> <br className="md:hidden" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic pr-2">Architecture</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic pr-2 font-medium font-serif">Performance</span> <br className="md:hidden" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic pr-2 font-medium font-serif">Architecture</span>
               </h2>
 
               <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground">
@@ -542,20 +383,20 @@ function Index() {
               Market Survival & Growth
             </div>
 
-            <h2 className="font-display text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
               Why Your Business Needs <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-primary to-blue-600 italic pr-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium ">
                 Digital Marketing
               </span>
             </h2>
 
-            <p className="text-lg text-slate-500 italic font-medium leading-relaxed underline decoration-orange-200 decoration-4 underline-offset-8">
+            <p className="text-md md:text-lg text-slate-500 italic font-medium leading-relaxed underline decoration-orange-200 decoration-4 underline-offset-8">
               "Your customers are online. If your business isn’t visible there, you're losing opportunities every single day."
             </p>
           </motion.div>
 
           {/* 2. Interactive Feature Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-20">
             {[
               { title: "Precision Targeting", desc: "Reach the right audience at the perfect moment in their buying journey.", icon: <Target className="w-6 h-6" /> },
               { title: "Lead Generation", desc: "Build a consistent pipeline of high-quality leads that actually convert.", icon: <Users className="w-6 h-6" /> },
@@ -573,7 +414,7 @@ function Index() {
                 <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-primary transition-colors">
+                <h3 className="text-md md:text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-primary transition-colors">
                   {benefit.title}
                 </h3>
                 <p className="text-sm text-slate-500 leading-relaxed italic">
@@ -592,7 +433,7 @@ function Index() {
               <Globe className="w-32 h-32" />
             </div>
 
-            <p className="text-xl md:text-2xl font-medium leading-relaxed max-w-4xl mx-auto italic">
+            <p className="text-md md:text-xl font-medium leading-relaxed max-w-4xl mx-auto italic">
               "Today, customers search, compare, and decide online before making any purchase. Your digital presence directly impacts your growth, credibility, and revenue."
             </p>
 
@@ -615,13 +456,13 @@ function Index() {
         >
           {/* Header */}
           <motion.div variants={fadeUp} className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-            <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
               The Roadmap to <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-primary animate-gradient-x italic pr-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
                 Digital Dominance
               </span>
             </h2>
-            <p className="text-lg text-slate-500 font-medium italic underline decoration-primary/20 decoration-2 underline-offset-8">
+            <p className="text-sm md:text-lg text-slate-500 font-medium italic underline decoration-primary/20 decoration-2 underline-offset-8">
               "A high-velocity, data-driven approach designed for sustainable growth."
             </p>
           </motion.div>
@@ -657,10 +498,10 @@ function Index() {
 
                     {/* Content Card */}
                     <div className="p-6 rounded-[2rem] bg-white/50 backdrop-blur-sm border border-slate-100 group-hover:border-primary/20 group-hover:shadow-xl group-hover:shadow-primary/5 transition-all duration-500 flex-grow">
-                      <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-md md:text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
                         {step.title}
                       </h3>
-                      <p className="text-sm text-slate-500 leading-relaxed italic">
+                      <p className="text-xs md:text-sm text-slate-500 leading-relaxed italic">
                         {step.desc}
                       </p>
                     </div>
@@ -713,8 +554,8 @@ function Index() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Expertise Across <span className="text-primary italic">Verticals</span></h2>
-              <p className="text-lg text-muted-foreground italic">Our solutions are engineered to meet the unique psychological triggers of different industries.</p>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Expertise Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Verticals</span></h2>
+              <p className="text-md md:text-lg text-muted-foreground italic">Our solutions are engineered to meet the unique psychological triggers of different industries.</p>
             </div>
             <div className="flex gap-4">
               <button className="prev-btn w-12 h-12 flex items-center justify-center rounded-full bg-background border border-border hover:bg-primary hover:text-white transition-all shadow-sm">
@@ -751,10 +592,6 @@ function Index() {
 
       {/* WHAT MAKES US DIFFERENT */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
-        {/* Subtle Background "MP" Watermark */}
-        <div className="absolute -right-0 top-1/2 -translate-y-1/2 text-[20rem] font-black text-primary/[0.02] select-none pointer-events-none italic">
-          MP
-        </div>
 
         <motion.div
           className="container mx-auto max-w-7xl"
@@ -765,16 +602,16 @@ function Index() {
         >
           {/* 1. Header with Creative Underline */}
           <motion.div variants={fadeUp} className="text-center max-w-3xl mx-auto mb-24 space-y-4">
-            <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter italic">
-              What Makes Us <span className="text-primary underline decoration-orange-200 decoration-8 underline-offset-[12px]">Different?</span>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+              What Makes Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Different?</span>
             </h2>
-            <p className="text-lg text-slate-500 font-medium max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-lg text-slate-500 font-medium max-w-xl mx-auto leading-relaxed">
               We focus on measurable growth and real impact—building <strong>scalable digital systems</strong> rather than just isolated campaigns.
             </p>
           </motion.div>
 
           {/* 2. Bento Grid Stats Hub */}
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-20">
             {[
               { value: "50+", label: "Businesses Served Across MP", icon: <Users />, size: "md:col-span-2" },
               { value: "10,000+", label: "Leads Delivered", icon: <TrendingUp />, size: "md:col-span-2" },
@@ -795,7 +632,7 @@ function Index() {
                 </div>
 
                 <div className="mt-8">
-                  <h3 className={`text-4xl font-black tracking-tighter ${i === 6 ? 'text-white' : 'text-slate-900'}`}>
+                  <h3 className={`text-2xl font-black tracking-tighter ${i === 6 ? 'text-white' : 'text-slate-900'}`}>
                     {item.value}
                   </h3>
                   <p className={`text-xs font-bold uppercase tracking-widest mt-2 ${i === 6 ? 'text-white/80' : 'text-muted-foreground'}`}>
@@ -809,13 +646,13 @@ function Index() {
           {/* 3. Local Authority Narrative Card */}
           <motion.div
             variants={fadeUp}
-            className="relative max-w-4xl mx-auto p-12 rounded-[3.5rem] bg-slate-50 border border-slate-200 text-center overflow-hidden"
+            className="relative max-w-4xl mx-auto p-10 rounded-[3.5rem] bg-slate-50 border border-slate-200 text-center overflow-hidden"
           >
             {/* Decorative Glows */}
             <div className="absolute top-0 left-0 w-32 h-32 bg-primary/10 blur-3xl rounded-full" />
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-500/10 blur-3xl rounded-full" />
 
-            <p className="relative z-10 text-xl md:text-2xl text-slate-700 leading-relaxed font-medium italic">
+            <p className="relative z-10 text-md md:text-2xl text-slate-700 leading-relaxed font-medium italic">
               "Socio Bhaarat stands apart because we deeply understand local consumer
               psychology in <span className="text-primary font-bold">Bhopal & Jabalpur</span>—we build for MP’s evolving business landscape."
             </p>
@@ -833,8 +670,8 @@ function Index() {
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Our <span className="text-primary font-serif italic">Core</span> Ecosystem</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto italic underline decoration-primary/30">Complete digital growth solutions tailored for Bhopal & Jabalpur.</p>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Core</span> Ecosystem</h2>
+            <p className="text-muted-foreground text-md md:text-lg max-w-2xl mx-auto italic underline decoration-primary/30">Complete digital growth solutions tailored for Bhopal & Jabalpur.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

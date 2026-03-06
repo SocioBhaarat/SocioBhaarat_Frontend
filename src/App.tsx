@@ -42,7 +42,6 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import VideoMarketing from "./pages/digital-marketing/VideoMarketing";
 import GraphicDesigning from "./pages/design-development/GraphicDesigning";
-import Home from "./pages/Home";
 
 const queryClient = new QueryClient();
 
@@ -63,7 +62,6 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/hiring" element={<Hiring />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/home" element={<Home />} />
           
           {/* Digital Marketing */}
           <Route path="/digital-marketing/content-marketing" element={<ContentMarketing />} />
