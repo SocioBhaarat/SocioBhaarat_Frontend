@@ -152,14 +152,14 @@ const GoogleMapMarketing = () => {
               Local Authority & Trust
             </div>
 
-            <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
               Why Choose Our <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
                 Local SEO Engine
               </span>
             </h2>
 
-            <p className="text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto border-l-4 border-primary/30 pl-6">
+            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto border-l-4 border-primary/30 pl-6">
               "We combine local expertise with technical precision to help businesses dominate search results."
             </p>
           </motion.div>
@@ -182,11 +182,11 @@ const GoogleMapMarketing = () => {
                     {React.cloneElement(item.icon as React.ReactElement, { size: 24 })}
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
                     {item.title}
                   </h3>
 
-                  <p className="text-md text-slate-400 leading-relaxed italic group-hover:text-slate-600 transition-colors pr-4">
+                  <p className="text-sm text-slate-400 leading-relaxed italic group-hover:text-slate-600 transition-colors pr-4">
                     {item.desc}
                   </p>
                 </div>
@@ -200,7 +200,7 @@ const GoogleMapMarketing = () => {
 
 
       {/* What is Google Map Marketing */}
-      <section className="py-24 px-4 bg-background overflow-hidden relative">
+      <section className="py-24 bg-background overflow-hidden relative">
         <div className="container mx-auto max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -213,7 +213,7 @@ const GoogleMapMarketing = () => {
                 <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter text-white mb-6">
                   What is <span className="text-secondary font-serif pl-1">Google Map Marketing</span>
                 </h2>
-                <p className="text-slate-300 text-lg leading-relaxed font-medium italic">
+                <p className="text-slate-300 text-sm md:text-lg leading-relaxed font-medium italic">
                   Google Map Marketing, also known as Local SEO or Google My Business (GMB) optimization, helps your business appear in local search results and Google Maps when customers search for products or services near them.
                 </p>
               </div>
@@ -245,10 +245,10 @@ const GoogleMapMarketing = () => {
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <h2 className="font-display text-4xl md:text-6xl font-black italic tracking-tighter text-slate-900 leading-tight">
+            <h2 className="font-display text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900 leading-tight">
               Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium">Local Visibility</span> Matters
             </h2>
-            <p className="text-lg text-slate-500 font-medium italic leading-relaxed border-l-4 border-primary/30 pl-6">
+            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed border-l-4 border-primary/30 pl-6">
               "When customers search for services near them, Google Maps is the first choice. We ensure your business dominates the local pack in Bhopal & Jabalpur."
             </p>
           </div>
@@ -283,8 +283,8 @@ const GoogleMapMarketing = () => {
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter text-slate-900">
-              Our GMB <span className="text-primary font-serif font-medium">Architecture</span>
+            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900">
+              Our GMB <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Architecture</span>
             </h2>
             <p className="mt-4 text-muted-foreground italic font-medium">Structured optimization for regional market leadership.</p>
           </div>
@@ -305,7 +305,7 @@ const GoogleMapMarketing = () => {
                   <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
                     <service.icon size={24} />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors tracking-tight leading-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors tracking-tight leading-tight">
                     {service.title}
                   </h3>
                   <p className="text-slate-500 leading-relaxed italic text-sm group-hover:text-slate-700">
