@@ -169,20 +169,20 @@ const SocialMedia = () => {
               The Performance Edge
             </div>
 
-            <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
               Why SocioBhaarat <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
                 Excels in Marketing
               </span>
             </h2>
 
-            <p className="text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto border-l-4 border-primary/30 pl-6">
+            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto border-l-4 border-primary/30 pl-6">
               "We combine creativity, strategy, and data-backed execution to deliver campaigns that dominate local markets in <span className="text-slate-900 font-bold">Bhopal & Jabalpur</span>."
             </p>
           </motion.div>
 
           {/* 2. PILLAR GRID - Bento Style Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
@@ -199,7 +199,7 @@ const SocialMedia = () => {
                     {React.cloneElement(item.icon as React.ReactElement, { size: 24 })}
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
+                  <h3 className="text-md md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
                     {item.title}
                   </h3>
 
@@ -247,14 +247,14 @@ const SocialMedia = () => {
         >
           {/* Header Block */}
           <motion.div variants={fadeUp} className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <h2 className="font-display text-4xl md:text-6xl font-black tracking-tighter text-slate-900 leading-tight">
+            <h2 className="font-display text-3xl md:text-5xl font-black tracking-tighter text-slate-900 leading-tight">
               Why Your Brand Needs <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
                 Social Architecture
               </span>
             </h2>
 
-            <p className="text-lg text-slate-500 font-medium italic leading-relaxed max-w-2xl mx-auto border-l-4 border-primary/30 pl-6">
+            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-2xl mx-auto border-l-4 border-primary/30 pl-6">
               "Social media is where your customers spend their time and make purchasing decisions. A strong presence ensures you stay visible and competitive in the MP business landscape."
             </p>
           </motion.div>
@@ -276,7 +276,7 @@ const SocialMedia = () => {
                     {React.cloneElement(point.icon as React.ReactElement, { size: 24 })}
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
+                  <h3 className="text-md md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
                     {point.title}
                   </h3>
 
@@ -305,10 +305,11 @@ const SocialMedia = () => {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="font-display text-4xl md:text-6xl font-black italic tracking-tighter text-slate-900">
-              Ecosystem <span className="text-primary">Mastery</span>
+            <h2 className="font-display text-3xl md:text-5xl
+ font-black italic tracking-tighter text-slate-900">
+              Ecosystem <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Mastery</span>
             </h2>
-            <p className="mt-4 text-muted-foreground italic font-medium">
+            <p className=" text-sm md:text-lg mt-4 text-muted-foreground italic font-medium">
               Expert execution across the world's most influential social architectures.
             </p>
           </motion.div>
@@ -328,7 +329,7 @@ const SocialMedia = () => {
                     <platform.icon className={`h-12 w-12 ${platform.color} `} />
                   </div>
 
-                  <h3 className="font-extrabold text-lg tracking-tight text-slate-900 group-hover:text-primary transition-colors uppercase">
+                  <h3 className="font-bold text-lg text-slate-900 group-hover:text-primary transition-colors ">
                     {platform.name}
                   </h3>
 
@@ -367,8 +368,8 @@ const SocialMedia = () => {
             >
               Comprehensive Solutions
             </motion.span>
-            <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter text-slate-900">
-              Our <span className="text-primary">Services</span>
+            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Services</span>
             </h2>
           </div>
 
@@ -388,7 +389,7 @@ const SocialMedia = () => {
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-all">
                     <Check size={20} />
                   </div>
-                  <h3 className="font-bold text-lg leading-tight text-slate-900 group-hover:text-primary transition-colors">
+                  <h3 className="font-bold text-md md:text-xl leading-tight text-slate-900 group-hover:text-primary transition-colors">
                     {service}
                   </h3>
                 </div>
