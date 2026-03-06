@@ -215,7 +215,7 @@ const ORMServices = () => {
                     {React.cloneElement(item.icon as React.ReactElement, { size: 24 })}
                   </div>
 
-                  <h3 className="text-md md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
                     {whyChooseUs[index]}
                   </h3>
 
@@ -346,7 +346,7 @@ const ORMServices = () => {
               <motion.div key={index} whileHover={{ y: -10 }} className="relative p-10 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group overflow-hidden">
                 <div className="absolute top-0 right-0 p-8 text-primary/5 group-hover:scale-125 transition-transform"><service.icon size={80} /></div>
                 <div className="mb-6 p-4 w-fit rounded-2xl bg-slate-50 text-primary group-hover:bg-primary group-hover:text-white transition-all"><service.icon size={24} /></div>
-                <h3 className="text-md md:text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-primary transition-colors">{service.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-primary transition-colors">{service.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed italic">{service.desc}</p>
               </motion.div>
             ))}

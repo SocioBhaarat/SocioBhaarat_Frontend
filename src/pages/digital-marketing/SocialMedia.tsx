@@ -199,7 +199,7 @@ const SocialMedia = () => {
                     {React.cloneElement(item.icon as React.ReactElement, { size: 24 })}
                   </div>
 
-                  <h3 className="text-md md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
                     {item.title}
                   </h3>
 
@@ -276,7 +276,7 @@ const SocialMedia = () => {
                     {React.cloneElement(point.icon as React.ReactElement, { size: 24 })}
                   </div>
 
-                  <h3 className="text-md md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
                     {point.title}
                   </h3>
 
@@ -389,7 +389,7 @@ const SocialMedia = () => {
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-all">
                     <Check size={20} />
                   </div>
-                  <h3 className="font-bold text-md md:text-xl leading-tight text-slate-900 group-hover:text-primary transition-colors">
+                  <h3 className="font-bold text-lg md:text-xl leading-tight text-slate-900 group-hover:text-primary transition-colors">
                     {service}
                   </h3>
                 </div>
