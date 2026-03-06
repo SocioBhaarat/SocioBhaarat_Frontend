@@ -57,70 +57,116 @@ const VideoMarketing = () => {
         <div className="min-h-screen bg-background selection:bg-primary/20">
 
             {/* HERO SECTION */}
-            <section className="relative pt-24 pb-20 px-4 overflow-hidden bg-gradient-to-b from-primary/5 via-background to-transparent">
-                <div className="container mx-auto max-w-6xl relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <section className="relative pt-10 pb-20 px-4 flex items-center justify-center overflow-hidden bg-[#fafafa]">
+
+                {/* 1. ARCHITECTURAL BACKGROUND LAYER */}
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                    {/* Signature SocioBhaarat Grid */}
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px] md:bg-[size:45px_45px]" />
+
+                    {/* Dynamic Lighting Blobs */}
+                    <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[50%] bg-primary/10 blur-[120px] rounded-full animate-pulse" />
+                    <div className="absolute bottom-[-10%] left-[-5%] w-[50%] h-[40%] bg-blue-600/5 blur-[100px] rounded-full" />
+
+                </div>
+
+                {/* 2. MAIN CONTENT GRID */}
+                <div className="container mx-auto max-w-7xl px-4 relative z-10 pt-12 md:pt-0">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                        {/* Left Column: Narrative Architecture */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
+                            className="text-center lg:text-left"
                         >
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 border border-primary/20 uppercase tracking-widest">
-                                <Play className="w-3 h-3 fill-current" />
-                                Next-Gen Content Strategy
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] md:text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm">
+                                <Play className="w-3 h-3 fill-current" /> Next-Gen Content Strategy
                             </div>
 
-                            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+                            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
                                 Tell Your Story with <br />
-                                <span className="text-primary italic font-serif">Cinematic Impact</span>
+                                <span className="relative inline-block">
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                                        Cinematic Impact
+                                    </span>
+
+                                </span>
                             </h1>
 
-                            <p className="text-lg text-muted-foreground mb-10 leading-relaxed max-w-lg">
+                            <p className="text-base md:text-xl text-slate-500 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium italic border-l-0 lg:border-l-4 border-primary/20 lg:pl-8 mb-10">
                                 {heroData.subtext}
                             </p>
 
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                                 <Button
                                     size="lg"
-                                    className="rounded-full px-10 h-14 shadow-2xl shadow-primary/20 text-lg hover:scale-105 transition-transform"
+                                    className="rounded-full px-10 h-16 bg-slate-900 text-white font-black text-lg shadow-2xl hover:bg-primary transition-all hover:scale-105"
                                     onClick={() => navigate("/contact")}
                                 >
                                     {heroData.cta}
                                 </Button>
-                                <Button variant="ghost" size="lg" className="rounded-full h-14 gap-2">
-                                    <MonitorPlay className="w-5 h-5" /> View Showreel
-                                </Button>
+
                             </div>
                         </motion.div>
 
+                        {/* Right Column: Visual Component Module */}
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
+                            initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                            animate={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="relative group cursor-pointer"
+                            className="relative group w-full max-w-[500px] mx-auto hidden md:block"
                         >
-                            <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl group-hover:bg-primary/20 transition-all" />
-                            <img
-                                src="https://img.freepik.com/free-vector/video-production-concept-illustration_114360-1145.jpg"
-                                alt="Video Production Process"
-                                className="relative rounded-[2.5rem] shadow-2xl border border-border"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-20 h-20 bg-primary/90 text-white rounded-full flex items-center justify-center shadow-2xl animate-pulse">
-                                    <Play className="w-8 h-8 fill-current ml-1" />
+                            {/* Shadow/Glow Architecture */}
+                            <div className="absolute -inset-4 bg-primary/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-700" />
+
+                            {/* Frame Architecture */}
+                            <div className="relative rounded-[2.5rem] md:rounded-[3.5rem] p-3 bg-white border-2 border-slate-200 shadow-2xl overflow-hidden">
+                                <div className="absolute top-6 left-6 z-20 flex gap-2">
+                                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                                    <div className="w-3 h-3 rounded-full bg-green-400" />
+                                </div>
+
+                                <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem]">
+                                    <img
+                                        src="https://img.freepik.com/free-vector/video-production-concept-illustration_114360-1145.jpg"
+                                        alt="Video Production Process"
+                                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                                    />
+
+                                    {/* Play Trigger Module */}
+                                    <div className="absolute inset-0 flex items-center justify-center bg-slate-900/20 group-hover:bg-slate-900/40 transition-all duration-500">
+                                        <div className="w-20 h-20 md:w-28 md:h-28 bg-white/10 backdrop-blur-xl border border-white/30 text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                                            <Play className="w-10 h-10 md:w-14 md:h-14 fill-white ml-2" />
+                                        </div>
+                                    </div>
+
+                                    {/* Technical Detail Badge */}
+                                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/20 text-[10px] font-bold text-white uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        00 : 45 : 12 / REC
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Floating Decorative Elements */}
+                            <div className="absolute -top-10 -right-10 hidden lg:block animate-bounce-slow">
+                                <div className="p-4 bg-white border border-slate-200 rounded-3xl shadow-xl -rotate-12">
+                                    <Clapperboard className="w-8 h-8 text-orange-500" />
                                 </div>
                             </div>
                         </motion.div>
+
                     </div>
                 </div>
+
+                {/* Smooth Bottom Line */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
             </section>
 
-      {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
+            {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
             <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
-                {/* Decorative Background Elements */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full -z-10" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 blur-[100px] rounded-full -z-10" />
-
                 <div className="container mx-auto max-w-6xl">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -132,11 +178,11 @@ const VideoMarketing = () => {
                             className="space-y-8"
                         >
                             <div>
-                                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                                    Why Brands Trust Our <br />
-                                    <span className="text-primary italic">Video Vision.</span>
+                                <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                                    Why Brands Trust Our
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Video Vision.</span>
                                 </h2>
-                                <p className="text-muted-foreground text-lg leading-relaxed">
+                                <p className="text-muted-foreground text-sm md:text-lg leading-relaxed">
                                     We don't just point a camera and shoot. We combine cinematic artistry with performance marketing data to ensure your videos don't just look good—they convert.
                                 </p>
                             </div>
@@ -217,9 +263,9 @@ const VideoMarketing = () => {
                             className="space-y-6"
                         >
                             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                                Why Does Your Brand <br /> Need <span className="text-primary">Video?</span>
+                                Why Does Your Brand <br /> Need <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Video?</span>
                             </h2>
-                            <p className="text-muted-foreground text-lg">
+                            <p className="text-muted-foreground text-sm md:text-lg">
                                 In a digital world full of text, video is the bridge that builds trust. It is the only medium that combines visuals, audio, and narrative to create total brand immersion.
                             </p>
 
@@ -240,7 +286,7 @@ const VideoMarketing = () => {
                             className="bg-card p-10 rounded-[3rem] border border-border relative overflow-hidden"
                         >
                             <div className="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-                            <h3 className="text-2xl font-bold mb-6">Engagement Analysis</h3>
+                            <h3 className="text-xl md:text-2xl font-bold mb-6">Engagement Analysis</h3>
                             <div className="space-y-8">
                                 {[
                                     { label: "User Attention Span", val: "Increased by 2x" },
@@ -272,8 +318,8 @@ const VideoMarketing = () => {
             <section className="py-24 px-4">
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">Production Solutions</h2>
-                        <p className="text-muted-foreground max-w-2xl mx-auto text-lg italic">From TikTok trends to high-end corporate documentaries.</p>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">Production <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Solutions</span></h2>
+                        <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg italic">From TikTok trends to high-end corporate documentaries.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -283,14 +329,11 @@ const VideoMarketing = () => {
                                 whileHover={{ y: -10 }}
                                 className="group p-8 rounded-[2.5rem] bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 relative overflow-hidden shadow-sm"
                             >
-                                <div className="mb-6 p-4 w-fit rounded-2xl bg-secondary/10 text-secondary group-hover:bg-primary group-hover:text-white transition-all">
+                                <div className="mb-6 p-4 w-fit text-lg md:text-xl rounded-2xl bg-secondary/10 text-secondary group-hover:bg-primary group-hover:text-white transition-all">
                                     {service.icon}
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">{service.desc}</p>
-                                <div className="flex items-center gap-2 text-xs font-bold text-primary opacity-0 group-hover:opacity-100 transition-all">
-                                    START PROJECT <ArrowRight className="w-3 h-3" />
-                                </div>
                             </motion.div>
                         ))}
                     </div>
@@ -300,7 +343,7 @@ const VideoMarketing = () => {
             {/* THE ROADMAP */}
             <section className="py-24 px-4 bg-muted/50">
                 <div className="container mx-auto max-w-6xl">
-                    <h2 className="text-4xl font-bold text-center mb-16">The Production Workflow</h2>
+                    <h2 className="text-4xl font-bold text-center mb-16">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Production Workflow</span></h2>
                     <div className="grid md:grid-cols-4 gap-8 relative">
                         {/* Visual connector */}
                         <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-dashed border-t border-border -z-10" />
@@ -321,36 +364,36 @@ const VideoMarketing = () => {
             {/* FINAL CTA */}
 
             <section className="py-12 md:py-24 px-4 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
+                <div className="container mx-auto max-w-5xl">
+                    <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
-                Ready to Lights, Camera, Action?
-              </h2>
+                        {/* 2. CONTENT ARCHITECTURE */}
+                        <div className="relative z-10">
+                            <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                                Ready to Lights, Camera, Action?
+                            </h2>
 
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Create video content that resonates, educates, and sells. Let’s start your first production today."
-              </p>
+                            <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                                "Create video content that resonates, educates, and sells. Let’s start your first production today."
+                            </p>
 
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Claim Free Audit
-                </Button>
-              </div>
-            </div>
+                            {/* 3. ADAPTIVE BUTTON */}
+                            <div className="flex justify-center">
+                                <Button
+                                    size="lg"
+                                    variant="secondary"
+                                    className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                                    onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                                >
+                                    Claim Free Audit
+                                </Button>
+                            </div>
+                        </div>
 
-          </div>
-        </div>
-      </section>
+                    </div>
+                </div>
+            </section>
 
         </div>
     );
