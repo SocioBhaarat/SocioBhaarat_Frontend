@@ -102,7 +102,7 @@ const WebsiteSEO = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
                 <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1571721795195-a2cb2d33e00d"
+                    src="https://images.unsplash.com/photo-1600469984476-c713650f1b1b"
                     alt="SEO Performance Dashboard"
                     className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                   />
