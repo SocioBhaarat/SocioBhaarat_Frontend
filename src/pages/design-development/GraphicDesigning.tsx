@@ -103,13 +103,6 @@ const GraphicDesigning = () => {
                 >
                   {heroData.cta} <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-12 border-2 text-lg font-bold hover:bg-slate-50 transition-all"
-                >
-                  View Portfolio
-                </Button>
               </div>
             </motion.div>
 

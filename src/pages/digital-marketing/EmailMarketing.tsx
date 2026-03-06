@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const EmailMarketing = () => {
   const navigate = useNavigate();
 
-  /* ================= DATA VARIABLES ================= */
+  /* DATA VARIABLES */
   const heroData = {
     heading: "Convert Subscribers into Customers with Smart Email Automation",
     subtext: "We create high-converting email marketing campaigns that build relationships, nurture leads, and drive consistent revenue through personalized automation and data-driven optimization.",
@@ -56,74 +56,100 @@ const EmailMarketing = () => {
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
       {/* HERO SECTION */}
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
-        {/* Abstract Background Shapes */}
-        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
 
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="relative pt-10 pb-20 px-4 flex items-center justify-center overflow-hidden bg-[#fafafa]">
+
+        {/* 1. ARCHITECTURAL BACKGROUND LAYER */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Signature SocioBhaarat Blueprint Grid */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px] md:bg-[size:45px_45px]" />
+
+          {/* Performance Mesh Blobs */}
+          <div className="absolute top-[-10%] right-[-5%] w-[55%] h-[55%] bg-primary/10 blur-[130px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[110px] rounded-full" />
+        </div>
+
+        {/* 2. MAIN CONTENT ARCHITECTURE */}
+        <div className="container mx-auto max-w-7xl px-4 relative z-10 pt-12 md:pt-0">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+
+            {/* Left Column: Narrative Engine */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
+              className="lg:col-span-7"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 border border-primary/20 uppercase tracking-widest">
-                <Mail className="w-3 h-3" />
-                ROI-Focused Marketing
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
+                <Mail className="w-3 h-3 fill-primary/20" /> ROI-Focused Marketing Lab
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1]">
-                {heroData.heading.split("Smart")[0]}
-                <span className="text-primary italic">Smart Email Automation</span>
+              <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
+                {heroData.heading.split("Smart")[0]} <br />
+                <span className="relative inline-block">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                    Smart Email Automation
+                  </span>
+                </span>
               </h1>
 
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed max-w-lg">
-                {heroData.subtext}
+              <p className="text-base md:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic border-l-4 border-primary/20 pl-8 mb-10">
+                "{heroData.subtext}"
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap items-center gap-6">
                 <Button
                   size="lg"
-                  className="rounded-full px-10 h-14 shadow-2xl shadow-primary/20 text-lg hover:scale-105 transition-transform"
+                  className="rounded-full px-10 h-16 bg-primary text-white font-black text-lg shadow-2xl shadow-primary/20 hover:bg-primary transition-all hover:scale-105"
                   onClick={() => navigate("/contact")}
                 >
-                  {heroData.cta}
+                  {heroData.cta} <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <div className="flex items-center gap-2 ml-4">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3].map(i => <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-muted" />)}
+
+                <div className="flex items-center gap-3 py-2 px-4 bg-white/50 border border-slate-200 rounded-2xl backdrop-blur-sm">
+                  <div className="flex flex-col">
+                    <span className="text-xs font-black text-slate-900 leading-none">200+ BRANDS</span>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Active Scale</span>
                   </div>
-                  <span className="text-sm font-medium text-muted-foreground">Join 200+ active brands</span>
                 </div>
               </div>
             </motion.div>
 
+            {/* Right Column: Visual Component Module */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="lg:col-span-5 relative group"
             >
-              <img
-                src="https://img.freepik.com/free-vector/email-marketing-internet-chatting-24-hours-support_335657-3009.jpg"
-                alt="Email Marketing Automation"
-                className="relative rounded-[2.5rem] shadow-2xl border border-border"
-              />
-              {/* Floating Stat Card */}
-              <div className="absolute -top-6 -right-6 bg-card border border-border p-6 rounded-2xl shadow-xl animate-float">
-                <BarChart3 className="text-primary w-8 h-8 mb-2" />
-                <p className="text-2xl font-black text-foreground">4200%</p>
-                <p className="text-[10px] font-bold text-muted-foreground uppercase">Average Email ROI</p>
+              {/* Glow Architecture */}
+              <div className="absolute -inset-5 bg-primary/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-700" />
+
+              {/* Main Illustration Module */}
+              <div className="relative p-3 bg-white border-2 border-slate-200 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl overflow-hidden">
+                <img
+                  src="https://img.freepik.com/free-vector/email-marketing-internet-chatting-24-hours-support_335657-3009.jpg"
+                  alt="Email Marketing Automation"
+                  className="relative rounded-[2rem] md:rounded-[3rem] group-hover:scale-105 transition-transform duration-1000"
+                />
+
+                {/* Floating Data Lab Card
+                <div className="absolute -top-6 -right-6 bg-card border border-border p-6 rounded-2xl shadow-xl animate-float">
+                  <BarChart3 className="text-primary w-8 h-8 mb-2" />
+                  <p className="text-2xl font-black text-foreground">4200%</p>
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase">Average Email ROI</p>
+                </div> */}
               </div>
+
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-24 px-4 bg-secondary/5">
+      <section className="py-24 px-4 bg-muted">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">Expert Email Management</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16">Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Email Management</span></h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChoosePoints.map((item, index) => (
@@ -135,15 +161,15 @@ const EmailMarketing = () => {
                 <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">We focus on the metrics that matter: Opens, Clicks, and Revenue.</p>
+                <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">We focus on the metrics that matter: Opens, Clicks, and Revenue.</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* WHY YOU NEED EMAIL MARKETING */ }
+      {/* WHY YOU NEED EMAIL MARKETING */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
         {/* Modern Gradient Background Accents */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 -z-10" />
@@ -166,12 +192,12 @@ const EmailMarketing = () => {
                 >
                   Audience Ownership
                 </motion.span>
-                <h2 className="text-4xl md:text-5xl font-bold mt-2 leading-tight">
-                  Stop Relying on <span className="text-primary italic">Borrowed</span> Audiences.
+                <h2 className="text-3xl md:text-5xl font-bold mt-2 leading-tight">
+                  Stop Relying on <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Borrowed</span> Audiences.
                 </h2>
               </div>
 
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-muted-foreground text-sm md:text-lg leading-relaxed">
                 Social media algorithms change daily, and your reach can vanish overnight. Email marketing gives you a direct, un-interrupted line to your customers that you <strong>own 100%</strong>. It’s the highest ROI channel in digital marketing for a reason.
               </p>
 
@@ -202,7 +228,7 @@ const EmailMarketing = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="bg-card border-2 border-border p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group">
+              <div className="bg-card border-2 border-border py-10 px-5 md:py-10 rounded-[3rem] shadow-2xl relative overflow-hidden group">
                 {/* Animated Background Pulse */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-primary/20 transition-colors" />
 
@@ -245,8 +271,8 @@ const EmailMarketing = () => {
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Solutions Suite</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">Full-service email management from technical setup to creative execution.</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Solutions Suite</span></h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg">Full-service email management from technical setup to creative execution.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -259,7 +285,7 @@ const EmailMarketing = () => {
                 <div className="mb-6 p-3 w-fit rounded-xl bg-background text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{service.name}</h3>
+                <h3 className="text-lg md:text-xl font-bold mb-3">{service.name}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">{service.desc}</p>
               </motion.div>
             ))}
@@ -270,7 +296,7 @@ const EmailMarketing = () => {
       {/* THE PROCESS */}
       <section className="py-24 px-4 bg-muted/50">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl font-bold text-center mb-16">Lifecycle Strategy</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Lifecycle <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Strategy</span></h2>
           <div className="relative">
             {/* Connecting Line */}
             <div className="hidden md:block absolute top-[60px] left-0 right-0 h-px bg-dashed border-t border-border -z-10" />
