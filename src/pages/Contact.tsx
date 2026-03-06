@@ -111,7 +111,7 @@ const Contact = () => {
       </section>
 
       {/* 3. FORM & NARRATIVE SPLIT */}
-      
+
       <section className="py-16 md:py-24 sm:px-6 lg:px-8 relative z-10 overflow-hidden">
         {/* Technical Background Design (Blueprint Grid) */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
@@ -190,9 +190,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* Smooth Bottom Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-blue-600 via-primary to-orange-500 opacity-20" />
     </div>
   );
 };
