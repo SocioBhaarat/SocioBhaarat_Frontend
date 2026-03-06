@@ -1,6 +1,4 @@
 
-
-
 import { Button } from "@/components/ui/button";
 import {
   Check, Zap, Shield, BarChart3, Target, MessageSquare,
@@ -151,7 +149,7 @@ const BulkBroadcasting = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Socio Bhaarat </span> ?</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg">
               We combine advanced technology and real-time analytics to ensure your campaigns achieve maximum engagement.
             </p>
           </div>
@@ -166,7 +164,7 @@ const BulkBroadcasting = () => {
                 <div className="mb-5 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">Engineered for speed and reliability to keep your business growing.</p>
               </motion.div>
             ))}
@@ -190,12 +188,12 @@ const BulkBroadcasting = () => {
             </motion.span>
 
             <h2 className="text-3xl md:text-5xl font-black mt-6 mb-6 text-slate-900 leading-tight">
-              Why Do You Need <br className="block md:hidden" />
+              Why Do You Need
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium px-2">
                 Bulk Broadcasting?
               </span>
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-medium italic">
+            <p className="text-slate-500 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed font-medium italic">
               "Bulk broadcasting eliminates the lag between your idea and your customer's action, ensuring you are the first to reach the phone."
             </p>
           </div>
@@ -243,7 +241,7 @@ const BulkBroadcasting = () => {
                 Communicate at the <br /> speed of thought.
               </h3>
 
-              <p className="text-slate-500 text-base md:text-lg leading-relaxed font-medium border-l-4 border-secondary/30 pl-6 italic">
+              <p className="text-slate-500 text-sm md:text-lg leading-relaxed font-medium border-l-4 border-secondary/30 pl-6 italic">
                 In a world of noise, being the first to reach your customer's phone is everything. We engineering the infrastructure that makes it happen.
               </p>
 
@@ -326,7 +324,7 @@ const BulkBroadcasting = () => {
 
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-black mb-10 md:mb-12 text-center md:text-left text-slate-900 uppercase italic">
-                Powerful <span className="text-primary">Features</span>
+                Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Features</span>
               </h2>
 
               {/* Adaptive Grid: 1 col mobile, 2 col tablet, 3 col desktop */}

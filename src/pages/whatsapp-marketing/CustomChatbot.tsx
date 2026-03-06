@@ -205,7 +205,7 @@ const WhatsAppChatbot = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Scale & Performance</span> </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">We don't just build bots; we build conversational experiences that drive revenue.</p>
+            <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto">We don't just build bots; we build conversational experiences that drive revenue.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -218,7 +218,7 @@ const WhatsAppChatbot = () => {
                 <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">Seamlessly integrated into your existing business workflow for maximum efficiency.</p>
               </motion.div>
             ))}
@@ -251,7 +251,7 @@ const WhatsAppChatbot = () => {
                 </span>
               </h2>
 
-              <p className="text-slate-500 text-base md:text-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
+              <p className="text-slate-500 text-sm md:text-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
                 {whyNeedIntro}
               </p>
 
@@ -260,7 +260,7 @@ const WhatsAppChatbot = () => {
                 {whyNeedPoints.slice(4).map((point, index) => (
                   <div key={index} className="flex flex-col gap-2 group">
                     <div className="h-1 w-10 bg-border group-hover:bg-primary transition-all duration-500" />
-                    <span className="font-black text-[10px] md:text-xs uppercase tracking-tight opacity-80 text-slate-700">
+                    <span className="font-black text-[12px] md:text-xs uppercase tracking-tight opacity-80 text-slate-700">
                       {point}
                     </span>
                   </div>
@@ -280,7 +280,7 @@ const WhatsAppChatbot = () => {
                 {/* Subtle watermark icon */}
                 <MessageCircle className="absolute -right-8 -bottom-8 w-32 h-32 md:w-40 md:h-40 text-secondary/5 rotate-12 pointer-events-none" />
 
-                <h3 className="text-xl md:text-2xl font-black mb-6 md:mb-8 flex items-center gap-3 tracking-tighter uppercase italic">
+                <h3 className="text-xl md:text-2xl font-black mb-6 md:mb-8 flex items-center gap-3 tracking-tighter italic">
                   <div className="h-8 md:h-10 w-1.5 bg-secondary rounded-full" />
                   Key Business Benefits
                 </h3>
@@ -322,7 +322,7 @@ const WhatsAppChatbot = () => {
                   WhatsApp Chatbot
                 </span> Services
               </h2>
-              <p className="text-slate-500 text-base md:text-lg font-medium italic max-w-2xl leading-relaxed">
+              <p className="text-slate-500 text-sm md:text-lg font-medium italic max-w-2xl leading-relaxed">
                 "From simple FAQs to complex e-commerce automation, we build bots that handle the heavy lifting while you focus on growth."
               </p>
             </div>
@@ -349,7 +349,7 @@ const WhatsAppChatbot = () => {
                     <Bot className="h-5 w-5 md:h-6 shrink-0" />
                   </div>
 
-                  <h3 className="text-base md:text-lg font-black leading-tight text-slate-800 uppercase italic tracking-tight group-hover:text-primary transition-colors">
+                  <h3 className="text-base md:text-lg font-black leading-tight text-slate-800 italic group-hover:text-primary transition-colors">
                     {service}
                   </h3>
 

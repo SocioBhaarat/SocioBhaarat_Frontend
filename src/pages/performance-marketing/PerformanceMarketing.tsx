@@ -352,7 +352,7 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* PRICING & TRANSPARENCY */}
-      <section className="py-12 md:py-24 px-4 bg-muted/30 relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-muted/30 relative overflow-hidden">
 
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-8 md:mb-12">
