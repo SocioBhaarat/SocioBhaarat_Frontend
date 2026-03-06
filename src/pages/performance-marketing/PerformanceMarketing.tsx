@@ -71,7 +71,7 @@ const PerformanceMarketing = () => {
                 </span> Through Data.
               </h1>
 
-              <p className="text-base md:text-xl text-slate-500 max-w-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
+              <p className="text-sm md:text-xl text-slate-500 max-w-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
                 "We scale businesses through precision-targeted advertising. Every rupee spent is tracked, optimized, and tied directly to your revenue goals."
               </p>
 
@@ -153,7 +153,7 @@ const PerformanceMarketing = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium"> Growth Engine</span></h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
               We don't just "run ads." We engineer conversion ecosystems that turn visitors into high-value customers.
             </p>
           </div>
@@ -168,8 +168,8 @@ const PerformanceMarketing = () => {
                 <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
                   <item.icon className="h-7 w-7" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 tracking-tight">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg md:text-xl font-bold mb-3 tracking-tight">{item.title}</h3>
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -192,11 +192,11 @@ const PerformanceMarketing = () => {
                 <DollarSign className="w-3 h-3" />
                 Financial Accountability
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight">
                 Stop Guessing. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Start Scaling.</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-muted-foreground text-sm md:text-lg leading-relaxed">
                 Performance marketing allows you to track, measure, and optimize every campaign in real-time. You pay only for measurable actions — ensuring better ROI and controlled budgets.
               </p>
 
@@ -246,7 +246,7 @@ const PerformanceMarketing = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4"> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Precision-Targeted</span> Services</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto">
               We manage your full-funnel strategy across the world's most powerful ad platforms.
             </p>
           </div>
@@ -261,8 +261,8 @@ const PerformanceMarketing = () => {
                 <div className="mb-6 w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">{service.desc}</p>
+                <h3 className="text-lg md:text-xl font-bold mb-3">{service.title}</h3>
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-6">{service.desc}</p>
               </motion.div>
             ))}
           </div>

@@ -160,21 +160,16 @@ const WebDevelopmentPackages = () => {
           <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 border-y border-border/50 relative">
             <div className="container mx-auto max-w-6xl">
               <div className="max-w-3xl mb-16 border-l-4 border-primary pl-8">
-                <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase mb-4">
-                  Integrated Service <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Ecosystem</span>
+                <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter mb-4"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Solutions </span> We Provide
                 </h2>
-                <p className="text-slate-500 font-medium italic">
+                {/* <p className="text-slate-500 font-medium italic">
                   Every package acts as a container for these specialized technical solutions, optimized for your business goals.
-                </p>
+                </p> */}
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  "SOCIAL MEDIA MANAGEMENT", "GRAPHIC DESIGNING", "VIDEO PRODUCTION",
-                  "META ADS ARCHITECTURE", "GOOGLE ADS VALIDATION", "CONTENT STRATEGY",
-                  "G-BUSINESS OPTIMIZATION", "WEBSITE ENGINEERING", "WHATSAPP API",
-                  "TELE-CONVERSION", "SALES PIPELINE FILTERING", "SEO / RANKING LAB",
-                  "REPUTATION MANAGEMENT", "WORDPRESS ECOSYSTEM", "PERFORMANCE MARKETING"
+                   "GRAPHIC DESIGNING", "WEBSITE ENGINEERING", "WORDPRESS ECOSYSTEM", "APP DEVELOPMENT", "UI & UX DESIGN", "E-COMMERCE DEVELOPEMNT"
                 ].map((service, index) => (
                   <div key={index} className="bg-card p-5 rounded-2xl border border-border/50 shadow-sm hover:border-primary/40 group transition-all flex items-center gap-4">
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">

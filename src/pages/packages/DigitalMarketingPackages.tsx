@@ -185,11 +185,9 @@ const DigitalMarketingPackages = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              "SOCIAL MEDIA MANAGEMENT", "GRAPHIC DESIGNING", "VIDEO PRODUCTION",
-              "META ADS ARCHITECTURE", "GOOGLE ADS VALIDATION", "CONTENT STRATEGY",
-              "G-BUSINESS OPTIMIZATION", "WEBSITE ENGINEERING", "WHATSAPP API",
-              "TELE-CONVERSION", "SALES PIPELINE FILTERING", "SEO / RANKING LAB",
-              "REPUTATION MANAGEMENT", "WORDPRESS ECOSYSTEM", "PERFORMANCE MARKETING"
+              "SOCIAL MEDIA MANAGEMENT", "VIDEO PRODUCTION","META ADS ARCHITECTURE", "GOOGLE ADS VALIDATION", "CONTENT STRATEGY",
+              "GOOGLE BUSINESS OPTIMIZATION", "WHATSAPP API","TELE-CONVERSION", "SALES PIPELINE FILTERING", "SEO / RANKING LAB",
+              "REPUTATION MANAGEMENT", "PERFORMANCE MARKETING"
             ].map((service, index) => (
               <div key={index} className="bg-card p-5 rounded-2xl border border-border/50 shadow-sm hover:border-primary/40 group transition-all flex items-center gap-4">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
