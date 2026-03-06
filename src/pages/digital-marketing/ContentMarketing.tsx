@@ -105,7 +105,6 @@ const ContentMarketing = () => {
       {/* Why choose us */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
 
-
         <motion.div
           className="container mx-auto max-w-7xl relative z-10"
           initial="hidden"
@@ -120,14 +119,14 @@ const ContentMarketing = () => {
               The Content Engineering Edge
             </div>
 
-            <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
               Why Choose Our <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
                 Content Ecosystem
               </span>
             </h2>
 
-            <p className="text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto border-l-4 border-primary/30 pl-6">
+            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto border-l-4 border-primary/30 pl-6">
               "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
             </p>
           </motion.div>
@@ -154,7 +153,7 @@ const ContentMarketing = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-md text-slate-400 leading-relaxed italic group-hover:text-slate-600 transition-colors">
+                  <p className="text-sm md:text-md text-slate-400 leading-relaxed italic group-hover:text-slate-600 transition-colors">
                     {item.desc}
                   </p>
                 </div>
@@ -172,15 +171,15 @@ const ContentMarketing = () => {
       </section>
 
       {/* What is Content Marketing */}
-      <section className="py-24 px-4 bg-background overflow-hidden">
+      <section className="py-24 bg-background overflow-hidden">
         <div className="container mx-auto max-w-5xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="relative p-12 md:p-20 rounded-[4rem] bg-slate-700 text-white shadow-2xl overflow-hidden">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="relative py-12 px-5 md:p-20 rounded-[4rem] bg-slate-700 text-white shadow-2xl overflow-hidden">
             {/* Atmospheric Glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full" />
 
             <div className="relative z-10 space-y-10">
               <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter text-white">What is <span className="text-secondary font-serif pl-1">Content Marketing</span></h2>
-              <div className="grid md:grid-cols-2 gap-12 text-slate-300 text-lg leading-relaxed font-medium">
+              <div className="grid md:grid-cols-2 gap-12 text-slate-300 text-md md:text-lg leading-relaxed font-medium">
                 <p>Content marketing is a strategic approach focused on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience.</p>
                 <p>Unlike traditional advertising, this approach establishes your brand as an industry authority, generating <span className="text-white font-bold">3x more leads</span> while costing <span className="text-secondary font-bold">62% less</span>.</p>
               </div>
@@ -194,8 +193,6 @@ const ContentMarketing = () => {
 
       {/* Why Content Marketing Matters*/}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
-
-
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
           initial="hidden"
@@ -210,14 +207,14 @@ const ContentMarketing = () => {
               The Organic Advantage
             </div>
 
-            <h2 className="font-display text-4xl sm:text-6xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
               Why Content Marketing <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
                 Matters for Growth
               </span>
             </h2>
 
-            <p className="text-xl text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto">
+            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto">
               "High-quality content builds trust, establishes authority, and attracts customers organically across the <span className="text-slate-900 font-bold">Madhya Pradesh</span> business landscape."
             </p>
           </motion.div>
@@ -240,7 +237,7 @@ const ContentMarketing = () => {
                     {React.cloneElement(item.icon as React.ReactElement, { size: 24 })}
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
                     {item.title}
                   </h3>
 
@@ -264,10 +261,10 @@ const ContentMarketing = () => {
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter text-slate-900 leading-none">
+            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900 leading-none">
               Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium">Content</span> Solutions
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto italic mt-6">
+            <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic mt-6">
               Precision-engineered assets designed to dominate the digital landscape of Madhya Pradesh.
             </p>
           </div>
@@ -277,7 +274,7 @@ const ContentMarketing = () => {
               <motion.div
                 key={index}
                 whileHover={{ y: -12 }}
-                className="group relative p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:border-primary/20 transition-all duration-500 overflow-hidden h-full flex flex-col justify-between"
+                className="group relative py-10 px-5 md:p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:border-primary/20 transition-all duration-500 overflow-hidden h-full flex flex-col justify-between"
               >
                 {/* Background Step Number - Production Roadmap Look */}
                 <span className="absolute top-4 right-6 text-7xl font-black text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
@@ -288,7 +285,7 @@ const ContentMarketing = () => {
                   <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
                     <Check className="h-6 w-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors tracking-tight leading-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors tracking-tight leading-tight">
                     {service.title}
                   </h3>
                   <p className="text-slate-500 leading-relaxed italic text-sm group-hover:text-slate-700">
@@ -321,10 +318,10 @@ const ContentMarketing = () => {
         >
           {/* Header Block */}
           <div className="text-center mb-24 space-y-4">
-            <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter text-slate-900 leading-none">
+            <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter text-slate-900 leading-none">
               The Growth <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium">Pipeline</span>
             </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto italic mt-4 border-b border-primary/20 pb-4">
+            <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic mt-4 border-b border-primary/20 pb-4">
               A structured, high-velocity approach for building brand authority in <span className="text-slate-900 font-bold">Bhopal & Jabalpur</span>.
             </p>
           </div>
