@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 const blogPosts = [
   {
     id: "content-marketing-guide",
-    title: "Complete Guide to Content Marketing in 2024",
+    title: "Complete Guide to Content Marketing in 2026",
     excerpt: "Learn how to create compelling content that drives engagement, builds brand authority, and converts visitors into loyal customers.",
     category: "Content Marketing",
     author: "Content Strategy Team",
-    date: "March 12, 2024",
+    date: "March 12, 2026",
     image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=800&auto=format&fit=crop",
     readTime: "10 min read"
   },
@@ -21,10 +21,20 @@ const blogPosts = [
     excerpt: "Track, measure, and optimize your social media marketing efforts with proven metrics and analytics strategies that deliver real business results.",
     category: "Social Media",
     author: "Social Media Team",
-    date: "March 10, 2024",
+    date: "March 10, 2026",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&auto=format&fit=crop",
     readTime: "7 min read"
-  }
+  },
+  {
+    id: "seo-trends-2026",
+    title: "Top 10 SEO Trends to Watch in 2026",
+    excerpt: "Track, measure, and optimize your SEO strategy with emerging 2026 search trends, evolving algorithms, and data-driven insights that help improve visibility, rankings, and sustainable organic traffic growth.",
+    category: "SEO Strategy",
+    author: "Digital Marketing Team",
+    date: "Jan 15, 2026",
+    image: "https://images.unsplash.com/photo-1674027001834-719c347d1eca?w=800&auto=format&fit=crop",
+    readTime: "8 min read"
+  },
 ];
 
 const Blog = () => {
@@ -57,7 +67,7 @@ const Blog = () => {
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
       </section>
-      <section className="py-20 px-4 bg-white relative">
+      <section className="py-20 md:px-4 bg-white relative">
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (

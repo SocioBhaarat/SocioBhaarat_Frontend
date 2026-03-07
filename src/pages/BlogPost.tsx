@@ -3,13 +3,13 @@ import { Calendar, User, ArrowLeft, Share2, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const blogContent: Record<string, any> = {
-  "seo-trends-2024": {
-    title: "Top 10 SEO Trends to Watch in 2024",
+  "seo-trends-2026": {
+    title: "Top 10 SEO Trends to Watch in 2026",
     category: "SEO Strategy",
     author: "Digital Marketing Team",
-    date: "March 15, 2024",
+    date: "Jan 15, 2026",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1674027001834-719c347d1eca?w=800&auto=format&fit=crop",
     content: `
       <h2>Introduction to SEO in 2024</h2>
       <p>Search Engine Optimization continues to evolve at a rapid pace, with Google and other search engines constantly updating their algorithms. Staying ahead of these changes is crucial for maintaining and improving your search rankings.</p>
@@ -39,10 +39,10 @@ const blogContent: Record<string, any> = {
     `
   },
   "content-marketing-guide": {
-    title: "Complete Guide to Content Marketing in 2024",
+    title: "Complete Guide to Content Marketing in 2026",
     category: "Content Marketing",
     author: "Content Strategy Team",
-    date: "March 12, 2024",
+    date: "March 12, 2026",
     readTime: "10 min read",
     image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=1200&auto=format&fit=crop",
     content: `
@@ -94,7 +94,7 @@ const blogContent: Record<string, any> = {
     title: "Measuring Social Media ROI: A Complete Guide",
     category: "Social Media",
     author: "Social Media Team",
-    date: "March 10, 2024",
+    date: "March 10, 2026",
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop",
     content: `
@@ -158,14 +158,33 @@ const BlogPost = () => {
     );
   }
 
+  const handleShare = async () => {
+  const shareData = {
+    title: post.title,
+    text: `Check out this article: ${post.title}`,
+    url: window.location.href,
+  };
 
-    return (
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+    } else {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("Link copied to clipboard!");
+    }
+  } catch (error) {
+    console.error("Error sharing:", error);
+  }
+};
+
+
+  return (
     <div className="min-h-screen bg-white relative overflow-hidden font-sans">
       {/* Background Engineering Mesh */}
       <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
       {/* 1. NAVIGATION LAYER (Always Top) */}
-      <nav className="container mx-auto max-w-6xl pt-32 px-4 relative z-20">
+      <nav className="container mx-auto max-w-6xl pt-12 px-4 relative z-20">
         <Link to="/blog" className="group inline-flex items-center text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-primary transition-colors">
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
           Back to Intelligence Stream
@@ -180,7 +199,7 @@ const BlogPost = () => {
           </div>
 
           {/* Safari iPhone Clipping Fix for Italic Heading */}
-          <h1 className="text-4xl md:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter italic mb-8">
+          <h1 className="text-4xl md:text-7xl font-black text-slate-900 leading-[0.95] italic mb-8">
             <span className="relative inline-block py-1 pr-4 -mr-4 overflow-visible">
               {post.title}
             </span>
@@ -217,46 +236,48 @@ const BlogPost = () => {
       <main className="container mx-auto px-4 max-w-6xl pb-24 relative z-10">
         <div className="grid lg:grid-cols-12 gap-16">
 
-          {/* Left Side: The Narrative (Knowledge Content) */}
           <article className="lg:col-span-8">
             <div
               className="prose prose-slate max-w-none 
-              prose-h2:text-3xl prose-h2:font-black prose-h2:tracking-tighter prose-h2:italic prose-h2:uppercase prose-h2:mb-8
-              prose-p:text-slate-500 prose-p:italic prose-p:font-medium prose-p:leading-relaxed prose-p:mb-6
+              prose-h2:text-2xl prose-h2:font-black prose-h2: prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-slate-900
+              prose-p:text-slate-600 prose-p:text-md prose-p:leading-relaxed prose-p:mb-6 prose-p:italic prose-p:font-medium
               prose-strong:text-slate-900 prose-strong:font-black
-              prose-ul:space-y-4 prose-ul:mb-8"
+              prose-ul:my-8 prose-ul:list-disc prose-ul:pl-5
+              prose-li:text-slate-600 prose-li:mb-2 prose-li:font-medium"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
             {/* Share Module */}
             <div className="mt-12 p-8 rounded-[2rem] bg-slate-50 border border-slate-100 flex items-center justify-between">
               <p className="text-xs font-black uppercase tracking-widest text-slate-400">Distribute this Intelligence</p>
-              <Button variant="outline" className="rounded-full gap-2">
+              <Button variant="outline"
+                onClick={handleShare}
+                className="rounded-full gap-2">
                 <Share2 className="w-4 h-4" /> Share Post
               </Button>
             </div>
           </article>
 
           <aside className="lg:col-span-4 space-y-8">
-          <div className="sticky top-24 p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 overflow-hidden">
-             <div className="absolute top-0 right-0 p-4 text-slate-200 font-black italic text-4xl select-none opacity-20">DATA</div>
-             
-             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-6 italic">Engineering Brief</h4>
-             <p className="text-sm text-slate-500 italic font-medium leading-relaxed mb-8">
-               Our lab analyzes industry shifts in real-time. This intelligence is part of the SocioBhaarat growth system.
-             </p>
+            <div className="sticky top-24 p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 text-slate-200 font-black italic text-4xl select-none opacity-20">DATA</div>
 
-             <div className="space-y-4">
-               <h5 className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Growth CTA</h5>
-               <Link to="/contact" className="block group">
-                 <div className="p-6 rounded-2xl bg-slate-900 text-white group-hover:bg-primary transition-all duration-500">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-6 italic">Engineering Brief</h4>
+              <p className="text-sm text-slate-500 italic font-medium leading-relaxed mb-8">
+                Our lab analyzes industry shifts in real-time. This intelligence is part of the SocioBhaarat growth system.
+              </p>
+
+              <div className="space-y-4">
+                <h5 className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Growth CTA</h5>
+                <Link to="/contact" className="block group">
+                  <div className="p-6 rounded-2xl bg-slate-900 text-white group-hover:bg-primary transition-all duration-500">
                     <p className="text-lg font-black italic tracking-tighter mb-2 leading-none">Ready to scale?</p>
                     <p className="text-xs text-slate-400 group-hover:text-white/80 transition-colors">Request a free audit today.</p>
-                 </div>
-               </Link>
-             </div>
-          </div>
-        </aside>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </aside>
 
         </div>
       </main>
