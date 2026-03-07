@@ -206,8 +206,8 @@ function Index() {
 
               <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
                 MP’s Fastest Growing <br />
-                <span className="text-transparent bg-clip-text bg-[#FFC105] italic font-serif">
-                  Digital Marketing & IT
+                <span className="text-transparent bg-clip-text bg-[#FFC105] italic font-serif inline-block pr-4 -mr-4 overflow-visible leading-normal">
+                  Digital Marketing & IT Company
                 </span>
               </h1>
 
@@ -238,7 +238,7 @@ function Index() {
               className="space-y-6"
             >
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-                We believe in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">impactful</span> metrics.
+                We believe in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">impactful</span> metrics.
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Since 2022, we've transformed the digital landscape for 50+ brands across MP. Our focus isn't just clicks—it's sustainable revenue and brand authority.
@@ -277,13 +277,13 @@ function Index() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
         {/* Atmospheric Background Layers */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[80%] md:w-[60%] h-[60%] bg-blue-600/10 blur-[80px] md:blur-[140px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[70%] md:w-[50%] h-[50%] bg-orange-500/10 blur-[80px] md:blur-[130px] rounded-full" />
 
-      </div>
+        </div>
 
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
@@ -304,8 +304,8 @@ function Index() {
 
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
                 Bhopal & Jabalpur’s <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic pr-2 font-medium font-serif">Performance</span> <br className="md:hidden" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic pr-2 font-medium font-serif">Architecture</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic font-medium font-serif inline-block pr-4 -mr-4 overflow-visible leading-normal">Performance</span> <br className="md:hidden" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic font-medium font-serif inline-block pr-4 -mr-4 overflow-visible leading-normal">Architecture</span>
               </h2>
 
               <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground">
@@ -364,7 +364,7 @@ function Index() {
       </section>
 
       {/* WHY YOU NEEDS DIGITAL MARKETING */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
         {/* Artistic Background Elements */}
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-orange-500/5 blur-[100px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
@@ -385,7 +385,7 @@ function Index() {
 
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
               Why Your Business Needs <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium ">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                 Digital Marketing
               </span>
             </h2>
@@ -443,7 +443,7 @@ function Index() {
       </section>
 
       {/* GROWTH */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
         {/* Background Motion Blur */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10 animate-pulse" />
 
@@ -458,7 +458,7 @@ function Index() {
           <motion.div variants={fadeUp} className="text-center max-w-3xl mx-auto mb-20 space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
               The Roadmap to <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                 Digital Dominance
               </span>
             </h2>
@@ -554,7 +554,7 @@ function Index() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Expertise Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Verticals</span></h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Expertise Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Verticals</span></h2>
               <p className="text-md md:text-lg text-muted-foreground italic">Our solutions are engineered to meet the unique psychological triggers of different industries.</p>
             </div>
             <div className="flex gap-4">
@@ -570,7 +570,7 @@ function Index() {
           <Swiper
             modules={[Navigation, Autoplay]}
             slidesPerView={1} spaceBetween={30} loop={true}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 2000 }}
             navigation={{ nextEl: ".next-btn", prevEl: ".prev-btn" }}
             breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3.5 } }}
           >
@@ -591,7 +591,7 @@ function Index() {
       </section>
 
       {/* WHAT MAKES US DIFFERENT */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
 
         <motion.div
           className="container mx-auto max-w-7xl"
@@ -603,7 +603,7 @@ function Index() {
           {/* 1. Header with Creative Underline */}
           <motion.div variants={fadeUp} className="text-center max-w-3xl mx-auto mb-24 space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              What Makes Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Different?</span>
+              What Makes Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Different?</span>
             </h2>
             <p className="text-sm md:text-lg text-slate-500 font-medium max-w-xl mx-auto leading-relaxed">
               We focus on measurable growth and real impact—building <strong>scalable digital systems</strong> rather than just isolated campaigns.
@@ -646,7 +646,7 @@ function Index() {
           {/* 3. Local Authority Narrative Card */}
           <motion.div
             variants={fadeUp}
-            className="relative max-w-4xl mx-auto p-10 rounded-[3.5rem] bg-slate-50 border border-slate-200 text-center overflow-hidden"
+            className="relative max-w-4xl mx-auto py-10 px-3 md:px-10 rounded-[3.5rem] bg-slate-50 border border-slate-200 text-center overflow-hidden"
           >
             {/* Decorative Glows */}
             <div className="absolute top-0 left-0 w-32 h-32 bg-primary/10 blur-3xl rounded-full" />
@@ -667,10 +667,10 @@ function Index() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Core</span> Ecosystem</h2>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Core</span> Ecosystem</h2>
             <p className="text-muted-foreground text-md md:text-lg max-w-2xl mx-auto italic underline decoration-primary/30">Complete digital growth solutions tailored for Bhopal & Jabalpur.</p>
           </div>
 
