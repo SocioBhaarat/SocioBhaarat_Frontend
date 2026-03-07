@@ -48,7 +48,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-5 relative group order-1 lg:order-1"
+              className="lg:col-span-5 relative group order-2 lg:order-1"
             >
               <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl group-hover:bg-primary/20 transition-all duration-700" />
               <div className="relative rounded-[2.5rem] p-3 bg-white border-2 border-slate-200 shadow-2xl overflow-hidden">
@@ -69,7 +69,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-7 space-y-8 order-2 lg:order-2"
+              className="lg:col-span-7 space-y-8 order-1 lg:order-2"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase shadow-sm">
                 <Cpu className="w-3 h-3" /> Growth Engineering Lab
@@ -104,7 +104,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-7 space-y-8 order-2 lg:order-1"
+              className="lg:col-span-7 space-y-8 order-1 lg:order-1 hidden lg:block"
             >
               <div>
                 <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-4 italic">Origin Protocol</h2>
@@ -131,7 +131,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-5 relative group order-1 lg:order-2"
+              className="lg:col-span-5 relative group order-2 lg:order-2"
             >
               <div className="absolute -inset-4 bg-primary/10 rounded-[3rem] blur-2xl group-hover:bg-primary/20 transition-all duration-700" />
               <div className="relative rounded-[2.5rem] p-3 bg-white border-2 border-slate-200 shadow-2xl overflow-hidden">
