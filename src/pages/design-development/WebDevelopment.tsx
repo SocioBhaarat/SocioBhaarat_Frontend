@@ -84,7 +84,7 @@ const WebDevelopment = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Build <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Scalable Foundations</span>.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Scalable Foundations</span>.
               </h1>
 
               <p className="text-base md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
@@ -138,14 +138,14 @@ const WebDevelopment = () => {
           </div>
         </div>
       </section>
-
+ 
       {/* WHY CHOOSE US */}
-      <section className="py-16 md:py-24 px-4 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 md:mb-16">
             {/* text-3xl for mobile, text-5xl for desktop */}
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight leading-tight">
-              Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Excellence</span>
+              Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Excellence</span>
             </h2>
             <p className="text-muted-foreground text-sm md:text-base px-4">
               Why SocioBhaarat is the trusted partner for web innovation.
@@ -172,7 +172,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* SERVICES */}
-      <section className="py-16 md:py-24 px-4 bg-muted/30 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
         {/* Background Decorative Element - Adjusted size for mobile */}
         <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 blur-[80px] md:blur-[100px] rounded-full -z-10" />
 
@@ -186,7 +186,7 @@ const WebDevelopment = () => {
               Enterprise Grade
             </motion.span>
             <h2 className="text-3xl md:text-5xl font-bold mt-2 md:mt-3 tracking-tight leading-tight">
-              Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Solutions</span>
+              Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Solutions</span>
             </h2>
           </div>
 
@@ -236,10 +236,10 @@ const WebDevelopment = () => {
       
 
       {/* TECHNOLOGIES */}
-      <section className="py-24 px-4 bg-background border-y border-border">
+      <section className="py-24 bg-background border-y border-border">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Technology Stack</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Technology Stack</span></h2>
             <p className="mt-4 text-slate-500 text-xs md:text-sm font-medium uppercase tracking-[0.2em] italic">
               The engine behind Madhya Pradesh's fastest digital platforms.
             </p>
@@ -260,13 +260,13 @@ const WebDevelopment = () => {
 
 
       {/* DEVELOPMENT PROCESS */}
-      <section className="py-12 md:py-24 px-4 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-[#fafafa] relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Responsive Header */}
           <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 leading-[1.1] md:leading-none">
-              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Engineering</span> Approach
+              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">Engineering</span> Approach
             </h2>
             <p className="text-slate-500 text-[10px] md:text-sm max-w-xl mx-auto italic uppercase tracking-[0.15em] font-medium">
               High-velocity workflow for Bhopal & Jabalpur.
@@ -314,7 +314,7 @@ const WebDevelopment = () => {
       />
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
@@ -325,7 +325,7 @@ const WebDevelopment = () => {
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Ready to Digitize <br className="hidden md:block" /> Your Vision?
               </h2>
 

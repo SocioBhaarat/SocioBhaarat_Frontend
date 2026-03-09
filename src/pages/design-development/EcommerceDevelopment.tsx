@@ -105,10 +105,6 @@ const EcommerceDevelopment = () => {
           <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
 
-          {/* Large Section Watermark */}
-          <div className="absolute left-10 bottom-20 text-[10rem] font-black text-primary/[0.02] select-none italic tracking-tighter uppercase">
-            RETAIL
-          </div>
         </div>
 
         {/* 2. MAIN CONTENT GRID */}
@@ -128,7 +124,7 @@ const EcommerceDevelopment = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Engineer <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase inline-block pr-4 -mr-4 overflow-visible">
                   High-Converting
                 </span> Digital Flagships.
               </h1>
@@ -186,12 +182,12 @@ const EcommerceDevelopment = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-24 px-4 bg-muted/30 border-y border-border">
+      <section className="py-24 bg-muted/30 border-y border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">The E-commerce Edge</h2>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+              <p className="text-muted-foreground text-md md:text-lg mb-8 leading-relaxed">
                 We combine strategy, technology, and customer-focused design to create platforms that deliver seamless shopping experiences and revenue growth.
               </p>
               <div className="grid grid-cols-2 gap-6">
@@ -229,13 +225,13 @@ const EcommerceDevelopment = () => {
       </section>
 
       {/* SERVICES (BENTO GRID) */}
-      <section className="py-12 md:py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Responsive Header */}
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-10 md:mb-16 text-center italic tracking-tighter leading-tight">
             Ecommerce <br className="md:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
               Solutions
             </span>
           </h2>
@@ -285,10 +281,10 @@ const EcommerceDevelopment = () => {
       </section>
 
       {/* PRODUCTION ROADMAP */}
-      <section className="py-24 px-4 bg-[#020617] text-white">
+      <section className="py-24 bg-[#020617] text-white">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-orange-600 italic font-serif font-medium">Production Roadmap</span> </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible ">Production Roadmap</span> </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {process.map((step) => (
@@ -308,10 +304,10 @@ const EcommerceDevelopment = () => {
       </section>
 
       {/* TECH CLOUD */}
-      <section className="py-24 px-4 bg-muted/30 border-y border-border">
+      <section className="py-24 bg-muted/30 border-y border-border">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Retail Stack</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Retail Stack</span></h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 text-">
             {technologies.map((tech, index) => (
@@ -330,7 +326,7 @@ const EcommerceDevelopment = () => {
       <QuoteSection quote="Turning visitors into customers with conversion-focused digital stores designed to scale." />
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
@@ -341,7 +337,7 @@ const EcommerceDevelopment = () => {
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Ready to Scale Your Online Empire?
               </h2>
 

@@ -80,7 +80,7 @@ const AppDevelopment = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Build <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase inline-block pr-4 -mr-4 overflow-visible">
                   Smart & Scalable
                 </span> Mobile Ecosystems.
               </h1>
@@ -139,10 +139,10 @@ const AppDevelopment = () => {
 
 
       {/*  WHY CHOOSE US  */}
-      <section className="py-24 px-4 bg-muted/30">
+      <section className="py-24 bg-muted/30">
         <div className="container mx-auto max-w-6xl text-center">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Mobile Mastery</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Mobile Mastery</span></h2>
             <p className="text-muted-foreground text-sm md:text-base px-4">
               Why SocioBhaarat is the trusted partner for web innovation.
             </p>
@@ -167,9 +167,9 @@ const AppDevelopment = () => {
       </section>
 
       {/*  SERVICES GRID  */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">App Solutions</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">App Solutions</span></h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -191,10 +191,10 @@ const AppDevelopment = () => {
 
 
       {/*  TECHNOLOGY */}
-      <section className="py-24 px-4 bg-muted/30 border-y border-border">
+      <section className="py-24 bg-muted/30 border-y border-border">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Technology Stack</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Technology Stack</span></h2>
             <div className="h-1.5 w-24 bg-primary rounded-full mx-auto" />
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
@@ -212,9 +212,9 @@ const AppDevelopment = () => {
       </section>
 
       {/* DEVELOPMENT PROCESS */}
-      <section className="py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-24 bg-background relative overflow-hidden">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Production Roadmap</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible ">Production Roadmap</span></h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
             {process.map((step, index) => (
@@ -240,7 +240,7 @@ const AppDevelopment = () => {
       <QuoteSection quote="From concept to code, we create mobile experiences that people love to use daily." />
 
       {/*  FINAL CTA  */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
@@ -251,7 +251,7 @@ const AppDevelopment = () => {
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Ready to Build Your App?
               </h2>
 
