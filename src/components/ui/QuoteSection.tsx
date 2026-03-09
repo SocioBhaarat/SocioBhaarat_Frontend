@@ -28,7 +28,7 @@ const QuoteSection = ({ quote, className }: QuoteSectionProps) => {
 
           {/* 3. QUOTE TEXT (Fluid Typography) */}
           <div className="relative z-10 space-y-6 md:space-y-8">
-            <p className="font-display text-lg sm:text-2xl md:text-4xl font-black leading-[1.2] md:leading-relaxed text-slate-900 tracking-tighter uppercase italic">
+            <p className="font-display text-lg sm:text-2xl md:text-4xl font-bold leading-[1.2] md:leading-relaxed text-slate-900 italic">
               {quote}
             </p>
 
@@ -36,7 +36,7 @@ const QuoteSection = ({ quote, className }: QuoteSectionProps) => {
             <div className="h-[2px] md:h-[3px] w-16 md:w-24 mx-auto bg-gradient-to-r from-blue-600 via-primary to-orange-500 rounded-full group-hover:w-40 transition-all duration-700"></div>
             
             <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-slate-400">
-              SocioBhaarat Vision
+              Socio Bhaarat Vision
             </p>
           </div>
 

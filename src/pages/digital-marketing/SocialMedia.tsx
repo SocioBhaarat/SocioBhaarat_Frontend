@@ -87,7 +87,7 @@ const SocialMedia = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Strategic <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Social Impact</span>.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Social Impact</span>.
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic">
@@ -145,7 +145,7 @@ const SocialMedia = () => {
       </section>
 
       {/* Why choose Us Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
         {/* 1. ATMOSPHERIC BACKGROUND ELEMENTS - Eliminates White Space */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           {/* Soft Blue Mesh - Top Left */}
@@ -169,9 +169,9 @@ const SocialMedia = () => {
               The Performance Edge
             </div>
 
-            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
               Why SocioBhaarat <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                 Excels in Marketing
               </span>
             </h2>
@@ -230,14 +230,7 @@ const SocialMedia = () => {
       </section>
 
       {/* Why do you need Social Media Marketing Section OR Why Matters*/}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
-        {/* Atmospheric Design Elements */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-1/2 left-[-10%] w-[40%] h-[40%] bg-blue-600/5 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[30%] h-[40%] bg-orange-500/5 blur-[100px] rounded-full" />
-          <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
-        </div>
-
+      <section className="py-24 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
           initial="hidden"
@@ -247,9 +240,9 @@ const SocialMedia = () => {
         >
           {/* Header Block */}
           <motion.div variants={fadeUp} className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <h2 className="font-display text-3xl md:text-5xl font-black tracking-tighter text-slate-900 leading-tight">
+            <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tighter text-slate-900 leading-tight">
               Why Your Brand Needs <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                 Social Architecture
               </span>
             </h2>
@@ -296,7 +289,7 @@ const SocialMedia = () => {
       </section>
 
       {/* Platforms we master */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-muted/20">
+      <section className="py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-muted/20">
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <motion.div
@@ -306,8 +299,8 @@ const SocialMedia = () => {
             className="text-center mb-20"
           >
             <h2 className="font-display text-3xl md:text-5xl
- font-black italic tracking-tighter text-slate-900">
-              Ecosystem <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Mastery</span>
+ font-bold italic tracking-tighter text-slate-900">
+              Ecosystem <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Mastery</span>
             </h2>
             <p className=" text-sm md:text-lg mt-4 text-muted-foreground italic font-medium">
               Expert execution across the world's most influential social architectures.
@@ -354,7 +347,7 @@ const SocialMedia = () => {
       </section>
 
       {/*  ENHANCED SERVICES SECTION  */}
-      <section className="py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-24 bg-background relative overflow-hidden">
         {/* Subtle Background Textures */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
@@ -368,8 +361,8 @@ const SocialMedia = () => {
             >
               Comprehensive Solutions
             </motion.span>
-            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Services</span>
+            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Services</span>
             </h2>
           </div>
 
@@ -402,12 +395,12 @@ const SocialMedia = () => {
       </section>
 
       {/* ENHANCED IMPACT HUB  */}
-      <section className="py-16 px-4 bg-slate-700 text-white relative overflow-hidden rounded-[3rem] mx-4 my-6">
+      <section className="py-16 bg-slate-700 text-white relative overflow-hidden rounded-[3rem] mx-4 my-6">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div className="text-left">
-              <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter">
+              <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter">
                 Our Impact in <span className="text-transparent bg-clip-text bg-amber-400 pr-2">Numbers</span>
               </h2>
               <p className="text-slate-400 text-sm font-medium italic mt-2">
@@ -447,14 +440,14 @@ const SocialMedia = () => {
         quote="Building meaningful connections that turn followers into loyal customers."
       />
       {/* Final CTA Button */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Ready to Dominate Social Media?
               </h2>
 

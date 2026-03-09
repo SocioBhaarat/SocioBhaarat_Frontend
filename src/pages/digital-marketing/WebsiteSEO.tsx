@@ -82,9 +82,9 @@ const WebsiteSEO = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
                 <Sparkles className="w-3 h-3" /> MP's Leading SEO Architecture
               </div>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter">
                 Rank Higher <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">& Grow Organically</span>.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">& Grow Organically</span>.
               </h1>
               <p className="text-lg sm:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic">
                 "We help businesses in Bhopal & Jabalpur dominate search engine rankings and generate quality leads through result-driven SEO solutions."
@@ -108,7 +108,7 @@ const WebsiteSEO = () => {
                   />
                   <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg">
                     <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">Visibility Increase</p>
-                    <p className="text-xl font-black text-slate-900">+300% Organic</p>
+                    <p className="text-xl font-bold text-slate-900">+300% Organic</p>
                   </div>
                 </div>
               </div>
@@ -119,10 +119,10 @@ const WebsiteSEO = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
+      <section className="py-24 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900 leading-none">Why Choose Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">SEO Strategy</span>?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">Why Choose Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">SEO Strategy</span>?</h2>
             <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic border-l-4 border-primary/30 pl-6">Built for measurable, ethical growth in the Madhya Pradesh digital ecosystem.</p>
           </div>
 
@@ -134,7 +134,7 @@ const WebsiteSEO = () => {
                 className="relative p-8 md:p-10 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden min-h-[16rem] flex flex-col justify-between"
               >
                 {/* 1. Background ID Watermark */}
-                <span className="absolute top-4 right-6 text-7xl md:text-8xl font-black text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
+                <span className="absolute top-4 right-6 text-7xl md:text-8xl font-bold text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
                   0{index + 1}
                 </span>
 
@@ -145,7 +145,7 @@ const WebsiteSEO = () => {
 
                 {/* 3. Text Architecture */}
                 <div className="space-y-3 relative z-10">
-                  <h4 className="font-black text-lg md:text-xl text-slate-900 italic group-hover:text-primary transition-colors">
+                  <h4 className="font-bold text-lg md:text-xl text-slate-900 italic group-hover:text-primary transition-colors">
                     {item.title}
                   </h4>
                   <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-medium italic border-l-2 border-primary/10 pl-4">
@@ -162,11 +162,11 @@ const WebsiteSEO = () => {
       </section>
 
       {/* Why SEO matters */}
-      <section className="py-24 px-4 bg-background overflow-hidden">
+      <section className="py-24 bg-background overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}>
-              <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-6 italic">Why SEO <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic pr-2">Matters</span> </h2>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-6 italic">Why SEO <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic inline-block pr-4 -mr-4 overflow-visible leading-normal">Matters</span> </h2>
               <p className="text-muted-foreground text-sm md:text-lg mb-8 leading-relaxed italic">
                 In today’s competitive digital landscape, ranking is essential for business growth. A strong SEO strategy ensures you appear at the top, attracts organic traffic, and generates consistent leads.
               </p>
@@ -185,7 +185,7 @@ const WebsiteSEO = () => {
       </section>
 
       {/*Our  Services */}
-      <section className="py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-24 bg-background relative overflow-hidden">
         {/* Atmospheric Background Textures */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           {/* Soft Mesh Glows */}
@@ -202,8 +202,8 @@ const WebsiteSEO = () => {
             >
               Precision Engineering
             </motion.span>
-            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900 leading-none">
-              Our SEO <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium">Architecture</span>
+            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
+              Our SEO <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Architecture</span>
             </h2>
             <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto italic mt-6">
               Data-backed strategies designed to conquer search rankings across the MP digital landscape.
@@ -242,15 +242,15 @@ const WebsiteSEO = () => {
       />
 
       {/* Final CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
-                Ready to Rank #1 <br /> on Google?
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
+                Ready to Rank #1 on Google?
               </h2>
 
               <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
@@ -262,7 +262,7 @@ const WebsiteSEO = () => {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
                   onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                 >
                   Claim Your Free Audit

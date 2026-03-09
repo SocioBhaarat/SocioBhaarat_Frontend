@@ -81,14 +81,14 @@ const VideoMarketing = () => {
                             transition={{ duration: 0.6 }}
                             className="text-center lg:text-left"
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] md:text-xs font-black tracking-[0.2em] uppercase mb-8 shadow-sm">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
                                 <Play className="w-3 h-3 fill-current" /> Next-Gen Content Strategy
                             </div>
 
-                            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
+                            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[0.95] tracking-tighter mb-8">
                                 Tell Your Story with <br />
                                 <span className="relative inline-block">
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
                                         Cinematic Impact
                                     </span>
 
@@ -102,7 +102,7 @@ const VideoMarketing = () => {
                             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                                 <Button
                                     size="lg"
-                                    className="rounded-full px-10 h-16 bg-slate-900 text-white font-black text-lg shadow-2xl hover:bg-primary transition-all hover:scale-105"
+                                    className="rounded-full px-10 h-16 bg-slate-900 text-white font-bold text-lg shadow-2xl hover:bg-primary transition-all hover:scale-105"
                                     onClick={() => navigate("/contact")}
                                 >
                                     {heroData.cta}
@@ -166,7 +166,7 @@ const VideoMarketing = () => {
             </section>
 
             {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
-            <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
+            <section className="py-24 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
                 <div className="container mx-auto max-w-6xl">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -180,7 +180,7 @@ const VideoMarketing = () => {
                             <div>
                                 <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
                                     Why Brands Trust Our
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Video Vision.</span>
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Video Vision.</span>
                                 </h2>
                                 <p className="text-muted-foreground text-sm md:text-lg leading-relaxed">
                                     We don't just point a camera and shoot. We combine cinematic artistry with performance marketing data to ensure your videos don't just look good—they convert.
@@ -195,7 +195,7 @@ const VideoMarketing = () => {
                                     { label: "ROI Average", value: "3.5x", color: "text-primary" }
                                 ].map((stat, i) => (
                                     <div key={i} className="space-y-1">
-                                        <div className={`text-4xl font-black tracking-tighter ${stat.color}`}>
+                                        <div className={`text-4xl font-bold tracking-tighter ${stat.color}`}>
                                             {stat.value}
                                         </div>
                                         <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
@@ -253,7 +253,7 @@ const VideoMarketing = () => {
             </section>
 
             {/* WHY YOU NEED IT */}
-            <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+            <section className="py-24 sm:px-6 lg:px-8 bg-muted/30">
                 <div className="container mx-auto max-w-6xl">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div
@@ -263,7 +263,7 @@ const VideoMarketing = () => {
                             className="space-y-6"
                         >
                             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                                Why Does Your Brand <br /> Need <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Video?</span>
+                                Why Does Your Brand <br /> Need <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Video?</span>
                             </h2>
                             <p className="text-muted-foreground text-sm md:text-lg">
                                 In a digital world full of text, video is the bridge that builds trust. It is the only medium that combines visuals, audio, and narrative to create total brand immersion.
@@ -315,10 +315,10 @@ const VideoMarketing = () => {
             </section>
 
             {/* SERVICES */}
-            <section className="py-24 px-4">
+            <section className="py-24">
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">Production <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Solutions</span></h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6">Production <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Solutions</span></h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg italic">From TikTok trends to high-end corporate documentaries.</p>
                     </div>
 
@@ -343,14 +343,14 @@ const VideoMarketing = () => {
             {/* THE ROADMAP */}
             <section className="py-24 px-4 bg-muted/50">
                 <div className="container mx-auto max-w-6xl">
-                    <h2 className="text-4xl font-bold text-center mb-16">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Production Workflow</span></h2>
+                    <h2 className="text-4xl font-bold text-center mb-16">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Production Workflow</span></h2>
                     <div className="grid md:grid-cols-4 gap-8 relative">
                         {/* Visual connector */}
                         <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-dashed border-t border-border -z-10" />
 
                         {processSteps.map((item, index) => (
                             <div key={index} className="text-center group">
-                                <div className="w-16 h-16 bg-background border-4 border-muted rounded-2xl flex items-center justify-center font-black text-xl mx-auto mb-6 group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all shadow-xl">
+                                <div className="w-16 h-16 bg-background border-4 border-muted rounded-2xl flex items-center justify-center font-bold text-xl mx-auto mb-6 group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all shadow-xl">
                                     {index + 1}
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">{item.step}</h3>
@@ -363,14 +363,14 @@ const VideoMarketing = () => {
 
             {/* FINAL CTA */}
 
-            <section className="py-12 md:py-24 px-4 sm:px-6">
+            <section className="py-12 md:py-24 sm:px-6">
                 <div className="container mx-auto max-w-5xl">
                     <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
                         {/* 2. CONTENT ARCHITECTURE */}
                         <div className="relative z-10">
-                            <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                            <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
                                 Ready to Lights, Camera, Action?
                             </h2>
 
@@ -383,7 +383,7 @@ const VideoMarketing = () => {
                                 <Button
                                     size="lg"
                                     variant="secondary"
-                                    className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                                    className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
                                     onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                                 >
                                     Claim Free Audit

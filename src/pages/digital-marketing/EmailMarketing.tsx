@@ -87,7 +87,8 @@ const EmailMarketing = () => {
               <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
                 {heroData.heading.split("Smart")[0]} <br />
                 <span className="relative inline-block">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible
+">
                     Smart Email Automation
                   </span>
                 </span>
@@ -147,11 +148,11 @@ const EmailMarketing = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-24 px-4 bg-muted">
+      <section className="py-24 bg-muted">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Email Management</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16">Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Email Management</span></h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChoosePoints.map((item, index) => (
               <motion.div
                 key={index}
@@ -170,7 +171,7 @@ const EmailMarketing = () => {
       </section>
 
       {/* WHY YOU NEED EMAIL MARKETING */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
+      <section className="py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
         {/* Modern Gradient Background Accents */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 -z-10" />
 
@@ -193,7 +194,7 @@ const EmailMarketing = () => {
                   Audience Ownership
                 </motion.span>
                 <h2 className="text-3xl md:text-5xl font-bold mt-2 leading-tight">
-                  Stop Relying on <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Borrowed</span> Audiences.
+                  Stop Relying on <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Borrowed</span> Audiences.
                 </h2>
               </div>
 
@@ -268,14 +269,14 @@ const EmailMarketing = () => {
       </section>
 
       {/* ENHANCED SERVICES */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Solutions Suite</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Solutions Suite</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg">Full-service email management from technical setup to creative execution.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -294,9 +295,9 @@ const EmailMarketing = () => {
       </section>
 
       {/* THE PROCESS */}
-      <section className="py-24 px-4 bg-muted/50">
+      <section className="py-24 bg-muted/50">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Lifecycle <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Strategy</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Lifecycle <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Strategy</span></h2>
           <div className="relative">
             {/* Connecting Line */}
             <div className="hidden md:block absolute top-[60px] left-0 right-0 h-px bg-dashed border-t border-border -z-10" />
@@ -317,14 +318,14 @@ const EmailMarketing = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Ready to Own Your Audience?
               </h2>
 

@@ -93,7 +93,7 @@ const GoogleMapMarketing = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Rank Higher on <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Google Maps</span>.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Google Maps</span>.
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-600 max-w-xl leading-relaxed font-medium italic underline decoration-primary/20 decoration-2 underline-offset-8">
@@ -131,7 +131,7 @@ const GoogleMapMarketing = () => {
       </section>
 
       {/* Why Choose us */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
         {/* Atmospheric Background Design - Fills White Space */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-1/4 left-[-5%] w-[45%] h-[45%] bg-blue-500/5 blur-[130px] rounded-full animate-pulse" />
@@ -152,9 +152,9 @@ const GoogleMapMarketing = () => {
               Local Authority & Trust
             </div>
 
-            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
               Why Choose Our <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                 Local SEO Engine
               </span>
             </h2>
@@ -165,7 +165,7 @@ const GoogleMapMarketing = () => {
           </motion.div>
 
           {/* Enhanced Feature Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
@@ -210,7 +210,7 @@ const GoogleMapMarketing = () => {
 
             <div className="relative z-10 space-y-10">
               <div className="text-center max-w-3xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold italic tracking-tighter text-white mb-6">
                   What is <span className="text-secondary font-serif pl-1">Google Map Marketing</span>
                 </h2>
                 <p className="text-slate-300 text-sm md:text-lg leading-relaxed font-medium italic">
@@ -236,7 +236,7 @@ const GoogleMapMarketing = () => {
       </section>
 
       {/* Why Google Map Marketing Matters */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
         {/* Atmospheric Background - Eliminates White Space */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-1/4 left-[-5%] w-[40%] h-[40%] bg-blue-500/5 blur-[120px] rounded-full" />
@@ -245,15 +245,15 @@ const GoogleMapMarketing = () => {
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <h2 className="font-display text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900 leading-tight">
-              Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium">Local Visibility</span> Matters
+            <h2 className="font-display text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-tight">
+              Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Local Visibility</span> Matters
             </h2>
             <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed border-l-4 border-primary/30 pl-6">
               "When customers search for services near them, Google Maps is the first choice. We ensure your business dominates the local pack in Bhopal & Jabalpur."
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               "Increase local visibility", "Attract nearby customers", "Optimize reviews & ratings",
               "Drive calls & store visits", "Dominate local pack search", "Outrank regional competitors"
@@ -279,12 +279,12 @@ const GoogleMapMarketing = () => {
       </section>
 
       {/* Our Services */}
-      <section className="py-24 px-4 bg-background relative overflow-hidden border-t border-border">
+      <section className="py-24 bg-background relative overflow-hidden border-t border-border">
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900">
-              Our GMB <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Architecture</span>
+            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900">
+              Our GMB <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Architecture</span>
             </h2>
             <p className="mt-4 text-muted-foreground italic font-medium">Structured optimization for regional market leadership.</p>
           </div>
@@ -340,14 +340,14 @@ const GoogleMapMarketing = () => {
       />
 
       {/* Final CTA Button */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Get More Local Customers
               </h2>
 

@@ -70,7 +70,7 @@ const ContentMarketing = () => {
               </div>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Engage, Educate <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">& Convert</span>.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">& Convert</span>.
               </h1>
               <p className="text-lg sm:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic">
                 "We create high-quality, value-driven content that builds brand authority across Bhopal & Jabalpur."
@@ -103,7 +103,7 @@ const ContentMarketing = () => {
       </section>
 
       {/* Why choose us */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
 
         <motion.div
           className="container mx-auto max-w-7xl relative z-10"
@@ -119,9 +119,9 @@ const ContentMarketing = () => {
               The Content Engineering Edge
             </div>
 
-            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
               Why Choose Our <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                 Content Ecosystem
               </span>
             </h2>
@@ -132,7 +132,7 @@ const ContentMarketing = () => {
           </motion.div>
 
           {/* Feature Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
@@ -192,7 +192,7 @@ const ContentMarketing = () => {
       </section>
 
       {/* Why Content Marketing Matters*/}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
           initial="hidden"
@@ -207,9 +207,9 @@ const ContentMarketing = () => {
               The Organic Advantage
             </div>
 
-            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
               Why Content Marketing <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                 Matters for Growth
               </span>
             </h2>
@@ -220,7 +220,7 @@ const ContentMarketing = () => {
           </motion.div>
 
           {/* 2. VALUE BENTO GRID */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyMatters.map((item, index) => (
               <motion.div
                 key={index}
@@ -257,19 +257,19 @@ const ContentMarketing = () => {
       </section>
 
       {/* Our Services */}
-      <section className="py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-24 bg-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter text-slate-900 leading-none">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium">Content</span> Solutions
+            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Content</span> Solutions
             </h2>
             <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic mt-6">
               Precision-engineered assets designed to dominate the digital landscape of Madhya Pradesh.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -301,7 +301,7 @@ const ContentMarketing = () => {
       </section>
 
       {/* Process */}
-      <section className="py-24 px-4 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-24 bg-[#fafafa] relative overflow-hidden">
         {/* 1. ATMOSPHERIC GRADIENT & GRID - Replaces Dark Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           {/* Soft Mesh Gradients to fill white space */}
@@ -318,8 +318,8 @@ const ContentMarketing = () => {
         >
           {/* Header Block */}
           <div className="text-center mb-24 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter text-slate-900 leading-none">
-              The Growth <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium">Pipeline</span>
+            <h2 className="text-4xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
+              The Growth <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Pipeline</span>
             </h2>
             <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic mt-4 border-b border-primary/20 pb-4">
               A structured, high-velocity approach for building brand authority in <span className="text-slate-900 font-bold">Bhopal & Jabalpur</span>.
@@ -364,14 +364,14 @@ const ContentMarketing = () => {
         quote="Content that informs, engages, and drives measurable results." />
 
       {/* CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic  leading-tight uppercase">
                 Ready to Transform Your Content Strategy?
               </h2>
 

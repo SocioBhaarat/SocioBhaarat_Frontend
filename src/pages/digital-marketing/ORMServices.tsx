@@ -97,9 +97,6 @@ const ORMServices = () => {
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
 
         </div>
-
-
-        {/* 2. MAIN CONTENT GRID */}
         <div className="container mx-auto px-4 relative z-10 mt-12">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
 
@@ -116,7 +113,7 @@ const ORMServices = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Secure Your <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Digital Legacy</span>.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Digital Legacy</span>.
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic">
@@ -169,7 +166,7 @@ const ORMServices = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
           initial="hidden"
@@ -182,7 +179,7 @@ const ORMServices = () => {
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] mb-2 block">
               The SocioBhaarat Advantage
             </span>
-            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter ">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter ">
               Why Brands <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic pr-1 inline-block tracking-tight font font-medium">Trust Us</span>
             </h2>
             <p className="text-sm md:text-lg text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto italic">
@@ -241,7 +238,7 @@ const ORMServices = () => {
       </section>
 
       {/* Why ORM Matters */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
 
         <motion.div
           className="container mx-auto max-w-6xl relative z-10"
@@ -257,9 +254,9 @@ const ORMServices = () => {
               Market Authority & Revenue
             </div>
 
-            <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tighter">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
               The Science of <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Digital Trust</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Digital Trust</span>
             </h2>
 
             <p className="text-sm md:text-lg
@@ -336,10 +333,10 @@ const ORMServices = () => {
       </section>
 
       {/* OUR SERVICES (GLASS GRID) */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Armor</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Armor</span></h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
@@ -372,14 +369,14 @@ const ORMServices = () => {
       <QuoteSection quote="In the digital age, your reputation is the currency of trust—we ensure your brand never goes bankrupt." />
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 What Does the Internet Say About You?
               </h2>
 
