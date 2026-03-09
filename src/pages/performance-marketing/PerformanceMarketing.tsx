@@ -66,7 +66,7 @@ const PerformanceMarketing = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Drive <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
                   Measurable Growth
                 </span> Through Data.
               </h1>
@@ -149,10 +149,10 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* WHY SOCIOBHAARAT (Glow Cards) */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium"> Growth Engine</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal"> Growth Engine</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
               We don't just "run ads." We engineer conversion ecosystems that turn visitors into high-value customers.
             </p>
@@ -177,7 +177,7 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* WHY YOU NEED PERFORMANCE MARKETING */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
+      <section className="py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -194,7 +194,7 @@ const PerformanceMarketing = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-bold leading-tight">
                 Stop Guessing. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Start Scaling.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Start Scaling.</span>
               </h2>
               <p className="text-muted-foreground text-sm md:text-lg leading-relaxed">
                 Performance marketing allows you to track, measure, and optimize every campaign in real-time. You pay only for measurable actions — ensuring better ROI and controlled budgets.
@@ -242,10 +242,10 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* PERFORMANCE MARKETING SERVICES */}
-      <section className="py-24 px-4 bg-muted/30 border-y border-border">
+      <section className="py-24 bg-muted/30 border-y border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4"> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Precision-Targeted</span> Services</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4"> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Precision-Targeted</span> Services</h2>
             <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto">
               We manage your full-funnel strategy across the world's most powerful ad platforms.
             </p>
@@ -272,7 +272,7 @@ const PerformanceMarketing = () => {
       {/* PROCESS (Horizontal Roadmap) */}
       <section className="py-24 px-4 bg-muted/50 overflow-hidden relative">
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-3xl md:text-5xl font-bold text-center mb-20 italic">The Roadmap to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Scale</span> </h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-20 italic">The Roadmap to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Scale</span> </h2>
 
           <div className="relative">
             <div className="hidden lg:block absolute top-[80px] left-[10%] right-[10%] h-px border-t-2 border-dashed border-border -z-10" />
@@ -299,13 +299,13 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* INDUSTRIES (Bento Grid) */}
-      <section className="py-16 md:py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Heading with Excellence Gradient */}
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-slate-900 leading-[1.1]">
-              Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Serve Best</span>
+              Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Serve Best</span>
             </h2>
           </div>
 
@@ -339,7 +339,7 @@ const PerformanceMarketing = () => {
 
                   {/* Responsive Description - visible on mobile tap/desktop hover */}
                   <p className="text-[10px] md:text-xs text-muted-foreground mt-2 md:opacity-0 group-hover:opacity-100 transition-all duration-300 leading-relaxed italic">
-                    Tailored high-ROAS funnels for {ind.title} growth in MP.
+                    Tailored high-ROAS funnels for {ind.title} growth.
                   </p>
 
                   {/* Interactive Progress Line */}
@@ -357,7 +357,7 @@ const PerformanceMarketing = () => {
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 leading-tight">
-              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Pricing</span>
+              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Pricing</span>
             </h2>
             <div className="h-1 md:h-1.5 w-16 md:w-24 bg-primary rounded-full mx-auto mt-4" />
           </div>
@@ -411,7 +411,7 @@ const PerformanceMarketing = () => {
 
       {/* FINAL CTA */}
 
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 

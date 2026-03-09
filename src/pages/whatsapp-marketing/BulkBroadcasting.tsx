@@ -90,7 +90,7 @@ const BulkBroadcasting = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 {heroData.heading.split("Smart")[0]} <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
                   Smart Broadcasting
                 </span> Solutions.
               </h1>
@@ -145,10 +145,10 @@ const BulkBroadcasting = () => {
       </section>
 
       {/* WHY CHOOSE US (Modern Grid) */}
-      <section className="py-24 px-4 bg-background relative">
+      <section className="py-24 bg-background relative">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Socio Bhaarat </span> ?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal ">Socio Bhaarat </span> ?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg">
               We combine advanced technology and real-time analytics to ensure your campaigns achieve maximum engagement.
             </p>
@@ -173,7 +173,7 @@ const BulkBroadcasting = () => {
       </section>
 
       {/* WHY YOU NEED IT */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-muted">
+      <section className="py-16 md:py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-muted">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Heading Area */}
@@ -187,9 +187,9 @@ const BulkBroadcasting = () => {
               Business Impact Architecture
             </motion.span>
 
-            <h2 className="text-3xl md:text-5xl font-black mt-6 mb-6 text-slate-900 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold mt-6 mb-6 text-slate-900 leading-tight">
               Why Do You Need
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium px-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                 Bulk Broadcasting?
               </span>
             </h2>
@@ -262,15 +262,15 @@ const BulkBroadcasting = () => {
       </section>
 
       {/* SERVICES (Glassmorphism Cards) */}
-      <section className="py-16 md:py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Header Architecture */}
           <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-12 md:mb-16 gap-6">
             <div className="max-w-2xl border-l-4 border-primary pl-6 md:pl-8">
-              <h2 className="text-3xl md:text-5xl font-black mb-4 text-slate-900 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900 leading-tight">
                 Our <br className="block md:hidden" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium ">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
                   Specialized Services
                 </span>
               </h2>
@@ -310,9 +310,7 @@ const BulkBroadcasting = () => {
       </section>
 
       {/* FEATURES */}
-      <section className="py-16 md:py-24 px-4 bg-primary/5 relative overflow-hidden">
-        {/* Technical Background Architecture (Consistent with SocioBhaarat Lab) */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+      <section className="py-16 md:py-24 bg-primary/5 relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="bg-card border-2 border-border/50 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden p-6 sm:p-10 md:p-16 relative shadow-2xl">
@@ -323,8 +321,8 @@ const BulkBroadcasting = () => {
             </div>
 
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-black mb-10 md:mb-12 text-center md:text-left text-slate-900 uppercase italic">
-                Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Features</span>
+              <h2 className="text-3xl md:text-5xl font-bold mb-10 md:mb-12 text-center md:text-left text-slate-900 italic">
+                Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Features</span>
               </h2>
 
               {/* Adaptive Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
@@ -366,7 +364,7 @@ const BulkBroadcasting = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
@@ -397,7 +395,6 @@ const BulkBroadcasting = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

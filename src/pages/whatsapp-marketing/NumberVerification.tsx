@@ -133,7 +133,7 @@ const NumberVerification = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Accurate <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
                   WhatsApp Verification
                 </span> Solutions.
               </h1>
@@ -205,9 +205,9 @@ const NumberVerification = () => {
       </section>
 
       {/* WHY CHOOSE US (Technical Grid) */}
-      <section className="py-24 px-4 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Socio Bhaarat</span> Edge</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> Edge</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChoosePoints.map((item, index) => (
@@ -228,12 +228,12 @@ const NumberVerification = () => {
       </section>
 
       {/* WHY YOU NEED (Metric-Style) */}
-      <section className="py-24 px-4">
+      <section className="py-24 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-5xl font-bold">Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Verification</span> Matters?</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="text-3xl md:text-5xl font-bold">Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Verification</span> Matters?</h2>
+              <p className="text-md md:text-lg text-muted-foreground">
                 Sending campaigns to invalid numbers isn't just a waste of money—it risks your official WhatsApp API standing.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-6">
@@ -266,7 +266,7 @@ const NumberVerification = () => {
       </section>
 
       {/* ENHANCED SERVICES SECTION */}
-      <section className="py-24 px-4 bg-muted/30 relative overflow-hidden">
+      <section className="py-24 bg-muted/30 relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
@@ -278,8 +278,8 @@ const NumberVerification = () => {
               <Zap className="w-3 h-3" />
               <span>PRO-GRADE TOOLS</span>
             </motion.div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Verification Suite</span></h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Verification Suite</span></h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-md md:text-lg">
               Precision-engineered tools to audit, clean, and verify your global WhatsApp databases in seconds.
             </p>
           </div>
@@ -321,11 +321,11 @@ const NumberVerification = () => {
       </section>
 
       {/* FEATURES */}
-      <section className="py-16 md:py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 italic">
-              Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium"> Capabilities</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 italic">
+              Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal"> Capabilities</span>
             </h2>
           </div>
 
@@ -388,7 +388,7 @@ const NumberVerification = () => {
             >
               Step-by-Step Guide
             </motion.span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-3">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Roadmap</span> to Green Tick</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mt-3">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">Roadmap</span> to Green Tick</h2>
           </div>
 
           <div className="relative">
@@ -448,14 +448,14 @@ const NumberVerification = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Ready to Verify Your Assets?
               </h2>
 

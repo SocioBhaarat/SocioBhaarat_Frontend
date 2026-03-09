@@ -131,7 +131,7 @@ const WhatsAppChatbot = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 Automate <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
                   WhatsApp Chatbots
                 </span> At Scale.
               </h1>
@@ -201,10 +201,10 @@ const WhatsAppChatbot = () => {
       </section>
 
       {/* WHY CHOOSE US (Sleek Grid) */}
-      <section className="py-24 px-4 ">
+      <section className="py-24 md:py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-muted ">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Scale & Performance</span> </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Scale & Performance</span> </h2>
             <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto">We don't just build bots; we build conversational experiences that drive revenue.</p>
           </div>
 
@@ -228,7 +228,7 @@ const WhatsAppChatbot = () => {
 
 
       {/* WHY YOU NEED IT (Enhanced) */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-muted">
+      <section className="py-16 md:py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-muted">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -244,9 +244,9 @@ const WhatsAppChatbot = () => {
                 <span>Efficiency at Scale</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-black leading-[1.1] tracking-tighter text-slate-900">
+              <h2 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tighter text-slate-900">
                 Why Do You Need <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#25D366] via-primary to-orange-500 italic font-serif font-medium px-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                   WhatsApp Chatbots?
                 </span>
               </h2>
@@ -308,17 +308,15 @@ const WhatsAppChatbot = () => {
 
 
       {/* OUR SERVICES (Spotlight Layout) */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background relative overflow-hidden">
-        {/* Technical Background Architecture (SocioBhaarat Engineering Lab) */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+      <section className="py-16 md:py-24 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/50 to-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Header Architecture: Fluid Stack */}
           <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-12 md:mb-16 gap-6">
             <div className="text-left border-l-4 border-primary pl-6 md:pl-8">
-              <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tighter text-slate-900 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tighter text-slate-900 leading-tight">
                 Our <br className="block md:hidden" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
                   WhatsApp Chatbot
                 </span> Services
               </h2>
@@ -349,7 +347,7 @@ const WhatsAppChatbot = () => {
                     <Bot className="h-5 w-5 md:h-6 shrink-0" />
                   </div>
 
-                  <h3 className="text-base md:text-lg font-black leading-tight text-slate-800 italic group-hover:text-primary transition-colors">
+                  <h3 className="text-base md:text-lg font-bold text-slate-800 italic group-hover:text-primary transition-colors">
                     {service}
                   </h3>
 
@@ -364,12 +362,12 @@ const WhatsAppChatbot = () => {
 
 
       {/* FEATURES */}
-      <section className="py-16 md:py-24 px-4 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl relative z-10 ">
 
-          <h2 className="text-3xl md:text-5xl font-black text-slate-900 text-center italic">
-            Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Capabilities</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 text-center italic">
+            Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Capabilities</span>
           </h2>
 
 
@@ -393,7 +391,7 @@ const WhatsAppChatbot = () => {
                   <div className="relative z-10">
                     <feature.icon className="h-10 w-10 md:h-12 md:w-12 text-primary mb-6 group-hover:scale-110 transition-transform duration-300" />
 
-                    <h3 className="text-xl md:text-2xl font-black mb-3 text-slate-800 uppercase tracking-tight italic">
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 text-slate-800 uppercase tracking-tight italic">
                       {feature.title}
                     </h3>
 
@@ -421,14 +419,14 @@ const WhatsAppChatbot = () => {
       </section>
 
       {/* PROCESS (The Timeline) */}
-      <section className="py-16 md:py-24 px-4 bg-muted/30 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
         {/* Technical Background Architecture */}
         <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-black text-slate-900 italic">
-              Our Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Journey</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 italic">
+              Our Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible ">Journey</span>
             </h2>
           </div>
 
@@ -449,7 +447,7 @@ const WhatsAppChatbot = () => {
                   <div className={`flex-1 pt-1 md:pt-0 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'
                     }`}>
                     <div className="bg-card/50 md:bg-transparent p-4 md:p-0 rounded-2xl border border-border/50 md:border-none shadow-sm md:shadow-none">
-                      <h3 className="text-lg md:text-xl font-black text-slate-800 uppercase italic mb-2">
+                      <h3 className="text-lg md:text-xl font-bold text-slate-800 uppercase italic mb-2">
                         {step.title}
                       </h3>
                       <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">
@@ -473,12 +471,12 @@ const WhatsAppChatbot = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Ready to Automate?
               </h2>
 
