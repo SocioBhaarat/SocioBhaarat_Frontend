@@ -235,21 +235,20 @@ const WebDevPortfolio = () => {
           </div>
 
           {/* "And Many More" - System Buffer Version */}
-          <div className="mt-32 pt-20 border-t border-slate-100 flex flex-col items-center">
-            <div className="mb-8 flex items-center gap-3">
+          <div className="mt-12 flex flex-col items-center">
+            {/* <div className="mb-8 flex items-center gap-3">
               <div className="h-[1px] w-12 bg-slate-200" />
               <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">Buffer_Sequence_End</span>
               <div className="h-[1px] w-12 bg-slate-200" />
             </div>
 
             <button className="group relative px-12 py-6 bg-white border-2 border-slate-900 overflow-hidden transition-all">
-              {/* Fill effect on hover */}
               <div className="absolute inset-0 w-0 bg-slate-900 transition-all duration-300 group-hover:w-full" />
               <span className="relative z-10 text-sm font-black tracking-[0.2em] text-slate-900 group-hover:text-white uppercase flex items-center gap-3">
                 Access Full Archive
                 <span className="animate-pulse text-primary group-hover:text-white">+++</span>
               </span>
-            </button>
+            </button> */}
 
             <p className="mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">
               42+ Additional Projects available upon request
