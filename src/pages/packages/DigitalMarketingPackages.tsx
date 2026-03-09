@@ -148,7 +148,7 @@ const DigitalMarketingPackages = () => {
                     size="lg"
                     className={`w-full h-14 md:h-16 rounded-full text-base md:text-lg font-black transition-all ${pkg.highlighted
                         ? 'bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20'
-                        : 'bg-slate-900 hover:bg-slate-800'
+                        : 'bg-slate-700 hover:bg-slate-800'
                       }`}
                     onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                   >
@@ -156,10 +156,6 @@ const DigitalMarketingPackages = () => {
                   </Button>
                 </div>
 
-                {/* Watermark: Responsive font size */}
-                <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 text-slate-900/[0.03] text-6xl md:text-8xl font-black italic select-none">
-                  0{index + 1}
-                </div>
               </motion.div>
             ))}
           </div>

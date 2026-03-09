@@ -6,7 +6,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { motion } from 'framer-motion';
@@ -550,38 +550,80 @@ function Index() {
       </section>
 
       {/* INDUSTRIES (CURATED SLIDER) */}
-      <section className="py-24 bg-muted/30">
+
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+          <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8 relative z-10">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Expertise Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Verticals</span></h2>
-              <p className="text-md md:text-lg text-muted-foreground italic">Our solutions are engineered to meet the unique psychological triggers of different industries.</p>
+              <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-4 italic">System Versatility</h2>
+              <h3 className="text-3xl md:text-5xl font-black mb-6 tracking-tighter text-slate-900">
+                Expertise Across <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
+                  Verticals
+                </span>
+              </h3>
+              <p className="text-md md:text-lg text-slate-500 italic font-medium border-l-4 border-primary/20 pl-6">
+                Our solutions are engineered to meet the unique psychological triggers of different industries.
+              </p>
             </div>
+
+            {/* Navigation Controls */}
             <div className="flex gap-4">
-              <button className="prev-btn w-12 h-12 flex items-center justify-center rounded-full bg-background border border-border hover:bg-primary hover:text-white transition-all shadow-sm">
-                <ChevronLeft size={24} />
+              <button className="prev-btn w-14 h-14 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:bg-primary hover:text-white transition-all shadow-xl active:scale-90 group">
+                <ChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
               </button>
-              <button className="next-btn w-12 h-12 flex items-center justify-center rounded-full bg-background border border-border hover:bg-primary hover:text-white transition-all shadow-sm">
-                <ChevronRight size={24} />
+              <button className="next-btn w-14 h-14 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:bg-primary hover:text-white transition-all shadow-xl active:scale-90 group">
+                <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
 
           <Swiper
-            modules={[Navigation, Autoplay]}
-            slidesPerView={1} spaceBetween={30} loop={true}
-            autoplay={{ delay: 2000 }}
+            modules={[Navigation, Autoplay, Mousewheel, Keyboard]}
+
+            // 1. Continuous Autoplay (No pausing on hover, restarts after sliding)
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false, // Restarts auto-sliding after you use the trackpad
+              pauseOnMouseEnter: false     // Keeps sliding even if the mouse is hovering
+            }}
+
+            // 2. Trackpad / Touchpad sliding enabled
+            mousewheel={{
+              forceToAxis: true,
+              sensitivity: 1,
+              thresholdDelta: 20,
+            }}
+
+            // 3. One-by-one snap feel
+            speed={1000} // Smooth transition speed
+            loop={true} // Seamless jump from last to first slide
+
+            // Your existing layout settings
+            slidesPerView={1}
+            spaceBetween={30}
             navigation={{ nextEl: ".next-btn", prevEl: ".prev-btn" }}
-            breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3.5 } }}
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3.5 }
+            }}
+            className="pb-12"
           >
             {industries.map((industry, index) => (
               <SwiperSlide key={index}>
-                <div className="group relative h-[500px] rounded-[3rem] overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
-                  <img src={industry.image} alt={industry.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                  <div className="absolute bottom-10 left-10 right-10">
-                    <h3 className="text-2xl font-bold text-white mb-2">{industry.name}</h3>
-                    <div className="w-12 h-1 bg-primary rounded-full group-hover:w-full transition-all duration-500" />
+                <div className="group relative h-[500px] rounded-[2.5rem] p-3 bg-white border border-slate-100 overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-700">
+                  <div className="relative h-full w-full overflow-hidden rounded-[2rem]">
+                    <img
+                      src={industry.image}
+                      alt={industry.name}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+
+                    <div className="absolute bottom-10 left-10 right-10">
+                      <h3 className="text-2xl font-black text-white mb-4 tracking-tight italic uppercase">{industry.name}</h3>
+                      <div className="w-12 h-1 bg-primary rounded-full group-hover:w-full transition-all duration-700" />
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>

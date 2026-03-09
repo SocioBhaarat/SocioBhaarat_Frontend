@@ -84,6 +84,7 @@ const WebDevelopmentPackages = () => {
             </p>
           </motion.div>
         </div>
+         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
       </section>
 
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -139,7 +140,7 @@ const WebDevelopmentPackages = () => {
                   <Button
                     className={`w-full h-14 md:h-16 rounded-full text-base md:text-lg font-black transition-all shadow-xl group/btn ${pkg.popular
                       ? 'bg-primary hover:bg-primary/90 shadow-primary/20'
-                      : 'bg-slate-900 hover:bg-slate-800'
+                      : 'bg-slate-700 hover:bg-slate-800'
                       }`}
                     onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                   >
