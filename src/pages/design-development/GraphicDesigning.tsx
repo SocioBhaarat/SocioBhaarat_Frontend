@@ -86,7 +86,7 @@ const GraphicDesigning = () => {
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
                 {heroData.heading.split("Visual")[0]}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase inline-block pr-4 -mr-4 overflow-visible">
                   Visual Identities
                 </span> That Scale.
               </h1>
@@ -102,13 +102,6 @@ const GraphicDesigning = () => {
                   onClick={() => navigate("/contact")}
                 >
                   {heroData.cta} <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-12 border-2 text-lg font-bold hover:bg-slate-50 transition-all"
-                >
-                  View Portfolio
                 </Button>
               </div>
             </motion.div>
@@ -151,15 +144,11 @@ const GraphicDesigning = () => {
       </section>
 
       {/* WHY YOU NEED IT */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
+      <section className="py-16 md:py-24 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
 
-        {/* Subtle Background Identity */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-            {/* 1. ANALYSIS CARD (Moves below text on mobile via 'order' logic) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -168,7 +157,7 @@ const GraphicDesigning = () => {
             >
               <div className="bg-card border-2 border-border p-6 sm:p-10 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden group">
 
-                <h3 className="text-xl md:text-2xl font-black mb-6 md:mb-8 tracking-tighter uppercase italic">
+                <h3 className="text-xl md:text-2xl font-black mb-6 md:mb-8 italic">
                   Design Impact Analysis
                 </h3>
 
@@ -196,9 +185,9 @@ const GraphicDesigning = () => {
                 Brand Psychology Lab
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-black leading-[1.1] tracking-tighter text-slate-900">
+              <h2 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tighter text-slate-900">
                 Design is the <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
                   Silent Ambassador
                 </span> <br className="hidden md:block" /> of Your Brand.
               </h2>
@@ -220,11 +209,11 @@ const GraphicDesigning = () => {
       </section>
 
       {/* WHY CHOOSE SOCIO BHAARAT */}
-      <section className="py-24 px-4 bg-background border-y border-border">
+      <section className="py-24 bg-background border-y border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Socio Bhaarat</span> Advantage</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">We combine 500+ projects of experience with a high-end satisfaction rate to deliver pixels that perform.</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> Advantage</h2>
+            <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">We combine 500+ projects of experience with a high-end satisfaction rate to deliver pixels that perform.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -246,9 +235,9 @@ const GraphicDesigning = () => {
       </section>
 
       {/* SERVICES GRID */}
-      <section className="py-24 px-4">
+      <section className="py-24 bg-muted/30 border-y border-border relative overflow-hidden">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center tracking-tight"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Design Solutions</span> Suite</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center tracking-tight"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Design Solutions</span> Suite</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -275,7 +264,7 @@ const GraphicDesigning = () => {
       {/* DESIGN PROCESS */}
       <section className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl font-bold text-center mb-16 italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Creative Journey</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Creative Journey</span></h2>
           <div className="relative">
             {/* Visual Path Connector */}
             <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px border-t-2 border-dashed border-border -z-10" />
@@ -296,15 +285,12 @@ const GraphicDesigning = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
                 Ready to Refine <br className="hidden md:block" /> Your Visuals?
               </h2>
 

@@ -23,11 +23,6 @@ const NotFound = () => {
         {/* Warning Mesh Blobs */}
         <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-orange-500/5 blur-[130px] rounded-full animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-blue-600/5 blur-[110px] rounded-full" />
-        
-        {/* Background Watermark */}
-        <div className="absolute left-1/2 bottom-10 -translate-x-1/2 text-[10rem] md:text-[20rem] font-black text-slate-900/[0.03] select-none italic tracking-tighter uppercase">
-          ERROR
-        </div>
       </div>
 
       {/* 2. MAIN CONTENT AREA */}
@@ -45,7 +40,7 @@ const NotFound = () => {
 
           {/* Large Error Typography */}
           <h1 className="font-display text-[8rem] md:text-[12rem] font-black text-slate-900 leading-none tracking-tighter mb-4">
-            4<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif">0</span>4
+            4<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serifinline-block pr-7 -mr-4 overflow-visible leading-normal">0</span>4
           </h1>
 
           <div className="max-w-md mx-auto space-y-6">

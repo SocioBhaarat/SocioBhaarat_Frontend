@@ -20,9 +20,9 @@ const MidNavigation = () => {
           <div className="flex items-center justify-between h-20">
 
             <Link to="/" className="flex items-center">
-              <img 
+              <img
                 src="/images/logo-full.webp"
-                alt="Socio Bhaarat" 
+                alt="Socio Bhaarat"
                 className="h-12 sm:h-24 w-auto"
               />
             </Link>
@@ -38,14 +38,18 @@ const MidNavigation = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button 
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full px-6"
-              >
-                BOOK A CALL
-              </Button>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full px-6"
+
+                >
+                  BOOK A CALL
+                </Button>
+              </Link>
+
               <Link to="/hiring">
-                <Button 
+                <Button
                   size="lg"
                   className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-md px-6"
                 >
@@ -76,7 +80,7 @@ const MidNavigation = () => {
                     {link.name}
                   </Link>
                 ))}
-                <Button 
+                <Button
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full"
                 >
                   BOOK A CALL

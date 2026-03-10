@@ -148,7 +148,7 @@ const DigitalMarketingPackages = () => {
                     size="lg"
                     className={`w-full h-14 md:h-16 rounded-full text-base md:text-lg font-black transition-all ${pkg.highlighted
                         ? 'bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20'
-                        : 'bg-slate-900 hover:bg-slate-800'
+                        : 'bg-slate-700 hover:bg-slate-800'
                       }`}
                     onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                   >
@@ -156,10 +156,6 @@ const DigitalMarketingPackages = () => {
                   </Button>
                 </div>
 
-                {/* Watermark: Responsive font size */}
-                <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 text-slate-900/[0.03] text-6xl md:text-8xl font-black italic select-none">
-                  0{index + 1}
-                </div>
               </motion.div>
             ))}
           </div>
@@ -185,11 +181,9 @@ const DigitalMarketingPackages = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              "SOCIAL MEDIA MANAGEMENT", "GRAPHIC DESIGNING", "VIDEO PRODUCTION",
-              "META ADS ARCHITECTURE", "GOOGLE ADS VALIDATION", "CONTENT STRATEGY",
-              "G-BUSINESS OPTIMIZATION", "WEBSITE ENGINEERING", "WHATSAPP API",
-              "TELE-CONVERSION", "SALES PIPELINE FILTERING", "SEO / RANKING LAB",
-              "REPUTATION MANAGEMENT", "WORDPRESS ECOSYSTEM", "PERFORMANCE MARKETING"
+              "SOCIAL MEDIA MANAGEMENT", "VIDEO PRODUCTION","META ADS ARCHITECTURE", "GOOGLE ADS VALIDATION", "CONTENT STRATEGY",
+              "GOOGLE BUSINESS OPTIMIZATION", "WHATSAPP API","TELE-CONVERSION", "SALES PIPELINE FILTERING", "SEO / RANKING LAB",
+              "REPUTATION MANAGEMENT", "PERFORMANCE MARKETING"
             ].map((service, index) => (
               <div key={index} className="bg-card p-5 rounded-2xl border border-border/50 shadow-sm hover:border-primary/40 group transition-all flex items-center gap-4">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">

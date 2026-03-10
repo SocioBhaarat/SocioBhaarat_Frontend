@@ -1,15 +1,15 @@
 import { useParams, Link } from "react-router-dom";
-import { Calendar, User, ArrowLeft, Share2 } from "lucide-react";
+import { Calendar, User, ArrowLeft, Share2, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const blogContent: Record<string, any> = {
-  "seo-trends-2024": {
-    title: "Top 10 SEO Trends to Watch in 2024",
+  "seo-trends-2026": {
+    title: "Top 10 SEO Trends to Watch in 2026",
     category: "SEO Strategy",
     author: "Digital Marketing Team",
-    date: "March 15, 2024",
+    date: "Jan 15, 2026",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1674027001834-719c347d1eca?w=800&auto=format&fit=crop",
     content: `
       <h2>Introduction to SEO in 2024</h2>
       <p>Search Engine Optimization continues to evolve at a rapid pace, with Google and other search engines constantly updating their algorithms. Staying ahead of these changes is crucial for maintaining and improving your search rankings.</p>
@@ -39,10 +39,10 @@ const blogContent: Record<string, any> = {
     `
   },
   "content-marketing-guide": {
-    title: "Complete Guide to Content Marketing in 2024",
+    title: "Complete Guide to Content Marketing in 2026",
     category: "Content Marketing",
     author: "Content Strategy Team",
-    date: "March 12, 2024",
+    date: "March 12, 2026",
     readTime: "10 min read",
     image: "https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=1200&auto=format&fit=crop",
     content: `
@@ -94,7 +94,7 @@ const blogContent: Record<string, any> = {
     title: "Measuring Social Media ROI: A Complete Guide",
     category: "Social Media",
     author: "Social Media Team",
-    date: "March 10, 2024",
+    date: "March 10, 2026",
     readTime: "7 min read",
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&auto=format&fit=crop",
     content: `
@@ -158,69 +158,132 @@ const BlogPost = () => {
     );
   }
 
+  const handleShare = async () => {
+  const shareData = {
+    title: post.title,
+    text: `Check out this article: ${post.title}`,
+    url: window.location.href,
+  };
+
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+    } else {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("Link copied to clipboard!");
+    }
+  } catch (error) {
+    console.error("Error sharing:", error);
+  }
+};
+
+
   return (
-    <div className="min-h-screen bg-background">
-      <div className="pt-20">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full h-96 object-cover"
-        />
-      </div>
+    <div className="min-h-screen bg-white relative overflow-hidden font-sans">
+      {/* Background Engineering Mesh */}
+      <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-      <article className="container mx-auto px-4 py-12 max-w-4xl">
-        <Link to="/blog">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Blog
-          </Button>
+      {/* 1. NAVIGATION LAYER (Always Top) */}
+      <nav className="container mx-auto max-w-6xl pt-12 px-4 relative z-20">
+        <Link to="/blog" className="group inline-flex items-center text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-primary transition-colors">
+          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+          Back to Intelligence Stream
         </Link>
+      </nav>
 
-        <div className="mb-6">
-          <span className="bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+      {/* 2. HERO LAYER: Title & Visual Identity */}
+      <header className="container mx-auto max-w-6xl px-4 py-12 relative z-10">
+        <div className="max-w-4xl">
+          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest italic">
             {post.category}
-          </span>
-        </div>
-
-        <h1 className="text-5xl font-bold text-foreground mb-6">
-          {post.title}
-        </h1>
-
-        <div className="flex items-center gap-6 text-muted-foreground mb-8 pb-8 border-b">
-          <div className="flex items-center gap-2">
-            <User className="w-5 h-5" />
-            <span>{post.author}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Calendar className="w-5 h-5" />
-            <span>{post.date}</span>
+
+          {/* Safari iPhone Clipping Fix for Italic Heading */}
+          <h1 className="text-4xl md:text-7xl font-black text-slate-900 leading-[0.95] italic mb-8">
+            <span className="relative inline-block py-1 pr-4 -mr-4 overflow-visible">
+              {post.title}
+            </span>
+          </h1>
+
+          {/* Technical Metadata Row */}
+          <div className="flex flex-wrap items-center gap-8 py-6 border-y border-slate-100">
+            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+              <User className="w-4 h-4 text-primary" /> {post.author}
+            </div>
+            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+              <Calendar className="w-4 h-4 text-secondary" /> {post.date}
+            </div>
+            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+              <Clock className="w-4 h-4 text-accent" /> {post.readTime}
+            </div>
           </div>
-          <span>{post.readTime}</span>
-          <Button variant="outline" size="sm" className="ml-auto">
-            <Share2 className="w-4 h-4 mr-2" />
-            Share
-          </Button>
         </div>
 
-        <div 
-          className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground prose-ul:text-muted-foreground"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
-
-        <div className="mt-12 pt-8 border-t">
-          <h3 className="text-2xl font-bold mb-4">Ready to grow your business?</h3>
-          <p className="text-muted-foreground mb-6">
-            Get expert digital marketing strategies tailored to your business goals.
-          </p>
-          <Link to="/contact">
-            <Button size="lg">
-              Get Started Today
-            </Button>
-          </Link>
+        {/* Hero Image: Standardized SocioBhaarat Frame */}
+        <div className="mt-12 relative group">
+          <div className="absolute -inset-4 bg-primary/5 rounded-[3.5rem] blur-3xl opacity-50" />
+          <div className="relative rounded-[2.5rem] p-3 bg-white border-2 border-slate-100 shadow-2xl overflow-hidden">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-[350px] md:h-[550px] object-cover rounded-[2rem] group-hover:scale-105 transition-transform duration-1000"
+            />
+          </div>
         </div>
-      </article>
+      </header>
+
+      {/* 3. CORE ARCHITECTURE: Content & Sidebar */}
+      <main className="container mx-auto px-4 max-w-6xl pb-24 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-16">
+
+          <article className="lg:col-span-8">
+            <div
+              className="prose prose-slate max-w-none 
+              prose-h2:text-2xl prose-h2:font-black prose-h2: prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-slate-900
+              prose-p:text-slate-600 prose-p:text-md prose-p:leading-relaxed prose-p:mb-6 prose-p:italic prose-p:font-medium
+              prose-strong:text-slate-900 prose-strong:font-black
+              prose-ul:my-8 prose-ul:list-disc prose-ul:pl-5
+              prose-li:text-slate-600 prose-li:mb-2 prose-li:font-medium"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+
+            {/* Share Module */}
+            <div className="mt-12 p-8 rounded-[2rem] bg-slate-50 border border-slate-100 flex items-center justify-between">
+              <p className="text-xs font-black uppercase tracking-widest text-slate-400">Distribute this Intelligence</p>
+              <Button variant="outline"
+                onClick={handleShare}
+                className="rounded-full gap-2">
+                <Share2 className="w-4 h-4" /> Share Post
+              </Button>
+            </div>
+          </article>
+
+          <aside className="lg:col-span-4 space-y-8">
+            <div className="sticky top-24 p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 text-slate-200 font-black italic text-4xl select-none opacity-20">DATA</div>
+
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-6 italic">Engineering Brief</h4>
+              <p className="text-sm text-slate-500 italic font-medium leading-relaxed mb-8">
+                Our lab analyzes industry shifts in real-time. This intelligence is part of the SocioBhaarat growth system.
+              </p>
+
+              <div className="space-y-4">
+                <h5 className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Growth CTA</h5>
+                <Link to="/contact" className="block group">
+                  <div className="p-6 rounded-2xl bg-slate-900 text-white group-hover:bg-primary transition-all duration-500">
+                    <p className="text-lg font-black italic tracking-tighter mb-2 leading-none">Ready to scale?</p>
+                    <p className="text-xs text-slate-400 group-hover:text-white/80 transition-colors">Request a free audit today.</p>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </main>
     </div>
   );
+
 };
 
 export default BlogPost;
