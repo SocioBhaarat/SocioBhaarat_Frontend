@@ -77,7 +77,7 @@ const WebDevPortfolio = () => {
             </div>
             <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
               Web Developemnt <br />
-              <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase overflow-visible">
+              <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase overflow-visible ">
                 Portfolio
               </span>
             </h1>
@@ -205,24 +205,35 @@ const WebDevPortfolio = () => {
 
       {/* CTA Section */}
 
-      <section className="py-24 px-4 relative overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:30px_30px]" />
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-6 leading-none">
-            Ready to start your digital <br /> transformation?
-          </h2>
-          <p className="text-lg text-slate-400 mb-10 italic font-medium">
-            "Let’s discuss your vision and build something that puts you ahead of the competition."
-          </p>
+      <section className="py-12 md:py-24 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
-          <Button
-            size="lg"
-            className="h-16 px-10 rounded-full bg-primary hover:bg-white hover:text-primary text-white font-black text-lg transition-all shadow-2xl hover:scale-[1.05]"
-            onClick={() => navigate("/contact")}
-          >
 
-            Start Your Project
-          </Button>
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to start your digital transformation?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Let’s discuss your vision and build something that puts you ahead of the competition."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Start Your Project
+                </Button>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
     </div>
