@@ -13,7 +13,7 @@ const WebDevPortfolio = () => {
       description: "A multilingual news platform delivering Pune, national, and current affairs updates in multiple languages.",
       technologies: ["React", "Node.js", "MongoDB", "SEO Optimization"],
       results: ["Daily news publishing system", "Multilingual news delivery", "High SEO visibility"],
-      image: "/webDevPortfolio/puneNews24.png",
+      image: "/webDevPortfolio/puneNews24.webp",
       live: "https://punenews24.in"
     },
     {
@@ -22,7 +22,7 @@ const WebDevPortfolio = () => {
       description: "A personal growth and mental wellness platform empowering individuals with emotional balance, confidence, and life skills.",
       technologies: ["React", "Node.js", "MongoDB", "Content Platform"],
       results: ["Personal development resources", "Mental well-being guidance", "Self-growth learning platform"],
-      image: "/webDevPortfolio/calmChase.png",
+      image: "/webDevPortfolio/calmChase.webp",
       live: "https://calmchase.com"
     },
 
@@ -36,21 +36,21 @@ const WebDevPortfolio = () => {
         "Improved online property inquiries",
         "Lead generation for real estate projects"
       ],
-      image: "/webDevPortfolio/SNRealities.png",
+      image: "/webDevPortfolio/SNRealities.webp",
       live: "https://snrealities.com"
     },
     {
-      title: "Lotus Group",
-      category: "Real Estate & Infrastructure Company",
-      description: "A corporate website built to present Lotus Group’s real estate developments, infrastructure projects, and brand presence with a modern digital experience.",
-      technologies: ["React", "Node.js", "MongoDB", "Corporate Website"],
+      title: "Lotus Job Group",
+      category: "Recruitment & Job Portal Platform",
+      description: "A recruitment and employment platform designed to connect job seekers with employers while helping companies streamline their hiring process through a centralized digital portal.",
+      technologies: ["React", "Node.js", "MongoDB", "Job Portal System"],
       results: [
-        "Professional digital brand presence",
-        "Showcase of real estate and infrastructure projects",
-        "Improved online engagement and client inquiries"
+        "Online platform connecting employers and job seekers",
+        "Simplified job posting and candidate application process",
+        "Improved recruitment visibility for companies"
       ],
-      image: "/webDevPortfolio/lotusGroup.png",
-      live: "https://lotusgroupindia.com"
+      image: "/webDevPortfolio/lotusGroup.webp",
+      live: "https://www.lotusjobgroup.com/"
     },
     {
       title: "The Resonance",
@@ -58,7 +58,7 @@ const WebDevPortfolio = () => {
       description: "A purpose-driven initiative empowering entrepreneurs and skilled talent through innovation, partnerships, and impact-led growth.",
       technologies: ["React", "Next.js", "Node.js", "SEO Optimization"],
       results: ["Entrepreneur ecosystem support", "Innovation-driven collaboration", "Impact-led initiatives"],
-      image: "/webDevPortfolio/theresonance.png",
+      image: "/webDevPortfolio/theresonance.webp",
       live: "https://theresonance.co.in"
     },
   ]
@@ -75,7 +75,7 @@ const WebDevPortfolio = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-sm">
               <Zap className="w-3 h-3" /> Scalable Web Systems
             </div>
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
+            <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
               Web Developemnt <br />
               <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase overflow-visible">
                 Portfolio

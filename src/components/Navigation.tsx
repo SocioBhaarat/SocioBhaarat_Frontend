@@ -91,7 +91,7 @@ const Navigation = () => {
     ],
     ourWork: [
       { name: "Our Impact", path: "/our-work/our-impact" },
-      { name: "Web Development Projects", path: "/our-work/web-development" },
+      { name: "Projects by Socio Bhaarat", path: "/our-work/projects-by-socio-bhaarat" },
     ],
   };
 
