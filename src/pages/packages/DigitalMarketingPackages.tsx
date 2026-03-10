@@ -85,9 +85,9 @@ const DigitalMarketingPackages = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
               <Zap className="w-3 h-3" /> Growth Engineering Lab
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tighter mb-6">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-tight tracking-tighter mb-6">
               Strategic Marketing <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
                 Packages
               </span>
             </h1>
@@ -100,7 +100,7 @@ const DigitalMarketingPackages = () => {
 
 
       {/* 2. ADAPTIVE PACKAGES */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-16 md:py-24 sm:px-6 lg:px-8 relative z-10">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-center">
             {packages.map((pkg, index) => (
@@ -168,11 +168,11 @@ const DigitalMarketingPackages = () => {
       </section>
 
       {/* 3. TECHNICAL SERVICE ECOSYSTEM */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 border-y border-border/50 relative">
+      <section className="py-24 sm:px-6 lg:px-8 bg-muted/30 border-y border-border/50 relative">
         <div className="container mx-auto max-w-6xl">
           <div className="max-w-3xl mb-16 border-l-4 border-primary pl-8">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase mb-4">
-              Integrated Service <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Ecosystem</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Solutions</span> We Provide
             </h2>
             <p className="text-slate-500 font-medium italic">
               Every package acts as a container for these specialized technical solutions, optimized for your business goals.
@@ -197,14 +197,14 @@ const DigitalMarketingPackages = () => {
       </section>
 
       {/* 4. CUSTOM CTA ARCHITECTURE */}
-      <section className="py-12 md:py-24 px-4 sm:px-6">
+      <section className="py-12 md:py-24 sm:px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
 
             {/* 2. CONTENT ARCHITECTURE */}
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic ">
                 Need a Custom Spec?
               </h2>
 

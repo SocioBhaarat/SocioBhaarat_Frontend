@@ -73,9 +73,9 @@ const WebDevelopmentPackages = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
               <Zap className="w-3 h-3" /> Growth Engineering Lab
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tighter mb-6">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-tight tracking-tighter mb-6">
               Web Development <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
                 Packages
               </span>
             </h1>
@@ -84,10 +84,10 @@ const WebDevelopmentPackages = () => {
             </p>
           </motion.div>
         </div>
-         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
       </section>
 
-      <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-16 md:py-24 sm:px-6 lg:px-8 relative z-10">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-16 items-stretch">
             {packages.map((pkg, index) => (
@@ -147,76 +147,71 @@ const WebDevelopmentPackages = () => {
                     DEPLOY SPEC <ArrowRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
                   </Button>
                 </div>
-
-                {/* ID Watermark inside card */}
-                <div className="absolute -bottom-4 -right-4 text-slate-900/[0.03] text-8xl font-black italic select-none">
-                  0{index + 1}
-                </div>
               </motion.div>
             ))}
           </div>
         </div >
       </section >
 
-          <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30 border-y border-border/50 relative">
-            <div className="container mx-auto max-w-6xl">
-              <div className="max-w-3xl mb-16 border-l-4 border-primary pl-8">
-                <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter mb-4"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Solutions </span> We Provide
-                </h2>
-                {/* <p className="text-slate-500 font-medium italic">
+      <section className="py-24 sm:px-6 lg:px-8 bg-muted/30 border-y border-border/50 relative">
+        <div className="container mx-auto max-w-6xl">
+          <div className="max-w-3xl mb-16 border-l-4 border-primary pl-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tighter mb-4"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Solutions </span> We Provide
+            </h2>
+            {/* <p className="text-slate-500 font-medium italic">
                   Every package acts as a container for these specialized technical solutions, optimized for your business goals.
                 </p> */}
-              </div>
+          </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                   "GRAPHIC DESIGNING", "WEBSITE ENGINEERING", "WORDPRESS ECOSYSTEM", "APP DEVELOPMENT", "UI & UX DESIGN", "E-COMMERCE DEVELOPEMNT"
-                ].map((service, index) => (
-                  <div key={index} className="bg-card p-5 rounded-2xl border border-border/50 shadow-sm hover:border-primary/40 group transition-all flex items-center gap-4">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                      <Check className="w-4 h-4" strokeWidth={4} />
-                    </div>
-                    <h3 className="font-black text-[11px] tracking-widest text-slate-700 uppercase">{service}</h3>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="py-12 md:py-24 px-4 sm:px-6">
-            <div className="container mx-auto max-w-5xl">
-              <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-                {/* 2. CONTENT ARCHITECTURE */}
-                <div className="relative z-10">
-                  <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
-                    Need a Custom Spec?
-                  </h2>
-
-                  <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                    "Contact our engineering team to architect a bespoke marketing framework for your brand."
-                  </p>
-
-                  {/* 3. ADAPTIVE BUTTON */}
-                  <div className="flex justify-center">
-                    <Button
-                      size="lg"
-                      variant="secondary"
-                      className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                      onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                    >
-                      REQUEST CUSTOM QUOTE
-                    </Button>
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              "GRAPHIC DESIGNING", "WEBSITE ENGINEERING", "WORDPRESS ECOSYSTEM", "APP DEVELOPMENT", "UI & UX DESIGN", "E-COMMERCE DEVELOPEMNT"
+            ].map((service, index) => (
+              <div key={index} className="bg-card p-5 rounded-2xl border border-border/50 shadow-sm hover:border-primary/40 group transition-all flex items-center gap-4">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                  <Check className="w-4 h-4" strokeWidth={4} />
                 </div>
+                <h3 className="font-black text-[11px] tracking-widest text-slate-700 uppercase">{service}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      <section className="py-12 md:py-24 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
+
+
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic ">
+                Need a Custom Spec?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Contact our engineering team to architect a bespoke marketing framework for your brand."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  REQUEST CUSTOM QUOTE
+                </Button>
               </div>
             </div>
-          </section>
-        </div>
 
-        );
+          </div>
+        </div>
+      </section>
+    </div>
+
+  );
 };
 
-        export default WebDevelopmentPackages;
+export default WebDevelopmentPackages;
