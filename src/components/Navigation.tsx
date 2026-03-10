@@ -90,9 +90,8 @@ const Navigation = () => {
       },
     ],
     ourWork: [
-      { name: "Meta Ads Portfolio", path: "/our-work/meta-ads" },
+      { name: "Our Impact", path: "/our-work/our-impact" },
       { name: "Web Development Projects", path: "/our-work/web-development" },
-      { name: "Content Work", path: "/our-work/content-work" },
     ],
   };
 

@@ -1,6 +1,6 @@
 
 import { Megaphone, Palette, Target, Code, BarChart, TrendingUp, Award, Users, Clock, ArrowRight, ChevronLeft, ChevronRight, ShieldCheck, Sparkles, Zap, BarChart3, Globe, Rocket } from 'lucide-react';
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
@@ -9,11 +9,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { fadeUp, staggerContainer, fadeLeft, fadeRight, cardAnimation } from '@/components/ui/animation';
 
 function Index() {
   const navigate = useNavigate();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const isInView = useInView(videoRef, { amount: 0.4 });
+
+  useEffect(() => {
+    if (isInView && videoRef.current) {
+      const playPromise = videoRef.current.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.log("Autoplay with audio blocked, playing muted.");
+          videoRef.current!.muted = true;
+          videoRef.current!.play();
+        });
+      }
+    } else {
+      videoRef.current?.pause();
+    }
+  }, [isInView]);
 
   const industries = [
     {
@@ -296,7 +314,7 @@ function Index() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* 1. LEFT COLUMN: Narrative */}
-            <motion.div variants={fadeLeft} className="space-y-6 md:space-y-8 order-2 lg:order-1">
+            <motion.div variants={fadeLeft} className="space-y-6 md:space-y-8 order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] md:text-xs font-bold uppercase tracking-widest border border-primary/20">
                 <Sparkles className="w-3 h-3" />
                 The SocioBhaarat Identity
@@ -304,8 +322,7 @@ function Index() {
 
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
                 Bhopal & Jabalpur’s <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic font-medium font-serif inline-block pr-4 -mr-4 overflow-visible leading-normal">Performance</span> <br className="md:hidden" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic font-medium font-serif inline-block pr-4 -mr-4 overflow-visible leading-normal">Architecture</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-medium font-serif pr-4 -mr-4 overflow-visible">Performance<br className="md:hidden" /> Architecture</span> 
               </h2>
 
               <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground">
@@ -323,17 +340,16 @@ function Index() {
 
             {/* 2. RIGHT COLUMN: Visual & Social Proof */}
             <motion.div variants={fadeRight} className="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-12 lg:mb-0">
-              <div className="relative w-full max-w-[320px] md:max-w-md">
+              <div className="relative w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[340px]">
                 {/* Main Image Container */}
-                <div className="relative z-10 overflow-hidden rounded-[2.5rem] md:rounded-[3rem] shadow-2xl border border-white/10 aspect-[4/5] lg:aspect-auto">
-                  <motion.img
-                    src="./images/IndexAbout.png"
-                    alt="Socio Bhaarat digital marketing team"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    initial={{ scale: 1.1 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.8 }}
-                  />
+                <div className="relative z-10 overflow-hidden rounded-[2.5rem] md:rounded-[3rem] shadow-2xl border border-white/10 aspect-[9/16] max-h-[500px] md:max-h-[600px] bg-slate-900">
+                  <video
+                    ref={videoRef} loop playsInline preload="auto"
+                    muted={false}
+                    className="w-full h-full object-cover scale-105"
+                  >
+                    <source src="/socio bhaarat1.3running.mp4" type="video/mp4" />
+                  </video>
                 </div>
 
                 {/* Floating Metric Card - Adjusted for Mobile Visibility */}
@@ -344,7 +360,7 @@ function Index() {
                   className="absolute -bottom-6 -left-4 md:-bottom-10 md:-left-12 z-20 bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-border p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-2xl max-w-[200px] md:max-w-xs"
                 >
                   <div className="flex items-center gap-3 mb-2 md:mb-3">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-600">
+                    <div className="w-8 h-8 md:w-5 md:h-5 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-600">
                       <Users className="w-4 h-4 md:w-5 md:h-5" />
                     </div>
                     <p className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">Trusted By</p>

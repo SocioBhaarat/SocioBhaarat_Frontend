@@ -16,67 +16,6 @@ const WebDevPortfolio = () => {
       image: "/webDevPortfolio/puneNews24.png",
       live: "https://punenews24.in"
     },
-
-    {
-      title: "NotesMates",
-      category: "Education Platform",
-      description: "An open educational platform designed for RGPV university students to study, share notes, and access academic resources easily.",
-      technologies: ["React", "Node.js", "MongoDB", "Cloud Storage"],
-      results: ["Centralized notes sharing", "Accessible academic resources", "Student collaboration platform"],
-      image: "/webDevPortfolio/notesmate.png",
-      live: "https://notesmates.in"
-    },
-
-    {
-      title: "Daksh Edu",
-      category: "EdTech Platform",
-      description: "A modern ed-tech platform combining social media engagement with meaningful learning experiences.",
-      technologies: ["React", "Node.js", "MongoDB", "Real-time Features"],
-      results: ["Interactive learning environment", "Social learning engagement", "Scalable education platform"],
-      image: "/webDevPortfolio/dakshedu.png",
-      live: "https://dakshedu.in"
-    },
-
-    {
-      title: "Outlawed",
-      category: "Exam Preparation Platform",
-      description: "A CLAT preparation platform providing exam-accurate mock tests, performance analytics, and affordable preparation resources.",
-      technologies: ["React", "Node.js", "MongoDB", "Analytics Engine"],
-      results: ["Mock test simulation system", "Detailed performance analytics", "Affordable preparation resources"],
-      image: "/webDevPortfolio/outlawed.png",
-      live: "https://outlawed.in"
-    },
-
-    {
-      title: "The Resonance",
-      category: "Business & Innovation Platform",
-      description: "A purpose-driven initiative empowering entrepreneurs and skilled talent through innovation, partnerships, and impact-led growth.",
-      technologies: ["React", "Next.js", "Node.js", "SEO Optimization"],
-      results: ["Entrepreneur ecosystem support", "Innovation-driven collaboration", "Impact-led initiatives"],
-      image: "/webDevPortfolio/theresonance.png",
-      live: "https://theresonance.co.in"
-    },
-
-    {
-      title: "RealtySnow",
-      category: "Real Estate Platform",
-      description: "A real estate platform simplifying property buying, selling, and renting through expert guidance and technology-driven solutions.",
-      technologies: ["React", "Node.js", "MongoDB", "Search & Filter Systems"],
-      results: ["Simplified property search", "Property listing management", "Seamless property transactions"],
-      image: "/webDevPortfolio/realtySnow.png",
-      live: "https://realtysnow.com"
-    },
-
-    {
-      title: "CS Nyayavidhi",
-      category: "Legal Services Website",
-      description: "A client-focused legal practice specializing in dispute resolution, arbitration, mediation, and financial recovery solutions.",
-      technologies: ["React", "Node.js", "CMS", "SEO Optimization"],
-      results: ["Professional legal services platform", "Client consultation interface", "Trust-building legal presence"],
-      image: "/webDevPortfolio/csNyayavidhi.png",
-      live: "https://csnyayavidhi.com"
-    },
-
     {
       title: "Calm Chase",
       category: "Personal Development Platform",
@@ -88,34 +27,40 @@ const WebDevPortfolio = () => {
     },
 
     {
-      title: "Calm Chase SSB Zone",
-      category: "Defense Training Platform",
-      description: "A guided SSB preparation platform helping aspirants train through daily challenges focused on psychology, leadership, and communication.",
-      technologies: ["React", "Node.js", "MongoDB", "Interactive Challenges"],
-      results: ["Daily SSB training exercises", "Leadership skill development", "Psychology-based preparation"],
-      image: "/webDevPortfolio/ssbCalmChase.png",
-      live: "https://ssb.calmchase.com"
+      title: "SN Realities",
+      category: "Real Estate Development Company",
+      description: "A professional real estate website designed to showcase residential and commercial projects, helping buyers explore properties, view project details, and connect directly with the developer.",
+      technologies: ["React", "Node.js", "MongoDB", "Real Estate CMS"],
+      results: [
+        "Modern property showcase platform",
+        "Improved online property inquiries",
+        "Lead generation for real estate projects"
+      ],
+      image: "/webDevPortfolio/SNRealities.png",
+      live: "https://snrealities.com"
     },
-
     {
-      title: "Mehta Auto Works",
-      category: "Automobile Services Website",
-      description: "A digital platform showcasing two-wheeler servicing, spare parts, and electric scooter solutions.",
-      technologies: ["React", "Node.js", "MongoDB", "Booking System"],
-      results: ["Service booking system", "EV product showcase", "Customer service integration"],
-      image: "/webDevPortfolio/MehtaAutoWorks.png",
-      live: "https://mehtaautoworks.com"
+      title: "Lotus Group",
+      category: "Real Estate & Infrastructure Company",
+      description: "A corporate website built to present Lotus Group’s real estate developments, infrastructure projects, and brand presence with a modern digital experience.",
+      technologies: ["React", "Node.js", "MongoDB", "Corporate Website"],
+      results: [
+        "Professional digital brand presence",
+        "Showcase of real estate and infrastructure projects",
+        "Improved online engagement and client inquiries"
+      ],
+      image: "/webDevPortfolio/lotusGroup.png",
+      live: "https://lotusgroupindia.com"
     },
-
     {
-      title: "Five Rivers Duct Cleaning",
-      category: "Home Services Website",
-      description: "A professional service platform enabling customers to book air duct cleaning services and improve indoor air quality.",
-      technologies: ["React", "Node.js", "MongoDB", "Online Booking System"],
-      results: ["Online service booking", "Improved service visibility", "Customer inquiry management"],
-      image: "/webDevPortfolio/fiveRiversDuctCleaning.png",
-      live: "https://fiveriversductcleaning.com"
-    }
+      title: "The Resonance",
+      category: "Business & Innovation Platform",
+      description: "A purpose-driven initiative empowering entrepreneurs and skilled talent through innovation, partnerships, and impact-led growth.",
+      technologies: ["React", "Next.js", "Node.js", "SEO Optimization"],
+      results: ["Entrepreneur ecosystem support", "Innovation-driven collaboration", "Impact-led initiatives"],
+      image: "/webDevPortfolio/theresonance.png",
+      live: "https://theresonance.co.in"
+    },
   ]
 
   return (

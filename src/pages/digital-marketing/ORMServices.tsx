@@ -112,12 +112,11 @@ const ORMServices = () => {
               </div>
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
-                Secure Your <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Digital Legacy</span>.
+                Online <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible"> Reputation</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible "> Management</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic">
-                "We protect, manage, and strengthen your online reputation across Bhopal & Jabalpur using advanced suppression and PR strategies."
+                "Supporting professionals such as CAs, advocates, doctors, and professors in maintaining a strong and credible online presence across Google and social media platforms."
               </p>
 
               <div className="flex justify-start pt-4">
