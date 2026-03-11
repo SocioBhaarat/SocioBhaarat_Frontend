@@ -119,18 +119,17 @@ const EcommerceDevelopment = () => {
               className="lg:col-span-7 space-y-8 text-left"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <ShoppingBag className="w-3 h-3" /> Transaction Architecture Lab
+                <ShoppingBag className="w-3 h-3" /> E-commerce Development
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
-                Engineer <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase inline-block pr-4 -mr-4 overflow-visible">
-                  High-Converting
-                </span> Digital Flagships.
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+                Build High-Converting & Scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
+                  E-commerce Stores
+                </span>
               </h1>
 
               <p className="text-base md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
-                "We build industrial-strength e-commerce ecosystems that handle massive traffic while delivering seamless checkout experiences for brands across India."
+                We design and develop secure, user-friendly, and conversion-focused e-commerce websites that help businesses sell more, manage operations efficiently, and scale with confidence.
               </p>
 
               <div className="flex justify-start pt-4">
@@ -183,10 +182,10 @@ const EcommerceDevelopment = () => {
 
       {/* WHY CHOOSE US */}
       <section className="py-24 bg-muted/30 border-y border-border">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-6xl px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">The E-commerce Edge</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span></h2>
               <p className="text-muted-foreground text-md md:text-lg mb-8 leading-relaxed">
                 We combine strategy, technology, and customer-focused design to create platforms that deliver seamless shopping experiences and revenue growth.
               </p>
@@ -227,12 +226,11 @@ const EcommerceDevelopment = () => {
       {/* SERVICES (BENTO GRID) */}
       <section className="py-12 md:py-24 bg-background relative overflow-hidden">
 
-        <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="container mx-auto max-w-6xl relative z-10 px-4">
           {/* Responsive Header */}
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-10 md:mb-16 text-center italic tracking-tighter leading-tight">
-            Ecommerce <br className="md:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
-              Solutions
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-10 md:mb-16 text-center italic tracking-tighter leading-tight">
+            E-Commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
+              Services
             </span>
           </h2>
 
@@ -253,7 +251,7 @@ const EcommerceDevelopment = () => {
 
                 <div className="relative z-10">
                   {/* Fluid Typography for Headings */}
-                  <h3 className="text-2xl md:text-3xl font-black mb-3 md:mb-4 tracking-tight group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
 
@@ -282,7 +280,7 @@ const EcommerceDevelopment = () => {
 
       {/* PRODUCTION ROADMAP */}
       <section className="py-24 bg-[#020617] text-white">
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible ">Production Roadmap</span> </h2>
           </div>
@@ -305,7 +303,7 @@ const EcommerceDevelopment = () => {
 
       {/* TECH CLOUD */}
       <section className="py-24 bg-muted/30 border-y border-border">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-5xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Retail Stack</span></h2>
           </div>
@@ -327,7 +325,7 @@ const EcommerceDevelopment = () => {
 
       {/* FINAL CTA */}
       <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-5xl px-4">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
             {/* 1. RESPONSIVE DECORATIVE ICON (Scaled and hidden on small mobiles if needed) */}

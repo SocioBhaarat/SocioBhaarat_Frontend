@@ -90,7 +90,7 @@ const UIUXDesign = () => {
     <div className="min-h-screen bg-background ">
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
+      <section className="relative pb-24 flex items-start overflow-hidden bg-[#fafafa]">
 
         {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -115,14 +115,13 @@ const UIUXDesign = () => {
               className="lg:col-span-7 space-y-8 text-left"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Palette className="w-3 h-3" /> Human-Interface Lab
+                <Palette className="w-3 h-3" /> UI & UX Design
               </div>
 
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
-                Design <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
-                  Intuitive & Impactful
-                </span> User Experiences.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
+                  Design Experiences
+                </span> That Users Love 
               </h1>
 
               <p className="text-base md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
@@ -184,7 +183,7 @@ const UIUXDesign = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">The Designer's Edge</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span></h2>
               <p className="text-muted-foreground md:text-lg mb-8 leading-relaxed">
                 We blend the psychology of user behavior with the art of visual storytelling to create products that don't just work—they resonate.
               </p>
@@ -228,7 +227,7 @@ const UIUXDesign = () => {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-10 md:mb-16 text-center italic tracking-tighter leading-tight">
             Specialized <br className="md:hidden" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
-              Design Solutions
+              Design Services
             </span>
           </h2>
 
@@ -287,7 +286,7 @@ const UIUXDesign = () => {
           </div>
 
           {/* Roadmap Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {steps.map((step) => (
               <div
                 key={step.id}
