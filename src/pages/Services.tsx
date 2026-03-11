@@ -211,11 +211,9 @@ const Services = () => {
             <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8 md:mb-10">
               Digital <br />
               <span className="relative inline-block">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase text-4xl md:text-6xl lg:text-7xl pr-4 -mr-4 overflow-visible">
                   Excellence
                 </span>
-                {/* Technical Underline Architecture */}
-                <div className="absolute bottom-2 left-0 w-full h-1 md:h-3 bg-primary/10 -skew-x-12 -z-10" />
               </span> <br className="hidden md:block" /> Delivered.
             </h1>
 
@@ -231,7 +229,7 @@ const Services = () => {
 
       {/* Dynamic Categories Section */}
       {serviceCategories.map((cat, catIdx) => (
-        <section key={catIdx} className="py-16 px-4 sm:px-6 lg:px-8 border-b border-border last:border-0">
+        <section key={catIdx} className="py-16 sm:px-6 lg:px-8 border-b border-border last:border-0">
           <div className="container mx-auto">
             <div className="mb-12">
               <h2 className="text-3xl font-bold mb-2">{cat.category}</h2>

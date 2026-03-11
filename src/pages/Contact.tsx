@@ -53,7 +53,7 @@ const Contact = () => {
             </div>
             <h1 className="font-display text-5xl md:text-7xl font-black text-slate-900 leading-tight tracking-tighter mb-6">
               Get In <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
                 Touch
               </span>
             </h1>
@@ -124,9 +124,9 @@ const Contact = () => {
             {/* Narrative Side: Stacks on top for Mobile, Left for Desktop */}
             <div className="lg:col-span-5 space-y-8 md:sticky md:top-24">
               <div className="max-w-md border-l-4 border-primary pl-6 md:pl-8">
-                <h2 className="font-display text-3xl md:text-5xl font-black text-slate-900 tracking-tighter uppercase mb-4 md:mb-6 leading-[0.95]">
+                <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 tracking-tighter mb-4 md:mb-6 leading-[0.95]">
                   Send Us a <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium lowercase">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
                     Message
                   </span>
                 </h2>

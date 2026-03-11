@@ -74,22 +74,22 @@ const WebsiteSEO = () => {
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 mt-24">
+        <div className="container mx-auto px-4 relative z-10 mt-12">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
 
             {/* Left Column: Narrative (Text Upwards) */}
             <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="lg:col-span-7 space-y-8 text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Sparkles className="w-3 h-3" /> MP's Leading SEO Architecture
+                <Sparkles className="w-3 h-3" /> SEO for Website
               </div>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter">
                 Rank Higher <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">& Grow Organically</span>.
               </h1>
               <p className="text-lg sm:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic">
-                "We help businesses in Bhopal & Jabalpur dominate search engine rankings and generate quality leads through result-driven SEO solutions."
+                We help businesses in Bhopal & Jabalpur dominate search engine rankings and generate quality leads through result-driven SEO solutions.
               </p>
-              <div className="flex justify-start pt-4">
+              <div className="flex justify-start pt-2">
                 <Button size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105" onClick={() => navigate("/contact")}>
                   Get Free SEO Audit <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>

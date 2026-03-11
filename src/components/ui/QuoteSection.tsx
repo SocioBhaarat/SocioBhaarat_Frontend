@@ -7,7 +7,7 @@ type QuoteSectionProps = {
 
 const QuoteSection = ({ quote, className }: QuoteSectionProps) => {
   return (
-    <section className={`relative py-12 md:py-24 px-4 overflow-hidden ${
+    <section className={`relative py-12 md:py-24 overflow-hidden ${
         className ? className : "bg-[#fafafa]"
       }`}>
       

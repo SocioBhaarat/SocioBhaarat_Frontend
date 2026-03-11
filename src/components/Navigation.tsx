@@ -25,7 +25,7 @@ const Navigation = () => {
         name: "Social Media Marketing",
         path: "/digital-marketing/social-media",
       },
-      { name: "Website SEO", path: "/digital-marketing/website-seo" },
+      { name: "SEO for Website", path: "/digital-marketing/website-seo" },
       {
         name: "Google Business Profile & SEO",
         path: "/digital-marketing/google-map-marketing",
@@ -90,9 +90,8 @@ const Navigation = () => {
       },
     ],
     ourWork: [
-      { name: "Meta Ads Portfolio", path: "/our-work/meta-ads" },
-      { name: "Web Development Projects", path: "/our-work/web-development" },
-      { name: "Content Work", path: "/our-work/content-work" },
+      { name: "Our Impact", path: "/our-work/our-impact" },
+      { name: "Projects by Socio Bhaarat", path: "/our-work/projects-by-socio-bhaarat" },
     ],
   };
 

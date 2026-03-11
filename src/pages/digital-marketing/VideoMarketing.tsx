@@ -82,17 +82,14 @@ const VideoMarketing = () => {
                             className="text-center lg:text-left"
                         >
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
-                                <Play className="w-3 h-3 fill-current" /> Next-Gen Content Strategy
+                                <Play className="w-3 h-3 fill-current" /> Video Marketing
                             </div>
 
                             <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[0.95] tracking-tighter mb-8">
-                                Tell Your Story with <br />
-                                <span className="relative inline-block">
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
+                                Tell Your Story with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
                                         Cinematic Impact
                                     </span>
 
-                                </span>
                             </h1>
 
                             <p className="text-base md:text-xl text-slate-500 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium italic border-l-0 lg:border-l-4 border-primary/20 lg:pl-8 mb-10">
