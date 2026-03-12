@@ -111,7 +111,7 @@ const ORMServices = () => {
                 <Shield className="w-3 h-3" /> Secure Your Digital Legacy
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
                 Online <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible"> Reputation</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible "> Management</span>
               </h1>
 
@@ -335,7 +335,7 @@ const ORMServices = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter">Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Armor</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Services</span></h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (

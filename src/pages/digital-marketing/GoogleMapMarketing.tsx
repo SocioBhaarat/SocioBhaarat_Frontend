@@ -91,7 +91,7 @@ const GoogleMapMarketing = () => {
                 <MapPin className="w-3 h-3" /> Google Business Profile & SEO
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 tracking-tighter">
                 Rank Higher on <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Google Search</span>
               </h1>

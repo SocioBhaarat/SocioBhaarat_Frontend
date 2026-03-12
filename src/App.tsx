@@ -97,7 +97,7 @@ const App = () => (
           
           {/* Our Work */}
           <Route path="/our-work/Our-Impact" element={<MetaAdsPortfolio />} />
-          <Route path="/our-work/projects-by-socio-bhaarat" element={<WebDevPortfolio />} />
+          <Route path="/our-work/web-development-projects" element={<WebDevPortfolio />} />
           {/* <Route path="/our-work/content-work" element={<ContentPortfolio />} /> */}
           
           {/* Blog */}

@@ -143,7 +143,7 @@ const EmailMarketing = () => {
       {/* WHY CHOOSE US */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Email Management</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> for Email Marketing</h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChoosePoints.map((item, index) => (
@@ -265,7 +265,7 @@ const EmailMarketing = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Solutions Suite</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Services</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg">Full-service email management from technical setup to creative execution.</p>
           </div>
 

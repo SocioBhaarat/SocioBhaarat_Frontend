@@ -128,12 +128,12 @@ const NumberVerification = () => {
               className="lg:col-span-7 space-y-8 text-left"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Shield className="w-3 h-3" /> Enterprise Grade Validation
+                <Shield className="w-3 h-3" /> Number Verification
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
                 Accurate <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
                   WhatsApp Verification
                 </span> Solutions.
               </h1>
@@ -207,7 +207,7 @@ const NumberVerification = () => {
       {/* WHY CHOOSE US (Technical Grid) */}
       <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> Edge</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span></h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChoosePoints.map((item, index) => (
@@ -278,7 +278,7 @@ const NumberVerification = () => {
               <Zap className="w-3 h-3" />
               <span>PRO-GRADE TOOLS</span>
             </motion.div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Verification Suite</span></h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Verification Services</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-md md:text-lg">
               Precision-engineered tools to audit, clean, and verify your global WhatsApp databases in seconds.
             </p>

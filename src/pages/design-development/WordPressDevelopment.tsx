@@ -82,15 +82,15 @@ const WordPressDevelopment = () => {
                 <Wrench className="w-3 h-3" /> Managed Ecosystems Lab
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl  lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
-                Build <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
-                  Scalable Foundations
-                </span> with WordPress.
+              <h1 className="font-display text-4xl sm:text-6xl  lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
+                Custom <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
+                  Wordpress Websites
+                </span> That Drive Growth
               </h1>
 
               <p className="text-base md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
-                "We engineer high-performance, secure, and fully customizable WordPress ecosystems tailored to convert Jabalpur & Bhopal visitors into loyal customers."
+                We design and develop high-performance, secure, and fully customizable WordPress websites tailored to your business goals. From corporate sites to e-commerce stores, we deliver solutions that convert visitors into customers.
               </p>
 
               <div className="flex justify-start pt-4">
@@ -117,7 +117,7 @@ const WordPressDevelopment = () => {
 
                 <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?w=800&q=80"
+                    src="https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc"
                     alt="High Speed WordPress Optimization"
                     className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                   />
@@ -157,7 +157,7 @@ const WordPressDevelopment = () => {
                 Top-Tier Engineering
               </div>
               <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">Socio Bhaarat</span> for WordPress?
+                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">Socio Bhaarat</span> for WordPress ?
               </h2>
               <p className="text-muted-foreground md:text-lg leading-relaxed mb-8">
                 We combine creative design, technical expertise, and strategic planning to deliver WordPress websites that are fast, secure, SEO-friendly, and easy to manage.
@@ -221,7 +221,7 @@ const WordPressDevelopment = () => {
           </div>
 
           {/* 2. ADAPTIVE GRID (1 col mobile, 3 cols desktop) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {[
               { title: "Digital Dominance", icon: <Rocket className="w-8 h-8" />, desc: "Establish a future-ready presence with a highly scalable platform." },
               { title: "Edge Performance", icon: <Smartphone className="w-8 h-8" />, desc: "Responsive layouts optimized for every screen size and device." },
@@ -261,9 +261,9 @@ const WordPressDevelopment = () => {
       {/* SERVICE GRID */}
       <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Service Suite</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> Brings to the Table</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -319,7 +319,7 @@ const WordPressDevelopment = () => {
           </div>
 
           {/* 2. RESPONSIVE GRID (1 Column Mobile, 2 Columns Desktop) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
             {process.map((step, index) => (
               <motion.div
                 key={index}

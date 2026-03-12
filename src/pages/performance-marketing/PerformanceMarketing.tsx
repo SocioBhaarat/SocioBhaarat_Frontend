@@ -64,9 +64,9 @@ const PerformanceMarketing = () => {
                 <Zap className="w-3 h-3 fill-current" /> ROI-Driven Engineering Lab
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
                 Drive <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
                   Measurable Growth
                 </span> Through Data.
               </h1>
@@ -152,7 +152,7 @@ const PerformanceMarketing = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal"> Growth Engine</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg leading-relaxed">
               We don't just "run ads." We engineer conversion ecosystems that turn visitors into high-value customers.
             </p>
@@ -304,7 +304,7 @@ const PerformanceMarketing = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
           {/* Heading with Excellence Gradient */}
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-slate-900 leading-[1.1]">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-slate-900 leading-[1.1]">
               Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Serve Best</span>
             </h2>
           </div>

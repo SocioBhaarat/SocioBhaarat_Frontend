@@ -74,9 +74,9 @@ const About = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase shadow-sm">
                 <Cpu className="w-3 h-3" /> Growth Engineering Lab
               </div>
-              <h2 className="font-display text-4xl md:text-6xl font-black text-slate-900 leading-[0.95] tracking-tighter">
+              <h2 className="font-display text-4xl md:text-6xl font-bold text-slate-800 leading-[0.95] tracking-tighter">
                 About <br />
-                <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase overflow-visible">
+                <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium overflow-visible">
                   Socio Bhaarat
                 </span>
               </h2>
@@ -108,7 +108,7 @@ const About = () => {
             >
               <div>
                 <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-4 italic">Origin Protocol</h2>
-                <h3 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter mb-8 italic leading-none">
+                <h3 className="text-3xl md:text-5xl font-bold text-slate-800 tracking-tighter mb-8 italic leading-none">
                   Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Story</span>
                 </h3>
               </div>
@@ -156,8 +156,8 @@ const About = () => {
       <section className="py-24 px-2 bg-[#fafafa] relative overflow-hidden">
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-4 italic">Capabilities Lab</h2>
-            <h3 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter italic leading-none">
+            <h2 className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-400 mb-4 italic">Capabilities Lab</h2>
+            <h3 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tighter italic leading-none">
               What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">We Do</span>
             </h3>
             <p className="mt-6 text-slate-500 max-w-2xl mx-auto italic font-medium">
@@ -205,7 +205,7 @@ const About = () => {
             <div className="lg:col-span-6 space-y-12">
               <div>
                 <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-4 italic">Verification Protocol</h2>
-                <h3 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tighter italic leading-tight">
+                <h3 className="text-3xl md:text-5xl font-bold text-slate-800 tracking-tighter italic leading-tight">
                   Why Partner with <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat?</span>
                 </h3>

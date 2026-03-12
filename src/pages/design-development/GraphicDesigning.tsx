@@ -81,12 +81,12 @@ const GraphicDesigning = () => {
               className="lg:col-span-7 space-y-8 text-left"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Sparkles className="w-3 h-3" /> Creative Excellence Lab
+                <Sparkles className="w-3 h-3" /> Graphic Designing
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
                 {heroData.heading.split("Visual")[0]}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase inline-block pr-4 -mr-4 overflow-visible">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
                   Visual Identities
                 </span> That Scale.
               </h1>
