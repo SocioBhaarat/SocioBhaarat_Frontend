@@ -31,6 +31,7 @@ const OurImpact = () => {
       ],
       image: "/OurImpact/Theshauryaacademy.webp",
     },
+    
     {
       client: "Apple Property",
       industry: "Real Estate",
