@@ -15,24 +15,24 @@ import { fadeUp, staggerContainer, fadeLeft, fadeRight, cardAnimation } from '@/
 function Index() {
   const navigate = useNavigate();
 
-  // 1. Do alag refs aur InView states banayein
+
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
 
   const isInView1 = useInView(videoRef1, { amount: 0.4 });
   const isInView2 = useInView(videoRef2, { amount: 0.4 });
 
-  // 2. Pehli video ka logic
+
   useEffect(() => {
     handleAutoPlay(videoRef1, isInView1);
   }, [isInView1]);
 
-  // 3. Dusri video ka logic
+
   useEffect(() => {
     handleAutoPlay(videoRef2, isInView2);
   }, [isInView2]);
 
-  // Helper function code ko saaf rakhne ke liye
+ 
   const handleAutoPlay = (ref, inView) => {
     if (inView && ref.current) {
       const playPromise = ref.current.play();
