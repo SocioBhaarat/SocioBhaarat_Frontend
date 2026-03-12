@@ -82,7 +82,11 @@ const WordPressDevelopment = () => {
                 <Wrench className="w-3 h-3" /> Managed Ecosystems Lab
               </div>
 
+<<<<<<< HEAD
               <h1 className="font-display text-4xl sm:text-6xl  lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
+=======
+              <h1 className="font-display text-4xl sm:text-6xl  lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+>>>>>>> b523ea7e89bc454024f44910a1cf464d45db7334
                 Custom <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
                   Wordpress Websites
