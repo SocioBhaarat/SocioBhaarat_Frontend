@@ -66,14 +66,14 @@ const ContentMarketing = () => {
             {/* Left Column: Narrative (Text Upwards) */}
             <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="lg:col-span-7 space-y-8 text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Sparkles className="w-3 h-3" /> MP's Content Engineering Hub
+                <Sparkles className="w-3 h-3" /> Content Marketing
               </div>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 tracking-tighter">
                 Engage, Educate <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">& Convert</span>.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible ">& Convert</span>.
               </h1>
               <p className="text-lg sm:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic">
-                "We create high-quality, value-driven content that builds brand authority across Bhopal & Jabalpur."
+                We create high-quality, value-driven content that builds brand authority across Bhopal & Jabalpur.
               </p>
               <div className="flex justify-start pt-4">
                 <Button size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105" onClick={() => navigate("/contact")}>
@@ -83,7 +83,7 @@ const ContentMarketing = () => {
             </motion.div>
 
             {/* Right Column: Metric Bento Hub */}
-            <motion.div initial={{ opacity: 0, scale: 0.9, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ delay: 0.3, duration: 1 }} className="lg:col-span-5 grid grid-cols-2 gap-4">
+            <motion.div initial={{ opacity: 0, scale: 0.9, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ delay: 0.3, duration: 1 }} className="mt-10 lg:col-span-5 grid grid-cols-2 gap-4">
               {[
                 { val: "500+", label: "Pieces Created", icon: <FileText /> },
                 { val: "200+", label: "Happy Clients", icon: <Users /> },
@@ -262,7 +262,7 @@ const ContentMarketing = () => {
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Content</span> Solutions
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Content</span> Services
             </h2>
             <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic mt-6">
               Precision-engineered assets designed to dominate the digital landscape of Madhya Pradesh.

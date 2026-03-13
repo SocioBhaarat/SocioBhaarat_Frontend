@@ -8,37 +8,37 @@ const Testimonials = () => {
       name: "Shourya Academy",
       content: "Partnering with SocioBhaarat has been highly beneficial for Shourya Academy. From social media management and ad campaigns to professional video shoots and both online and offline marketing assistance, their team supported our promotions end-to-end and helped us reach more students with better engagement and consistent enquiries.",
       rating: 5,
-      image: "/testimonials/ShouryaAcademy.jpeg",
+      image: "/testimonials/ShouryaAcademy.webp",
     },
     {
       name: "Lotus Consultancy",
       content: "We at Lotus Consultancy had a great experience working with SocioBhaarat. Their team helped us with WhatsApp marketing, built our website, provided reliable tech support, and even recovered our hacked Instagram account smoothly. Their prompt response and technical expertise makes them a dependable digital partner for businesses.",
       rating: 5,
-      image: "/testimonials/LotusGroups.png",
+      image: "/testimonials/LotusGroups.webp",
     },
     {
       name: "Yuvraaj Associates",
       content: "Working with SocioBhaarat has been excellent for Yuvraaj Associates. Their social media, ads, shoots, and lead generation strategies boosted our visibility, genuine enquiries, and overall business growth, making them a reliable long-term digital marketing partner.",
       rating: 5,
-      image: "/testimonials/YuvrajAssociates.jpeg",
+      image: "/testimonials/YuvrajAssociates.webp",
     },
     {
       name: "Sn Constructions",
       content: "SocioBhaarat handled our shoots, social media management, ads, lead generation, and Google presence with a result-focused approach. We received quality enquiries, improved sales performance, and successfully closed 2 confirmed orders through their marketing efforts.",
       rating: 5,
-      image: "/testimonials/SnConstruction.png",
+      image: "/testimonials/SnConstruction.webp",
     },
     {
       name: "Apple Properties",
       content: "SocioBhaarat managed our shoots and ad campaigns with excellent execution and professionalism. Their creative approach and targeted marketing delivered strong visibility and overall very good results for our business.",
       rating: 5,
-      image: "/testimonials/AppleProperties.png",
+      image: "/testimonials/AppleProperties.webp",
     },
     {
       name: "Build Well's",
       content: "From video shoot and editing to social media management and ad campaigns, SocioBhaarat executed everything seamlessly. Their performance marketing approach brought us genuine leads, improved brand visibility, and directly contributed to consistent sales growth.",
       rating: 5,
-      image: "/testimonials/BuildWells.png",
+      image: "/testimonials/BuildWells.webp",
     },
   ];
 
@@ -59,9 +59,9 @@ const Testimonials = () => {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md text-primary text-[10px] font-bold mb-10 tracking-[0.2em] uppercase shadow-sm">
               <Star className="w-3 h-3" /> Client Success Stories
             </div>
-            <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black mb-8 text-slate-900 leading-[1.05] tracking-tighter">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-slate-800 leading-[1.05] tracking-tighter">
               The Voice of <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Digital Impact</span>.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Digital Impact</span>.
             </h1>
             <p className="text-lg sm:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed italic underline decoration-primary/20 decoration-2 underline-offset-8">
               "Don't just take our word for it. Here's how we've engineered growth for businesses across Bhopal & Jabalpur."

@@ -1,6 +1,6 @@
 
 import { Megaphone, Palette, Target, Code, BarChart, TrendingUp, Award, Users, Clock, ArrowRight, ChevronLeft, ChevronRight, ShieldCheck, Sparkles, Zap, BarChart3, Globe, Rocket } from 'lucide-react';
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
@@ -9,11 +9,43 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { fadeUp, staggerContainer, fadeLeft, fadeRight, cardAnimation } from '@/components/ui/animation';
 
 function Index() {
   const navigate = useNavigate();
+
+
+  const videoRef1 = useRef(null);
+  const videoRef2 = useRef(null);
+
+  const isInView1 = useInView(videoRef1, { amount: 0.4 });
+  const isInView2 = useInView(videoRef2, { amount: 0.4 });
+
+
+  useEffect(() => {
+    handleAutoPlay(videoRef1, isInView1);
+  }, [isInView1]);
+
+
+  useEffect(() => {
+    handleAutoPlay(videoRef2, isInView2);
+  }, [isInView2]);
+
+ 
+  const handleAutoPlay = (ref, inView) => {
+    if (inView && ref.current) {
+      const playPromise = ref.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          ref.current.muted = false;
+          ref.current.play();
+        });
+      }
+    } else {
+      ref.current?.pause();
+    }
+  };
 
   const industries = [
     {
@@ -206,7 +238,7 @@ function Index() {
 
               <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
                 MP’s Fastest Growing <br />
-                <span className="text-transparent bg-clip-text bg-[#FFC105] italic font-serif inline-block pr-4 -mr-4 overflow-visible leading-normal">
+                <span className="text-transparent bg-clip-text bg-[#FFC105] italic font-serif inline-block pr-4 -mr-4 overflow-visible">
                   Digital Marketing & IT Company
                 </span>
               </h1>
@@ -296,7 +328,7 @@ function Index() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* 1. LEFT COLUMN: Narrative */}
-            <motion.div variants={fadeLeft} className="space-y-6 md:space-y-8 order-2 lg:order-1">
+            <motion.div variants={fadeLeft} className="space-y-6 md:space-y-8 order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] md:text-xs font-bold uppercase tracking-widest border border-primary/20">
                 <Sparkles className="w-3 h-3" />
                 The SocioBhaarat Identity
@@ -304,8 +336,7 @@ function Index() {
 
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
                 Bhopal & Jabalpur’s <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-primary italic font-medium font-serif inline-block pr-4 -mr-4 overflow-visible leading-normal">Performance</span> <br className="md:hidden" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500 italic font-medium font-serif inline-block pr-4 -mr-4 overflow-visible leading-normal">Architecture</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-medium font-serif pr-4 -mr-4 overflow-visible">Performance<br className="md:hidden" /> Architecture</span>
               </h2>
 
               <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground">
@@ -323,17 +354,16 @@ function Index() {
 
             {/* 2. RIGHT COLUMN: Visual & Social Proof */}
             <motion.div variants={fadeRight} className="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-12 lg:mb-0">
-              <div className="relative w-full max-w-[320px] md:max-w-md">
+              <div className="relative w-full max-w-[260px] sm:max-w-[300px] lg:max-w-[340px]">
                 {/* Main Image Container */}
-                <div className="relative z-10 overflow-hidden rounded-[2.5rem] md:rounded-[3rem] shadow-2xl border border-white/10 aspect-[4/5] lg:aspect-auto">
-                  <motion.img
-                    src="./images/IndexAbout.png"
-                    alt="Socio Bhaarat digital marketing team"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    initial={{ scale: 1.1 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.8 }}
-                  />
+                <div className="relative z-10 overflow-hidden rounded-[2.5rem] md:rounded-[3rem] shadow-2xl border border-white/10 aspect-[9/16] max-h-[500px] md:max-h-[600px] bg-slate-900">
+                  <video
+                    ref={videoRef1} loop playsInline preload="auto"
+                    muted={false}
+                    className="w-full h-full object-cover scale-105"
+                  >
+                    <source src="/socio bhaarat1.3running.mp4" type="video/mp4" />
+                  </video>
                 </div>
 
                 {/* Floating Metric Card - Adjusted for Mobile Visibility */}
@@ -344,7 +374,7 @@ function Index() {
                   className="absolute -bottom-6 -left-4 md:-bottom-10 md:-left-12 z-20 bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-border p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-2xl max-w-[200px] md:max-w-xs"
                 >
                   <div className="flex items-center gap-3 mb-2 md:mb-3">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-600">
+                    <div className="w-8 h-8 md:w-5 md:h-5 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-600">
                       <Users className="w-4 h-4 md:w-5 md:h-5" />
                     </div>
                     <p className="text-[9px] md:text-xs font-bold uppercase tracking-widest text-muted-foreground">Trusted By</p>
@@ -443,6 +473,7 @@ function Index() {
       </section>
 
       {/* GROWTH */}
+
       <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
         {/* Background Motion Blur */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10 animate-pulse" />
@@ -474,7 +505,7 @@ function Index() {
               {/* The Animated Connectivity Line */}
               <div className="absolute left-6 top-4 bottom-4 w-0.5 bg-gradient-to-b from-primary via-blue-400 to-transparent hidden md:block opacity-30" />
 
-              <div className="space-y-12 relative z-10">
+              <div className="space-y-2 relative z-10">
                 {[
                   { title: "Research & Strategy", desc: "Analyzing brand positioning, competitors, and target audience to craft a growth roadmap." },
                   { title: "Creative & Technical Setup", desc: "High-converting designs, optimized website structure, and strategic content planning." },
@@ -497,7 +528,7 @@ function Index() {
                     </div>
 
                     {/* Content Card */}
-                    <div className="p-6 rounded-[2rem] bg-white/50 backdrop-blur-sm border border-slate-100 group-hover:border-primary/20 group-hover:shadow-xl group-hover:shadow-primary/5 transition-all duration-500 flex-grow">
+                    <div className="p-5 rounded-[2rem] bg-white/50 backdrop-blur-sm border border-slate-100 group-hover:border-primary/20 group-hover:shadow-xl group-hover:shadow-primary/5 transition-all duration-500 flex-grow">
                       <h3 className="text-md md:text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
                         {step.title}
                       </h3>
@@ -510,25 +541,39 @@ function Index() {
               </div>
             </div>
 
-            {/* 2. CREATIVE ILLUSTRATION COLUMN (5 Columns) */}
+
+            {/* Glass Overlay on Image */}
+            {/* <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/80 backdrop-blur-md rounded-3xl border border-white/50 shadow-lg">
+              <p className="text-sm font-bold text-slate-900 text-center">
+                “We don’t just market; we partner for the long term.”
+              </p>
+            </div> */}
+
+            {/* 2. VIDEO COLUMN (5 Columns) */}
             <motion.div
-              className="lg:col-span-5 lg:sticky lg:top-32"
               variants={fadeRight}
+              className="lg:col-span-5 relative flex justify-center lg:justify-center order-2 lg:order-2 lg:sticky lg:top-24 w-full"
             >
-              <div className="relative">
-                <div className="relative z-10 overflow-hidden rounded-[3.5rem] shadow-2xl border-8 border-white">
-                  <img
-                    src="./images/IndexPageImg2.webp"
-                    alt="Growth process"
-                    className="w-full h-auto object-cover hover:scale-110 transition-transform duration-1000"
-                  />
-                  {/* Glass Overlay on Image */}
-                  <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/80 backdrop-blur-md rounded-3xl border border-white/50 shadow-lg">
-                    <p className="text-sm font-bold text-slate-900 text-center">
-                      “We don’t just market; we partner for the long term.”
-                    </p>
-                  </div>
+              <div className="relative w-full max-w-[320px] md:max-w-[380px] px-4">
+                <div className="relative z-10 overflow-hidden rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.3)] border-[8px] border-white aspect-[9/16] bg-slate-900 w-full">
+                  <video
+                    ref={videoRef2}
+                    autoPlay
+                    loop
+                    muted={false}
+                    playsInline
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/GrowthSteps.mp4" type="video/mp4" />
+                  </video>
+
+                  {/* Subtle Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                 </div>
+
+                {/* Decorative Back Elements */}
+                <div className="absolute -top-10 -right-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse" />
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl -z-10" />
               </div>
             </motion.div>
 

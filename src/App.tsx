@@ -30,7 +30,7 @@ import DigitalMarketingPackages from "./pages/packages/DigitalMarketingPackages"
 import WebDevelopmentPackages from "./pages/packages/WebDevelopmentPackages";
 import WhatsAppPackages from "./pages/packages/WhatsAppPackages";
 import PerformanceMarketingPackages from "./pages/packages/PerformanceMarketingPackages";
-import MetaAdsPortfolio from "./pages/our-work/MetaAdsPortfolio";
+import MetaAdsPortfolio from "./pages/our-work/OurImpact";
 import WebDevPortfolio from "./pages/our-work/WebDevPortfolio";
 import ContentPortfolio from "./pages/our-work/ContentPortfolio";
 import Blog from "./pages/Blog";
@@ -96,9 +96,9 @@ const App = () => (
           <Route path="/packages/performance-marketing" element={<PerformanceMarketingPackages />} />
           
           {/* Our Work */}
-          <Route path="/our-work/meta-ads" element={<MetaAdsPortfolio />} />
-          <Route path="/our-work/web-development" element={<WebDevPortfolio />} />
-          <Route path="/our-work/content-work" element={<ContentPortfolio />} />
+          <Route path="/our-work/Our-Impact" element={<MetaAdsPortfolio />} />
+          <Route path="/our-work/web-development-projects" element={<WebDevPortfolio />} />
+          {/* <Route path="/our-work/content-work" element={<ContentPortfolio />} /> */}
           
           {/* Blog */}
           <Route path="/blog" element={<Blog />} />

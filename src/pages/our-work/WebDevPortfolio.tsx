@@ -13,109 +13,54 @@ const WebDevPortfolio = () => {
       description: "A multilingual news platform delivering Pune, national, and current affairs updates in multiple languages.",
       technologies: ["React", "Node.js", "MongoDB", "SEO Optimization"],
       results: ["Daily news publishing system", "Multilingual news delivery", "High SEO visibility"],
-      image: "/webDevPortfolio/puneNews24.png",
+      image: "/webDevPortfolio/puneNews24.webp",
       live: "https://punenews24.in"
     },
-
-    {
-      title: "NotesMates",
-      category: "Education Platform",
-      description: "An open educational platform designed for RGPV university students to study, share notes, and access academic resources easily.",
-      technologies: ["React", "Node.js", "MongoDB", "Cloud Storage"],
-      results: ["Centralized notes sharing", "Accessible academic resources", "Student collaboration platform"],
-      image: "/webDevPortfolio/notesmate.png",
-      live: "https://notesmates.in"
-    },
-
-    {
-      title: "Daksh Edu",
-      category: "EdTech Platform",
-      description: "A modern ed-tech platform combining social media engagement with meaningful learning experiences.",
-      technologies: ["React", "Node.js", "MongoDB", "Real-time Features"],
-      results: ["Interactive learning environment", "Social learning engagement", "Scalable education platform"],
-      image: "/webDevPortfolio/dakshedu.png",
-      live: "https://dakshedu.in"
-    },
-
-    {
-      title: "Outlawed",
-      category: "Exam Preparation Platform",
-      description: "A CLAT preparation platform providing exam-accurate mock tests, performance analytics, and affordable preparation resources.",
-      technologies: ["React", "Node.js", "MongoDB", "Analytics Engine"],
-      results: ["Mock test simulation system", "Detailed performance analytics", "Affordable preparation resources"],
-      image: "/webDevPortfolio/outlawed.png",
-      live: "https://outlawed.in"
-    },
-
-    {
-      title: "The Resonance",
-      category: "Business & Innovation Platform",
-      description: "A purpose-driven initiative empowering entrepreneurs and skilled talent through innovation, partnerships, and impact-led growth.",
-      technologies: ["React", "Next.js", "Node.js", "SEO Optimization"],
-      results: ["Entrepreneur ecosystem support", "Innovation-driven collaboration", "Impact-led initiatives"],
-      image: "/webDevPortfolio/theresonance.png",
-      live: "https://theresonance.co.in"
-    },
-
-    {
-      title: "RealtySnow",
-      category: "Real Estate Platform",
-      description: "A real estate platform simplifying property buying, selling, and renting through expert guidance and technology-driven solutions.",
-      technologies: ["React", "Node.js", "MongoDB", "Search & Filter Systems"],
-      results: ["Simplified property search", "Property listing management", "Seamless property transactions"],
-      image: "/webDevPortfolio/realtySnow.png",
-      live: "https://realtysnow.com"
-    },
-
-    {
-      title: "CS Nyayavidhi",
-      category: "Legal Services Website",
-      description: "A client-focused legal practice specializing in dispute resolution, arbitration, mediation, and financial recovery solutions.",
-      technologies: ["React", "Node.js", "CMS", "SEO Optimization"],
-      results: ["Professional legal services platform", "Client consultation interface", "Trust-building legal presence"],
-      image: "/webDevPortfolio/csNyayavidhi.png",
-      live: "https://csnyayavidhi.com"
-    },
-
     {
       title: "Calm Chase",
       category: "Personal Development Platform",
       description: "A personal growth and mental wellness platform empowering individuals with emotional balance, confidence, and life skills.",
       technologies: ["React", "Node.js", "MongoDB", "Content Platform"],
       results: ["Personal development resources", "Mental well-being guidance", "Self-growth learning platform"],
-      image: "/webDevPortfolio/calmChase.png",
+      image: "/webDevPortfolio/calmChase.webp",
       live: "https://calmchase.com"
     },
 
     {
-      title: "Calm Chase SSB Zone",
-      category: "Defense Training Platform",
-      description: "A guided SSB preparation platform helping aspirants train through daily challenges focused on psychology, leadership, and communication.",
-      technologies: ["React", "Node.js", "MongoDB", "Interactive Challenges"],
-      results: ["Daily SSB training exercises", "Leadership skill development", "Psychology-based preparation"],
-      image: "/webDevPortfolio/ssbCalmChase.png",
-      live: "https://ssb.calmchase.com"
+      title: "SN Realities",
+      category: "Real Estate Development Company",
+      description: "A professional real estate website designed to showcase residential and commercial projects, helping buyers explore properties, view project details, and connect directly with the developer.",
+      technologies: ["React", "Node.js", "MongoDB", "Real Estate CMS"],
+      results: [
+        "Modern property showcase platform",
+        "Improved online property inquiries",
+        "Lead generation for real estate projects"
+      ],
+      image: "/webDevPortfolio/SNRealities.webp",
+      live: "https://snrealities.com"
     },
-
     {
-      title: "Mehta Auto Works",
-      category: "Automobile Services Website",
-      description: "A digital platform showcasing two-wheeler servicing, spare parts, and electric scooter solutions.",
-      technologies: ["React", "Node.js", "MongoDB", "Booking System"],
-      results: ["Service booking system", "EV product showcase", "Customer service integration"],
-      image: "/webDevPortfolio/MehtaAutoWorks.png",
-      live: "https://mehtaautoworks.com"
+      title: "Lotus Job Group",
+      category: "Recruitment & Job Portal Platform",
+      description: "A recruitment and employment platform designed to connect job seekers with employers while helping companies streamline their hiring process through a centralized digital portal.",
+      technologies: ["React", "Node.js", "MongoDB", "Job Portal System"],
+      results: [
+        "Online platform connecting employers and job seekers",
+        "Simplified job posting and candidate application process",
+        "Improved recruitment visibility for companies"
+      ],
+      image: "/webDevPortfolio/lotusGroup.webp",
+      live: "https://www.lotusjobgroup.com/"
     },
-
     {
-      title: "Five Rivers Duct Cleaning",
-      category: "Home Services Website",
-      description: "A professional service platform enabling customers to book air duct cleaning services and improve indoor air quality.",
-      technologies: ["React", "Node.js", "MongoDB", "Online Booking System"],
-      results: ["Online service booking", "Improved service visibility", "Customer inquiry management"],
-      image: "/webDevPortfolio/fiveRiversDuctCleaning.png",
-      live: "https://fiveriversductcleaning.com"
-    }
+      title: "The Resonance",
+      category: "Business & Innovation Platform",
+      description: "A purpose-driven initiative empowering entrepreneurs and skilled talent through innovation, partnerships, and impact-led growth.",
+      technologies: ["React", "Next.js", "Node.js", "SEO Optimization"],
+      results: ["Entrepreneur ecosystem support", "Innovation-driven collaboration", "Impact-led initiatives"],
+      image: "/webDevPortfolio/theresonance.webp",
+      live: "https://theresonance.co.in"
+    },
   ]
 
   return (
@@ -130,9 +75,9 @@ const WebDevPortfolio = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-sm">
               <Zap className="w-3 h-3" /> Scalable Web Systems
             </div>
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-[0.95] tracking-tighter mb-8">
               Web Developemnt <br />
-              <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase overflow-visible">
+              <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium overflow-visible ">
                 Portfolio
               </span>
             </h1>
@@ -260,24 +205,35 @@ const WebDevPortfolio = () => {
 
       {/* CTA Section */}
 
-      <section className="py-24 px-4 relative overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:30px_30px]" />
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-6 leading-none">
-            Ready to start your digital <br /> transformation?
-          </h2>
-          <p className="text-lg text-slate-400 mb-10 italic font-medium">
-            "Let’s discuss your vision and build something that puts you ahead of the competition."
-          </p>
+      <section className="py-12 md:py-24 sm:px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
-          <Button
-            size="lg"
-            className="h-16 px-10 rounded-full bg-primary hover:bg-white hover:text-primary text-white font-black text-lg transition-all shadow-2xl hover:scale-[1.05]"
-            onClick={() => navigate("/contact")}
-          >
 
-            Start Your Project
-          </Button>
+            {/* 2. CONTENT ARCHITECTURE */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
+                Ready to start your digital transformation?
+              </h2>
+
+              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
+                "Let’s discuss your vision and build something that puts you ahead of the competition."
+              </p>
+
+              {/* 3. ADAPTIVE BUTTON */}
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
+                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                >
+                  Start Your Project
+                </Button>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
     </div>

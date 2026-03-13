@@ -81,21 +81,20 @@ const EmailMarketing = () => {
               className="lg:col-span-7"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
-                <Mail className="w-3 h-3 fill-primary/20" /> ROI-Focused Marketing Lab
+                <Mail className="w-3 h-3 fill-primary/20" /> Email Marketing
               </div>
 
-              <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[0.95] tracking-tighter mb-8">
                 {heroData.heading.split("Smart")[0]} <br />
                 <span className="relative inline-block">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase pr-4 -mr-4 overflow-visible
-">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
                     Smart Email Automation
                   </span>
                 </span>
               </h1>
 
               <p className="text-base md:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic border-l-4 border-primary/20 pl-8 mb-10">
-                "{heroData.subtext}"
+                {heroData.subtext}
               </p>
 
               <div className="flex flex-wrap items-center gap-6">
@@ -107,12 +106,6 @@ const EmailMarketing = () => {
                   {heroData.cta} <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
 
-                <div className="flex items-center gap-3 py-2 px-4 bg-white/50 border border-slate-200 rounded-2xl backdrop-blur-sm">
-                  <div className="flex flex-col">
-                    <span className="text-xs font-black text-slate-900 leading-none">200+ BRANDS</span>
-                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Active Scale</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
@@ -150,7 +143,7 @@ const EmailMarketing = () => {
       {/* WHY CHOOSE US */}
       <section className="py-24 bg-muted">
         <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Email Management</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> for Email Marketing</h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChoosePoints.map((item, index) => (
@@ -272,7 +265,7 @@ const EmailMarketing = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Solutions Suite</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Services</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg">Full-service email management from technical setup to creative execution.</p>
           </div>
 

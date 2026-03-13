@@ -7,11 +7,11 @@ type QuoteSectionProps = {
 
 const QuoteSection = ({ quote, className }: QuoteSectionProps) => {
   return (
-    <section className={`relative py-12 md:py-24 px-4 overflow-hidden ${
+    <section className={`relative py-12 md:py-24 overflow-hidden ${
         className ? className : "bg-[#fafafa]"
       }`}>
       
-      <div className="container mx-auto max-w-5xl relative z-10">
+      <div className="container mx-auto px-4 max-w-5xl relative z-10">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}

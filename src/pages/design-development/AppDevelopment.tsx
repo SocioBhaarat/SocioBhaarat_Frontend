@@ -75,18 +75,18 @@ const AppDevelopment = () => {
               className="lg:col-span-7 space-y-8 text-left"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Smartphone className="w-3 h-3" /> App Architecture Lab
+                <Smartphone className="w-3 h-3" /> App Development
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
-                Build <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase inline-block pr-4 -mr-4 overflow-visible">
-                  Smart & Scalable
-                </span> Mobile Ecosystems.
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter">
+                Build High-Performance <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
+                  Mobile Applications
+                </span> For Your Business
               </h1>
 
               <p className="text-base md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
-                "We design and develop high-performance iOS & Android applications that streamline operations and drive business growth across Madhya Pradesh."
+                We design and develop user-friendly, secure, and high-performance mobile applications that enhance customer engagement, streamline operations, and drive business growth.
               </p>
 
               <div className="flex justify-start pt-4">
@@ -140,15 +140,15 @@ const AppDevelopment = () => {
 
       {/*  WHY CHOOSE US  */}
       <section className="py-24 bg-muted/30">
-        <div className="container mx-auto max-w-6xl text-center">
+        <div className="container mx-auto max-w-6xl text-center px-4">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Mobile Mastery</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> for App Development</h2>
             <p className="text-muted-foreground text-sm md:text-base px-4">
-              Why SocioBhaarat is the trusted partner for web innovation.
+              Why SocioBhaarat is the trusted partner for mobile app innovation.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
@@ -168,10 +168,10 @@ const AppDevelopment = () => {
 
       {/*  SERVICES GRID  */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">App Solutions</span></h2>
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">App Services</span></h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -213,10 +213,10 @@ const AppDevelopment = () => {
 
       {/* DEVELOPMENT PROCESS */}
       <section className="py-24 bg-background relative overflow-hidden">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center tracking-tight">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible ">Production Roadmap</span></h2>
+        <div className="container mx-auto max-w-6xl px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-20 text-center tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible ">Development</span> Process</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
             {process.map((step, index) => (
               <motion.div
                 key={index}
@@ -241,7 +241,7 @@ const AppDevelopment = () => {
 
       {/*  FINAL CTA  */}
       <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-5xl px-4">
           <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
             {/* 1. RESPONSIVE DECORATIVE ICON */}

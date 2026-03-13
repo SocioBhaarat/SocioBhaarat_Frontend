@@ -18,6 +18,8 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
+  const [activeValue, setActiveValue] = useState<string>("");
+
   const menuItems = {
     digitalMarketing: [
       { name: "ORM Services", path: "/digital-marketing/orm-services" },
@@ -25,7 +27,7 @@ const Navigation = () => {
         name: "Social Media Marketing",
         path: "/digital-marketing/social-media",
       },
-      { name: "Website SEO", path: "/digital-marketing/website-seo" },
+      { name: "SEO for Website", path: "/digital-marketing/website-seo" },
       {
         name: "Google Business Profile & SEO",
         path: "/digital-marketing/google-map-marketing",
@@ -38,7 +40,7 @@ const Navigation = () => {
       {
         name: "Email Marketing",
         path: "/digital-marketing/email-marketing",
-      },{
+      }, {
         name: "Video Marketing",
         path: "/digital-marketing/video-marketing",
       },
@@ -90,10 +92,13 @@ const Navigation = () => {
       },
     ],
     ourWork: [
-      { name: "Meta Ads Portfolio", path: "/our-work/meta-ads" },
-      { name: "Web Development Projects", path: "/our-work/web-development" },
-      { name: "Content Work", path: "/our-work/content-work" },
+      { name: "Our Impact", path: "/our-work/our-impact" },
+      { name: "Web Development Projects", path: "/our-work/web-development-projects" },
     ],
+  };
+
+  const handleTriggerClick = (value: string) => {
+    setActiveValue(activeValue === value ? "" : value);
   };
 
   return (
@@ -105,41 +110,38 @@ const Navigation = () => {
         <nav className="bg-blue-400/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-6">
             <div className="flex items-center justify-between h-20">
+              {/* Mobile Logo */}
               <Link to="/" className="md:hidden flex items-center">
-                <img
-                  src="/images/logo-full.webp"
-                  alt="Socio Bhaarat"
-                  className="h-20 sm:h-14 w-auto"
-                />
+                <img src="/images/logo-full.webp" alt="Socio Bhaarat" className="h-20 sm:h-14 w-auto" />
               </Link>
+
+              {/* Desktop Menu */}
               <div className="hidden xl:flex items-center gap-1">
-                <NavigationMenu>
+                <NavigationMenu value={activeValue} onValueChange={setActiveValue}>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <Link
-                        to="/"
-                        className="px-4 py-2 text-foreground hover:text-accent transition-colors font-medium text-[17px]"
-                      >
+                      <Link to="/" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium text-[17px]">
                         Home
                       </Link>
                     </NavigationMenuItem>
 
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-[17px]">
+                    {/* Digital Marketing Trigger */}
+                    <NavigationMenuItem value="digital">
+                      <NavigationMenuTrigger
+                        onClick={() => handleTriggerClick("digital")}
+                        className="text-[17px] hover:text-primary/10 hover:text-white data-[state=open]:text-primary transition-all pointer-events-auto"
+                        onPointerMove={(e) => e.preventDefault()} // Prevents hover expansion
+                        onPointerLeave={(e) => e.preventDefault()}
+                      >
                         Digital Marketing
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-auto gap-3 p-4 bg-background">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.digitalMarketing.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
-                                <Link
-                                  to={item.path}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                >
-                                  <div className="text-sm font-medium leading-none">
-                                    {item.name}
-                                  </div>
+                                <Link to={item.path} onClick={() => setActiveValue("")} className="block p-3 rounded-md hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium">
+                                  {item.name}
                                 </Link>
                               </NavigationMenuLink>
                             </li>
@@ -148,22 +150,22 @@ const Navigation = () => {
                       </NavigationMenuContent>
                     </NavigationMenuItem>
 
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-[17px]">
+                    {/* Design & Development Trigger */}
+                    <NavigationMenuItem value="design">
+                      <NavigationMenuTrigger
+                        onClick={() => handleTriggerClick("design")}
+                        className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
+                        onPointerMove={(e) => e.preventDefault()}
+                      >
                         Design & Development
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-auto gap-3 p-4 bg-background">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.designDev.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
-                                <Link
-                                  to={item.path}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                >
-                                  <div className="text-sm font-medium leading-none">
-                                    {item.name}
-                                  </div>
+                                <Link to={item.path} onClick={() => setActiveValue("")} className="block p-3 rounded-md hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium">
+                                  {item.name}
                                 </Link>
                               </NavigationMenuLink>
                             </li>
@@ -172,22 +174,22 @@ const Navigation = () => {
                       </NavigationMenuContent>
                     </NavigationMenuItem>
 
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-[17px]">
+                    {/* WhatsApp Marketing Trigger */}
+                    <NavigationMenuItem value="whatsapp">
+                      <NavigationMenuTrigger
+                        onClick={() => handleTriggerClick("whatsapp")}
+                        className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
+                        onPointerMove={(e) => e.preventDefault()}
+                      >
                         WhatsApp Marketing
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-auto gap-3 p-4 bg-background">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.whatsapp.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
-                                <Link
-                                  to={item.path}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                >
-                                  <div className="text-sm font-medium leading-none">
-                                    {item.name}
-                                  </div>
+                                <Link to={item.path} onClick={() => setActiveValue("")} className="block p-3 rounded-md hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium">
+                                  {item.name}
                                 </Link>
                               </NavigationMenuLink>
                             </li>
@@ -197,30 +199,27 @@ const Navigation = () => {
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                      <Link
-                        to="/performance-marketing"
-                        className="px-4 py-2 text-foreground hover:text-accent transition-colors font-medium text-[17px] inline-flex items-center"
-                      >
+                      <Link to="/performance-marketing" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium text-[17px] inline-flex items-center">
                         Performance Marketing
                       </Link>
                     </NavigationMenuItem>
 
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-[17px]">
+                    {/* Packages Trigger */}
+                    <NavigationMenuItem value="packages">
+                      <NavigationMenuTrigger
+                        onClick={() => handleTriggerClick("packages")}
+                        className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
+                        onPointerMove={(e) => e.preventDefault()}
+                      >
                         Packages
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-auto gap-3 p-4 bg-background">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.packages.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
-                                <Link
-                                  to={item.path}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                >
-                                  <div className="text-sm font-medium leading-none">
-                                    {item.name}
-                                  </div>
+                                <Link to={item.path} onClick={() => setActiveValue("")} className="block p-3 rounded-md hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium">
+                                  {item.name}
                                 </Link>
                               </NavigationMenuLink>
                             </li>
@@ -229,22 +228,22 @@ const Navigation = () => {
                       </NavigationMenuContent>
                     </NavigationMenuItem>
 
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="text-[17px]">
+                    {/* Our Work Trigger */}
+                    <NavigationMenuItem value="work">
+                      <NavigationMenuTrigger
+                        onClick={() => handleTriggerClick("work")}
+                        className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
+                        onPointerMove={(e) => e.preventDefault()}
+                      >
                         Our Work
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-auto gap-3 p-4 bg-background">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.ourWork.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
-                                <Link
-                                  to={item.path}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                >
-                                  <div className="text-sm font-medium leading-none">
-                                    {item.name}
-                                  </div>
+                                <Link to={item.path} onClick={() => setActiveValue("")} className="block p-3 rounded-md hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium">
+                                  {item.name}
                                 </Link>
                               </NavigationMenuLink>
                             </li>
@@ -252,7 +251,6 @@ const Navigation = () => {
                         </ul>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
-
                     <NavigationMenuItem>
                       <Link
                         to="/blog"
@@ -270,26 +268,14 @@ const Navigation = () => {
                         Contact
                       </Link>
                     </NavigationMenuItem>
+
                   </NavigationMenuList>
                 </NavigationMenu>
-
-                {/* <Button 
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full px-6 ml-4"
-              >
-                BOOK A CALL
-              </Button> */}
               </div>
 
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="xl:hidden text-foreground hover:text-accent transition-colors"
-              >
-                {isOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
+              {/* Mobile Menu Toggle Button */}
+              <button onClick={() => setIsOpen(!isOpen)} className="xl:hidden text-foreground">
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
 
@@ -315,9 +301,8 @@ const Navigation = () => {
                     >
                       Digital Marketing
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "digital" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "digital" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "digital" && (
@@ -347,9 +332,8 @@ const Navigation = () => {
                     >
                       Design & Development
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "design" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "design" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "design" && (
@@ -379,9 +363,8 @@ const Navigation = () => {
                     >
                       WhatsApp Marketing
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "whatsapp" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "whatsapp" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "whatsapp" && (
@@ -419,9 +402,8 @@ const Navigation = () => {
                     >
                       Packages
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "packages" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "packages" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "packages" && (
@@ -449,9 +431,8 @@ const Navigation = () => {
                     >
                       Our Work
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "work" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "work" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "work" && (
@@ -478,7 +459,9 @@ const Navigation = () => {
                     Contact Us
                   </Link>
 
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded mt-2">
+                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded mt-2"
+                    onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                  >
                     BOOK A CALL
                   </Button>
                   <Link to="/hiring" onClick={() => setIsOpen(false)}>
