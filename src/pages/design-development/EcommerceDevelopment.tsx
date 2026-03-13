@@ -122,7 +122,7 @@ const EcommerceDevelopment = () => {
                 <ShoppingBag className="w-3 h-3" /> E-commerce Development
               </div>
 
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
                 Build High-Converting & Scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
                   E-commerce Stores
                 </span>
@@ -228,7 +228,7 @@ const EcommerceDevelopment = () => {
 
         <div className="container mx-auto max-w-6xl relative z-10 px-4">
           {/* Responsive Header */}
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-10 md:mb-16 text-center italic tracking-tighter leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-center italic tracking-tighter leading-tight">
             E-Commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
               Services
             </span>

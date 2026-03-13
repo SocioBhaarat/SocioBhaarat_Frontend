@@ -59,7 +59,7 @@ const Testimonials = () => {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md text-primary text-[10px] font-bold mb-10 tracking-[0.2em] uppercase shadow-sm">
               <Star className="w-3 h-3" /> Client Success Stories
             </div>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-black mb-8 text-slate-900 leading-[1.05] tracking-tighter">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-slate-800 leading-[1.05] tracking-tighter">
               The Voice of <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Digital Impact</span>.
             </h1>

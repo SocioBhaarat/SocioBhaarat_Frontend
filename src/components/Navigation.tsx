@@ -40,7 +40,7 @@ const Navigation = () => {
       {
         name: "Email Marketing",
         path: "/digital-marketing/email-marketing",
-      },{
+      }, {
         name: "Video Marketing",
         path: "/digital-marketing/video-marketing",
       },
@@ -93,7 +93,7 @@ const Navigation = () => {
     ],
     ourWork: [
       { name: "Our Impact", path: "/our-work/our-impact" },
-      { name: "Projects by Socio Bhaarat", path: "/our-work/projects-by-socio-bhaarat" },
+      { name: "Web Development Projects", path: "/our-work/web-development-projects" },
     ],
   };
 
@@ -110,7 +110,6 @@ const Navigation = () => {
         <nav className="bg-blue-400/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-6">
             <div className="flex items-center justify-between h-20">
-              
               {/* Mobile Logo */}
               <Link to="/" className="md:hidden flex items-center">
                 <img src="/images/logo-full.webp" alt="Socio Bhaarat" className="h-20 sm:h-14 w-auto" />
@@ -120,7 +119,6 @@ const Navigation = () => {
               <div className="hidden xl:flex items-center gap-1">
                 <NavigationMenu value={activeValue} onValueChange={setActiveValue}>
                   <NavigationMenuList>
-                    
                     <NavigationMenuItem>
                       <Link to="/" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium text-[17px]">
                         Home
@@ -129,7 +127,7 @@ const Navigation = () => {
 
                     {/* Digital Marketing Trigger */}
                     <NavigationMenuItem value="digital">
-                      <NavigationMenuTrigger 
+                      <NavigationMenuTrigger
                         onClick={() => handleTriggerClick("digital")}
                         className="text-[17px] hover:text-primary/10 hover:text-white data-[state=open]:text-primary transition-all pointer-events-auto"
                         onPointerMove={(e) => e.preventDefault()} // Prevents hover expansion
@@ -138,7 +136,7 @@ const Navigation = () => {
                         Digital Marketing
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-[250px] gap-1 p-4 bg-background border shadow-xl rounded-xl">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.digitalMarketing.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
@@ -154,7 +152,7 @@ const Navigation = () => {
 
                     {/* Design & Development Trigger */}
                     <NavigationMenuItem value="design">
-                      <NavigationMenuTrigger 
+                      <NavigationMenuTrigger
                         onClick={() => handleTriggerClick("design")}
                         className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
                         onPointerMove={(e) => e.preventDefault()}
@@ -162,7 +160,7 @@ const Navigation = () => {
                         Design & Development
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-[250px] gap-1 p-4 bg-background border shadow-xl rounded-xl">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.designDev.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
@@ -178,7 +176,7 @@ const Navigation = () => {
 
                     {/* WhatsApp Marketing Trigger */}
                     <NavigationMenuItem value="whatsapp">
-                      <NavigationMenuTrigger 
+                      <NavigationMenuTrigger
                         onClick={() => handleTriggerClick("whatsapp")}
                         className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
                         onPointerMove={(e) => e.preventDefault()}
@@ -186,7 +184,7 @@ const Navigation = () => {
                         WhatsApp Marketing
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-[250px] gap-1 p-4 bg-background border shadow-xl rounded-xl">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.whatsapp.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
@@ -201,14 +199,14 @@ const Navigation = () => {
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                      <Link to="/performance-marketing" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium text-[17px]">
+                      <Link to="/performance-marketing" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium text-[17px] inline-flex items-center">
                         Performance Marketing
                       </Link>
                     </NavigationMenuItem>
 
                     {/* Packages Trigger */}
                     <NavigationMenuItem value="packages">
-                      <NavigationMenuTrigger 
+                      <NavigationMenuTrigger
                         onClick={() => handleTriggerClick("packages")}
                         className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
                         onPointerMove={(e) => e.preventDefault()}
@@ -216,7 +214,7 @@ const Navigation = () => {
                         Packages
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-[250px] gap-1 p-4 bg-background border shadow-xl rounded-xl">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.packages.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
@@ -232,7 +230,7 @@ const Navigation = () => {
 
                     {/* Our Work Trigger */}
                     <NavigationMenuItem value="work">
-                      <NavigationMenuTrigger 
+                      <NavigationMenuTrigger
                         onClick={() => handleTriggerClick("work")}
                         className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
                         onPointerMove={(e) => e.preventDefault()}
@@ -240,7 +238,7 @@ const Navigation = () => {
                         Our Work
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid w-[250px] gap-1 p-4 bg-background border shadow-xl rounded-xl">
+                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
                           {menuItems.ourWork.map((item) => (
                             <li key={item.path}>
                               <NavigationMenuLink asChild>
@@ -252,6 +250,23 @@ const Navigation = () => {
                           ))}
                         </ul>
                       </NavigationMenuContent>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                      <Link
+                        to="/blog"
+                        className="px-4 py-2 text-foreground hover:text-accent transition-colors font-medium text-[17px]"
+                      >
+                        Blog
+                      </Link>
+                    </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                      <Link
+                        to="/contact"
+                        className="px-4 py-2 text-foreground hover:text-accent transition-colors font-medium text-[17px]"
+                      >
+                        Contact
+                      </Link>
                     </NavigationMenuItem>
 
                   </NavigationMenuList>
@@ -286,9 +301,8 @@ const Navigation = () => {
                     >
                       Digital Marketing
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "digital" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "digital" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "digital" && (
@@ -318,9 +332,8 @@ const Navigation = () => {
                     >
                       Design & Development
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "design" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "design" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "design" && (
@@ -350,9 +363,8 @@ const Navigation = () => {
                     >
                       WhatsApp Marketing
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "whatsapp" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "whatsapp" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "whatsapp" && (
@@ -390,9 +402,8 @@ const Navigation = () => {
                     >
                       Packages
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "packages" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "packages" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "packages" && (
@@ -420,9 +431,8 @@ const Navigation = () => {
                     >
                       Our Work
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform ${
-                          openDropdown === "work" ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform ${openDropdown === "work" ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     {openDropdown === "work" && (
@@ -450,7 +460,7 @@ const Navigation = () => {
                   </Link>
 
                   <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded mt-2"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                    onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                   >
                     BOOK A CALL
                   </Button>

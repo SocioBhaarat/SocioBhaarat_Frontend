@@ -208,10 +208,10 @@ const Services = () => {
             </div>
 
             {/* High-Authority Typography */}
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-8 md:mb-10">
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[0.95] tracking-tighter mb-8 md:mb-10">
               Digital <br />
               <span className="relative inline-block">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase text-4xl md:text-6xl lg:text-7xl pr-4 -mr-4 overflow-visible">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium text-4xl md:text-6xl lg:text-7xl pr-4 -mr-4 overflow-visible">
                   Excellence
                 </span>
               </span> <br className="hidden md:block" /> Delivered.

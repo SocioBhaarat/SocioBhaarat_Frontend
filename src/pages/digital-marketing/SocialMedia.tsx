@@ -303,7 +303,7 @@ const SocialMedia = () => {
           >
             <h2 className="font-display text-3xl md:text-5xl
  font-bold italic tracking-tighter text-slate-900">
-              Ecosystem <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Mastery</span>
+              Platforms <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">We Master</span>
             </h2>
             <p className=" text-sm md:text-lg mt-4 text-muted-foreground italic font-medium">
               Expert execution across the world's most influential social architectures.

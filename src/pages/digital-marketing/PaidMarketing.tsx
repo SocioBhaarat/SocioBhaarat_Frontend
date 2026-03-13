@@ -111,7 +111,7 @@ const PaidMarketing = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[9px] font-bold tracking-[0.2em] uppercase shadow-sm">
                 <Zap className="w-3 h-3" /> Meta Ads / Google Ads / Paid Marketing
               </div>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter">
                 Instant Traffic. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium tracking-tight leading-none inline-block pr-4 -mr-4 overflow-visible">Scalable Leads.</span>
               </h1>
@@ -191,7 +191,7 @@ const PaidMarketing = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}>
-              <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter mb-6 uppercase">The Speed of <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Results</span></h2>
+              <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter mb-6">The Speed of <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Results</span></h2>
               <p className="text-muted-foreground text-sm md:text-lg mb-8 leading-relaxed italic border-l-4 border-primary/30 pl-6">
                 Paid marketing helps businesses reach ideal customers instantly. With precise targeting, Meta and Google Ads generate faster revenue growth compared to organic-only strategies.
               </p>
@@ -219,7 +219,7 @@ const PaidMarketing = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Performance</span> Units
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Performance</span> Services
             </h2>
             <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic">
               High-precision ad architectures engineered for ROI across the MP digital landscape.
@@ -338,7 +338,7 @@ const PaidMarketing = () => {
             >
               Methodology
             </motion.span>
-            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none uppercase">
+            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Approach</span>
             </h2>
             <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic mt-6">

@@ -18,12 +18,11 @@ const OurImpact = () => {
         { metric: "Revenue", value: "₹6 Cr", icon: DollarSign },
       ],
       image: "/OurImpact/SNRealities.webp",
-    },
-    {
+    }, {
       client: "The Shaurya Academy",
       industry: "Education",
-      challenge: "High cost per lead and low-quality leads",
-      solution: "Audience segmentation with lookalike audiences and lead forms",
+      challenge: "High cost per lead (CPL) and low student intent, leading to poor counselor conversion rates.",
+      solution: "Audience segmentation using lookalike audiences of existing toppers and implementing Meta lead forms with qualifying questions.",
       results: [
         { metric: "Cost/Lead", value: "72%↓", icon: Target },
         { metric: "Lead Quality", value: "3.5x", icon: Users },
@@ -32,32 +31,20 @@ const OurImpact = () => {
       ],
       image: "/OurImpact/Theshauryaacademy.webp",
     },
+    
     {
-      client: "Apple property",
+      client: "Apple Property",
       industry: "Real Estate",
-      challenge: "Zero internet presence and zero leads",
-      solution: "Implemented high-quality video production and data-driven digital marketing strategies including social media campaigns, dynamic retargeting ads, Google Ads, Google Business Profile optimization, YouTube management, and property platform management (99acres & Housing.com) to drive business growth within optimized budgets.",
+      challenge: "Limited brand visibility in a competitive market and high dependency on offline brokers for property inquiries.",
+      solution: "Full-funnel digital strategy: High-end property walkthrough videos, dynamic retargeting for site visitors, and Google Local Services Ads for high-intent property buyers.",
       results: [
-        { metric: "Cost/Lead", value: "72%↓", icon: Target },
-        { metric: "Lead Quality", value: "3.5x", icon: Users },
-        { metric: "Enrollments", value: "420%↑", icon: TrendingUp },
-        { metric: "ROAS", value: "6.8x", icon: DollarSign },
+        { metric: "CPL (Real Estate)", value: "58%↓", icon: Target },
+        { metric: "Site Visits", value: "120/mo", icon: Users },
+        { metric: "Inventory Sold", value: "₹12Cr+", icon: TrendingUp },
+        { metric: "Digital ROI", value: "12x", icon: DollarSign },
       ],
-      image: "/OurImpact/Theshauryaacademy.webp",
+      image: "/OurImpact/AppleProperties.webp", // Updated image path suggestion
     },
-    {
-      client: "Apple property",
-      industry: "Education",
-      challenge: "High cost per lead and low-quality leads",
-      solution: "Audience segmentation with lookalike audiences and lead forms",
-      results: [
-        { metric: "Cost/Lead", value: "72%↓", icon: Target },
-        { metric: "Lead Quality", value: "3.5x", icon: Users },
-        { metric: "Enrollments", value: "420%↑", icon: TrendingUp },
-        { metric: "ROAS", value: "6.8x", icon: DollarSign },
-      ],
-      image: "/OurImpact/Theshauryaacademy.webp",
-    }
   ];
 
   return (
@@ -73,7 +60,7 @@ const OurImpact = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-sm">
               <Zap className="w-3 h-3" /> Performance Engineering
             </div>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-[0.95] tracking-tighter mb-8">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-[0.95] tracking-tighter mb-8">
               Our <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium overflow-visible">
                 Impact
               </span>

@@ -82,7 +82,7 @@ const WordPressDevelopment = () => {
                 <Wrench className="w-3 h-3" /> Managed Ecosystems Lab
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl  lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl  lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
                 Custom <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
                   Wordpress Websites
@@ -117,7 +117,7 @@ const WordPressDevelopment = () => {
 
                 <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?w=800&q=80"
+                    src="https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc"
                     alt="High Speed WordPress Optimization"
                     className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                   />
