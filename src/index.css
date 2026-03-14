@@ -5,7 +5,7 @@
 
 
 * {
-  font-family: "TASA Orbiter", sans-serif;
+  font-family: "montserrat","TASA Orbiter", "sans-serif";
 }
 
 @layer base {
@@ -133,3 +133,5 @@
     transform: translateX(-50%);
   }
 }
+
+

@@ -217,7 +217,7 @@ function Index() {
             className="w-full h-full object-cover scale-105"
           >
             {/* <source src="https://res.cloudinary.com/dtlqkeane/video/upload/q_auto:good,f_mp4,vc_h264,br_1200k,w_1280,fps_24/3141208-uhd_3840_2160_25fps_evhgy7.mp4" type="video/mp4" /> */}
-            <source src="/Hero_Video.mp4" type="video/mp4" />
+            <source src="/Hero_Video.webm" type="video/webm" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-background" />
         </div>
@@ -362,7 +362,7 @@ function Index() {
                     muted={false}
                     className="w-full h-full object-cover scale-105"
                   >
-                    <source src="/socio bhaarat1.3running.mp4" type="video/mp4" />
+                    <source src="/socio bhaarat1.3running.webm" type="video/webm" />
                   </video>
                 </div>
 
@@ -564,7 +564,7 @@ function Index() {
                     playsInline
                     className="w-full h-full object-cover"
                   >
-                    <source src="/GrowthSteps.mp4" type="video/mp4" />
+                    <source src="/GrowthSteps.webm" type="video/webm" />
                   </video>
 
                   {/* Subtle Overlay */}
