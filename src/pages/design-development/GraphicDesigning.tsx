@@ -3,11 +3,16 @@ import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import FeatureGrid from "@/components/ui/FeatureGrid";
 import ServiceList from "@/components/ui/ServiceList";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
   Palette, Layers, PenTool, Layout, Box, Image,
   CheckCircle2, ArrowRight, Zap, Target, MousePointer2,
-  Sparkles, Brush, Component
+  Sparkles, Brush, Component,
+  Lightbulb,
+  Paintbrush,
+  Rocket,
+  Search
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -22,37 +27,37 @@ const GraphicDesigning = () => {
   };
 
   const whyChoosePoints = [
-  {
-    title: "Bespoke Brand Identities",
-    icon: Brush,
-    desc: "We engineer unique visual signatures that capture your brand's core essence. By combining custom typography with strategic color psychology, we ensure your identity stands out with absolute distinction in an overcrowded marketplace."
-  },
-  {
-    title: "Strategic Visual Design",
-    icon: Target,
-    desc: "Our design approach is driven by data and business objectives. We don't just create beautiful visuals; we craft strategic assets that align with your marketing goals to effectively communicate your unique value proposition."
-  },
-  {
-    title: "Conversion-Focused UI",
-    icon: MousePointer2,
-    desc: "We bridge the gap between aesthetics and functionality by building user interfaces designed to drive action. Every button, layout, and interaction is optimized to reduce user friction and maximize your digital conversion rates."
-  },
-  {
-    title: "Print & Digital Mastery",
-    icon: Layout,
-    desc: "Our expertise spans across the physical and digital realms, ensuring brand consistency whether it's on a mobile screen or a high-end brochure. We deliver pixel-perfect designs optimized for every medium and viewing environment."
-  },
-  {
-    title: "Iterative Creative Process",
-    icon: Layers,
-    desc: "Transparency and collaboration define our workflow. Through a structured, milestone-based feedback loop, we refine every design detail based on your input, ensuring the final deliverable exceeds your expectations and fulfills your vision."
-  },
-  {
-    title: "High-Resolution Assets",
-    icon: Box,
-    desc: "Receive industry-standard deliverables ready for immediate use. From vector source files to high-performance web assets, we provide a complete kit of professionally exported files that maintain their crisp quality at any scale."
-  }
-];
+    {
+      title: "Bespoke Brand Identities",
+      icon: Brush,
+      desc: "We engineer unique visual signatures that capture your brand's core essence. By combining custom typography with strategic color psychology, we ensure your identity stands out with absolute distinction in an overcrowded marketplace."
+    },
+    {
+      title: "Strategic Visual Design",
+      icon: Target,
+      desc: "Our design approach is driven by data and business objectives. We don't just create beautiful visuals; we craft strategic assets that align with your marketing goals to effectively communicate your unique value proposition."
+    },
+    {
+      title: "Conversion-Focused UI",
+      icon: MousePointer2,
+      desc: "We bridge the gap between aesthetics and functionality by building user interfaces designed to drive action. Every button, layout, and interaction is optimized to reduce user friction and maximize your digital conversion rates."
+    },
+    {
+      title: "Print & Digital Mastery",
+      icon: Layout,
+      desc: "Our expertise spans across the physical and digital realms, ensuring brand consistency whether it's on a mobile screen or a high-end brochure. We deliver pixel-perfect designs optimized for every medium and viewing environment."
+    },
+    {
+      title: "Iterative Creative Process",
+      icon: Layers,
+      desc: "Transparency and collaboration define our workflow. Through a structured, milestone-based feedback loop, we refine every design detail based on your input, ensuring the final deliverable exceeds your expectations and fulfills your vision."
+    },
+    {
+      title: "High-Resolution Assets",
+      icon: Box,
+      desc: "Receive industry-standard deliverables ready for immediate use. From vector source files to high-performance web assets, we provide a complete kit of professionally exported files that maintain their crisp quality at any scale."
+    }
+  ];
 
   const whyNeedPoints = [
     "94% of First Impressions are Design-Related",
@@ -103,15 +108,32 @@ const GraphicDesigning = () => {
   ];
 
   const processSteps = [
-    { step: "Discovery", desc: "Understanding your brand vision, values, and competition." },
-    { step: "Conceptualization", desc: "Brainstorming and creating initial moodboards and sketches." },
-    { step: "Design & Refine", desc: "Developing concepts into polished assets through feedback." },
-    { step: "Delivery", desc: "Providing all file formats and brand guidelines for launch." }
+    {
+      step: "Discovery",
+      desc: "Understanding your brand vision, values, and competition.",
+      icon: Search,
+    },
+    {
+      step: "Conceptualization",
+      desc: "Brainstorming and creating initial moodboards and sketches.",
+      icon: Lightbulb,
+    },
+    {
+      step: "Design & Refine",
+      desc: "Developing concepts into polished assets through feedback.",
+      icon: Paintbrush,
+    },
+    {
+      step: "Delivery",
+      desc: "Providing all file formats and brand guidelines for launch.",
+      icon: Rocket,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
+      {/* Hero Section */}
       <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
         {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -196,63 +218,89 @@ const GraphicDesigning = () => {
       </section>
 
       {/* WHY YOU NEED IT */}
-      <section className="py-16 md:py-24 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
 
+      <section className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
+        {/* Blobs */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-[60px] opacity-50 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-50 rounded-full blur-[60px] opacity-50 pointer-events-none" />
 
-        <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left — Impact Card */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               className="order-2 lg:order-1"
             >
-              <div className="bg-card border-2 border-border p-6 sm:p-10 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden group">
+              <div className="relative bg-background border border-border rounded-[2rem] p-7 md:p-9 overflow-hidden">
+                {/* Top gradient line */}
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-600 to-orange-500" />
 
-                <h3 className="text-xl md:text-2xl font-black mb-6 md:mb-8 italic">
-                  Design Impact Analysis
-                </h3>
+                {/* Card title */}
+                <div className="flex items-center gap-2.5 mb-6">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-br from-blue-600 to-orange-500" />
+                  <h3 className="text-xl md:text-2xl font-normal text-foreground">
+                    Design Impact Analysis
+                  </h3>
+                </div>
 
-                <div className="space-y-4 md:space-y-6">
+                {/* Points */}
+                <div className="flex flex-col gap-2">
                   {whyNeedPoints.map((point, index) => (
-                    <div key={index} className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-background border border-border/50 hover:border-primary/30 transition-all group/item shadow-sm">
-                      <div className="h-8 w-8 md:h-10 md:w-10 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors flex-shrink-0">
-                        <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5" />
+                    <div
+                      key={index}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl bg-muted/50 border border-border/50
+                           hover:bg-background hover:border-blue-200 transition-all duration-200 group/item cursor-default"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-muted border border-border flex items-center justify-center flex-shrink-0
+                                group-hover/item:bg-blue-50 group-hover/item:border-blue-200 transition-all">
+                        <CheckCircle2 className="w-4 h-4 text-muted-foreground group-hover/item:text-blue-600 transition-colors" />
                       </div>
-                      <span className="font-bold text-xs md:text-sm tracking-tight text-slate-700">{point}</span>
+                      <span className="text-sm font-semibold text-slate-700 leading-snug">
+                        {point}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
             </motion.div>
 
-            {/* 2. STRATEGIC NARRATIVE (Shows first on mobile) */}
+            {/* Right — Narrative */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-6 order-1 lg:order-2"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="order-1 lg:order-2 flex flex-col gap-6"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest border border-primary/20">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-bold uppercase tracking-[0.14em] w-fit">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600 inline-block" />
                 Brand Psychology Lab
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tighter text-slate-900">
-                Design is the <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
+              {/* Blue divider */}
+              <div className="w-8 h-0.5 bg-blue-600 rounded-full" />
+
+              {/* Headline */}
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+                Design is the{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
                   Silent Ambassador
-                </span> <br className="hidden md:block" /> of Your Brand.
+                </span>{" "}
+                of Your Brand.
               </h2>
 
-              <p className="text-slate-500 text-base md:text-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
-                "Before a customer ever reads your copy or talks to your team, they judge you by your visuals. Great design builds a psychological bridge of trust."
-              </p>
-
-              <div className="pt-4">
-                <Button variant="link" className="text-primary p-0 h-auto text-base md:text-lg font-black group uppercase tracking-tight">
-                  Learn about Brand Psychology
-                  <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+              {/* Quote block */}
+              <div className="relative bg-background border border-border border-l-[3px] border-l-blue-600 rounded-xl rounded-l-none p-5">
+                <p className="text-[15px] text-muted-foreground leading-relaxed">
+                  "Before a customer ever reads your copy or talks to your team, they
+                  judge you by your visuals. Great design builds a psychological bridge
+                  of trust."
+                </p>
               </div>
             </motion.div>
 
@@ -274,7 +322,7 @@ const GraphicDesigning = () => {
             </h2>
             <p className="text-slate-700 text-lg md:text-xl max-w-7xl font-medium leading-relaxed">
 
-              We combine 500+ projects of experience with a <span className="text-slate-900 font-bold underline decoration-primary/30 decoration-4 underline-offset-4">high-end satisfaction</span> rate to deliver pixels that perform. 
+              We combine 500+ projects of experience with a <span className="text-slate-900 font-bold underline decoration-primary/30 decoration-4 underline-offset-4">high-end satisfaction</span> rate to deliver pixels that perform.
             </p>
           </div>
 
@@ -299,25 +347,84 @@ const GraphicDesigning = () => {
       </section>
 
       {/* DESIGN PROCESS */}
-      <section className="py-24 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Creative Journey</span></h2>
-          <div className="relative">
-            {/* Visual Path Connector */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px border-t-2 border-dashed border-border -z-10" />
 
-            <div className="grid md:grid-cols-4 gap-8">
-              {processSteps.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-14 h-14 bg-background border-2 border-primary text-primary rounded-2xl flex items-center justify-center font-black text-lg mx-auto mb-6 shadow-xl transition-transform hover:rotate-6">
-                    {index + 1}
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.step}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
+      <section className="py-24 px-4 bg-muted/30">
+        <div className="container mx-auto w-full max-w-7xl">
+
+          {/* Header */}
+          <div className="text-center mb-14">
+            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground mb-4">
+              Our process
+            </p>
+            <h2 className=" text-4xl md:text-5xl font-bold leading-tight">
+              The{" "}
+              <em className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">
+                Creative Journey
+              </em>
+            </h2>
           </div>
+
+          {/* Steps — unified bordered panel */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-border rounded-[2rem] overflow-hidden bg-background">
+            {processSteps.map((item, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "relative flex flex-col gap-0 p-8 md:p-9 cursor-default group overflow-hidden transition-colors duration-200 hover:bg-muted/50",
+                  index < processSteps.length - 1 && [
+                    "border-b lg:border-b-0 lg:border-r",
+                    "sm:border-b-0 sm:border-r",
+                    index % 2 === 1 && "sm:border-r-0 sm:border-b lg:border-b-0 lg:border-r",
+                  ],
+                  "border-border"
+                )}
+              >
+                {/* Top row: number + icon + arrow */}
+                <div className="flex items-start justify-between mb-8">
+                  <div
+                    className="w-11 h-11 rounded-xl border-[1.5px] border-blue-600 flex items-center justify-center
+                         font-serif text-xl font-normal text-blue-600 bg-background
+                         group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-[0_6px_20px_rgba(37,99,235,0.3)]
+                         transition-all duration-250"
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <div className="w-9 h-9 rounded-lg bg-muted border border-border flex items-center justify-center
+                              group-hover:bg-blue-50 group-hover:border-blue-200 transition-all duration-200">
+                      <item.icon className="w-4 h-4 text-muted-foreground group-hover:text-blue-600 transition-colors" />
+                    </div>
+                    {index < processSteps.length - 1 && (
+                      <span className="text-border group-hover:text-blue-300 transition-colors text-lg hidden lg:block">
+                        →
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Phase label */}
+                <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground mb-1.5">
+                  Phase {String(index + 1).padStart(2, "0")}
+                </p>
+
+                {/* Title */}
+                <h3 className="text-[1.1rem] font-bold text-foreground mb-2.5 leading-snug">
+                  {item.step}
+                </h3>
+
+                {/* Desc */}
+                <p className="text-[13.5px] text-muted-foreground leading-relaxed italic">
+                  {item.desc}
+                </p>
+
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-600 to-orange-500
+                scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-400" />
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 

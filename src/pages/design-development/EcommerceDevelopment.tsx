@@ -201,47 +201,6 @@ const EcommerceDevelopment = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-24 bg-muted/30 border-y border-border">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-600 italic  font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span></h2>
-              <p className="text-muted-foreground text-md md:text-lg mb-8 leading-relaxed">
-                We combine strategy, technology, and customer-focused design to create platforms that deliver seamless shopping experiences and revenue growth.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="p-4 bg-background rounded-2xl border border-border shadow-sm">
-                  <div className="text-3xl font-black text-orange-500">500+</div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Successful Projects</p>
-                </div>
-                <div className="p-4 bg-background rounded-2xl border border-border shadow-sm">
-                  <div className="text-3xl font-black text-blue-600">98%</div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Satisfaction Rate</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <div className="grid gap-4">
-              {whyChooseUsData.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  whileHover={{ x: 10 }}
-                  className="flex items-center gap-5 p-5 rounded-2xl bg-card border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all group">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                    <item.icon />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-sm mb-1">{item.title}</h4>
-                    <p className="text-[11px] text-muted-foreground leading-relaxed italic">
-                      {item.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-24 bg-muted/30 border-y border-border">
         <div className="container mx-auto max-w-6xl px-4">
