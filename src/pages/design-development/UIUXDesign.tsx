@@ -210,11 +210,11 @@ const UIUXDesign = () => {
                   />
 
                   {/* Floating Mini-Metric Overlay */}
-                  <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
-                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Lighthouse Score</p>
+                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Usability</p>
                     <div className="flex items-center gap-2">
-                      <p className="text-xl font-black text-slate-900">100/100</p>
-                      <Zap size={16} className="text-yellow-500 fill-yellow-500" />
+                      <p className="text-xl font-black text-slate-900">95% CSAT</p>
+                      <Heart size={16} className="text-red-500 fill-red-500" />
                     </div>
                   </div>
                 </div>

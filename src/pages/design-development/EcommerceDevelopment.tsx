@@ -182,11 +182,11 @@ const EcommerceDevelopment = () => {
                   />
 
                   {/* Floating Mini-Metric Overlay */}
-                  <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
-                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Lighthouse Score</p>
+                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Conversion Rate</p>
                     <div className="flex items-center gap-2">
-                      <p className="text-xl font-black text-slate-900">100/100</p>
-                      <Zap size={16} className="text-yellow-500 fill-yellow-500" />
+                      <p className="text-xl font-black text-slate-900">+340% ROI</p>
+                      <TrendingUp size={16} className="text-green-500" />
                     </div>
                   </div>
                 </div>
