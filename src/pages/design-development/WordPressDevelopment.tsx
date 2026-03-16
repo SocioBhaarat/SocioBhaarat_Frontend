@@ -11,18 +11,53 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import ServiceList from "@/components/ui/ServiceList";
+import { useEffect, useRef, useState } from "react";
+import MatrixLayout from "@/components/ui/MatrixLayout";
+import TechGrid from "@/components/ui/TechGrid";
+import { CTASection } from "@/components/ui/CTASection";
+import ProcessSection from "@/components/DevelopmentProcess";
 
 const WordPressDevelopment = () => {
   const navigate = useNavigate();
 
-  /* DATA */
   const services = [
-    { title: "Custom WordPress Development", icon: <Code2 />, desc: "High-performance, bespoke site architecture." },
-    { title: "Theme Customization", icon: <Palette />, desc: "Tailored visual identities that convert." },
-    { title: "Plugin Engineering", icon: <Puzzle />, desc: "Custom features and third-party integrations." },
-    { title: "WooCommerce Solutions", icon: <ShoppingCart />, desc: "Scalable digital storefronts and gateways." },
-    { title: "Enterprise Websites", icon: <Building2 />, desc: "Professional portals for corporate growth." },
-    { title: "Speed & Performance", icon: <Gauge />, desc: "Core Web Vitals and caching optimization." },
+    {
+      title: "Custom WordPress Development",
+      icon: <Code2 />,
+      color: "#2563eb", // Blue
+      desc: "We engineer high-performance, bespoke site architectures from the ground up, ensuring clean code, security-first protocols, and complete scalability to handle complex business logic and high-traffic demands effortlessly."
+    },
+    {
+      title: "Theme Customization",
+      icon: <Palette />,
+      color: "#7c3aed", // Violet
+      desc: "Transform your brand identity with tailored visual aesthetics that prioritize user experience. We go beyond basic templates to build pixel-perfect designs that align with your unique corporate vision and conversion goals."
+    },
+    {
+      title: "Plugin Engineering",
+      icon: <Puzzle />,
+      color: "#0d9488", // Teal
+      desc: "Our team develops custom functional features and seamless third-party integrations, bridging the gap between standard WordPress capabilities and your specific operational requirements through rigorous, secure, and update-proof backend engineering."
+    },
+    {
+      title: "WooCommerce Solutions",
+      icon: <ShoppingCart />,
+      color: "#db2777", // Pink
+      desc: "Building robust digital storefronts designed for scale. From advanced product filtering to secure payment gateway integrations, we provide end-to-end e-commerce solutions that optimize the buyer journey and maximize online revenue."
+    },
+    {
+      title: "Enterprise Websites",
+      icon: <Building2 />,
+      color: "#4f46e5", // Indigo
+      desc: "We develop professional portals and multisite networks specifically designed for corporate growth. These platforms feature advanced permission controls, high-security standards, and integrated workflows to manage large-scale organizational content efficiently."
+    },
+    {
+      title: "Speed & Performance",
+      icon: <Gauge />,
+      color: "#ea580c", // Orange
+      desc: "Maximize your search rankings by optimizing for Core Web Vitals. We implement advanced caching strategies, database optimization, and image compression to ensure lightning-fast load times and a seamless user experience across devices."
+    }
   ];
 
   const whyChooseUs = [
@@ -36,35 +71,100 @@ const WordPressDevelopment = () => {
   ]
 
   const process = [
-    { title: "Requirement Analysis", desc: "Defining technical goals and business roadmaps." },
-    { title: "UI/UX & Prototyping", desc: "Crafting modern, user-centric mobile-first designs." },
-    { title: "Development Phase", desc: "Clean coding with PHP, MySQL, and modern CSS." },
-    { title: "QA & Optimization", desc: "Rigorous security audits and speed testing." },
-    { title: "Launch & Support", desc: "Seamless deployment with post-launch care." },
+    {
+      title: "Project Discovery",
+      color: "#2563eb", // Blue
+      desc: "Initial deep-dive into your business goals, target audience, and functional requirements to establish a solid project foundation."
+    },
+    {
+      title: "Strategic Roadmap",
+      color: "#4f46e5", // Indigo
+      desc: "Architecting the technical ecosystem, defining the sitemap, and creating a detailed timeline for milestone-driven delivery."
+    },
+    {
+      title: "UI/UX Architecture",
+      color: "#7c3aed", // Violet
+      desc: "Designing high-fidelity wireframes and interactive prototypes that prioritize accessibility and mobile-first user experiences."
+    },
+    {
+      title: "Development Phase",
+      color: "#db2777", // Pink
+      desc: "Engineering the backend and frontend using clean code practices with PHP, MySQL, and optimized React or Tailwind CSS."
+    },
+    {
+      title: "Custom Integration",
+      color: "#ea580c", // Orange
+      desc: "Connecting third-party APIs, payment gateways, and custom plugins to extend the platform's native functional capabilities."
+    },
+    {
+      title: "Security Audits",
+      color: "#0d9488", // Teal
+      desc: "Conducting rigorous penetration testing, SQL injection checks, and SSL configurations to ensure enterprise-grade data protection."
+    },
+    {
+      title: "Performance Optimization",
+      color: "#059669", // Green
+      desc: "Optimizing database queries, caching layers, and Core Web Vitals to achieve lightning-fast load times and superior SEO rankings."
+    },
+    {
+      title: "Launch & Monitoring",
+      color: "#1e293b", // Slate
+      desc: "Final deployment to live servers followed by 24/7 uptime monitoring and post-launch maintenance to ensure long-term stability."
+    }
   ];
 
-  const technologies = [
-    "WordPress CMS", "PHP", "MySQL", "WooCommerce",
-    "Elementor Pro", "Yoast SEO", "HTML5 / CSS3", "JavaScript",
-    "Rest APIs", "WPBakery", "RankMath", "WP Rocket"
+  const techStack = [
+    {
+      category: "Core Platforms",
+      color: "#21759b", // WordPress Blue
+      items: [
+        { name: "WordPress CMS", logo: "wordpress" },
+        { name: "WooCommerce", logo: "woocommerce" },
+        { name: "Elementor Pro", logo: "elementor" },
+      ]
+    },
+    {
+      category: "Languages & API",
+      color: "#777bb4", // PHP Purple
+      items: [
+        { name: "PHP", logo: "php" },
+        { name: "HTML5 / CSS3", logo: "html5" },
+        { name: "JavaScript", logo: "javascript" },
+        { name: "Rest APIs", logo: "postman" }, // Using Postman for API representation
+      ]
+    },
+    {
+      category: "Database & Backend",
+      color: "#00758f", // MySQL Blue
+      items: [
+        { name: "MySQL", logo: "mysql" },
+        { name: "WPBakery", logo: "wordpress" }, // No official logo, using WP
+      ]
+    },
+    {
+      category: "Optimization & SEO",
+      color: "#ea580c", // Optimization Orange
+      items: [
+        { name: "Yoast SEO", logo: "google" }, // Using Google/SEO related
+        { name: "RankMath", logo: "googleanalytics" },
+        { name: "WP Rocket", logo: "rocket" }, // Generic rocket icon
+      ]
+    }
   ];
 
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
       {/* HERO SECTION */}
-
-      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
-
-        {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Blueprint Grid Overlay - The "Lab" Look */}
+          {/* Grid Overlay - Matches Brand Protection Lab */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
           {/* Atmospheric Mesh Blobs */}
           <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-
         </div>
 
         {/* 2. MAIN CONTENT GRID */}
@@ -82,21 +182,19 @@ const WordPressDevelopment = () => {
                 <Wrench className="w-3 h-3" /> Managed Ecosystems Lab
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl  lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
                 Custom <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
-                  Wordpress Websites
-                </span> That Drive Growth
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Wordpress Websites</span> That Drive Growth.
               </h1>
 
-              <p className="text-base md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
                 We design and develop high-performance, secure, and fully customizable WordPress websites tailored to your business goals. From corporate sites to e-commerce stores, we deliver solutions that convert visitors into customers.
               </p>
 
               <div className="flex justify-start pt-4">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
                   onClick={() => navigate("/contact")}
                 >
                   Launch Your Project <ArrowRight className="ml-2 w-5 h-5" />
@@ -104,7 +202,7 @@ const WordPressDevelopment = () => {
               </div>
             </motion.div>
 
-            {/* RIGHT COLUMN: Visual Proof (CMS Performance Bento) */}
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -112,7 +210,7 @@ const WordPressDevelopment = () => {
               className="lg:col-span-5 relative hidden lg:block"
             >
               <div className="relative group">
-                {/* Decorative Glow */}
+                {/* Decorative Glow behind image */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
 
                 <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
@@ -123,16 +221,16 @@ const WordPressDevelopment = () => {
                   />
 
                   {/* Floating Mini-Metric Overlay */}
-                  <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
-                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Core Web Vitals</p>
+                  <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Lighthouse Score</p>
                     <div className="flex items-center gap-2">
-                      <p className="text-xl font-black text-slate-900">98% Optimized</p>
+                      <p className="text-xl font-black text-slate-900">100/100</p>
                       <Zap size={16} className="text-yellow-500 fill-yellow-500" />
                     </div>
                   </div>
                 </div>
 
-                {/* Framed Layer for Identity */}
+                {/* Framed Layer - Matching the "Legacy" section rotation */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
               </div>
             </motion.div>
@@ -259,140 +357,57 @@ const WordPressDevelopment = () => {
       </section>
 
       {/* SERVICE GRID */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> Brings to the Table</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -10 }}
-                className="group p-10 rounded-[2.5rem] bg-muted/20 border border-border/60 hover:border-primary/40 transition-all duration-300"
-              >
-                <div className="mb-6 p-4 w-fit rounded-2xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
-                  {service.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
-              </motion.div>
-            ))}
+      <section className="py-24 md:py-20 bg-muted/30 relative overflow-hidden">
+        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+          {/* Section Header: Shifted Left for Modern Engineering Feel */}
+          <div className="mb-20 md:mb-10 max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
+              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
+            </h2>
+            <p className="text-slate-500 text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6">
+              Industrial-strength architecture tailored for high-growth business scalability and engineered for performance
+            </p>
           </div>
+
+          {/* The Technical Rows: No Empty Space */}
+          <ServiceList services={services} />
         </div>
       </section>
 
       {/* TECH STACK BENTO */}
-      <section className="py-24 bg-background border-y border-border">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Technology Stack</span></h2>
-            <p className="mt-4 text-slate-500 text-xs md:text-sm font-medium uppercase tracking-[0.2em] italic">
+      <section className="py-12 bg-background relative overflow-hidden">
+
+        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 leading-none">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible leading-normal">Technology Stack</span>
+            </h2>
+            <p className="text-slate-500 text-sm md:text-xl font-bold">
               The engine behind Madhya Pradesh's fastest digital platforms.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
-            {technologies.map((tech, index) => (
-              <motion.span
-                key={index}
-                whileHover={{ scale: 1.1, backgroundColor: "hsl(var(--primary))", color: "hsl(var(--primary-foreground))" }}
-                className="px-6 py-3 bg-card border border-border rounded-2xl text-sm font-bold shadow-sm cursor-default transition-all"
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
+          <TechGrid techStack={techStack} />
         </div>
       </section>
 
       {/* PROCESS PATH */}
-      <section className="py-12 md:py-24 bg-[#fafafa] relative overflow-hidden">
-
-        <div className="container mx-auto max-w-6xl relative z-10">
-          {/* Responsive Header */}
-          <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-slate-900 leading-[1.1] md:leading-none">
-              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">Engineering</span> Approach
-            </h2>
-            <p className="text-slate-500 text-[10px] md:text-sm max-w-xl mx-auto italic uppercase tracking-[0.15em] font-medium">
-              High-velocity workflow for Bhopal & Jabalpur.
-            </p>
-          </div>
-
-          {/* 2. RESPONSIVE GRID (1 Column Mobile, 2 Columns Desktop) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-            {process.map((step, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -5 }}
-                className="group relative p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col justify-between"
-              >
-                {/* Subtle Background Watermark - Adjusted for Mobile */}
-                <div className="absolute -top-2 -right-2 text-6xl md:text-8xl font-black text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
-                  0{index + 1}
-                </div>
-
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-3 md:mb-4">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-primary text-white flex items-center justify-center font-black text-xs md:text-sm shadow-lg">
-                      {index + 1}
-                    </div>
-                    <h3 className="font-bold text-lg md:text-xl tracking-tight text-slate-900 group-hover:text-primary transition-colors">
-                      {step.title}
-                    </h3>
-                  </div>
-
-                  <p className="text-xs md:text-sm text-slate-500 leading-relaxed italic group-hover:text-slate-700 transition-colors">
-                    {step.desc}
-                  </p>
-                </div>
-
-                {/* Progress Bar Accent */}
-                <div className="mt-6 md:mt-8 w-10 h-1 bg-slate-100 rounded-full group-hover:w-full group-hover:bg-primary transition-all duration-500" />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProcessSection
+        titlePrefix="Our"
+        highlightedWord="Development"
+        titleSuffix="Process"
+        description="A structured workflow that transforms ideas into scalable digital products through a modern development pipeline."
+        process={process}
+      />
 
       <QuoteSection quote="Flexible, powerful WordPress solutions built to scale with your vision and business goals." />
 
       {/* FINAL CTA */}
-
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-            {/* 1. RESPONSIVE DECORATIVE ICON */}
-            <div className="absolute top-0 right-0 p-4 md:p-10 opacity-10 pointer-events-none transition-transform duration-700 group-hover:scale-110">
-              <Code2 className="w-64 h-64 rotate-12" />
-            </div>
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight">
-                Ready to Innovate with WordPress?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                Join 500+ brands powered by SocioBhaarat engineering. Let's start your technical consultation today.
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Launch Your Project Now
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={<>Ready to Innovate <br className="hidden md:block" /> with WordPress?</>}
+        description={<>Join 500+ brands powered by SocioBhaarat engineering. <br className="hidden sm:block" />Let's start your technical consultation today</>}
+        buttonText="Launch Your Project Now"
+      />
     </div>
   );
 };

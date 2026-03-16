@@ -1,78 +1,24 @@
 import { Button } from "@/components/ui/button";
 import QuoteSection from "@/components/ui/QuoteSection";
 import {
-  Check, Code, Smartphone, Zap, Lock, Rocket, Globe, Layers,
-  Layout, Palette, Users, ArrowRight, MousePointer2, Settings2,
-  Terminal, Database, Cpu, MonitorCheck,
+  Code, Smartphone, Zap, Lock, Rocket, Globe, Layers, Palette, ArrowRight, MousePointer2, Settings2,
+  Terminal, Cpu, MonitorCheck,
   Code2,
-  Server,
-  ShoppingBag,
   Search,
   ShieldCheck,
   Target,
-  Box,
-  Globe2,
-  Shield,
-  Wind
 } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import React, { useEffect, useRef, useState } from "react";
-import MatrixLayout from "@/components/ui/MatrixLayout";
 import { CTASection } from "@/components/ui/CTASection";
+import ServiceList from "@/components/ui/ServiceList";
+import TechGrid from "@/components/ui/TechGrid";
+import ProcessSection from "@/components/DevelopmentProcess";
+import FeatureGrid from "@/components/ui/FeatureGrid";
 
 
 const WebDevelopment = () => {
   const navigate = useNavigate();
-
-  const [activePhase, setActivePhase] = useState(0);
-  const [isIntersecting, setIsIntersecting] = useState(false); // Check if section is visible
-  const scrollRef = useRef(null);
-  const sectionRef = useRef(null);
-  // Reference for the whole section
-
-  // 1. Observer: Check if user is looking at this section
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.3 } // 30% section dikhne par hi start hoga
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // 2. Conditional Auto-play Logic (Only runs if visible)
-  useEffect(() => {
-    if (!isIntersecting) return; // Agar screen pe nahi hai toh timer mat chalao
-
-    const timer = setInterval(() => {
-      setActivePhase((prev) => (prev + 1) % process.length);
-    }, 4000);
-
-    return () => clearInterval(timer);
-  }, [isIntersecting]); // Dependency on visibility
-
-  // 3. Responsive Scroll Sync (Horizontal Only)
-  useEffect(() => {
-    if (scrollRef.current && isIntersecting) {
-      const activeItem = scrollRef.current.children[activePhase];
-      if (activeItem) {
-        // block: "nearest" page scroll ko disturb nahi karta
-        activeItem.scrollIntoView({
-          behavior: "smooth",
-          inline: "center",
-          block: "nearest"
-        });
-      }
-    }
-  }, [activePhase, isIntersecting]);
-
 
   const services = [
     {
@@ -395,50 +341,12 @@ const WebDevelopment = () => {
             </p>
           </div>
 
-          {/* The Technical Grid - Adjusted for Mobile/Tablet/Desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14">
-            {whyChooseUs.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="group relative"
-              >
-                {/* Decorative Corner Accents */}
-                <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-slate-200 group-hover:border-primary transition-colors z-20" />
-                <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-slate-200 group-hover:border-secondary transition-colors z-20" />
-
-                {/* Icon Section: Floating Glass Style - Adjusted sizing for Mobile */}
-                <div className="absolute top-6 right-6 sm:top-8 sm:right-8 z-20">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-white shadow-lg border border-slate-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                    <feature.icon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8" />
-                  </div>
-                </div>
-
-                {/* Card Body - Adjusted padding and corner radius for smaller screens */}
-                <div className="bg-slate-50/80 backdrop-blur-sm border border-slate-100 p-6 sm:p-8 md:p-12 rounded-tr-[3rem] sm:rounded-tr-[4rem] rounded-bl-[3rem] sm:rounded-bl-[4rem] group-hover:bg-white group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] group-hover:border-primary/20 transition-all duration-700 h-full flex flex-col justify-between relative overflow-hidden">
-
-                  <div className="space-y-4 md:space-y-6 pr-10 sm:pr-12 md:pr-16">
-                    <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 group-hover:text-primary transition-colors">
-                      {feature.title}
-                    </h3>
-
-                    <p className="text-slate-600 text-sm sm:text-base md:text-xl leading-relaxed tracking-wide font-semibold border-l-2 border-slate-100 group-hover:border-primary/30 pl-4 sm:pl-6 transition-all">
-                      {feature.desc}
-                    </p>
-                  </div>
-
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <FeatureGrid features={whyChooseUs} />
         </div>
       </section>
 
       {/* Why do you need Web Development */}
-      <section ref={sectionRef} className="py-16 md:py-12 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-12 bg-background relative overflow-hidden">
         {/* Background: Data Stream dots */}
         <div className="absolute inset-0 opacity-[0.15] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
@@ -530,71 +438,7 @@ const WebDevelopment = () => {
           </div>
 
           {/* The Technical Rows: No Empty Space */}
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              // We set a local CSS variable here
-              style={{ '--hover-color': service.color } as React.CSSProperties}
-              className="group grid grid-cols-1 md:grid-cols-12 py-5 border-b border-slate-100 items-center hover:bg-slate-50/50 transition-all duration-500 px-6 -mx-6 rounded-2xl relative overflow-hidden"
-            >
-              {/* 1. Technical Index */}
-              <div className="md:col-span-1 mb-6 md:mb-0">
-                <span className="text-xs font-bold text-slate-300 transition-colors custom-index">
-                  [ 0{index + 1} ]
-                </span>
-              </div>
-
-              {/* 2. Icon & Title Section */}
-              <div className="md:col-span-4 flex items-center gap-6 mb-6 md:mb-0">
-                <div className="relative">
-                  <div
-                    className="absolute inset-0 border rounded-2xl group-hover:scale-125 group-hover:rotate-45 transition-all duration-700 opacity-20"
-                    style={{ borderColor: service.color }}
-                  />
-                  <div
-                    className="p-4 md:p-5 rounded-2xl bg-white shadow-sm border border-slate-100 relative z-10 transition-all duration-500 custom-icon-box"
-                    style={{ color: service.color }} // Default icon color
-                  >
-                    {React.cloneElement(service.icon as React.ReactElement, { className: "w-6 h-6 md:w-8 md:h-8" })}
-                  </div>
-                </div>
-
-                <h3 className="text-xl md:text-2xl font-bold text-slate-900 transition-colors duration-500 custom-title">
-                  {service.title}
-                </h3>
-              </div>
-
-              {/* 3. Detailed Description */}
-              <div className="md:col-span-7 relative">
-                <p className="text-slate-600 text-base md:text-xl leading-relaxed tracking-wide font-semibold border-l-2 border-slate-100 pl-8 transition-all duration-500 custom-desc">
-                  {service.desc}
-                </p>
-              </div>
-
-              {/* Background Watermark */}
-              <div className="absolute right-10 top-1/2 -translate-y-1/2 text-[10rem] font-bold text-slate-900/[0.02] pointer-events-none select-none transition-colors custom-watermark">
-                0{index + 1}
-              </div>
-
-              {/* LOCAL SCOPED STYLES: These only affect this specific map iteration */}
-              <style jsx>{`
-      .group:hover .custom-icon-box {
-        background-color: var(--hover-color) !important;
-        color: white !important;
-      }
-      .group:hover .custom-index {
-        color: var(--hover-color) !important;
-      }
-      .group:hover .custom-desc {
-        border-left-color: var(--hover-color) !important;
-        padding-left: 2.5rem;
-      }
-    `}</style>
-            </motion.div>
-          ))}
+          <ServiceList services={services} />
         </div>
       </section>
 
@@ -612,95 +456,24 @@ const WebDevelopment = () => {
               Building the future with industry-leading infrastructure.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {techStack.map((group, groupIdx) => (
-              <motion.div
-                key={groupIdx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:shadow-2xl transition-all duration-500 group"
-              >
-                {/* Header with Dynamic Background Color */}
-                <div
-                  style={{ backgroundColor: group.color }}
-                  className="p-4"
-                >
-                  <h3 className="text-lg md:text-xl font-bold text-white">
-                    {group.category}
-                  </h3>
-                </div>
-
-                <div className="flex-grow">
-                  {group.items.map((tech, techIdx) => (
-                    <div
-                      key={techIdx}
-                      className="flex items-center gap-4 px-5 py-3 border-b border-slate-100 last:border-b-0 hover:bg-slate-50 transition-colors group/item"
-                    >
-                      {/* Language Logo only - using Simple Icons CDN */}
-                      <div className="w-6 h-6 flex items-center justify-center transition-all duration-300 transform group-hover/item:scale-110">
-                        <img
-                          src={`https://cdn.simpleicons.org/${tech.logo}`}
-                          alt={tech.name}
-                          className="w-full h-full object-contain"
-                          // Fallback for icons that might fail to load
-                          onError={(e) => { e.target.src = 'https://cdn.simpleicons.org/codeigniter'; }}
-                        />
-                      </div>
-
-                      <span className="text-base md:text-lg font-bold text-slate-700 tracking-tight">
-                        {tech.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <TechGrid techStack={techStack} />
         </div>
       </section>
 
-      <section
-        ref={sectionRef}
-        className="py-20 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden"
-      >
-        {/* Background Blurs */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-orange-200/30 blur-[120px] rounded-full translate-x-1/2 translate-y-1/2"></div>
-
-        <div className="container mx-auto max-w-[1500px] px-6 md:px-12 relative z-10">
-
-          {/* Header */}
-          <div className="max-w-7xl mb-5">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r  from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">
-                Development
-              </span>
-              <br />
-              Process
-            </h2>
-
-            <p className="text-slate-500 text-lg md:text-xl max-w-2xl">
-              A structured workflow that transforms ideas into scalable digital
-              products through a modern development pipeline.
-            </p>
-          </div>
-
-          <MatrixLayout
-            process={process}
-            activePhase={activePhase}
-            setActivePhase={setActivePhase}
-            scrollRef={scrollRef}
-          />
-        </div>
-      </section>
+      <ProcessSection
+        titlePrefix="Our"
+        highlightedWord="Development"
+        titleSuffix="Process"
+        description="A structured workflow that transforms ideas into scalable digital products through a modern development pipeline."
+        process={process}
+      />
 
       <QuoteSection
         quote="We don’t just build websites. We create complete digital solutions that help businesses grow." className="background"
       />
 
-      <CTASection 
-        title={<>Ready to Digitize <br className="hidden md:block" /> Your Vision?</>} 
+      <CTASection
+        title={<>Ready to Digitize <br className="hidden md:block" /> Your Vision?</>}
         description={<>Join 500+ brands powered by SocioBhaarat engineering. <br className="hidden sm:block" />Let's discuss your roadmap today.</>}
         buttonText="Launch Your Project Now"
       />

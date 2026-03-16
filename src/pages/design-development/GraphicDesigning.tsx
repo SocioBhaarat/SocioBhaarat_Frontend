@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CTASection } from "@/components/ui/CTASection";
+import FeatureGrid from "@/components/ui/FeatureGrid";
+import ServiceList from "@/components/ui/ServiceList";
 import { motion } from "framer-motion";
 import {
   Palette, Layers, PenTool, Layout, Box, Image,
@@ -19,13 +22,37 @@ const GraphicDesigning = () => {
   };
 
   const whyChoosePoints = [
-    { title: "Bespoke Brand Identities", icon: <Brush /> },
-    { title: "Strategic Visual Design", icon: <Target /> },
-    { title: "Conversion-Focused UI", icon: <MousePointer2 /> },
-    { title: "Print & Digital Mastery", icon: <Layout /> },
-    { title: "Iterative Creative Process", icon: <Layers /> },
-    { title: "High-Resolution Assets", icon: <Box /> },
-  ];
+  {
+    title: "Bespoke Brand Identities",
+    icon: Brush,
+    desc: "We engineer unique visual signatures that capture your brand's core essence. By combining custom typography with strategic color psychology, we ensure your identity stands out with absolute distinction in an overcrowded marketplace."
+  },
+  {
+    title: "Strategic Visual Design",
+    icon: Target,
+    desc: "Our design approach is driven by data and business objectives. We don't just create beautiful visuals; we craft strategic assets that align with your marketing goals to effectively communicate your unique value proposition."
+  },
+  {
+    title: "Conversion-Focused UI",
+    icon: MousePointer2,
+    desc: "We bridge the gap between aesthetics and functionality by building user interfaces designed to drive action. Every button, layout, and interaction is optimized to reduce user friction and maximize your digital conversion rates."
+  },
+  {
+    title: "Print & Digital Mastery",
+    icon: Layout,
+    desc: "Our expertise spans across the physical and digital realms, ensuring brand consistency whether it's on a mobile screen or a high-end brochure. We deliver pixel-perfect designs optimized for every medium and viewing environment."
+  },
+  {
+    title: "Iterative Creative Process",
+    icon: Layers,
+    desc: "Transparency and collaboration define our workflow. Through a structured, milestone-based feedback loop, we refine every design detail based on your input, ensuring the final deliverable exceeds your expectations and fulfills your vision."
+  },
+  {
+    title: "High-Resolution Assets",
+    icon: Box,
+    desc: "Receive industry-standard deliverables ready for immediate use. From vector source files to high-performance web assets, we provide a complete kit of professionally exported files that maintain their crisp quality at any scale."
+  }
+];
 
   const whyNeedPoints = [
     "94% of First Impressions are Design-Related",
@@ -37,12 +64,42 @@ const GraphicDesigning = () => {
   ];
 
   const services = [
-    { name: "Brand Identity & Logo Design", icon: <Palette />, desc: "Complete visual systems including logos, typography, and color palettes." },
-    { name: "Social Media Creatives", icon: <Image />, desc: "Eye-catching post designs and banners optimized for engagement." },
-    { name: "Marketing & Sales Collateral", icon: <Layout />, desc: "Professional brochures, flyers, and digital pitch decks that close deals." },
-    { name: "UI/UX & Web Interface", icon: <MousePointer2 />, desc: "User-centric interface designs that ensure seamless digital experiences." },
-    { name: "Product & Packaging Design", icon: <Box />, desc: "Physical packaging solutions that stand out on shelves and in unboxings." },
-    { name: "Custom Illustrations", icon: <PenTool />, desc: "Unique hand-drawn or vector assets that add a custom feel to your brand." },
+    {
+      title: "Brand Identity & Logo Design",
+      color: "#2563eb", // Blue
+      icon: <Palette className="w-6 h-6" />,
+      desc: "We engineer comprehensive visual identity systems, crafting iconic logos, bespoke typography, and strategic color palettes that establish a powerful market presence and ensure long-term brand recognition across all digital touchpoints."
+    },
+    {
+      title: "Social Media Creatives",
+      color: "#4f46e5", // Indigo
+      icon: <Image className="w-6 h-6" />,
+      desc: "Our team designs high-conversion social assets and optimized banners tailored for platform-specific engagement. We combine trending aesthetics with your brand's unique voice to stop the scroll and drive organic user interactions."
+    },
+    {
+      title: "Marketing & Sales Collateral",
+      color: "#7c3aed", // Violet
+      icon: <Layout className="w-6 h-6" />,
+      desc: "Transforming complex business value into professional brochures, digital pitch decks, and sales flyers. We focus on clear information hierarchy and persuasive design layouts that effectively communicate your message and close deals."
+    },
+    {
+      title: "UI/UX & Web Interface",
+      color: "#db2777", // Pink
+      icon: <MousePointer2 className="w-6 h-6" />,
+      desc: "Developing human-centric interface designs that prioritize seamless navigation and accessibility. Our process blends aesthetic beauty with functional precision to create digital experiences that delight users and fulfill complex business requirements intuitively."
+    },
+    {
+      title: "Product & Packaging Design",
+      color: "#0d9488", // Teal
+      icon: <Box className="w-6 h-6" />,
+      desc: "Crafting innovative physical packaging solutions that maximize shelf appeal and elevate the unboxing experience. We consider material durability, brand storytelling, and consumer psychology to create tangible products that stand out competitively."
+    },
+    {
+      title: "Custom Illustrations",
+      color: "#059669", // Green
+      icon: <PenTool className="w-6 h-6" />,
+      desc: "Adding a layer of exclusivity to your brand through unique hand-drawn or vector assets. Our custom illustrations are designed to simplify complex concepts and provide a distinctive, artistic character to your marketing."
+    }
   ];
 
   const processSteps = [
@@ -55,25 +112,22 @@ const GraphicDesigning = () => {
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
-      {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
-
-        {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Blueprint Grid Overlay - Representing the Grid-System in Design */}
+          {/* Grid Overlay - Matches Brand Protection Lab */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
           {/* Atmospheric Mesh Blobs */}
           <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-
         </div>
 
         {/* 2. MAIN CONTENT GRID */}
         <div className="container mx-auto px-4 relative z-10 mt-12">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* LEFT COLUMN: Narrative */}
+            {/* LEFT COLUMN: Narrative (Text Upwards) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -84,29 +138,27 @@ const GraphicDesigning = () => {
                 <Sparkles className="w-3 h-3" /> Graphic Designing
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
-                {heroData.heading.split("Visual")[0]}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
-                  Visual Identities
-                </span> That Scale.
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                Professional <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Visual Identities </span> That Scale.
               </h1>
 
-              <p className="text-base md:text-xl text-slate-500 max-w-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
-                {heroData.subtext}
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                We create stunning, high-impact designs that reflect your brand's unique essence and build a deep connection with your target audience across every digital and physical touchpoint.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex justify-start pt-4">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
                   onClick={() => navigate("/contact")}
                 >
-                  {heroData.cta} <ArrowRight className="ml-2 w-5 h-5" />
+                  Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
             </motion.div>
 
-            {/* RIGHT COLUMN: Visual Proof (Graphic Bento) */}
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -114,7 +166,7 @@ const GraphicDesigning = () => {
               className="lg:col-span-5 relative hidden lg:block"
             >
               <div className="relative group">
-                {/* Decorative Glow */}
+                {/* Decorative Glow behind image */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
 
                 <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
@@ -134,7 +186,7 @@ const GraphicDesigning = () => {
                   </div>
                 </div>
 
-                {/* Framed Layer for Identity */}
+                {/* Framed Layer - Matching the "Legacy" section rotation */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
               </div>
             </motion.div>
@@ -209,55 +261,40 @@ const GraphicDesigning = () => {
       </section>
 
       {/* WHY CHOOSE SOCIO BHAARAT */}
-      <section className="py-24 bg-background border-y border-border">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> Advantage</h2>
-            <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto">We combine 500+ projects of experience with a high-end satisfaction rate to deliver pixels that perform.</p>
+
+      <section className="py-16 md:py-20 bg-muted/30 relative overflow-hidden">
+        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+
+          {/* Section Header */}
+          <div className="mb-12 md:mb-20 max-w-7xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-slate-900 leading-tight">
+              Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium inline-block pr-6 -mr-6 overflow-visible">
+                Socio Bhaarat
+              </span> for Graphic Designing?
+            </h2>
+            <p className="text-slate-700 text-lg md:text-xl max-w-7xl font-medium leading-relaxed">
+
+              We combine 500+ projects of experience with a <span className="text-slate-900 font-bold underline decoration-primary/30 decoration-4 underline-offset-4">high-end satisfaction</span> rate to deliver pixels that perform. 
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChoosePoints.map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -5 }}
-                className="p-8 rounded-[2.5rem] bg-muted/50 border border-transparent hover:border-primary/20 transition-all group"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-background flex items-center justify-center text-primary mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed italic">Crafting identities that resonate across every customer touchpoint.</p>
-              </motion.div>
-            ))}
-          </div>
+          <FeatureGrid features={whyChoosePoints} />
         </div>
       </section>
 
       {/* SERVICES GRID */}
-      <section className="py-24 bg-muted/30 border-y border-border relative overflow-hidden">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center tracking-tight"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Design Solutions</span> Suite</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -10 }}
-                className="group relative p-8 rounded-[2rem] bg-card border border-border/60 hover:border-primary/40 transition-all duration-300"
-              >
-                <div className="absolute top-0 right-0 p-6 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
-                  <Component className="w-32 h-32" />
-                </div>
-
-                <div className="mb-6 p-4 w-fit rounded-2xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3">{service.name}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
-              </motion.div>
-            ))}
+      <section className="py-24 md:py-20 bg-muted/30 relative overflow-hidden">
+        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+          {/* Section Header: Shifted Left for Modern Engineering Feel */}
+          <div className="mb-20 md:mb-10 max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
+              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
+            </h2>
           </div>
+
+          {/* The Technical Rows: No Empty Space */}
+          <ServiceList services={services} />
         </div>
       </section>
 
@@ -285,35 +322,11 @@ const GraphicDesigning = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
-                Ready to Refine <br className="hidden md:block" /> Your Visuals?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                Let’s create a brand identity that turns heads and converts leads. Your creative evolution starts here.
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Start Your Design Project
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={<>Ready to Refine <br className="hidden md:block" /> Your Visuals?</>}
+        description={<>Let’s create a brand identity that turns heads and converts leads. Your creative evolution starts here.</>}
+        buttonText="Start Your Design Project"
+      />
     </div>
   );
 };

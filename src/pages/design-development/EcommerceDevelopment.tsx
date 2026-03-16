@@ -21,9 +21,20 @@ import {
   ShieldCheck,
   ShoppingBag
 } from "lucide-react";
+import {
+  SiShopify,
+  SiWoocommerce,
+  SiGentoo,
+  SiReact,
+  SiNodedotjs,
+  SiPhp,
+  SiMongodb,
+  SiMysql
+} from "react-icons/si";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import { CTASection } from "@/components/ui/CTASection";
 
 const EcommerceDevelopment = () => {
   const navigate = useNavigate();
@@ -51,6 +62,16 @@ const EcommerceDevelopment = () => {
       icon: Zap,
       desc: "Lightning-fast load times and code built to dominate search rankings."
     }
+  ];
+  const ecomTechStack = [
+    { name: "Shopify", icon: <SiShopify />, color: "#95BF47", category: "Storefront" },
+    { name: "WooCommerce", icon: <SiWoocommerce />, color: "#96588A", category: "WordPress" },
+    { name: "Magento", icon: <SiGentoo />, color: "#EE672F", category: "Enterprise" },
+    { name: "React.js", icon: <SiReact />, color: "#61DAFB", category: "Frontend" },
+    { name: "Node.js", icon: <SiNodedotjs />, color: "#339933", category: "API" },
+    { name: "PHP", icon: <SiPhp />, color: "#777BB4", category: "Backend" },
+    { name: "MongoDB", icon: <SiMongodb />, color: "#47A248", category: "Database" },
+    { name: "MySQL", icon: <SiMysql />, color: "#4479A1", category: "Database" },
   ];
   const services = [
     {
@@ -94,24 +115,23 @@ const EcommerceDevelopment = () => {
     <div className="min-h-screen bg-background">
 
       {/* HERO SECTION */}
-      <section className="relative h-[80vh] sm:h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
 
-        {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Blueprint Grid Overlay - Representing the Storefront Logic */}
+          {/* Grid Overlay - Matches Brand Protection Lab */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Atmospheric Mesh Blobs - Shifted to Conversion Tones (Orange/Blue) */}
+          {/* Atmospheric Mesh Blobs */}
           <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-
         </div>
 
         {/* 2. MAIN CONTENT GRID */}
         <div className="container mx-auto px-4 relative z-10 mt-12">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* LEFT COLUMN: Narrative */}
+            {/* LEFT COLUMN: Narrative (Text Upwards) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -122,28 +142,27 @@ const EcommerceDevelopment = () => {
                 <ShoppingBag className="w-3 h-3" /> E-commerce Development
               </div>
 
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
-                Build High-Converting & Scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
-                  E-commerce Stores
-                </span>
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                Build High-Converting & Scalable <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">E-commerce Stores</span>
               </h1>
 
-              <p className="text-base md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
                 We design and develop secure, user-friendly, and conversion-focused e-commerce websites that help businesses sell more, manage operations efficiently, and scale with confidence.
               </p>
 
               <div className="flex justify-start pt-4">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
                   onClick={() => navigate("/contact")}
                 >
-                  Launch Your Storefront <ArrowRight className="ml-2 w-5 h-5" />
+                  Start Your Storefront <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
             </motion.div>
 
-            {/* RIGHT COLUMN: Visual Proof (E-com Bento) */}
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -151,7 +170,7 @@ const EcommerceDevelopment = () => {
               className="lg:col-span-5 relative hidden lg:block"
             >
               <div className="relative group">
-                {/* Decorative Glow */}
+                {/* Decorative Glow behind image */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
 
                 <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
@@ -162,16 +181,16 @@ const EcommerceDevelopment = () => {
                   />
 
                   {/* Floating Mini-Metric Overlay */}
-                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
-                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Conversion Rate</p>
+                  <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Lighthouse Score</p>
                     <div className="flex items-center gap-2">
-                      <p className="text-xl font-black text-slate-900">+340% ROI</p>
-                      <TrendingUp size={16} className="text-green-500" />
+                      <p className="text-xl font-black text-slate-900">100/100</p>
+                      <Zap size={16} className="text-yellow-500 fill-yellow-500" />
                     </div>
                   </div>
                 </div>
 
-                {/* Framed Layer for Identity */}
+                {/* Framed Layer - Matching the "Legacy" section rotation */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
               </div>
             </motion.div>
@@ -224,53 +243,55 @@ const EcommerceDevelopment = () => {
       </section>
 
       {/* SERVICES (BENTO GRID) */}
-      <section className="py-12 md:py-24 bg-background relative overflow-hidden">
 
-        <div className="container mx-auto max-w-6xl relative z-10 px-4">
-          {/* Responsive Header */}
-          <h2 className="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-center italic tracking-tighter leading-tight">
-            E-Commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">
-              Services
-            </span>
-          </h2>
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4 max-w-7xl">
 
-          {/* 2. ADAPTIVE GRID (1 col mobile, 2 cols desktop) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Services</span>
+            </h2>
+          </div>
+
+          {/* Services Grid (4 Columns on Desktop) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.01 }}
-                className="group relative p-6 sm:p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] bg-muted/20 border border-border/60 overflow-hidden transition-all duration-500"
+                whileHover={{ y: -10 }}
+                className="flex flex-col bg-white border border-slate-200 rounded-[2.5rem] shadow-sm overflow-hidden group transition-all duration-300 hover:shadow-2xl"
               >
-                {/* Responsive Icon Watermark */}
-                <div className="absolute top-0 right-0 p-6 md:p-8 text-primary/10 group-hover:scale-110 md:group-hover:scale-125 transition-transform pointer-events-none">
-                  {React.cloneElement(service.icon as React.ReactElement, {
-                    size: typeof window !== 'undefined' && window.innerWidth < 768 ? 60 : 100
-                  })}
+                {/* Card Header: Deep Blue (Replacing Black) */}
+                <div className="bg-blue-900 p-8 relative overflow-hidden">
+                  {/* Subtle Background Pattern */}
+                  <div className="absolute inset-0 opacity-10 pointer-events-none [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
+
+                  <div className="flex items-center gap-4 relative z-10">
+                    {/* Circular Icon (Orange Accent) */}
+                    <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-white flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                      {React.cloneElement(service.icon as React.ReactElement, { size: 24, strokeWidth: 2.5 })}
+                    </div>
+                    <h3 className="text-lg md:text-xl font-bold text-white leading-tight">
+                      {service.title}
+                    </h3>
+                  </div>
                 </div>
 
-                <div className="relative z-10">
-                  {/* Fluid Typography for Headings */}
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 tracking-tight group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed italic pr-8">
+                {/* Card Body */}
+                <div className="p-8 flex-grow flex flex-col">
+                  <p className="text-slate-500 text-sm md:text-md mb-8 font-medium">
                     {service.description}
                   </p>
 
-                  {/* 3. RESPONSIVE FEATURE GRID (Stays as 2 cols but adjusts text size) */}
-                  <div className="grid grid-cols-2 gap-2 md:gap-3">
+                  <div className="space-y-4 mb-10 flex-grow">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-1.5 md:gap-2 text-[9px] md:text-xs font-black uppercase tracking-widest opacity-70 group-hover:opacity-100 transition-opacity">
-                        <Zap className="h-3 w-3 md:h-4 md:w-4 text-orange-500 fill-orange-500/20" />
-                        <span>{feature}</span>
+                      <div key={idx} className="flex items-start gap-3 text-slate-700">
+                        <Check className={`h-4 w-4 mt-1 flex-shrink-0`} />
+                        <span className="text-[14px] md:text-sm font-bold leading-tight">{feature}</span>
                       </div>
                     ))}
                   </div>
-
-                  {/* Interactive Accent Line */}
-                  <div className="mt-8 h-1 w-0 bg-primary rounded-full group-hover:w-16 transition-all duration-700" />
                 </div>
               </motion.div>
             ))}
@@ -302,62 +323,86 @@ const EcommerceDevelopment = () => {
       </section>
 
       {/* TECH CLOUD */}
-      <section className="py-24 bg-muted/30 border-y border-border">
-        <div className="container mx-auto max-w-5xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Retail Stack</span></h2>
+
+      <section className="py-24 bg-white relative">
+        {/* Soft Background Accents */}
+        <div className="absolute top-20 left-0 w-72 h-72 bg-blue-50 rounded-full blur-3xl opacity-50" />
+        <div className="absolute bottom-20 right-0 w-72 h-72 bg-orange-50 rounded-full blur-3xl opacity-50" />
+
+        <div className="container mx-auto px-6 max-w-6xl relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
+              E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">Infrastructure</span>
+            </h2>
+            <div className="h-1 w-20 bg-slate-100 mx-auto mt-6 rounded-full overflow-hidden">
+              <motion.div
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+                className="h-full w-1/2 bg-blue-600"
+              />
+            </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 text-">
-            {technologies.map((tech, index) => (
-              <motion.span
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {ecomTechStack.map((tech, index) => (
+              <motion.div
                 key={index}
-                whileHover={{ scale: 1.1, backgroundColor: "hsl(var(--primary))", color: "hsl(var(--primary-foreground))" }}
-                className="px-6 py-3 bg-card border border-border rounded-2xl text-sm text-center font-bold shadow-sm transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="group bg-slate-50 border border-slate-100 p-8 rounded-[2.5rem] flex flex-col items-center shadow-lg hover:shadow-xl transition-all duration-500"
               >
-                {tech}
-              </motion.span>
+                {/* Icon Container */}
+                <div className="relative w-16 h-16 md:w-20 md:h-20 bg-white rounded-3xl flex items-center justify-center group-hover:bg-white transition-all duration-500 border border-transparent group-hover:border-slate-100 shadow-inner group-hover:shadow-none overflow-hidden">
+
+                  {/* Dynamic Background Glow */}
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl rounded-full"
+                    style={{ backgroundColor: tech.color }}
+                  />
+
+                  {/* React Icon Component */}
+                  <div
+                    className="text-4xl md:text-5xl transition-all duration-500 "
+                    style={{ color: tech.color }}
+                  >
+                    {tech.icon}
+                  </div>
+                </div>
+
+                {/* Text Info */}
+                <h3 className="text-lg font-bold text-slate-800 transition-colors group-hover:text-black">
+                  {tech.name}
+                </h3>
+
+                <div className="mt-3 px-3 py-1 rounded-full bg-slate-50 group-hover:bg-white border border-transparent group-hover:border-slate-100 transition-all">
+                  <span className="text-[9px] font-bold tracking-widest text-slate-400 group-hover:text-slate-600">
+                    {tech.category}
+                  </span>
+                </div>
+
+                {/* Decorative Line */}
+                <div
+                  className="mt-6 h-1 w-0 group-hover:w-8 transition-all duration-500 rounded-full"
+                  style={{ backgroundColor: tech.color }}
+                />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+
       <QuoteSection quote="Turning visitors into customers with conversion-focused digital stores designed to scale." />
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl px-4">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-            {/* 1. RESPONSIVE DECORATIVE ICON (Scaled and hidden on small mobiles if needed) */}
-            <div className="absolute top-0 right-0 p-4 md:p-10 opacity-10 pointer-events-none transition-transform duration-700 group-hover:rotate-[25deg] group-hover:scale-110">
-              <Smartphone className="w-32 h-32 md:w-64 md:h-64 rotate-12" />
-            </div>
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
-                Ready to Scale Your Online Empire?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                Let’s build a powerful e-commerce store that drives revenue and customer satisfaction
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON (Full width on mobile, centered on desktop) */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-wrap text-primary hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Start Your Consultation
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+              title={<>Ready to Scale <br className="hidden md:block" /> Your Online Empire?</>}
+              description={<>Let’s build a powerful e-commerce store that drives revenue and customer satisfaction</>}
+              buttonText="Start Your Consultation"
+            />
 
     </div>
   );

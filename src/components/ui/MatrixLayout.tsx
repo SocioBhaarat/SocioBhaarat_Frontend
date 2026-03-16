@@ -15,12 +15,13 @@ interface MatrixLayoutProps {
 }
 
 function MatrixLayout({ process, activePhase, setActivePhase, scrollRef }: MatrixLayoutProps) {
+    const gridCols = process.length === 6 ? "lg:grid-cols-3" : "lg:grid-cols-4";
     return (
         <div className="flex flex-col lg:flex-row gap-16 items-center">
 
             {/* LEFT PROCESS MATRIX */}
             <div className="w-full lg:w-[55%]">
-                <div className="grid grid-cols-4 gap-5">
+                <div className={`grid grid-cols-2 md:grid-cols-3 ${gridCols} gap-5`}>
 
                     {process.map((step, index) => (
                         <motion.div

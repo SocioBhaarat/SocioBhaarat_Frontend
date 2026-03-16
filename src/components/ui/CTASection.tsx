@@ -22,7 +22,7 @@ export const CTASection = ({ title, description, buttonText }: CTAProps) => (
               size="lg"
               variant="secondary"
               className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary hover:bg-slate-50"
-              onClick={() => window.open(`https://wa.me/919589581364}`, "_blank")}
+              onClick={() => window.open("https://wa.me/919589581364", "_blank")}
             >
               {buttonText}
             </Button>
