@@ -46,7 +46,7 @@ const ProcessSection = ({
 
     const timer = setInterval(() => {
       setActivePhase((prev) => (prev + 1) % process.length);
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [isIntersecting, process.length]);

@@ -17,6 +17,7 @@ import MatrixLayout from "@/components/ui/MatrixLayout";
 import TechGrid from "@/components/ui/TechGrid";
 import { CTASection } from "@/components/ui/CTASection";
 import ProcessSection from "@/components/DevelopmentProcess";
+import { cn } from "@/lib/utils";
 
 const WordPressDevelopment = () => {
   const navigate = useNavigate();
@@ -67,7 +68,6 @@ const WordPressDevelopment = () => {
     { title: "SEO-Ready Code", desc: "Optimized structure for maximum search visibility.", icon: <Search className="w-5 h-5" /> },
     { title: "Mobile-Responsive", desc: "Perfectly optimized for every modern device.", icon: <Smartphone className="w-5 h-5" /> },
     { title: "Performance First", desc: "Secure and speed-focused backend architecture.", icon: <Gauge className="w-5 h-5" /> },
-    { title: "Transparent Support", desc: "Clear communication throughout the lifecycle.", icon: <ShieldCheck className="w-5 h-5" /> }
   ]
 
   const process = [
@@ -240,128 +240,161 @@ const WordPressDevelopment = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-24 bg-muted/50 border-y border-border overflow-hidden">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-24 border-y border-border overflow-hidden bg-muted/30 relative">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-            {/* Left Column: Narrative & Visual Context */}
+            {/* Left Column */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 border border-primary/20 uppercase tracking-widest">
-                <ShieldCheck className="w-3 h-3" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border text-muted-foreground text-[11px] font-semibold tracking-widest uppercase mb-6">
+                <ShieldCheck className="w-3.5 h-3.5" />
                 Top-Tier Engineering
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">Socio Bhaarat</span> for WordPress ?
+
+              <div className="w-8 h-0.5 bg-blue-600 mb-6 rounded-full" />
+
+              <h2 className=" text-4xl sm:text-5xl font-bold leading-tight mb-5 text-slate-800">
+                Why choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
+                  Socio Bhaarat
+                </span> for WordPress?
               </h2>
-              <p className="text-muted-foreground md:text-lg leading-relaxed mb-8">
-                We combine creative design, technical expertise, and strategic planning to deliver WordPress websites that are fast, secure, SEO-friendly, and easy to manage.
-                We don't just build sites; we build digital assets that scale with your business goals.
+
+              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-10 max-w-md">
+                We combine creative design, technical expertise, and strategic planning to deliver WordPress websites that are fast, secure, SEO-friendly, and easy to manage. We don't just build sites; we build digital assets that scale with your business goals.
               </p>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="p-4 bg-background rounded-2xl border border-border shadow-sm">
-                  <div className="text-3xl font-black text-primary">500+</div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Successful Projects</p>
+              <div className="grid grid-cols-2 gap-3 sm:max-w-xs">
+                <div className="bg-muted rounded-2xl p-5">
+                  <div className="font-serif text-[2.6rem] font-normal text-blue-600 leading-none mb-1.5">500+</div>
+                  <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">Successful Projects</p>
                 </div>
-                <div className="p-4 bg-background rounded-2xl border border-border shadow-sm">
-                  <div className="text-3xl font-black text-secondary">98%</div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Client Satisfaction</p>
+                <div className="bg-muted rounded-2xl p-5">
+                  <div className="font-serif text-[2.6rem] font-normal text-orange-500 leading-none mb-1.5">98%</div>
+                  <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">Client Satisfaction</p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Right Column: Interactive Value Cards */}
+            {/* Right Column: numbered grid */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="grid gap-4"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="grid grid-cols-2 divide-x divide-y divide-border border border-border rounded-2xl overflow-hidden"
             >
               {whyChooseUs.map((item, idx) => (
                 <motion.div
                   key={idx}
-                  whileHover={{ x: 10 }}
-                  className="flex items-center gap-5 p-5 rounded-2xl bg-card border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all group"
+                  className="p-5 sm:p-6 bg-background hover:bg-muted/50 transition-colors group cursor-default"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                    {item.icon}
+                  <div className="font-serif text-[1.8rem] font-normal text-border/60 mb-3 leading-none">
+                    {String(idx + 1).padStart(2, "0")}
                   </div>
-                  <div>
-                    <h4 className="font-bold text-sm mb-1">{item.title}</h4>
-                    <p className="text-[11px] text-muted-foreground leading-relaxed italic">
-                      {item.desc}
-                    </p>
+                  <div className="w-[34px] h-[34px] rounded-lg bg-muted flex items-center justify-center mb-3 border border-border group-hover:bg-blue-600 group-hover:border-blue-600 transition-all">
+                    <span className="text-muted-foreground group-hover:text-white transition-colors ">
+                      {item.icon}
+                    </span>
                   </div>
+                  <h4 className="text-md font-medium mb-1.5">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
             </motion.div>
+
           </div>
         </div>
       </section>
 
       {/* WHY WORDPRESS */}
-      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
 
+      <section className="py-16 md:py- bg-background relative overflow-hidden">
+        <div className="container mx-auto max-w-7xl relative z-10 px-6">
 
-        <div className="container mx-auto max-w-6xl relative z-10">
-          {/* Heading with Requested Gradient */}
-          <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-[1.1]">
-              Why Your Brand Needs <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">WordPress</span>
+          {/* Header — split layout, fills the width */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 md:mb-14">
+            <h2 className=" text-4xl md:text-5xl font-bold max-w-lg text-slate-800">
+              Why your brand needs <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
+                WordPress
+              </span>
             </h2>
-            <p className="mt-4 text-slate-500 text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] italic">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground sm:text-right sm:max-w-[220px] leading-relaxed">
               Engineering the backbone of modern digital commerce.
             </p>
           </div>
 
-          {/* 2. ADAPTIVE GRID (1 col mobile, 3 cols desktop) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
+          {/* Cards — bordered grid, no gaps */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 border border-border/50 rounded-3xl overflow-hidden">
             {[
-              { title: "Digital Dominance", icon: <Rocket className="w-8 h-8" />, desc: "Establish a future-ready presence with a highly scalable platform." },
-              { title: "Edge Performance", icon: <Smartphone className="w-8 h-8" />, desc: "Responsive layouts optimized for every screen size and device." },
-              { title: "SEO Authority", icon: <Search className="w-8 h-8" />, desc: "Built-in technical SEO structures to dominate search engine rankings." }
-            ].map((box, i) => (
+              {
+                index: "01",
+                title: "Digital Dominance",
+                icon: <Rocket className="w-5 h-5" />,
+                desc: "Establish a future-ready presence with a highly scalable platform that grows alongside your business without limits.",
+              },
+              {
+                index: "02",
+                title: "Edge Performance",
+                icon: <Smartphone className="w-5 h-5" />,
+                desc: "Responsive layouts optimized for every screen size and device, delivering flawless experiences wherever your users are.",
+              },
+              {
+                index: "03",
+                title: "SEO Authority",
+                icon: <Search className="w-5 h-5" />,
+                desc: "Built-in technical SEO structures to dominate rankings and drive consistent, compounding organic traffic.",
+              },
+            ].map((card, i, arr) => (
               <motion.div
                 key={i}
-                whileHover={{ y: -10 }}
-                className="bg-card p-8 md:p-10 rounded-[2.5rem] md:rounded-[3.5rem] border border-border/50 shadow-sm hover:shadow-2xl transition-all group relative overflow-hidden"
+                className={cn(
+                  "relative p-9 md:p-10 group cursor-default hover:bg-muted/50 transition-colors duration-200",
+                  i < arr.length - 1 && "border-b sm:border-b-0 sm:border-r border-border/50"
+                )}
               >
-                {/* Subtle Hover Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                {/* Index */}
+                <span className="hidden md:block text-[4rem] font-normal text-border/40 leading-none mb-8">
+                  {card.index}
+                </span>
 
-                <div className="relative z-10">
-                  <div className="text-primary mb-6 group-hover:scale-110 group-hover:text-orange-500 transition-all duration-500">
-                    {box.icon}
-                  </div>
-
-                  <h3 className="text-xl md:text-2xl font-black mb-4 italic tracking-tight text-slate-900 group-hover:text-primary transition-colors">
-                    {box.title}
-                  </h3>
-
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic">
-                    {box.desc}
-                  </p>
-
-                  {/* Interactive Accent Line */}
-                  <div className="mt-8 h-1 w-0 bg-primary rounded-full group-hover:w-12 transition-all duration-500" />
+                {/* Icon */}
+                <div className="w-[46px] h-[46px] rounded-xl border border-border bg-muted flex items-center justify-center mb-6
+                          group-hover:bg-blue-600 group-hover:border-blue-600 transition-all duration-300">
+                  <span className="text-muted-foreground group-hover:text-white transition-colors">
+                    {card.icon}
+                  </span>
                 </div>
+
+                {/* Text */}
+                <h3 className=" text-2xl font-semibold text-foreground mb-3 leading-snug">
+                  {card.title}
+                </h3>
+                <p className="text-sm md:text-lg font-semibold text-slate-700 text-muted-foreground leading-relaxed">
+                  {card.desc}
+                </p>
+
+                {/* Accent line */}
+                <div className="mt-8 h-0.5 w-0 bg-gradient-to-r from-blue-600 to-orange-500
+                          rounded-full group-hover:w-10 transition-all duration-500" />
               </motion.div>
             ))}
           </div>
-        </div>
 
+        </div>
       </section>
+
 
       {/* SERVICE GRID */}
       <section className="py-24 md:py-20 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
           {/* Section Header: Shifted Left for Modern Engineering Feel */}
           <div className="mb-20 md:mb-10 max-w-6xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-none mb-8">
               What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
             </h2>
             <p className="text-slate-500 text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6">
@@ -380,7 +413,7 @@ const WordPressDevelopment = () => {
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 leading-none">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-2 leading-none">
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible leading-normal">Technology Stack</span>
             </h2>
             <p className="text-slate-500 text-sm md:text-xl font-bold">

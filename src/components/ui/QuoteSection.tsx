@@ -144,7 +144,7 @@ const QuoteSection = ({ quote, className }: QuoteSectionProps) => {
                 {/* Unique Brand Marker */}
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full border-2 border-white bg-slate-50 flex items-center justify-center text-[10px] font-bold text-primary">SB</div>
-                  <div className="w-8 h-8 rounded-full border-2 border-white bg-primary"></div>
+                  <img className="w-8 h-8 rounded-full border-2 border-white" src="/images/logo-icon.webp" alt="Brand Logo" />
                 </div>
                 
                 <div>

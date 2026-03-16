@@ -6,7 +6,9 @@ import {
   Check, ArrowRight, Sparkles, Search, MousePointer2,
   Layers, ShieldCheck, Brush, PenTool,
   Rocket,
-  Heart
+  Heart,
+  BadgeCheck,
+  Globe
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -105,6 +107,39 @@ const UIUXDesign = () => {
     { name: "Illustrator", logo: "ai", color: "#FF9A00", desc: "Vector Art" },
   ];
 
+  const whyChooseUs = [
+    {
+      title: "Experienced UI/UX Team",
+      icon: <Users />,
+      desc: "Seasoned designers with 5+ years of product experience.",
+    },
+    {
+      title: "User-Centered Approach",
+      icon: <Target />,
+      desc: "Every decision is backed by real user needs and behavior.",
+    },
+    {
+      title: "Research-Driven Strategy",
+      icon: <Search />,
+      desc: "Deep market research shapes every design choice we make.",
+    },
+    {
+      title: "Clean Visual Aesthetic",
+      icon: <Palette />,
+      desc: "Minimal, modern designs that look great on every screen.",
+    },
+    {
+      title: "Prototyping & Testing",
+      icon: <Layers />,
+      desc: "Validated prototypes before a single line of code is written.",
+    },
+    {
+      title: "Collaborative Process",
+      icon: <MousePointer2 />,
+      desc: "You're involved at every stage, from brief to final delivery.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background ">
 
@@ -194,44 +229,133 @@ const UIUXDesign = () => {
       </section>
 
       {/* WHY CHOOSE US (SPOTLIGHT) */}
-      <section className="py-24 bg-muted/30 border-y border-border overflow-hidden">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span></h2>
-              <p className="text-muted-foreground md:text-lg mb-8 leading-relaxed">
-                We blend the psychology of user behavior with the art of visual storytelling to create products that don't just work—they resonate.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="p-4 bg-background rounded-2xl border border-border shadow-sm">
-                  <div className="text-3xl font-black text-orange-500">500+</div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Successful Projects</p>
+      <section className="py-24 border-y border-border overflow-hidden bg-muted/30 relative">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+
+            {/* Left Column */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col justify-between"
+            >
+              <div className="flex flex-col gap-8">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border text-muted-foreground text-[11px] font-semibold tracking-widest uppercase mb-6">
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    Top-Tier Engineering
+                  </div>
+
+                  <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-5 text-slate-800">
+                    Why choose{" "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
+                      Socio Bhaarat
+                    </span>
+                  </h2>
+
+                  <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
+                    We blend the psychology of user behavior with the art of visual
+                    storytelling to create products that don't just work—they resonate.
+                  </p>
                 </div>
-                <div className="p-4 bg-background rounded-2xl border border-border shadow-sm">
-                  <div className="text-3xl font-black text-blue-600">98%</div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Client Satisfaction</p>
+
+                {/* Feature bullets */}
+                <div className="flex flex-col gap-3">
+                  {[
+                    {
+                      icon: <Zap className="w-3.5 h-3.5" />,
+                      text: "Fast turnaround without compromising on quality or detail.",
+                    },
+                    {
+                      icon: <BadgeCheck className="w-3.5 h-3.5" />,
+                      text: "ISO-aligned processes ensuring consistency across every project.",
+                    },
+                    {
+                      icon: <Globe className="w-3.5 h-3.5" />,
+                      text: "Globally trusted by startups, agencies, and enterprises alike.",
+                    },
+                  ].map((feat, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="mt-0.5 w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex  items-center justify-center text-blue-600 flex-shrink-0">
+                        {feat.icon}
+                      </div>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{feat.text}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Testimonial pull quote */}
+                {/* <div className="relative pl-5 border-l-2 border-blue-600">
+                  <p className="text-sm text-foreground font-medium leading-relaxed italic">
+                    "Socio Bhaarat transformed our outdated site into a conversion
+                    machine. The attention to detail was unlike any agency we've
+                    worked with before."
+                  </p>
+                  <div className="flex items-center gap-2 mt-3">
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-600 to-orange-500 flex items-center justify-center text-white text-[10px] font-bold">
+                      LC
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-foreground">Lotus Consultancy</p>
+                    </div>
+                  </div>
+                </div> */}
+              </div>
+
+              {/* Stats pinned to bottom */}
+              <div className="grid grid-cols-2 gap-3 sm:max-w-xs mt-8">
+                <div className="bg-muted rounded-2xl p-5">
+                  <div className="font-serif text-[2.6rem] font-normal text-blue-600 leading-none mb-1.5">
+                    500+
+                  </div>
+                  <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
+                    Successful Projects
+                  </p>
+                </div>
+                <div className="bg-muted rounded-2xl p-5">
+                  <div className="font-serif text-[2.6rem] font-normal text-orange-500 leading-none mb-1.5">
+                    98%
+                  </div>
+                  <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
+                    Client Satisfaction
+                  </p>
                 </div>
               </div>
             </motion.div>
 
-            <div className="grid gap-4">
-              {[
-                { title: "Experienced UI/UX Team", icon: <Users /> },
-                { title: "User-Centered Approach", icon: <Target /> },
-                { title: "Research-Driven Strategy", icon: <Search /> },
-                { title: "Clean Visual Aesthetic", icon: <Palette /> },
-                { title: "Prototyping & Testing", icon: <Layers /> },
-                { title: "Collaborative Process", icon: <MousePointer2 /> }
-              ].map((item, idx) => (
-                <motion.div key={idx} whileHover={{ x: 10 }} className="flex items-center gap-5 p-5 rounded-2xl bg-card border border-border/50 hover:border-primary/40 hover:shadow-lg transition-all group">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">{item.icon}</div>
-                  <h4 className="font-bold text-sm">{item.title}</h4>
+            {/* Right Column: numbered grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="grid grid-cols-2 divide-x divide-y divide-border border border-border rounded-2xl overflow-hidden"
+            >
+              {whyChooseUs.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="p-5 sm:p-6 bg-background hover:bg-muted/50 transition-colors group cursor-default"
+                >
+                  <div className="font-serif text-[1.8rem] font-normal text-border/60 mb-3 leading-none">
+                    {String(idx + 1).padStart(2, "0")}
+                  </div>
+                  <div className="w-[34px] h-[34px] rounded-lg bg-muted flex items-center justify-center mb-3 border border-border group-hover:bg-blue-600 group-hover:border-blue-600 transition-all">
+                    <span className="text-muted-foreground group-hover:text-white transition-colors ">
+                      {item.icon}
+                    </span>
+                  </div>
+                  <h4 className="text-md font-medium mb-1.5">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
+
 
       {/* SERVICES (BENTO GRID) */}
 
@@ -241,27 +365,36 @@ const UIUXDesign = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Services</span>
+              Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">
+                Services
+              </span>
             </h2>
           </div>
 
-          {/* Services Grid (4 Columns on Desktop) */}
+          {/* Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -10 }}
-                className="flex flex-col bg-white border border-slate-200 rounded-[2.5rem] shadow-sm overflow-hidden group transition-all duration-300 hover:shadow-2xl"
+                whileHover={{ y: -8 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="flex flex-col bg-white border border-slate-200 rounded-[2.5rem] shadow-sm overflow-hidden group transition-shadow duration-300 hover:shadow-2xl"
               >
-                {/* Card Header: Deep Blue (Replacing Black) */}
-                <div className="bg-blue-900 p-8 relative overflow-hidden">
-                  {/* Subtle Background Pattern */}
-                  <div className="absolute inset-0 opacity-10 pointer-events-none [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
+                {/* Card Header */}
+                <div className="bg-[#1e3a5f] p-7 relative overflow-hidden">
+                  {/* Dot grid texture */}
+                  <div className="absolute inset-0 opacity-[0.07] pointer-events-none [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
+                  {/* Decorative circle */}
+                  <div className="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-white/[0.04] pointer-events-none" />
 
                   <div className="flex items-center gap-4 relative z-10">
-                    {/* Circular Icon (Orange Accent) */}
-                    <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-white flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500">
-                      {React.cloneElement(service.icon as React.ReactElement, { size: 24, strokeWidth: 2.5 })}
+                    <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(250,204,21,0.4)] group-hover:scale-110 transition-transform duration-500">
+                      {React.cloneElement(service.icon as React.ReactElement, {
+                        size: 22,
+                        strokeWidth: 2.5,
+                        className: "text-[#1e3a5f]",
+                      })}
                     </div>
                     <h3 className="text-lg md:text-xl font-bold text-white leading-tight">
                       {service.title}
@@ -270,16 +403,24 @@ const UIUXDesign = () => {
                 </div>
 
                 {/* Card Body */}
-                <div className="p-8 flex-grow flex flex-col">
-                  <p className="text-slate-500 text-sm md:text-md mb-8 font-medium">
+                <div className="p-7 flex-grow flex flex-col">
+                  <p className="text-slate-500 text-sm md:text-md mb-0 font-medium leading-relaxed">
                     {service.description}
                   </p>
 
-                  <div className="space-y-4 mb-10 flex-grow">
+                  {/* Gradient divider */}
+                  <div className="h-px bg-gradient-to-r from-slate-200 to-transparent my-5" />
+
+                  <div className="space-y-3 flex-grow">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3 text-slate-700">
-                        <Check className={`h-4 w-4 mt-1 flex-shrink-0`} />
-                        <span className="text-[14px] md:text-sm font-bold leading-tight">{feature}</span>
+                        {/* Pill check icon */}
+                        <div className="mt-0.5 w-4 h-4 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-2.5 h-2.5 text-blue-600" strokeWidth={3} />
+                        </div>
+                        <span className="text-[14px] md:text-sm font-bold leading-tight">
+                          {feature}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -287,6 +428,7 @@ const UIUXDesign = () => {
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
