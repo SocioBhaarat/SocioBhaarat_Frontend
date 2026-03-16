@@ -1,92 +1,3 @@
-// import { motion } from "framer-motion";
-
-// type QuoteSectionProps = {
-//   quote: string;
-//   className?: string;
-// };
-
-// const QuoteSection = ({ quote, className }: QuoteSectionProps) => {
-//   return (
-//     <section className={`relative py-16 md:py-32 overflow-hidden ${className ? className : "bg-white"
-//       }`}>
-
-//       {/* 1. DYNAMIC GRADIENT BACKGROUND (Mesh Look) */}
-//       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-//         {/* Top Glow - Blue */}
-//         <div className="absolute -top-[10%] -left-[5%] w-[40%] h-[50%] rounded-full bg-blue-600/10 blur-[120px] animate-pulse" />
-
-//         {/* Bottom Glow - Orange */}
-//         <div className="absolute -bottom-[10%] -right-[5%] w-[40%] h-[50%] rounded-full bg-orange-500/10 blur-[120px] animate-bounce" style={{ animationDuration: '10s' }} />
-
-//         {/* Center Deep Glow - Using your Primary */}
-//         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] rounded-full bg-primary/5 blur-[140px]" />
-//       </div>
-
-//       <div className="container mx-auto px-4 max-w-5xl relative z-10">
-//         <motion.div
-//           initial={{ opacity: 0, y: 30 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.8, ease: "easeOut" }}
-//           className="relative bg-white/60 backdrop-blur-xl border border-white/80 rounded-[2.5rem] md:rounded-[4.5rem] p-10 sm:p-16 md:p-24 shadow-2xl text-center overflow-hidden group"
-//         >
-//           {/* Subtle Inner Glow Border */}
-//           <div className="absolute inset-0 rounded-[2.5rem] md:rounded-[4.5rem] border border-white pointer-events-none z-20" />
-
-//           {/* 2. DECORATIVE QUOTE MARKS (Color Gradients) */}
-//           <div className="absolute top-6 left-8 md:top-12 md:left-16 text-7xl md:text-[10rem] bg-clip-text text-transparent bg-gradient-to-br from-slate-200 to-slate-100 font-serif select-none italic transition-all duration-700 group-hover:from-blue-100 group-hover:to-blue-50 opacity-80">
-//             “
-//           </div>
-
-//           <div className="absolute bottom-6 right-8 md:bottom-12 md:right-16 text-7xl md:text-[10rem] bg-clip-text text-transparent bg-gradient-to-br from-slate-200 to-slate-100 font-serif select-none italic transition-all duration-700 group-hover:from-orange-100 group-hover:to-orange-50 rotate-180 opacity-80">
-//             “
-//           </div>
-
-//           {/* 3. QUOTE TEXT */}
-//           <div className="relative z-10 space-y-8 md:space-y-12">
-//             <motion.p
-//               initial={{ opacity: 0 }}
-//               whileInView={{ opacity: 1 }}
-//               transition={{ delay: 0.3 }}
-//               className="font-display text-xl sm:text-2xl md:text-3xl font-bold leading-[1.15] md:leading-[1.3] text-slate-900"
-//             >
-//               {quote}
-//             </motion.p>
-
-//             <div className="flex flex-col items-center gap-6">
-//               {/* Animated Gradient Line */}
-//               <div className="relative h-[3px] md:h-[4px] w-20 md:w-32 rounded-full bg-slate-100 overflow-hidden">
-//                 <motion.div
-//                   className="absolute inset-0 bg-gradient-to-r from-blue-600 via-primary to-orange-500"
-//                   animate={{
-//                     x: ["-100%", "100%"]
-//                   }}
-//                   transition={{
-//                     duration: 3,
-//                     repeat: Infinity,
-//                     ease: "linear"
-//                   }}
-//                 />
-//               </div>
-
-//               <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.5em] text-slate-400 flex items-center gap-4">
-//                 <span className="h-px w-8 bg-slate-200 hidden sm:block"></span>
-//                 Socio Bhaarat Vision
-//                 <span className="h-px w-8 bg-slate-200 hidden sm:block"></span>
-//               </p>
-//             </div>
-//           </div>
-
-//           {/* Corner Accent Light Refraction */}
-//           <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl transition-all duration-700 group-hover:bg-primary/10" />
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default QuoteSection;
-
 
 import { motion } from "framer-motion";
 
@@ -97,7 +8,7 @@ type QuoteSectionProps = {
 
 const QuoteSection = ({ quote, className }: QuoteSectionProps) => {
   return (
-    <section className={`relative py-24 md:py-20 bg-white overflow-hidden ${className || ""}`}>
+    <section className={`relative py-12 md:py-20 bg-white overflow-hidden ${className || ""}`}>
       
       {/* 1. ARCHITECTURAL BACKGROUND ELEMENTS */}
       {/* Subtle Grid Pattern */}

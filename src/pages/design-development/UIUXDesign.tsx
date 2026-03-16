@@ -358,7 +358,6 @@ const UIUXDesign = () => {
 
 
       {/* SERVICES (BENTO GRID) */}
-
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl">
 

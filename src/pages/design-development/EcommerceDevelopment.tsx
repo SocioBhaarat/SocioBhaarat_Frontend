@@ -35,6 +35,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import { CTASection } from "@/components/ui/CTASection";
+import { cn } from "@/lib/utils";
 
 const EcommerceDevelopment = () => {
   const navigate = useNavigate();
@@ -204,7 +205,7 @@ const EcommerceDevelopment = () => {
         <div className="container mx-auto max-w-6xl px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span></h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 italic tracking-tight">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-600 italic  font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span></h2>
               <p className="text-muted-foreground text-md md:text-lg mb-8 leading-relaxed">
                 We combine strategy, technology, and customer-focused design to create platforms that deliver seamless shopping experiences and revenue growth.
               </p>
@@ -242,6 +243,100 @@ const EcommerceDevelopment = () => {
         </div>
       </section>
 
+      <section className="py-24 bg-muted/30 border-y border-border">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+
+            {/* Left */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border text-muted-foreground text-[11px] font-medium tracking-widest uppercase mb-6 w-fit">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                Trusted Since 2022
+              </div>
+
+              <div className="w-8 h-0.5 bg-blue-600 mb-6 rounded-full" />
+
+              <h2 className=" text-4xl sm:text-5xl font-bold mb-5">
+                Why Choose{" "}
+                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
+                  Socio Bhaarat
+                </span>
+              </h2>
+
+              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-10 max-w-md">
+                We combine strategy, technology, and customer-focused design to create
+                platforms that deliver seamless shopping experiences and real revenue growth.
+              </p>
+
+              <div className="grid grid-cols-2 gap-3 sm:max-w-xs">
+                <div className="bg-background rounded-2xl border border-border p-5">
+                  <div className=" text-[2.6rem] font-normal text-orange-500 leading-none mb-1.5">
+                    500+
+                  </div>
+                  <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                    Successful Projects
+                  </p>
+                </div>
+                <div className="bg-background rounded-2xl border border-border p-5">
+                  <div className=" text-[2.6rem] font-normal text-blue-600 leading-none mb-1.5">
+                    98%
+                  </div>
+                  <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                    Satisfaction Rate
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex flex-col gap-2.5"
+            >
+              {whyChooseUsData.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  whileHover={{ x: 6 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  className="relative flex items-center gap-4 p-4 sm:p-5 bg-background rounded-2xl border border-border
+                       hover:border-blue-200 hover:shadow-[0_4px_20px_rgba(37,99,235,0.08)]
+                       transition-[border-color,box-shadow] duration-200 group overflow-hidden"
+                >
+                  {/* Left accent bar */}
+                  <div className="absolute left-0 top-0 bottom-0 w-0 bg-blue-600 rounded-l-2xl
+                            group-hover:w-[3px] transition-all duration-250" />
+
+                  {/* Icon */}
+                  <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-muted border border-border flex items-center justify-center
+                            group-hover:bg-blue-600 group-hover:border-blue-600 transition-all duration-200">
+                    <item.icon className="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors" />
+                  </div>
+
+                  <div>
+                    <h4 className="text-[15px] font-semibold text-foreground mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-[13px] text-muted-foreground leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES (BENTO GRID) */}
 
       <section className="py-20 bg-slate-50">
@@ -250,27 +345,36 @@ const EcommerceDevelopment = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Services</span>
+              Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">
+                Services
+              </span>
             </h2>
           </div>
 
-          {/* Services Grid (4 Columns on Desktop) */}
+          {/* Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -10 }}
-                className="flex flex-col bg-white border border-slate-200 rounded-[2.5rem] shadow-sm overflow-hidden group transition-all duration-300 hover:shadow-2xl"
+                whileHover={{ y: -8 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="flex flex-col bg-white border border-slate-200 rounded-[2.5rem] shadow-sm overflow-hidden group transition-shadow duration-300 hover:shadow-2xl"
               >
-                {/* Card Header: Deep Blue (Replacing Black) */}
-                <div className="bg-blue-900 p-8 relative overflow-hidden">
-                  {/* Subtle Background Pattern */}
-                  <div className="absolute inset-0 opacity-10 pointer-events-none [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
+                {/* Card Header */}
+                <div className="bg-[#1e3a5f] p-7 relative overflow-hidden">
+                  {/* Dot grid texture */}
+                  <div className="absolute inset-0 opacity-[0.07] pointer-events-none [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" />
+                  {/* Decorative circle */}
+                  <div className="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-white/[0.04] pointer-events-none" />
 
                   <div className="flex items-center gap-4 relative z-10">
-                    {/* Circular Icon (Orange Accent) */}
-                    <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-white flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500">
-                      {React.cloneElement(service.icon as React.ReactElement, { size: 24, strokeWidth: 2.5 })}
+                    <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(250,204,21,0.4)] group-hover:scale-110 transition-transform duration-500">
+                      {React.cloneElement(service.icon as React.ReactElement, {
+                        size: 22,
+                        strokeWidth: 2.5,
+                        className: "text-[#1e3a5f]",
+                      })}
                     </div>
                     <h3 className="text-lg md:text-xl font-bold text-white leading-tight">
                       {service.title}
@@ -279,16 +383,24 @@ const EcommerceDevelopment = () => {
                 </div>
 
                 {/* Card Body */}
-                <div className="p-8 flex-grow flex flex-col">
-                  <p className="text-slate-500 text-sm md:text-md mb-8 font-medium">
+                <div className="p-7 flex-grow flex flex-col">
+                  <p className="text-slate-500 text-sm md:text-md mb-0 font-medium leading-relaxed">
                     {service.description}
                   </p>
 
-                  <div className="space-y-4 mb-10 flex-grow">
+                  {/* Gradient divider */}
+                  <div className="h-px bg-gradient-to-r from-slate-200 to-transparent my-5" />
+
+                  <div className="space-y-3 flex-grow">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3 text-slate-700">
-                        <Check className={`h-4 w-4 mt-1 flex-shrink-0`} />
-                        <span className="text-[14px] md:text-sm font-bold leading-tight">{feature}</span>
+                        {/* Pill check icon */}
+                        <div className="mt-0.5 w-4 h-4 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-2.5 h-2.5 text-blue-600" strokeWidth={3} />
+                        </div>
+                        <span className="text-[14px] md:text-sm font-bold leading-tight">
+                          {feature}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -296,29 +408,79 @@ const EcommerceDevelopment = () => {
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
       {/* PRODUCTION ROADMAP */}
-      <section className="py-24 bg-[#020617] text-white">
+
+      <section className="py-24 bg-slate-50">
         <div className="container mx-auto max-w-7xl px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white italic">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible ">Production Roadmap</span> </h2>
+
+          {/* Header */}
+          <div className="text-center mb-14">
+            <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground mb-4">
+              How we work
+            </p>
+            <h2 className=" text-4xl md:text-5xl font-bold text-slate-800">
+              The{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
+                Production Roadmap
+              </span>
+            </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {process.map((step) => (
-              <motion.div key={step.id} whileHover={{ y: -10 }} className="relative p-10 bg-white/5 rounded-[2.5rem] border border-white/10 shadow-sm hover:shadow-md transition-all group overflow-hidden">
-                <span className="absolute top-6 right-10 text-7xl font-bold text-gray-500 italic select-none group-hover:text-gray-400 transition-colors">
-                  {step.id}
-                </span>
-                <div className="mb-6 relative z-10 text-orange-500">{step.icon}</div>
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3">{step.step}</h3>
-                  <p className="text-slate-400 italic leading-relaxed text-sm">{step.description}</p>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-border rounded-[2rem] overflow-hidden">
+            {process.map((step, i, arr) => (
+              <motion.div
+                key={step.id}
+                whileHover={{ backgroundColor: "rgb(248 250 252)" }}
+                className={cn(
+                  "relative bg-white p-9 flex flex-col gap-0 group transition-colors duration-200 cursor-default overflow-hidden",
+                  // right border: all except last in each row
+                  i % 3 !== 2 && "lg:border-r border-border",
+                  i % 2 !== 1 && "sm:border-r lg:border-r-0 border-border",
+                  i % 3 === 2 && "lg:border-r-0",
+                  // bottom border: all except last row
+                  i < arr.length - 3 && "lg:border-b border-border",
+                  i < arr.length - 2 && "sm:border-b lg:border-b-0 border-border",
+                  i < arr.length - 1 && "border-b lg:border-b-0 sm:border-b-0 border-border",
+                )}
+              >
+                {/* Top row: icon + number */}
+                <div className="flex items-start justify-between mb-7">
+                  <div className="w-12 h-12 rounded-[14px] border border-border bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-200 transition-all duration-300">
+                    <span className="text-blue-500">
+                      {step.icon}
+                    </span>
+                  </div>
+                  <span className=" text-[3.8rem] font-normal leading-none text-slate-200 group-hover:text-blue-100 transition-colors duration-300 select-none">
+                    {step.id}
+                  </span>
                 </div>
+
+                {/* Step label */}
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground mb-2">
+                  Phase {String(step.id).padStart(2, "0")}
+                </p>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug">
+                  {step.step}
+                </h3>
+
+                {/* Description */}
+                <p className="text-[15px] text-muted-foreground italic leading-relaxed">
+                  {step.description}
+                </p>
+
+                {/* Accent line */}
+                <div className="mt-7 h-0.5 w-0 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full group-hover:w-9 transition-all duration-500" />
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -378,7 +540,7 @@ const EcommerceDevelopment = () => {
                 </h3>
 
                 <div className="mt-3 px-3 py-1 rounded-full bg-slate-50 group-hover:bg-white border border-transparent group-hover:border-slate-100 transition-all">
-                  <span className="text-[9px] font-bold tracking-widest text-slate-400 group-hover:text-slate-600">
+                  <span className="text-[10px] font-bold tracking-widest text-slate-400 group-hover:text-slate-600">
                     {tech.category}
                   </span>
                 </div>
@@ -393,16 +555,14 @@ const EcommerceDevelopment = () => {
           </div>
         </div>
       </section>
-
-
       <QuoteSection quote="Turning visitors into customers with conversion-focused digital stores designed to scale." />
 
       {/* FINAL CTA */}
       <CTASection
-              title={<>Ready to Scale <br className="hidden md:block" /> Your Online Empire?</>}
-              description={<>Let’s build a powerful e-commerce store that drives revenue and customer satisfaction</>}
-              buttonText="Start Your Consultation"
-            />
+        title={<>Ready to Scale <br className="hidden md:block" /> Your Online Empire?</>}
+        description={<>Let’s build a powerful e-commerce store that drives revenue and customer satisfaction</>}
+        buttonText="Start Your Consultation"
+      />
 
     </div>
   );
