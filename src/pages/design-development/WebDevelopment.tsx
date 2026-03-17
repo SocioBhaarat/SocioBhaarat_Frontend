@@ -408,7 +408,7 @@ const WebDevelopment = () => {
                     {item.title}
                   </h4>
 
-                  <p className="text-slate-600 text-base md:text-lg leading-relaxed tracking-wide font-medium border-l-2 border-slate-200 group-hover:border-primary/30 pl-4 md:pl-6 transition-all">
+                  <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed tracking-wide font-medium pl-4 md:pl-6 transition-all">
                     {item.desc}
                   </p>
 
