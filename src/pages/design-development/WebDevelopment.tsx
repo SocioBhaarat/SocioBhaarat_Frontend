@@ -216,26 +216,30 @@ const WebDevelopment = () => {
       title: "Speed as a Feature",
       desc: "In the modern economy, 90% of users bounce if a site takes over 3 seconds to load. Our high-performance Node.js and React stack ensures sub-second deployments and lightning-fast interactions to keep your audience engaged.",
       icon: <Zap className="w-6 h-6 md:w-8 md:h-8" />,
-      metric: "0.8s LCP"
+      metric: "0.8s LCP",
+      color: "#f97316", // orange
     },
     {
       title: "SEO-Native Code",
       desc: "We don't just 'add SEO' later; we bake it into the DNA of your site. We build with semantic HTML5, JSON-LD schema markup, and optimized metadata from the first line of code to ensure maximum search engine visibility.",
       icon: <Search className="w-6 h-6 md:w-8 md:h-8" />,
-      metric: "100/100 Audit"
+      metric: "100/100 Audit",
+      color: "#2563EB", // blue
     },
     {
       title: "Conversion Logic",
       desc: "Every pixel is placed based on conversion-focused psychological triggers and real-world heat-map data. We engineer user paths that guide visitors toward measurable actions, turning passive traffic into consistent revenue.",
       icon: <Target className="w-6 h-6 md:w-8 md:h-8" />,
-      metric: "+40% ROI"
+      metric: "+40% ROI",
+      color: "#10b981", // emerald
     },
     {
       title: "Scalable Core",
       desc: "Your digital presence should grow as fast as your business. Our modular architecture allows for seamless feature integration and high-concurrency handling, providing a future-ready foundation that handles massive traffic spikes.",
       icon: <ShieldCheck className="w-6 h-6 md:w-8 md:h-8" />,
-      metric: "99.9% Uptime"
-    }
+      metric: "99.9% Uptime",
+      color: "#8b5cf6", // violet
+    },
   ];
 
   return (
@@ -443,7 +447,6 @@ const WebDevelopment = () => {
       </section>
 
       {/* TECHNOLOGIES */}
-
       <section className="py-12 bg-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">

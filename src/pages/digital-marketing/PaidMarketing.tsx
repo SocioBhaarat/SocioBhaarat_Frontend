@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { CTASection } from "@/components/ui/CTASection";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
 import { Check, TrendingUp, Target, DollarSign, BarChart, Zap, PlayCircle, RefreshCw, Search, Share2, ShoppingBag, ArrowRight, BarChart3, FlaskConical, ShieldCheck } from "lucide-react";
@@ -94,54 +95,82 @@ const PaidMarketing = () => {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-start overflow-hidden bg-[#fafafa]">
-
-        {/* Technical Background Design */}
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Grid Overlay - Matches Brand Protection Lab */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
-          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/10 blur-[130px] rounded-full animate-pulse" />
+
+          {/* Atmospheric Mesh Blobs */}
+          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
         </div>
 
+        {/* 2. MAIN CONTENT GRID */}
         <div className="container mx-auto px-4 relative z-10 mt-12">
-          <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* Left Column: Narrative (Text Upwards) */}
-            <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="lg:col-span-7 space-y-8 text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[9px] font-bold tracking-[0.2em] uppercase shadow-sm">
+            {/* LEFT COLUMN: Narrative (Text Upwards) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 space-y-8 text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
                 <Zap className="w-3 h-3" /> Meta Ads / Google Ads / Paid Marketing
               </div>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter">
-                Instant Traffic. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium tracking-tight leading-none inline-block pr-4 -mr-4 overflow-visible">Scalable Leads.</span>
+
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                Instant Traffic <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Scalable Leads.</span>
               </h1>
-              <p className="text-lg sm:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic underline decoration-primary/20 decoration-2 underline-offset-8">
+
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
                 We engineer high-converting Meta & Google ad campaigns designed to dominate the Madhya Pradesh digital landscape.
               </p>
+
               <div className="flex justify-start pt-4">
-                <Button size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105" onClick={() => navigate("/contact")}>
+                <Button
+                  size="lg"
+                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  onClick={() => navigate("/contact")}
+                >
                   Start Your Campaign <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
             </motion.div>
 
-            {/* Right Column: Visual Evidence (Performance Bento) */}
-            <motion.div initial={{ opacity: 0, scale: 0.9, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ delay: 0.3, duration: 1 }} className="lg:col-span-5 relative hidden lg:block">
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="lg:col-span-5 relative hidden lg:block"
+            >
               <div className="relative group">
+                {/* Decorative Glow behind image */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
                 <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
                     alt="Performance Marketing ROI Dashboard"
                     className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                   />
+
+                  {/* Floating Mini-Metric Overlay */}
                   <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white shadow-lg">
                     <p className="text-[10px] font-bold text-primary uppercase tracking-widest leading-none">Avg. ROAS</p>
                     <p className="text-xl font-black text-slate-900 leading-none">4.8x Meta/Google</p>
                   </div>
                 </div>
+
+                {/* Framed Layer - Matching the "Legacy" section rotation */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>
@@ -439,6 +468,12 @@ const PaidMarketing = () => {
           </div>
         </div>
       </section>
+
+      <CTASection
+        title={<>Ready to Scale <br className="hidden md:block" /> Your Business? </>}
+        description={<>Get a free paid advertising audit and custom strategy today.</>}
+        buttonText="Claim Your Free Ad Audit"
+      />
 
     </div>
   );

@@ -3,16 +3,16 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react'
 
 interface Step {
-    title: string;
-    desc: string;
-    color: string;
+  title: string;
+  desc: string;
+  color: string;
 }
 
 interface MatrixLayoutProps {
-    process: Step[];
-    activePhase: number;
-    setActivePhase: (index: number) => void;
-    scrollRef: React.RefObject<HTMLDivElement>;
+  process: Step[];
+  activePhase: number;
+  setActivePhase: (index: number) => void;
+  scrollRef: React.RefObject<HTMLDivElement>;
 }
 
 function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProps) {
@@ -97,7 +97,9 @@ function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProp
               whileTap={{ scale: 0.95 }}
               onClick={() => setActivePhase(index)}
               className={cn(
-                "cursor-pointer aspect-square rounded-full flex flex-col items-center justify-center text-center relative backdrop-blur-md transition-all duration-500",
+                "cursor-pointer aspect-square rounded-full flex flex-col items-center justify-center text-center relative backdrop-blur-md transition-all duration-500 mx-auto w-full",
+                // Cap max size when 6 items — circles won't grow beyond this
+                process.length === 6 ? "max-w-[140px]" : "max-w-[160px]",
                 activePhase === index
                   ? "bg-white shadow-[0_20px_60px_rgba(0,0,0,0.1)] border-transparent"
                   : "bg-white/55 border border-slate-200/80 hover:shadow-xl hover:bg-white/70"

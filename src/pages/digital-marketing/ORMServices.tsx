@@ -1,5 +1,6 @@
 import { staggerContainer, fadeUp, cardAnimation, fadeLeft } from "@/components/ui/animation";
 import { Button } from "@/components/ui/button";
+import { CTASection } from "@/components/ui/CTASection";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
 import { Check, Shield, Star, AlertTriangle, TrendingUp, ArrowRight, ShieldCheck, BarChart3, MessageSquare, Search, Zap } from "lucide-react";
@@ -369,38 +370,11 @@ const ORMServices = () => {
       <QuoteSection quote="In the digital age, your reputation is the currency of trust—we ensure your brand never goes bankrupt." />
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic leading-tight uppercase">
-                What Does the Internet Say About You?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Get a free 24-hour reputation audit and see how your brand ranks in Bhopal & Jabalpur."
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Claim Free Reputation Audit
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
+      <CTASection
+        title={<>What Does the Internet <br className="hidden sm:block" /> Say About You?</>}
+        description={<>Get a free 24-hour reputation audit and <br className="hidden sm:block" />see how your brand ranks in Bhopal & Jabalpur.</>}
+        buttonText="Claim Free Reputation Audit"
+      />
     </div>
 
   );

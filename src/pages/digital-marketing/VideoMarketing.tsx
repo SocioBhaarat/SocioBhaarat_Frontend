@@ -81,18 +81,18 @@ const VideoMarketing = () => {
                             transition={{ duration: 0.6 }}
                             className="text-center lg:text-left"
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
                                 <Play className="w-3 h-3 fill-current" /> Video Marketing
                             </div>
 
-                            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[0.95] tracking-tighter mb-8">
-                                Tell Your Story with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
-                                        Cinematic Impact
-                                    </span>
+                            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                                Tell Your Story with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">
+                                    Cinematic Impact
+                                </span>
 
                             </h1>
 
-                            <p className="text-base md:text-xl text-slate-500 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium italic border-l-0 lg:border-l-4 border-primary/20 lg:pl-8 mb-10">
+                            <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
                                 {heroData.subtext}
                             </p>
 
@@ -160,6 +160,102 @@ const VideoMarketing = () => {
 
                 {/* Smooth Bottom Line */}
                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
+            </section>
+
+            <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+                {/* 1. TECHNICAL BACKGROUND DESIGN */}
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                    {/* Grid Overlay - Matches Brand Protection Lab */}
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+
+                    {/* Atmospheric Mesh Blobs */}
+                    <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+                    <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
+                </div>
+
+                {/* 2. MAIN CONTENT GRID */}
+                <div className="container mx-auto px-4 relative z-10 mt-12">
+                    <div className="grid lg:grid-cols-12 gap-12 items-start">
+
+                        {/* LEFT COLUMN: Narrative (Text Upwards) */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="lg:col-span-7 space-y-8 text-left"
+                        >
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                                <Play className="w-3 h-3 fill-current" /> Video Marketing
+                            </div>
+
+                            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                                Tell Your Story with <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Cinematic Impact.</span>
+                            </h1>
+
+                            <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                                We create captivating video content that stops the scroll, explains your value, and converts viewers into loyal customers across YouTube, Instagram, and LinkedIn.
+                            </p>
+
+                            <div className="flex justify-start pt-4">
+                                <Button
+                                    size="lg"
+                                    className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                                    onClick={() => navigate("/contact")}
+                                >
+                                    Start Your Production <ArrowRight className="ml-2 w-5 h-5" />
+                                </Button>
+                            </div>
+                        </motion.div>
+
+                        {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                            animate={{ opacity: 1, scale: 1, x: 0 }}
+                            transition={{ delay: 0.3, duration: 1 }}
+                            className="lg:col-span-5 relative hidden lg:block"
+                        >
+                            <div className="absolute -inset-4 bg-primary/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-700" />
+
+                            {/* Frame Architecture */}
+                            <div className="relative rounded-[2.5rem] md:rounded-[3.5rem] p-3 bg-white border-2 border-slate-200 shadow-2xl overflow-hidden">
+                                <div className="absolute top-6 left-6 z-20 flex gap-2">
+                                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                                    <div className="w-3 h-3 rounded-full bg-green-400" />
+                                </div>
+
+                                <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem]">
+                                    <img
+                                        src="https://img.freepik.com/free-vector/video-production-concept-illustration_114360-1145.jpg"
+                                        alt="Video Production Process"
+                                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                                    />
+
+                                    {/* Play Trigger Module */}
+                                    <div className="absolute inset-0 flex items-center justify-center bg-slate-900/20 group-hover:bg-slate-900/40 transition-all duration-500">
+                                        <div className="w-20 h-20 md:w-28 md:h-28 bg-white/10 backdrop-blur-xl border border-white/30 text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                                            <Play className="w-10 h-10 md:w-14 md:h-14 fill-white ml-2" />
+                                        </div>
+                                    </div>
+
+                                    {/* Technical Detail Badge */}
+                                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/20 text-[10px] font-bold text-white uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                        00 : 45 : 12 / REC
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Floating Decorative Elements */}
+                            <div className="absolute -top-10 -right-10 hidden lg:block animate-bounce-slow">
+                                <div className="p-4 bg-white border border-slate-200 rounded-3xl shadow-xl -rotate-12">
+                                    <Clapperboard className="w-8 h-8 text-orange-500" />
+                                </div>
+                            </div>
+                        </motion.div>
+
+                    </div>
+                </div>
             </section>
 
             {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
