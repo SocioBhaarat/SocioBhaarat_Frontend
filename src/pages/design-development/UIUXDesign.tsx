@@ -8,7 +8,8 @@ import {
   Rocket,
   Heart,
   BadgeCheck,
-  Globe
+  Globe,
+  CheckCircle
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -95,6 +96,65 @@ const UIUXDesign = () => {
       icon: <Rocket className="w-6 h-6" />,
     },
   ];
+
+  const process = [
+  {
+    id: "01",
+    title: "Discovery & Strategy",
+    color: "#3b82f6", // Blue 500
+    desc: "We align with your business goals and define the project roadmap. This phase establishes the 'why' behind the design, ensuring every move serves your bottom line.",
+    icon: <Search className="w-6 h-6" />,
+  },
+  {
+    id: "02",
+    title: "User Persona Research",
+    color: "#1E3A5F", // Indigo 500
+    desc: "Deep-diving into user psychology to build detailed personas. We map out pain points and motivations to create a product that users actually want to use.",
+    icon: <Users className="w-6 h-6" />,
+  },
+  {
+    id: "03",
+    title: "Information Architecture",
+    color: "#a855f7", // Purple 500
+    desc: "Organizing content and features into a logical flow. We build the structural skeleton (sitemaps) to ensure navigation is intuitive and frictionless.",
+    icon: <Layout className="w-6 h-6" />,
+  },
+  {
+    id: "04",
+    title: "Wireframing",
+    color: "#ec4899", // Pink 500
+    desc: "Creating low-fidelity blueprints to focus on functionality over aesthetics. This allows us to iterate quickly on user experience without visual distractions.",
+    icon: <MousePointer2 className="w-6 h-6" />,
+  },
+  {
+    id: "05",
+    title: "High-Fidelity UI Design",
+    color: "#f43f5e", // Rose 500
+    desc: "Crafting the visual identity through typography, color, and spacing. We transform wireframes into a stunning, brand-aligned interface.",
+    icon: <Palette className="w-6 h-6" />,
+  },
+  {
+    id: "06",
+    title: "Interactive Prototyping",
+    color: "#f59e0b", // Amber 500
+    desc: "Developing clickable, high-fidelity prototypes. This simulates the real-world feel of the app, including animations and transitions, for stakeholder testing.",
+    icon: <Zap className="w-6 h-6" />, // Changed to Zap for "Interactivity"
+  },
+  {
+    id: "07",
+    title: "QA & Usability Testing",
+    color: "#10b981", // Emerald 500
+    desc: "Rigorous testing with real users to identify edge cases and friction. We polish the experience until the interface is flawless and accessible.",
+    icon: <CheckCircle className="w-6 h-6" />, // Suggested new icon
+  },
+  {
+    id: "08",
+    title: "Development Handoff",
+    color: "#06b6d4", // Cyan 500
+    desc: "Preparing pixel-perfect assets and documentation for engineers. We provide a seamless transition to ensure the final build matches the vision perfectly.",
+    icon: <Rocket className="w-6 h-6" />,
+  },
+];
 
   const designStack = [
     { name: "Figma", logo: "figma", color: "#F24E1E", desc: "Main UI Tool" },
@@ -438,7 +498,7 @@ const UIUXDesign = () => {
         highlightedWord="Design"
         titleSuffix="Process"
         description="A user-centric creative workflow that translates complex business requirements into intuitive and aesthetic digital experiences."
-        process={steps}
+        process={process}
       />
 
       {/* TECH CLOUD */}
