@@ -58,7 +58,7 @@ const ServiceList = ({ services }: ServiceListProps) => {
 
           {/* 3. Detailed Description */}
           <div className="md:col-span-7 relative">
-            <p className="text-slate-600 text-base md:text-xl leading-relaxed tracking-wide font-semibold border-l-2 border-slate-100 pl-8 transition-all duration-500 custom-desc">
+            <p className="text-slate-600 text-base md:text-lg leading-relaxed tracking-wide font-medium border-l-2 border-slate-100 pl-8 transition-all duration-500 custom-desc">
               {service.desc}
             </p>
           </div>

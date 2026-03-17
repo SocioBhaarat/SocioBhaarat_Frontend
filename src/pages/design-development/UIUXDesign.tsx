@@ -62,7 +62,7 @@ const UIUXDesign = () => {
     {
       id: "02",
       title: "Wireframing & Architecture",
-      color: "#4f46e5", // Indigo
+      color: "#f59e0b", // Indigo
       desc: "Our team constructs detailed low-fidelity blueprints to map out the structural skeleton of your product. We focus on defining the information hierarchy and user flow to ensure intuitive navigation and logical interactions.",
       icon: <Layout className="w-6 h-6" />,
     },

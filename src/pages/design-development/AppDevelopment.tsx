@@ -75,7 +75,7 @@ const AppDevelopment = () => {
     },
     {
       title: "UX Architecture",
-      color: "#4f46e5", // Indigo
+      color: "#a4773f", // Indigo
       desc: "Architecting the user journey through detailed wireframes and flowcharts, focusing on intuitive navigation patterns and accessibility standards to ensure a seamless mobile-first experience."
     },
     {

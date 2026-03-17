@@ -78,7 +78,7 @@ const WordPressDevelopment = () => {
     },
     {
       title: "Strategic Roadmap",
-      color: "#4f46e5", // Indigo
+      color: "#f59e0b", 
       desc: "Architecting the technical ecosystem, defining the sitemap, and creating a detailed timeline for milestone-driven delivery."
     },
     {

@@ -86,7 +86,7 @@ const WebDevelopment = () => {
     },
     {
       title: "Customized Plan",
-      color: "#0891B2", // Cyan/Teal
+      color: "#f43f5e", // Cyan/Teal
       bg: "#ecfeff",
       desc: "Every project is unique. We engineer a bespoke development roadmap, selecting the right tech stack (MERN/Next.js) to ensure your platform is built for speed and long-term scalability."
     },
@@ -358,12 +358,12 @@ const WebDevelopment = () => {
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
           {/* Section Header */}
           <div className="mb-12 md:mb-20 max-w-8xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-slate-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-4 text-slate-900 leading-tight">
               Why Your Business Needs a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible leading-[1.2]">
                 Strong Web Presence
               </span>
             </h2>
-            <p className="text-slate-700 text-lg md:text-2xl max-w-7xl font-medium leading-relaxed border-l-4 border-primary/20 pl-4 md:pl-6">
+            <p className="text-slate-600 text-lg md:text-2xl max-w-7xl font-medium leading-relaxed border-l-4 border-primary/20 pl-4 md:pl-6">
               A website is not a digital brochure; it is a high-speed conversion engine.
             </p>
           </div>
@@ -404,11 +404,11 @@ const WebDevelopment = () => {
 
                 {/* 3. Right Side: Content */}
                 <div className="space-y-4 md:space-y-6 flex-grow">
-                  <h4 className="text-xl sm:text-2xl md:text-4xl font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">
+                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">
                     {item.title}
                   </h4>
 
-                  <p className="text-slate-600 text-sm sm:text-base md:text-xl leading-relaxed tracking-wide font-semibold border-l-2 border-slate-200 group-hover:border-primary/30 pl-4 md:pl-6 transition-all">
+                  <p className="text-slate-600 text-base md:text-lg leading-relaxed tracking-wide font-medium border-l-2 border-slate-200 group-hover:border-primary/30 pl-4 md:pl-6 transition-all">
                     {item.desc}
                   </p>
 
@@ -436,7 +436,7 @@ const WebDevelopment = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
               What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
             </h2>
-            <p className="text-slate-500 text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6">
+            <p className=" text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6 text-slate-500">
               Industrial-strength architecture tailored for high-growth business scalability and engineered for performance
             </p>
           </div>
