@@ -1,55 +1,139 @@
+import { staggerContainer, fadeUp, cardAnimation } from "@/components/ui/animation";
 import { Button } from "@/components/ui/button";
+import { CTASection } from "@/components/ui/CTASection";
+import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
-import { Check, Search, TrendingUp, FileText, Link2, ShieldCheck, BarChart3, ArrowRight, Sparkles, Cpu, SearchCode, Users } from "lucide-react";
+import { Check, Search, TrendingUp, FileText, Link2, ShieldCheck, BarChart3, ArrowRight, Sparkles, Cpu, SearchCode, Users, Globe, Zap } from "lucide-react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const WebsiteSEO = () => {
   const navigate = useNavigate();
 
   const services = [
-    { icon: Search, title: "Keyword Research", desc: "In-depth keyword analysis to target the right search terms" },
-    { icon: FileText, title: "On-Page SEO", desc: "Optimize content, meta tags, and site structure" },
-    { icon: Link2, title: "Link Building", desc: "High-quality backlinks from authoritative websites" },
-    { icon: TrendingUp, title: "Technical SEO", desc: "Site speed, mobile optimization, and crawlability" },
     {
-      icon: BarChart3, title: "SEO Analytics & Reporting", desc: "Transparent monthly reports with traffic, rankings, and performance insights.",
+      icon: <Search />,
+      color: "#2563eb", // Blue
+      title: "Strategic Keyword Analysis",
+      desc: "Beyond simple search terms, we perform deep-intent analysis to identify high-conversion keywords and long-tail opportunities that connect your brand with ready-to-buy customers.",
     },
     {
-      icon: ShieldCheck, title: "Local SEO", desc: "Optimize Google Business Profile and local listings to attract nearby customers.",
+      icon: <FileText />,
+      color: "#7c3aed", // Violet
+      title: "On-Page Content Engineering",
+      desc: "Precision optimization of your content architecture, meta-semantics, and internal linking structures to ensure search engines perfectly understand your topical authority and relevance.",
     },
-  ]
+    {
+      icon: <Link2 />,
+      color: "#ea580c", // Orange
+      title: "Authority Link Building",
+      desc: "Ethical, white-hat acquisition of high-DA backlinks from industry-leading publications. We build a digital 'reputation web' that signals trust and dominance to search engine algorithms.",
+    },
+    {
+      icon: <Zap />,
+      color: "#16a34a", // Green
+      title: "Technical SEO & Core Vitals",
+      desc: "Fine-tuning your site’s backend for elite performance — optimizing crawl budgets, site speed, mobile responsiveness, and schema markup to meet Google’s strictest ranking criteria.",
+    },
+    {
+      icon: <BarChart3 />,
+      color: "#4338ca", // Indigo
+      title: "SEO Analytics & KPI Tracking",
+      desc: "Transparent, real-time data visualization of your search performance. We track traffic quality, keyword rankings, and conversion metrics to provide a clear view of your growth and ROI.",
+    },
+    {
+      icon: <ShieldCheck />,
+      color: "#0d9488", // Teal
+      title: "Local SEO & Map Dominance",
+      desc: "Maximizing visibility in local search results and Google Maps. We optimize your Business Profile and local citation network to ensure you are the first choice for customers in your area.",
+    },
+    {
+      icon: <Globe />,
+      color: "#dc2626", // Red
+      title: "International & Multi-Regional SEO",
+      desc: "Expanding your reach across borders with hreflang implementation and localized content strategies, ensuring your brand ranks effectively in diverse global markets and languages.",
+    },
+    {
+      icon: <SearchCode />,
+      color: "#d97706", // Amber
+      title: "Competitor SERP Intelligence",
+      desc: "Continuous monitoring of your competitors' SEO maneuvers. We analyze their backlink profiles and keyword gaps to identify opportunities for you to leapfrog them in search results.",
+    },
+  ];
 
   const whyChooseUs = [
     {
+      num: "01",
       title: "Experienced SEO Specialists",
-      desc: "A team of data-driven analysts dedicated to navigating complex search algorithms.",
-      icon: <Users size={24} />,
+      desc: "A veteran team of data-driven analysts and technical architects dedicated to navigating the volatility of complex search algorithms to maintain your lead.",
+      tag: "Algorithm Experts",
+      card: "bg-blue-50 border-blue-200",
+      iconWrap: "bg-blue-100 text-blue-700",
+      num_color: "text-blue-200",
+      tag_color: "text-blue-700",
+      dot: "bg-blue-700",
+      icon: <Users size={22} />,
     },
     {
+      num: "02",
       title: "In-Depth Keyword Research",
-      desc: "Identifying high-intent search terms that bridge the gap between users and your brand.",
-      icon: <SearchCode size={24} />,
+      desc: "Identifying high-intent search terms and long-tail opportunities that bridge the gap between user intent and your brand — capturing leads before the competition.",
+      tag: "Intent-Based Targeting",
+      card: "bg-orange-50 border-orange-200",
+      iconWrap: "bg-orange-100 text-orange-700",
+      num_color: "text-orange-200",
+      tag_color: "text-orange-700",
+      dot: "bg-orange-700",
+      icon: <SearchCode size={22} />,
     },
     {
+      num: "03",
       title: "White-Hat SEO Techniques",
-      desc: "Strict adherence to search engine guidelines to ensure long-term, sustainable growth.",
-      icon: <ShieldCheck size={24} />,
+      desc: "Strict adherence to Google Search Essentials (formerly Webmaster Guidelines) to ensure your rankings achieve long-term, penalty-proof, and sustainable growth.",
+      tag: "Sustainable Ranking",
+      card: "bg-emerald-50 border-emerald-200",
+      iconWrap: "bg-emerald-100 text-emerald-700",
+      num_color: "text-emerald-200",
+      tag_color: "text-emerald-700",
+      dot: "bg-emerald-700",
+      icon: <ShieldCheck size={22} />,
     },
     {
-      title: "Technical & On-Page Optimization",
-      desc: "Engineering your site's core vitals and architecture for maximum crawl efficiency.",
-      icon: <Cpu size={24} />,
+      num: "04",
+      title: "Technical & On-Page Audit",
+      desc: "Engineering your site’s Core Web Vitals, Schema markup, and internal architecture for maximum crawl efficiency and a seamless mobile-first user experience.",
+      tag: "Core Vital Optimization",
+      card: "bg-indigo-50 border-indigo-200",
+      iconWrap: "bg-indigo-100 text-indigo-700",
+      num_color: "text-indigo-200",
+      tag_color: "text-indigo-700",
+      dot: "bg-indigo-700",
+      icon: <Cpu size={22} />,
     },
     {
+      num: "05",
       title: "High-Quality Link Building",
-      desc: "Architecting a high-authority backlink profile to establish your digital domain dominance.",
-      icon: <Link2 size={24} />,
+      desc: "Architecting a high-authority backlink profile through strategic outreach and PR — establishing the digital domain dominance required to rank for competitive terms.",
+      tag: "Authority Building",
+      card: "bg-purple-50 border-purple-200",
+      iconWrap: "bg-purple-100 text-purple-700",
+      num_color: "text-purple-200",
+      tag_color: "text-purple-700",
+      dot: "bg-purple-700",
+      icon: <Link2 size={22} />,
     },
     {
+      num: "06",
       title: "Transparent Monthly Reporting",
-      desc: "Industrial-grade data visualization and KPI tracking delivered every 30-day cycle.",
-      icon: <BarChart3 size={24} />,
+      desc: "Clear visibility into your SEO health with sentiment scores, keyword movement, and ROI metrics — providing measurable results every 30-day cycle.",
+      tag: "Full Visibility",
+      card: "bg-rose-50 border-rose-200",
+      iconWrap: "bg-rose-100 text-rose-700",
+      num_color: "text-rose-200",
+      tag_color: "text-rose-700",
+      dot: "bg-rose-700",
+      icon: <BarChart3 size={22} />,
     },
   ];
 
@@ -66,51 +150,80 @@ const WebsiteSEO = () => {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
-        {/* Technical Background Design */}
+
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Grid Overlay - Matches Brand Protection Lab */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
-          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/10 blur-[130px] rounded-full animate-pulse" />
+
+          {/* Atmospheric Mesh Blobs */}
+          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
         </div>
 
+        {/* 2. MAIN CONTENT GRID */}
         <div className="container mx-auto px-4 relative z-10 mt-12">
-          <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* Left Column: Narrative (Text Upwards) */}
-            <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="lg:col-span-7 space-y-8 text-left">
+            {/* LEFT COLUMN: Narrative (Text Upwards) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 space-y-8 text-left"
+            >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
                 <Sparkles className="w-3 h-3" /> SEO for Website
               </div>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter">
+
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
                 Rank Higher <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">& Grow Organically</span>.
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">& Grow Organically.</span>
               </h1>
-              <p className="text-lg sm:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic">
+
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
                 We help businesses in Bhopal & Jabalpur dominate search engine rankings and generate quality leads through result-driven SEO solutions.
               </p>
-              <div className="flex justify-start pt-2">
-                <Button size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105" onClick={() => navigate("/contact")}>
+
+              <div className="flex justify-start pt-4">
+                <Button
+                  size="lg"
+                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  onClick={() => navigate("/contact")}
+                >
                   Get Free SEO Audit <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
             </motion.div>
 
-            {/* Right Column: Visual Evidence (SEO Dashboard) */}
-            <motion.div initial={{ opacity: 0, scale: 0.9, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ delay: 0.3, duration: 1 }} className="lg:col-span-5 relative hidden lg:block">
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="lg:col-span-5 relative hidden lg:block"
+            >
               <div className="relative group">
+                {/* Decorative Glow behind image */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
                 <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1600469984476-c713650f1b1b"
                     alt="SEO Performance Dashboard"
                     className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                   />
+
+                  {/* Floating Mini-Metric Overlay */}
                   <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg">
                     <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">Visibility Increase</p>
                     <p className="text-xl font-bold text-slate-900">+300% Organic</p>
                   </div>
                 </div>
+
+                {/* Framed Layer - Matching the "Legacy" section rotation */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
               </div>
             </motion.div>
 
@@ -119,46 +232,68 @@ const WebsiteSEO = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-muted/30 relative overflow-hidden">
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-20 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">Why Choose Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">SEO Strategy</span>?</h2>
-            <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic border-l-4 border-primary/30 pl-6">Built for measurable, ethical growth in the Madhya Pradesh digital ecosystem.</p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-12 lg:px-8 bg-[#f8f7f4] relative overflow-hidden">
+        <motion.div
+          className="container mx-auto max-w-7xl relative z-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
+          {/* Header */}
+          <motion.div variants={fadeUp} className=" max-w-7xl mx-auto mb-14 space-y-4">
+            <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
+              The SocioBhaarat Advantage
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+              Why Choose{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                Our SEO Strategy
+              </span>
+            </h2>
+            <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed mx-auto ">
+              Built for measurable, ethical growth in the Madhya Pradesh digital ecosystem.
+            </p>
+          </motion.div>
+
+          {/* Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
-                whileHover={{ y: -10 }}
-                className="relative p-8 md:p-10 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group overflow-hidden min-h-[16rem] flex flex-col justify-between"
+                variants={cardAnimation}
+                whileHover={{ y: -4, transition: { duration: 0.25 } }}
+                className={`group relative p-8 rounded-2xl border-[1.5px] flex flex-col transition-shadow duration-300 hover:shadow-xl ${item.card}`}
               >
-                {/* 1. Background ID Watermark */}
-                <span className="absolute top-4 right-6 text-7xl md:text-8xl font-bold text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
-                  0{index + 1}
-                </span>
-
-                {/* 2. Technical Icon Container */}
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+                {/* Icon */}
+                <div className={`w-12 h-12 rounded-[14px] flex items-center justify-center mb-5 ${item.iconWrap}`}>
                   {item.icon}
                 </div>
 
-                {/* 3. Text Architecture */}
-                <div className="space-y-3 relative z-10">
-                  <h4 className="font-bold text-lg md:text-xl text-slate-900 italic group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h4>
-                  <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-medium italic border-l-2 border-primary/10 pl-4">
-                    {item.desc}
-                  </p>
-                </div>
+                {/* <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-2 ${item.num_color}`}>
+                        {item.num}
+                      </span> */}
 
-                {/* 4. Bottom Lab Detail Line */}
-                <div className="h-1 w-0 bg-primary group-hover:w-full transition-all duration-500 absolute bottom-0 left-0" />
+                {/* Title */}
+                <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-3 leading-snug ">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm md:text-base font-medium text-slate-900 leading-[1.8] flex-1 mb-5">
+                  {item.desc}
+                </p>
+
+                {/* Tag */}
+                <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.18em] ${item.tag_color}`}>
+                  <span className={`w-[5px] h-[5px] rounded-full flex-shrink-0 ${item.dot}`} />
+                  {item.tag}
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Why SEO matters */}
@@ -185,55 +320,20 @@ const WebsiteSEO = () => {
       </section>
 
       {/*Our  Services */}
-      <section className="py-24 bg-background relative overflow-hidden">
-        {/* Atmospheric Background Textures */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Soft Mesh Glows */}
-          <div className="absolute top-[-5%] left-[-5%] w-[40%] h-[40%] bg-blue-600/5 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[-5%] right-[-5%] w-[35%] h-[35%] bg-orange-500/5 blur-[100px] rounded-full" />
-        </div>
+      <section className="py-12 bg-white">
+        <div className="container mx-auto max-w-6xl px-4">
 
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-20 space-y-4">
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] block"
-            >
-              Precision Engineering
-            </motion.span>
-            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
-              Our SEO <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Architecture</span>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+              Our{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                Services
+              </span>
             </h2>
-            <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto italic mt-6">
-              Data-backed strategies designed to conquer search rankings across the MP digital landscape.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -12 }}
-                className="group relative p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden h-full flex flex-col justify-between"
-              >
+          <HorizontalServiceList services={services} />
 
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
-                    <service.icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors tracking-tight leading-tight">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-500 leading-relaxed italic text-sm group-hover:text-slate-700">
-                    {service.desc}
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-8 w-10 h-1 bg-slate-100 rounded-full group-hover:w-full group-hover:bg-primary transition-all duration-500" />
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -242,37 +342,13 @@ const WebsiteSEO = () => {
       />
 
       {/* Final CTA */}
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
 
+      <CTASection
+        title={<>Ready to Rank #1 <br className="hidden md:block" /> Your Vision?</>}
+        description={<>Get a comprehensive SEO audit and a custom-built growth strategy for your brand in <span className="underline decoration-white/30 underline-offset-8">Bhopal & Jabalpur</span>.</>}
+        buttonText="Claim Your Free Audit"
+      />
 
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
-                Ready to Rank #1 on Google?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Get a comprehensive SEO audit and a custom-built growth strategy for your brand in <span className="underline decoration-white/30 underline-offset-8">Bhopal & Jabalpur</span>."
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-bold shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Claim Your Free Audit
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

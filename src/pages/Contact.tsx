@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
+import NeighborhoodDiscovery from "@/components/ui/NeighborhoodDiscovery";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -63,7 +64,6 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
-
       {/* 2. CONTACT INFO CARDS (Bento Style) */}
 
       <section className="py-12 px-4 sm:px-6 lg:px-8 relative z-10">

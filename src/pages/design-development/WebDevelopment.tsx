@@ -1,62 +1,252 @@
 import { Button } from "@/components/ui/button";
 import QuoteSection from "@/components/ui/QuoteSection";
 import {
-  Check, Code, Smartphone, Zap, Lock, Rocket, Globe, Layers,
-  Layout, Palette, Users, ArrowRight, MousePointer2, Settings2,
-  Terminal, Database, Cpu, MonitorCheck,
+  Code, Smartphone, Zap, Lock, Rocket, Globe, Layers, Palette, ArrowRight, MousePointer2, Settings2,
+  Terminal, Cpu, MonitorCheck,
   Code2,
-  Server,
-  ShoppingBag
+  Search,
+  ShieldCheck,
+  Target,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import React from "react";
+import { CTASection } from "@/components/ui/CTASection";
+import ServiceList from "@/components/ui/ServiceList";
+import TechGrid from "@/components/ui/TechGrid";
+import ProcessSection from "@/components/DevelopmentProcess";
+import FeatureGrid from "@/components/ui/FeatureGrid";
+
 
 const WebDevelopment = () => {
   const navigate = useNavigate();
 
-  /* DATA */
   const services = [
-    { title: "Corporate Websites", icon: <Globe /> },
-    { title: "E-commerce Platforms", icon: <MonitorCheck /> },
-    { title: "Landing Pages", icon: <MousePointer2 /> },
-    { title: "Web Applications", icon: <Cpu /> },
-    { title: "Progressive Web Apps (PWA)", icon: <Smartphone /> },
-    { title: "API Development & Integration", icon: <Terminal /> },
-    { title: "Website Redesign", icon: <Palette /> },
-    { title: "Website Maintenance", icon: <Settings2 /> },
-    { title: "Performance Optimization", icon: <Zap /> },
+    {
+      title: "Corporate Websites",
+      color: "#2563EB",
+      icon: <Globe />,
+      desc: "We build professional digital headquarters that establish authority. These sites showcase your brand values and services to build deep trust with your global audience and stakeholders."
+    },
+    {
+      title: "E-commerce Platforms",
+      color: "#EA580C",
+      icon: <MonitorCheck />,
+      desc: "Robust online stores engineered for high conversion and security. We create seamless shopping experiences that turn casual browsers into loyal customers with optimized product management and checkouts."
+    },
+    {
+      title: "Landing Pages",
+      color: "#DB2777",
+      icon: <MousePointer2 />,
+      desc: "High-impact, single-page solutions focused on a specific marketing goal. These pages are precision-engineered to capture leads and drive conversions with zero distractions and clear calls-to-action."
+    },
+    {
+      title: "Web Applications",
+      color: "#7C3AED",
+      icon: <Cpu />,
+      desc: "Custom-built software that runs in your browser to solve complex business problems. We focus on scalability and user experience to help you automate workflows or launch unique products."
+    },
+    {
+      title: "Progressive Web Apps (PWA)",
+      color: "#0891B2",
+      icon: <Smartphone />,
+      desc: "Websites that look and feel like mobile apps with fast loading and offline capabilities. PWAs provide home-screen shortcuts and a premium mobile experience without needing an App Store download."
+    },
+    {
+      title: "API Development & Integration",
+      color: "#111827",
+      icon: <Terminal />,
+      desc: "We build the invisible bridges that connect your software systems. Whether creating custom APIs or integrating third-party tools, we ensure your platforms communicate flawlessly, securely, and efficiently."
+    },
+    {
+      title: "Website Redesign",
+      color: "#0D9488",
+      icon: <Palette />,
+      desc: "Transforming your outdated site into a modern, high-performance engine. We overhaul your visual identity and technical structure to bring your digital presence back to the cutting edge."
+    },
+    {
+      title: "Website Maintenance",
+      color: "#475569",
+      icon: <Settings2 />,
+      desc: "Continuous technical care to keep your platform running smoothly. We handle security patches, backups, and updates so you can focus on business growth without worrying about unexpected downtime."
+    },
+    {
+      title: "Performance Optimization",
+      color: "#059669",
+      icon: <Zap />,
+      desc: "We fine-tune your code and server settings for sub-second loading speeds. Faster sites improve user retention and boost SEO rankings, ensuring your business stays ahead of the competition."
+    }
   ];
 
   const process = [
-    { title: "Requirement Analysis & Planning", desc: "We understand your goals, target audience, and business requirements to create a strategic roadmap." },
-    { title: "UI/UX Design", desc: "Crafting intuitive, engaging, and user-focused designs that align with your brand identity." },
-    { title: "Frontend & Backend Development", desc: "Developing scalable, secure, and high-performance architecture using modern technologies." },
-    { title: "Testing & Quality Assurance", desc: "Comprehensive testing to ensure performance, security, responsiveness, and bug-free deployment." },
-    { title: "Deployment", desc: "Smooth and optimized deployment with performance checks and final verification." },
-    { title: "Ongoing Support & Optimization", desc: "Continuous monitoring, updates, and improvements to keep your website future-ready." },
+    {
+      title: "Client Requirements",
+      color: "#2563EB", // Royal Blue
+      bg: "#eff6ff",
+      desc: "We begin by deep-diving into your business logic. This isn't just a meeting; it's a strategic session where we gather unique requirements to grasp your vision and technical goals."
+    },
+    {
+      title: "Customized Plan",
+      color: "#f43f5e", // Cyan/Teal
+      bg: "#ecfeff",
+      desc: "Every project is unique. We engineer a bespoke development roadmap, selecting the right tech stack (MERN/Next.js) to ensure your platform is built for speed and long-term scalability."
+    },
+    {
+      title: "Wireframe",
+      color: "#0D9488", // Emerald Teal
+      bg: "#f0fdfa",
+      desc: "We map out the user journey with high-fidelity wireframes. This architectural skeletal structure ensures the UX logic is flawless before we move into visual development."
+    },
+    {
+      title: "Design Approval",
+      color: "#7C3AED", // Vivid Violet
+      bg: "#f5f3ff",
+      desc: "Our creative lab presents the UI mockups. We iterate based on your feedback until the aesthetic perfectly aligns with your brand’s digital identity and market positioning."
+    },
+    {
+      title: "Website Designing",
+      color: "#C026D3", // Fuchsia
+      bg: "#fdf4ff",
+      desc: "Moving from wireframes to vibrant visuals. We create smooth, high-end interactions and responsive layouts that ensure a premium feel across all modern devices."
+    },
+    {
+      title: "Website Development",
+      color: "#EA580C", // Deep Orange
+      bg: "#fff7ed",
+      desc: "This is where our engineering power shines. We write clean, semantic code and build robust backend systems to turn designs into a high-performance digital engine."
+    },
+    {
+      title: "Testing By Experts",
+      color: "#16A34A", // Success Green
+      bg: "#f0fdf4",
+      desc: "Zero compromise on quality. Our QA team performs rigorous stress tests, security audits, and cross-browser checks to ensure 100% stability at launch."
+    },
+    {
+      title: "Launch Website",
+      color: "#0F172A", // Midnight Slate
+      bg: "#f8fafc",
+      desc: "Deployment day. We handle the server configuration, cloud migration, and final optimizations to ensure your brand goes live with a sub-second LCP score."
+    },
   ];
 
   const whyChooseUs = [
-    { icon: Code, title: "Experienced Developers", desc: "Skilled professionals with hands-on expertise in modern frameworks and scalable architecture." },
-    { icon: Layers, title: "Custom-Built Solutions", desc: "Every website is tailored to your business needs with flexible and future-ready development." },
-    { icon: Smartphone, title: "Mobile-First Design", desc: "Seamless experience across all devices with optimized layouts and smooth interactions." },
-    { icon: Globe, title: "SEO-Optimized Code", desc: "Built with technical SEO best practices to improve search visibility and performance." },
-    { icon: Lock, title: "Secure Architecture", desc: "Strong security standards and scalable backend systems that grow with your business." },
-    { icon: Rocket, title: "Timely Delivery", desc: "Clear communication, milestone tracking, and on-time project completion." },
+    {
+      icon: Code,
+      title: "Experienced Developers",
+      desc: "Our engineering team specializes in the MERN stack and Next.js, building clean, modular codebases that eliminate technical debt. We focus on long-term stability, ensuring your platform remains agile, stable, and easy to upgrade as global web standards evolve."
+    },
+    {
+      icon: Layers,
+      title: "Custom-Built Solutions",
+      desc: "We move beyond generic templates to build high-performance digital ecosystems engineered to solve your specific business challenges. Every line of code is written to perfectly reflect your brand’s identity while maintaining a flexible architecture ready for future-ready expansion."
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile-First Design",
+      desc: "With mobile traffic dominating the market, we utilize advanced CSS frameworks and Framer Motion to ensure your site feels like a native app. Our layouts undergo rigorous testing across various screen resolutions to guarantee zero compromise on speed, accessibility, or visual impact."
+    },
+    {
+      icon: Globe,
+      title: "SEO-Optimized Code",
+      desc: "We bake technical SEO into the DNA of your site—integrating Semantic HTML5, Schema.org markup, and JSON-LD structured data. This engineering-first approach ensures that search engines can easily index your content, giving your business a significant competitive advantage from day one."
+    },
+    {
+      icon: Lock,
+      title: "Secure Architecture",
+      desc: "Security is the foundation of digital trust. We implement military-grade SSL encryption, secure API endpoints, and multi-layer firewall protections. Our deployment strategy utilizes scalable cloud hosting to ensure 99.9% uptime and lightning-fast content delivery for your global audience."
+    },
+    {
+      icon: Rocket,
+      title: "Timely Delivery",
+      desc: "We believe in transparency through engineering precision. Using Agile methodology, we break your project into clear, trackable milestones with regular updates. This ensures that your high-performance system is delivered strictly on schedule, fully optimized, and ready to dominate your market."
+    },
   ];
 
-  const technologies = [
-    "React.js", "Next.js", "Three.js", "Node.js", "Express.js",
-    "MongoDB", "MySQL", "GSAP", "Framer Motion", "WordPress",
-    "Tailwind CSS", "TypeScript"
+
+  const techStack = [
+    {
+      category: "Frontend Architecture",
+      color: "#2563EB", // Blue
+      items: [
+        { name: "React.js", logo: "react" },
+        { name: "Next.js", logo: "nextdotjs" },
+        { name: "TypeScript", logo: "typescript" },
+        { name: "Tailwind CSS", logo: "tailwindcss" },
+        { name: "Redux Toolkit", logo: "redux" },
+        { name: "Three.js", logo: "threedotjs" }
+      ]
+    },
+    {
+      category: "Backend & Logic",
+      color: "#059669", // Green
+      items: [
+        { name: "Node.js", logo: "nodedotjs" },
+        { name: "Express.js", logo: "express" },
+        { name: "Python", logo: "python" },
+        { name: "GraphQL", logo: "graphql" },
+        { name: "PHP", logo: "php" },
+        { name: "WordPress", logo: "wordpress" }
+      ]
+    },
+    {
+      category: "Data & Infrastructure",
+      color: "#D97706", // Amber/Orange
+      items: [
+        { name: "MongoDB", logo: "mongodb" },
+        { name: "MySQL", logo: "mysql" },
+        { name: "Firebase", logo: "firebase" },
+        { name: "AWS", logo: "amazonaws" },
+        { name: "Docker", logo: "docker" },
+        { name: "PostgreSQL", logo: "postgresql" }
+      ]
+    },
+    {
+      category: "Animation & Motion",
+      color: "#7C3AED", // Violet
+      items: [
+        { name: "GSAP", logo: "greensock" },
+        { name: "Framer Motion", logo: "framer" },
+        { name: "Canvas API", logo: "html5" },
+        { name: "Lottie", logo: "lottie" }
+      ]
+    }
+  ];
+
+  const businessNeeds = [
+    {
+      title: "Speed as a Feature",
+      desc: "In the modern economy, 90% of users bounce if a site takes over 3 seconds to load. Our high-performance Node.js and React stack ensures sub-second deployments and lightning-fast interactions to keep your audience engaged.",
+      icon: <Zap className="w-6 h-6 md:w-8 md:h-8" />,
+      metric: "0.8s LCP",
+      color: "#f97316", // orange
+    },
+    {
+      title: "SEO-Native Code",
+      desc: "We don't just 'add SEO' later; we bake it into the DNA of your site. We build with semantic HTML5, JSON-LD schema markup, and optimized metadata from the first line of code to ensure maximum search engine visibility.",
+      icon: <Search className="w-6 h-6 md:w-8 md:h-8" />,
+      metric: "100/100 Audit",
+      color: "#2563EB", // blue
+    },
+    {
+      title: "Conversion Logic",
+      desc: "Every pixel is placed based on conversion-focused psychological triggers and real-world heat-map data. We engineer user paths that guide visitors toward measurable actions, turning passive traffic into consistent revenue.",
+      icon: <Target className="w-6 h-6 md:w-8 md:h-8" />,
+      metric: "+40% ROI",
+      color: "#10b981", // emerald
+    },
+    {
+      title: "Scalable Core",
+      desc: "Your digital presence should grow as fast as your business. Our modular architecture allows for seamless feature integration and high-concurrency handling, providing a future-ready foundation that handles massive traffic spikes.",
+      icon: <ShieldCheck className="w-6 h-6 md:w-8 md:h-8" />,
+      metric: "99.9% Uptime",
+      color: "#8b5cf6", // violet
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[80vh] flex items-start overflow-hidden bg-[#fafafa]">
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
         {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           {/* Grid Overlay - Matches Brand Protection Lab */}
@@ -79,16 +269,16 @@ const WebDevelopment = () => {
               className="lg:col-span-7 space-y-8 text-left"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Code2 className="w-3 h-3" /> Full-Stack Engineering Hub
+                <Code2 className="w-3 h-3" /> Build High Performing Websites
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter">
-                Build <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Scalable Foundations</span>.
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                Professional <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Web Development</span> Services.
               </h1>
 
-              <p className="text-base md:text-xl text-slate-500 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
-                "We engineer high-performance digital ecosystems that transform brands through custom code, seamless UX, and robust architecture."
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                From Bhopal and Jabalpur, we design and develop modern, responsive, and conversion-focused websites for businesses worldwide, helping them build a strong digital presence and achieve measurable growth.
               </p>
 
               <div className="flex justify-start pt-4">
@@ -138,219 +328,159 @@ const WebDevelopment = () => {
           </div>
         </div>
       </section>
- 
+
       {/* WHY CHOOSE US */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12 md:mb-16">
-            {/* text-3xl for mobile, text-5xl for desktop */}
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight leading-tight">
-              Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Excellence</span>
+      <section className="py-16 md:py-20 bg-muted/30 relative overflow-hidden">
+        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+
+          {/* Section Header */}
+          <div className="mb-12 md:mb-20 max-w-7xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-slate-900 leading-tight">
+              Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium inline-block pr-6 -mr-6 overflow-visible">
+                Socio Bhaarat
+              </span> for Web Development?
             </h2>
-            <p className="text-muted-foreground text-sm md:text-base px-4">
-              Why SocioBhaarat is the trusted partner for web innovation.
+            <p className="text-slate-700 text-lg md:text-xl max-w-7xl font-medium leading-relaxed">
+              We move beyond standard development. Our lab builds <span className="text-slate-900 font-bold underline decoration-primary/30 decoration-4 underline-offset-4">scalable digital ecosystems</span> through precise code and strategic market intelligence.
             </p>
           </div>
 
-          {/* grid-cols-1 for mobile ensures cards have full width to breathe */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {whyChooseUs.map((feature, index) => (
+          <FeatureGrid features={whyChooseUs} />
+        </div>
+      </section>
+
+      {/* Why do you need Web Development */}
+      <section className="py-16 md:py-12 bg-background relative overflow-hidden">
+        {/* Background: Data Stream dots */}
+        <div className="absolute inset-0 opacity-[0.15] pointer-events-none"
+          style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+
+        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+          {/* Section Header */}
+          <div className="mb-12 md:mb-20 max-w-8xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-4 text-slate-900 leading-tight">
+              Why Your Business Needs a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible leading-[1.2]">
+                Strong Web Presence
+              </span>
+            </h2>
+            <p className="text-slate-600 text-lg md:text-2xl max-w-7xl font-medium leading-relaxed border-l-4 border-primary/20 pl-4 md:pl-6">
+              A website is not a digital brochure; it is a high-speed conversion engine.
+            </p>
+          </div>
+
+          {/* The Intelligence Grid: 1 Col on Mobile, 2 Cols on Large Screens */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
+            {businessNeeds.map((item, idx) => (
               <motion.div
-                key={index}
-                whileHover={{ y: -8 }}
-                className="p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-card border border-border/50 hover:border-primary/50 transition-all group shadow-sm hover:shadow-xl"
+                key={idx}
+                initial={{ opacity: 0, x: idx % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="group flex flex-row gap-4 sm:gap-6 md:gap-10 p-6 sm:p-8 md:p-12 bg-white/40 backdrop-blur-md border-2 md:border-4 border-slate-200 hover:border-primary transition-all duration-500 rounded-2xl relative"
               >
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-5 md:mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                  <feature.icon className="h-6 w-6 md:h-7" />
+                {/* 1. Large Dynamic Number Background - Hidden or scaled on small mobile */}
+                <span className="absolute top-2 right-4 text-6xl sm:text-7xl md:text-9xl font-black text-slate-100/50 group-hover:text-primary/5 transition-colors -z-10 select-none">
+                  0{idx + 1}
+                </span>
+
+                {/* 2. Left Side: Icon & Vertical Meter */}
+                <div className="flex flex-col items-center gap-3 md:gap-4 shrink-0">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white shadow-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 border-2 md:border-4 border-slate-50">
+                    {/* Scale icon for mobile */}
+                    <div className="scale-75 sm:scale-100">
+                      {item.icon}
+                    </div>
+                  </div>
+
+                  {/* Meter: Hidden on very small screens to save space if needed, or kept thin */}
+                  <div className="w-1 h-full bg-slate-100 rounded-full overflow-hidden">
+                    <motion.div
+                      whileInView={{ height: ["0%", "100%"] }}
+                      transition={{ duration: 1.5, delay: idx * 0.2 }}
+                      className="w-full bg-gradient-to-b from-primary to-orange-500"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold mb-3 tracking-tight">{feature.title}</h3>
-                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed italic">{feature.desc}</p>
+
+                {/* 3. Right Side: Content */}
+                <div className="space-y-4 md:space-y-6 flex-grow">
+                  <h4 className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">
+                    {item.title}
+                  </h4>
+
+                  <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed tracking-wide font-medium pl-4 md:pl-6 transition-all">
+                    {item.desc}
+                  </p>
+
+                  <div className="flex flex-wrap items-center justify-between gap-2 pt-2 md:pt-4">
+                    <span className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] md:tracking-[0.3em] group-hover:text-secondary transition-colors">
+                      {item.metric}
+                    </span>
+                    <div className="px-2 md:px-3 py-1 rounded-full bg-slate-100 text-[9px] md:text-[10px] font-bold text-slate-500 group-hover:bg-primary group-hover:text-white transition-colors">
+                      SYSTEM_STABLE
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* SERVICES */}
-      <section className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
-        {/* Background Decorative Element - Adjusted size for mobile */}
-        <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 blur-[80px] md:blur-[100px] rounded-full -z-10" />
-
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-12 md:mb-16">
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="text-primary font-bold tracking-widest uppercase text-[10px] md:text-xs"
-            >
-              Enterprise Grade
-            </motion.span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2 md:mt-3 tracking-tight leading-tight">
-              Specialized <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Solutions</span>
+      <section className="py-24 md:py-20 bg-muted/30 relative overflow-hidden">
+        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+          {/* Section Header: Shifted Left for Modern Engineering Feel */}
+          <div className="mb-20 md:mb-10 max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
+              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
             </h2>
+            <p className=" text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6 text-slate-500">
+              Industrial-strength architecture tailored for high-growth business scalability and engineered for performance
+            </p>
           </div>
 
-          {/* grid-cols-1 on small mobile, sm:grid-cols-2 on small tablets, lg:grid-cols-3 on desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="group relative bg-card/60 backdrop-blur-sm p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-border/50 hover:border-primary/30 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary/5"
-              >
-                {/* Watermark Icon - scaled down on mobile */}
-                <div className="absolute -right-6 -bottom-6 text-primary/5 group-hover:text-primary/10 transition-colors transform group-hover:scale-110 duration-700 pointer-events-none">
-                  {React.cloneElement(service.icon as React.ReactElement, { size: 100 })}
-                </div>
-
-                <div className="relative z-10 flex flex-col items-center text-center">
-                  {/* Floating Icon Container */}
-                  <div className="mb-6 md:mb-8 p-3 md:p-4 rounded-2xl bg-gradient-to-br from-background to-muted border border-border shadow-inner group-hover:bg-primary  group-hover:scale-110 transition-all duration-500">
-                    <div className="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center text-primary transition-colors">
-                      {service.icon}
-                    </div>
-                  </div>
-
-                  <h3 className="font-bold text-lg md:text-xl mb-3 md:mb-4 tracking-tight group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-6">
-                    Industrial-strength {service.title.toLowerCase()} tailored for high-growth business scalability.
-                  </p>
-
-                  <div className="h-1 w-0 bg-primary rounded-full group-hover:w-12 transition-all duration-500" />
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              </motion.div>
-            ))}
-          </div>
+          {/* The Technical Rows: No Empty Space */}
+          <ServiceList services={services} />
         </div>
       </section>
-
-      
 
       {/* TECHNOLOGIES */}
-      <section className="py-24 bg-background border-y border-border">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Technology Stack</span></h2>
-            <p className="mt-4 text-slate-500 text-xs md:text-sm font-medium uppercase tracking-[0.2em] italic">
-              The engine behind Madhya Pradesh's fastest digital platforms.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
-            {technologies.map((tech, index) => (
-              <motion.span
-                key={index}
-                whileHover={{ scale: 1.1, backgroundColor: "hsl(var(--primary))", color: "hsl(var(--primary-foreground))" }}
-                className="px-6 py-3 bg-card border border-border rounded-2xl text-sm font-bold shadow-sm cursor-default transition-all"
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section className="py-12 bg-background relative overflow-hidden">
 
+        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 
-      {/* DEVELOPMENT PROCESS */}
-      <section className="py-12 md:py-24 bg-[#fafafa] relative overflow-hidden">
-
-        <div className="container mx-auto max-w-6xl relative z-10">
-          {/* Responsive Header */}
-          <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-slate-900 leading-[1.1] md:leading-none">
-              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible">Engineering</span> Approach
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 leading-none">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible leading-normal">Technology Stack</span>
             </h2>
-            <p className="text-slate-500 text-[10px] md:text-sm max-w-xl mx-auto italic uppercase tracking-[0.15em] font-medium">
-              High-velocity workflow for Bhopal & Jabalpur.
+            <p className="text-slate-500 text-sm md:text-xl font-bold">
+              Building the future with industry-leading infrastructure.
             </p>
           </div>
-
-          {/* 2. RESPONSIVE GRID (1 Column Mobile, 2 Columns Desktop) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-            {process.map((step, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -5 }}
-                className="group relative p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col justify-between"
-              >
-                {/* Subtle Background Watermark - Adjusted for Mobile */}
-                <div className="absolute -top-2 -right-0 text-6xl md:text-8xl font-black text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
-                  0{index + 1}
-                </div>
-
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-3 md:mb-4">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-primary text-white flex items-center justify-center font-black text-xs md:text-sm shadow-lg">
-                      {index + 1}
-                    </div>
-                    <h3 className="font-bold text-lg md:text-xl tracking-tight text-slate-900 group-hover:text-primary transition-colors">
-                      {step.title}
-                    </h3>
-                  </div>
-
-                  <p className="text-xs md:text-sm text-slate-500 leading-relaxed italic group-hover:text-slate-700 transition-colors">
-                    {step.desc}
-                  </p>
-                </div>
-
-                {/* Progress Bar Accent */}
-                <div className="mt-6 md:mt-8 w-10 h-1 bg-slate-100 rounded-full group-hover:w-full group-hover:bg-primary transition-all duration-500" />
-              </motion.div>
-            ))}
-          </div>
+          <TechGrid techStack={techStack} />
         </div>
       </section>
 
-      <QuoteSection
-        quote="We don’t just build websites. We engineer high-velocity digital ecosystems."
+      <ProcessSection
+        titlePrefix="Our"
+        highlightedWord="Development"
+        titleSuffix="Process"
+        description="A structured workflow that transforms ideas into scalable digital products through a modern development pipeline."
+        process={process}
       />
 
-      {/* FINAL CTA */}
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
+      <QuoteSection
+        quote="We don’t just build websites. We create complete digital solutions that help businesses grow." className="background"
+      />
 
-            {/* 1. RESPONSIVE DECORATIVE ICON */}
-            <div className="absolute top-0 right-0 p-4 md:p-10 opacity-10 pointer-events-none transition-transform duration-700 group-hover:scale-110">
-              <Code className="w-32 h-32 md:w-64 md:h-64" />
-            </div>
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic leading-tight uppercase">
-                Ready to Digitize <br className="hidden md:block" /> Your Vision?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                Join 500+ brands powered by SocioBhaarat engineering. <br className="hidden sm:block" />
-                Let's discuss your roadmap today.
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-lg md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Launch Your Project Now
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-    </div>
+      <CTASection
+        title={<>Ready to Digitize <br className="hidden md:block" /> Your Vision?</>}
+        description={<>Join 500+ brands powered by SocioBhaarat engineering. <br className="hidden sm:block" />Let's discuss your roadmap today.</>}
+        buttonText="Launch Your Project Now"
+      />
+    </div >
   );
 };
 

@@ -113,6 +113,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube, ArrowUpRight } from "lucide-react";
 import { cloneElement } from "react";
+import React from "react";
 
 const Footer = () => {
 
@@ -142,7 +143,7 @@ const Footer = () => {
       { name: "Paid Marketing (Meta/Google)", path: "/digital-marketing/paid-marketing" },
       { name: "Content Marketing", path: "/digital-marketing/content-marketing" },
       { name: "Email Marketing", path: "/digital-marketing/email-marketing" },
-      {name: "Video Marketing",path:"/digital-marketing/video-marketing"},
+      { name: "Video Marketing", path: "/digital-marketing/video-marketing" },
       { name: "Performance Marketing", path: "/performance-marketing" },
     ],
     // Development & Engineering Stack
@@ -174,110 +175,117 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-white border-t border-slate-100 overflow-hidden font-sans">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-12 pt-16 md:pt-24 pb-12 relative z-10">
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-20 pb-10 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-12 gap-x-8 lg:gap-x-12">
+        {/* ROW 1: Brand Profile & Architecture (Spans wider for balance) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 gap-x-12 mb-16 pb-16 border-b border-slate-50">
 
-          {/* 1. Brand Profile - Spans full width on mobile/tablet to prevent empty side-space */}
-          <div className="md:col-span-3 lg:col-span-1 space-y-6">
-            <img src={footerData.about.logo} alt="Socio Bhaarat" className="h-10 md:h-12" />
-            <p className="text-slate-500 text-xs leading-relaxed font-medium italic border-l-2 border-primary/20 pl-4 max-w-sm">
-              {footerData.about.description}
+          {/* Brand Profile - 7 cols on Desktop */}
+          <div className="md:col-span-7 space-y-8 text-center md:text-left">
+            <img src={footerData.about.logo} alt="Socio Bhaarat" className="h-12 md:h-16 mx-auto md:mx-0" />
+            <p className="text-slate-500 text-base md:text-xl leading-relaxed font-medium italic border-l-0 md:border-l-4 border-primary/20 md:pl-8 max-w-2xl mx-auto md:mx-0">
+              "{footerData.about.description}"
             </p>
-            <div className="flex space-x-3">
+            <div className="flex justify-center md:justify-start space-x-5">
               {footerData.about.socials.map((social, i) => (
-                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" className={`p-2 rounded-lg bg-slate-50 text-slate-400 ${social.color} transition-all border border-slate-100`}>
-                  {social.icon}
+                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer"
+                  className={`p-4 rounded-2xl bg-slate-50 text-slate-500 ${social.color} transition-all border border-slate-100 shadow-sm active:scale-95`}>
+                  {React.cloneElement(social.icon as React.ReactElement, { size: 24 })}
                 </a>
               ))}
             </div>
           </div>
 
-          {/* 2. Architecture (Quick Links) */}
-          <div className="space-y-6">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 italic">Architecture</h3>
-            <ul className="space-y-3">
+          {/* Quick Links / Architecture - 5 cols on Desktop */}
+          <div className="md:col-span-5 space-y-8">
+            <h3 className="text-xs md:text-sm font-black uppercase tracking-[0.4em] text-slate-400 text-center md:text-left">Architecture</h3>
+            <div className="grid grid-cols-2 gap-4">
               {footerData.quickLinks.map((link, i) => (
-                <li key={i}>
-                  <Link to={link.path} className="text-slate-600 hover:text-primary text-xs font-bold transition-all flex items-center group">
-                    {link.name} <ArrowUpRight className="ml-1 w-3 h-3 opacity-0 group-hover:opacity-100 transition-all shrink-0" />
-                  </Link>
-                </li>
+                <Link key={i} to={link.path} className="text-slate-700 hover:text-primary text-sm md:text-lg font-bold transition-all flex items-center group py-2 px-4 bg-slate-50/50 rounded-xl border border-transparent hover:border-slate-100 hover:bg-white justify-center md:justify-start">
+                  {link.name} <ArrowUpRight className="ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
+                </Link>
               ))}
-            </ul>
-          </div>
-
-          {/* 3. Marketing Stack */}
-          <div className="space-y-6">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 italic">Marketing Stack</h3>
-            <ul className="space-y-3">
-              {footerData.marketing.map((link, i) => (
-                <li key={i}>
-                  <Link to={link.path} className="text-slate-600 hover:text-primary text-xs font-bold transition-all block">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 4. Dev & Design */}
-          <div className="space-y-6">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 italic">Dev & Design</h3>
-            <ul className="space-y-3">
-              {footerData.development.map((link, i) => (
-                <li key={i}>
-                  <Link to={link.path} className="text-slate-600 hover:text-primary text-xs font-bold transition-all block">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* 5. Automation & Contact - Combined for balanced spacing */}
-          <div className="space-y-10">
-            <div className="space-y-6">
-              <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 italic">Automation</h3>
-              <ul className="space-y-3">
-                {footerData.automation.map((link, i) => (
-                  <li key={i}>
-                    <Link to={link.path} className="text-slate-600 hover:text-primary text-xs font-bold transition-all block">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-6 pt-4 border-t border-slate-50 lg:border-none lg:pt-0">
-              <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 italic">Direct Line</h3>
-              <ul className="space-y-4">
-                {footerData.contact.map((item, i) => (
-                  <li key={i} className="flex items-start space-x-3">
-                    <div className="shrink-0">{item.icon}</div>
-                    <div className="flex flex-col">
-                      <span className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-1">{item.label}</span>
-                      <span className="text-xs font-bold text-slate-900 break-all leading-tight">{item.content}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
 
+        {/* ROW 2: Service Stacks & Contact (3 Columns on Desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-12">
+
+          {/* Marketing Stack */}
+          <div className="space-y-8">
+            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-4">Marketing Stack</h3>
+            <ul className="space-y-5">
+              {footerData.marketing.map((link, i) => (
+                <li key={i}>
+                  <Link to={link.path} className="text-slate-700 hover:text-primary text-base md:text-lg font-bold transition-all block">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Dev & Design Stack */}
+          <div className="space-y-8">
+            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-4">Dev & Design</h3>
+            <ul className="space-y-5">
+              {footerData.development.map((link, i) => (
+                <li key={i}>
+                  <Link to={link.path} className="text-slate-700 hover:text-primary text-base md:text-lg font-bold transition-all block">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Automation Stack */}
+          <div className="space-y-8">
+            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-4">Automation</h3>
+            <ul className="space-y-5">
+              {footerData.automation.map((link, i) => (
+                <li key={i}>
+                  <Link to={link.path} className="text-slate-700 hover:text-primary text-base md:text-lg font-bold transition-all block">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Direct Line (Contact) */}
+          <div className="space-y-8">
+            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-4">Direct Line</h3>
+            <ul className="space-y-8">
+              {footerData.contact.map((item, i) => (
+                <li key={i} className="flex items-center space-x-5 group">
+                  <div className="shrink-0 p-4 bg-slate-50 rounded-2xl border border-slate-100 group-hover:bg-white group-hover:shadow-lg transition-all">
+                    {item.icon}
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{item.label}</span>
+                    <span className="text-base md:text-lg font-bold text-slate-900 break-all leading-tight">
+                      {item.content}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         {/* Footer Base */}
-        <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+        <div className="mt-24 pt-10 border-t border-slate-100 flex flex-col lg:flex-row justify-between items-center gap-10">
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
             {footerData.legal.map((item, i) => (
-              <Link key={i} to={item.path} className="text-[10px] font-black text-slate-400 hover:text-primary uppercase tracking-widest">
+              <Link key={i} to={item.path} className="text-xs md:text-sm font-black text-slate-400 hover:text-primary uppercase tracking-widest transition-colors">
                 {item.name}
               </Link>
             ))}
           </div>
-          <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest italic">
-            &copy; {new Date().getFullYear()} SOCIO BHAARAT LAB.
+          <p className="text-xs md:text-sm font-black text-slate-400 uppercase tracking-widest italic text-center">
+            &copy; {new Date().getFullYear()} SOCIO BHAARAT LAB. ALL RIGHTS RESERVED.
           </p>
         </div>
       </div>
