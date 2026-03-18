@@ -42,6 +42,9 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import VideoMarketing from "./pages/digital-marketing/VideoMarketing";
 import GraphicDesigning from "./pages/design-development/GraphicDesigning";
+import TermsAndConditions from "./pages/footer-pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/footer-pages/PrivacyPolicy";
+import RefundPolicy from "./pages/footer-pages/RefundPolicy";
 
 const queryClient = new QueryClient();
 
@@ -103,6 +106,11 @@ const App = () => (
           {/* Blog */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:postId" element={<BlogPost />} />
+
+          {/* Other pages */}
+          <Route path="/terms" element={<TermsAndConditions />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/refunds" element={<RefundPolicy />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>
