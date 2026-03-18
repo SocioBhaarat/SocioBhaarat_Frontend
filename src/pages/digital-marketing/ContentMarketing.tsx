@@ -1,25 +1,153 @@
 import { cardAnimation, fadeUp, staggerContainer } from "@/components/ui/animation";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
+import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
-import { motion } from "framer-motion";
-import { ArrowRight, BarChart3, Check, FileText, Heart, Search, ShieldCheck, Sparkles, Target, TrendingUp, Users, Zap } from "lucide-react";
-import React from "react";
+import { AnimatePresence, color, motion } from "framer-motion";
+import { ArrowRight, BarChart3, Calendar, Check, FileText, Heart, Mail, Search, Share2, Shield, ShieldCheck, Sparkles, Star, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ContentMarketing = () => {
   const navigate = useNavigate();
+  const [active, setActive] = useState(0)
+
+  const whyChooseUs = [
+    {
+      num: "01",
+      icon: Search,
+      iconBg: "bg-blue-100",
+      iconColor: "text-blue-700",
+      numColor: "text-blue-300",
+      tagBg: "bg-blue-50",
+      tagColor: "text-blue-700",
+      tag: "Organic Growth",
+      title: "SEO-Optimised Content",
+      desc: "We produce high-performing blog posts, landing pages, and web copy specifically engineered to dominate Google rankings and convert cold visitors into qualified leads. Our approach goes beyond simple keyword stuffing; we analyze search intent and user behavior to create comprehensive resources that provide genuine value, establish your domain authority, and drive sustainable organic traffic to your site 24/7."
+    },
+    {
+      num: "02",
+      icon: Share2,
+      iconBg: "bg-purple-100",
+      iconColor: "text-purple-700",
+      numColor: "text-purple-300",
+      tagBg: "bg-purple-50",
+      tagColor: "text-purple-700",
+      tag: "Brand Reach",
+      title: "Social Media Content",
+      desc: "Stop shouting into the void and start building a community. We design platform-native posts, educational carousels, and high-energy Reels crafted to stop the scroll and spark meaningful engagement. By staying ahead of trending formats and algorithm shifts, we ensure your brand remains relevant, grows a loyal following, and maintains a consistent, professional presence across all major social networks daily."
+    },
+    {
+      num: "03",
+      icon: Video,
+      iconBg: "bg-orange-100",
+      iconColor: "text-orange-700",
+      numColor: "text-orange-300",
+      tagBg: "bg-orange-50",
+      tagColor: "text-orange-700",
+      tag: "High Retention",
+      title: "Video Script Writing",
+      desc: "Video is the most powerful tool for connection, but only if people watch until the end. We write compelling scripts for YouTube, TikTok, and video ads that hook viewers within the first three seconds. Our storytelling framework focuses on high retention, maintaining interest through psychological triggers, and concluding with a clear, persuasive call-to-action that drives measurable business results and higher ROI."
+    },
+    {
+      num: "04",
+      icon: Shield,
+      iconBg: "bg-green-100",
+      iconColor: "text-green-700",
+      numColor: "text-green-300",
+      tagBg: "bg-green-50",
+      tagColor: "text-green-700",
+      tag: "Authority Building",
+      title: "Brand Storytelling",
+      desc: "We help you move from being a commodity to a category leader. Through press releases, deep-dive thought leadership articles, founder stories, and detailed case studies, we craft a narrative that builds lasting trust. This strategic storytelling positions your brand as an industry authority, making it the obvious choice for customers while increasing your perceived value and protecting your market position."
+    },
+    {
+      num: "05",
+      icon: Mail,
+      iconBg: "bg-red-100",
+      iconColor: "text-red-700",
+      numColor: "text-red-300",
+      tagBg: "bg-red-50",
+      tagColor: "text-red-700",
+      tag: "Direct Revenue",
+      title: "Email Marketing",
+      desc: "Your email list is your most valuable owned asset. We develop automated nurture sequences, weekly newsletters, and aggressive promotional campaigns that turn casual subscribers into repeat customers. By segmenting your audience and delivering personalized, high-value content directly to their inbox, we create a predictable revenue stream that works on autopilot, ensuring no lead is ever left behind in your sales funnel."
+    },
+    {
+      num: "06",
+      icon: Calendar,
+      iconBg: "bg-teal-100",
+      iconColor: "text-teal-700",
+      numColor: "text-teal-300",
+      tagBg: "bg-teal-50",
+      tagColor: "text-teal-700",
+      tag: "90-Day Roadmap",
+      title: "Content Strategy",
+      desc: "Stop guessing what to post and start executing with precision. We provide a comprehensive 90-day content roadmap that outlines specific topics, optimal formats, distribution channels, and publishing cadences. This strategy is fully aligned with your overarching business goals, current seasonal trends, and actual audience search behavior, giving your team a clear, actionable blueprint to follow for consistent, long-term growth and visibility."
+    },
+    {
+      num: "07",
+      icon: Zap,
+      iconBg: "bg-amber-100",
+      iconColor: "text-amber-700",
+      numColor: "text-amber-300",
+      tagBg: "bg-amber-50",
+      tagColor: "text-amber-700",
+      tag: "Revenue Copy",
+      title: "Conversion Copywriting",
+      desc: "Great writing is nice, but writing that sells is essential. We specialize in high-converting landing pages, punchy ad headlines, and persuasive product descriptions that turn traffic into tangible revenue. Every word we write is chosen for its ability to overcome objections, highlight your unique selling proposition, and compel the reader to take action immediately, ensuring your marketing budget delivers the highest possible return."
+    },
+    {
+      num: "08",
+      icon: BarChart3,
+      iconBg: "bg-sky-100",
+      iconColor: "text-sky-700",
+      numColor: "text-sky-300",
+      tagBg: "bg-sky-50",
+      tagColor: "text-sky-700",
+      tag: "Link Earning",
+      title: "Infographics & Visuals",
+      desc: "Complexity is the enemy of conversion. Our team transforms dense data and industry insights into beautiful, easy-to-digest infographics and visual assets. These high-value resources simplify complex information for your audience while acting as 'link magnets' that earn organic backlinks from authoritative websites. This boosts your SEO profile, increases brand awareness, and makes your content significantly more shareable across all professional networks."
+    },
+  ];
 
   const services = [
-    { title: "Blog Writing & Publishing", desc: "SEO-optimized blog posts that drive organic traffic and establish thought leadership" },
-    { title: "Video Content Creation", desc: "Engaging video content for YouTube, social media, and your website" },
-    { title: "Infographic Design", desc: "Visually compelling infographics that simplify complex information" },
-    { title: "E-books & Whitepapers", desc: "In-depth resources that generate leads and showcase expertise" },
-    { title: "Email Newsletter Content", desc: "Engaging email content that nurtures leads and drives conversions" },
-    { title: "Case Studies", desc: "Compelling success stories that build credibility and trust" },
-    { title: "Social Media Content", desc: "Platform-specific content that drives engagement and brand awareness" },
-    { title: "Podcast Production", desc: "Audio content that reaches your audience on-the-go" },
-    { title: "Content Strategy & Planning", desc: "Comprehensive content roadmaps aligned with your business goals" },
+    {
+      icon: <Search />,
+      color: "#1d4ed8",
+      title: "SEO Blog & Article Writing",
+      desc: "Long-form, keyword-rich blog posts and articles engineered to rank on Google — answering the exact questions your target audience is searching for in Bhopal and Jabalpur.",
+    },
+    {
+      icon: <Share2 />,
+      color: "#7e22ce",
+      title: "Social Media Content",
+      desc: "Platform-native posts, carousels, and Reels crafted to drive engagement and grow your following — consistently relevant in your audience's feed every single day.",
+    },
+    {
+      icon: <Video />,
+      color: "#c2410c",
+      title: "Video Script Writing",
+      desc: "Compelling scripts for YouTube, Reels, and ads that hook viewers in the first 3 seconds — holding attention throughout and driving measurable action at the end.",
+    },
+    {
+      icon: <Shield />,
+      color: "#15803d",
+      title: "Brand Storytelling & PR",
+      desc: "Press releases, thought leadership articles, and case studies that build lasting credibility and position your brand as the most trusted name in your local industry.",
+    },
+    {
+      icon: <Mail />,
+      color: "#b91c1c",
+      title: "Email Marketing Sequences",
+      desc: "Automated nurture sequences, newsletters, and promotional emails that convert subscribers into paying customers at every stage of your funnel — running on autopilot.",
+    },
+    {
+      icon: <Zap />,
+      color: "#047857",
+      title: "Conversion Copywriting",
+      desc: "High-converting landing page copy, ad headlines, and CTAs engineered to turn traffic into revenue — every word tested, intentional, and placed to drive the next action.",
+    },
   ]
 
   const process = [
@@ -29,24 +157,13 @@ const ContentMarketing = () => {
     { step: "04", title: "Analysis & Refinement", desc: "We track performance and continuously refine our approach for better results" },
   ]
 
-  const whyChooseUs = [
-    { title: "300% Organic Growth", icon: <TrendingUp />, color: "text-blue-600", bg: "bg-blue-50", desc: "Increase organic traffic by up to 300% with SEO-optimized assets." },
-    { title: "3x Lead Generation", icon: <Target />, color: "text-orange-600", bg: "bg-orange-50", desc: "Generate 3x more leads than traditional marketing methods." },
-    { title: "Brand Authority", icon: <ShieldCheck />, color: "text-indigo-600", bg: "bg-indigo-50", desc: "Build long-term brand authority and trust through expert storytelling." },
-    { title: "SEO Dominance", icon: <Search />, color: "text-emerald-600", bg: "bg-emerald-50", desc: "Significantly improve search engine rankings for competitive keywords." },
-    { title: "Audience Engagement", icon: <Users />, color: "text-pink-600", bg: "bg-pink-50", desc: "Deeply engage and educate your target audience with high-value content." },
-    { title: "Evergreen ROI", icon: <Zap />, color: "text-yellow-600", bg: "bg-yellow-50", desc: "Create evergreen assets that continue to deliver ROI years after creation." },
-    { title: "Sales Enablement", icon: <FileText />, color: "text-slate-600", bg: "bg-slate-50", desc: "Support your sales team with valuable, high-intent resources." },
-    { title: "Reduced CAC", icon: <BarChart3 />, color: "text-red-600", bg: "bg-red-50", desc: "Significantly reduce customer acquisition costs through inbound growth." },
-  ]
-
   const whyMatters = [
-    { title: "SEO Visibility", desc: "Improve search engine rankings and attract high-intent organic traffic.", icon: <Search /> },
-    { title: "Brand Credibility", desc: "Establish deep trust and authority in the Bhopal & Jabalpur markets.", icon: <ShieldCheck /> },
-    { title: "Traffic Generation", desc: "Drive consistent, value-driven visitor flow to your digital assets.", icon: <TrendingUp /> },
-    { title: "Lead Nurturing", desc: "Generate qualified leads by educating and engaging your ideal audience.", icon: <Users /> },
-    { title: "Campaign Support", desc: "Fuel your social media and paid advertising with high-converting assets.", icon: <Zap /> },
-    { title: "Long-term Loyalty", desc: "Foster deep brand loyalty through consistent, valuable storytelling.", icon: <Heart /> },
+    { icon: <Shield size={22} />, title: "Builds Brand Authority", desc: "Consistent, high-quality content positions your brand as the go-to expert in your industry — earning trust from potential customers long before they ever contact you.", bg: "bg-blue-50", border: "border-blue-200", iconBg: "bg-blue-100 text-blue-700", num: "text-blue-300", bar: "bg-blue-700" },
+    { icon: <TrendingUp size={22} />, title: "Drives Organic Traffic", desc: "SEO-optimised content attracts high-intent visitors from Google search — a compounding asset that grows your traffic month over month without ongoing ad spend.", bg: "bg-fuchsia-50", border: "border-purple-200", iconBg: "bg-purple-100 text-purple-700", num: "text-purple-300", bar: "bg-purple-700" },
+    { icon: <Users size={22} />, title: "Generates Qualified Leads", desc: "Content that addresses real customer questions filters out unqualified traffic and attracts buyers who are already interested in exactly what your business offers.", bg: "bg-orange-50", border: "border-orange-200", iconBg: "bg-orange-100 text-orange-700", num: "text-orange-300", bar: "bg-orange-700" },
+    { icon: <Star size={22} />, title: "Nurtures Customer Loyalty", desc: "Regular, valuable content keeps your existing customers engaged, informed, and loyal — reducing churn and increasing lifetime value far beyond the initial purchase.", bg: "bg-green-50", border: "border-green-200", iconBg: "bg-green-100 text-green-700", num: "text-green-300", bar: "bg-green-700" },
+    { icon: <Zap size={22} />, title: "Supports Every Funnel Stage", desc: "From awareness blog posts to conversion-focused landing pages — content works across every stage of your sales funnel, guiding prospects from first click to final purchase.", bg: "bg-red-50", border: "border-red-200", iconBg: "bg-red-100 text-red-700", num: "text-red-300", bar: "bg-red-700" },
+    { icon: <BarChart3 size={22} />, title: "Outperforms Paid Ads Long-Term", desc: "While paid ads stop the moment your budget ends, quality content continues to drive traffic, leads, and sales for months or years — delivering compounding ROI over time.", bg: "bg-teal-50", border: "border-teal-200", iconBg: "bg-teal-100 text-teal-700", num: "text-teal-300", bar: "bg-teal-700" },
   ]
 
   return (
@@ -118,261 +235,225 @@ const ContentMarketing = () => {
       </section>
 
       {/* Why choose us */}
-      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
-
-        <motion.div
-          className="container mx-auto max-w-7xl relative z-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={staggerContainer}
-        >
-          {/* Header Block */}
-          <motion.div variants={fadeUp} className="text-center max-w-4xl mx-auto mb-20 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.2em] border border-primary/20 backdrop-blur-sm">
-              <Sparkles className="w-3 h-3" />
-              The Content Engineering Edge
+      <section className="py-12 px-6 lg:px-10 bg-[#f8f9fb]">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.22em] text-blue-700 mb-5">
+              <Sparkles className="w-3 h-3" /> The Content Engineering Edge
             </div>
-
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
-              Why Choose Our <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
+              Why Choose Our{" "}
+              <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
                 Content Ecosystem
               </span>
             </h2>
-
-            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto border-l-4 border-primary/30 pl-6">
+            <p className="text-base text-slate-600 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
               "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
             </p>
-          </motion.div>
+          </div>
 
-          {/* Feature Grid */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {whyChooseUs.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={cardAnimation}
-                whileHover={{ y: -12, scale: 1.02 }}
-                className="group relative p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between h-72"
-              >
-                {/* Subtle Hover Gradient */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+          {/* Explorer panel */}
+          <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white flex flex-col md:flex-row">
 
-                <div className="relative z-10">
-                  {/* Icon Container */}
-                  <div className={`w-12 h-12 rounded-2xl ${item.bg} flex items-center justify-center ${item.color} mb-6 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 shadow-inner`}>
-                    {React.cloneElement(item.icon as React.ReactElement, { size: 22 })}
+            {/* Left nav */}
+            <div className="md:w-[40%] flex-shrink-0 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200 p-2">
+              {whyChooseUs.map((item, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActive(i)}
+                  className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl border text-left transition-all duration-200 mb-0.5 ${active === i
+                    ? "bg-white border-blue-100 shadow-sm"
+                    : "border-transparent hover:bg-white hover:border-slate-200"
+                    }`}
+                >
+                  <div className={`w-8 h-8 rounded-[9px] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${active === i ? "scale-105" : ""} ${item.iconBg} ${item.iconColor}`}>
+                    <item.icon size={14} />
                   </div>
-
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors mb-2 tracking-tight leading-tight">
+                  <span className={` text-base font-semibold ${active === i ? "text-blue-700" : "text-slate-600"}`}>
                     {item.title}
+                  </span>
+                  <span className={`ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
+                    {item.num}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* Right panel */}
+            <div className="flex-1 p-10 md:p-12 relative overflow-hidden flex flex-col justify-center min-h-[380px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={active}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.25 }}
+                >
+                  {/* Num */}
+                  <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-3 block ${whyChooseUs[active].numColor}`}>
+                    {whyChooseUs[active].num}
+                  </span>
+
+                  {/* Title */}
+                  <h3
+                    className={`font-display text-3xl md:text-4xl font-extrabold mb-4 ${whyChooseUs[active].iconColor}`}
+                  >
+                    {whyChooseUs[active].title}
                   </h3>
 
-                  <p className="text-sm md:text-md text-slate-400 leading-relaxed italic group-hover:text-slate-600 transition-colors">
-                    {item.desc}
+                  {/* Desc */}
+                  <p
+                    className={`text-sm md:text-lg text-slate-700 max-w-lg mb-7 font-medium border-l-[3px] pl-4 leading-relaxed ${whyChooseUs[active].iconBg.replace("bg-", "border-")}`}
+                  >
+                    {whyChooseUs[active].desc}
                   </p>
-                </div>
 
-                {/* Large Watermark Number - Production Roadmap Aesthetic */}
-                <span className="absolute bottom-[-10%] right-[-5%] text-8xl font-black text-slate-50 opacity-[0.03] group-hover:opacity-10 transition-opacity italic select-none">
-                  0{index + 1}
-                </span>
+                  {/* Tag */}
+                  <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[.15em] ${whyChooseUs[active].tagBg} ${whyChooseUs[active].tagColor}`}>
+                    <Check size={10} strokeWidth={2.5} />
+                    {whyChooseUs[active].tag}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
 
-                <div className="relative z-10 mt-4 w-8 h-1 bg-slate-100 rounded-full group-hover:w-full group-hover:bg-primary transition-all duration-500" />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+              {/* Watermark number */}
+              <span className="absolute -bottom-5 -right-2 font-display text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.04]">
+                {whyChooseUs[active].num}
+              </span>
 
-      {/* What is Content Marketing */}
-      <section className="py-24 bg-background overflow-hidden">
-        <div className="container mx-auto max-w-5xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="relative py-12 px-5 md:p-20 rounded-[4rem] bg-slate-700 text-white shadow-2xl overflow-hidden">
-            {/* Atmospheric Glow */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full" />
-
-            <div className="relative z-10 space-y-10">
-              <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter text-white">What is <span className="text-secondary font-serif pl-1">Content Marketing</span></h2>
-              <div className="grid md:grid-cols-2 gap-12 text-slate-300 text-md md:text-lg leading-relaxed font-medium">
-                <p>Content marketing is a strategic approach focused on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience.</p>
-                <p>Unlike traditional advertising, this approach establishes your brand as an industry authority, generating <span className="text-white font-bold">3x more leads</span> while costing <span className="text-secondary font-bold">62% less</span>.</p>
-              </div>
-              <div className="pt-8 border-t border-white/10 flex justify-center">
-                <div className="h-1.5 w-24 bg-secondary rounded-full" />
+              {/* Ghost icon */}
+              <div className="absolute top-8 right-10 opacity-[0.05]">
+                {React.createElement(whyChooseUs[active].icon, { size: 80, className: whyChooseUs[active].iconColor })}
               </div>
             </div>
-          </motion.div>
+
+          </div>
         </div>
       </section>
 
-      {/* Why Content Marketing Matters*/}
-      <section className="py-24 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
-        <motion.div
-          className="container mx-auto max-w-6xl relative z-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={staggerContainer}
-        >
-          {/* Header Block with Performance Typography */}
-          <motion.div variants={fadeUp} className="text-center max-w-4xl mx-auto mb-20 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.2em] border border-primary/20 backdrop-blur-sm">
-              <Sparkles className="w-3 h-3" />
-              The Organic Advantage
+      <section className="py-24 lg:px-10 bg-[#f8f9fb]">
+        <div className="container mx-auto max-w-7xl">
+
+          {/* ── SPLIT HERO PANEL ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 rounded-2xl overflow-hidden border border-slate-200 mb-3"
+          >
+            {/* Left — definition panel */}
+            <div className="bg-blue-50 px-12 py-14 relative overflow-hidden border-r border-blue-100">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-blue-200/30 rounded-full blur-[60px] pointer-events-none" />
+              <span className="text-[10px] font-bold tracking-[.3em] uppercase text-blue-600 mb-5 block">
+                Content Strategy
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                What is{" "}
+                <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text font-medium text-transparent">
+                  Content Marketing
+                </span> ?
+              </h2>
+              <p className="text-sm md:text-base text-slate-700 font-medium leading-[1.85] border-l-[3px] border-blue-200 pl-4 mb-8">
+                A strategic approach focused on creating and distributing valuable, relevant content to attract and retain a clearly defined audience — building trust long before a sale.
+              </p>
+              <div className="flex gap-8">
+                {[
+                  { val: "3×", label: "More Leads", color: "text-blue-600" },
+                  { val: "62%", label: "Lower Cost", color: "text-violet-600" },
+                  { val: "6×", label: "Conversion Rate", color: "text-orange-500" },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div className={`font-display text-2xl font-black leading-none mb-1 ${s.color}`}>
+                      {s.val}
+                    </div>
+                    <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-700">
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
-              Why Content Marketing <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
-                Matters for Growth
-              </span>
-            </h2>
-
-            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto">
-              "High-quality content builds trust, establishes authority, and attracts customers organically across the <span className="text-slate-900 font-bold">Madhya Pradesh</span> business landscape."
-            </p>
+            {/* Right — why panel */}
+            <div className="bg-white px-12 py-14 flex flex-col justify-center gap-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.2em] text-blue-700 w-fit">
+                <Sparkles className="w-3 h-3" /> The Organic Advantage
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900">
+                Why Content Marketing{" "}
+                <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                  Matters for Growth
+                </span>
+              </h3>
+              <p className="text-sm md:text-base  text-slate-700 font-medium leading-[1.85]">
+                Unlike traditional advertising, content marketing establishes your brand as an industry authority — generating qualified leads organically across the Madhya Pradesh business landscape.
+              </p>
+              <div className="w-12 h-[2px] bg-blue-600 rounded-full" />
+            </div>
           </motion.div>
 
-          {/* 2. VALUE BENTO GRID */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* ── BENEFIT GRID ── */}
+          <motion.div
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={staggerContainer}
+          >
             {whyMatters.map((item, index) => (
               <motion.div
                 key={index}
                 variants={cardAnimation}
-                whileHover={{ y: -12 }}
-                className="group relative p-10 rounded-[2.5rem] bg-gray-50 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden"
+                whileHover={{ y: -4, boxShadow: "0 16px 40px rgba(0,0,0,0.08)" }}
+                transition={{ duration: 0.25 }}
+                className={`group relative flex flex-col rounded-2xl p-8 border-[1.5px] overflow-hidden cursor-default transition-all duration-300 ${item.bg} ${item.border}`}
               >
-                {/* Subtle Hover Gradient */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                <div className="relative z-10">
-                  {/* Icon Container */}
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-8 transition-all duration-500 group-hover:bg-primary group-hover:text-white shadow-inner">
-                    {React.cloneElement(item.icon as React.ReactElement, { size: 24 })}
-                  </div>
-
-                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs text-slate-400 leading-relaxed italic group-hover:text-slate-600 transition-colors">
-                    {item.desc}
-                  </p>
+                <div className={`w-11 h-11 rounded-[13px] flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${item.iconBg}`}>
+                  {item.icon}
                 </div>
 
-                {/* Large Watermark Number - Aligns with Production Roadmap */}
-                <span className="absolute bottom-[-10%] right-[-5%] text-8xl font-black text-slate-50 opacity-[0.03] group-hover:opacity-10 transition-opacity italic select-none">
-                  0{index + 1}
+                <span className={`text-[10px] font-bold tracking-[.18em] uppercase mb-2 ${item.num}`}>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-2">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm md:text-base font-medium leading-[1.85] text-slate-800 flex-1 mb-5">
+                  {item.desc}
+                </p>
+
+                <div className={`h-[2.5px] w-7 rounded-full group-hover:w-full transition-all duration-500 ${item.bar}`} />
+
+                <span className={`absolute bottom-0 right-2 font-display text-[5rem] font-black italic leading-none pointer-events-none select-none opacity-[0.06] group-hover:opacity-[0.13] transition-opacity ${item.num}`}>
+                  {String(index + 1).padStart(2, "0")}
                 </span>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
+          </motion.div>
+
+        </div>
       </section>
 
       {/* Our Services */}
-      <section className="py-24 bg-background relative overflow-hidden">
 
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Content</span> Services
+      <section className="py-12 bg-white">
+        <div className="container mx-auto max-w-6xl px-4">
+
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+              Our{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                Services
+              </span>
             </h2>
-            <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic mt-6">
-              Precision-engineered assets designed to dominate the digital landscape of Madhya Pradesh.
-            </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -12 }}
-                className="group relative py-10 px-5 md:p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:border-primary/20 transition-all duration-500 overflow-hidden h-full flex flex-col justify-between"
-              >
-                {/* Background Step Number - Production Roadmap Look */}
-                <span className="absolute top-4 right-6 text-7xl font-black text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
-                  0{index + 1}
-                </span>
+          <HorizontalServiceList services={services} />
 
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
-                    <Check className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors tracking-tight leading-tight">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-500 leading-relaxed italic text-sm group-hover:text-slate-700">
-                    {service.desc}
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-8 w-10 h-1 bg-slate-100 rounded-full group-hover:w-full group-hover:bg-primary transition-all duration-500" />
-              </motion.div>
-            ))}
-          </div>
         </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-24 bg-[#fafafa] relative overflow-hidden">
-        {/* 1. ATMOSPHERIC GRADIENT & GRID - Replaces Dark Background */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Soft Mesh Gradients to fill white space */}
-          <div className="absolute top-1/4 left-[-5%] w-[45%] h-[45%] bg-blue-500/5 blur-[120px] rounded-full" />
-          <div className="absolute bottom-1/4 right-[-5%] w-[40%] h-[40%] bg-orange-500/5 blur-[110px] rounded-full" />
-        </div>
-
-        <motion.div
-          className="container mx-auto max-w-7xl relative z-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={staggerContainer}
-        >
-          {/* Header Block */}
-          <div className="text-center mb-24 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-none">
-              The Growth <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Pipeline</span>
-            </h2>
-            <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto italic mt-4 border-b border-primary/20 pb-4">
-              A structured, high-velocity approach for building brand authority in <span className="text-slate-900 font-bold">Bhopal & Jabalpur</span>.
-            </p>
-          </div>
-
-          <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {/* Horizontal Energy Line (Visible only on Desktop) */}
-            <div className="absolute top-10 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500/20 via-primary/40 to-orange-500/20 hidden lg:block -z-10" />
-
-            {process.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                whileHover={{ y: -10 }}
-                className="relative text-center group"
-              >
-                {/* Animated Step Node */}
-                <div className="relative w-20 h-20 rounded-[2rem] bg-white border border-slate-100 flex items-center justify-center text-3xl font-black text-primary mx-auto mb-8 shadow-xl group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-500">
-                  {item.step}
-                  {/* Pulsing Aura */}
-                  <div className="absolute inset-0 rounded-[2rem] bg-primary/20 animate-ping group-hover:block hidden" />
-                </div>
-
-                {/* Content Card (Glassmorphism) */}
-                <div className="p-6 rounded-[2rem] bg-white/40 backdrop-blur-md border border-slate-100 group-hover:shadow-2xl group-hover:bg-white transition-all duration-500">
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed italic group-hover:text-slate-700">
-                    {item.desc}
-                  </p>
-                </div>
-
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </section>
 
       <QuoteSection

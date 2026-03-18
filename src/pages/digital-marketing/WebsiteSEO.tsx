@@ -150,7 +150,6 @@ const WebsiteSEO = () => {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-
       <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
         {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -232,7 +231,6 @@ const WebsiteSEO = () => {
       </section>
 
       {/* Why Choose Us */}
-
       <section className="py-12 lg:px-8 bg-[#f8f7f4] relative overflow-hidden">
         <motion.div
           className="container mx-auto max-w-7xl relative z-10"
@@ -297,24 +295,88 @@ const WebsiteSEO = () => {
       </section>
 
       {/* Why SEO matters */}
-      <section className="py-24 bg-background overflow-hidden">
+      <section className="py-12 lg:px-10 bg-white overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-6 italic">Why SEO <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic inline-block pr-4 -mr-4 overflow-visible leading-normal">Matters</span> </h2>
-              <p className="text-muted-foreground text-sm md:text-lg mb-8 leading-relaxed italic">
-                In today’s competitive digital landscape, ranking is essential for business growth. A strong SEO strategy ensures you appear at the top, attracts organic traffic, and generates consistent leads.
+
+            {/* LEFT */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-6"
+            >
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-[2px] bg-blue-600 rounded-full" />
+                <span className="text-[11px] font-bold tracking-[.28em] uppercase text-blue-600">
+                  SEO Impact
+                </span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold italic text-slate-900 leading-[1.07]">
+                Why SEO{" "}
+                <em className=" bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 bg-clip-text text-transparent font-medium">
+                  Matters
+                </em>
+              </h2>
+
+              <p className="text-base md:text-lg text-slate-500 font-medium border-l-4 border-blue-100 pl-5 py-1">
+                In today's competitive digital landscape, ranking is essential for business
+                growth. A strong SEO strategy ensures you appear at the top, attract organic
+                traffic, and generate consistent leads without paying for every click.
               </p>
+
+              {/* Mini stat strip */}
+              <div className="flex gap-0 border border-slate-100 rounded-2xl overflow-hidden mt-2">
+                {[
+                  { val: "68%", label: "Clicks go to top 5", color: "text-blue-600" },
+                  { val: "14×", label: "More ROI than ads", color: "text-violet-600" },
+                  { val: "92%", label: "Traffic is organic", color: "text-orange-500" },
+                ].map((s, i) => (
+                  <div
+                    key={i}
+                    className={`flex-1 py-4 text-center ${i < 2 ? "border-r border-slate-100" : ""}`}
+                  >
+                    <div className={`text-lg md:text-3xl font-black leading-none mb-1 ${s.color}`}>
+                      {s.val}
+                    </div>
+                    <div className="text-xs font-bold uppercase text-slate-600">
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            {/* RIGHT */}
+            <div className="flex flex-col gap-2">
               {WhyMatters.map((point, index) => (
-                <motion.div key={index} whileHover={{ scale: 1.05 }} className="flex items-start gap-4 p-6 bg-card rounded-2xl border border-border/50 hover:border-primary/40 transition-all shadow-sm">
-                  <Check className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-sm font-semibold text-slate-700">{point}</p>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.07 }}
+                  whileHover={{ x: 4 }}
+                  className="group flex items-center gap-4 px-5 py-4 rounded-xl border border-transparent bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 cursor-default"
+                >
+                  <div className="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-200">
+                    <Check
+                      size={13}
+                      strokeWidth={2.5}
+                      className="text-blue-600 group-hover:text-white transition-colors duration-200"
+                    />
+                  </div>
+                  <span className="text-sm md:text-base font-medium text-slate-800 group-hover:text-blue-700 transition-colors flex-1 leading-snug">
+                    {point}
+                  </span>
+                  <span className="text-[10px] font-bold text-slate-200 group-hover:text-blue-200 transition-colors font-mono flex-shrink-0">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                 </motion.div>
               ))}
             </div>
+
           </div>
         </div>
       </section>

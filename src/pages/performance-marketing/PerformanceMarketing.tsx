@@ -11,6 +11,7 @@ import {
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
+import { CTASection } from "@/components/ui/CTASection";
 
 const PerformanceMarketing = () => {
   const navigate = useNavigate();
@@ -37,14 +38,13 @@ const PerformanceMarketing = () => {
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
-
-        {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Blueprint Grid Overlay - Representing Data Accuracy */}
+          {/* Grid Overlay - Matches Brand Protection Lab */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Atmospheric Mesh Blobs - Blue for Trust, Orange for Energy/Conversion */}
+          {/* Atmospheric Mesh Blobs */}
           <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
         </div>
@@ -53,7 +53,7 @@ const PerformanceMarketing = () => {
         <div className="container mx-auto px-4 relative z-10 mt-12">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* LEFT COLUMN: ROI Narrative */}
+            {/* LEFT COLUMN: Narrative (Text Upwards) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -64,21 +64,18 @@ const PerformanceMarketing = () => {
                 <Zap className="w-3 h-3 fill-current" /> ROI-Driven Engineering Lab
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
-                Drive <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
-                  Measurable Growth
-                </span> Through Data.
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                Drive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Measurable Growth</span> Through Data.
               </h1>
 
-              <p className="text-sm md:text-xl text-slate-500 max-w-lg leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
-                "We scale businesses through precision-targeted advertising. Every rupee spent is tracked, optimized, and tied directly to your revenue goals."
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                We scale businesses through precision-targeted advertising. Every rupee spent is tracked, optimized, and tied directly to your revenue goals.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex justify-start pt-4">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
                   onClick={() => navigate("/contact")}
                 >
                   Get Free Audit <ArrowRight className="ml-2 w-5 h-5" />
@@ -86,7 +83,7 @@ const PerformanceMarketing = () => {
               </div>
             </motion.div>
 
-            {/* RIGHT COLUMN: Visual Proof (Performance Bento) */}
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -410,38 +407,11 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* FINAL CTA */}
-
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
-                Ready to Stop Guessing <br /> and Start Scaling?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Join 500+ businesses who rely on Socio Bhaarat to deliver consistent leads and massive ROI through performance marketing."
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Claim Your Free ROI Audit Now
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={<>Ready to Stop Guessing <br className="hidden sm:block" /> and Start Scaling?</>}
+        description={<>Join 500+ businesses who rely on Socio Bhaarat <br className="hidden sm:block" /> to deliver consistent leads and massive ROI through performance marketing.</>}
+        buttonText="Claim Your Free ROI Audit Now"
+      />
 
     </div>
   );

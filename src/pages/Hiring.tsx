@@ -95,7 +95,7 @@ const Hiring = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-muted/30 relative">
+      <section className="py-20 bg-muted/30 relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="mb-16 border-l-4 border-primary pl-8">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900">
@@ -122,7 +122,7 @@ const Hiring = () => {
         </div>
       </section>
 
-      <section className="py-24 px-4 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter italic">

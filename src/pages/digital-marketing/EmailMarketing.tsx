@@ -1,63 +1,161 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   Mail, Zap, Users, BarChart3, ShieldCheck, MousePointer2,
   RefreshCcw, LayoutTemplate, Send, Search, CheckCircle2, ArrowRight,
-  TrendingUp
+  TrendingUp,
+  Check,
+  Sparkles,
+  Phone,
+  Shield,
+  Star,
+  Edit3,
+  MapPin
 } from "lucide-react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const EmailMarketing = () => {
   const navigate = useNavigate();
-
-  /* DATA VARIABLES */
-  const heroData = {
-    heading: "Convert Subscribers into Customers with Smart Email Automation",
-    subtext: "We create high-converting email marketing campaigns that build relationships, nurture leads, and drive consistent revenue through personalized automation and data-driven optimization.",
-    cta: "Start Your Campaign",
-  };
+  const [active, setActive] = useState(0)
 
   const whyChoosePoints = [
-    { title: "High Inbox Deliverability", icon: <ShieldCheck /> },
-    { title: "Smart Segmentation", icon: <Users /> },
-    { title: "Automated Workflows", icon: <RefreshCcw /> },
-    { title: "Creative Template Design", icon: <LayoutTemplate /> },
-    { title: "A/B Testing & Optimization", icon: <BarChart3 /> },
-    { title: "Performance Reporting", icon: <Search /> },
-  ];
+    {
+      num: "01", tag: "Results-Driven", color: "#1d4ed8",
+      iconBgL: "bg-blue-100 text-blue-700", iconBgR: "bg-blue-100 text-blue-700",
+      iconL: <TrendingUp size={16} />, iconR: <BarChart3 size={16} />,
+      leftTitle: "Opens, Clicks & Revenue",
+      leftSub: "We focus on metrics that actually move your business — not vanity numbers.",
+      rightTitle: "Real Attribution Reporting",
+      rightSub: "Every rupee earned traced back to the exact campaign that drove it.",
+      tagBg: "bg-blue-50 text-blue-700",
+    },
+    {
+      num: "02", tag: "Local Expertise", color: "#7e22ce",
+      iconBgL: "bg-purple-100 text-purple-700", iconBgR: "bg-purple-100 text-purple-700",
+      iconL: <MapPin size={16} />, iconR: <Star size={16} />,
+      leftTitle: "Bhopal & Jabalpur Focus",
+      leftSub: "Deep knowledge of MP consumer behaviour, seasonal trends, and local buying cycles.",
+      rightTitle: "Regional Campaign Timing",
+      rightSub: "Campaigns timed around local festivals, seasons, and audience activity peaks.",
+      tagBg: "bg-purple-50 text-purple-700",
+    },
+    {
+      num: "03", tag: "Full Service", color: "#c2410c",
+      iconBgL: "bg-orange-100 text-orange-700", iconBgR: "bg-orange-100 text-orange-700",
+      iconL: <Edit3 size={16} />, iconR: <Mail size={16} />,
+      leftTitle: "Dedicated Copywriter",
+      leftSub: "Every campaign written by a specialist — never templated, never AI-generated.",
+      rightTitle: "ESP Setup & Management",
+      rightSub: "We handle the full technical setup, integration, and ongoing platform management.",
+      tagBg: "bg-orange-50 text-orange-700",
+    },
+  ]
 
   const services = [
-    { name: "Automation & Drip Campaigns", icon: <Zap />, desc: "Automated welcome series and abandoned cart recovery flows." },
-    { name: "Newsletter Management", icon: <Mail />, desc: "Engaging weekly or monthly newsletters to keep your brand top-of-mind." },
-    { name: "List Cleaning & Growth", icon: <Users />, desc: "Removing inactive subscribers and building a high-quality list." },
-    { name: "Transactional Emails", icon: <Send />, desc: "Optimized order confirmations and shipping updates that drive upsells." },
-    { name: "Promotional Blast Campaigns", icon: <MousePointer2 />, desc: "Strategic holiday and seasonal sales campaigns for maximum impact." },
-    { name: "Detailed Analytics Audit", icon: <BarChart3 />, desc: "In-depth tracking of open rates, clicks, and actual sales revenue." },
-  ];
-
-  const whyNeedPoints = [
-    "Direct Ownership of Your Audience",
-    "Unmatched ROI (Up to 4200%)",
-    "Personalized Customer Journeys",
-    "Higher Conversion than Social Media",
-    "Automated Revenue Generation",
-    "Detailed Behavioral Analytics"
-  ];
+    {
+      num: "01",
+      icon: Zap, iconBg: "bg-yellow-100",
+      iconColor: "text-yellow-700",
+      numColor: "text-yellow-300",
+      tagBg: "bg-yellow-50",
+      tagColor: "text-yellow-700",
+      tag: "Always-On Automation",
+      title: "Automation & Drip Campaigns",
+      desc: "We build intelligent automated welcome series, nurture sequences, and abandoned cart recovery flows — triggered by user behaviour and precisely timed to convert subscribers into paying customers at every stage of the funnel without manual effort.",
+    },
+    {
+      num: "02",
+      icon: Mail, iconBg: "bg-blue-100",
+      iconColor: "text-blue-700",
+      numColor: "text-blue-300",
+      tagBg: "bg-blue-50",
+      tagColor: "text-blue-700",
+      tag: "Brand Consistency",
+      title: "Newsletter Management",
+      desc: "We craft engaging weekly or monthly newsletters designed to keep your brand top-of-mind, educate your audience with genuinely valuable content, and drive consistent, measurable traffic back to your website — building long-term loyalty with every send.",
+    },
+    {
+      num: "03",
+      icon: Users, iconBg: "bg-green-100",
+      iconColor: "text-green-700",
+      numColor: "text-green-300",
+      tagBg: "bg-green-50",
+      tagColor: "text-green-700",
+      tag: "List Health",
+      title: "List Cleaning & Growth",
+      desc: "We systematically remove inactive and unengaged subscribers to protect your sender reputation and deliverability, while simultaneously building a high-quality, permission-based list of genuinely interested prospects through proven opt-in strategies.",
+    },
+    {
+      num: "04",
+      icon: Send, iconBg: "bg-indigo-100",
+      iconColor: "text-indigo-700",
+      numColor: "text-indigo-300",
+      tagBg: "bg-indigo-50",
+      tagColor: "text-indigo-700",
+      tag: "Post-Purchase Experience",
+      title: "Transactional Emails",
+      desc: "We optimise every order confirmation, shipping update, and post-purchase email to build customer trust, reduce inbound support queries, and strategically surface upsell and cross-sell opportunities that increase average order value and repeat purchases.",
+    },
+    {
+      num: "05",
+      icon: MousePointer2,
+      iconBg: "bg-orange-100",
+      iconColor: "text-orange-700",
+      numColor: "text-orange-300",
+      tagBg: "bg-orange-50",
+      tagColor: "text-orange-700",
+      tag: "Revenue Campaigns",
+      title: "Promotional Blast Campaigns",
+      desc: "We design and execute strategic holiday, seasonal, and product-launch sales campaigns — fully segmented by audience behaviour, written for maximum open rates, and timed for peak engagement to deliver measurable revenue impact with every broadcast.",
+    },
+    {
+      num: "06",
+      icon: BarChart3,
+      iconBg: "bg-teal-100",
+      iconColor: "text-teal-700",
+      numColor: "text-teal-300",
+      tagBg: "bg-teal-50",
+      tagColor: "text-teal-700",
+      tag: "Full Visibility",
+      title: "Detailed Analytics & Audit",
+      desc: "We deliver in-depth monthly reports tracking open rates, click-through rates, unsubscribes, conversions, and actual sales revenue attributed directly to each campaign — giving you complete clarity on ROI and a clear roadmap for continuous improvement.",
+    },
+  ]
 
   const processSteps = [
-    { step: "Audit & Strategy", desc: "Analyzing your current list and defining goals." },
-    { step: "Design & Copy", desc: "Crafting beautiful templates and persuasive messaging." },
-    { step: "Automation Setup", desc: "Building the logic and behavioral triggers." },
-    { step: "Launch & Optimize", desc: "Sending campaigns and refining based on data." }
-  ];
+    {
+      num: "01",
+      tag: "Foundation",
+      step: "Audience & Goal Discovery",
+      desc: "We start by deeply understanding your business goals, target audience segments, and current email performance benchmarks — mapping the full subscriber journey before writing a single word.",
+    },
+    {
+      num: "02",
+      tag: "Architecture",
+      step: "Sequence & Funnel Design",
+      desc: "Every touchpoint is planned — from welcome flows to post-purchase sequences — with precise timing, segmentation logic, and trigger conditions mapped against your customer lifecycle stages.",
+    },
+    {
+      num: "03",
+      tag: "Execution",
+      step: "Copy, Design & Build",
+      desc: "Our team writes compelling, on-brand email copy, designs mobile-optimised templates, and builds every automation inside your ESP — tested across devices and clients before going live.",
+    },
+    {
+      num: "04",
+      tag: "Optimisation",
+      step: "Send, Analyse & Iterate",
+      desc: "Once live, we continuously monitor open rates, click-throughs, conversions, and revenue attribution — running A/B tests and iterating on subject lines, CTAs, and timing every single month.",
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-background selection:bg-primary/20">
 
       {/* HERO SECTION */}
-
       <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
         {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -116,11 +214,11 @@ const EmailMarketing = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
 
                 <div className="relative p-3 bg-white border-2 border-slate-200 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2"
-                  alt="Email Marketing Automation"
-                  className="relative rounded-[2rem] md:rounded-[3rem] group-hover:scale-105 transition-transform duration-1000"
-                />
+                  <img
+                    src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2"
+                    alt="Email Marketing Automation"
+                    className="relative rounded-[2rem] md:rounded-[3rem] group-hover:scale-105 transition-transform duration-1000"
+                  />
 
                   {/* Floating Mini-Metric Overlay */}
                   <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
@@ -140,118 +238,217 @@ const EmailMarketing = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16">Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Socio Bhaarat</span> for Email Marketing</h2>
+      <section className="py-20 px-6 lg:px-10 bg-[#fafafa]">
+        <div className="container mx-auto max-w-7xl">
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyChoosePoints.map((item, index) => (
+          <div className="mb-14 max-">
+            <h2 className="font-bold text-slate-900 text-4xl md:text-5xl"
+              style={{ fontSize: "clamp(1.9rem, 4.5vw, 3rem)" }}
+            >
+              Why Choose <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                Socio Bhaarat
+              </span> for Email Marketing
+            </h2>
+          </div>
+
+          {/* Timeline rows */}
+          <div className="flex flex-col gap-2.5">
+            {whyChoosePoints.map((item, i) => (
               <motion.div
-                key={index}
-                whileHover={{ y: -5 }}
-                className="bg-card p-8 rounded-3xl border border-border/50 hover:border-primary transition-all flex flex-col items-center group"
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group grid grid-cols-1 md:grid-cols-[1fr_60px_1fr] items-center min-h-[88px]"
+                style={{ '--ac': item.color } as React.CSSProperties}
               >
-                <div className="w-14 h-14 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
-                  {item.icon}
+                {/* LEFT cell */}
+                <div
+                  className="flex items-center gap-4 px-7 py-5 rounded-2xl md:rounded-r-none border border-transparent bg-slate-50/80 group-hover:bg-white group-hover:border-current group-hover:-translate-x-1 transition-all duration-250 cursor-default"
+                  style={{ borderColor: "transparent" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = item.color + "22")}
+                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
+                >
+                  <div
+                    className={`w-9 h-9 rounded-[10px] flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${item.iconBgL}`}
+                  >
+                    {item.iconL}
+                  </div>
+                  <div>
+                    <h4
+                      className="text-base md:text-lg font-bold text-slate-900 mb-1 leading-snug transition-colors duration-200 group-hover:text-current"
+                      style={{}}
+                    >
+                      {item.leftTitle}
+                    </h4>
+                    <p className="text-sm md:text-base text-slate-600 font-medium leading-relaxed">{item.leftSub}</p>
+                    <span
+                      className={`text-[9px] font-bold uppercase tracking-[.18em] px-2.5 py-1 rounded-full mt-2 inline-block ${item.tagBg}`}
+                    >
+                      {item.tag}
+                    </span>
+                  </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">We focus on the metrics that matter: Opens, Clicks, and Revenue.</p>
+
+                {/* Spine */}
+                <div className="hidden md:flex items-center justify-center relative py-2">
+                  <div className="absolute inset-y-0 left-1/2 w-px bg-slate-100 -translate-x-1/2" />
+                  <div
+                    className="w-8 h-8 rounded-full border-2 border-slate-200 bg-white flex items-center justify-center z-10 font-mono text-[10px] font-bold text-slate-300 transition-all duration-250 group-hover:border-current group-hover:text-black group-hover:bg-white"
+                  >
+                    {item.num}
+                  </div>
+                </div>
+
+                {/* RIGHT cell */}
+                <div
+                  className="flex items-center gap-4 px-7 py-8 rounded-2xl md:rounded-l-none border border-transparent bg-slate-50/80 group-hover:bg-white group-hover:translate-x-1 transition-all duration-250 cursor-default"
+                  onMouseEnter={(e) => (e.currentTarget.style.borderColor = item.color + "22")}
+                  onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
+                >
+                  <div
+                    className={`w-9 h-9 rounded-[10px] flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${item.iconBgR}`}
+                  >
+                    {item.iconR}
+                  </div>
+                  <div>
+                    <h4 className="text-base md:text-lg font-bold text-slate-900 mb-1 leading-snug">
+                      {item.rightTitle}
+                    </h4>
+                    <p className="text-sm md:text-base text-slate-700 leading-relaxed">{item.rightSub}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
       {/* WHY YOU NEED EMAIL MARKETING */}
-      <section className="py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-background">
-        {/* Modern Gradient Background Accents */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 -z-10" />
-
+      <section className="py-12 lg:px-10 bg-white relative overflow-hidden">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-            {/* Left Column: Narrative & Stats */}
+            {/* ── LEFT ── */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-8"
+              className="flex flex-col gap-8"
             >
-              <div>
-                <motion.span
-                  className="text-primary font-bold tracking-widest uppercase text-xs"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                >
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-[2px] bg-blue-600 rounded-full" />
+                <span className="text-[10px] font-bold tracking-[.3em] uppercase text-blue-600">
                   Audience Ownership
-                </motion.span>
-                <h2 className="text-3xl md:text-5xl font-bold mt-2 leading-tight">
-                  Stop Relying on <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Borrowed</span> Audiences.
-                </h2>
+                </span>
               </div>
 
-              <p className="text-muted-foreground text-sm md:text-lg leading-relaxed">
-                Social media algorithms change daily, and your reach can vanish overnight. Email marketing gives you a direct, un-interrupted line to your customers that you <strong>own 100%</strong>. It’s the highest ROI channel in digital marketing for a reason.
+              <h2 className="font-bold text-4xl md:text-5xl text-slate-900 tracking-tight leading-[1.06]"
+                style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)" }}
+              >
+                Stop Relying on <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                  Borrowed Audiences.
+                </span>
+              </h2>
+
+              <p className="text-base text-slate-800 italic leading-[1.85] font-medium border-l-4 border-blue-100 pl-5 py-1">
+                Social media algorithms change daily and your reach can vanish overnight. Email
+                gives you a direct, uninterrupted line to your customers that you{" "}
+                <strong className="text-slate-900 not-italic font-bold">own 100%</strong> -
+                the highest ROI channel in digital marketing.
               </p>
 
-              {/* Feature Comparison */}
-              <div className="space-y-4">
+              <div className="flex flex-col gap-0.5">
                 {[
-                  { label: "Direct Access", sub: "Bypass algorithms and reach the inbox directly." },
-                  { label: "Personalization", sub: "Speak to customers based on their specific behavior." },
-                  { label: "Data Ownership", sub: "Build a valuable asset that stays with your business." }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 group">
-                    <div className="mt-1 h-5 w-5 rounded-full border-2 border-primary flex items-center justify-center p-1 group-hover:bg-primary transition-colors">
-                      <CheckCircle2 className="w-3 h-3 group-hover:text-white transition-colors" />
+                  { icon: Phone, title: "Direct Access", sub: "Bypass algorithms and reach the inbox directly — every single time." },
+                  { icon: Users, title: "Personalisation", sub: "Speak to customers based on their specific behaviour and purchase history." },
+                  { icon: Shield, title: "Data Ownership", sub: "Build a valuable business asset that stays with you — platform-independent." },
+                ].map((f, i) => (
+                  <div
+                    key={i}
+                    className="group flex items-start gap-4 px-5 py-4 rounded-xl border border-transparent hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 cursor-default"
+                  >
+                    <div className="w-8 h-8 rounded-[9px] bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-200">
+                      <f.icon size={14} className="text-blue-600 group-hover:text-white transition-colors duration-200" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-base leading-none mb-1">{item.label}</h4>
-                      <p className="text-xs text-muted-foreground">{item.sub}</p>
+                      <h4 className=" text-[14px] font-bold text-slate-900 mb-1 group-hover:text-blue-700 transition-colors">
+                        {f.title}
+                      </h4>
+                      <p className="text-[12px] text-slate-700 font-medium leading-relaxed">{f.sub}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Right Column: Visual Impact Card */}
+            {/* ── RIGHT ── */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="flex flex-col gap-3"
             >
-              <div className="bg-card border-2 border-border py-10 px-5 md:py-10 rounded-[3rem] shadow-2xl relative overflow-hidden group">
-                {/* Animated Background Pulse */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-primary/20 transition-colors" />
-
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-8">Campaign Efficiency Metrics</h3>
-
-                  <div className="grid gap-6">
-                    {whyNeedPoints.map((point, index) => (
-                      <motion.div
-                        key={index}
-                        whileHover={{ x: 10 }}
-                        className="flex items-center gap-4 p-4 rounded-2xl bg-background border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all"
-                      >
-                        <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
-                          <TrendingUp className="w-5 h-5" />
-                        </div>
-                        <span className="font-semibold">{point}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  <div className="mt-10 p-6 bg-primary rounded-2xl text-white">
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <p className="text-xs font-bold uppercase opacity-80 mb-1">Retention Strategy</p>
-                        <p className="text-xl font-bold leading-none">Automated Lifecycle</p>
-                      </div>
-                      <RefreshCcw className="w-8 h-8 opacity-20" />
+              {/* Stat banner */}
+              <div className="bg-blue-50 border border-blue-200 rounded-2xl px-7 py-6 flex items-center justify-between gap-4">
+                {[
+                  { val: "42×", label: "Avg ROI", color: "text-blue-600" },
+                  { val: "4.2B", label: "Email Users", color: "text-violet-600" },
+                  { val: "99%", label: "Inbox Rate", color: "text-orange-500" },
+                ].map((s, i) => (
+                  <div key={i} className={`text-center flex-1 ${i < 2 ? "border-r border-blue-200" : ""}`}>
+                    <div className={`text-base md:text-3xl font-black leading-none mb-1 ${s.color}`}>
+                      {s.val}
+                    </div>
+                    <div className="text-[9px] font-bold uppercase tracking-[.2em] text-slate-400">
+                      {s.label}
                     </div>
                   </div>
+                ))}
+              </div>
+
+              {/* Metric rows */}
+              {[
+                { icon: TrendingUp, title: "Higher open rates than social", sub: "Email averages 20–40% open rates vs 2–5% on social feeds", badge: "Reach", badgeBg: "bg-blue-100 text-blue-700", iconBg: "bg-blue-50 text-blue-600" },
+                { icon: Zap, title: "Automated lifecycle flows", sub: "Welcome, nurture, and win-back sequences running 24/7", badge: "Auto", badgeBg: "bg-purple-100 text-purple-700", iconBg: "bg-purple-50 text-purple-600" },
+                { icon: Star, title: "Behaviour-based personalisation", sub: "Triggered by clicks, purchases, and browsing patterns", badge: "Smart", badgeBg: "bg-orange-100 text-orange-700", iconBg: "bg-orange-50 text-orange-600" },
+                { icon: BarChart3, title: "Full revenue attribution", sub: "Track every rupee earned directly from each campaign", badge: "ROI", badgeBg: "bg-green-100 text-green-700", iconBg: "bg-green-50 text-green-600" },
+              ].map((m, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.2 }}
+                  className="group flex items-center gap-4 px-5 py-4 rounded-xl border border-slate-100 bg-white hover:border-blue-100 hover:shadow-[0_4px_20px_rgba(37,99,235,0.07)] transition-all duration-200 cursor-default"
+                >
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-110 ${m.iconBg}`}>
+                    <m.icon size={17} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className=" text-base font-bold text-slate-900 leading-snug mb-0.5">
+                      {m.title}
+                    </h4>
+                    <p className="text-sm text-slate-800 font-medium">{m.sub}</p>
+                  </div>
+                  <span className={`text-[9px] font-bold uppercase tracking-[.15em] px-3 py-1.5 rounded-full flex-shrink-0 ${m.badgeBg}`}>
+                    {m.badge}
+                  </span>
+                </motion.div>
+              ))}
+
+              {/* Bottom CTA strip */}
+              <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl px-6 py-5 flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-[9px] font-bold uppercase tracking-[.2em] text-blue-200 mb-1">
+                    Retention Strategy
+                  </p>
+                  <h4 className="text-base tracking-wide font-bold text-white">
+                    Automated Lifecycle Engine
+                  </h4>
+                </div>
+                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <RefreshCcw size={20} className="text-white" />
                 </div>
               </div>
             </motion.div>
@@ -260,52 +457,149 @@ const EmailMarketing = () => {
         </div>
       </section>
 
-      {/* ENHANCED SERVICES */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Services</span></h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-lg">Full-service email management from technical setup to creative execution.</p>
+      {/* SERVICES */}
+      <section className="py-12 px-6 lg:px-10 bg-[#f8f9fb]">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="mb-14">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
+              Our{" "}
+              <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                Services
+              </span>
+            </h2>
+            <p className="text-base text-slate-800 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
+              "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.02 }}
-                className="group p-8 rounded-[2rem] bg-muted/30 border border-transparent hover:border-primary/20 hover:bg-card transition-all duration-300"
-              >
-                <div className="mb-6 p-3 w-fit rounded-xl bg-background text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
-                  {service.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-bold mb-3">{service.name}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">{service.desc}</p>
-              </motion.div>
-            ))}
+          {/* Explorer panel */}
+          <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white flex flex-col md:flex-row">
+
+            {/* Left nav */}
+            <div className="md:w-[40%] flex-shrink-0 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200 p-2">
+              {services.map((item, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActive(i)}
+                  className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl border text-left transition-all duration-200 mb-0.5 ${active === i
+                    ? "bg-white border-blue-100 shadow-sm"
+                    : "border-transparent hover:bg-white hover:border-slate-200"
+                    }`}
+                >
+                  <div className={`w-8 h-8 rounded-[9px] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${active === i ? "scale-105" : ""} ${item.iconBg} ${item.iconColor}`}>
+                    <item.icon size={14} />
+                  </div>
+                  <span className={` text-base font-semibold ${active === i ? "text-blue-700" : "text-slate-600"}`}>
+                    {item.title}
+                  </span>
+                  <span className={`ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
+                    {item.num}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* Right panel */}
+            <div className="flex-1 p-10 md:p-12 relative overflow-hidden flex flex-col justify-center min-h-[380px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={active}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.25 }}
+                >
+                  {/* Num */}
+                  <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-3 block ${services[active].numColor}`}>
+                    {services[active].num}
+                  </span>
+
+                  {/* Title */}
+                  <h3
+                    className={`font-display text-3xl md:text-4xl font-extrabold mb-4 ${services[active].iconColor}`}
+                  >
+                    {services[active].title}
+                  </h3>
+
+                  {/* Desc */}
+                  <p
+                    className={`text-sm md:text-lg text-slate-700 max-w-lg mb-7 font-medium border-l-[3px] pl-4 leading-relaxed ${services[active].iconBg.replace("bg-", "border-")}`}
+                  >
+                    {services[active].desc}
+                  </p>
+
+                  {/* Tag */}
+                  <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[.15em] ${services[active].tagBg} ${services[active].tagColor}`}>
+                    <Check size={10} strokeWidth={2.5} />
+                    {services[active].tag}
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Watermark number */}
+              <span className="absolute -bottom-5 -right-2 font-display text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.04]">
+                {services[active].num}
+              </span>
+
+              {/* Ghost icon */}
+              <div className="absolute top-8 right-10 opacity-[0.05]">
+                {React.createElement(services[active].icon, { size: 80, className: services[active].iconColor })}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* THE PROCESS */}
-      <section className="py-24 bg-muted/50">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">Lifecycle <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Strategy</span></h2>
-          <div className="relative">
-            {/* Connecting Line */}
-            <div className="hidden md:block absolute top-[60px] left-0 right-0 h-px bg-dashed border-t border-border -z-10" />
+      <section className="py-12 lg:px-10 bg-[#f8f9fb]">
+        <div className="container mx-auto max-w-7xl">
 
-            <div className="grid md:grid-cols-4 gap-8">
-              {processSteps.map((item, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-12 h-12 bg-background border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-all shadow-lg">
-                    {index + 1}
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.step}</h3>
-                  <p className="text-xs text-muted-foreground">{item.desc}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-900 mb-14">
+            Lifecycle{" "}
+            <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+              Strategy
+            </em>
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {processSteps.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="group relative grid grid-cols-[64px_1fr] min-h-[120px] rounded-2xl overflow-hidden border border-transparent bg-white hover:border-blue-100 hover:shadow-[0_8px_32px_rgba(37,99,235,0.07)] transition-all duration-250 cursor-default"
+              >
+                {/* Left — number */}
+                <div className="flex flex-col items-center justify-center gap-1.5 border-r border-slate-100 py-5 group-hover:bg-blue-50 transition-colors duration-250">
+                  <span className="font-display text-[1.3rem] font-black text-slate-200 group-hover:text-blue-600 transition-colors leading-none">
+                    {item.num}
+                  </span>
+                  <span className="w-2 h-2 rounded-full bg-slate-200 group-hover:bg-blue-600 transition-colors" />
                 </div>
-              ))}
-            </div>
+
+                {/* Right — content */}
+                <div className="relative px-6 py-6 flex flex-col justify-center gap-2 overflow-hidden">
+                  {/* Sliding left accent bar */}
+                  <div className="absolute left-0 top-0 w-[3px] h-0 bg-blue-600 group-hover:h-full transition-all duration-400 rounded-r-sm" />
+
+                  <span className="text-sm font-bold uppercase tracking-[.22em] text-blue-400 group-hover:text-blue-600 transition-colors">
+                    {item.tag}
+                  </span>
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors leading-snug">
+                    {item.step}
+                  </h3>
+                  <p className="text-sm md:text-base font-medium text-slate-600 group-hover:text-slate-800 transition-colors">
+                    {item.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
+
         </div>
       </section>
 
