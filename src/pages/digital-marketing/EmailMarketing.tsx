@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
 import {
   Mail, Zap, Users, BarChart3, ShieldCheck, MousePointer2,
@@ -57,85 +58,83 @@ const EmailMarketing = () => {
 
       {/* HERO SECTION */}
 
-      <section className="relative pt-10 pb-20 px-4 flex items-center justify-center overflow-hidden bg-[#fafafa]">
-
-        {/* 1. ARCHITECTURAL BACKGROUND LAYER */}
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Signature SocioBhaarat Blueprint Grid */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px] md:bg-[size:45px_45px]" />
+          {/* Grid Overlay - Matches Brand Protection Lab */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Performance Mesh Blobs */}
-          <div className="absolute top-[-10%] right-[-5%] w-[55%] h-[55%] bg-primary/10 blur-[130px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[110px] rounded-full" />
+          {/* Atmospheric Mesh Blobs */}
+          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
         </div>
 
-        {/* 2. MAIN CONTENT ARCHITECTURE */}
-        <div className="container mx-auto max-w-7xl px-4 relative z-10 pt-12 md:pt-0">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        {/* 2. MAIN CONTENT GRID */}
+        <div className="container mx-auto px-4 relative z-10 mt-12">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* Left Column: Narrative Engine */}
+            {/* LEFT COLUMN: Narrative (Text Upwards) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-7"
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 space-y-8 text-left"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
                 <Mail className="w-3 h-3 fill-primary/20" /> Email Marketing
               </div>
 
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[0.95] tracking-tighter mb-8">
-                {heroData.heading.split("Smart")[0]} <br />
-                <span className="relative inline-block">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
-                    Smart Email Automation
-                  </span>
-                </span>
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                Convert Subscribers into Customers with <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Smart Email Automation</span>
               </h1>
 
-              <p className="text-base md:text-xl text-slate-500 max-w-xl leading-relaxed font-medium italic border-l-4 border-primary/20 pl-8 mb-10">
-                {heroData.subtext}
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                We create high-converting email marketing campaigns that build relationships, nurture leads, and drive consistent revenue through personalized automation and data-driven optimization.
               </p>
 
-              <div className="flex flex-wrap items-center gap-6">
+              <div className="flex justify-start pt-4">
                 <Button
                   size="lg"
-                  className="rounded-full px-10 h-16 bg-primary text-white font-black text-lg shadow-2xl shadow-primary/20 hover:bg-primary transition-all hover:scale-105"
+                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
                   onClick={() => navigate("/contact")}
                 >
-                  {heroData.cta} <ArrowRight className="ml-2 w-5 h-5" />
+                  Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-
               </div>
             </motion.div>
 
-            {/* Right Column: Visual Component Module */}
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-5 relative group"
+              initial={{ opacity: 0, scale: 0.9, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="lg:col-span-5 relative hidden lg:block"
             >
-              {/* Glow Architecture */}
-              <div className="absolute -inset-5 bg-primary/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-700" />
+              <div className="relative group">
+                {/* Decorative Glow behind image */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
 
-              {/* Main Illustration Module */}
-              <div className="relative p-3 bg-white border-2 border-slate-200 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl overflow-hidden">
+                <div className="relative p-3 bg-white border-2 border-slate-200 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl overflow-hidden">
                 <img
-                  src="https://img.freepik.com/free-vector/email-marketing-internet-chatting-24-hours-support_335657-3009.jpg"
+                  src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2"
                   alt="Email Marketing Automation"
                   className="relative rounded-[2rem] md:rounded-[3rem] group-hover:scale-105 transition-transform duration-1000"
                 />
 
-                {/* Floating Data Lab Card
-                <div className="absolute -top-6 -right-6 bg-card border border-border p-6 rounded-2xl shadow-xl animate-float">
-                  <BarChart3 className="text-primary w-8 h-8 mb-2" />
-                  <p className="text-2xl font-black text-foreground">4200%</p>
-                  <p className="text-[10px] font-bold text-muted-foreground uppercase">Average Email ROI</p>
-                </div> */}
-              </div>
+                  {/* Floating Mini-Metric Overlay */}
+                  <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <BarChart3 className="text-primary w-8 h-8 mb-2" />
+                    <p className="text-2xl font-black text-foreground">4200%</p>
+                    <p className="text-[10px] font-bold text-muted-foreground uppercase">Average Email ROI</p>
+                  </div>
+                </div>
 
+                {/* Framed Layer - Matching the "Legacy" section rotation */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
+              </div>
             </motion.div>
+
           </div>
         </div>
       </section>
@@ -311,37 +310,11 @@ const EmailMarketing = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic leading-tight uppercase">
-                Ready to Own Your Audience?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Stop relying solely on social algorithms. Build a list you truly own."
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Claim Your Free Audit
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={<>Ready to Own <br className="hidden md:block" /> Your Audience?</>}
+        description={<>Stop relying solely on social algorithms. Build a list you truly own.</>}
+        buttonText="Claim Your Free Audit"
+      />
     </div>
   );
 };
