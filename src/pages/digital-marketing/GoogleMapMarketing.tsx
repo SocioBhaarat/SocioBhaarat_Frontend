@@ -1,9 +1,10 @@
 import { cardAnimation, fadeUp, staggerContainer } from "@/components/ui/animation";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
+import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
-import { Check, MapPin, Star, Search, TrendingUp, ArrowRight, BarChart3, LinkIcon, Target, Zap, Locate } from "lucide-react";
+import { Check, MapPin, Star, Search, TrendingUp, ArrowRight, BarChart3, LinkIcon, Target, Zap, Locate, SearchCode, CheckCircle2, Globe2, Eye, Phone, Users } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,48 +12,130 @@ const GoogleMapMarketing = () => {
   const navigate = useNavigate();
 
   const services = [
-    { icon: MapPin, title: "Google Business Profile Setup & Optimization", desc: "Complete setup, verification, and profile optimization." },
-    { icon: Search, title: "Local Keyword Research", desc: "Target high-converting local keywords for map ranking." },
-    { icon: Star, title: "Review Generation & Management", desc: "Build trust with strategic review acquisition and responses." },
-    { icon: TrendingUp, title: "Map Ranking Improvement", desc: "Advanced strategies to improve local pack ranking." },
-    { icon: Check, title: "NAP Optimization", desc: "Consistent Name, Address, and Phone across platforms." },
-    { icon: MapPin, title: "Local Citation Building", desc: "High-quality local directory submissions." },
-    { icon: Search, title: "Competitor Map Analysis", desc: "Analyze top competitors and outrank them strategically." },
-    { icon: TrendingUp, title: "Monthly Performance Reporting", desc: "Transparent reports with measurable growth insights." },
-  ]
+    {
+      icon: <MapPin />,
+      color: "#2563eb", // Blue
+      title: "GBP Setup & Authority Optimization",
+      desc: "End-to-end configuration, verification, and strategic optimization of your Google Business Profile to ensure maximum visibility in the high-converting Local Pack.",
+    },
+    {
+      icon: <Search />,
+      color: "#7c3aed", // Violet
+      title: "Hyper-Local Keyword Targeting",
+      desc: "Identifying location-specific, high-intent search terms that bridge the gap between local customers and your physical or service-area business location.",
+    },
+    {
+      icon: <Star />,
+      color: "#ea580c", // Orange
+      title: "Review Generation & Reputation Logic",
+      desc: "Architecting a steady flow of authentic 5-star reviews and crafting professional responses that build public trust and signal quality to Google's ranking algorithms.",
+    },
+    {
+      icon: <TrendingUp />,
+      color: "#16a34a", // Green
+      title: "Advanced Map Pack Ranking",
+      desc: "Deploying sophisticated proximity and relevance strategies designed to push your business into the top 3 results on Google Maps for your most competitive services.",
+    },
+    {
+      icon: <CheckCircle2 />,
+      color: "#4338ca", // Indigo
+      title: "NAP Consistency & Data Integrity",
+      desc: "Standardizing your Name, Address, and Phone number across the entire digital ecosystem to eliminate ranking-suppressing data conflicts and improve crawl trust.",
+    },
+    {
+      icon: <Globe2 />,
+      color: "#0d9488", // Teal
+      title: "Geo-Targeted Citation Building",
+      desc: "Securing high-authority placements in premium local directories and industry-specific aggregators to strengthen your business's local relevance and domain authority.",
+    },
+    {
+      icon: <SearchCode />,
+      color: "#dc2626", // Red
+      title: "Competitor Proximity Analysis",
+      desc: "In-depth intelligence gathering on top-ranking local competitors to identify their citation gaps and ranking maneuvers, allowing us to out-position them strategically.",
+    },
+    {
+      icon: <BarChart3 />,
+      color: "#d97706", // Amber
+      title: "Local Growth Insights & Reporting",
+      desc: "Transparent monthly analytics tracking phone calls, direction requests, and website visits originating from your local presence, proving clear ROI on your local investment.",
+    },
+  ];
 
   const whyChooseUs = [
     {
+      num: "01",
       title: "Local SEO Expertise",
-      desc: "Deep understanding of the MP market algorithm to put you ahead of local rivals.",
-      icon: <Target />, color: "text-blue-600", bg: "bg-blue-50"
+      icon: <Target size={22} />,
+      desc: "A deep architectural understanding of the regional market algorithms, designed to position your brand as the dominant authority over local competitors.",
+      tag: "Market Authority",
+      card: "bg-blue-50 border-blue-200",
+      iconWrap: "bg-blue-100 text-blue-700",
+      num_color: "text-blue-200",
+      tag_color: "text-blue-700",
+      dot: "bg-blue-700",
     },
     {
+      num: "02",
       title: "GBP Optimization",
-      desc: "Complete optimization of your Google Business Profile for maximum 'Map Pack' visibility.",
-      icon: <Locate />, color: "text-orange-600", bg: "bg-orange-50"
+      icon: <Locate size={22} />,
+      desc: "Comprehensive engineering of your Google Business Profile to secure maximum 'Map Pack' visibility and capture high-intent local search traffic.",
+      tag: "Map Pack Dominance",
+      card: "bg-orange-50 border-orange-200",
+      iconWrap: "bg-orange-100 text-orange-700",
+      num_color: "text-orange-200",
+      tag_color: "text-orange-700",
+      dot: "bg-orange-700",
     },
     {
+      num: "03",
       title: "Review Management",
-      desc: "Strategic handling of customer feedback to build a 5-star digital reputation.",
-      icon: <Star />, color: "text-yellow-600", bg: "bg-yellow-50"
+      icon: <Star size={22} />,
+      desc: "Strategic handling of customer feedback and active review acquisition to build an elite, 5-star digital reputation that signals trust to both users and Google.",
+      tag: "Reputation Logic",
+      card: "bg-yellow-50 border-yellow-200",
+      iconWrap: "bg-yellow-100 text-yellow-700",
+      num_color: "text-yellow-200",
+      tag_color: "text-yellow-700",
+      dot: "bg-yellow-700",
     },
     {
+      num: "04",
       title: "Citation Building",
-      desc: "Ensuring consistent business info across all local directories and map platforms.",
-      icon: <LinkIcon />, color: "text-indigo-600", bg: "bg-indigo-50"
+      icon: <LinkIcon size={22} />,
+      desc: "Rigorous standardization of your Name, Address, and Phone (NAP) data across premium local directories to establish bulletproof data integrity.",
+      tag: "Data Consistency",
+      card: "bg-indigo-50 border-indigo-200",
+      iconWrap: "bg-indigo-100 text-indigo-700",
+      num_color: "text-indigo-200",
+      tag_color: "text-indigo-700",
+      dot: "bg-indigo-700",
     },
     {
+      num: "05",
       title: "Hyper-Local Content",
-      desc: "Creating geo-targeted content that resonates with customers in your specific city.",
-      icon: <Zap />, color: "text-pink-600", bg: "bg-pink-50"
+      icon: <Zap size={22} />,
+      desc: "Crafting geo-targeted content and landing pages that resonate with city-specific audiences, improving your relevance for localized search queries.",
+      tag: "Geo-Targeting",
+      card: "bg-pink-50 border-pink-200",
+      iconWrap: "bg-pink-100 text-pink-700",
+      num_color: "text-pink-200",
+      tag_color: "text-pink-700",
+      dot: "bg-pink-700",
     },
     {
+      num: "06",
       title: "Transparent Analysis",
-      desc: "Real-time tracking of calls, direction requests, and local search growth.",
-      icon: <BarChart3 />, color: "text-emerald-600", bg: "bg-emerald-50"
+      icon: <BarChart3 size={22} />,
+      desc: "Industrial-grade tracking of direction requests, phone calls, and local search trends — providing a clear view of your growth every 30-day cycle.",
+      tag: "Full Visibility",
+      card: "bg-emerald-50 border-emerald-200",
+      iconWrap: "bg-emerald-100 text-emerald-700",
+      num_color: "text-emerald-200",
+      tag_color: "text-emerald-700",
+      dot: "bg-emerald-700",
     },
-  ]
+  ];
 
   const whatIncluded = [
     "Complete GMB profile setup and verification",
@@ -153,192 +236,227 @@ const GoogleMapMarketing = () => {
       </section>
 
       {/* Why Choose us */}
-      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
-        {/* Atmospheric Background Design - Fills White Space */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-1/4 left-[-5%] w-[45%] h-[45%] bg-blue-500/5 blur-[130px] rounded-full animate-pulse" />
-          <div className="absolute bottom-1/4 right-[-5%] w-[40%] h-[40%] bg-orange-500/5 blur-[110px] rounded-full" />
-        </div>
-
+      <section className="py-12 lg:px-8 bg-[#f8f7f4] relative overflow-hidden">
         <motion.div
           className="container mx-auto max-w-7xl relative z-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={staggerContainer}
         >
-          {/* Header Block with Creative Typography */}
-          <motion.div variants={fadeUp} className="text-center max-w-4xl mx-auto mb-20 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.2em] border border-primary/20 backdrop-blur-sm">
-              <MapPin className="w-3 h-3" />
-              Local Authority & Trust
-            </div>
-
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900 leading-tight tracking-tighter">
-              Why Choose Our <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
-                Local SEO Engine
+          {/* Header */}
+          <motion.div variants={fadeUp} className=" max-w-7xl mx-auto mb-14 space-y-4">
+            <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
+              The SocioBhaarat Advantage
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+              Why Brands{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                Trust Us
               </span>
             </h2>
-
-            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-3xl mx-auto border-l-4 border-primary/30 pl-6">
-              "We combine local expertise with technical precision to help businesses dominate search results."
+            <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed mx-auto ">
+              We combine strategic monitoring and professional response management to protect and enhance your brand's image across Madhya Pradesh.
             </p>
           </motion.div>
 
-          {/* Enhanced Feature Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
                 variants={cardAnimation}
-                whileHover={{ y: -12, scale: 1.02 }}
-                className="group relative p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col h-72"
+                whileHover={{ y: -4, transition: { duration: 0.25 } }}
+                className={`group relative p-8 rounded-2xl border-[1.5px] flex flex-col transition-shadow duration-300 hover:shadow-xl ${item.card}`}
               >
-                {/* Subtle Hover Gradient */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                <div className="relative z-10">
-                  {/* Animated Icon Container */}
-                  <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center ${item.color} mb-8 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 shadow-inner`}>
-                    {React.cloneElement(item.icon as React.ReactElement, { size: 24 })}
-                  </div>
-
-                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm text-slate-400 leading-relaxed italic group-hover:text-slate-600 transition-colors pr-4">
-                    {item.desc}
-                  </p>
+                {/* Icon */}
+                <div className={`w-12 h-12 rounded-[14px] flex items-center justify-center mb-5 ${item.iconWrap}`}>
+                  {item.icon}
                 </div>
 
-                <div className="relative z-10 mt-auto w-10 h-1 bg-slate-100 rounded-full group-hover:w-full group-hover:bg-primary transition-all duration-500" />
+                {/* <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-2 ${item.num_color}`}>
+                        {item.num}
+                      </span> */}
+
+                {/* Title */}
+                <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-3 leading-snug ">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm md:text-base font-medium text-slate-900 leading-[1.8] flex-1 mb-5">
+                  {item.desc}
+                </p>
+
+                {/* Tag */}
+                <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.18em] ${item.tag_color}`}>
+                  <span className={`w-[5px] h-[5px] rounded-full flex-shrink-0 ${item.dot}`} />
+                  {item.tag}
+                </div>
               </motion.div>
             ))}
           </div>
+
+          {/* Pull Quote */}
+          <motion.div
+            variants={fadeUp}
+            className="mt-12 px-2 py-10 rounded-2xl bg-white border border-slate-200 text-center max-w-4xl mx-auto relative"
+          >
+            <span className="font-display text-[64px] font-extrabold text-slate-100 absolute top-[-14px] left-8 leading-none select-none">
+              "
+            </span>
+            <p className="text-sm md:text-lg text-slate-700 leading-[1.9] font-medium italic relative z-10">
+              Built on the psychology of trust and the architecture of performance. We are Bhopal and Jabalpur's leading authority in digital reputation security.
+            </p>
+            <div className="w-9 h-[2.5px] bg-gradient-to-r from-blue-600 to-violet-600 rounded-full mx-auto mt-5" />
+          </motion.div>
         </motion.div>
       </section>
 
+      {/* Why matters */}
+      <section className="py-12 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
 
-      {/* What is Google Map Marketing */}
-      <section className="py-24 bg-background overflow-hidden relative">
-        <div className="container mx-auto max-w-5xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="relative p-12 md:p-16 rounded-[4rem] bg-slate-800 text-white shadow-2xl overflow-hidden"
-          >
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-            <div className="relative z-10 space-y-10">
-              <div className="text-center max-w-3xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold italic tracking-tighter text-white mb-6">
-                  What is <span className="text-secondary font-serif pl-1">Google Map Marketing</span>
+            {/* ── LEFT ── */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-10"
+            >
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
+                <span className="text-[10px] font-bold uppercase tracking-[.2em] text-blue-600">Local SEO Guide</span>
+              </div>
+
+              {/* Heading */}
+              <div className="space-y-5">
+                <h2 className="font-display text-4xl md:text-[3.2rem] font-bold text-slate-900 leading-[1.08]">
+                  What is{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
+                    Google Map Marketing?
+                  </span>
                 </h2>
-                <p className="text-slate-300 text-sm md:text-lg leading-relaxed font-medium italic">
-                  Google Map Marketing, also known as Local SEO or Google My Business (GMB) optimization, helps your business appear in local search results and Google Maps when customers search for products or services near them.
+                <p className="text-[15px] text-slate-800 leading-[1.85] font-medium border-l-[5px] border-blue-100 pl-6 py-2 rounded-r-md">
+                  The strategic engineering of your digital footprint to dominate the "Local Pack" — ensuring your business is the first choice in Bhopal & Jabalpur.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6">
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-3">
                 {[
-                  { val: "46%", label: "Local Searches", color: "text-blue-400" },
-                  { val: "76%", label: "24h Visit Rate", color: "text-secondary" },
-                  { val: "28%", label: "Purchase Rate", color: "text-orange-400" }
-                ].map((stat, i) => (
-                  <div key={i} className="p-8 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-sm text-center">
-                    <div className={`text-4xl font-black mb-2 ${stat.color}`}>{stat.val}</div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">{stat.label}</p>
+                  { val: "46%", label: "Local Search", bar: "from-blue-600 to-blue-400", text: "from-blue-600 to-blue-400", w: "w-[46%]" },
+                  { val: "76%", label: "24h Visit", bar: "from-violet-600 to-violet-400", text: "from-violet-600 to-violet-400", w: "w-[76%]" },
+                  { val: "28%", label: "Purchase", bar: "from-orange-500 to-orange-400", text: "from-orange-500 to-orange-400", w: "w-[28%]" },
+                ].map((s, i) => (
+                  <div
+                    key={i}
+                    className="group relative bg-white border border-slate-100 rounded-2xl p-6 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <div className={`text-3xl md:text-4xl font-black mb-1.5 bg-gradient-to-br ${s.text} bg-clip-text text-transparent`}>
+                      {s.val}
+                    </div>
+                    <p className="text-[9px] font-bold uppercase tracking-widest text-slate-500">{s.label}</p>
+                    {/* Progress bar */}
+                    <div className={`absolute bottom-0 left-0 h-[3px] ${s.w} bg-gradient-to-r ${s.bar} rounded-full`} />
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
+
+            {/* ── RIGHT ── */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="grid sm:grid-cols-2 gap-3"
+            >
+              {[
+                { title: "Increase Local Visibility", icon: Eye, color: "#2563eb" },
+                { title: "Attract Nearby Customers", icon: Users, color: "#2563eb" },
+                { title: "Optimise Reviews & Ratings", icon: Star, color: "#2563eb" },
+                { title: "Drive Calls & Store Visits", icon: Phone, color: "#2563eb" },
+                { title: "Dominate Local Pack Search", icon: MapPin, color: "#2563eb" },
+                { title: "Outrank Regional Competitors", icon: TrendingUp, color: "#2563eb" },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.3 }}
+                  style={{
+                    '--c': item.color,
+                    background: `${item.color}08`,
+                    borderColor: `${item.color}22`,
+                  } as React.CSSProperties}
+                  className="group relative border rounded-2xl p-7 overflow-hidden cursor-default transition-all duration-400 hover:shadow-[0_16px_48px_rgba(0,0,0,0.07)]"
+                >
+                  {/* Icon stack */}
+                  <div className="relative w-12 h-12 mb-5">
+                    <div
+                      className="absolute inset-0 rounded-[14px] rotate-6 group-hover:rotate-12 transition-all duration-500"
+                      style={{ background: `${item.color}22` }}
+                    />
+                    <div
+                      className="absolute inset-0 bg-white rounded-xl border flex items-center justify-center z-10 transition-all duration-400"
+                      style={{ borderColor: `${item.color}33` }}
+                    >
+                      <item.icon size={18} style={{ color: item.color }} />
+                    </div>
+                  </div>
+
+                  <p className="text-[15px] font-bold mb-3 text-slate-800 transition-colors duration-300"
+                    style={{ ['--tw-text-opacity' as string]: 1 }}
+                  >
+                    {item.title}
+                  </p>
+
+                  {/* Animated bar */}
+                  <div
+                    className="h-[3px] w-7 rounded-full group-hover:w-14 transition-all duration-500"
+                    style={{ background: `${item.color}55` }}
+                  />
+
+                  {/* Ghost icon */}
+                  <item.icon
+                    size={80}
+                    className="absolute -bottom-3 -right-3 -rotate-12 opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-400"
+                    style={{ color: item.color }}
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+
+          </div>
+
+          {/* Footer line */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="mt-20 text-center text-[10px] font-black uppercase tracking-[.55em] text-slate-300 select-none"
+          >
+            Bhopal &bull; Jabalpur &bull; Local Growth Strategists
           </motion.div>
         </div>
       </section>
 
-      {/* Why Google Map Marketing Matters */}
-      <section className="py-24 sm:px-6 lg:px-8 bg-[#fafafa] relative overflow-hidden">
-        {/* Atmospheric Background - Eliminates White Space */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-1/4 left-[-5%] w-[40%] h-[40%] bg-blue-500/5 blur-[120px] rounded-full" />
-          <div className="absolute bottom-1/4 right-[-5%] w-[35%] h-[35%] bg-orange-500/5 blur-[100px] rounded-full" />
-        </div>
-
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <h2 className="font-display text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900 leading-tight">
-              Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Local Visibility</span> Matters
-            </h2>
-            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed border-l-4 border-primary/30 pl-6">
-              "When customers search for services near them, Google Maps is the first choice. We ensure your business dominates the local pack in Bhopal & Jabalpur."
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "Increase local visibility", "Attract nearby customers", "Optimize reviews & ratings",
-              "Drive calls & store visits", "Dominate local pack search", "Outrank regional competitors"
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -8 }}
-                className="group relative p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 p-6 opacity-[0.03] group-hover:opacity-10 transition-opacity">
-                  <Check size={60} className="text-primary" />
-                </div>
-                <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all shadow-inner">
-                  <Check size={20} />
-                </div>
-                <p className="font-bold text-slate-900 text-left tracking-tight group-hover:text-primary transition-colors italic">
-                  {item}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Our Services */}
-      <section className="py-24 bg-background relative overflow-hidden border-t border-border">
+      <section className="py-12 bg-white">
+        <div className="container mx-auto max-w-6xl px-4">
 
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold italic tracking-tighter text-slate-900">
-              Our GMB <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">Architecture</span>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+              Our{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                Services
+              </span>
             </h2>
-            <p className="mt-4 text-muted-foreground italic font-medium">Structured optimization for regional market leadership.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -12 }}
-                className="group relative p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden h-full flex flex-col justify-between"
-              >
-                {/* Background Step Number - Aligns with Production Roadmap Aesthetic */}
-                <span className="absolute top-4 right-6 text-7xl font-black text-slate-50 group-hover:text-primary/5 transition-colors italic select-none">
-                  0{index + 1}
-                </span>
+          <HorizontalServiceList services={services} />
 
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
-                    <service.icon size={24} />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-4 group-hover:text-primary transition-colors tracking-tight leading-tight">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-500 leading-relaxed italic text-sm group-hover:text-slate-700">
-                    {service.desc}
-                  </p>
-                </div>
-
-                <div className="relative z-10 mt-8 w-10 h-1 bg-slate-100 rounded-full group-hover:w-full group-hover:bg-primary transition-all duration-500" />
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
