@@ -154,7 +154,6 @@ const GoogleMapMarketing = () => {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-
       <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
         {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -340,13 +339,13 @@ const GoogleMapMarketing = () => {
                     Google Map Marketing?
                   </span>
                 </h2>
-                <p className="text-[15px] text-slate-800 leading-[1.85] font-medium border-l-[5px] border-blue-100 pl-6 py-2 rounded-r-md">
+                <p className=" text-base lg:text-lg text-slate-800 leading-[1.85] font-medium border-l-[5px] border-blue-100 pl-6 py-2 rounded-r-md">
                   The strategic engineering of your digital footprint to dominate the "Local Pack" — ensuring your business is the first choice in Bhopal & Jabalpur.
                 </p>
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {[
                   { val: "46%", label: "Local Search", bar: "from-blue-600 to-blue-400", text: "from-blue-600 to-blue-400", w: "w-[46%]" },
                   { val: "76%", label: "24h Visit", bar: "from-violet-600 to-violet-400", text: "from-violet-600 to-violet-400", w: "w-[76%]" },
@@ -359,20 +358,25 @@ const GoogleMapMarketing = () => {
                     <div className={`text-3xl md:text-4xl font-black mb-1.5 bg-gradient-to-br ${s.text} bg-clip-text text-transparent`}>
                       {s.val}
                     </div>
-                    <p className="text-[9px] font-bold uppercase tracking-widest text-slate-500">{s.label}</p>
-                    {/* Progress bar */}
-                    <div className={`absolute bottom-0 left-0 h-[3px] ${s.w} bg-gradient-to-r ${s.bar} rounded-full`} />
+                    <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-slate-500">
+                      {s.label}
+                    </p>
+
+                    {/* Progress bar track (Added for better UI) */}
+                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-slate-50" />
+
+                    {/* Progress bar fill */}
+                    <div className={`absolute bottom-0 left-0 h-[3px] ${s.w} bg-gradient-to-r ${s.bar} rounded-full z-10`} />
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* ── RIGHT ── */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="grid sm:grid-cols-2 gap-3"
+              className="flex flex-col divide-y divide-slate-100"
             >
               {[
                 { title: "Increase Local Visibility", icon: Eye, color: "#2563eb" },
@@ -384,47 +388,30 @@ const GoogleMapMarketing = () => {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.3 }}
-                  style={{
-                    '--c': item.color,
-                    background: `${item.color}08`,
-                    borderColor: `${item.color}22`,
-                  } as React.CSSProperties}
-                  className="group relative border rounded-2xl p-7 overflow-hidden cursor-default transition-all duration-400 hover:shadow-[0_16px_48px_rgba(0,0,0,0.07)]"
+                  whileHover={{ x: 6 }}
+                  transition={{ duration: 0.2 }}
+                  className="group flex items-center gap-4 py-4 cursor-default hover:bg-slate-100"
                 >
-                  {/* Icon stack */}
-                  <div className="relative w-12 h-12 mb-5">
-                    <div
-                      className="absolute inset-0 rounded-[14px] rotate-6 group-hover:rotate-12 transition-all duration-500"
-                      style={{ background: `${item.color}22` }}
-                    />
-                    <div
-                      className="absolute inset-0 bg-white rounded-xl border flex items-center justify-center z-10 transition-all duration-400"
-                      style={{ borderColor: `${item.color}33` }}
-                    >
-                      <item.icon size={18} style={{ color: item.color }} />
-                    </div>
+                  {/* Index */}
+                  <span className="text-[10px] font-bold tracking-[.15em] px-2 text-slate-300 w-6 flex-shrink-0">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  {/* Icon */}
+                  <div
+                    className="w-10 h-10 text-center rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+                    style={{ background: `${item.color}12`, color: item.color }}
+                  >
+                    <item.icon size={15} />
                   </div>
 
-                  <p className="text-[15px] font-bold mb-3 text-slate-800 transition-colors duration-300"
-                    style={{ ['--tw-text-opacity' as string]: 1 }}
+                  {/* Title */}
+                  <span
+                    className="text-base text-center font-medium text-slate-700 flex-1 transition-colors duration-200 group-hover:text-slate-900"
                   >
                     {item.title}
-                  </p>
+                  </span>
 
-                  {/* Animated bar */}
-                  <div
-                    className="h-[3px] w-7 rounded-full group-hover:w-14 transition-all duration-500"
-                    style={{ background: `${item.color}55` }}
-                  />
-
-                  {/* Ghost icon */}
-                  <item.icon
-                    size={80}
-                    className="absolute -bottom-3 -right-3 -rotate-12 opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-400"
-                    style={{ color: item.color }}
-                  />
                 </motion.div>
               ))}
             </motion.div>

@@ -137,16 +137,6 @@ const ORMServices = () => {
     },
   ]
 
-  const iconStyles = [
-    { bg: "bg-blue-50", text: "text-blue-600" },
-    { bg: "bg-violet-50", text: "text-violet-600" },
-    { bg: "bg-orange-50", text: "text-orange-600" },
-    { bg: "bg-green-50", text: "text-green-600" },
-    { bg: "bg-indigo-50", text: "text-indigo-600" },
-    { bg: "bg-red-50", text: "text-red-600" },
-    { bg: "bg-amber-50", text: "text-amber-600" },
-    { bg: "bg-teal-50", text: "text-teal-600" },
-  ]
 
   const whatIncluded = [
     "Brand mention monitoring across web and social media",
