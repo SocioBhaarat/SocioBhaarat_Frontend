@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { CTASection } from "@/components/ui/CTASection";
 
 const BulkBroadcasting = () => {
   const navigate = useNavigate();
@@ -59,13 +60,10 @@ const BulkBroadcasting = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
-
-      {/* HERO SECTION (Kept Structure) */}
-      <section className="relative min-h-[90vh] flex items-start overflow-hidden bg-[#fafafa]">
-
-        {/* 1. TECHNICAL BACKGROUND ARCHITECTURE */}
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Blueprint Grid Overlay - Representing Messaging Infrastructure */}
+          {/* Grid Overlay - Matches Brand Protection Lab */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
           {/* Atmospheric Mesh Blobs */}
@@ -77,7 +75,7 @@ const BulkBroadcasting = () => {
         <div className="container mx-auto px-4 relative z-10 mt-12">
           <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* LEFT COLUMN: Narrative */}
+            {/* LEFT COLUMN: Narrative (Text Upwards) */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -85,32 +83,29 @@ const BulkBroadcasting = () => {
               className="lg:col-span-7 space-y-8 text-left"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Radio className="w-3 h-3" /> Bulk Broadcasting
+                <Zap className="w-3 h-3 fill-current" /> ROI-Driven Engineering Lab
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tighter">
-                {heroData.heading.split("Smart")[0]} <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
-                  Smart Broadcasting
-                </span> Solutions.
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                Reach Thousands Instantly with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Smart Broadcasting</span> Solutions.
               </h1>
 
-              <p className="text-base md:text-xl text-slate-500 leading-relaxed font-medium italic border-l-4 border-primary/30 pl-6">
-                {heroData.subtext}
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                We help businesses connect with their audience instantly through reliable, fast, and targeted bulk broadcasting services. Whether it’s promotions, updates, or alerts — deliver your message at scale with confidence.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex justify-start pt-4">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto rounded-full px-12 h-14 md:h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
                   onClick={() => navigate("/contact")}
                 >
-                  {heroData.cta} <ArrowRight className="ml-2 w-5 h-5" />
+                  Start Broadcasting Now <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
             </motion.div>
 
-            {/* RIGHT COLUMN: Visual Proof (Broadcasting Bento) */}
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, x: 30 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -364,37 +359,11 @@ const BulkBroadcasting = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
-                Ready to Scale Your Growth?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Join 500+ businesses using Sociobhaarat to reach their customers daily."
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Get Started for Free
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={<>Ready to Scale Your Growth?</>}
+        description={<>Join 500+ businesses using Sociobhaarat to reach their customers daily.</>}
+        buttonText="Get Started for Free"
+      />
     </div>
   );
 };

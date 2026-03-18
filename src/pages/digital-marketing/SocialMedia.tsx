@@ -4,7 +4,7 @@ import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
-import { Check, Instagram, Facebook, Linkedin, Twitter, Youtube, TrendingUp, ArrowRight, Sparkles, BarChart3, Palette, ShieldCheck, Target, Users, Zap, Rocket, MessageSquare, Search, ShieldAlert, Link2, Megaphone, MessageCircle } from "lucide-react";
+import { Check, Instagram, Facebook, Linkedin, Twitter, Youtube, TrendingUp, ArrowRight, Sparkles, BarChart3, Palette, ShieldCheck, Target, Users, Zap, Rocket, MessageSquare, Search, ShieldAlert, Link2, Megaphone, MessageCircle, MapPin, Share2, Shield } from "lucide-react";
 import { platform } from "os";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -179,37 +179,13 @@ const SocialMedia = () => {
   ];
 
   const WhyMatters = [
-    {
-      icon: <Megaphone />,
-      title: "Amplified Brand Reach",
-      desc: "Extend your message beyond traditional boundaries and connect with audiences who've never heard of you — yet.",
-    },
-    {
-      icon: <MessageCircle />,
-      title: "Real-Time Engagement",
-      desc: "Turn passive followers into active participants. Every comment, share, and reaction deepens brand loyalty.",
-    },
-    {
-      icon: <Target />,
-      title: "Precision Targeting",
-      desc: "Reach the right people at the right moment — with messaging crafted to convert, not just impress.",
-    },
-    {
-      icon: <TrendingUp />,
-      title: "Measurable Growth",
-      desc: "Every post is a data point. Track what resonates, refine your strategy, and compound results over time.",
-    },
-    {
-      icon: <ShieldCheck />,
-      title: "Trust & Authority",
-      desc: "Consistent, quality presence signals credibility. In a crowded market, trust is your most valuable currency.",
-    },
-    {
-      icon: <Link2 />,
-      title: "Community Building",
-      desc: "Build a network around your brand that advocates for you — organic word-of-mouth at digital scale.",
-    },
-  ];
+    { icon: <Share2 size={19} />, title: "Brand Visibility", desc: "Stay top-of-mind with your target audience every single day — before they even know they need your product or service.", iconBg: "bg-blue-100 text-blue-700", bar: "bg-blue-700", tint: "bg-blue-50 border-blue-200" },
+    { icon: <Users size={19} />, title: "Community Building", desc: "Transform followers into a loyal brand community that advocates for you, defends you, and brings in new customers organically.", iconBg: "bg-purple-100 text-purple-700", bar: "bg-purple-700", tint: "bg-white border-slate-100" },
+    { icon: <MapPin size={19} />, title: "Audience Targeting", desc: "Reach exactly the right people in Bhopal and Jabalpur using demographic, interest, and behaviour-based targeting precision.", iconBg: "bg-orange-100 text-orange-700", bar: "bg-orange-700", tint: "bg-fuchsia-50 border-purple-200" },
+    { icon: <TrendingUp size={19} />, title: "Competitor Edge", desc: "Monitor competitors, identify gaps in their strategy, and consistently outperform them for your audience's attention and trust.", iconBg: "bg-green-100 text-green-700", bar: "bg-green-700", tint: "bg-orange-50 border-orange-200" },
+    { icon: <Zap size={19} />, title: "Lead Generation", desc: "Convert social engagement into measurable business outcomes — website visits, enquiries, and direct sales every month.", iconBg: "bg-red-100 text-red-700", bar: "bg-red-700", tint: "bg-white border-slate-100" },
+    { icon: <Shield size={19} />, title: "Brand Authority", desc: "Consistent, high-quality content positions your brand as the most credible and trustworthy name in your local industry.", iconBg: "bg-amber-100 text-amber-700", bar: "bg-amber-700", tint: "bg-green-50 border-green-200" },
+  ]
 
   return (
     <div className="min-h-screen bg-background">
@@ -371,67 +347,89 @@ const SocialMedia = () => {
       </section>
 
       {/* Why do you need Social Media Marketing Section OR Why Matters*/}
-      <section className="py-24 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+      <section className="py-12 lg:px-10 bg-[#f8f9fb] relative overflow-hidden">
         <motion.div
-          className="container mx-auto max-w-6xl relative z-10"
+          className="container mx-auto max-w-7xl relative z-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={staggerContainer}
         >
-          {/* Header Block */}
-          <motion.div variants={fadeUp} className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tighter text-slate-900 leading-tight">
-              Why Your Brand Needs <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium inline-block pr-4 -mr-4 overflow-visible leading-normal">
-                Social Architecture
-              </span>
-            </h2>
 
-            <p className="text-sm md:text-lg text-slate-500 font-medium italic leading-relaxed max-w-2xl mx-auto border-l-4 border-primary/30 pl-6">
-              "Social media is where your customers spend their time and make purchasing decisions. A strong presence ensures you stay visible and competitive in the MP business landscape."
-            </p>
+          {/* Split editorial header */}
+          <motion.div
+            variants={fadeUp}
+            className="grid md:grid-cols-2 gap-12 items-end mb-14 pb-8 border-b border-slate-200"
+          >
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.22em] text-blue-700 mb-4">
+                <Share2 className="w-3 h-3" /> Social Architecture
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.07]">
+                Why Your Brand Needs <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                  Social Presence
+                </span>
+              </h2>
+            </div>
+            <div className="flex flex-col gap-4 justify-end">
+              <p className="text-sm font-medium text-slate-700 leading-[1.8] border-l-[3px] border-blue-100 pl-4">
+                "Social media is where your customers spend their time and make purchasing
+                decisions — stay visible or get left behind in the MP business landscape."
+              </p>
+              <div className="flex gap-6">
+                {[["4.9B", "Social Users", "text-blue-600"], ["2.5h", "Daily Usage", "text-violet-600"], ["76%", "Buy via Social", "text-orange-500"]].map(([val, lbl, color]) => (
+                  <div key={lbl}>
+                    <div className={`font-display text-[1.5rem] font-black leading-none mb-0.5 ${color}`}>{val}</div>
+                    <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-400">{lbl}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
-          {/* Value Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {WhyMatters.map((point, index) => (
+          {/* Flush alternating grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 overflow-hidden rounded-2xl border border-slate-200"
+            style={{ gap: "3px", background: "#e2e8f0" }}
+          >
+            {WhyMatters.map((item, index) => (
               <motion.div
                 key={index}
                 variants={cardAnimation}
-                whileHover={{ y: -10 }}
-                className="group relative p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden"
+                whileHover={{ y: -4, boxShadow: "0 16px 40px rgba(0,0,0,0.08)" }}
+                transition={{ duration: 0.25 }}
+                className={`group relative flex flex-col p-8 cursor-default transition-all duration-250 border border-transparent ${item.tint}`}
               >
-                {/* Subtle Hover Gradient */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
-                    {React.cloneElement(point.icon as React.ReactElement, { size: 24 })}
+                {/* Top row: icon + num */}
+                <div className="flex items-start justify-between mb-5">
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${item.iconBg}`}>
+                    {item.icon}
                   </div>
-
-                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary transition-colors mb-3 tracking-tight">
-                    {point.title}
-                  </h3>
-
-                  <p className="text-xs text-slate-400 leading-relaxed italic group-hover:text-slate-600 transition-colors">
-                    {point.desc}
-                  </p>
+                  <span className="font-mono text-[10px] font-bold text-slate-200 group-hover:text-blue-200 transition-colors">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                 </div>
 
-                {/* Large Watermark Number */}
-                <span className="absolute bottom-[-10%] right-[-5%] text-8xl font-black text-slate-50 opacity-[0.03] group-hover:opacity-10 transition-opacity italic select-none">
-                  0{index + 1}
-                </span>
+                {/* Title */}
+                <h3 className="text-base md:text-xl font-bold text-slate-900 mb-2.5 leading-snug group-hover:text-blue-700 transition-colors">
+                  {item.title}
+                </h3>
+
+                {/* Desc */}
+                <p className="text-sm md:text-base text-slate-800 flex-1 mb-5 font-medium">
+                  {item.desc}
+                </p>
+
+                {/* Bar */}
+                <div className={`h-[2.5px] w-7 rounded-full group-hover:w-full transition-all duration-500 ${item.bar}`} />
               </motion.div>
             ))}
           </div>
+
         </motion.div>
       </section>
 
-
       {/* Platforms we master */}
-      <section className="py-24 sm:px-6 lg:px-8 relative overflow-hidden bg-[#fafafa]">
+      <section className="py-12 sm:px-6 lg:px-8 relative overflow-hidden bg-[#fafafa]">
         {/* Subtly animated background element */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_#4285f405_0%,_transparent_70%)] pointer-events-none" />
 

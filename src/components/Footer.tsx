@@ -175,50 +175,72 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-white border-t border-slate-100 overflow-hidden font-sans">
-      <div className="container mx-auto px-6 sm:px-10 lg:px-12 pt-16 md:pt-24 pb-12 relative z-10">
+      <div className="container mx-auto px-5 sm:px-8 lg:px-12 pt-14 md:pt-20 pb-10 relative z-10">
 
-        {/* ROW 1: Brand Profile & Architecture (Spans wider for balance) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 gap-x-12 mb-16 pb-16 border-b border-slate-50">
+        {/* ROW 1: Brand + Quick Links */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 pb-12 border-b border-slate-100">
 
-          {/* Brand Profile - 7 cols on Desktop */}
-          <div className="md:col-span-7 space-y-8 text-center md:text-left">
-            <img src={footerData.about.logo} alt="Socio Bhaarat" className="h-12 md:h-16 mx-auto md:mx-0" />
-            <p className="text-slate-500 text-base md:text-xl leading-relaxed font-medium italic border-l-0 md:border-l-4 border-primary/20 md:pl-8 max-w-2xl mx-auto md:mx-0">
+          {/* Brand Profile */}
+          <div className="md:col-span-7 flex flex-col gap-6 text-center md:text-left">
+            <img
+              src={footerData.about.logo}
+              alt="Socio Bhaarat"
+              className="h-10 md:h-12 md:w-32 md:mx-0 object-contain"
+            />
+            <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium italic border-l-0 md:border-l-4 border-primary/20 md:pl-6 max-w-xl mx-auto md:mx-0">
               "{footerData.about.description}"
             </p>
-            <div className="flex justify-center md:justify-start space-x-5">
+            <div className="flex justify-center md:justify-start gap-3">
               {footerData.about.socials.map((social, i) => (
-                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer"
-                  className={`p-4 rounded-2xl bg-slate-50 text-slate-500 ${social.color} transition-all border border-slate-100 shadow-sm active:scale-95`}>
-                  {React.cloneElement(social.icon as React.ReactElement, { size: 24 })}
+                <a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-3 rounded-xl bg-slate-50 text-slate-500 ${social.color} transition-all border border-slate-100 hover:shadow-sm active:scale-95`}
+
+                >
+                  {React.cloneElement(social.icon as React.ReactElement, { size: 18 })}
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links / Architecture - 5 cols on Desktop */}
-          <div className="md:col-span-5 space-y-8">
-            <h3 className="text-xs md:text-sm font-black uppercase tracking-[0.4em] text-slate-400 text-center md:text-left">Architecture</h3>
-            <div className="grid grid-cols-2 gap-4">
+          {/* Quick Links */}
+          <div className="md:col-span-5 flex flex-col gap-5">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-400 text-center md:text-left">
+              Architecture
+            </h3>
+            <div className="grid grid-cols-2 gap-2">
               {footerData.quickLinks.map((link, i) => (
-                <Link key={i} to={link.path} className="text-slate-700 hover:text-primary text-sm md:text-lg font-bold transition-all flex items-center group py-2 px-4 bg-slate-50/50 rounded-xl border border-transparent hover:border-slate-100 hover:bg-white justify-center md:justify-start">
-                  {link.name} <ArrowUpRight className="ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
+                <Link
+                  key={i}
+                  to={link.path}
+                  className="flex items-center justify-center md:justify-start gap-1.5 text-[13px] md:text-sm font-semibold text-slate-600 hover:text-primary transition-all py-2.5 px-3.5 bg-slate-50/60 rounded-xl border border-transparent hover:border-slate-100 hover:bg-white group"
+                >
+                  {link.name}
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-all flex-shrink-0" />
                 </Link>
               ))}
             </div>
           </div>
         </div>
 
-        {/* ROW 2: Service Stacks & Contact (3 Columns on Desktop) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-12">
+        {/* ROW 2: Service Stacks + Contact */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
 
           {/* Marketing Stack */}
-          <div className="space-y-8">
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-4">Marketing Stack</h3>
-            <ul className="space-y-5">
+          <div className="flex flex-col gap-5">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-3">
+              Marketing Stack
+            </h3>
+            <ul className="flex flex-col gap-3">
               {footerData.marketing.map((link, i) => (
                 <li key={i}>
-                  <Link to={link.path} className="text-slate-700 hover:text-primary text-base md:text-lg font-bold transition-all block">
+                  <Link
+                    to={link.path}
+                    className="text-[13px] md:text-sm font-semibold text-slate-600 hover:text-primary transition-colors leading-snug block"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -227,12 +249,17 @@ const Footer = () => {
           </div>
 
           {/* Dev & Design Stack */}
-          <div className="space-y-8">
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-4">Dev & Design</h3>
-            <ul className="space-y-5">
+          <div className="flex flex-col gap-5">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-3">
+              Dev & Design
+            </h3>
+            <ul className="flex flex-col gap-3">
               {footerData.development.map((link, i) => (
                 <li key={i}>
-                  <Link to={link.path} className="text-slate-700 hover:text-primary text-base md:text-lg font-bold transition-all block">
+                  <Link
+                    to={link.path}
+                    className="text-[13px] md:text-sm font-semibold text-slate-600 hover:text-primary transition-colors leading-snug block"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -241,12 +268,17 @@ const Footer = () => {
           </div>
 
           {/* Automation Stack */}
-          <div className="space-y-8">
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-4">Automation</h3>
-            <ul className="space-y-5">
+          <div className="flex flex-col gap-5">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-3">
+              Automation
+            </h3>
+            <ul className="flex flex-col gap-3">
               {footerData.automation.map((link, i) => (
                 <li key={i}>
-                  <Link to={link.path} className="text-slate-700 hover:text-primary text-base md:text-lg font-bold transition-all block">
+                  <Link
+                    to={link.path}
+                    className="text-[13px] md:text-sm font-semibold text-slate-600 hover:text-primary transition-colors leading-snug block"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -254,18 +286,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Direct Line (Contact) */}
-          <div className="space-y-8">
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-4">Direct Line</h3>
-            <ul className="space-y-8">
+          {/* Contact */}
+          <div className="col-span-2 lg:col-span-1 flex flex-col gap-5">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-3">
+              Direct Line
+            </h3>
+            <ul className="flex flex-col gap-5">
               {footerData.contact.map((item, i) => (
-                <li key={i} className="flex items-center space-x-5 group">
-                  <div className="shrink-0 p-4 bg-slate-50 rounded-2xl border border-slate-100 group-hover:bg-white group-hover:shadow-lg transition-all">
-                    {item.icon}
+                <li key={i} className="flex items-center gap-4 group">
+                  <div className="flex-shrink-0 w-9 h-9 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center group-hover:bg-white group-hover:shadow-sm transition-all">
+                    {React.cloneElement(item.icon as React.ReactElement, { size: 15, className: "text-slate-500" })}
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{item.label}</span>
-                    <span className="text-base md:text-lg font-bold text-slate-900 break-all leading-tight">
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-0.5">
+                      {item.label}
+                    </span>
+                    <span className="text-[13px] md:text-sm font-semibold text-slate-800 leading-snug truncate">
                       {item.content}
                     </span>
                   </div>
@@ -276,20 +312,25 @@ const Footer = () => {
         </div>
 
         {/* Footer Base */}
-        <div className="mt-24 pt-10 border-t border-slate-100 flex flex-col lg:flex-row justify-between items-center gap-10">
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-4">
+        <div className="mt-16 pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-2">
             {footerData.legal.map((item, i) => (
-              <Link key={i} to={item.path} className="text-xs md:text-sm font-black text-slate-400 hover:text-primary uppercase tracking-widest transition-colors">
+              <Link
+                key={i}
+                to={item.path}
+                className="text-[10px] font-bold text-slate-400 hover:text-primary uppercase tracking-widest transition-colors"
+              >
                 {item.name}
               </Link>
             ))}
           </div>
-          <p className="text-xs md:text-sm font-black text-slate-400 uppercase tracking-widest italic text-center">
-            &copy; {new Date().getFullYear()} SOCIO BHAARAT LAB. ALL RIGHTS RESERVED.
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest italic text-center sm:text-right">
+            &copy; {new Date().getFullYear()} Socio Bhaarat Lab. All rights reserved.
           </p>
         </div>
+
       </div>
-    </footer>
+    </footer >
   );
 };
 

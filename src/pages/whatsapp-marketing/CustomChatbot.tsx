@@ -501,7 +501,7 @@ const WhatsAppChatbot = () => {
         </div>
       </section>
 
-
+      
     </div>
   );
 };
