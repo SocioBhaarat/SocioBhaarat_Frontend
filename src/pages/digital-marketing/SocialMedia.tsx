@@ -138,10 +138,10 @@ const SocialMedia = () => {
   ];
 
   const impact = [
-    { number: "150+", label: "Brands Served" },
-    { number: "500K+", label: "Leads Generated" },
+    { number: "50+", label: "Brands Served" },
+    { number: "50K+", label: "Leads Generated" },
     { number: "10M+", label: "Audience Reached" },
-    { number: "98%", label: "Client Satisfaction" },
+    { number: "80%", label: "Client Satisfaction" },
   ]
 
   const platforms = [
@@ -482,15 +482,6 @@ const SocialMedia = () => {
               </motion.div>
             ))}
           </div>
-
-          {/* Footer Ticker with Spacing */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 0.4 }}
-            className="mt-28 text-center text-[9px] font-bold uppercase tracking-[0.6em] text-slate-900 select-none"
-          >
-            Meta • Instagram • LinkedIn • X • YouTube • TikTok
-          </motion.div>
         </div>
       </section>
 
