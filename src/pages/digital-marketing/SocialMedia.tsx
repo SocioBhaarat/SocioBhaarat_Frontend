@@ -4,9 +4,8 @@ import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
-import { Check, Instagram, Facebook, Linkedin, Twitter, Youtube, TrendingUp, ArrowRight, Sparkles, BarChart3, Palette, ShieldCheck, Target, Users, Zap, Rocket, MessageSquare, Search, ShieldAlert, Link2, Megaphone, MessageCircle, MapPin, Share2, Shield } from "lucide-react";
-import { platform } from "os";
-import React from "react";
+import { Instagram, Facebook, Linkedin, Youtube, TrendingUp, ArrowRight, Sparkles, BarChart3, Palette, ShieldCheck, Target, Users, Zap, Rocket, MessageSquare, Search, ShieldAlert, Link2, Megaphone, MessageCircle, MapPin, Share2, Shield, } from "lucide-react";
+import { FaGoogle } from "react-icons/fa"
 import { useNavigate } from "react-router-dom";
 
 const SocialMedia = () => {
@@ -149,34 +148,34 @@ const SocialMedia = () => {
     {
       name: "Facebook",
       icon: Facebook,
-      color: "text-[#1877F2]", // Official Facebook Blue
+      color: "text-[#1877F2]",
       hoverGlow: "from-blue-600/20 to-blue-400/10",
     },
     {
       name: "Instagram",
       icon: Instagram,
-      color: "text-[#E4405F]", // Official Instagram Pink/Red
+      color: "text-[#E4405F]",
       hoverGlow: "from-pink-600/20 to-purple-500/10",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      color: "text-[#0A66C2]", // Official LinkedIn Blue
+      color: "text-[#0A66C2]",
       hoverGlow: "from-blue-700/20 to-cyan-500/10",
     },
     {
-      name: "X (Twitter)",
-      icon: Twitter,
-      color: "text-[#000000]", // Modern X Branding
-      hoverGlow: "from-slate-900/20 to-slate-400/10",
+      name: "Google",
+      icon: FaGoogle,
+      color: "text-[#4285F4]",
+      hoverGlow: "from-blue-500/20 to-red-400/10",
     },
     {
       name: "YouTube",
       icon: Youtube,
-      color: "text-[#FF0000]", // Official YouTube Red
+      color: "text-[#FF0000]",
       hoverGlow: "from-red-600/20 to-orange-500/10",
     },
-  ];
+  ]
 
   const WhyMatters = [
     { icon: <Share2 size={19} />, title: "Brand Visibility", desc: "Stay top-of-mind with your target audience every single day — before they even know they need your product or service.", iconBg: "bg-blue-100 text-blue-700", bar: "bg-blue-700", tint: "bg-blue-50 border-blue-200" },

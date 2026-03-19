@@ -208,7 +208,7 @@ const ORMServices = () => {
                 <Shield className="w-3 h-3" /> Secure Your Digital Legacy
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
                 Online <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Reputation Management</span>
               </h1>
 

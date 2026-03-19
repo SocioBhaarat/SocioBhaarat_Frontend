@@ -4,7 +4,8 @@ import {
   Check, Zap, Shield, BarChart3, Target, MessageSquare,
   Send, Users, Globe, Smartphone, Mail, Key, Layers, Rocket,
   ArrowRight,
-  Radio
+  Radio,
+  TrendingUp
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -12,15 +13,6 @@ import { CTASection } from "@/components/ui/CTASection";
 
 const BulkBroadcasting = () => {
   const navigate = useNavigate();
-
-  /* DATA VARIABLES */
-  const heroData = {
-    heading: "Reach Thousands Instantly with Smart Bulk Broadcasting",
-    subtext:
-      "We help businesses connect with their audience instantly through reliable, fast, and targeted bulk broadcasting services. Whether it’s promotions, updates, or alerts — deliver your message at scale with confidence.",
-    cta: "Start Broadcasting Now",
-    image: "https://img.freepik.com/free-vector/bulk-sms-marketing-concept-illustration_114360-1884.jpg",
-  };
 
   const whyChoosePoints = [
     { title: "High Delivery Rate", icon: <Rocket className="w-6 h-6" /> },
@@ -40,14 +32,14 @@ const BulkBroadcasting = () => {
     { name: "API Integration", icon: <Globe /> },
   ];
 
-  const whyNeedPoints = [
-    "Instant Customer Communication",
-    "Promote Offers & Discounts",
-    "Send Transactional Alerts",
-    "Increase Customer Engagement",
-    "Improve Brand Awareness",
-    "Cost-Effective Marketing Channel",
-  ];
+  // const whyNeedPoints = [
+  //   "Instant Customer Communication",
+  //   "Promote Offers & Discounts",
+  //   "Send Transactional Alerts",
+  //   "Increase Customer Engagement",
+  //   "Improve Brand Awareness",
+  //   "Cost-Effective Marketing Channel",
+  // ];
 
   const features = [
     "Unlimited Contacts",
@@ -57,6 +49,21 @@ const BulkBroadcasting = () => {
     "Delivery Analytics",
     "Dynamic Personalization",
   ];
+
+  const whyNeedPoints = [
+    "Direct to inbox",
+    "No algorithm filter",
+    "High open rates",
+    "Cost-effective at scale",
+    "Instant delivery",
+    "Full analytics",
+  ]
+
+  const whyMetrics = [
+    { icon: Target, title: "Instant Mass Reach", sub: "Reach thousands of customers in seconds — no delays, no algorithms blocking your message.", badge: "Speed", badgeBg: "bg-blue-100 text-blue-700", iconBg: "bg-blue-100 text-blue-700" },
+    { icon: Users, title: "Personalised at Scale", sub: "Dynamic name tags and offer slots make every message feel 1-to-1 even when sent to millions.", badge: "Smart", badgeBg: "bg-purple-100 text-purple-700", iconBg: "bg-purple-100 text-purple-700" },
+    { icon: TrendingUp, title: "Measurable ROI", sub: "Track delivery, open, and conversion rates on every single campaign with full attribution.", badge: "Data", badgeBg: "bg-green-100 text-green-700", iconBg: "bg-green-100 text-green-700" },
+  ]
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
@@ -252,6 +259,135 @@ const BulkBroadcasting = () => {
                 ))}
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 lg:px-10 bg-[#f8f9fb] relative overflow-hidden">
+        <div className="container mx-auto max-w-6xl">
+
+          {/* Header */}
+          <div className="text-center mb-14">
+            <span className="text-blue-600 font-bold tracking-[.3em] uppercase text-sm border-b-2 border-blue-200 pb-1.5 inline-block mb-5">
+              Business Impact Architecture
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.07] mb-4">
+              Why Do You Need{" "}
+              <em className="bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 bg-clip-text text-transparent">
+                Bulk Broadcasting?
+              </em>
+            </h2>
+            <p className="text-base text-slate-400 italic max-w-xl mx-auto leading-[1.85]">
+              "Bulk broadcasting eliminates the lag between your idea and your customer's
+              action — ensuring you are the first to reach the phone."
+            </p>
+          </div>
+
+          {/* Body */}
+          <div className="grid md:grid-cols-2 gap-3 items-start">
+
+            {/* LEFT — metric rows + stat strip */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-2.5"
+            >
+              {whyMetrics.map((m, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ x: 3, boxShadow: "0 6px 24px rgba(37,99,235,0.07)" }}
+                  transition={{ duration: 0.2 }}
+                  className="group grid grid-cols-[48px_1fr_auto] items-center gap-4 px-5 py-5 rounded-2xl border border-transparent bg-white hover:border-blue-100 transition-all duration-200 cursor-default"
+                >
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 ${m.iconBg}`}>
+                    <m.icon size={19} />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-base font-bold italic text-slate-900 group-hover:text-blue-700 transition-colors mb-1 leading-snug">
+                      {m.title}
+                    </h4>
+                    <p className="text-sm text-slate-400 italic leading-relaxed">{m.sub}</p>
+                  </div>
+                  <span className={`text-sm font-bold uppercase tracking-[.12em] px-3 py-1.5 rounded-full flex-shrink-0 ${m.badgeBg}`}>
+                    {m.badge}
+                  </span>
+                </motion.div>
+              ))}
+
+              {/* Stat strip */}
+              <div className="grid grid-cols-3 gap-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200">
+                {[
+                  { val: "98%", label: "Open Rate", color: "text-blue-600" },
+                  { val: "5×", label: "Vs Email ROI", color: "text-violet-600" },
+                  { val: "45s", label: "Avg Read Time", color: "text-orange-500" },
+                ].map((s, i) => (
+                  <div key={i} className="bg-white py-5 text-center">
+                    <div className={`font-display text-2xl font-black leading-none mb-1.5 ${s.color}`}>{s.val}</div>
+                    <div className="text-sm font-bold uppercase tracking-[.18em] text-slate-400">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* RIGHT — narrative + checklist + CTA */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-6"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-sm font-bold uppercase tracking-[.18em] text-blue-700 w-fit">
+                <Zap className="w-3 h-3" /> Speed to Market
+              </div>
+
+              <h3 className="font-display text-3xl md:text-4xl font-extrabold italic text-slate-900 leading-tight">
+                Communicate at the speed of thought.
+              </h3>
+
+              <p className="text-base text-slate-500 italic leading-[1.85] border-l-4 border-blue-100 pl-5 py-1">
+                In a world of noise, being the first to reach your customer's phone is
+                everything. We engineer the infrastructure that makes instant, personalised
+                mass communication effortless and measurable.
+              </p>
+
+              {/* Check grid */}
+              <div className="grid grid-cols-2 gap-2">
+                {whyNeedPoints.map((point, i) => (
+                  <div
+                    key={i}
+                    className="group flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 cursor-default"
+                  >
+                    <div className="w-6 h-6 rounded-md bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-200">
+                      <Check size={11} strokeWidth={3} className="text-blue-600 group-hover:text-white transition-colors duration-200" />
+                    </div>
+                    <span className="text-sm font-semibold text-slate-600 group-hover:text-blue-700 transition-colors leading-snug">
+                      {point}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA strip */}
+              <div className="bg-blue-600 rounded-2xl px-6 py-5 flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-sm font-bold uppercase tracking-[.2em] text-blue-200 mb-1">
+                    Ready to Broadcast?
+                  </p>
+                  <h4 className="font-display text-lg font-extrabold italic text-white leading-tight">
+                    Start your first campaign today.
+                  </h4>
+                </div>
+                <Button
+                  variant="secondary"
+                  className="rounded-full px-5 h-10 text-sm font-bold flex-shrink-0 bg-white/15 hover:bg-white/25 text-white border border-white/20 transition-all"
+                  onClick={() => navigate("/contact")}
+                >
+                  Get Started <ArrowRight className="ml-1.5 w-4 h-4" />
+                </Button>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>

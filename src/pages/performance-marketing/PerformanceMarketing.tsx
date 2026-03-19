@@ -317,7 +317,7 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* METRICS DASHBOARD */}
-      <section className="py-24 px-4 bg-muted/30 border-y border-border">
+      <section className="py-12 bg-muted/30 border-y border-border">
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {[
@@ -327,7 +327,7 @@ const PerformanceMarketing = () => {
               { label: "Campaigns", value: "300+", color: "text-orange-600" }
             ].map((stat, i) => (
               <div key={i} className="group">
-                <div className={`text-5xl font-black mb-2 tracking-tighter ${stat.color} group-hover:scale-110 transition-transform`}>
+                <div className={`text-3xl sm:text-4xl lg:text-5xl font-black mb-2 tracking-tighter ${stat.color} group-hover:scale-110 transition-transform`}>
                   {stat.value}
                 </div>
                 <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{stat.label}</p>
@@ -351,13 +351,13 @@ const PerformanceMarketing = () => {
             <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
               The SocioBhaarat Advantage
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800">
               Why Brands{" "}
               <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                 Trust Us
               </span>
             </h2>
-            <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed mx-auto ">
+            <p className="text-base md:text-base text-slate-700 font-medium leading-relaxed mx-auto ">
               We combine strategic monitoring and professional response management to protect and enhance your brand's image across Madhya Pradesh.
             </p>
           </motion.div>
@@ -473,7 +473,7 @@ const PerformanceMarketing = () => {
             </motion.div>
 
             {/* ── RIGHT — 2×2 tinted benefit grid ── */}
-            <div className="grid grid-cols-2 gap-2.5">
+            <div className="grid md:grid-cols-2 gap-2.5">
               {[
                 { icon: BarChart, title: "Measurable Results", desc: "Track every lead, click, and conversion with real-time dashboards — no guesswork.", bg: "bg-blue-50 border-blue-200", iconBg: "bg-blue-100 text-blue-700", bar: "bg-blue-700", wm: "text-blue-600" },
                 { icon: Target, title: "Faster Lead Gen", desc: "Reach high-intent audiences instantly and start generating qualified leads from day one.", bg: "bg-fuchsia-50 border-purple-200", iconBg: "bg-purple-100 text-purple-700", bar: "bg-purple-700", wm: "text-purple-600" },
@@ -610,7 +610,7 @@ const PerformanceMarketing = () => {
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
               Industries We{" "}
-              <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+              <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                 Serve Best
               </em>
             </h2>
@@ -695,10 +695,10 @@ const PerformanceMarketing = () => {
                   <span className="text-sm font-bold tracking-[.25em] uppercase text-blue-600">
                     Fee Structure
                   </span>
-                  <h3 className="font-display text-3xl md:text-4xl font-extrabold italic text-slate-900 leading-tight">
+                  <h3 className="text-3xl md:text-4xl font-extrabold italic text-slate-900 leading-tight">
                     The ROI Model
                   </h3>
-                  <p className="text-base text-slate-700  leading-[1.85] font-medium border-l-[3px] border-blue-100 pl-5 py-1">
+                  <p className="text-sm md:text-base text-slate-700  leading-[1.85] font-medium border-l-[3px] border-blue-100 pl-5 py-1">
                     We operate on a performance fee structure, typically{" "}
                     <strong className="text-slate-800 not-italic font-bold">
                       15–20% of monthly ad spend
@@ -708,7 +708,7 @@ const PerformanceMarketing = () => {
                 </div>
 
                 {/* Min spend pill */}
-                <div className="flex items-center gap-4 px-5 py-4 bg-blue-50 border border-blue-200 rounded-xl">
+                <div className="flex items-center gap-4 py-4 bg-blue-50 border border-blue-200 rounded-xl">
                   <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
                     <IndianRupee size={18} className="text-blue-700" />
                   </div>
@@ -727,7 +727,7 @@ const PerformanceMarketing = () => {
                   {[["15%", "Starter"], ["18%", "Growth"], ["20%", "Scale"]].map(([val, label]) => (
                     <div key={label} className="flex-1 text-center py-4 rounded-xl bg-slate-50 border border-slate-100">
                       <div className="font-display text-2xl font-black text-blue-600 leading-none mb-1.5">{val}</div>
-                      <div className="text-sm font-bold uppercase tracking-[.12em] text-slate-400">{label}</div>
+                      <div className="text-xs md:text-sm font-bold uppercase tracking-[.12em] text-slate-400">{label}</div>
                     </div>
                   ))}
                 </div>
@@ -739,7 +739,7 @@ const PerformanceMarketing = () => {
                   <span className="text-sm font-bold tracking-[.25em] uppercase text-slate-400">
                     Standard Terms
                   </span>
-                  <h3 className="font-display text-3xl md:text-4xl font-extrabold italic text-slate-900 leading-tight">
+                  <h3 className="text-2xl md:text-4xl font-bold text-slate-900 leading-tight">
                     What's Included
                   </h3>
                 </div>
@@ -753,7 +753,7 @@ const PerformanceMarketing = () => {
                   ].map((t, i) => (
                     <div
                       key={i}
-                      className="group flex items-center gap-4 px-5 py-4 rounded-xl border border-transparent bg-slate-50 hover:bg-green-50 hover:border-green-200 transition-all duration-200 cursor-default"
+                      className="group flex items-center gap-4 py-4 rounded-xl border border-transparent bg-slate-50 hover:bg-green-50 hover:border-green-200 transition-all duration-200 cursor-default"
                     >
                       <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-green-600 transition-colors duration-200">
                         <Check size={14} strokeWidth={3} className="text-green-600 group-hover:text-white transition-colors duration-200" />

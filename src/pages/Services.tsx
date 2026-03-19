@@ -208,16 +208,16 @@ const Services = () => {
             </div>
 
             {/* High-Authority Typography */}
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[0.95] tracking-tighter mb-8 md:mb-10">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter mb-5">
               Digital <br />
               <span className="relative inline-block">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium text-4xl md:text-6xl lg:text-7xl pr-4 -mr-4 overflow-visible">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">
                   Excellence
                 </span>
               </span> <br className="hidden md:block" /> Delivered.
             </h1>
 
-            <p className="text-base md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium italic border-x-0 md:border-x border-slate-200 md:px-12">
+            <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
               "SocioBhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with industrial-grade precision."
             </p>
           </motion.div>
