@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
 import { Zap, ArrowRight, Check, BarChart3, PieChart, ShieldCheck, TrendingUp } from "lucide-react";
 
@@ -80,13 +81,13 @@ const DigitalMarketingPackages = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
               <Zap className="w-3 h-3" /> Growth Engineering Lab
             </div>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-tight tracking-tighter mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-tight tracking-tighter mb-6">
               Strategic Marketing <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                 Packages
               </span>
             </h1>
-            <p className="text-md md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium italic">
+            <p className="text-md md:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed font-semibold ">
               Select a high-performance framework tailored for your business scale. All packages include industrial-grade reporting and dedicated lab support.
             </p>
           </motion.div>
@@ -104,8 +105,8 @@ const DigitalMarketingPackages = () => {
                 key={index}
                 whileHover={{ y: -10 }}
                 className={`bg-card rounded-[2.5rem] md:rounded-[3rem] shadow-2xl border-2 transition-all p-6 sm:p-8 md:p-10 relative group overflow-hidden h-full flex flex-col ${pkg.highlighted
-                    ? 'border-primary scale-100 lg:scale-105 z-10'
-                    : 'border-border/50'
+                  ? 'border-primary scale-100 lg:scale-105 z-10'
+                  : 'border-border/50'
                   }`}
               >
                 {pkg.highlighted && (
@@ -158,8 +159,8 @@ const DigitalMarketingPackages = () => {
                     <Button
                       size="lg"
                       className={`w-full h-14 md:h-16 rounded-full text-base md:text-lg font-black transition-all shadow-xl group/btn ${pkg.highlighted
-                          ? 'bg-primary hover:bg-primary/90 shadow-primary/20'
-                          : 'bg-slate-700 hover:bg-slate-800'
+                        ? 'bg-primary hover:bg-primary/90 shadow-primary/20'
+                        : 'bg-slate-700 hover:bg-slate-800'
                         }`}
                       onClick={() => window.open("https://wa.me/919589581364", "_blank")}
                     >
@@ -178,13 +179,13 @@ const DigitalMarketingPackages = () => {
       </section>
 
       {/* 3. TECHNICAL SERVICE ECOSYSTEM */}
-      <section className="py-24 sm:px-6 lg:px-8 bg-muted/30 border-y border-border/50 relative">
+      <section className="py-12 sm:px-6 lg:px-8 bg-muted/30 border-y border-border/50 relative">
         <div className="container mx-auto max-w-6xl">
           <div className="max-w-3xl mb-16 border-l-4 border-primary pl-8">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Solutions</span> We Provide
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Solutions</span> We Provide
             </h2>
-            <p className="text-slate-500 font-medium italic">
+            <p className="text-slate-700 font-medium italic">
               Every package acts as a container for these specialized technical solutions, optimized for your business goals.
             </p>
           </div>
@@ -199,7 +200,7 @@ const DigitalMarketingPackages = () => {
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
                   <Check className="w-4 h-4" strokeWidth={4} />
                 </div>
-                <h3 className="font-black text-[11px] tracking-widest text-slate-700 uppercase">{service}</h3>
+                <h3 className="font-bold text-[11px] tracking-widest text-slate-700 uppercase">{service}</h3>
               </div>
             ))}
           </div>
@@ -207,37 +208,11 @@ const DigitalMarketingPackages = () => {
       </section>
 
       {/* 4. CUSTOM CTA ARCHITECTURE */}
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 text-white italic ">
-                Need a Custom Spec?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Contact our engineering team to architect a bespoke marketing framework for your brand."
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  REQUEST CUSTOM QUOTE
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={<>Need a Custom Spec?</>}
+        description={<>Contact our engineering team to architect a bespoke marketing framework for your brand.</>}
+        buttonText="REQUEST CUSTOM QUOTE"
+      />
     </div>
   );
 };

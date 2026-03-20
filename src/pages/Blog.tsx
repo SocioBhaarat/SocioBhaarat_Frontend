@@ -53,14 +53,14 @@ const Blog = () => {
               <BookOpen className="w-3 h-3" /> Intelligence Stream
             </div>
 
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[0.95] tracking-tighter mb-8">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter mb-8">
               Digital Marketing <br />
-              <span className="relative py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium  overflow-visible">
+              <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                 Insights & Tips
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium italic border-x-4 border-primary/10 px-8">
+            <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-semibold  px-8">
               "Stay ahead of the curve with expert strategies, industry trends, and actionable tips to grow your business online."
             </p>
           </motion.div>

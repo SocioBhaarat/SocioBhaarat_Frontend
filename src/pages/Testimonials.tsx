@@ -50,21 +50,23 @@ const Testimonials = () => {
         {/* Dynamic Mesh Gradients */}
         <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/10 blur-[130px] rounded-full animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Block */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 border border-slate-200 backdrop-blur-md text-primary text-[10px] font-bold mb-10 tracking-[0.2em] uppercase shadow-sm">
               <Star className="w-3 h-3" /> Client Success Stories
             </div>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-slate-800 leading-[1.05] tracking-tighter">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter mb-6">
               The Voice of <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">Digital Impact</span>.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Digital Impact</span>.
             </h1>
-            <p className="text-lg sm:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed italic underline decoration-primary/20 decoration-2 underline-offset-8">
-              "Don't just take our word for it. Here's how we've engineered growth for businesses across Bhopal & Jabalpur."
+            <p className="text-base md:text-xl text-slate-700 font-semibold font-montserrat tracking-wider pl-6">
+              Don't just take our word for it. Here's how we've engineered growth for businesses across Bhopal & Jabalpur.
             </p>
           </motion.div>
         </div>
@@ -110,7 +112,7 @@ const Testimonials = () => {
                       </div>
                     </div>
                     <div className="ml-5">
-                      <h3 className="font-black text-slate-900 tracking-tight leading-none">{testimonial.name}</h3>
+                      <h3 className="font-bold text-slate-900 leading-none">{testimonial.name}</h3>
                       <div className="flex mt-2">
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="h-3 w-3 fill-orange-400 text-orange-400" />
@@ -119,7 +121,7 @@ const Testimonials = () => {
                     </div>
                   </div>
 
-                  <p className="text-slate-600 leading-relaxed italic text-sm mb-8 flex-grow">
+                  <p className="text-slate-900 leading-relaxed text-sm mb-8 flex-grow font-medium">
                     "{testimonial.content}"
                   </p>
 

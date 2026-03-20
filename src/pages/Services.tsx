@@ -181,50 +181,65 @@ const Services = () => {
     <div className="min-h-screen bg-background selection:bg-primary/20">
       {/* Dynamic Header */}
 
-      <section className="relative pt-12 pb-36 px-4  flex items-center justify-center overflow-hidden bg-[#fafafa]">
 
-        {/* 1. TECHNICAL BACKGROUND (Architectural Layer) */}
+      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+        {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Signature Blueprint Grid */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:45px_45px]" />
+          {/* Grid Overlay - Matches Brand Protection Lab */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Dual-Tone Mesh Blobs - Representing the Tech & Marketing Fusion */}
-          <div className="absolute top-[-10%] left-[-5%] w-[55%] h-[50%] bg-blue-600/5 blur-[100px] md:blur-[140px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[45%] h-[40%] bg-orange-500/10 blur-[100px] rounded-full" />
+          {/* Atmospheric Mesh Blobs */}
+          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
         </div>
 
-        {/* 2. CONTENT ARCHITECTURE */}
-        <div className="container mx-auto max-w-6xl px-4 relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center"
-          >
-            {/* Precision Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-slate-200 backdrop-blur-md text-primary text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
-              <Sparkles className="w-4 h-4 text-[#FFC105]" />
-              Unified Growth Lab
-            </div>
+        {/* 2. MAIN CONTENT GRID */}
+        <div className="container mx-auto px-4 relative z-10 mt-12">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* High-Authority Typography */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter mb-5">
-              Digital <br />
-              <span className="relative inline-block">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">
-                  Excellence
-                </span>
-              </span> <br className="hidden md:block" /> Delivered.
-            </h1>
+            {/* LEFT COLUMN: Narrative (Text Upwards) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 space-y-8 text-left mt-8"
+            >
 
-            <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
-              "SocioBhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with industrial-grade precision."
-            </p>
-          </motion.div>
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                Solutions Designed to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Scale Your Business</span>
+              </h1>
+
+              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6 py-5">
+                SocioBhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with industrial-grade precision.
+              </p>
+            </motion.div>
+
+            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, x: 30 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
+              className="lg:col-span-5 relative hidden lg:block"
+            >
+              <div className="relative group">
+                {/* Decorative Glow behind image */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
+                <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1766853297154-3dcb4d3b38f8"
+                    alt="Brand Reputation Dashboard"
+                    className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                  />
+                </div>
+
+                {/* Framed Layer - Matching the "Legacy" section rotation */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
+              </div>
+            </motion.div>
+
+          </div>
         </div>
-
-        {/* Smooth Bottom Transition Shade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
       </section>
 
       {/* Dynamic Categories Section */}

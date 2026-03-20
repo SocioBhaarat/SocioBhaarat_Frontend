@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
 import { ExternalLink, Code, Smartphone, Zap, Send } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -72,17 +73,17 @@ const WebDevPortfolio = () => {
         </div>
         <div className="container mx-auto max-w-5xl relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-8 shadow-sm">
               <Zap className="w-3 h-3" /> Scalable Web Systems
             </div>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-[0.95] tracking-tighter mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter mb-8">
               Web Developemnt <br />
-              <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium overflow-visible ">
+              <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium overflow-visible ">
                 Portfolio
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium italic border-x-4 border-primary/10 px-8">
-              "Code that scales. Design that converts. We don't just build websites; we engineer high-performance digital infrastructure that powers growth."
+            <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-semibold border-x-4 border-primary/10 px-8">
+              Code that scales. Design that converts. We don't just build websites; we engineer high-performance digital infrastructure that powers growth.
             </p>
 
           </motion.div>
@@ -204,38 +205,12 @@ const WebDevPortfolio = () => {
 
 
       {/* CTA Section */}
+      <CTASection
+        title={<>Ready to start <br className="hidden sm:block"/> your digital transformation?</>}
+        description={<>Let’s discuss your vision and build something that puts you ahead of the competition.</>}
+        buttonText="Start Your Project"
+      />
 
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
-                Ready to start your digital transformation?
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Let’s discuss your vision and build something that puts you ahead of the competition."
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Start Your Project
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

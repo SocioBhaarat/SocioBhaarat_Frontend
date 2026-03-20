@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
-import NeighborhoodDiscovery from "@/components/ui/NeighborhoodDiscovery";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -44,7 +43,6 @@ const Contact = () => {
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10 animate-pulse" />
-
         </div>
 
         <div className="container mx-auto text-center max-w-4xl relative z-10">
@@ -52,14 +50,14 @@ const Contact = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
               <Mail className="w-3 h-3" /> Communication Lab
             </div>
-            <h1 className="font-display text-5xl md:text-7xl font-bold text-slate-800 leading-tight tracking-tighter mb-6">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter mb-6">
               Get In <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium pr-4 -mr-4 overflow-visible">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                 Touch
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium italic border-x-0 md:border-x border-slate-200 md:px-10">
-              "Have a project in mind? Let's architect a high-performance roadmap to achieve your digital growth milestones."
+            <p className="text-base md:text-xl text-slate-700 font-semibold tracking-wider pl-6">
+              Have a project in mind? Let's architect a high-performance roadmap to achieve your digital growth milestones.
             </p>
           </motion.div>
         </div>

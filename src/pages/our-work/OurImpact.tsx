@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
 import { TrendingUp, Users, DollarSign, Target, Zap, Send } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +32,7 @@ const OurImpact = () => {
       ],
       image: "/OurImpact/Theshauryaacademy.webp",
     },
-    
+
     {
       client: "Apple Property",
       industry: "Real Estate",
@@ -60,13 +61,13 @@ const OurImpact = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-sm">
               <Zap className="w-3 h-3" /> Performance Engineering
             </div>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-slate-800 leading-[0.95] tracking-tighter mb-8">
-              Our <span className="relative inline-block py-1 pr-4 -mr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium overflow-visible">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter mb-8">
+              Our <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                 Impact
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium italic border-x-4 border-primary/10 px-8">
-              "A curated selection of brands we’ve helped grow through digital strategy and innovation."
+            <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-semibold border-x-4 border-primary/10 px-8">
+              A curated selection of brands we’ve helped grow through digital strategy and innovation.
             </p>
 
           </motion.div>
@@ -115,7 +116,7 @@ const OurImpact = () => {
                     <div className="inline-block px-2 py-0.5 rounded-md bg-slate-900 text-white text-[8px] font-bold uppercase tracking-[0.2em]">
                       {study.industry}
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 italic leading-tight">
+                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
                       {study.client}
                     </h3>
                   </div>
@@ -127,7 +128,7 @@ const OurImpact = () => {
                         <div className="w-1 h-1 rounded-full bg-primary" />
                         Challenge
                       </span>
-                      <p className="text-slate-500 text-sm italic font-medium leading-snug border-l border-primary/20 pl-4">
+                      <p className="text-slate-700 text-sm font-medium leading-snug border-l border-primary/20 pl-4">
                         {study.challenge}
                       </p>
                     </div>
@@ -137,7 +138,7 @@ const OurImpact = () => {
                         <div className="w-1 h-1 rounded-full bg-secondary" />
                         Solution
                       </span>
-                      <p className="text-slate-500 text-sm italic font-medium leading-snug border-l border-secondary/20 pl-4">
+                      <p className="text-slate-700 text-sm font-medium leading-snug border-l border-secondary/20 pl-4`">
                         {study.solution}
                       </p>
                     </div>
@@ -185,38 +186,12 @@ const OurImpact = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-24 sm:px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-gradient-to-br from-primary to-indigo-900 p-8 sm:p-12 md:p-20 text-center rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl relative overflow-hidden group">
-
-
-            {/* 2. CONTENT ARCHITECTURE */}
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-6xl font-black mb-6 md:mb-8 text-white italic tracking-tighter leading-tight uppercase">
-                Ready to <span className="text-secondary italic">Scale?</span>
-              </h2>
-
-              <p className="text-sm md:text-xl text-white/80 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium italic">
-                "Data-Backed Execution. Quantifiable <span className="text-white">Impact.</span> <br className="hidden md:block" />
-                Initiate your <span className="text-secondary">strategy audit</span> today."
-              </p>
-
-              {/* 3. ADAPTIVE BUTTON */}
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="w-full sm:w-auto rounded-full h-14 md:h-16 px-8 md:px-12 text-sm md:text-xl font-black shadow-xl hover:scale-105 active:scale-95 transition-all bg-secondary text-primary text-wrap hover:bg-slate-50"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
-                >
-                  Get Started for Free
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={<>Ready to <span className="text-secondary italic">Scale?</span></>}
+        description={<>Data-Backed Execution. Quantifiable <span className="text-white">Impact.</span> <br className="hidden md:block" />
+          Initiate your <span className="text-secondary">strategy audit</span> today.</>}
+        buttonText="Get Started for Free"
+      />
     </div>
   );
 };
