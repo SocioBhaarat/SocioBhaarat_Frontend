@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { TrendingUp, Users, DollarSign, Target, Zap, Send } from "lucide-react";
+import { TrendingUp, Users, DollarSign, Target, Zap, Send, BarChart3 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const OurImpact = () => {
@@ -50,40 +50,148 @@ const OurImpact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+
       <section className="relative pt-12 pb-32 px-4 overflow-hidden bg-[#fafafa]">
+
+        {/* Background */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 animate-gradient-slow" />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
         </div>
+        <div className="absolute top-[-80px] right-[-80px] w-[400px] h-[400px] bg-blue-600/[0.06] rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-[-80px] left-[-80px] w-[360px] h-[360px] bg-orange-500/[0.05] rounded-full blur-[90px] pointer-events-none" />
 
+        {/* Floating stat cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: [0, -10, 0] }}
+          transition={{
+            opacity: { delay: 0.8, duration: 0.5 },
+            y: { delay: 0.8, duration: 3.5, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute top-16 left-[4%] hidden xl:flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-slate-100 shadow-lg z-10 pointer-events-none"
+        >
+          <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+            <TrendingUp size={15} />
+          </div>
+          <div>
+            <p className="text-[9px] font-bold uppercase tracking-[.15em] text-slate-400 mb-0.5">Avg Revenue Growth</p>
+            <p className="text-sm font-black text-slate-900 leading-none">5× per Client</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: [0, -8, 0] }}
+          transition={{
+            opacity: { delay: 1.0, duration: 0.5 },
+            y: { delay: 1.2, duration: 4, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute top-16 right-[4%] hidden xl:flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-slate-100 shadow-lg z-10 pointer-events-none"
+        >
+          <div className="w-8 h-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center flex-shrink-0">
+            <Users size={15} />
+          </div>
+          <div>
+            <p className="text-[9px] font-bold uppercase tracking-[.15em] text-slate-400 mb-0.5">Brands Served</p>
+            <p className="text-sm font-black text-slate-900 leading-none">50+ Clients</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: [0, -9, 0] }}
+          transition={{
+            opacity: { delay: 1.2, duration: 0.5 },
+            y: { delay: 0.6, duration: 3.8, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute bottom-36 left-[4%] hidden xl:flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-slate-100 shadow-lg z-10 pointer-events-none"
+        >
+          <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
+          <div>
+            <p className="text-[9px] font-bold uppercase tracking-[.15em] text-slate-400 mb-0.5">Retention Rate</p>
+            <p className="text-sm font-black text-slate-900 leading-none">80% Clients</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: [0, -11, 0] }}
+          transition={{
+            opacity: { delay: 1.4, duration: 0.5 },
+            y: { delay: 1.8, duration: 3.2, repeat: Infinity, ease: "easeInOut" },
+          }}
+          className="absolute bottom-36 right-[4%] hidden xl:flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-slate-100 shadow-lg z-10 pointer-events-none"
+        >
+          <div className="w-8 h-8 rounded-lg bg-violet-50 text-violet-600 flex items-center justify-center flex-shrink-0">
+            <BarChart3 size={15} />
+          </div>
+          <div>
+            <p className="text-[9px] font-bold uppercase tracking-[.15em] text-slate-400 mb-0.5">Ad Impressions</p>
+            <p className="text-sm font-black text-slate-900 leading-none">10M+ Reached</p>
+          </div>
+        </motion.div>
+
+        {/* Main content — unchanged */}
         <div className="container mx-auto max-w-5xl relative z-10 text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase mb-8 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center gap-6"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase shadow-sm">
               <Zap className="w-3 h-3" /> Performance Engineering
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter mb-8">
-              Our <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter">
+              Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                 Impact
               </span>
             </h1>
+
             <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-semibold border-x-4 border-primary/10 px-8">
-              A curated selection of brands we’ve helped grow through digital strategy and innovation.
+              A curated selection of brands we've helped grow through digital strategy and innovation.
             </p>
 
-          </motion.div>
+            {/* Inline stat strip */}
+            <div className="flex items-center gap-0 border border-slate-100 rounded-2xl overflow-hidden bg-white shadow-sm mt-2">
+              {[
+                { val: "50+", label: "Brands", color: "text-blue-600" },
+                { val: "5×", label: "Avg ROI", color: "text-orange-500" },
+                { val: "80%", label: "Retention", color: "text-violet-600" },
+                { val: "10M+", label: "Impressions", color: "text-green-600" },
+              ].map((s, i) => (
+                <div
+                  key={i}
+                  className={`px-6 py-4 text-center ${i < 3 ? "border-r border-slate-100" : ""}`}
+                >
+                  <div className={`text-xl font-black leading-none mb-1 ${s.color}`}>
+                    {s.val}
+                  </div>
+                  <div className="text-sm font-bold uppercase tracking-[.18em] text-slate-600">
+                    {s.label}
+                  </div>
+                </div>
+              ))}
+            </div>
 
+          </motion.div>
         </div>
+
+        {/* Bottom fade — unchanged */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
       </section>
 
-      <section className="py-12 bg-white border-y border-slate-100 relative">
+      {/* <section className="py-12 bg-white border-y border-slate-100 relative">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { val: "₹ 1 cr+", label: "Ad Spend Managed", color: "text-primary" },
+              { val: "₹ 10 lakhs+", label: "Ad Spend Managed", color: "text-primary" },
               { val: "6.5x", label: "Average ROAS", color: "text-secondary" },
               { val: "150+", label: "Success Stories", color: "text-accent" },
-              { val: "85%", label: "Client Retention", color: "text-slate-900" }
+              { val: "80%", label: "Client Retention", color: "text-slate-900" }
             ].map((stat, i) => (
               <div key={i} className="text-center group border-r last:border-none border-slate-100">
                 <h4 className={`text-4xl md:text-5xl font-black ${stat.color} tracking-tighter transition-transform group-hover:scale-110 duration-500`}>
@@ -94,7 +202,7 @@ const OurImpact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
