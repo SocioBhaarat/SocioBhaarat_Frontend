@@ -45,6 +45,7 @@ import TermsAndConditions from "./pages/footer-pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/footer-pages/PrivacyPolicy";
 import RefundPolicy from "./pages/footer-pages/RefundPolicy";
 import WhatsappBusinessAPI from "./pages/whatsapp-business-api/WhatsappBusinessAPI";
+import Home from "./pages/Home.js"
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ const App = () => (
         <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/testimonials" element={<Testimonials />} />
