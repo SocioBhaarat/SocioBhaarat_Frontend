@@ -235,7 +235,7 @@ const ContentMarketing = () => {
       </section>
 
       {/* Why choose us */}
-      <section className="py-12 px-6 lg:px-10 bg-[#f8f9fb]">
+      <section className="pt-12 pb-5 px-6 lg:px-10 bg-[#f8f9fb]">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-14">
@@ -332,7 +332,7 @@ const ContentMarketing = () => {
         </div>
       </section>
 
-      <section className="py-24 lg:px-10 bg-[#f8f9fb]">
+      <section className="py-12 lg:px-10 bg-[#f8f9fb]">
         <div className="container mx-auto max-w-7xl">
 
           {/* ── SPLIT HERO PANEL ── */}
@@ -438,7 +438,6 @@ const ContentMarketing = () => {
       </section>
 
       {/* Our Services */}
-
       <section className="py-12 bg-white">
         <div className="container mx-auto max-w-6xl px-4">
 

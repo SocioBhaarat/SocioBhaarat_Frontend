@@ -270,9 +270,9 @@ const VideoMarketing = () => {
                                     style={{ fontSize: "clamp(1.7rem, 4vw, 2.6rem)" }}
                                 >
                                     Why Brands Trust Our{" "}
-                                    <em className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                                    <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                                         Video Vision.
-                                    </em>
+                                    </span>
                                 </h2>
                                 <p className="text-base md:text-lg text-slate-700 border-l-4 border-blue-100 font-medium pl-5 py-2">
                                     We combine cinematic artistry with performance marketing data — ensuring your
@@ -384,7 +384,7 @@ const VideoMarketing = () => {
             </section>
 
             {/* WHY YOU NEED IT */}
-            <section className="py-24 px-6 lg:px-10 bg-white">
+            <section className="py-12 px-6 lg:px-10 bg-white">
                 <div className="container mx-auto max-w-7xl">
                     <div className="grid lg:grid-cols-2 gap-14 items-center">
 
@@ -602,7 +602,7 @@ const VideoMarketing = () => {
             </section>
 
             {/* THE ROADMAP */}
-            <section className="py-12 lg:px-10 bg-[#f8f9fb]">
+            <section className="pb-12 lg:px-10 bg-[#f8f9fb]">
                 <div className="container mx-auto max-w-7xl">
 
                     <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-900 mb-14">

@@ -260,7 +260,7 @@ const PaidMarketing = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 lg:px-8 bg-[#f8f7f4] relative overflow-hidden">
+      <section className="py-12 lg:px-8 bg-white relative overflow-hidden">
         <motion.div
           className="container mx-auto max-w-7xl relative z-10"
           initial="hidden"
@@ -279,7 +279,7 @@ const PaidMarketing = () => {
                 Trust Us
               </span>
             </h2>
-            <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed mx-auto ">
+            <p className="text-sm md:text-base text-slate-700 font-medium leading-relaxed mx-auto ">
               We combine strategic monitoring and professional response management to protect and enhance your brand's image across Madhya Pradesh.
             </p>
           </motion.div>
@@ -325,7 +325,7 @@ const PaidMarketing = () => {
       </section>
 
       {/* Why Paid Marketing Matters */}
-      <section className="py-12 bg-white overflow-hidden">
+      <section className="py-12 bg-[#f8f7f4] overflow-hidden">
         <div className="container mx-auto max-w-6xl px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -414,7 +414,6 @@ const PaidMarketing = () => {
       </section>
 
       {/* Our services */}
-
       <section className="py-12 bg-white">
         <div className="container mx-auto max-w-6xl px-4">
 
@@ -447,7 +446,7 @@ const PaidMarketing = () => {
                 Placement
               </span>
             </h2>
-            <p className="text-[14px] text-slate-500 italic max-w-md mx-auto leading-[1.8]">
+            <p className="text-[14px] text-slate-700 max-w-md mx-auto leading-[1.8] font-medium">
               Data-backed ad campaigns across the world's most influential platforms to scale your brand.
             </p>
           </div>
@@ -523,7 +522,7 @@ const PaidMarketing = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none">
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Approach</span>
             </h2>
-            <p className="text-slate-700 text-base md:text-lg max-w-2xl mx-auto italic mt-6">
+            <p className="text-slate-700 text-base md:text-lg max-w-2xl mx-auto mt-6 font-medium">
               "A results-driven pipeline engineered to scale brands across Bhopal & Jabalpur."
             </p>
           </div>

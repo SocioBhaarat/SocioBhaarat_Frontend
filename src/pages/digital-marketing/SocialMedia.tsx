@@ -332,16 +332,6 @@ const SocialMedia = () => {
               </motion.div>
             ))}
           </div>
-
-          <div className="mt-20 p-1 rounded-full bg-slate-100 max-w-fit mx-auto"
-          >
-            <div className="px-8 py-3 rounded-full bg-white shadow-sm border border-slate-200">
-              <p className="text-xs font-bold text-slate-600 tracking-widest uppercase flex items-center gap-3">
-                <ShieldCheck className="w-4 h-4 text-primary" />
-                Verified Performance Partner Across MP
-              </p>
-            </div>
-          </div>
         </motion.div>
       </section>
 
@@ -428,7 +418,7 @@ const SocialMedia = () => {
       </section>
 
       {/* Platforms we master */}
-      <section className="py-12 sm:px-6 lg:px-8 relative overflow-hidden bg-[#fafafa]">
+      <section className="py-12 sm:px-6 lg:px-8 relative overflow-hidden bg-[#f8f7f4]">
         {/* Subtly animated background element */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_#4285f405_0%,_transparent_70%)] pointer-events-none" />
 

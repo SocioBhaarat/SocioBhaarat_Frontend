@@ -231,7 +231,7 @@ const WebsiteSEO = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-12 lg:px-8 bg-[#f8f7f4] relative overflow-hidden">
+      <section className="py-12 lg:px-8 bg-background relative overflow-hidden">
         <motion.div
           className="container mx-auto max-w-7xl relative z-10"
           initial="hidden"
@@ -295,7 +295,7 @@ const WebsiteSEO = () => {
       </section>
 
       {/* Why SEO matters */}
-      <section className="py-12 lg:px-10 bg-white overflow-hidden">
+      <section className="py-12 lg:px-10 bg-[#f8f7f4] overflow-hidden">
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 

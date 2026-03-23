@@ -238,7 +238,7 @@ const EmailMarketing = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-20 px-6 lg:px-10 bg-[#fafafa]">
+      <section className="py-12 px-6 lg:px-10 bg-[#fafafa]">
         <div className="container mx-auto max-w-7xl">
 
           <div className="mb-14 max-">
@@ -551,16 +551,16 @@ const EmailMarketing = () => {
           </div>
         </div>
       </section>
-
+      
       {/* THE PROCESS */}
-      <section className="py-12 lg:px-10 bg-[#f8f9fb]">
+      <section className="pb-12 lg:px-10 bg-[#f8f9fb]">
         <div className="container mx-auto max-w-7xl">
 
           <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-900 mb-14">
             Lifecycle{" "}
-            <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+            <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
               Strategy
-            </em>
+            </span>
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
