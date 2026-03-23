@@ -289,7 +289,7 @@ const UIUXDesign = () => {
       </section>
 
       {/* WHY CHOOSE US (SPOTLIGHT) */}
-      <section className="py-24 border-y border-border overflow-hidden bg-muted/30 relative">
+      <section className="py-12 border-y border-border overflow-hidden bg-muted/30 relative">
         <div className="container mx-auto max-w-6xl px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
 
@@ -418,7 +418,7 @@ const UIUXDesign = () => {
 
 
       {/* SERVICES (BENTO GRID) */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-12 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl">
 
           {/* Section Header */}
@@ -492,7 +492,6 @@ const UIUXDesign = () => {
       </section>
 
       {/* PATH TO DISCOVERY (ROADMAP) */}
-
       <ProcessSection
         titlePrefix="Our"
         highlightedWord="Design"
@@ -502,7 +501,7 @@ const UIUXDesign = () => {
       />
 
       {/* TECH CLOUD */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-5 bg-white relative overflow-hidden">
         {/* Abstract Design Grid Background */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none [background-image:radial-gradient(#000_1px,transparent_1px)] [background-size:32px_32px]" />
 
@@ -588,7 +587,6 @@ const UIUXDesign = () => {
       <QuoteSection quote="Design is not decoration — it’s the bridge between a brand's logic and a user's soul." />
 
       {/* FINAL CTA */}
-
       <CTASection
         title={<>Ready to Refine <br className="hidden md:block" /> Your User Journey?</>}
         description={<>Get a professional UX audit and a high-fidelity <br className="hidden sm:block" /> visual strategy for your next digital product.</>}

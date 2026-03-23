@@ -330,7 +330,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-16 md:py-20 bg-muted/30 relative overflow-hidden">
+      <section className="py-12 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 
           {/* Section Header */}
@@ -350,7 +350,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* Why do you need Web Development */}
-      <section className="py-16 md:py-12 bg-background relative overflow-hidden">
+      <section className="py-12 bg-background relative overflow-hidden">
         {/* Background: Data Stream dots */}
         <div className="absolute inset-0 opacity-[0.15] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
@@ -429,7 +429,7 @@ const WebDevelopment = () => {
 
 
       {/* SERVICES */}
-      <section className="py-24 md:py-20 bg-muted/30 relative overflow-hidden">
+      <section className="py-12 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
           {/* Section Header: Shifted Left for Modern Engineering Feel */}
           <div className="mb-20 md:mb-10 max-w-6xl">
@@ -447,7 +447,7 @@ const WebDevelopment = () => {
       </section>
 
       {/* TECHNOLOGIES */}
-      <section className="py-12 bg-background relative overflow-hidden">
+      <section className="py-5 bg-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 

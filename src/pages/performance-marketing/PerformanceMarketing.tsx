@@ -603,7 +603,7 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* INDUSTRIES (Bento Grid) */}
-      <section className="py-12 lg:px-10 bg-[#fafafa]">
+      <section className="py-5 lg:px-10 bg-[#fafafa]">
         <div className="container mx-auto max-w-7xl">
 
           {/* Header */}
@@ -665,7 +665,7 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* PRICING & TRANSPARENCY */}
-      <section className="py-16 sm:px-6 lg:px-8 bg-[#f8f9fb] relative overflow-hidden">
+      <section className="py-12 sm:px-6 lg:px-8 bg-[#f8f9fb] relative overflow-hidden">
         <div className="container mx-auto max-w-7xl relative z-10">
 
           {/* Header */}

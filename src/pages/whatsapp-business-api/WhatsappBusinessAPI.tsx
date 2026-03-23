@@ -485,8 +485,7 @@ function WhatsappBusinessAPI() {
       </section>
 
       {/* Why whatsapp business api */}
-
-      <section className="py-12 lg:px-10 bg-white relative overflow-hidden">
+      <section className="py-5 lg:px-10 bg-white relative overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           {/* Header */}
           <div className="text-center mb-10 md:mb-14 space-y-4">
@@ -528,7 +527,7 @@ function WhatsappBusinessAPI() {
       </section>
 
       {/* Services */}
-      <section className="py-24 lg:px-10 bg-[#fafafa] relative overflow-hidden">
+      <section className="py-12 lg:px-10 bg-[#fafafa] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:35px_35px]" />
 
         <div className="container mx-auto max-w-7xl relative z-10">

@@ -218,8 +218,7 @@ const GraphicDesigning = () => {
       </section>
 
       {/* WHY YOU NEED IT */}
-
-      <section className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
+      <section className="py-12 bg-muted/30 relative overflow-hidden">
         {/* Blobs */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-[60px] opacity-50 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-50 rounded-full blur-[60px] opacity-50 pointer-events-none" />
@@ -309,8 +308,7 @@ const GraphicDesigning = () => {
       </section>
 
       {/* WHY CHOOSE SOCIO BHAARAT */}
-
-      <section className="py-16 md:py-20 bg-muted/30 relative overflow-hidden">
+      <section className="py-12 bg-white relative overflow-hidden ">
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 
           {/* Section Header */}
@@ -331,8 +329,7 @@ const GraphicDesigning = () => {
       </section>
 
       {/* SERVICES GRID */}
-
-      <section className="py-16 md:py-20 bg-muted/30 relative overflow-hidden">
+      <section className="py-12 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
           {/* Section Header: Shifted Left for Modern Engineering Feel */}
           <div className="mb-20 md:mb-10 max-w-6xl">
@@ -347,8 +344,7 @@ const GraphicDesigning = () => {
       </section>
 
       {/* DESIGN PROCESS */}
-
-      <section className="py-16 md:py-20 px-4 bg-muted/30">
+      <section className="pt-5 pb-12 bg-muted/30">
         <div className="container mx-auto w-full max-w-7xl">
 
           {/* Header */}

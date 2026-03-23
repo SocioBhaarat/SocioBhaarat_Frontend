@@ -308,9 +308,8 @@ const AppDevelopment = () => {
         </div>
       </section>
 
-
       {/*  WHY CHOOSE US  */}
-      <section className="py-16 md:py-20 bg-muted/30 relative overflow-hidden">
+      <section className="py-12 bg-white relative overflow-hidden">
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 
           {/* Section Header */}
@@ -330,7 +329,7 @@ const AppDevelopment = () => {
       </section>
 
       {/*  SERVICES GRID  */}
-      <section className="py-24 md:py-20 bg-muted/30 relative overflow-hidden">
+      <section className="py-12 bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
           {/* Section Header: Shifted Left for Modern Engineering Feel */}
           <div className="mb-20 md:mb-10 max-w-6xl">
@@ -349,7 +348,7 @@ const AppDevelopment = () => {
 
 
       {/*  TECHNOLOGY */}
-      <section className="py-12 bg-background relative overflow-hidden">
+      <section className="py-5 bg-background relative overflow-hidden">
 
         <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 

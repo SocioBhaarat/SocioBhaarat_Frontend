@@ -40,8 +40,6 @@ import { cn } from "@/lib/utils";
 const EcommerceDevelopment = () => {
   const navigate = useNavigate();
 
-  /* DATA */
-
   const whyChooseUsData = [
     {
       title: "Custom & Scalable Solutions",
@@ -116,7 +114,6 @@ const EcommerceDevelopment = () => {
     <div className="min-h-screen bg-background">
 
       {/* HERO SECTION */}
-
       <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
         {/* 1. TECHNICAL BACKGROUND DESIGN */}
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -201,8 +198,7 @@ const EcommerceDevelopment = () => {
       </section>
 
       {/* WHY CHOOSE US */}
-
-      <section className="py-24 bg-muted/30 border-y border-border">
+      <section className="py-12 bg-muted/30 border-y border-border">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
 
@@ -298,7 +294,7 @@ const EcommerceDevelopment = () => {
 
       {/* SERVICES (BENTO GRID) */}
 
-      <section className="py-20 bg-slate-50">
+      <section className="py-12 bg-slate-50">
         <div className="container mx-auto px-4 max-w-7xl">
 
           {/* Section Header */}
@@ -373,7 +369,7 @@ const EcommerceDevelopment = () => {
 
       {/* PRODUCTION ROADMAP */}
 
-      <section className="py-24 bg-slate-50">
+      <section className="py-5 bg-slate-50">
         <div className="container mx-auto max-w-7xl px-4">
 
           {/* Header */}
