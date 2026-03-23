@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
@@ -146,220 +147,226 @@ const VideoMarketing = () => {
 
 
     return (
-        <div className="min-h-screen bg-background selection:bg-primary/20">
+        <>
+            <SEO
+                title="Video Marketing Services | Socio Bhaarat"
+                description="Boost engagement and brand awareness with high-impact video marketing strategies across digital platforms."
+                keywords="video marketing, video advertising, youtube marketing, reels marketing, video marketing services in jabalpur"
+            />
+            <div className="min-h-screen bg-background selection:bg-primary/20">
 
-            {/* HERO SECTION */}
-            <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
-                {/* 1. TECHNICAL BACKGROUND DESIGN */}
-                <div className="absolute inset-0 z-0 pointer-events-none">
-                    {/* Grid Overlay - Matches Brand Protection Lab */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+                {/* HERO SECTION */}
+                <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+                    {/* 1. TECHNICAL BACKGROUND DESIGN */}
+                    <div className="absolute inset-0 z-0 pointer-events-none">
+                        {/* Grid Overlay - Matches Brand Protection Lab */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-                    {/* Atmospheric Mesh Blobs */}
-                    <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-                    <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-                </div>
-
-                {/* 2. MAIN CONTENT GRID */}
-                <div className="container mx-auto px-4 relative z-10 mt-12">
-                    <div className="grid lg:grid-cols-12 gap-12 items-start">
-                        {/* LEFT COLUMN: Narrative (Text Upwards) */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.8 }}
-                            className="lg:col-span-7 space-y-8 text-left"
-                        >
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                                <Play className="w-3 h-3 fill-current" /> Video Marketing
-                            </div>
-
-                            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                                Tell Your Story with <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Cinematic Impact.</span>
-                            </h1>
-
-                            <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
-                                We create captivating video content that stops the scroll, explains your value, and converts viewers into loyal customers across YouTube, Instagram, and LinkedIn.
-                            </p>
-
-                            <div className="flex justify-start pt-4">
-                                <Button
-                                    size="lg"
-                                    className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
-                                    onClick={() => navigate("/contact")}
-                                >
-                                    Start Your Production <ArrowRight className="ml-2 w-5 h-5" />
-                                </Button>
-                            </div>
-                        </motion.div>
-
-                        {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, x: 30 }}
-                            animate={{ opacity: 1, scale: 1, x: 0 }}
-                            transition={{ delay: 0.3, duration: 1 }}
-                            className="lg:col-span-5 relative hidden lg:block group"
-                        >
-                            <div className="absolute -inset-4 bg-primary/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-700" />
-
-                            {/* Frame Architecture */}
-                            <div className="relative rounded-[2.5rem] md:rounded-[3.5rem] p-3 bg-white border-2 border-slate-200 shadow-2xl overflow-hidden">
-                                <div className="absolute top-6 left-6 z-20 flex gap-2">
-                                    <div className="w-3 h-3 rounded-full bg-red-400" />
-                                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                                    <div className="w-3 h-3 rounded-full bg-green-400" />
-                                </div>
-
-                                <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem]">
-                                    <img
-                                        src="https://img.freepik.com/free-vector/video-production-concept-illustration_114360-1145.jpg"
-                                        alt="Video Production Process"
-                                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
-                                    />
-
-                                    {/* Play Trigger Module */}
-                                    <div className="absolute inset-0 flex items-center justify-center bg-slate-900/20 group-hover:bg-slate-900/40 transition-all duration-500">
-                                        <div className="w-20 h-20 md:w-28 md:h-28 bg-white/10 backdrop-blur-xl border border-white/30 text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
-                                            <Play className="w-10 h-10 md:w-14 md:h-14 fill-white ml-2" />
-                                        </div>
-                                    </div>
-
-                                    {/* Technical Detail Badge */}
-                                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/20 text-[10px] font-bold text-white uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                        00 : 45 : 12 / REC
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Floating Decorative Elements */}
-                            <div className="absolute -top-10 -right-10 hidden lg:block animate-bounce-slow">
-                                <div className="p-4 bg-white border border-slate-200 rounded-3xl shadow-xl -rotate-12">
-                                    <Clapperboard className="w-8 h-8 text-orange-500" />
-                                </div>
-                            </div>
-                        </motion.div>
-
+                        {/* Atmospheric Mesh Blobs */}
+                        <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+                        <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
                     </div>
-                </div>
-            </section>
 
-            {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
-            <section className="py-12 lg:px-10 bg-[#f8f9fb] relative overflow-hidden">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="grid lg:grid-cols-2 gap-12 items-start">
+                    {/* 2. MAIN CONTENT GRID */}
+                    <div className="container mx-auto px-4 relative z-10 mt-12">
+                        <div className="grid lg:grid-cols-12 gap-12 items-start">
+                            {/* LEFT COLUMN: Narrative (Text Upwards) */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className="lg:col-span-7 space-y-8 text-left"
+                            >
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                                    <Play className="w-3 h-3 fill-current" /> Video Marketing
+                                </div>
 
-                        {/* ── LEFT ── */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="flex flex-col gap-8"
-                        >
-                            {/* Eyebrow */}
-                            <div className="flex items-center gap-2">
-                                <div className="w-5 h-[2px] bg-blue-600 rounded-full" />
-                                <span className="text-[11px] font-bold tracking-[.28em] uppercase text-blue-600">
-                                    Video Performance
-                                </span>
-                            </div>
+                                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                                    Tell Your Story with <br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Cinematic Impact.</span>
+                                </h1>
 
-                            {/* Heading */}
-                            <div>
-                                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4"
-                                    style={{ fontSize: "clamp(1.7rem, 4vw, 2.6rem)" }}
-                                >
-                                    Why Brands Trust Our{" "}
-                                    <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                                        Video Vision.
-                                    </span>
-                                </h2>
-                                <p className="text-base md:text-lg text-slate-700 border-l-4 border-blue-100 font-medium pl-5 py-2">
-                                    We combine cinematic artistry with performance marketing data — ensuring your
-                                    videos don't just look stunning, they convert viewers into customers and build
-                                    lasting brand equity.
+                                <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                                    We create captivating video content that stops the scroll, explains your value, and converts viewers into loyal customers across YouTube, Instagram, and LinkedIn.
                                 </p>
-                            </div>
 
-                            {/* 2×2 stat grid */}
-                            <div className="grid grid-cols-2 gap-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200">
-                                {[
-                                    { val: "500+", label: "Projects Delivered", color: "text-blue-600", bar: "bg-blue-600" },
-                                    { val: "98%", label: "Client Satisfaction", color: "text-violet-600", bar: "bg-violet-600" },
-                                    { val: "94%", label: "Retention Rate", color: "text-orange-500", bar: "bg-orange-500" },
-                                    { val: "3.5×", label: "ROI Average", color: "text-teal-600", bar: "bg-teal-600" },
-                                ].map((s, i) => (
-                                    <div
-                                        key={i}
-                                        className="group relative bg-white px-5 py-6 overflow-hidden hover:bg-slate-50 transition-colors cursor-default"
+                                <div className="flex justify-start pt-4">
+                                    <Button
+                                        size="lg"
+                                        className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                                        onClick={() => navigate("/contact")}
                                     >
-                                        <div className={`font-display text-[2.4rem] font-black leading-none mb-1.5 ${s.color}`}>
-                                            {s.val}
-                                        </div>
-                                        <p className="text-xs font-semibold uppercase tracking-[.18em] text-slate-500">
-                                            {s.label}
-                                        </p>
-                                        <div className={`absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-all duration-400 ${s.bar}`} />
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
+                                        Start Your Production <ArrowRight className="ml-2 w-5 h-5" />
+                                    </Button>
+                                </div>
+                            </motion.div>
 
-                        {/* ── RIGHT ── */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="flex flex-col gap-2.5"
-                        >
-                            {[
-                                {
-                                    tag: "Scripting", icon: Clapperboard,
-                                    iconBg: "bg-blue-100 text-blue-700", accentBg: "bg-blue-50", tagColor: "text-blue-300 group-hover:text-blue-600",
-                                    title: "Data-Backed Scripting",
-                                    desc: "Every word is chosen based on psychological retention triggers — keeping viewers watching and moving them toward the desired action.",
-                                },
-                                {
-                                    tag: "Equipment", icon: MonitorPlay,
-                                    iconBg: "bg-purple-100 text-purple-700", accentBg: "bg-purple-50", tagColor: "text-purple-300 group-hover:text-purple-600",
-                                    title: "Ultra-HD Infrastructure",
-                                    desc: "Cinema-grade 4K/6K equipment ensures your brand looks premium on every screen — from mobile to billboard-size displays.",
-                                },
-                                {
-                                    tag: "Distribution", icon: Layers,
-                                    iconBg: "bg-orange-100 text-orange-700", accentBg: "bg-orange-50", tagColor: "text-orange-300 group-hover:text-orange-600",
-                                    title: "Platform-Specific Editing",
-                                    desc: "Custom-cut versions for TikTok, YouTube, and LinkedIn — each optimised for native algorithms to maximise organic reach.",
-                                },
-                            ].map((p, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    whileHover={{ boxShadow: "0 8px 28px rgba(37,99,235,0.07)" }}
-                                    transition={{ duration: 0.2 }}
-                                    className="group grid grid-cols-[52px_1fr] rounded-2xl overflow-hidden border border-slate-100 bg-white hover:border-blue-100 transition-all duration-250 cursor-default"
-                                >
-                                    {/* Accent column */}
-                                    <div className={`flex items-center justify-center ${p.accentBg} group-hover:opacity-100 transition-colors`}>
-                                        <div className={`w-9 h-9 rounded-[10px] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${p.iconBg}`}>
-                                            <p.icon size={17} />
-                                        </div>
+                            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                                animate={{ opacity: 1, scale: 1, x: 0 }}
+                                transition={{ delay: 0.3, duration: 1 }}
+                                className="lg:col-span-5 relative hidden lg:block group"
+                            >
+                                <div className="absolute -inset-4 bg-primary/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-700" />
+
+                                {/* Frame Architecture */}
+                                <div className="relative rounded-[2.5rem] md:rounded-[3.5rem] p-3 bg-white border-2 border-slate-200 shadow-2xl overflow-hidden">
+                                    <div className="absolute top-6 left-6 z-20 flex gap-2">
+                                        <div className="w-3 h-3 rounded-full bg-red-400" />
+                                        <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                                        <div className="w-3 h-3 rounded-full bg-green-400" />
                                     </div>
 
-                                    {/* Body */}
-                                    <div className="px-5 py-5 border-l border-slate-100 group-hover:border-transparent transition-colors">
-                                        <span className={`text-[9px] font-bold uppercase tracking-[.2em] mb-1.5 block transition-colors ${p.tagColor}`}>
-                                            {p.tag}
+                                    <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem]">
+                                        <img
+                                            src="https://img.freepik.com/free-vector/video-production-concept-illustration_114360-1145.jpg"
+                                            alt="Video Production Process"
+                                            className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                                        />
+
+                                        {/* Play Trigger Module */}
+                                        <div className="absolute inset-0 flex items-center justify-center bg-slate-900/20 group-hover:bg-slate-900/40 transition-all duration-500">
+                                            <div className="w-20 h-20 md:w-28 md:h-28 bg-white/10 backdrop-blur-xl border border-white/30 text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                                                <Play className="w-10 h-10 md:w-14 md:h-14 fill-white ml-2" />
+                                            </div>
+                                        </div>
+
+                                        {/* Technical Detail Badge */}
+                                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/20 text-[10px] font-bold text-white uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                            00 : 45 : 12 / REC
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Floating Decorative Elements */}
+                                <div className="absolute -top-10 -right-10 hidden lg:block animate-bounce-slow">
+                                    <div className="p-4 bg-white border border-slate-200 rounded-3xl shadow-xl -rotate-12">
+                                        <Clapperboard className="w-8 h-8 text-orange-500" />
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                        </div>
+                    </div>
+                </section>
+
+                {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
+                <section className="py-12 lg:px-10 bg-[#f8f9fb] relative overflow-hidden">
+                    <div className="container mx-auto max-w-7xl">
+                        <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+                            {/* ── LEFT ── */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="flex flex-col gap-8"
+                            >
+                                {/* Eyebrow */}
+                                <div className="flex items-center gap-2">
+                                    <div className="w-5 h-[2px] bg-blue-600 rounded-full" />
+                                    <span className="text-[11px] font-bold tracking-[.28em] uppercase text-blue-600">
+                                        Video Performance
+                                    </span>
+                                </div>
+
+                                {/* Heading */}
+                                <div>
+                                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4"
+                                        style={{ fontSize: "clamp(1.7rem, 4vw, 2.6rem)" }}
+                                    >
+                                        Why Brands Trust Our{" "}
+                                        <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                                            Video Vision.
                                         </span>
-                                        <h4 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-blue-700 tracking-wider transition-colors mb-1.5 leading-snug">
-                                            {p.title}
-                                        </h4>
-                                        <p className="text-sm md:text-base text-slate-5=800 font-medium leading-[1.75]">{p.desc}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
+                                    </h2>
+                                    <p className="text-base md:text-lg text-slate-700 border-l-4 border-blue-100 font-medium pl-5 py-2">
+                                        We combine cinematic artistry with performance marketing data — ensuring your
+                                        videos don't just look stunning, they convert viewers into customers and build
+                                        lasting brand equity.
+                                    </p>
+                                </div>
 
-                            {/* Proof strip */}
-                            {/* <div className="bg-slate-900 rounded-2xl px-6 py-5 flex items-center justify-between gap-4 mt-0.5">
+                                {/* 2×2 stat grid */}
+                                <div className="grid grid-cols-2 gap-px bg-slate-200 rounded-2xl overflow-hidden border border-slate-200">
+                                    {[
+                                        { val: "500+", label: "Projects Delivered", color: "text-blue-600", bar: "bg-blue-600" },
+                                        { val: "98%", label: "Client Satisfaction", color: "text-violet-600", bar: "bg-violet-600" },
+                                        { val: "94%", label: "Retention Rate", color: "text-orange-500", bar: "bg-orange-500" },
+                                        { val: "3.5×", label: "ROI Average", color: "text-teal-600", bar: "bg-teal-600" },
+                                    ].map((s, i) => (
+                                        <div
+                                            key={i}
+                                            className="group relative bg-white px-5 py-6 overflow-hidden hover:bg-slate-50 transition-colors cursor-default"
+                                        >
+                                            <div className={`font-display text-[2.4rem] font-black leading-none mb-1.5 ${s.color}`}>
+                                                {s.val}
+                                            </div>
+                                            <p className="text-xs font-semibold uppercase tracking-[.18em] text-slate-500">
+                                                {s.label}
+                                            </p>
+                                            <div className={`absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-all duration-400 ${s.bar}`} />
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                            {/* ── RIGHT ── */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="flex flex-col gap-2.5"
+                            >
+                                {[
+                                    {
+                                        tag: "Scripting", icon: Clapperboard,
+                                        iconBg: "bg-blue-100 text-blue-700", accentBg: "bg-blue-50", tagColor: "text-blue-300 group-hover:text-blue-600",
+                                        title: "Data-Backed Scripting",
+                                        desc: "Every word is chosen based on psychological retention triggers — keeping viewers watching and moving them toward the desired action.",
+                                    },
+                                    {
+                                        tag: "Equipment", icon: MonitorPlay,
+                                        iconBg: "bg-purple-100 text-purple-700", accentBg: "bg-purple-50", tagColor: "text-purple-300 group-hover:text-purple-600",
+                                        title: "Ultra-HD Infrastructure",
+                                        desc: "Cinema-grade 4K/6K equipment ensures your brand looks premium on every screen — from mobile to billboard-size displays.",
+                                    },
+                                    {
+                                        tag: "Distribution", icon: Layers,
+                                        iconBg: "bg-orange-100 text-orange-700", accentBg: "bg-orange-50", tagColor: "text-orange-300 group-hover:text-orange-600",
+                                        title: "Platform-Specific Editing",
+                                        desc: "Custom-cut versions for TikTok, YouTube, and LinkedIn — each optimised for native algorithms to maximise organic reach.",
+                                    },
+                                ].map((p, idx) => (
+                                    <motion.div
+                                        key={idx}
+                                        whileHover={{ boxShadow: "0 8px 28px rgba(37,99,235,0.07)" }}
+                                        transition={{ duration: 0.2 }}
+                                        className="group grid grid-cols-[52px_1fr] rounded-2xl overflow-hidden border border-slate-100 bg-white hover:border-blue-100 transition-all duration-250 cursor-default"
+                                    >
+                                        {/* Accent column */}
+                                        <div className={`flex items-center justify-center ${p.accentBg} group-hover:opacity-100 transition-colors`}>
+                                            <div className={`w-9 h-9 rounded-[10px] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${p.iconBg}`}>
+                                                <p.icon size={17} />
+                                            </div>
+                                        </div>
+
+                                        {/* Body */}
+                                        <div className="px-5 py-5 border-l border-slate-100 group-hover:border-transparent transition-colors">
+                                            <span className={`text-[9px] font-bold uppercase tracking-[.2em] mb-1.5 block transition-colors ${p.tagColor}`}>
+                                                {p.tag}
+                                            </span>
+                                            <h4 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-blue-700 tracking-wider transition-colors mb-1.5 leading-snug">
+                                                {p.title}
+                                            </h4>
+                                            <p className="text-sm md:text-base text-slate-5=800 font-medium leading-[1.75]">{p.desc}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+
+                                {/* Proof strip */}
+                                {/* <div className="bg-slate-900 rounded-2xl px-6 py-5 flex items-center justify-between gap-4 mt-0.5">
                                 <div>
                                     <p className="text-[11px] font-bold uppercase tracking-[.18em] text-white/40 mb-1">
                                         Trusted By
@@ -377,289 +384,291 @@ const VideoMarketing = () => {
                                     </span>
                                 </div>
                             </div> */}
-                        </motion.div>
+                            </motion.div>
 
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* WHY YOU NEED IT */}
-            <section className="py-12 px-6 lg:px-10 bg-white">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="grid lg:grid-cols-2 gap-14 items-center">
+                {/* WHY YOU NEED IT */}
+                <section className="py-12 px-6 lg:px-10 bg-white">
+                    <div className="container mx-auto max-w-7xl">
+                        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-                        {/* ── LEFT ── */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="flex flex-col gap-7"
-                        >
-                            <div className="flex items-center gap-2">
-                                <div className="w-5 h-[2px] bg-blue-600 rounded-full" />
-                                <span className="text-[11px] font-bold tracking-[.28em] uppercase text-blue-600">
-                                    Video Impact
-                                </span>
-                            </div>
-
-                            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.07]"
-                                style={{ fontSize: "clamp(1.8rem, 4.2vw, 2.8rem)" }}
+                            {/* ── LEFT ── */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="flex flex-col gap-7"
                             >
-                                Why Does Your Brand Need{" "}
-                                <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                                    Video?
+                                <div className="flex items-center gap-2">
+                                    <div className="w-5 h-[2px] bg-blue-600 rounded-full" />
+                                    <span className="text-[11px] font-bold tracking-[.28em] uppercase text-blue-600">
+                                        Video Impact
+                                    </span>
+                                </div>
+
+                                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.07]"
+                                    style={{ fontSize: "clamp(1.8rem, 4.2vw, 2.8rem)" }}
+                                >
+                                    Why Does Your Brand Need{" "}
+                                    <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                                        Video?
+                                    </span>
+                                </h2>
+
+                                <p className="text-base md:text-lg text-slate-700 leading-[1.85] border-l-4 border-blue-100 font-medium pl-5 py-2">
+                                    In a digital world full of text, video is the bridge that builds trust — the only
+                                    medium combining visuals, audio, and narrative to create total brand immersion.
+                                </p>
+
+                                {/* Points grid */}
+                                <div className="grid grid-cols-2 gap-2">
+                                    {whyNeedPoints.map((point, i) => (
+                                        <motion.div
+                                            key={i}
+                                            whileHover={{ y: -2 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="group flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 cursor-default"
+                                        >
+                                            <div className="w-5 h-5 rounded-md bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-blue-600 transition-colors duration-200">
+                                                <Check size={10} strokeWidth={3} className="text-blue-600 group-hover:text-white transition-colors duration-200" />
+                                            </div>
+                                            <span className="text-sm font-semibold text-slate-700 group-hover:text-blue-700 transition-colors leading-snug">
+                                                {point}
+                                            </span>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                            {/* ── RIGHT — Analysis Panel ── */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="rounded-2xl border border-slate-200 overflow-hidden bg-white"
+                            >
+                                {/* Dark header */}
+                                <div className="bg-slate-900 px-7 py-5 flex items-center justify-between">
+                                    <h3 className="text-lg font-bold tracking-wider text-white">
+                                        Engagement Analysis
+                                    </h3>
+                                    <span className="text-[9px] font-bold uppercase tracking-[.2em] px-3 py-1.5 rounded-full bg-blue-500/25 text-blue-300">
+                                        Live Metrics
+                                    </span>
+                                </div>
+
+                                {/* Metrics */}
+                                <div className="px-7 py-7 flex flex-col gap-6">
+                                    {[
+                                        { label: "User Attention Span", val: "+2× Increase", pct: "72%", bar: "from-blue-600 to-blue-400" },
+                                        { label: "Purchase Intent", val: "80% Growth", pct: "80%", bar: "from-violet-600 to-violet-400" },
+                                        { label: "Brand Recall", val: "95% Effective", pct: "95%", bar: "from-teal-600 to-teal-400" },
+                                    ].map((m, idx) => (
+                                        <div key={idx}>
+                                            <div className="flex items-center justify-between mb-2.5">
+                                                <span className="text-sm font-semibold text-slate-700">{m.label}</span>
+                                                <span className="text-[12px] font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                                                    {m.val}
+                                                </span>
+                                            </div>
+                                            <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+                                                <motion.div
+                                                    initial={{ width: 0 }}
+                                                    whileInView={{ width: m.pct }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 1.2, delay: idx * 0.2, ease: "easeOut" }}
+                                                    className={`h-full rounded-full bg-gradient-to-r ${m.bar}`}
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Footer stat strip */}
+                                <div className="flex border-t border-slate-100">
+                                    {[
+                                        { val: "3×", label: "More Shares", color: "text-blue-600" },
+                                        { val: "49%", label: "Faster Growth", color: "text-violet-600" },
+                                        { val: "64%", label: "Buy Likelihood", color: "text-teal-600" },
+                                    ].map((s, i) => (
+                                        <div
+                                            key={i}
+                                            className={`flex-1 text-center px-4 py-4 ${i < 2 ? "border-r border-slate-100" : ""}`}
+                                        >
+                                            <div className={`font-display text-xl font-black leading-none mb-1 ${s.color}`}>
+                                                {s.val}
+                                            </div>
+                                            <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-400">
+                                                {s.label}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                        </div>
+                    </div>
+                </section>
+
+                {/* SERVICES */}
+                <section className="py-12 px-6 lg:px-10 bg-[#f8f9fb]">
+                    <div className="max-w-7xl mx-auto">
+                        {/* Header */}
+                        <div className="mb-14">
+                            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
+                                Our{" "}
+                                <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                                    Services
                                 </span>
                             </h2>
-
-                            <p className="text-base md:text-lg text-slate-700 leading-[1.85] border-l-4 border-blue-100 font-medium pl-5 py-2">
-                                In a digital world full of text, video is the bridge that builds trust — the only
-                                medium combining visuals, audio, and narrative to create total brand immersion.
+                            <p className="text-base text-slate-800 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
+                                "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
                             </p>
+                        </div>
 
-                            {/* Points grid */}
-                            <div className="grid grid-cols-2 gap-2">
-                                {whyNeedPoints.map((point, i) => (
-                                    <motion.div
+                        {/* Explorer panel */}
+                        <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white flex flex-col md:flex-row">
+
+                            {/* Left nav */}
+                            <div className="md:w-[40%] flex-shrink-0 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200 p-2">
+                                {services.map((item, i) => (
+                                    <button
                                         key={i}
-                                        whileHover={{ y: -2 }}
-                                        transition={{ duration: 0.2 }}
-                                        className="group flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 cursor-default"
+                                        onClick={() => setActive(i)}
+                                        className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl border text-left transition-all duration-200 mb-0.5 ${active === i
+                                            ? "bg-white border-blue-100 shadow-sm"
+                                            : "border-transparent hover:bg-white hover:border-slate-200"
+                                            }`}
                                     >
-                                        <div className="w-5 h-5 rounded-md bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-blue-600 transition-colors duration-200">
-                                            <Check size={10} strokeWidth={3} className="text-blue-600 group-hover:text-white transition-colors duration-200" />
+                                        <div className={`w-8 h-8 rounded-[9px] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${active === i ? "scale-105" : ""} ${item.iconBg} ${item.iconColor}`}>
+                                            <item.icon size={14} />
                                         </div>
-                                        <span className="text-sm font-semibold text-slate-700 group-hover:text-blue-700 transition-colors leading-snug">
-                                            {point}
+                                        <span className={` text-base font-semibold ${active === i ? "text-blue-700" : "text-slate-600"}`}>
+                                            {item.title}
                                         </span>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.div>
-
-                        {/* ── RIGHT — Analysis Panel ── */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="rounded-2xl border border-slate-200 overflow-hidden bg-white"
-                        >
-                            {/* Dark header */}
-                            <div className="bg-slate-900 px-7 py-5 flex items-center justify-between">
-                                <h3 className="text-lg font-bold tracking-wider text-white">
-                                    Engagement Analysis
-                                </h3>
-                                <span className="text-[9px] font-bold uppercase tracking-[.2em] px-3 py-1.5 rounded-full bg-blue-500/25 text-blue-300">
-                                    Live Metrics
-                                </span>
-                            </div>
-
-                            {/* Metrics */}
-                            <div className="px-7 py-7 flex flex-col gap-6">
-                                {[
-                                    { label: "User Attention Span", val: "+2× Increase", pct: "72%", bar: "from-blue-600 to-blue-400" },
-                                    { label: "Purchase Intent", val: "80% Growth", pct: "80%", bar: "from-violet-600 to-violet-400" },
-                                    { label: "Brand Recall", val: "95% Effective", pct: "95%", bar: "from-teal-600 to-teal-400" },
-                                ].map((m, idx) => (
-                                    <div key={idx}>
-                                        <div className="flex items-center justify-between mb-2.5">
-                                            <span className="text-sm font-semibold text-slate-700">{m.label}</span>
-                                            <span className="text-[12px] font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                                                {m.val}
-                                            </span>
-                                        </div>
-                                        <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
-                                            <motion.div
-                                                initial={{ width: 0 }}
-                                                whileInView={{ width: m.pct }}
-                                                viewport={{ once: true }}
-                                                transition={{ duration: 1.2, delay: idx * 0.2, ease: "easeOut" }}
-                                                className={`h-full rounded-full bg-gradient-to-r ${m.bar}`}
-                                            />
-                                        </div>
-                                    </div>
+                                        <span className={`ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
+                                            {item.num}
+                                        </span>
+                                    </button>
                                 ))}
                             </div>
 
-                            {/* Footer stat strip */}
-                            <div className="flex border-t border-slate-100">
-                                {[
-                                    { val: "3×", label: "More Shares", color: "text-blue-600" },
-                                    { val: "49%", label: "Faster Growth", color: "text-violet-600" },
-                                    { val: "64%", label: "Buy Likelihood", color: "text-teal-600" },
-                                ].map((s, i) => (
-                                    <div
-                                        key={i}
-                                        className={`flex-1 text-center px-4 py-4 ${i < 2 ? "border-r border-slate-100" : ""}`}
+                            {/* Right panel */}
+                            <div className="flex-1 p-10 md:p-12 relative overflow-hidden flex flex-col justify-center min-h-[380px]">
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={active}
+                                        initial={{ opacity: 0, y: 12 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -8 }}
+                                        transition={{ duration: 0.25 }}
                                     >
-                                        <div className={`font-display text-xl font-black leading-none mb-1 ${s.color}`}>
-                                            {s.val}
+                                        {/* Num */}
+                                        <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-3 block ${services[active].numColor}`}>
+                                            {services[active].num}
+                                        </span>
+
+                                        {/* Title */}
+                                        <h3
+                                            className={`font-display text-3xl md:text-4xl font-extrabold mb-4 ${services[active].iconColor}`}
+                                        >
+                                            {services[active].title}
+                                        </h3>
+
+                                        {/* Desc */}
+                                        <p
+                                            className={`text-sm md:text-lg text-slate-700 max-w-lg mb-7 font-medium border-l-[3px] pl-4 leading-relaxed ${services[active].iconBg.replace("bg-", "border-")}`}
+                                        >
+                                            {services[active].desc}
+                                        </p>
+
+                                        {/* Tag */}
+                                        <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[.15em] ${services[active].tagBg} ${services[active].tagColor}`}>
+                                            <Check size={10} strokeWidth={2.5} />
+                                            {services[active].tag}
                                         </div>
-                                        <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-400">
-                                            {s.label}
-                                        </div>
-                                    </div>
-                                ))}
+                                    </motion.div>
+                                </AnimatePresence>
+
+                                {/* Watermark number */}
+                                <span className="absolute -bottom-5 -right-2 font-display text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.04]">
+                                    {services[active].num}
+                                </span>
+
+                                {/* Ghost icon */}
+                                <div className="absolute top-8 right-10 opacity-[0.05]">
+                                    {React.createElement(services[active].icon, { size: 80, className: services[active].iconColor })}
+                                </div>
                             </div>
-                        </motion.div>
 
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* SERVICES */}
-            <section className="py-12 px-6 lg:px-10 bg-[#f8f9fb]">
-                <div className="max-w-7xl mx-auto">
-                    {/* Header */}
-                    <div className="mb-14">
-                        <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
-                            Our{" "}
-                            <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                                Services
-                            </span>
+                {/* THE ROADMAP */}
+                <section className="pb-12 lg:px-10 bg-[#f8f9fb]">
+                    <div className="container mx-auto max-w-7xl">
+
+                        <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-900 mb-14">
+                            Lifecycle{" "}
+                            <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                                Strategy
+                            </em>
                         </h2>
-                        <p className="text-base text-slate-800 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
-                            "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
-                        </p>
-                    </div>
 
-                    {/* Explorer panel */}
-                    <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white flex flex-col md:flex-row">
-
-                        {/* Left nav */}
-                        <div className="md:w-[40%] flex-shrink-0 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200 p-2">
-                            {services.map((item, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => setActive(i)}
-                                    className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl border text-left transition-all duration-200 mb-0.5 ${active === i
-                                        ? "bg-white border-blue-100 shadow-sm"
-                                        : "border-transparent hover:bg-white hover:border-slate-200"
-                                        }`}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {processSteps.map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 16 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.08 }}
+                                    className="group relative grid grid-cols-[64px_1fr] min-h-[120px] rounded-2xl overflow-hidden border border-transparent bg-white hover:border-blue-100 hover:shadow-[0_8px_32px_rgba(37,99,235,0.07)] transition-all duration-250 cursor-default"
                                 >
-                                    <div className={`w-8 h-8 rounded-[9px] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${active === i ? "scale-105" : ""} ${item.iconBg} ${item.iconColor}`}>
-                                        <item.icon size={14} />
+                                    {/* Left — number */}
+                                    <div className="flex flex-col items-center justify-center gap-1.5 border-r border-slate-100 py-5 group-hover:bg-blue-50 transition-colors duration-250">
+                                        <span className="font-display text-[1.3rem] font-black text-slate-200 group-hover:text-blue-600 transition-colors leading-none">
+                                            {item.num}
+                                        </span>
+                                        <span className="w-2 h-2 rounded-full bg-slate-200 group-hover:bg-blue-600 transition-colors" />
                                     </div>
-                                    <span className={` text-base font-semibold ${active === i ? "text-blue-700" : "text-slate-600"}`}>
-                                        {item.title}
-                                    </span>
-                                    <span className={`ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
-                                        {item.num}
-                                    </span>
-                                </button>
+
+                                    {/* Right — content */}
+                                    <div className="relative px-6 py-6 flex flex-col justify-center gap-2 overflow-hidden">
+                                        {/* Sliding left accent bar */}
+                                        <div className="absolute left-0 top-0 w-[3px] h-0 bg-blue-600 group-hover:h-full transition-all duration-400 rounded-r-sm" />
+
+                                        <span className="text-sm font-bold uppercase tracking-[.22em] text-blue-400 group-hover:text-blue-600 transition-colors">
+                                            {item.tag}
+                                        </span>
+                                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors leading-snug">
+                                            {item.step}
+                                        </h3>
+                                        <p className="text-sm md:text-base font-medium text-slate-600 group-hover:text-slate-800 transition-colors">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                </motion.div>
                             ))}
                         </div>
 
-                        {/* Right panel */}
-                        <div className="flex-1 p-10 md:p-12 relative overflow-hidden flex flex-col justify-center min-h-[380px]">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={active}
-                                    initial={{ opacity: 0, y: 12 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -8 }}
-                                    transition={{ duration: 0.25 }}
-                                >
-                                    {/* Num */}
-                                    <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-3 block ${services[active].numColor}`}>
-                                        {services[active].num}
-                                    </span>
-
-                                    {/* Title */}
-                                    <h3
-                                        className={`font-display text-3xl md:text-4xl font-extrabold mb-4 ${services[active].iconColor}`}
-                                    >
-                                        {services[active].title}
-                                    </h3>
-
-                                    {/* Desc */}
-                                    <p
-                                        className={`text-sm md:text-lg text-slate-700 max-w-lg mb-7 font-medium border-l-[3px] pl-4 leading-relaxed ${services[active].iconBg.replace("bg-", "border-")}`}
-                                    >
-                                        {services[active].desc}
-                                    </p>
-
-                                    {/* Tag */}
-                                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[.15em] ${services[active].tagBg} ${services[active].tagColor}`}>
-                                        <Check size={10} strokeWidth={2.5} />
-                                        {services[active].tag}
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
-
-                            {/* Watermark number */}
-                            <span className="absolute -bottom-5 -right-2 font-display text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.04]">
-                                {services[active].num}
-                            </span>
-
-                            {/* Ghost icon */}
-                            <div className="absolute top-8 right-10 opacity-[0.05]">
-                                {React.createElement(services[active].icon, { size: 80, className: services[active].iconColor })}
-                            </div>
-                        </div>
-
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* THE ROADMAP */}
-            <section className="pb-12 lg:px-10 bg-[#f8f9fb]">
-                <div className="container mx-auto max-w-7xl">
+                {/* FINAL CTA */}
+                <CTASection
+                    title={<>Ready to Lights, Camera, Action?</>}
+                    description={<>Create video content that resonates, educates, and sells. Let’s start your first production today.</>}
+                    buttonText="Claim Free Audit"
+                />
 
-                    <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-900 mb-14">
-                        Lifecycle{" "}
-                        <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                            Strategy
-                        </em>
-                    </h2>
+            </div>
+        </>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {processSteps.map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 16 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.08 }}
-                                className="group relative grid grid-cols-[64px_1fr] min-h-[120px] rounded-2xl overflow-hidden border border-transparent bg-white hover:border-blue-100 hover:shadow-[0_8px_32px_rgba(37,99,235,0.07)] transition-all duration-250 cursor-default"
-                            >
-                                {/* Left — number */}
-                                <div className="flex flex-col items-center justify-center gap-1.5 border-r border-slate-100 py-5 group-hover:bg-blue-50 transition-colors duration-250">
-                                    <span className="font-display text-[1.3rem] font-black text-slate-200 group-hover:text-blue-600 transition-colors leading-none">
-                                        {item.num}
-                                    </span>
-                                    <span className="w-2 h-2 rounded-full bg-slate-200 group-hover:bg-blue-600 transition-colors" />
-                                </div>
-
-                                {/* Right — content */}
-                                <div className="relative px-6 py-6 flex flex-col justify-center gap-2 overflow-hidden">
-                                    {/* Sliding left accent bar */}
-                                    <div className="absolute left-0 top-0 w-[3px] h-0 bg-blue-600 group-hover:h-full transition-all duration-400 rounded-r-sm" />
-
-                                    <span className="text-sm font-bold uppercase tracking-[.22em] text-blue-400 group-hover:text-blue-600 transition-colors">
-                                        {item.tag}
-                                    </span>
-                                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors leading-snug">
-                                        {item.step}
-                                    </h3>
-                                    <p className="text-sm md:text-base font-medium text-slate-600 group-hover:text-slate-800 transition-colors">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-
-                </div>
-            </section>
-
-            {/* FINAL CTA */}
-            <CTASection
-                title={<>Ready to Lights, Camera, Action?</>}
-                description={<>Create video content that resonates, educates, and sells. Let’s start your first production today.</>}
-                buttonText="Claim Free Audit"
-            />
-
-        </div>
     );
 };
 

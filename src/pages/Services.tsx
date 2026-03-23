@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -178,125 +179,133 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/20">
-      {/* Dynamic Header */}
+    <>
+      <SEO
+        title="Our Services | Digital Marketing & IT Solutions | Socio Bhaarat"
+        description="Explore our complete range of services including digital marketing, web development, SEO, and performance marketing solutions."
+        keywords="digital marketing services, web development services, seo services, performance marketing services, marketing services in jabalpur"
+      />
+      <div className="min-h-screen bg-background selection:bg-primary/20">
+        {/* Dynamic Header */}
 
 
-      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
-        {/* 1. TECHNICAL BACKGROUND DESIGN */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Grid Overlay - Matches Brand Protection Lab */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+        <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+          {/* 1. TECHNICAL BACKGROUND DESIGN */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {/* Grid Overlay - Matches Brand Protection Lab */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Atmospheric Mesh Blobs */}
-          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-        </div>
-
-        {/* 2. MAIN CONTENT GRID */}
-        <div className="container mx-auto px-4 relative z-10 mt-12">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-
-            {/* LEFT COLUMN: Narrative (Text Upwards) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-7 space-y-8 text-left mt-8"
-            >
-
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                Solutions Designed to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Scale Your Business</span>
-              </h1>
-
-              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6 py-5">
-                SocioBhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with industrial-grade precision.
-              </p>
-            </motion.div>
-
-            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, x: 30 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 1 }}
-              className="lg:col-span-5 relative hidden lg:block"
-            >
-              <div className="relative group">
-                {/* Decorative Glow behind image */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
-
-                <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1766853297154-3dcb4d3b38f8"
-                    alt="Brand Reputation Dashboard"
-                    className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
-                  />
-                </div>
-
-                {/* Framed Layer - Matching the "Legacy" section rotation */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
-              </div>
-            </motion.div>
-
+            {/* Atmospheric Mesh Blobs */}
+            <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
           </div>
-        </div>
-      </section>
 
-      {/* Dynamic Categories Section */}
-      {serviceCategories.map((cat, catIdx) => (
-        <section key={catIdx} className="py-16 sm:px-6 lg:px-8 border-b border-border last:border-0">
-          <div className="container mx-auto">
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold mb-2">{cat.category}</h2>
-              <p className="text-muted-foreground">{cat.description}</p>
-            </div>
+          {/* 2. MAIN CONTENT GRID */}
+          <div className="container mx-auto px-4 relative z-10 mt-12">
+            <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {cat.items.map((service, index) => (
-                <div key={index} className="flex flex-col h-full group">
-                  <ServiceCard {...service} />
-                  <div className="mt-[-20px] px-6 pb-6 relative z-10">
-                    <Button
-                      variant="outline"
-                      className="w-full rounded-xl bg-blue-500 text-white group-hover:bg-primary group-hover:text-primary-foreground transition-all font-semibold"
-                      onClick={() => navigate(service.path)}
-                    >
-                      View Service Details
-                    </Button>
+              {/* LEFT COLUMN: Narrative (Text Upwards) */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-7 space-y-8 text-left mt-8"
+              >
+
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  Solutions Designed to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Scale Your Business</span>
+                </h1>
+
+                <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6 py-5">
+                  SocioBhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with industrial-grade precision.
+                </p>
+              </motion.div>
+
+              {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 1 }}
+                className="lg:col-span-5 relative hidden lg:block"
+              >
+                <div className="relative group">
+                  {/* Decorative Glow behind image */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
+                  <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1766853297154-3dcb4d3b38f8"
+                      alt="Brand Reputation Dashboard"
+                      className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                    />
                   </div>
+
+                  {/* Framed Layer - Matching the "Legacy" section rotation */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
                 </div>
-              ))}
+              </motion.div>
+
             </div>
           </div>
         </section>
-      ))}
 
-      {/* Impact Section */}
-      <section className="py-24 bg-secondary/5">
-        <div className="container mx-auto px-4">
-          <div className="bg-card border border-border rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-10 opacity-5">
-              <Megaphone className="w-64 h-64 rotate-12" />
+        {/* Dynamic Categories Section */}
+        {serviceCategories.map((cat, catIdx) => (
+          <section key={catIdx} className="py-16 sm:px-6 lg:px-8 border-b border-border last:border-0">
+            <div className="container mx-auto">
+              <div className="mb-12">
+                <h2 className="text-3xl font-bold mb-2">{cat.category}</h2>
+                <p className="text-muted-foreground">{cat.description}</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {cat.items.map((service, index) => (
+                  <div key={index} className="flex flex-col h-full group">
+                    <ServiceCard {...service} />
+                    <div className="mt-[-20px] px-6 pb-6 relative z-10">
+                      <Button
+                        variant="outline"
+                        className="w-full rounded-xl bg-blue-500 text-white group-hover:bg-primary group-hover:text-primary-foreground transition-all font-semibold"
+                        onClick={() => navigate(service.path)}
+                      >
+                        View Service Details
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
+          </section>
+        ))}
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 relative z-10">Why Brands Trust Socio Bhaarat</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
-              {[
-                { label: "Projects Completed", value: "500+" },
-                { label: "Client Satisfaction", value: "98%" },
-                { label: "Support Uptime", value: "24/7" },
-                { label: "ROI Average", value: "3.5x" },
-              ].map((stat, i) => (
-                <div key={i} className="space-y-2">
-                  <div className="text-5xl font-black text-primary tracking-tighter">{stat.value}</div>
-                  <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">{stat.label}</p>
-                </div>
-              ))}
+        {/* Impact Section */}
+        <section className="py-24 bg-secondary/5">
+          <div className="container mx-auto px-4">
+            <div className="bg-card border border-border rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-10 opacity-5">
+                <Megaphone className="w-64 h-64 rotate-12" />
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-16 relative z-10">Why Brands Trust Socio Bhaarat</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
+                {[
+                  { label: "Projects Completed", value: "500+" },
+                  { label: "Client Satisfaction", value: "98%" },
+                  { label: "Support Uptime", value: "24/7" },
+                  { label: "ROI Average", value: "3.5x" },
+                ].map((stat, i) => (
+                  <div key={i} className="space-y-2">
+                    <div className="text-5xl font-black text-primary tracking-tighter">{stat.value}</div>
+                    <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
+
   );
 };
 

@@ -7,6 +7,7 @@ import { AnimatePresence, color, motion } from "framer-motion";
 import { ArrowRight, BarChart3, Calendar, Check, FileText, Heart, Mail, Search, Share2, Shield, ShieldCheck, Sparkles, Star, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SEO from "@/components/SEO"
 
 const ContentMarketing = () => {
   const navigate = useNavigate();
@@ -167,304 +168,312 @@ const ContentMarketing = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
-        {/* 1. TECHNICAL BACKGROUND DESIGN */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Grid Overlay - Matches Brand Protection Lab */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+    <>
+      <SEO
+        title="Content Marketing Services | Socio Bhaarat"
+        description="Engage your audience and build authority with strategic and high-quality content marketing solutions."
+        keywords="content marketing, blog marketing, seo content, content strategy, content marketing in jabalpur"
+      />
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+          {/* 1. TECHNICAL BACKGROUND DESIGN */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {/* Grid Overlay - Matches Brand Protection Lab */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Atmospheric Mesh Blobs */}
-          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-        </div>
-
-        {/* 2. MAIN CONTENT GRID */}
-        <div className="container mx-auto px-4 relative z-10 mt-12">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-
-            {/* LEFT COLUMN: Narrative (Text Upwards) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-7 space-y-8 text-left"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Sparkles className="w-3 h-3" /> Content Marketing
-              </div>
-
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                Engage, Educate <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">& Convert.</span>
-              </h1>
-
-              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
-                We create high-quality, value-driven content that builds brand authority across Bhopal & Jabalpur.
-              </p>
-
-              <div className="flex justify-start pt-4">
-                <Button
-                  size="lg"
-                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
-                  onClick={() => navigate("/contact")}
-                >
-                  Get Started Today <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </div>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, scale: 0.9, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ delay: 0.3, duration: 1 }} className="mt-10 lg:col-span-5 grid grid-cols-2 gap-4">
-              {[
-                { val: "500+", label: "Pieces Created", icon: <FileText /> },
-                { val: "200+", label: "Happy Clients", icon: <Users /> },
-                { val: "85%", label: "Traffic Boost", icon: <TrendingUp /> },
-                { val: "95%", label: "Retention Rate", icon: <Target /> }
-              ].map((stat, i) => (
-                <div key={i} className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
-                  <div className="text-primary mb-4 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                  <h3 className="text-3xl font-black text-slate-900">{stat.val}</h3>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Why choose us */}
-      <section className="pt-12 pb-5 px-6 lg:px-10 bg-[#f8f9fb]">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.22em] text-blue-700 mb-5">
-              <Sparkles className="w-3 h-3" /> The Content Engineering Edge
-            </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
-              Why Choose Our{" "}
-              <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
-                Content Ecosystem
-              </span>
-            </h2>
-            <p className="text-base text-slate-600 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
-              "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
-            </p>
+            {/* Atmospheric Mesh Blobs */}
+            <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
           </div>
 
-          {/* Explorer panel */}
-          <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white flex flex-col md:flex-row">
+          {/* 2. MAIN CONTENT GRID */}
+          <div className="container mx-auto px-4 relative z-10 mt-12">
+            <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* Left nav */}
-            <div className="md:w-[40%] flex-shrink-0 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200 p-2">
-              {whyChooseUs.map((item, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActive(i)}
-                  className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl border text-left transition-all duration-200 mb-0.5 ${active === i
-                    ? "bg-white border-blue-100 shadow-sm"
-                    : "border-transparent hover:bg-white hover:border-slate-200"
-                    }`}
-                >
-                  <div className={`w-8 h-8 rounded-[9px] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${active === i ? "scale-105" : ""} ${item.iconBg} ${item.iconColor}`}>
-                    <item.icon size={14} />
-                  </div>
-                  <span className={` text-base font-semibold ${active === i ? "text-blue-700" : "text-slate-600"}`}>
-                    {item.title}
-                  </span>
-                  <span className={`ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
-                    {item.num}
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Right panel */}
-            <div className="flex-1 p-10 md:p-12 relative overflow-hidden flex flex-col justify-center min-h-[380px]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={active}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.25 }}
-                >
-                  {/* Num */}
-                  <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-3 block ${whyChooseUs[active].numColor}`}>
-                    {whyChooseUs[active].num}
-                  </span>
-
-                  {/* Title */}
-                  <h3
-                    className={`font-display text-3xl md:text-4xl font-extrabold mb-4 ${whyChooseUs[active].iconColor}`}
-                  >
-                    {whyChooseUs[active].title}
-                  </h3>
-
-                  {/* Desc */}
-                  <p
-                    className={`text-sm md:text-lg text-slate-700 max-w-lg mb-7 font-medium border-l-[3px] pl-4 leading-relaxed ${whyChooseUs[active].iconBg.replace("bg-", "border-")}`}
-                  >
-                    {whyChooseUs[active].desc}
-                  </p>
-
-                  {/* Tag */}
-                  <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[.15em] ${whyChooseUs[active].tagBg} ${whyChooseUs[active].tagColor}`}>
-                    <Check size={10} strokeWidth={2.5} />
-                    {whyChooseUs[active].tag}
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Watermark number */}
-              <span className="absolute -bottom-5 -right-2 font-display text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.04]">
-                {whyChooseUs[active].num}
-              </span>
-
-              {/* Ghost icon */}
-              <div className="absolute top-8 right-10 opacity-[0.05]">
-                {React.createElement(whyChooseUs[active].icon, { size: 80, className: whyChooseUs[active].iconColor })}
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 lg:px-10 bg-[#f8f9fb]">
-        <div className="container mx-auto max-w-7xl">
-
-          {/* ── SPLIT HERO PANEL ── */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 rounded-2xl overflow-hidden border border-slate-200 mb-3"
-          >
-            {/* Left — definition panel */}
-            <div className="bg-blue-50 px-12 py-14 relative overflow-hidden border-r border-blue-100">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-blue-200/30 rounded-full blur-[60px] pointer-events-none" />
-              <span className="text-[10px] font-bold tracking-[.3em] uppercase text-blue-600 mb-5 block">
-                Content Strategy
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                What is{" "}
-                <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text font-medium text-transparent">
-                  Content Marketing
-                </span> ?
-              </h2>
-              <p className="text-sm md:text-base text-slate-700 font-medium leading-[1.85] border-l-[3px] border-blue-200 pl-4 mb-8">
-                A strategic approach focused on creating and distributing valuable, relevant content to attract and retain a clearly defined audience — building trust long before a sale.
-              </p>
-              <div className="flex gap-8">
-                {[
-                  { val: "3×", label: "More Leads", color: "text-blue-600" },
-                  { val: "62%", label: "Lower Cost", color: "text-violet-600" },
-                  { val: "6×", label: "Conversion Rate", color: "text-orange-500" },
-                ].map((s) => (
-                  <div key={s.label}>
-                    <div className={`font-display text-2xl font-black leading-none mb-1 ${s.color}`}>
-                      {s.val}
-                    </div>
-                    <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-700">
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right — why panel */}
-            <div className="bg-white px-12 py-14 flex flex-col justify-center gap-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.2em] text-blue-700 w-fit">
-                <Sparkles className="w-3 h-3" /> The Organic Advantage
-              </div>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900">
-                Why Content Marketing{" "}
-                <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                  Matters for Growth
-                </span>
-              </h3>
-              <p className="text-sm md:text-base  text-slate-700 font-medium leading-[1.85]">
-                Unlike traditional advertising, content marketing establishes your brand as an industry authority — generating qualified leads organically across the Madhya Pradesh business landscape.
-              </p>
-              <div className="w-12 h-[2px] bg-blue-600 rounded-full" />
-            </div>
-          </motion.div>
-
-          {/* ── BENEFIT GRID ── */}
-          <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={staggerContainer}
-          >
-            {whyMatters.map((item, index) => (
+              {/* LEFT COLUMN: Narrative (Text Upwards) */}
               <motion.div
-                key={index}
-                variants={cardAnimation}
-                whileHover={{ y: -4, boxShadow: "0 16px 40px rgba(0,0,0,0.08)" }}
-                transition={{ duration: 0.25 }}
-                className={`group relative flex flex-col rounded-2xl p-8 border-[1.5px] overflow-hidden cursor-default transition-all duration-300 ${item.bg} ${item.border}`}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-7 space-y-8 text-left"
               >
-                <div className={`w-11 h-11 rounded-[13px] flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${item.iconBg}`}>
-                  {item.icon}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                  <Sparkles className="w-3 h-3" /> Content Marketing
                 </div>
 
-                <span className={`text-[10px] font-bold tracking-[.18em] uppercase mb-2 ${item.num}`}>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  Engage, Educate <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">& Convert.</span>
+                </h1>
 
-                <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-2">
-                  {item.title}
-                </h3>
-
-                <p className="text-sm md:text-base font-medium leading-[1.85] text-slate-800 flex-1 mb-5">
-                  {item.desc}
+                <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                  We create high-quality, value-driven content that builds brand authority across Bhopal & Jabalpur.
                 </p>
 
-                <div className={`h-[2.5px] w-7 rounded-full group-hover:w-full transition-all duration-500 ${item.bar}`} />
-
-                <span className={`absolute bottom-0 right-2 font-display text-[5rem] font-black italic leading-none pointer-events-none select-none opacity-[0.06] group-hover:opacity-[0.13] transition-opacity ${item.num}`}>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+                <div className="flex justify-start pt-4">
+                  <Button
+                    size="lg"
+                    className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                    onClick={() => navigate("/contact")}
+                  >
+                    Get Started Today <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
               </motion.div>
-            ))}
-          </motion.div>
 
-        </div>
-      </section>
+              <motion.div initial={{ opacity: 0, scale: 0.9, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ delay: 0.3, duration: 1 }} className="mt-10 lg:col-span-5 grid grid-cols-2 gap-4">
+                {[
+                  { val: "500+", label: "Pieces Created", icon: <FileText /> },
+                  { val: "200+", label: "Happy Clients", icon: <Users /> },
+                  { val: "85%", label: "Traffic Boost", icon: <TrendingUp /> },
+                  { val: "95%", label: "Retention Rate", icon: <Target /> }
+                ].map((stat, i) => (
+                  <div key={i} className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+                    <div className="text-primary mb-4 group-hover:scale-110 transition-transform">{stat.icon}</div>
+                    <h3 className="text-3xl font-black text-slate-900">{stat.val}</h3>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</p>
+                  </div>
+                ))}
+              </motion.div>
 
-      {/* Our Services */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto max-w-6xl px-4">
-
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-              Our{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h2>
+            </div>
           </div>
+        </section>
 
-          <HorizontalServiceList services={services} />
+        {/* Why choose us */}
+        <section className="pt-12 pb-5 px-6 lg:px-10 bg-[#f8f9fb]">
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="mb-14">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.22em] text-blue-700 mb-5">
+                <Sparkles className="w-3 h-3" /> The Content Engineering Edge
+              </div>
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
+                Why Choose Our{" "}
+                <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                  Content Ecosystem
+                </span>
+              </h2>
+              <p className="text-base text-slate-600 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
+                "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
+              </p>
+            </div>
 
-        </div>
-      </section>
+            {/* Explorer panel */}
+            <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white flex flex-col md:flex-row">
 
-      <QuoteSection
-        quote="Content that informs, engages, and drives measurable results." />
+              {/* Left nav */}
+              <div className="md:w-[40%] flex-shrink-0 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200 p-2">
+                {whyChooseUs.map((item, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActive(i)}
+                    className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl border text-left transition-all duration-200 mb-0.5 ${active === i
+                      ? "bg-white border-blue-100 shadow-sm"
+                      : "border-transparent hover:bg-white hover:border-slate-200"
+                      }`}
+                  >
+                    <div className={`w-8 h-8 rounded-[9px] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${active === i ? "scale-105" : ""} ${item.iconBg} ${item.iconColor}`}>
+                      <item.icon size={14} />
+                    </div>
+                    <span className={` text-base font-semibold ${active === i ? "text-blue-700" : "text-slate-600"}`}>
+                      {item.title}
+                    </span>
+                    <span className={`ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
+                      {item.num}
+                    </span>
+                  </button>
+                ))}
+              </div>
 
-      {/* CTA */}
-      <CTASection
-        title={<>Ready to Transform <br className="hidden md:block" /> Your Content Strategy?</>}
-        description={<>Let's create content that drives real business results.<br className="hidden md:block" /> Get a free content audit today.</>}
-        buttonText="Get Your Free Content Audit"
-      />
-    </div>
+              {/* Right panel */}
+              <div className="flex-1 p-10 md:p-12 relative overflow-hidden flex flex-col justify-center min-h-[380px]">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={active}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    {/* Num */}
+                    <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-3 block ${whyChooseUs[active].numColor}`}>
+                      {whyChooseUs[active].num}
+                    </span>
+
+                    {/* Title */}
+                    <h3
+                      className={`font-display text-3xl md:text-4xl font-extrabold mb-4 ${whyChooseUs[active].iconColor}`}
+                    >
+                      {whyChooseUs[active].title}
+                    </h3>
+
+                    {/* Desc */}
+                    <p
+                      className={`text-sm md:text-lg text-slate-700 max-w-lg mb-7 font-medium border-l-[3px] pl-4 leading-relaxed ${whyChooseUs[active].iconBg.replace("bg-", "border-")}`}
+                    >
+                      {whyChooseUs[active].desc}
+                    </p>
+
+                    {/* Tag */}
+                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[.15em] ${whyChooseUs[active].tagBg} ${whyChooseUs[active].tagColor}`}>
+                      <Check size={10} strokeWidth={2.5} />
+                      {whyChooseUs[active].tag}
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Watermark number */}
+                <span className="absolute -bottom-5 -right-2 font-display text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.04]">
+                  {whyChooseUs[active].num}
+                </span>
+
+                {/* Ghost icon */}
+                <div className="absolute top-8 right-10 opacity-[0.05]">
+                  {React.createElement(whyChooseUs[active].icon, { size: 80, className: whyChooseUs[active].iconColor })}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 lg:px-10 bg-[#f8f9fb]">
+          <div className="container mx-auto max-w-7xl">
+
+            {/* ── SPLIT HERO PANEL ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid md:grid-cols-2 rounded-2xl overflow-hidden border border-slate-200 mb-3"
+            >
+              {/* Left — definition panel */}
+              <div className="bg-blue-50 px-12 py-14 relative overflow-hidden border-r border-blue-100">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-blue-200/30 rounded-full blur-[60px] pointer-events-none" />
+                <span className="text-[10px] font-bold tracking-[.3em] uppercase text-blue-600 mb-5 block">
+                  Content Strategy
+                </span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                  What is{" "}
+                  <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text font-medium text-transparent">
+                    Content Marketing
+                  </span> ?
+                </h2>
+                <p className="text-sm md:text-base text-slate-700 font-medium leading-[1.85] border-l-[3px] border-blue-200 pl-4 mb-8">
+                  A strategic approach focused on creating and distributing valuable, relevant content to attract and retain a clearly defined audience — building trust long before a sale.
+                </p>
+                <div className="flex gap-8">
+                  {[
+                    { val: "3×", label: "More Leads", color: "text-blue-600" },
+                    { val: "62%", label: "Lower Cost", color: "text-violet-600" },
+                    { val: "6×", label: "Conversion Rate", color: "text-orange-500" },
+                  ].map((s) => (
+                    <div key={s.label}>
+                      <div className={`font-display text-2xl font-black leading-none mb-1 ${s.color}`}>
+                        {s.val}
+                      </div>
+                      <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-700">
+                        {s.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right — why panel */}
+              <div className="bg-white px-12 py-14 flex flex-col justify-center gap-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.2em] text-blue-700 w-fit">
+                  <Sparkles className="w-3 h-3" /> The Organic Advantage
+                </div>
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900">
+                  Why Content Marketing{" "}
+                  <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                    Matters for Growth
+                  </span>
+                </h3>
+                <p className="text-sm md:text-base  text-slate-700 font-medium leading-[1.85]">
+                  Unlike traditional advertising, content marketing establishes your brand as an industry authority — generating qualified leads organically across the Madhya Pradesh business landscape.
+                </p>
+                <div className="w-12 h-[2px] bg-blue-600 rounded-full" />
+              </div>
+            </motion.div>
+
+            {/* ── BENEFIT GRID ── */}
+            <motion.div
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={staggerContainer}
+            >
+              {whyMatters.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={cardAnimation}
+                  whileHover={{ y: -4, boxShadow: "0 16px 40px rgba(0,0,0,0.08)" }}
+                  transition={{ duration: 0.25 }}
+                  className={`group relative flex flex-col rounded-2xl p-8 border-[1.5px] overflow-hidden cursor-default transition-all duration-300 ${item.bg} ${item.border}`}
+                >
+                  <div className={`w-11 h-11 rounded-[13px] flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${item.iconBg}`}>
+                    {item.icon}
+                  </div>
+
+                  <span className={`text-[10px] font-bold tracking-[.18em] uppercase mb-2 ${item.num}`}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-2">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm md:text-base font-medium leading-[1.85] text-slate-800 flex-1 mb-5">
+                    {item.desc}
+                  </p>
+
+                  <div className={`h-[2.5px] w-7 rounded-full group-hover:w-full transition-all duration-500 ${item.bar}`} />
+
+                  <span className={`absolute bottom-0 right-2 font-display text-[5rem] font-black italic leading-none pointer-events-none select-none opacity-[0.06] group-hover:opacity-[0.13] transition-opacity ${item.num}`}>
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
+
+          </div>
+        </section>
+
+        {/* Our Services */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+                Our{" "}
+                <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                  Services
+                </span>
+              </h2>
+            </div>
+
+            <HorizontalServiceList services={services} />
+
+          </div>
+        </section>
+
+        <QuoteSection
+          quote="Content that informs, engages, and drives measurable results." />
+
+        {/* CTA */}
+        <CTASection
+          title={<>Ready to Transform <br className="hidden md:block" /> Your Content Strategy?</>}
+          description={<>Let's create content that drives real business results.<br className="hidden md:block" /> Get a free content audit today.</>}
+          buttonText="Get Your Free Content Audit"
+        />
+      </div>
+    </>
+
   );
 };
 

@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { staggerContainer, fadeUp, cardAnimation, fadeLeft } from "@/components/ui/animation";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
@@ -179,338 +180,346 @@ const ORMServices = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafafa] selection:bg-primary/10">
+    <>
+      <SEO
+        title="Online Reputation Management Services | Socio Bhaarat"
+        description="Protect and enhance your brand image with effective online reputation management strategies."
+        keywords="orm services, online reputation management, brand reputation, review management, orm services in jabalpur"
+      />
+      <div className="min-h-screen bg-[#fafafa] selection:bg-primary/10">
 
-      {/* HERO SECTION */}
-      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
-        {/* 1. TECHNICAL BACKGROUND DESIGN */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Grid Overlay - Matches Brand Protection Lab */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+        {/* HERO SECTION */}
+        <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+          {/* 1. TECHNICAL BACKGROUND DESIGN */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {/* Grid Overlay - Matches Brand Protection Lab */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Atmospheric Mesh Blobs */}
-          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-        </div>
-
-        {/* 2. MAIN CONTENT GRID */}
-        <div className="container mx-auto px-4 relative z-10 mt-12">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-
-            {/* LEFT COLUMN: Narrat ive (Text Upwards) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-7 space-y-8 text-left"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Shield className="w-3 h-3" /> Secure Your Digital Legacy
-              </div>
-
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                Online <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Reputation Management</span>
-              </h1>
-
-              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
-                Supporting professionals such as CAs, advocates, doctors, and professors in maintaining a strong and credible online presence across Google and social media platforms.
-              </p>
-
-              <div className="flex justify-start pt-4">
-                <Button
-                  size="lg"
-                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
-                  onClick={() => navigate("/contact")}
-                >
-                  Protect Your Brand <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, x: 30 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 1 }}
-              className="lg:col-span-5 relative hidden lg:block"
-            >
-              <div className="relative group">
-                {/* Decorative Glow behind image */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
-
-                <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1766853297154-3dcb4d3b38f8"
-                    alt="Brand Reputation Dashboard"
-                    className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
-                  />
-
-                  {/* Floating Mini-Metric Overlay */}
-                  <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
-                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Sentiment Score</p>
-                    <p className="text-xl font-black text-slate-900">98.4% Positive</p>
-                  </div>
-                </div>
-
-                {/* Framed Layer - Matching the "Legacy" section rotation */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
-              </div>
-            </motion.div>
-
+            {/* Atmospheric Mesh Blobs */}
+            <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
           </div>
-        </div>
-      </section>
 
-      {/* Why Choose Us */}
-      <section className="py-12 lg:px-8 bg-[#f8f7f4] relative overflow-hidden">
-        <motion.div
-          className="container mx-auto max-w-7xl relative z-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={staggerContainer}
-        >
-          {/* Header */}
-          <motion.div variants={fadeUp} className=" max-w-7xl mx-auto mb-14 space-y-4">
-            <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
-              The SocioBhaarat Advantage
-            </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
-              Why Brands{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                Trust Us
-              </span>
-            </h2>
-            <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed mx-auto ">
-              We combine strategic monitoring and professional response management to protect and enhance your brand's image across Madhya Pradesh.
-            </p>
-          </motion.div>
+          {/* 2. MAIN CONTENT GRID */}
+          <div className="container mx-auto px-4 relative z-10 mt-12">
+            <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-          {/* Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {whyChooseUs.map((item, index) => (
+              {/* LEFT COLUMN: Narrat ive (Text Upwards) */}
               <motion.div
-                key={index}
-                variants={cardAnimation}
-                whileHover={{ y: -4, transition: { duration: 0.25 } }}
-                className={`group relative p-8 rounded-2xl border-[1.5px] flex flex-col transition-shadow duration-300 hover:shadow-xl ${item.card}`}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-7 space-y-8 text-left"
               >
-                {/* Icon */}
-                <div className={`w-12 h-12 rounded-[14px] flex items-center justify-center mb-5 ${item.iconWrap}`}>
-                  {item.icon}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                  <Shield className="w-3 h-3" /> Secure Your Digital Legacy
                 </div>
 
-                {/* <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-2 ${item.num_color}`}>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  Online <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Reputation Management</span>
+                </h1>
+
+                <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                  Supporting professionals such as CAs, advocates, doctors, and professors in maintaining a strong and credible online presence across Google and social media platforms.
+                </p>
+
+                <div className="flex justify-start pt-4">
+                  <Button
+                    size="lg"
+                    className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                    onClick={() => navigate("/contact")}
+                  >
+                    Protect Your Brand <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
+
+              {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 1 }}
+                className="lg:col-span-5 relative hidden lg:block"
+              >
+                <div className="relative group">
+                  {/* Decorative Glow behind image */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
+                  <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1766853297154-3dcb4d3b38f8"
+                      alt="Brand Reputation Dashboard"
+                      className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                    />
+
+                    {/* Floating Mini-Metric Overlay */}
+                    <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                      <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Sentiment Score</p>
+                      <p className="text-xl font-black text-slate-900">98.4% Positive</p>
+                    </div>
+                  </div>
+
+                  {/* Framed Layer - Matching the "Legacy" section rotation */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
+                </div>
+              </motion.div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-12 lg:px-8 bg-[#f8f7f4] relative overflow-hidden">
+          <motion.div
+            className="container mx-auto max-w-7xl relative z-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+            {/* Header */}
+            <motion.div variants={fadeUp} className=" max-w-7xl mx-auto mb-14 space-y-4">
+              <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
+                The SocioBhaarat Advantage
+              </span>
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+                Why Brands{" "}
+                <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                  Trust Us
+                </span>
+              </h2>
+              <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed mx-auto ">
+                We combine strategic monitoring and professional response management to protect and enhance your brand's image across Madhya Pradesh.
+              </p>
+            </motion.div>
+
+            {/* Cards Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {whyChooseUs.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={cardAnimation}
+                  whileHover={{ y: -4, transition: { duration: 0.25 } }}
+                  className={`group relative p-8 rounded-2xl border-[1.5px] flex flex-col transition-shadow duration-300 hover:shadow-xl ${item.card}`}
+                >
+                  {/* Icon */}
+                  <div className={`w-12 h-12 rounded-[14px] flex items-center justify-center mb-5 ${item.iconWrap}`}>
+                    {item.icon}
+                  </div>
+
+                  {/* <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-2 ${item.num_color}`}>
                   {item.num}
                 </span> */}
 
-                {/* Title */}
-                <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-3 leading-snug ">
-                  {item.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-3 leading-snug ">
+                    {item.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-sm md:text-base font-medium text-slate-900 leading-[1.8] flex-1 mb-5">
-                  {item.desc}
-                </p>
-
-                {/* Tag */}
-                <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.18em] ${item.tag_color}`}>
-                  <span className={`w-[5px] h-[5px] rounded-full flex-shrink-0 ${item.dot}`} />
-                  {item.tag}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Pull Quote */}
-          <motion.div
-            variants={fadeUp}
-            className="mt-12 px-2 py-10 rounded-2xl bg-white border border-slate-200 text-center max-w-4xl mx-auto relative"
-          >
-            <span className="font-display text-[64px] font-extrabold text-slate-100 absolute top-[-14px] left-8 leading-none select-none">
-              "
-            </span>
-            <p className="text-sm md:text-lg text-slate-700 leading-[1.9] font-medium italic relative z-10">
-              Built on the psychology of trust and the architecture of performance. We are Bhopal and Jabalpur's leading authority in digital reputation security.
-            </p>
-            <div className="w-9 h-[2.5px] bg-gradient-to-r from-blue-600 to-violet-600 rounded-full mx-auto mt-5" />
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* Why ORM Matters */}
-      <section className="py-12 lg:px-10 bg-[#fafafa] relative overflow-hidden">
-        <motion.div
-          className="container mx-auto max-w-7xl relative z-10 flex flex-col min-h-[90vh] justify-between gap-16"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={staggerContainer}
-        >
-
-          {/* Header */}
-          <motion.div variants={fadeUp} className="text-center max-w-4xl mx-auto flex flex-col items-center gap-5">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/7 text-blue-600 text-[10px] font-bold uppercase tracking-widest border border-blue-200">
-              <TrendingUp className="w-3 h-3" />
-              Market Authority & Revenue
-            </div>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900">
-              The Science of <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                Digital Trust
-              </span>
-            </h2>
-            <p className="text-sm md:text-[15px] text-slate-500 font-medium italic leading-[1.85] max-w-2xl">
-              "In today's digital world, customers trust online reviews as much as personal recommendations. A single negative search result can divert 70% of potential leads to your competitors."
-            </p>
-          </motion.div>
-
-          {/* Main Grid */}
-          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-5 items-stretch flex-1">
-
-            {/* Left Panel */}
-            <motion.div
-              variants={fadeLeft}
-              className="bg-white rounded-[1.75rem] border border-slate-300 py-10 px-5 lg:p-12 flex flex-col justify-between gap-8"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-orange-500/8 flex items-center justify-center text-orange-600">
-                <ShieldCheck className="w-7 h-7" />
-              </div>
-
-              <div className="flex flex-col gap-5 flex-1 justify-center">
-                <h3 className="font-display text-xl md:text-[1.65rem] font-bold text-slate-900 ">
-                  Protecting Your Local Market Dominance
-                </h3>
-                <p className="text-sm md:text-base text-slate-900 font-medium ">
-                  Online Reputation Management ensures your business maintains a positive image, builds customer trust, and stays ahead of competitors across{" "}
-                  <strong className="text-slate-900  font-semibold">Bhopal & Jabalpur</strong>.
-                  Every review, mention, and search result shapes how potential customers perceive your brand — before they ever contact you.
-                </p>
-                <p className="text-sm md:text-base text-slate-900 font-medium ">
-                  We combine data-driven monitoring with strategic content publishing to keep your digital footprint clean, credible, and compelling at all times.
-                </p>
-              </div>
-
-              <div>
-                <div className="border-t border-slate-50 pt-5">
-                  <p className="text-[11px] font-bold text-primary uppercase tracking-widest flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    Live Reputation Monitoring Active
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Bento Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {WhyORMMatters.map((item, i) => (
-                <motion.div
-                  key={i}
-                  variants={cardAnimation}
-                  whileHover={{ y: -6 }}
-                  className={" border border-slate-300 rounded-[1.5rem] p-7 lg:p-8 flex flex-col gap-3 group hover:shadow-[0_16px_48px_rgba(37,99,235,0.08)] hover:border-blue-200/60 transition-all duration-300 cursor-default"}
-                  style={{ backgroundColor: item.bg }}
-                >
-                  <div className="flex justify-between items-start">
-                    <span className="font-display text-[2rem] lg:text-[2.2rem] font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                      {item.stat}
-                    </span>
-                    <div className="w-8 h-8 rounded-xl bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                      <Check size={14} className="text-slate-300 group-hover:text-blue-500 transition-colors" strokeWidth={2.5} />
-                    </div>
-                  </div>
-                  <p className="text-base font-bold text-slate-800 ">
-                    {item.label}
-                  </p>
-                  <p className="text-sm md:text-base text-slate-900 group-hover:text-slate-700 transition-colors font-medium">
+                  {/* Description */}
+                  <p className="text-sm md:text-base font-medium text-slate-900 leading-[1.8] flex-1 mb-5">
                     {item.desc}
                   </p>
+
+                  {/* Tag */}
+                  <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.18em] ${item.tag_color}`}>
+                    <span className={`w-[5px] h-[5px] rounded-full flex-shrink-0 ${item.dot}`} />
+                    {item.tag}
+                  </div>
                 </motion.div>
               ))}
             </div>
 
-          </div>
-
-          {/* Footer Pill */}
-          <motion.div variants={fadeUp} className="text-center">
-            <div className="inline-block p-[3px] rounded-full bg-slate-100">
-              <div className="px-6 py-2 rounded-full bg-white border border-slate-200">
-                <p className="text-xs font-bold text-slate-600 tracking-wide">
-                  Leading the digital shift across{" "}
-                  <span className="text-primary underline decoration-primary/30 underline-offset-4">
-                    Madhya Pradesh
-                  </span>.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-        </motion.div>
-      </section>
-
-      {/* OUR SERVICES (GLASS GRID) */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto max-w-6xl px-4">
-
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-              Our{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
-                Services
+            {/* Pull Quote */}
+            <motion.div
+              variants={fadeUp}
+              className="mt-12 px-2 py-10 rounded-2xl bg-white border border-slate-200 text-center max-w-4xl mx-auto relative"
+            >
+              <span className="font-display text-[64px] font-extrabold text-slate-100 absolute top-[-14px] left-8 leading-none select-none">
+                "
               </span>
-            </h2>
-          </div>
+              <p className="text-sm md:text-lg text-slate-700 leading-[1.9] font-medium italic relative z-10">
+                Built on the psychology of trust and the architecture of performance. We are Bhopal and Jabalpur's leading authority in digital reputation security.
+              </p>
+              <div className="w-9 h-[2.5px] bg-gradient-to-r from-blue-600 to-violet-600 rounded-full mx-auto mt-5" />
+            </motion.div>
+          </motion.div>
+        </section>
 
-          <HorizontalServiceList services={services} />
+        {/* Why ORM Matters */}
+        <section className="py-12 lg:px-10 bg-[#fafafa] relative overflow-hidden">
+          <motion.div
+            className="container mx-auto max-w-7xl relative z-10 flex flex-col min-h-[90vh] justify-between gap-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
 
-        </div>
-      </section>
-
-      {/* INCLUSIONS (CHECKLIST) */}
-      <section className="py-12 bg-[#f8f9fb] border-y border-border">
-        <div className="container mx-auto max-w-4xl">
-
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold italic tracking-tight text-slate-900 mb-2">
-              Enterprise-Grade Coverage
-            </h2>
-            <p className="text-sm text-slate-400">
-              Everything included — no hidden add-ons, no surprises.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-1">
-            {whatIncluded.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 px-5 py-[14px] rounded-xl bg-white border border-slate-100 hover:border-emerald-200 hover:shadow-[0_2px_12px_rgba(16,185,129,0.07)] transition-all duration-200 group cursor-default"
-              >
-                <div className="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500 transition-colors duration-200">
-                  <Check
-                    size={13}
-                    className="text-emerald-500 group-hover:text-white transition-colors duration-200"
-                    strokeWidth={2.5}
-                  />
-                </div>
-                <span className="text-md md:text-base font-medium text-slate-900 group-hover:text-slate-900 transition-colors duration-200">
-                  {item}
-                </span>
+            {/* Header */}
+            <motion.div variants={fadeUp} className="text-center max-w-4xl mx-auto flex flex-col items-center gap-5">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/7 text-blue-600 text-[10px] font-bold uppercase tracking-widest border border-blue-200">
+                <TrendingUp className="w-3 h-3" />
+                Market Authority & Revenue
               </div>
-            ))}
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900">
+                The Science of <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                  Digital Trust
+                </span>
+              </h2>
+              <p className="text-sm md:text-[15px] text-slate-500 font-medium italic leading-[1.85] max-w-2xl">
+                "In today's digital world, customers trust online reviews as much as personal recommendations. A single negative search result can divert 70% of potential leads to your competitors."
+              </p>
+            </motion.div>
+
+            {/* Main Grid */}
+            <div className="grid lg:grid-cols-[1fr_1.5fr] gap-5 items-stretch flex-1">
+
+              {/* Left Panel */}
+              <motion.div
+                variants={fadeLeft}
+                className="bg-white rounded-[1.75rem] border border-slate-300 py-10 px-5 lg:p-12 flex flex-col justify-between gap-8"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-orange-500/8 flex items-center justify-center text-orange-600">
+                  <ShieldCheck className="w-7 h-7" />
+                </div>
+
+                <div className="flex flex-col gap-5 flex-1 justify-center">
+                  <h3 className="font-display text-xl md:text-[1.65rem] font-bold text-slate-900 ">
+                    Protecting Your Local Market Dominance
+                  </h3>
+                  <p className="text-sm md:text-base text-slate-900 font-medium ">
+                    Online Reputation Management ensures your business maintains a positive image, builds customer trust, and stays ahead of competitors across{" "}
+                    <strong className="text-slate-900  font-semibold">Bhopal & Jabalpur</strong>.
+                    Every review, mention, and search result shapes how potential customers perceive your brand — before they ever contact you.
+                  </p>
+                  <p className="text-sm md:text-base text-slate-900 font-medium ">
+                    We combine data-driven monitoring with strategic content publishing to keep your digital footprint clean, credible, and compelling at all times.
+                  </p>
+                </div>
+
+                <div>
+                  <div className="border-t border-slate-50 pt-5">
+                    <p className="text-[11px] font-bold text-primary uppercase tracking-widest flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      Live Reputation Monitoring Active
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Bento Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {WhyORMMatters.map((item, i) => (
+                  <motion.div
+                    key={i}
+                    variants={cardAnimation}
+                    whileHover={{ y: -6 }}
+                    className={" border border-slate-300 rounded-[1.5rem] p-7 lg:p-8 flex flex-col gap-3 group hover:shadow-[0_16px_48px_rgba(37,99,235,0.08)] hover:border-blue-200/60 transition-all duration-300 cursor-default"}
+                    style={{ backgroundColor: item.bg }}
+                  >
+                    <div className="flex justify-between items-start">
+                      <span className="font-display text-[2rem] lg:text-[2.2rem] font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                        {item.stat}
+                      </span>
+                      <div className="w-8 h-8 rounded-xl bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                        <Check size={14} className="text-slate-300 group-hover:text-blue-500 transition-colors" strokeWidth={2.5} />
+                      </div>
+                    </div>
+                    <p className="text-base font-bold text-slate-800 ">
+                      {item.label}
+                    </p>
+                    <p className="text-sm md:text-base text-slate-900 group-hover:text-slate-700 transition-colors font-medium">
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+
+            </div>
+
+            {/* Footer Pill */}
+            <motion.div variants={fadeUp} className="text-center">
+              <div className="inline-block p-[3px] rounded-full bg-slate-100">
+                <div className="px-6 py-2 rounded-full bg-white border border-slate-200">
+                  <p className="text-xs font-bold text-slate-600 tracking-wide">
+                    Leading the digital shift across{" "}
+                    <span className="text-primary underline decoration-primary/30 underline-offset-4">
+                      Madhya Pradesh
+                    </span>.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+          </motion.div>
+        </section>
+
+        {/* OUR SERVICES (GLASS GRID) */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+                Our{" "}
+                <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                  Services
+                </span>
+              </h2>
+            </div>
+
+            <HorizontalServiceList services={services} />
+
           </div>
+        </section>
 
-        </div>
-      </section>
+        {/* INCLUSIONS (CHECKLIST) */}
+        <section className="py-12 bg-[#f8f9fb] border-y border-border">
+          <div className="container mx-auto max-w-4xl">
 
-      <QuoteSection quote="In the digital age, your reputation is the currency of trust—we ensure your brand never goes bankrupt." />
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-extrabold italic tracking-tight text-slate-900 mb-2">
+                Enterprise-Grade Coverage
+              </h2>
+              <p className="text-sm text-slate-400">
+                Everything included — no hidden add-ons, no surprises.
+              </p>
+            </div>
 
-      {/* FINAL CTA */}
-      <CTASection
-        title={<>What Does the Internet <br className="hidden sm:block" /> Say About You?</>}
-        description={<>Get a free 24-hour reputation audit and <br className="hidden sm:block" />see how your brand ranks in Bhopal & Jabalpur.</>}
-        buttonText="Claim Free Reputation Audit"
-      />
-    </div>
+            <div className="grid md:grid-cols-2 gap-1">
+              {whatIncluded.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 px-5 py-[14px] rounded-xl bg-white border border-slate-100 hover:border-emerald-200 hover:shadow-[0_2px_12px_rgba(16,185,129,0.07)] transition-all duration-200 group cursor-default"
+                >
+                  <div className="w-7 h-7 rounded-lg bg-emerald-50 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500 transition-colors duration-200">
+                    <Check
+                      size={13}
+                      className="text-emerald-500 group-hover:text-white transition-colors duration-200"
+                      strokeWidth={2.5}
+                    />
+                  </div>
+                  <span className="text-md md:text-base font-medium text-slate-900 group-hover:text-slate-900 transition-colors duration-200">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        <QuoteSection quote="In the digital age, your reputation is the currency of trust—we ensure your brand never goes bankrupt." />
+
+        {/* FINAL CTA */}
+        <CTASection
+          title={<>What Does the Internet <br className="hidden sm:block" /> Say About You?</>}
+          description={<>Get a free 24-hour reputation audit and <br className="hidden sm:block" />see how your brand ranks in Bhopal & Jabalpur.</>}
+          buttonText="Claim Free Reputation Audit"
+        />
+      </div>
+    </>
+
 
   );
 };
