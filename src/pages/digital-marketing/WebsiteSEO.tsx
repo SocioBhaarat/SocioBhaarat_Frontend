@@ -39,7 +39,7 @@ const WebsiteSEO = () => {
     },
     {
       icon: <BarChart3 />,
-      color: "#4338ca", // Indigo
+      color: "#38BDF8", // Indigo
       title: "SEO Analytics & KPI Tracking",
       desc: "Transparent, real-time data visualization of your search performance. We track traffic quality, keyword rankings, and conversion metrics to provide a clear view of your growth and ROI.",
     },

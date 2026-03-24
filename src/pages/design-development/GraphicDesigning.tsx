@@ -20,13 +20,6 @@ import { useNavigate } from "react-router-dom";
 const GraphicDesigning = () => {
   const navigate = useNavigate();
 
-  /* DATA VARIABLES */
-  const heroData = {
-    heading: "Visual Identities That Capture Hearts and Drive Growth",
-    subtext: "We create stunning, high-impact designs that reflect your brand's unique essence and build a deep connection with your target audience across every digital and physical touchpoint.",
-    cta: "Start Your Design Project",
-  };
-
   const whyChoosePoints = [
     {
       title: "Bespoke Brand Identities",
@@ -72,7 +65,7 @@ const GraphicDesigning = () => {
   const services = [
     {
       title: "Brand Identity & Logo Design",
-      color: "#2563eb", // Blue
+      color: "#C2410C", // Blue
       icon: <Palette className="w-6 h-6" />,
       desc: "We engineer comprehensive visual identity systems, crafting iconic logos, bespoke typography, and strategic color palettes that establish a powerful market presence and ensure long-term brand recognition across all digital touchpoints."
     },

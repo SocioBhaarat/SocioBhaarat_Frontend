@@ -11,61 +11,12 @@ import { useNavigate } from "react-router-dom";
 import { CTASection } from "@/components/ui/CTASection";
 import ServiceList from "@/components/ui/ServiceList";
 import TechGrid from "@/components/ui/TechGrid";
-import { useEffect, useRef, useState } from "react";
-import MatrixLayout from "@/components/ui/MatrixLayout";
 import ProcessSection from "@/components/DevelopmentProcess";
 import FeatureGrid from "@/components/ui/FeatureGrid";
 import SEO from "@/components/SEO";
 
 const AppDevelopment = () => {
   const navigate = useNavigate();
-  const [activePhase, setActivePhase] = useState(0);
-  const [isIntersecting, setIsIntersecting] = useState(false); // Check if section is visible
-  const scrollRef = useRef(null);
-  const sectionRef = useRef(null);
-  // Reference for the whole section
-
-  // 1. Observer: Check if user is looking at this section
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.3 } // 30% section dikhne par hi start hoga
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // 2. Conditional Auto-play Logic (Only runs if visible)
-  useEffect(() => {
-    if (!isIntersecting) return; // Agar screen pe nahi hai toh timer mat chalao
-
-    const timer = setInterval(() => {
-      setActivePhase((prev) => (prev + 1) % process.length);
-    }, 4000);
-
-    return () => clearInterval(timer);
-  }, [isIntersecting]); // Dependency on visibility
-
-  // 3. Responsive Scroll Sync (Horizontal Only)
-  useEffect(() => {
-    if (scrollRef.current && isIntersecting) {
-      const activeItem = scrollRef.current.children[activePhase];
-      if (activeItem) {
-        // block: "nearest" page scroll ko disturb nahi karta
-        activeItem.scrollIntoView({
-          behavior: "smooth",
-          inline: "center",
-          block: "nearest"
-        });
-      }
-    }
-  }, [activePhase, isIntersecting]);
 
   /* DATA */
   const process = [
@@ -101,7 +52,7 @@ const AppDevelopment = () => {
     },
     {
       title: "App Store Deployment",
-      color: "#059669", // Green
+      color: "#38BDF8", // Green
       desc: "Navigating the complexities of the Apple App Store and Google Play Store submission processes, ensuring all metadata, assets, and privacy policies comply with platform-specific guidelines."
     },
     {

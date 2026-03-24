@@ -39,7 +39,7 @@ const SocialMedia = () => {
     },
     {
       icon: <Users />,
-      color: "#4338ca", // Indigo
+      color: "#38BDF8", // Indigo
       title: "Influencer Marketing",
       desc: "Identifying and partnering with the right creators to amplify your brand. We manage the entire process — from outreach and contract negotiation to campaign execution and performance tracking.",
     },

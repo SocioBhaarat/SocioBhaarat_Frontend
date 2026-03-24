@@ -40,7 +40,7 @@ const PaidMarketing = () => {
     },
     {
       icon: <ShoppingBag />,
-      color: "#4338ca",
+      color: "#38BDF8",
       title: "Shopping & E-commerce Ads",
       desc: "Google Shopping and Performance Max campaigns that put your products in front of ready-to-buy customers — with optimised product feeds, pricing strategy, and conversion tracking.",
     },

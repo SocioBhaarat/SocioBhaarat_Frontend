@@ -102,7 +102,7 @@ const WordPressDevelopment = () => {
     },
     {
       title: "Performance Optimization",
-      color: "#059669", // Green
+      color: "#38BDF8", // Green
       desc: "Optimizing database queries, caching layers, and Core Web Vitals to achieve lightning-fast load times and superior SEO rankings."
     },
     {

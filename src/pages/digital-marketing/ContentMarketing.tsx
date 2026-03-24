@@ -145,7 +145,7 @@ const ContentMarketing = () => {
     },
     {
       icon: <Zap />,
-      color: "#047857",
+      color: "#38BDF8",
       title: "Conversion Copywriting",
       desc: "High-converting landing page copy, ad headlines, and CTAs engineered to turn traffic into revenue — every word tested, intentional, and placed to drive the next action.",
     },

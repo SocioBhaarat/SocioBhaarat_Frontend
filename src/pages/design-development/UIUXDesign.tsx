@@ -123,7 +123,7 @@ const UIUXDesign = () => {
     {
       id: "04",
       title: "Wireframing",
-      color: "#ec4899", // Pink 500
+      color: "#C2410C", // Pink 500
       desc: "Creating low-fidelity blueprints to focus on functionality over aesthetics. This allows us to iterate quickly on user experience without visual distractions.",
       icon: <MousePointer2 className="w-6 h-6" />,
     },

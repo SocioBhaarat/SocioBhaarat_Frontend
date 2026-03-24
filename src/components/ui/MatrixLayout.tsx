@@ -207,7 +207,7 @@ function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProp
                   key={`bar-mobile-${activePhase}`}
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
-                  transition={{ duration: 4, ease: "linear" }}
+                  transition={{ duration: 3, ease: "linear" }}
                   className="h-full bg-white"
                 />
               </div>
@@ -272,7 +272,7 @@ function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProp
                   key={`bar-${activePhase}`}
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
-                  transition={{ duration: 4, ease: "linear" }}
+                  transition={{ duration: 3, ease: "linear" }}
                   className="h-full bg-white shadow-[0_0_12px_rgba(255,255,255,0.6)]"
                 />
               </div>

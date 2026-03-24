@@ -39,7 +39,7 @@ const GoogleMapMarketing = () => {
     },
     {
       icon: <CheckCircle2 />,
-      color: "#4338ca", // Indigo
+      color: "#38BDF8", // Indigo
       title: "NAP Consistency & Data Integrity",
       desc: "Standardizing your Name, Address, and Phone number across the entire digital ecosystem to eliminate ranking-suppressing data conflicts and improve crawl trust.",
     },

@@ -39,7 +39,7 @@ const ORMServices = () => {
     },
     {
       icon: <Shield />,
-      color: "#4338ca",
+      color: "#38BDF8",
       title: "Brand Image Building",
       desc: "Creating and distributing authority-driven content — press releases, thought leadership articles, and case studies — that strengthens your credibility and positions your brand as the leading name in your industry.",
     },
