@@ -414,7 +414,7 @@ const WebsiteSEO = () => {
 
         <CTASection
           title={<>Ready to Rank #1 <br className="hidden md:block" /> Your Vision?</>}
-          description={<>Get a comprehensive SEO audit and a custom-built growth strategy for your brand in <span className="underline decoration-white/30 underline-offset-8">Bhopal & Jabalpur</span>.</>}
+          description={<>Get a comprehensive SEO audit and a custom-built growth strategy for your brand in <span className="underline decoration-white/30 underline-offset-8">India</span>.</>}
           buttonText="Claim Your Free Audit"
         />
 

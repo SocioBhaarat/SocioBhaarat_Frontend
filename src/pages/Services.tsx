@@ -152,27 +152,11 @@ const Services = () => {
       items: [
         {
           icon: <MessageSquare className="h-7 w-7" />,
-          title: "Bulk Broadcasting",
-          description: "Reach thousands of customers instantly via official WhatsApp API.",
-          features: ["Verified Templates", "Campaign Scheduling", "Analytics"],
-          path: "/whatsapp-marketing/bulk-broadcasting",
+          title: "WhatsApp Business API",
+          description: "Integrate WhatsApp's official API to automate, scale, and manage customer conversations seamlessly.",
+          features: ["Official API Access", "Multi-Agent Support", "Webhook Integration"],
+          path: "/whatsapp-business-api",
           gradient: "green" as const,
-        },
-        {
-          icon: <Bot className="h-7 w-7" />,
-          title: "Custom Chatbot",
-          description: "24/7 automated support and lead qualification using smart AI flows.",
-          features: ["CRM Integration", "Auto-Replies", "Lead Gen Bots"],
-          path: "/whatsapp-marketing/custom-chatbot",
-          gradient: "blue" as const,
-        },
-        {
-          icon: <ShieldCheck className="h-7 w-7" />,
-          title: "Number Verification",
-          description: "Audit and clean your database to ensure high delivery and low bounce rates.",
-          features: ["Active Status Check", "Bulk Filtering", "API Integration"],
-          path: "/whatsapp-marketing/number-verification",
-          gradient: "orange" as const,
         },
       ]
     }

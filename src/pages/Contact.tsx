@@ -143,7 +143,7 @@ const Contact = () => {
                     hoverBg: "group-hover:bg-orange-500"
                   },
                   {
-                    href: "https://wa.me/919589581364",
+                    href: "https://wa.me/+919407448837 ",
                     icon: MessageCircle,
                     label: "WhatsApp",
                     val: "Chat with us instantly",
@@ -178,7 +178,7 @@ const Contact = () => {
 
                 {/* Location Card - Special handling for multiline address */}
                 <motion.a
-                  href="https://maps.google.com"
+                  href="https://maps.app.goo.gl/4J91yBhEtNHJ6EpV6"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ x: 4 }}
@@ -247,7 +247,7 @@ const Contact = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-2">
                           <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Full Name *</label>
-                          <Input name="name" required placeholder="Socio Bhaarat" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 focus:border-primary transition-all text-sm md:text-base font-light" />
+                          <Input name="name" required placeholder="Enter Your Full Name" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 focus:border-primary transition-all text-sm md:text-base" />
                         </div>
                         <div className="space-y-2">
                           <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Email Address *</label>
@@ -257,7 +257,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Phone Number</label>
-                        <Input type="tel" name="phone" placeholder="+91 98765 43210" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
+                        <Input type="tel" name="phone" placeholder="Enter Your Phone Number" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
                       </div>
 
                       <div className="space-y-2">

@@ -1,5 +1,4 @@
 import { Users, Target, Award, Lightbulb, Cpu, Eye, Globe, Layers, Smartphone, TrendingUp, Zap, Check } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 
@@ -73,9 +72,6 @@ const About = () => {
                     alt="Growth Engineering"
                     className="w-full h-auto object-cover rounded-[2rem] group-hover:scale-105 transition-transform duration-1000"
                   />
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-slate-900/80 backdrop-blur-md rounded-full border border-white/20 whitespace-nowrap">
-                    <p className="text-[10px] font-black text-white uppercase tracking-[0.2em]">System_Optimization_v3.0</p>
-                  </div>
                 </div>
               </motion.div>
 
@@ -157,9 +153,6 @@ const About = () => {
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 aspect-square lg:aspect-auto"
                       alt="Engineering Team"
                     />
-                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-slate-900/80 backdrop-blur-md rounded-full border border-white/20 whitespace-nowrap">
-                      <p className="text-[10px] font-black text-white uppercase tracking-[0.2em]">SB_LAB_UNIT_01</p>
-                    </div>
                   </div>
                 </div>
               </motion.div>

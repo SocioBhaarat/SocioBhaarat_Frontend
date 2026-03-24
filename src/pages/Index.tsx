@@ -40,7 +40,7 @@ const floatingBadges = [
     floatDelay: "0.5s",
     iconBg: "bg-green-100",
     icon: <CheckCircle className="w-4 h-4 text-green-600" />,
-    val: "98% Retention",
+    val: "80% Retention",
     sub: "Happy clients stay",
   },
   {
@@ -55,10 +55,10 @@ const floatingBadges = [
 ];
 
 const stats = [
-  { num: "200", suffix: "+", label: "Brands Grown Across India" },
+  { num: "50", suffix: "+", label: "Brands Grown Across India" },
   { num: "5", suffix: "×", label: "Average ROI Delivered" },
-  { num: "340", suffix: "%", label: "Avg. Organic Traffic Growth" },
-  { num: "8", suffix: "+", label: "Years of MP's Digital Excellence" },
+  { num: "170", suffix: "%", label: "Avg. Organic Traffic Growth" },
+  { num: "5", suffix: "+", label: "Years of MP's Digital Excellence" },
 ];
 
 const services = [
@@ -338,7 +338,7 @@ export default function Index() {
             <div className="mb-4">
               <motion.div custom={0.1} variants={fadeUp} initial="hidden" animate="visible">
                 <span className="inline-block bg-[#F5C518] text-slate-900 text-xs font-extrabold tracking-widest uppercase rounded-lg px-4 py-1 mb-3">
-                  AI-Powered &nbsp;✦&nbsp; Results-Driven
+                  AI-Powered &nbsp;✦&nbsp; Creativity &nbsp;✦&nbsp; Results-Driven
                 </span>
               </motion.div>
 
@@ -362,7 +362,7 @@ export default function Index() {
               className="flex flex-wrap justify-center gap-4 mt-8 mb-6"
             >
               <motion.a
-                href="#contact"
+                onClick={() => window.open("https://wa.me/+919407448837 ", "_blank")}
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 pl-2 pr-7 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-['DM_Sans'] font-bold text-sm transition-colors shadow-lg shadow-blue-200"
@@ -501,9 +501,9 @@ export default function Index() {
                 <div className="flex flex-col border border-slate-100 rounded-2xl overflow-hidden w-full max-w-4xl mx-auto">
                   {[
                     { dot: "#F5A800", label: "Average revenue growth per client", val: "5×" },
-                    { dot: "#1B3A8C", label: "Total qualified leads delivered", val: "10,000+" },
+                    { dot: "#1B3A8C", label: "Total qualified leads delivered", val: "1 Lakh+" },
                     { dot: "#2196F3", label: "Total ad impressions generated", val: "10M+" },
-                    { dot: "#F5A800", label: "Long-term client retention rate", val: "94%" },
+                    { dot: "#F5A800", label: "Long-term client retention rate", val: "80%" },
                     { dot: "#1B3A8C", label: "Brands served across Bhopal & Jabalpur", val: "50+" },
                   ].map((row, i) => (
                     <div
@@ -554,7 +554,7 @@ export default function Index() {
                   },
                   {
                     icon: Users,
-                    val: "10k+",
+                    val: "1Lakh+",
                     label: "Leads Delivered",
                     sub: "Qualified leads across all campaigns",
                     bg: "bg-[#E8F0FB] border-[#1B3A8C]/20",
@@ -574,7 +574,7 @@ export default function Index() {
                   },
                   {
                     icon: Target,
-                    val: "94%",
+                    val: "80%",
                     label: "Client Retention",
                     sub: "Clients who renew month on month",
                     bg: "bg-[#FFF8E7] border-[#F5A800]/30",
@@ -623,7 +623,7 @@ export default function Index() {
 
                     {/* Watermark — hidden on mobile */}
                     <span
-                      className="hidden md:block absolute bottom-0 right-2 font-display text-[5rem] font-black italic leading-none pointer-events-none select-none opacity-[0.05] group-hover:opacity-[0.1] transition-opacity"
+                      className="hidden md:block absolute bottom-0 right-2 text-4xl font-black italic leading-none pointer-events-none select-none opacity-[0.05] group-hover:opacity-[0.1] transition-opacity"
                       style={{ color: s.valColor }}
                     >
                       {s.val}
@@ -667,12 +667,12 @@ export default function Index() {
                   </div>
 
                   <div>
-                    <p className="text-sm font-bold uppercase tracking-[.15em] text-slate-400 mb-2">
+                    {/* <p className="text-sm font-bold uppercase tracking-[.15em] text-slate-400 mb-2">
                       MP's Fastest Growing
-                    </p>
+                    </p> */}
                     <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.05]">
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-medium font-serif">
-                        Digital Agency
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
+                        Jabalpur and Bhopal Best Digital Marketing and IT Company
                       </span>
                     </h2>
                   </div>
@@ -700,7 +700,7 @@ export default function Index() {
                   <div className="space-y-4 text-base md:text-lg tracking-wide leading-relaxed text-muted-foreground">
                     <p className="border-l-4 border-primary/30 pl-4 md:pl-6 italic font-medium">
                       <strong>Socio Bhaarat</strong> is a performance-driven digital agency
-                      helping businesses across Madhya Pradesh scale with strategy, creativity,
+                      helping businesses across India scale with strategy, creativity,
                       and technology.
                     </p>
                     <p className="text-sm md:text-base font-medium">
@@ -746,18 +746,18 @@ export default function Index() {
                     className="rounded-full px-7 h-11 text-sm font-bold bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all hover:scale-105"
                     onClick={() => navigate("/contact")}
                   >
-                    Work With Us <ArrowRight className="ml-2 w-4 h-4" />
+                    Reach Out Us <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                   <Button
                     variant="outline"
-                    className="rounded-full px-7 h-11 text-sm font-bold border-2 border-primary/30 text-primary hover:bg-primary/5 transition-all"
-                    onClick={() => navigate("/contact")}
+                    className="rounded-full px-7 h-11 text-sm font-bold border-2 border-primary/30 text-primary hover:bg-primary/5 hover:text-primary transition-all"
+                    onClick={() => window.open("https://wa.me/+919407448837 ", "_blank")}
                   >
                     Book a Free Call
                   </Button>
                   <Button
                     variant="ghost"
-                    className="rounded-full px-5 h-11 text-sm font-bold text-muted-foreground hover:text-primary transition-all"
+                    className="rounded-full px-5 h-11 text-sm font-bold text-muted-foreground hover:text-white transition-all"
                     onClick={() => navigate("/about")}
                   >
                     Learn More →
@@ -1116,11 +1116,11 @@ export default function Index() {
         </section>
 
         {/* SERVICES */}
-        <section className="py-8 bg-background">
+        <section id="services" className="py-8 bg-background">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-20 space-y-4">
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Core</span> Ecosystem</h2>
-              <p className="text-muted-foreground text-md md:text-lg max-w-2xl mx-auto italic underline decoration-primary/30">Complete digital growth solutions tailored for Bhopal & Jabalpur.</p>
+              <p className="text-muted-foreground text-md md:text-lg max-w-2xl mx-auto italic underline decoration-primary/30">Complete WhatsApp marketing solutions tailored for every business across India </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1145,7 +1145,7 @@ export default function Index() {
 
         <CTASection
           title={<>Ready to Scale <br className="md:hidden" />Your <span className="underline decoration-white/30 underline-offset-4">Online Empire?</span></>}
-          description={<>Let's discuss how we can engineer your digital marketing goals and drive sustainable revenue across Madhya Pradesh.</>}
+          description={<>Let's discuss how we can engineer your digital marketing goals and drive sustainable revenue across India</>}
           buttonText="Claim Your Free Audit"
         />
       </div>

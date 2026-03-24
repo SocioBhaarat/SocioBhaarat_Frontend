@@ -22,9 +22,6 @@ import WordPressDevelopment from "./pages/design-development/WordPressDevelopmen
 import AppDevelopment from "./pages/design-development/AppDevelopment";
 import UIUXDesign from "./pages/design-development/UIUXDesign";
 import EcommerceDevelopment from "./pages/design-development/EcommerceDevelopment";
-import BulkBroadcasting from "./pages/whatsapp-business-api/BulkBroadcasting";
-import CustomChatbot from "./pages/whatsapp-business-api/CustomChatbot";
-import NumberVerification from "./pages/whatsapp-business-api/NumberVerification";
 import PerformanceMarketing from "./pages/performance-marketing/PerformanceMarketing";
 import DigitalMarketingPackages from "./pages/packages/DigitalMarketingPackages";
 import WebDevelopmentPackages from "./pages/packages/WebDevelopmentPackages";
@@ -45,7 +42,6 @@ import TermsAndConditions from "./pages/footer-pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/footer-pages/PrivacyPolicy";
 import RefundPolicy from "./pages/footer-pages/RefundPolicy";
 import WhatsappBusinessAPI from "./pages/whatsapp-business-api/WhatsappBusinessAPI";
-import Home from "./pages/Home.js"
 
 const queryClient = new QueryClient();
 
@@ -61,7 +57,6 @@ const App = () => (
         <Navigation />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/home" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/testimonials" element={<Testimonials />} />

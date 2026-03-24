@@ -245,7 +245,7 @@ const PaidMarketing = () => {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+                      src="/images/Paid-Marketing.webp"
                       alt="Performance Marketing ROI Dashboard"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />

@@ -225,9 +225,9 @@ const ContentMarketing = () => {
               <motion.div initial={{ opacity: 0, scale: 0.9, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ delay: 0.3, duration: 1 }} className="mt-10 lg:col-span-5 grid grid-cols-2 gap-4">
                 {[
                   { val: "500+", label: "Pieces Created", icon: <FileText /> },
-                  { val: "200+", label: "Happy Clients", icon: <Users /> },
+                  { val: "50+", label: "Happy Clients", icon: <Users /> },
                   { val: "85%", label: "Traffic Boost", icon: <TrendingUp /> },
-                  { val: "95%", label: "Retention Rate", icon: <Target /> }
+                  { val: "80%", label: "Retention Rate", icon: <Target /> }
                 ].map((stat, i) => (
                   <div key={i} className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
                     <div className="text-primary mb-4 group-hover:scale-110 transition-transform">{stat.icon}</div>
@@ -350,7 +350,7 @@ const ContentMarketing = () => {
               className="grid md:grid-cols-2 rounded-2xl overflow-hidden border border-slate-200 mb-3"
             >
               {/* Left — definition panel */}
-              <div className="bg-blue-50 px-12 py-14 relative overflow-hidden border-r border-blue-100">
+              <div className="bg-blue-50 px-10 py-14 relative overflow-hidden border-r border-blue-100">
                 <div className="absolute top-0 right-0 w-48 h-48 bg-blue-200/30 rounded-full blur-[60px] pointer-events-none" />
                 <span className="text-[10px] font-bold tracking-[.3em] uppercase text-blue-600 mb-5 block">
                   Content Strategy
@@ -383,11 +383,11 @@ const ContentMarketing = () => {
               </div>
 
               {/* Right — why panel */}
-              <div className="bg-white px-12 py-14 flex flex-col justify-center gap-5">
+              <div className="bg-white px-10 py-14 flex flex-col justify-center gap-5">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.2em] text-blue-700 w-fit">
                   <Sparkles className="w-3 h-3" /> The Organic Advantage
                 </div>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900">
+                <h3 className="font-display text-3xl md:text-4xl font-bold text-slate-900">
                   Why Content Marketing{" "}
                   <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                     Matters for Growth

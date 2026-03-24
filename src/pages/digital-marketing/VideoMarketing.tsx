@@ -293,7 +293,7 @@ const VideoMarketing = () => {
                                     {[
                                         { val: "500+", label: "Projects Delivered", color: "text-blue-600", bar: "bg-blue-600" },
                                         { val: "98%", label: "Client Satisfaction", color: "text-violet-600", bar: "bg-violet-600" },
-                                        { val: "94%", label: "Retention Rate", color: "text-orange-500", bar: "bg-orange-500" },
+                                        { val: "80%", label: "Retention Rate", color: "text-orange-500", bar: "bg-orange-500" },
                                         { val: "3.5×", label: "ROI Average", color: "text-teal-600", bar: "bg-teal-600" },
                                     ].map((s, i) => (
                                         <div

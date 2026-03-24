@@ -14,7 +14,7 @@ function WhatsappBusinessAPI() {
     {
       num: "01",
       icon: <ShieldCheck size={22} />,
-      title: "Official WhatsApp API Partner",
+      title: "WhatsApp API Partner",
       desc: "We provide verified, officially approved WhatsApp Business API access — giving your business the green tick badge and ensuring 100% compliant message delivery without risk of account bans.",
       bg: "bg-blue-50",
       border: "border-blue-200",
@@ -622,7 +622,7 @@ function WhatsappBusinessAPI() {
 
         <CTASection
           title={<>Ready to Reach Every Customer <br className="hidden sm:block" /> Instantly on WhatsApp?</>}
-          description={<>Get your WhatsApp Business API access in 24 hours — <br className="hidden sm:block" />no hidden fees, no long contracts, just results for your Bhopal & Jabalpur business.</>}
+          description={<>Get your WhatsApp Business API access in 24 hours — <br className="hidden sm:block" />no hidden fees, no long contracts, just results for your business.</>}
           buttonText="Get Free WhatsApp API Access"
         />
       </div>

@@ -285,7 +285,7 @@ const WebDevelopment = () => {
                 </h1>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
-                  From Bhopal and Jabalpur, we design and develop modern, responsive, and conversion-focused websites for businesses worldwide, helping them build a strong digital presence and achieve measurable growth.
+                  we design and develop modern, responsive, and conversion-focused websites for businesses worldwide, helping them build a strong digital presence and achieve measurable growth.
                 </p>
 
                 <div className="flex justify-start pt-4">

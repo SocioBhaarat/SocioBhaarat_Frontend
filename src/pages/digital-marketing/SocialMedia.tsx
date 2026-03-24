@@ -140,7 +140,7 @@ const SocialMedia = () => {
 
   const impact = [
     { number: "50+", label: "Brands Served" },
-    { number: "50K+", label: "Leads Generated" },
+    { number: "1Lakh+", label: "Leads Generated" },
     { number: "10M+", label: "Audience Reached" },
     { number: "80%", label: "Client Satisfaction" },
   ]

@@ -514,7 +514,7 @@ const ORMServices = () => {
         {/* FINAL CTA */}
         <CTASection
           title={<>What Does the Internet <br className="hidden sm:block" /> Say About You?</>}
-          description={<>Get a free 24-hour reputation audit and <br className="hidden sm:block" />see how your brand ranks in Bhopal & Jabalpur.</>}
+          description={<>Get a free 24-hour reputation audit and <br className="hidden sm:block" />see how your brand ranks in India</>}
           buttonText="Claim Free Reputation Audit"
         />
       </div>
