@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
-import { Calendar, User, ArrowLeft, Share2, Clock } from "lucide-react";
+import { Calendar, User, ArrowLeft, Share2, Clock, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const blogContent: Record<string, any> = {
   "seo-trends-2026": {
@@ -144,6 +145,7 @@ const blogContent: Record<string, any> = {
 const BlogPost = () => {
   const { postId } = useParams();
   const post = blogContent[postId || ""];
+  const [copied, setCopied] = useState(false);
 
   if (!post) {
     return (
@@ -158,24 +160,43 @@ const BlogPost = () => {
     );
   }
 
-  const handleShare = async () => {
-  const shareData = {
-    title: post.title,
-    text: `Check out this article: ${post.title}`,
-    url: window.location.href,
-  };
 
-  try {
-    if (navigator.share) {
-      await navigator.share(shareData);
-    } else {
-      await navigator.clipboard.writeText(window.location.href);
-      alert("Link copied to clipboard!");
+
+  const handleShare = async () => {
+    const url = window.location.href;
+
+    // Try native share (mostly mobile)
+    if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) {
+      try {
+        await navigator.share({
+          title: post.title,
+          text: `Check out this article: ${post.title}`,
+          url,
+        });
+        return;
+      } catch (error) {
+        // user cancelled — do nothing
+        return;
+      }
     }
-  } catch (error) {
-    console.error("Error sharing:", error);
-  }
-};
+
+    // Desktop fallback — copy to clipboard
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // clipboard API blocked — last resort
+      const el = document.createElement("input");
+      el.value = url;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
 
 
   return (
@@ -199,7 +220,7 @@ const BlogPost = () => {
           </div>
 
           {/* Safari iPhone Clipping Fix for Italic Heading */}
-          <h1 className="text-4xl md:text-7xl font-black text-slate-900 leading-[0.95] italic mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[0.95] italic mb-8">
             <span className="relative inline-block py-1 pr-4 -mr-4 overflow-visible">
               {post.title}
             </span>
@@ -219,7 +240,6 @@ const BlogPost = () => {
           </div>
         </div>
 
-        {/* Hero Image: Standardized SocioBhaarat Frame */}
         <div className="mt-12 relative group">
           <div className="absolute -inset-4 bg-primary/5 rounded-[3.5rem] blur-3xl opacity-50" />
           <div className="relative rounded-[2.5rem] p-3 bg-white border-2 border-slate-100 shadow-2xl overflow-hidden">
@@ -250,10 +270,22 @@ const BlogPost = () => {
             {/* Share Module */}
             <div className="mt-12 p-8 rounded-[2rem] bg-slate-50 border border-slate-100 flex items-center justify-between">
               <p className="text-xs font-black uppercase tracking-widest text-slate-400">Distribute this Intelligence</p>
-              <Button variant="outline"
+              <Button
+                variant="outline"
                 onClick={handleShare}
-                className="rounded-full gap-2">
-                <Share2 className="w-4 h-4" /> Share Post
+                className="rounded-full gap-2 transition-all duration-200"
+              >
+                {copied ? (
+                  <>
+                    <CheckCircle className="w-4 h-4 text-emerald-500" />
+                    <span className="text-emerald-600 font-semibold">Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Share2 className="w-4 h-4" />
+                    Share Post
+                  </>
+                )}
               </Button>
             </div>
           </article>

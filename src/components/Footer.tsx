@@ -208,7 +208,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="md:col-span-5 flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-400 text-center md:text-left">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-600 text-center md:text-left">
               Architecture
             </h3>
             <div className="grid grid-cols-2 gap-2">
@@ -231,7 +231,7 @@ const Footer = () => {
 
           {/* Marketing Stack */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-3">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Marketing Stack
             </h3>
             <ul className="flex flex-col gap-3">
@@ -250,7 +250,7 @@ const Footer = () => {
 
           {/* Dev & Design Stack */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-3">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Dev & Design
             </h3>
             <ul className="flex flex-col gap-3">
@@ -269,7 +269,7 @@ const Footer = () => {
 
           {/* Automation Stack */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-3">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Automation
             </h3>
             <ul className="flex flex-col gap-3">
@@ -288,7 +288,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="col-span-2 lg:col-span-1 flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 italic border-b border-slate-100 pb-3">
+            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Direct Line
             </h3>
             <ul className="flex flex-col gap-5">
@@ -318,13 +318,13 @@ const Footer = () => {
               <Link
                 key={i}
                 to={item.path}
-                className="text-[10px] font-bold text-slate-400 hover:text-primary uppercase tracking-widest transition-colors"
+                className="text-[10px] font-bold text-slate-500 hover:text-primary uppercase tracking-widest transition-colors"
               >
                 {item.name}
               </Link>
             ))}
           </div>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest italic text-center sm:text-right">
+          <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest italic text-center sm:text-right">
             &copy; {new Date().getFullYear()} Socio Bhaarat Lab. All rights reserved.
           </p>
         </div>

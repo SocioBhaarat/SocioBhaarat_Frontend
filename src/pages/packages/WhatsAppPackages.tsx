@@ -60,11 +60,11 @@ const WhatsAppPackages = () => {
   ];
 
   const floatingBadges = [
-    { icon: Users, value: "2B+", label: "WA Users", color: "bg-emerald-50 border-emerald-200 text-emerald-700", pos: "top-[22%] left-[5%]", delay: 0 },
-    { icon: BarChart3, value: "98%", label: "Open Rate", color: "bg-blue-50 border-blue-200 text-blue-700", pos: "top-[14%] right-[7%]", delay: 0.15 },
-    { icon: Send, value: "< 3s", label: "Delivery Time", color: "bg-orange-50 border-orange-200 text-orange-700", pos: "bottom-[30%] left-[3%]", delay: 0.3 },
-    { icon: CheckCircle, value: "4.9★", label: "Client Rating", color: "bg-violet-50 border-violet-200 text-violet-700", pos: "bottom-[26%] right-[4%]", delay: 0.45 },
-  ];
+  { icon: Users,       value: "2B+",  label: "WA Users",      color: "bg-emerald-50 border-emerald-200 text-emerald-700", pos: "top-[22%] left-[0%]",    delay: 0 },
+  { icon: BarChart3,   value: "98%",  label: "Open Rate",     color: "bg-blue-50 border-blue-200 text-blue-700",          pos: "top-[14%] right-[0%]",   delay: 0.15 },
+  { icon: Send,        value: "< 3s", label: "Delivery Time", color: "bg-orange-50 border-orange-200 text-orange-700",    pos: "bottom-[30%] left-[0%]", delay: 0.3 },
+  { icon: CheckCircle, value: "4.9★", label: "Client Rating", color: "bg-violet-50 border-violet-200 text-violet-700",    pos: "bottom-[26%] right-[0%]",delay: 0.45 },
+];
 
   const chatBubbles = [
     { from: "brand", text: "Hey! 👋 Your order #4821 has shipped.", delay: 0 },
