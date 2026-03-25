@@ -22,9 +22,6 @@ import WordPressDevelopment from "./pages/design-development/WordPressDevelopmen
 import AppDevelopment from "./pages/design-development/AppDevelopment";
 import UIUXDesign from "./pages/design-development/UIUXDesign";
 import EcommerceDevelopment from "./pages/design-development/EcommerceDevelopment";
-import BulkBroadcasting from "./pages/whatsapp-marketing/BulkBroadcasting";
-import CustomChatbot from "./pages/whatsapp-marketing/CustomChatbot";
-import NumberVerification from "./pages/whatsapp-marketing/NumberVerification";
 import PerformanceMarketing from "./pages/performance-marketing/PerformanceMarketing";
 import DigitalMarketingPackages from "./pages/packages/DigitalMarketingPackages";
 import WebDevelopmentPackages from "./pages/packages/WebDevelopmentPackages";
@@ -32,7 +29,6 @@ import WhatsAppPackages from "./pages/packages/WhatsAppPackages";
 import PerformanceMarketingPackages from "./pages/packages/PerformanceMarketingPackages";
 import MetaAdsPortfolio from "./pages/our-work/OurImpact";
 import WebDevPortfolio from "./pages/our-work/WebDevPortfolio";
-import ContentPortfolio from "./pages/our-work/ContentPortfolio";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import WhatsAppWidget from "./components/WhatsAppWidget";
@@ -45,6 +41,7 @@ import GraphicDesigning from "./pages/design-development/GraphicDesigning";
 import TermsAndConditions from "./pages/footer-pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/footer-pages/PrivacyPolicy";
 import RefundPolicy from "./pages/footer-pages/RefundPolicy";
+import WhatsappBusinessAPI from "./pages/whatsapp-business-api/WhatsappBusinessAPI";
 
 const queryClient = new QueryClient();
 
@@ -85,9 +82,7 @@ const App = () => (
           <Route path="/design-development/graphic-designing" element={<GraphicDesigning/>} />
           
           {/* WhatsApp Marketing */}
-          <Route path="/whatsapp-marketing/bulk-broadcasting" element={<BulkBroadcasting />} />
-          <Route path="/whatsapp-marketing/custom-chatbot" element={<CustomChatbot />} />
-          <Route path="/whatsapp-marketing/number-verification" element={<NumberVerification />} />
+          <Route path="/whatsapp-business-api" element={<WhatsappBusinessAPI />} />
           
           {/* Performance Marketing */}
           <Route path="/performance-marketing" element={<PerformanceMarketing />} />

@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { staggerContainer, fadeUp, cardAnimation } from "@/components/ui/animation";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
@@ -38,7 +39,7 @@ const WebsiteSEO = () => {
     },
     {
       icon: <BarChart3 />,
-      color: "#4338ca", // Indigo
+      color: "#38BDF8", // Indigo
       title: "SEO Analytics & KPI Tracking",
       desc: "Transparent, real-time data visualization of your search performance. We track traffic quality, keyword rankings, and conversion metrics to provide a clear view of your growth and ROI.",
     },
@@ -147,271 +148,277 @@ const WebsiteSEO = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SEO
+        title="SEO Services for Website | Socio Bhaarat"
+        description="Improve your website ranking and visibility with data-driven SEO strategies and optimization techniques."
+        keywords="seo services, website seo, search engine optimization, organic traffic, seo company in jabalpur"
+      />
+      <div className="min-h-screen bg-background">
 
-      {/* Hero Section */}
-      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
-        {/* 1. TECHNICAL BACKGROUND DESIGN */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Grid Overlay - Matches Brand Protection Lab */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+        {/* Hero Section */}
+        <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+          {/* 1. TECHNICAL BACKGROUND DESIGN */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {/* Grid Overlay - Matches Brand Protection Lab */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Atmospheric Mesh Blobs */}
-          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-        </div>
-
-        {/* 2. MAIN CONTENT GRID */}
-        <div className="container mx-auto px-4 relative z-10 mt-12">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-
-            {/* LEFT COLUMN: Narrative (Text Upwards) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-7 space-y-8 text-left"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Sparkles className="w-3 h-3" /> SEO for Website
-              </div>
-
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                Rank Higher <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">& Grow Organically.</span>
-              </h1>
-
-              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
-                We help businesses in Bhopal & Jabalpur dominate search engine rankings and generate quality leads through result-driven SEO solutions.
-              </p>
-
-              <div className="flex justify-start pt-4">
-                <Button
-                  size="lg"
-                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
-                  onClick={() => navigate("/contact")}
-                >
-                  Get Free SEO Audit <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </div>
-            </motion.div>
-
-            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, x: 30 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 1 }}
-              className="lg:col-span-5 relative hidden lg:block"
-            >
-              <div className="relative group">
-                {/* Decorative Glow behind image */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
-
-                <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1600469984476-c713650f1b1b"
-                    alt="SEO Performance Dashboard"
-                    className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
-                  />
-
-                  {/* Floating Mini-Metric Overlay */}
-                  <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg">
-                    <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">Visibility Increase</p>
-                    <p className="text-xl font-bold text-slate-900">+300% Organic</p>
-                  </div>
-                </div>
-
-                {/* Framed Layer - Matching the "Legacy" section rotation */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
-              </div>
-            </motion.div>
-
+            {/* Atmospheric Mesh Blobs */}
+            <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
           </div>
-        </div>
-      </section>
 
-      {/* Why Choose Us */}
-      <section className="py-12 lg:px-8 bg-[#f8f7f4] relative overflow-hidden">
-        <motion.div
-          className="container mx-auto max-w-7xl relative z-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={staggerContainer}
-        >
-          {/* Header */}
-          <motion.div variants={fadeUp} className=" max-w-7xl mx-auto mb-14 space-y-4">
-            <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
-              The SocioBhaarat Advantage
-            </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
-              Why Choose{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                Our SEO Strategy
-              </span>
-            </h2>
-            <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed mx-auto ">
-              Built for measurable, ethical growth in the Madhya Pradesh digital ecosystem.
-            </p>
-          </motion.div>
+          {/* 2. MAIN CONTENT GRID */}
+          <div className="container mx-auto px-4 relative z-10 mt-12">
+            <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-          {/* Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {whyChooseUs.map((item, index) => (
+              {/* LEFT COLUMN: Narrative (Text Upwards) */}
               <motion.div
-                key={index}
-                variants={cardAnimation}
-                whileHover={{ y: -4, transition: { duration: 0.25 } }}
-                className={`group relative p-8 rounded-2xl border-[1.5px] flex flex-col transition-shadow duration-300 hover:shadow-xl ${item.card}`}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-7 space-y-8 text-left"
               >
-                {/* Icon */}
-                <div className={`w-12 h-12 rounded-[14px] flex items-center justify-center mb-5 ${item.iconWrap}`}>
-                  {item.icon}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                  <Sparkles className="w-3 h-3" /> SEO for Website
                 </div>
 
-                {/* <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-2 ${item.num_color}`}>
+                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  Rank Higher <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">& Grow Organically.</span>
+                </h1>
+
+                <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                  We help businesses in Bhopal & Jabalpur dominate search engine rankings and generate quality leads through result-driven SEO solutions.
+                </p>
+
+                <div className="flex justify-start pt-4">
+                  <Button
+                    size="lg"
+                    className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                    onClick={() => navigate("/contact")}
+                  >
+                    Get Free SEO Audit <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
+
+              {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 1 }}
+                className="lg:col-span-5 relative hidden lg:block"
+              >
+                <div className="relative group">
+                  {/* Decorative Glow behind image */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+
+                  <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1600469984476-c713650f1b1b"
+                      alt="SEO Performance Dashboard"
+                      className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                    />
+
+                    {/* Floating Mini-Metric Overlay */}
+                    <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg">
+                      <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">Visibility Increase</p>
+                      <p className="text-xl font-bold text-slate-900">+300% Organic</p>
+                    </div>
+                  </div>
+
+                  {/* Framed Layer - Matching the "Legacy" section rotation */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
+                </div>
+              </motion.div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-12 lg:px-8 bg-background relative overflow-hidden">
+          <motion.div
+            className="container mx-auto max-w-7xl relative z-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+            {/* Header */}
+            <motion.div variants={fadeUp} className=" max-w-7xl mx-auto mb-14 space-y-4">
+              <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
+                The SocioBhaarat Advantage
+              </span>
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+                Why Choose{" "}
+                <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                  Our SEO Strategy
+                </span>
+              </h2>
+              <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed mx-auto ">
+                Built for measurable, ethical growth in the Madhya Pradesh digital ecosystem.
+              </p>
+            </motion.div>
+
+            {/* Cards Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {whyChooseUs.map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={cardAnimation}
+                  whileHover={{ y: -4, transition: { duration: 0.25 } }}
+                  className={`group relative p-8 rounded-2xl border-[1.5px] flex flex-col transition-shadow duration-300 hover:shadow-xl ${item.card}`}
+                >
+                  {/* Icon */}
+                  <div className={`w-12 h-12 rounded-[14px] flex items-center justify-center mb-5 ${item.iconWrap}`}>
+                    {item.icon}
+                  </div>
+
+                  {/* <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-2 ${item.num_color}`}>
                         {item.num}
                       </span> */}
 
-                {/* Title */}
-                <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-3 leading-snug ">
-                  {item.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="font-display text-base md:text-xl font-bold text-slate-900 mb-3 leading-snug ">
+                    {item.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-sm md:text-base font-medium text-slate-900 leading-[1.8] flex-1 mb-5">
-                  {item.desc}
-                </p>
+                  {/* Description */}
+                  <p className="text-sm md:text-base font-medium text-slate-900 leading-[1.8] flex-1 mb-5">
+                    {item.desc}
+                  </p>
 
-                {/* Tag */}
-                <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.18em] ${item.tag_color}`}>
-                  <span className={`w-[5px] h-[5px] rounded-full flex-shrink-0 ${item.dot}`} />
-                  {item.tag}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Why SEO matters */}
-      <section className="py-12 lg:px-10 bg-white overflow-hidden">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-            {/* LEFT */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex flex-col gap-6"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-5 h-[2px] bg-blue-600 rounded-full" />
-                <span className="text-[11px] font-bold tracking-[.28em] uppercase text-blue-600">
-                  SEO Impact
-                </span>
-              </div>
-
-              <h2 className="text-4xl md:text-5xl font-bold italic text-slate-900 leading-[1.07]">
-                Why SEO{" "}
-                <em className=" bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 bg-clip-text text-transparent font-medium">
-                  Matters
-                </em>
-              </h2>
-
-              <p className="text-base md:text-lg text-slate-500 font-medium border-l-4 border-blue-100 pl-5 py-1">
-                In today's competitive digital landscape, ranking is essential for business
-                growth. A strong SEO strategy ensures you appear at the top, attract organic
-                traffic, and generate consistent leads without paying for every click.
-              </p>
-
-              {/* Mini stat strip */}
-              <div className="flex gap-0 border border-slate-100 rounded-2xl overflow-hidden mt-2">
-                {[
-                  { val: "68%", label: "Clicks go to top 5", color: "text-blue-600" },
-                  { val: "14×", label: "More ROI than ads", color: "text-violet-600" },
-                  { val: "92%", label: "Traffic is organic", color: "text-orange-500" },
-                ].map((s, i) => (
-                  <div
-                    key={i}
-                    className={`flex-1 py-4 text-center ${i < 2 ? "border-r border-slate-100" : ""}`}
-                  >
-                    <div className={`text-lg md:text-3xl font-black leading-none mb-1 ${s.color}`}>
-                      {s.val}
-                    </div>
-                    <div className="text-xs font-bold uppercase text-slate-600">
-                      {s.label}
-                    </div>
+                  {/* Tag */}
+                  <div className={`flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.18em] ${item.tag_color}`}>
+                    <span className={`w-[5px] h-[5px] rounded-full flex-shrink-0 ${item.dot}`} />
+                    {item.tag}
                   </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* RIGHT */}
-            <div className="flex flex-col gap-2">
-              {WhyMatters.map((point, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.07 }}
-                  whileHover={{ x: 4 }}
-                  className="group flex items-center gap-4 px-5 py-4 rounded-xl border border-transparent bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 cursor-default"
-                >
-                  <div className="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-200">
-                    <Check
-                      size={13}
-                      strokeWidth={2.5}
-                      className="text-blue-600 group-hover:text-white transition-colors duration-200"
-                    />
-                  </div>
-                  <span className="text-sm md:text-base font-medium text-slate-800 group-hover:text-blue-700 transition-colors flex-1 leading-snug">
-                    {point}
-                  </span>
-                  <span className="text-[10px] font-bold text-slate-200 group-hover:text-blue-200 transition-colors font-mono flex-shrink-0">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
                 </motion.div>
               ))}
             </div>
+          </motion.div>
+        </section>
+
+        {/* Why SEO matters */}
+        <section className="py-12 lg:px-10 bg-[#f8f7f4] overflow-hidden">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+              {/* LEFT */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="flex flex-col gap-6"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-[2px] bg-blue-600 rounded-full" />
+                  <span className="text-[11px] font-bold tracking-[.28em] uppercase text-blue-600">
+                    SEO Impact
+                  </span>
+                </div>
+
+                <h2 className="text-4xl md:text-5xl font-bold italic text-slate-900 leading-[1.07]">
+                  Why SEO{" "}
+                  <em className=" bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 bg-clip-text text-transparent font-medium">
+                    Matters
+                  </em>
+                </h2>
+
+                <p className="text-base md:text-lg text-slate-500 font-medium border-l-4 border-blue-100 pl-5 py-1">
+                  In today's competitive digital landscape, ranking is essential for business
+                  growth. A strong SEO strategy ensures you appear at the top, attract organic
+                  traffic, and generate consistent leads without paying for every click.
+                </p>
+
+                {/* Mini stat strip */}
+                <div className="flex gap-0 border border-slate-100 rounded-2xl overflow-hidden mt-2">
+                  {[
+                    { val: "68%", label: "Clicks go to top 5", color: "text-blue-600" },
+                    { val: "14×", label: "More ROI than ads", color: "text-violet-600" },
+                    { val: "92%", label: "Traffic is organic", color: "text-orange-500" },
+                  ].map((s, i) => (
+                    <div
+                      key={i}
+                      className={`flex-1 py-4 text-center ${i < 2 ? "border-r border-slate-100" : ""}`}
+                    >
+                      <div className={`text-lg md:text-3xl font-black leading-none mb-1 ${s.color}`}>
+                        {s.val}
+                      </div>
+                      <div className="text-xs font-bold uppercase text-slate-600">
+                        {s.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* RIGHT */}
+              <div className="flex flex-col gap-2">
+                {WhyMatters.map((point, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.07 }}
+                    whileHover={{ x: 4 }}
+                    className="group flex items-center gap-4 px-5 py-4 rounded-xl border border-transparent bg-slate-50 hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 cursor-default"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-200">
+                      <Check
+                        size={13}
+                        strokeWidth={2.5}
+                        className="text-blue-600 group-hover:text-white transition-colors duration-200"
+                      />
+                    </div>
+                    <span className="text-sm md:text-base font-medium text-slate-800 group-hover:text-blue-700 transition-colors flex-1 leading-snug">
+                      {point}
+                    </span>
+                    <span className="text-[10px] font-bold text-slate-200 group-hover:text-blue-200 transition-colors font-mono flex-shrink-0">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/*Our  Services */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto max-w-6xl px-4">
+
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+                Our Website SEO <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                  Services
+                </span>
+              </h2>
+            </div>
+
+            <HorizontalServiceList services={services} />
 
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/*Our  Services */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto max-w-6xl px-4">
+        <QuoteSection
+          quote="Optimized for search. Built for visibility. Designed for growth."
+        />
 
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-              Our{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h2>
-          </div>
+        {/* Final CTA */}
 
-          <HorizontalServiceList services={services} />
+        <CTASection
+          title={<>Ready to Rank #1 <br className="hidden md:block" /> Your Vision?</>}
+          description={<>Get a comprehensive SEO audit and a custom-built growth strategy for your brand in <span className="underline decoration-white/30 underline-offset-8">India</span>.</>}
+          buttonText="Claim Your Free Audit"
+        />
 
-        </div>
-      </section>
-
-      <QuoteSection
-        quote="Optimized for search. Built for visibility. Designed for growth."
-      />
-
-      {/* Final CTA */}
-
-      <CTASection
-        title={<>Ready to Rank #1 <br className="hidden md:block" /> Your Vision?</>}
-        description={<>Get a comprehensive SEO audit and a custom-built growth strategy for your brand in <span className="underline decoration-white/30 underline-offset-8">Bhopal & Jabalpur</span>.</>}
-        buttonText="Claim Your Free Audit"
-      />
-
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -174,28 +174,11 @@ const Navigation = () => {
                       </NavigationMenuContent>
                     </NavigationMenuItem>
 
-                    {/* WhatsApp Marketing Trigger */}
-                    <NavigationMenuItem value="whatsapp">
-                      <NavigationMenuTrigger
-                        onClick={() => handleTriggerClick("whatsapp")}
-                        className="text-[17px] hover:text-primary/10 hover:text-white transition-all pointer-events-auto"
-                        onPointerMove={(e) => e.preventDefault()}
-                      >
-                        WhatsApp Marketing
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="grid w-auto gap-1 p-4 bg-background border shadow-xl rounded-xl">
-                          {menuItems.whatsapp.map((item) => (
-                            <li key={item.path}>
-                              <NavigationMenuLink asChild>
-                                <Link to={item.path} onClick={() => setActiveValue("")} className="block p-3 rounded-md hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium">
-                                  {item.name}
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
+                    {/* WhatsApp Marketing */}
+                    <NavigationMenuItem>
+                      <Link to="/whatsapp-business-api" className="px-4 py-2 text-foreground hover:text-primary transition-colors font-medium text-[17px] inline-flex items-center">
+                        Whatsapp Business API
+                      </Link>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
@@ -352,36 +335,13 @@ const Navigation = () => {
                     )}
                   </div>
 
-                  <div>
-                    <button
-                      onClick={() =>
-                        setOpenDropdown(
-                          openDropdown === "whatsapp" ? null : "whatsapp"
-                        )
-                      }
-                      className="flex items-center justify-between w-full text-foreground hover:text-accent transition-colors font-medium py-2 px-2"
-                    >
-                      WhatsApp Marketing
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform ${openDropdown === "whatsapp" ? "rotate-180" : ""
-                          }`}
-                      />
-                    </button>
-                    {openDropdown === "whatsapp" && (
-                      <div className="pl-4 flex flex-col gap-1 mt-1">
-                        {menuItems.whatsapp.map((item) => (
-                          <Link
-                            key={item.path}
-                            to={item.path}
-                            onClick={() => setIsOpen(false)}
-                            className="text-muted-foreground hover:text-accent py-2 text-sm"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  <Link
+                    to="/whatsapp-business-api"
+                    onClick={() => setIsOpen(false)}
+                    className="text-foreground hover:text-accent transition-colors font-medium py-2 px-2"
+                  >
+                    Whatsapp-business-api
+                  </Link>
 
                   <Link
                     to="/performance-marketing"

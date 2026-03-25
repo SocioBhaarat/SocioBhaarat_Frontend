@@ -11,60 +11,12 @@ import { useNavigate } from "react-router-dom";
 import { CTASection } from "@/components/ui/CTASection";
 import ServiceList from "@/components/ui/ServiceList";
 import TechGrid from "@/components/ui/TechGrid";
-import { useEffect, useRef, useState } from "react";
-import MatrixLayout from "@/components/ui/MatrixLayout";
 import ProcessSection from "@/components/DevelopmentProcess";
 import FeatureGrid from "@/components/ui/FeatureGrid";
+import SEO from "@/components/SEO";
 
 const AppDevelopment = () => {
   const navigate = useNavigate();
-  const [activePhase, setActivePhase] = useState(0);
-  const [isIntersecting, setIsIntersecting] = useState(false); // Check if section is visible
-  const scrollRef = useRef(null);
-  const sectionRef = useRef(null);
-  // Reference for the whole section
-
-  // 1. Observer: Check if user is looking at this section
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 0.3 } // 30% section dikhne par hi start hoga
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // 2. Conditional Auto-play Logic (Only runs if visible)
-  useEffect(() => {
-    if (!isIntersecting) return; // Agar screen pe nahi hai toh timer mat chalao
-
-    const timer = setInterval(() => {
-      setActivePhase((prev) => (prev + 1) % process.length);
-    }, 4000);
-
-    return () => clearInterval(timer);
-  }, [isIntersecting]); // Dependency on visibility
-
-  // 3. Responsive Scroll Sync (Horizontal Only)
-  useEffect(() => {
-    if (scrollRef.current && isIntersecting) {
-      const activeItem = scrollRef.current.children[activePhase];
-      if (activeItem) {
-        // block: "nearest" page scroll ko disturb nahi karta
-        activeItem.scrollIntoView({
-          behavior: "smooth",
-          inline: "center",
-          block: "nearest"
-        });
-      }
-    }
-  }, [activePhase, isIntersecting]);
 
   /* DATA */
   const process = [
@@ -100,7 +52,7 @@ const AppDevelopment = () => {
     },
     {
       title: "App Store Deployment",
-      color: "#059669", // Green
+      color: "#38BDF8", // Green
       desc: "Navigating the complexities of the Apple App Store and Google Play Store submission processes, ensuring all metadata, assets, and privacy policies comply with platform-specific guidelines."
     },
     {
@@ -221,168 +173,174 @@ const AppDevelopment = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background selection:bg-primary/20">
+    <>
+      <SEO
+        title="App Development Services | Socio Bhaarat"
+        description="Create high-performance mobile and web applications with seamless user experience and scalable architecture."
+        keywords="app development, mobile app development, android ios apps, web apps, app developers in jabalpur"
+      />
+      <div className="min-h-screen bg-background selection:bg-primary/20">
 
-      {/*  HERO SECTION  */}
-      <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
-        {/* 1. TECHNICAL BACKGROUND DESIGN */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Grid Overlay - Matches Brand Protection Lab */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
+        {/*  HERO SECTION  */}
+        <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
+          {/* 1. TECHNICAL BACKGROUND DESIGN */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            {/* Grid Overlay - Matches Brand Protection Lab */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
 
-          {/* Atmospheric Mesh Blobs */}
-          <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
-        </div>
+            {/* Atmospheric Mesh Blobs */}
+            <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
+          </div>
 
-        {/* 2. MAIN CONTENT GRID */}
-        <div className="container mx-auto px-4 relative z-10 mt-12">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
+          {/* 2. MAIN CONTENT GRID */}
+          <div className="container mx-auto px-4 relative z-10 mt-12">
+            <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-            {/* LEFT COLUMN: Narrative (Text Upwards) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-7 space-y-8 text-left"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                <Smartphone className="w-3 h-3" /> App Development
-              </div>
-              {/* Build High-Performance
+              {/* LEFT COLUMN: Narrative (Text Upwards) */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-7 space-y-8 text-left"
+              >
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                  <Smartphone className="w-3 h-3" /> App Development
+                </div>
+                {/* Build High-Performance
               Mobile Applications For Your Business */}
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                Professional <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">App Development</span> Services.
-              </h1>
+                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  Professional <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">App Development</span> Services.
+                </h1>
 
-              <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
-                We design and develop user-friendly, secure, and high-performance mobile applications that enhance customer engagement, streamline operations, and drive business growth.
-              </p>
+                <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
+                  We design and develop user-friendly, secure, and high-performance mobile applications that enhance customer engagement, streamline operations, and drive business growth.
+                </p>
 
-              <div className="flex justify-start pt-4">
-                <Button
-                  size="lg"
-                  className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
-                  onClick={() => navigate("/contact")}
-                >
-                  Start Your App Project <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </div>
-            </motion.div>
+                <div className="flex justify-start pt-4">
+                  <Button
+                    size="lg"
+                    className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
+                    onClick={() => navigate("/contact")}
+                  >
+                    Start Your App Project <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </motion.div>
 
-            {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, x: 30 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 1 }}
-              className="lg:col-span-5 relative hidden lg:block"
-            >
-              <div className="relative group">
-                {/* Decorative Glow behind image */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+              {/* RIGHT COLUMN: Visual Proof (Dev/Code Bento) */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, x: 30 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 1 }}
+                className="lg:col-span-5 relative hidden lg:block"
+              >
+                <div className="relative group">
+                  {/* Decorative Glow behind image */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
 
-                <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
-                    alt="Web Development Engineering Dashboard"
-                    className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
-                  />
+                  <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+                      alt="Web Development Engineering Dashboard"
+                      className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
+                    />
 
-                  {/* Floating Mini-Metric Overlay */}
-                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
-                    <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Performance</p>
-                    <div className="flex items-center gap-2">
-                      <p className="text-xl font-black text-slate-900">Native Speed</p>
-                      <Zap size={16} className="text-yellow-500 fill-yellow-500" />
+                    {/* Floating Mini-Metric Overlay */}
+                    <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                      <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Performance</p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-xl font-black text-slate-900">Native Speed</p>
+                        <Zap size={16} className="text-yellow-500 fill-yellow-500" />
+                      </div>
                     </div>
                   </div>
+
+                  {/* Framed Layer - Matching the "Legacy" section rotation */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
                 </div>
+              </motion.div>
 
-                {/* Framed Layer - Matching the "Legacy" section rotation */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border-2 border-primary/10 rounded-[4rem] rotate-3 -z-10" />
-              </div>
-            </motion.div>
-
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+        {/*  WHY CHOOSE US  */}
+        <section className="py-12 bg-white relative overflow-hidden">
+          <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 
-      {/*  WHY CHOOSE US  */}
-      <section className="py-16 md:py-20 bg-muted/30 relative overflow-hidden">
-        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+            {/* Section Header */}
+            <div className="mb-12 md:mb-20 max-w-7xl">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-slate-900 leading-tight">
+                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium inline-block pr-6 -mr-6 overflow-visible">
+                  Socio Bhaarat
+                </span> for App Development?
+              </h2>
+              <p className="text-slate-700 text-lg md:text-xl max-w-7xl font-medium leading-relaxed">
+                We move beyond standard development. Our lab builds <span className="text-slate-900 font-bold underline decoration-primary/30 decoration-4 underline-offset-4">scalable digital ecosystems</span> through precise code and strategic market intelligence.
+              </p>
+            </div>
 
-          {/* Section Header */}
-          <div className="mb-12 md:mb-20 max-w-7xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-slate-900 leading-tight">
-              Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium inline-block pr-6 -mr-6 overflow-visible">
-                Socio Bhaarat
-              </span> for App Development?
-            </h2>
-            <p className="text-slate-700 text-lg md:text-xl max-w-7xl font-medium leading-relaxed">
-              We move beyond standard development. Our lab builds <span className="text-slate-900 font-bold underline decoration-primary/30 decoration-4 underline-offset-4">scalable digital ecosystems</span> through precise code and strategic market intelligence.
-            </p>
+            <FeatureGrid features={whyChooseUs} />
           </div>
+        </section>
 
-          <FeatureGrid features={whyChooseUs} />
-        </div>
-      </section>
+        {/*  SERVICES GRID  */}
+        <section className="py-12 bg-muted/30 relative overflow-hidden">
+          <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
+            {/* Section Header: Shifted Left for Modern Engineering Feel */}
+            <div className="mb-20 md:mb-10 max-w-6xl">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
+                What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
+              </h2>
+              <p className="text-slate-500 text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6">
+                Industrial-strength architecture tailored for high-growth business scalability and engineered for performance
+              </p>
+            </div>
 
-      {/*  SERVICES GRID  */}
-      <section className="py-24 md:py-20 bg-muted/30 relative overflow-hidden">
-        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
-          {/* Section Header: Shifted Left for Modern Engineering Feel */}
-          <div className="mb-20 md:mb-10 max-w-6xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
-              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
-            </h2>
-            <p className="text-slate-500 text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6">
-              Industrial-strength architecture tailored for high-growth business scalability and engineered for performance
-            </p>
+            {/* The Technical Rows: No Empty Space */}
+            <ServiceList services={services} />
           </div>
+        </section>
 
-          {/* The Technical Rows: No Empty Space */}
-          <ServiceList services={services} />
-        </div>
-      </section>
+        {/*  TECHNOLOGY */}
+        <section className="py-5 bg-background relative overflow-hidden">
 
+          <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 
-      {/*  TECHNOLOGY */}
-      <section className="py-12 bg-background relative overflow-hidden">
-
-        <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
-
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 leading-none">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible leading-normal">Technology Stack</span>
-            </h2>
-            <p className="text-slate-500 text-sm md:text-xl font-bold">
-              Building the future with industry-leading infrastructure.
-            </p>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 leading-none">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible leading-normal">Technology Stack</span>
+              </h2>
+              <p className="text-slate-500 text-sm md:text-xl font-bold">
+                Building the future with industry-leading infrastructure.
+              </p>
+            </div>
+            <TechGrid techStack={techStack} />
           </div>
-          <TechGrid techStack={techStack} />
-        </div>
-      </section>
+        </section>
 
-      {/* DEVELOPMENT PROCESS */}
-      <ProcessSection
-        titlePrefix="Our"
-        highlightedWord="App Development"
-        titleSuffix="Process"
-        description="A dedicated pipeline for crafting high-performance mobile applications."
-        process={process}
-      />
+        {/* DEVELOPMENT PROCESS */}
+        <ProcessSection
+          titlePrefix="Our"
+          highlightedWord="App Development"
+          titleSuffix="Process"
+          description="A dedicated pipeline for crafting high-performance mobile applications."
+          process={process}
+        />
 
-      <QuoteSection quote="From concept to code, we create mobile experiences that people love to use daily." />
+        <QuoteSection quote="From concept to code, we create mobile experiences that people love to use daily." />
 
-      {/*  FINAL CTA  */}
-      <CTASection
-        title={<> Ready to Build <br className="hidden md:block" /> Your App?</>}
-        description={<>Get a free consultation and a technical roadmap for your Android or iOS project.</>}
-        buttonText="Launch Your Project Now"
-      />
-    </div>
+        {/*  FINAL CTA  */}
+        <CTASection
+          title={<> Ready to Build <br className="hidden md:block" /> Your App?</>}
+          description={<>Get a free consultation and a technical roadmap for your Android or iOS project.</>}
+          buttonText="Launch Your Project Now"
+        />
+      </div>
+    </>
+
   );
 };
 

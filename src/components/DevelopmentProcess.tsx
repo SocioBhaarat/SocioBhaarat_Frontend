@@ -68,7 +68,7 @@ const ProcessSection = ({
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden"
+      className="py-12 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden"
     >
       {/* Background Blurs */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-200/30 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2" />
