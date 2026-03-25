@@ -450,8 +450,7 @@ const ContentMarketing = () => {
 
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-                Our{" "}
-                <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
+                Our Content Marketing <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
                   Services
                 </span>
               </h2>

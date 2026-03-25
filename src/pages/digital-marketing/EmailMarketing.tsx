@@ -469,8 +469,7 @@ const EmailMarketing = () => {
             {/* Header */}
             <div className="mb-14">
               <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
-                Our{" "}
-                <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
+                Our Email Marketing <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Services
                 </span>
               </h2>
