@@ -304,7 +304,6 @@ const AppDevelopment = () => {
           </div>
         </section>
 
-
         {/*  TECHNOLOGY */}
         <section className="py-5 bg-background relative overflow-hidden">
 

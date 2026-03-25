@@ -9,30 +9,31 @@ import SEO from "@/components/SEO";
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
+  const handleSubmit = (e) => {
+  e.preventDefault();
 
-  const contactInfo = [
-    {
-      icon: <Mail className="h-6 w-6" />,
-      title: "Email Us",
-      content: "official@sociobhaarat.com",
-      href: "mailto:official@sociobhaarat.com",
-      color: "text-primary",
-    },
-    {
-      icon: <Phone className="h-6 w-6" />,
-      title: "Call Us",
-      content: "+91 95895 81364",
-      href: "tel:+919589581364",
-      color: "text-secondary",
-    },
-    {
-      icon: <MapPin className="h-6 w-6" />,
-      title: "Visit Us",
-      content: " 5th Floor, Muskan City, Ekta Chowk, Sanatan Chowk, Vijay Nagar, Jabalpur, Madhya Pradesh 482001",
-      href: "https://maps.app.goo.gl/wKCUub1GDcrxZ5Bs9",
-      color: "text-accent",
-    },
-  ];
+  const formData = new FormData(e.target);
+
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const phone = formData.get("phone");
+  const message = formData.get("message");
+
+  const text = encodeURIComponent(
+    `New Lead:
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+      Project: ${message}`
+        );
+
+  const whatsappNumber = "919407448837 "; // replace with your number
+
+  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+  window.open(url, "_blank");
+};
+
 
   return (
     <>
@@ -242,8 +243,7 @@ const Contact = () => {
               <div className="lg:col-span-7 w-full">
                 <Card className="rounded-[2.5rem] md:rounded-[3rem] border-2 border-border/50 bg-white shadow-2xl overflow-hidden relative">
                   <CardContent className="p-6 md:p-12">
-                    <form className="space-y-5 md:space-y-6" onSubmit={(e) => {
-                    }}>
+                    <form className="space-y-5 md:space-y-6" onSubmit={handleSubmit}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-2">
                           <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Full Name *</label>
@@ -281,10 +281,8 @@ const Contact = () => {
             </div>
           </div>
         </section>
-
       </div>
     </>
-
   );
 };
 
