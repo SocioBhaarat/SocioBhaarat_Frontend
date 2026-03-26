@@ -93,7 +93,7 @@ const About = () => {
                   </span>
                 </h2>
                 <div className="space-y-6">
-                  <p className="text-lg md:text-xl text-slate-800 leading-relaxed font-medium border-l-4 border-primary/20 pl-8">
+                  <p className="text-base md:text-xl text-slate-800 leading-relaxed font-medium border-l-4 border-primary/20 pl-8">
                     "Socio Bhaarat is a results-driven digital marketing and IT solutions company helping startups, entrepreneurs, and growing businesses scale in the digital world."
                   </p>
                   <p className="text-base md:text-lg text-slate-800 leading-relaxed font-medium">
