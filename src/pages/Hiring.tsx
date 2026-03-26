@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { getJobListings } from "@/services/hiringService";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Briefcase, Users, TrendingUp, Heart, MapPin, Clock, DollarSign, Sparkles, ArrowRight, Send, Zap } from "lucide-react";
@@ -5,7 +7,8 @@ import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 
 const Hiring = () => {
-  const positions = [
+  const [loading, setLoading] = useState(true);
+  const [positions, setPositions] = useState([
     {
       title: "Social Media Manager",
       department: "Marketing",
@@ -38,7 +41,23 @@ const Hiring = () => {
       description: "Drive results through data-driven campaigns across Google Ads, Facebook, and other digital platforms.",
       requirements: ["3+ years experience", "Google Ads certified", "Analytics expertise", "ROI focused"],
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const data = await getJobListings();
+        if (data && data.length > 0) {
+          setPositions(data);
+        }
+      } catch (err) {
+        console.error("Failed to fetch jobs:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchJobs();
+  }, []);
 
   const benefits = [
     {
@@ -147,7 +166,12 @@ const Hiring = () => {
             </div>
 
             <div className="space-y-8">
-              {positions.map((position, index) => (
+              {loading ? (
+                <div className="text-center py-20 text-slate-500">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                  <p>Loading open positions...</p>
+                </div>
+              ) : positions.map((position, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}

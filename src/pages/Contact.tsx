@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { submitContactForm } from "@/services/formService";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,30 +10,32 @@ import SEO from "@/components/SEO";
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
-  const handleSubmit = (e) => {
-  e.preventDefault();
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const formData = new FormData(e.target);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setSubmitStatus(null);
 
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const phone = formData.get("phone");
-  const message = formData.get("message");
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
+    };
 
-  const text = encodeURIComponent(
-    `New Lead:
-      Name: ${name}
-      Email: ${email}
-      Phone: ${phone}
-      Project: ${message}`
-        );
-
-  const whatsappNumber = "919407448837 "; // replace with your number
-
-  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
-
-  window.open(url, "_blank");
-};
+    try {
+      await submitContactForm(data);
+      setSubmitStatus("success");
+      e.target.reset();
+    } catch (err) {
+      console.error(err);
+      setSubmitStatus("error");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
 
   return (
@@ -274,6 +277,17 @@ const Contact = () => {
                         {submitting ? "PROCESSING..." : "TRANSMIT MESSAGE"}
                         <Send className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                       </Button>
+
+                      {submitStatus === "success" && (
+                        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} className="p-4 mt-4 text-sm text-green-800 bg-green-100 rounded-xl border border-green-200">
+                          Message transmitted successfully! We'll get back to you soon.
+                        </motion.div>
+                      )}
+                      {submitStatus === "error" && (
+                        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} className="p-4 mt-4 text-sm text-red-800 bg-red-100 rounded-xl border border-red-200">
+                          Failed to transmit message. Please try again later or use the direct contacts.
+                        </motion.div>
+                      )}
                     </form>
                   </CardContent>
                 </Card>

@@ -1,7 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { Calendar, User, ArrowLeft, Share2, Clock, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getBlogById } from "@/services/blogService";
 
 const blogContent: Record<string, any> = {
   "seo-trends-2026": {
@@ -144,8 +145,37 @@ const blogContent: Record<string, any> = {
 
 const BlogPost = () => {
   const { postId } = useParams();
-  const post = blogContent[postId || ""];
+  const [post, setPost] = useState(blogContent[postId || ""]);
+  const [loading, setLoading] = useState(true);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      setLoading(true);
+      try {
+        const data = await getBlogById(postId);
+        if (data) {
+          setPost(data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch blog post:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    if (postId) {
+      fetchPost();
+    }
+  }, [postId]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex flex-col items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
+        <p className="text-slate-500 font-medium">Decrypting Data...</p>
+      </div>
+    );
+  }
 
   if (!post) {
     return (
@@ -219,7 +249,6 @@ const BlogPost = () => {
             {post.category}
           </div>
 
-          {/* Safari iPhone Clipping Fix for Italic Heading */}
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[0.95] italic mb-8">
             <span className="relative inline-block py-1 pr-4 -mr-4 overflow-visible">
               {post.title}

@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import { getAllBlogs } from "@/services/blogService";
 import { Calendar, User, ArrowRight, BookOpen, ArrowUpRight, Clock, Search, ChevronDown, TrendingUp, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -39,6 +41,25 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  const [blogs, setBlogs] = useState(blogPosts);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const data = await getAllBlogs();
+        if (data && data.length > 0) {
+          setBlogs(data);
+        }
+      } catch (err) {
+        console.error("Failed to fetch blogs:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
   return (
     <>
       <SEO
@@ -184,7 +205,12 @@ const Blog = () => {
         <section className="py-20 md:px-4 bg-white relative">
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
+              {loading ? (
+                <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center py-20 text-slate-500">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                  <p>Decrypting Intelligence Stream...</p>
+                </div>
+              ) : blogs.map((post, index) => (
                 <motion.div
                   key={post.id}
                   whileHover={{ y: -8 }}
