@@ -347,7 +347,7 @@ const WebDevelopment = () => {
                   Socio Bhaarat
                 </span> for Web Development?
               </h2>
-              <p className="text-slate-700 text-lg md:text-xl max-w-7xl font-medium leading-relaxed">
+              <p className="text-slate-700 text-base md:text-xl max-w-7xl font-medium leading-relaxed">
                 We move beyond standard development. Our lab builds <span className="text-slate-900 font-bold underline decoration-primary/30 decoration-4 underline-offset-4">scalable digital ecosystems</span> through precise code and strategic market intelligence.
               </p>
             </div>
@@ -370,7 +370,7 @@ const WebDevelopment = () => {
                   Strong Web Presence
                 </span>
               </h2>
-              <p className="text-slate-600 text-lg md:text-2xl max-w-7xl font-medium leading-relaxed border-l-4 border-primary/20 pl-4 md:pl-6">
+              <p className="text-slate-600 text-base md:text-xl max-w-7xl font-medium leading-relaxed border-l-4 border-primary/20 pl-4 md:pl-6">
                 A website is not a digital brochure; it is a high-speed conversion engine.
               </p>
             </div>
@@ -439,11 +439,11 @@ const WebDevelopment = () => {
         <section className="py-12 bg-muted/30 relative overflow-hidden">
           <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
             {/* Section Header: Shifted Left for Modern Engineering Feel */}
-            <div className="mb-20 md:mb-10 max-w-6xl">
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
+            <div className="mb-5 md:mb-10 max-w-6xl">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
                 What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
               </h2>
-              <p className=" text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6 text-slate-500">
+              <p className=" text-base md:text-xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6 text-slate-700">
                 Industrial-strength architecture tailored for high-growth business scalability and engineered for performance
               </p>
             </div>
@@ -459,10 +459,10 @@ const WebDevelopment = () => {
           <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
 
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 leading-none">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-2 leading-none">
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible leading-normal">Technology Stack</span>
               </h2>
-              <p className="text-slate-500 text-sm md:text-xl font-bold">
+              <p className="text-slate-500 text-sm md:text-xl font-medium">
                 Building the future with industry-leading infrastructure.
               </p>
             </div>

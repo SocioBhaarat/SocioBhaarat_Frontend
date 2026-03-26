@@ -251,7 +251,7 @@ const WebsiteSEO = () => {
               <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
                 The SocioBhaarat Advantage
               </span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
                 Why Choose{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Our SEO Strategy
@@ -320,7 +320,7 @@ const WebsiteSEO = () => {
                   </span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-bold italic text-slate-900 leading-[1.07]">
+                <h2 className="text-3xl md:text-5xl font-bold italic text-slate-900 leading-[1.07]">
                   Why SEO{" "}
                   <em className=" bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 bg-clip-text text-transparent font-medium">
                     Matters

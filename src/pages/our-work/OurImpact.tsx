@@ -140,30 +140,33 @@ const OurImpact = () => {
           </motion.div>
 
           {/* Main content — unchanged */}
-          <div className="container mx-auto max-w-5xl relative z-10 text-center">
+          <div className="container mx-auto max-w-5xl relative z-10 text-center px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="flex flex-col items-center gap-6"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase shadow-sm">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[9px] md:text-[10px] font-black tracking-[0.2em] md:tracking-[0.3em] uppercase shadow-sm">
                 <Zap className="w-3 h-3" /> Performance Engineering
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter">
+              {/* Heading */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter">
                 Our{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                   Impact
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-semibold border-x-4 border-primary/10 px-8">
+              {/* Paragraph: Reduced padding/border on mobile */}
+              <p className="text-base md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-semibold border-x-2 md:border-x-4 border-primary/10 px-4 md:px-8">
                 A curated selection of brands we've helped grow through digital strategy and innovation.
               </p>
 
-              {/* Inline stat strip */}
-              <div className="flex items-center gap-0 border border-slate-100 rounded-2xl overflow-hidden bg-white shadow-sm mt-2">
+              {/* Stat Strip: Switched to Grid for Mobile */}
+              <div className="w-full max-w-2xl grid grid-cols-2 md:grid-cols-4 gap-0 border border-slate-100 rounded-2xl md:rounded-3xl overflow-hidden bg-white shadow-sm mt-4">
                 {[
                   { val: "50+", label: "Brands", color: "text-blue-600" },
                   { val: "5×", label: "Avg ROI", color: "text-orange-500" },
@@ -172,12 +175,15 @@ const OurImpact = () => {
                 ].map((s, i) => (
                   <div
                     key={i}
-                    className={`px-6 py-4 text-center ${i < 3 ? "border-r border-slate-100" : ""}`}
+                    className={`px-4 py-6 md:px-6 md:py-5 text-center flex flex-col justify-center
+            ${i % 2 === 0 ? "border-r" : "md:border-r"} 
+            ${i < 2 ? "border-b md:border-b-0" : ""} 
+            border-slate-100`}
                   >
-                    <div className={`text-xl font-black leading-none mb-1 ${s.color}`}>
+                    <div className={`text-2xl md:text-3xl font-black leading-none mb-1.5 ${s.color}`}>
                       {s.val}
                     </div>
-                    <div className="text-sm font-bold uppercase tracking-[.18em] text-slate-600">
+                    <div className="text-[10px] md:text-xs font-bold uppercase tracking-[.12em] md:tracking-[.18em] text-slate-500">
                       {s.label}
                     </div>
                   </div>

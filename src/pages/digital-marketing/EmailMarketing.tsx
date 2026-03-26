@@ -2,6 +2,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
+import ExploralPanel from "@/components/ui/ExploralPanel";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Mail, Zap, Users, BarChart3, ShieldCheck, MousePointer2,
@@ -244,11 +245,11 @@ const EmailMarketing = () => {
         </section>
 
         {/* WHY CHOOSE US */}
-        <section className="py-12 px-6 lg:px-10 bg-[#fafafa]">
+        <section className="py-12 lg:px-10 bg-[#fafafa]">
           <div className="container mx-auto max-w-7xl">
 
             <div className="mb-14 max-">
-              <h2 className="font-bold text-slate-900 text-4xl md:text-5xl"
+              <h2 className="font-bold text-slate-900 text-3xl md:text-5xl"
                 style={{ fontSize: "clamp(1.9rem, 4.5vw, 3rem)" }}
               >
                 Why Choose <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
@@ -351,7 +352,7 @@ const EmailMarketing = () => {
                   </span>
                 </div>
 
-                <h2 className="font-bold text-4xl md:text-5xl text-slate-900 tracking-tight leading-[1.06]"
+                <h2 className="font-bold text-3xl md:text-5xl text-slate-900 tracking-tight leading-[1.06]"
                   style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)" }}
                 >
                   Stop Relying on <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
@@ -359,7 +360,7 @@ const EmailMarketing = () => {
                   </span>
                 </h2>
 
-                <p className="text-base text-slate-800 italic leading-[1.85] font-medium border-l-4 border-blue-100 pl-5 py-1">
+                <p className="text-sm md:text-base text-slate-800 leading-[1.85] font-medium border-l-4 border-blue-100 pl-5 py-1">
                   Social media algorithms change daily and your reach can vanish overnight. Email
                   gives you a direct, uninterrupted line to your customers that you{" "}
                   <strong className="text-slate-900 not-italic font-bold">own 100%</strong> -
@@ -468,92 +469,17 @@ const EmailMarketing = () => {
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div className="mb-14">
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-3">
                 Our Email Marketing <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Services
                 </span>
               </h2>
-              <p className="text-base text-slate-800 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
+              <p className="text-sm md:text-base font-medium text-slate-800 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
                 "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
               </p>
             </div>
 
-            {/* Explorer panel */}
-            <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white flex flex-col md:flex-row">
-
-              {/* Left nav */}
-              <div className="md:w-[40%] flex-shrink-0 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200 p-2">
-                {services.map((item, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActive(i)}
-                    className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl border text-left transition-all duration-200 mb-0.5 ${active === i
-                      ? "bg-white border-blue-100 shadow-sm"
-                      : "border-transparent hover:bg-white hover:border-slate-200"
-                      }`}
-                  >
-                    <div className={`w-8 h-8 rounded-[9px] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${active === i ? "scale-105" : ""} ${item.iconBg} ${item.iconColor}`}>
-                      <item.icon size={14} />
-                    </div>
-                    <span className={` text-base font-semibold ${active === i ? "text-blue-700" : "text-slate-600"}`}>
-                      {item.title}
-                    </span>
-                    <span className={`ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
-                      {item.num}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Right panel */}
-              <div className="flex-1 p-10 md:p-12 relative overflow-hidden flex flex-col justify-center min-h-[380px]">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={active}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    {/* Num */}
-                    <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-3 block ${services[active].numColor}`}>
-                      {services[active].num}
-                    </span>
-
-                    {/* Title */}
-                    <h3
-                      className={`font-display text-3xl md:text-4xl font-extrabold mb-4 ${services[active].iconColor}`}
-                    >
-                      {services[active].title}
-                    </h3>
-
-                    {/* Desc */}
-                    <p
-                      className={`text-sm md:text-lg text-slate-700 max-w-lg mb-7 font-medium border-l-[3px] pl-4 leading-relaxed ${services[active].iconBg.replace("bg-", "border-")}`}
-                    >
-                      {services[active].desc}
-                    </p>
-
-                    {/* Tag */}
-                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[.15em] ${services[active].tagBg} ${services[active].tagColor}`}>
-                      <Check size={10} strokeWidth={2.5} />
-                      {services[active].tag}
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Watermark number */}
-                <span className="absolute -bottom-5 -right-2 font-display text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.04]">
-                  {services[active].num}
-                </span>
-
-                {/* Ghost icon */}
-                <div className="absolute top-8 right-10 opacity-[0.05]">
-                  {React.createElement(services[active].icon, { size: 80, className: services[active].iconColor })}
-                </div>
-              </div>
-
-            </div>
+            <ExploralPanel content={services}/>
           </div>
         </section>
 
@@ -561,7 +487,7 @@ const EmailMarketing = () => {
         <section className="pb-12 lg:px-10 bg-[#f8f9fb]">
           <div className="container mx-auto max-w-7xl">
 
-            <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-900 mb-14">
+            <h2 className="text-3xl md:text-5xl font-bold text-center text-slate-900 mb-14">
               Lifecycle{" "}
               <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                 Strategy

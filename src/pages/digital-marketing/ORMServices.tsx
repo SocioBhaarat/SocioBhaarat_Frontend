@@ -282,7 +282,7 @@ const ORMServices = () => {
               <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
                 The SocioBhaarat Advantage
               </span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
                 Why Brands{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Trust Us
@@ -362,7 +362,7 @@ const ORMServices = () => {
                 <TrendingUp className="w-3 h-3" />
                 Market Authority & Revenue
               </div>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900">
                 The Science of <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Digital Trust
                 </span>

@@ -358,8 +358,8 @@ const PerformanceMarketing = () => {
               <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
                 The SocioBhaarat Advantage
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800">
-                Why Brands{" "}
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+                Why Brands <br className="block sm:hidden"/>
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Trust Us
                 </span>
@@ -424,7 +424,7 @@ const PerformanceMarketing = () => {
                   <DollarSign className="w-3 h-3" /> Financial Accountability
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-5"
+                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-5"
                   style={{ fontSize: "clamp(1.9rem, 4.5vw, 3.2rem)" }}
                 >
                   Stop Guessing. <br />
@@ -435,7 +435,7 @@ const PerformanceMarketing = () => {
 
                 <p className="text-base md:text-lg text-slate-800 font-medium border-l-4 border-blue-100 pl-5 py-1 mb-8">
                   Performance marketing lets you track, measure, and optimise every campaign in
-                  real-time. You pay only for measurable actions — ensuring better ROI and fully
+                  real-time. You pay only for measurable actions - ensuring better ROI and fully
                   controlled budgets.
                 </p>
 
@@ -561,7 +561,7 @@ const PerformanceMarketing = () => {
         <section className="py-12 lg:px-10 bg-[#f8f9fb]">
           <div className="container mx-auto max-w-7xl">
 
-            <h2 className="text-4xl md:text-5xl font-bold text-center text-slate-900 mb-14">
+            <h2 className="text-3xl md:text-5xl font-bold text-center text-slate-900 mb-14">
               Lifecycle{" "}
               <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                 Strategy
@@ -614,7 +614,7 @@ const PerformanceMarketing = () => {
 
             {/* Header */}
             <div className="text-center mb-14">
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
                 Industries We{" "}
                 <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Serve Best
@@ -676,7 +676,7 @@ const PerformanceMarketing = () => {
 
             {/* Header */}
             <div className="text-center mb-10">
-              <h2 className=" text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
+              <h2 className=" text-3xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
                 Transparent{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Pricing
@@ -701,7 +701,7 @@ const PerformanceMarketing = () => {
                     <span className="text-sm font-bold tracking-[.25em] uppercase text-blue-600">
                       Fee Structure
                     </span>
-                    <h3 className="text-3xl md:text-4xl font-extrabold italic text-slate-900 leading-tight">
+                    <h3 className="text-2xl md:text-4xl font-extrabold italic text-slate-900 leading-tight">
                       The ROI Model
                     </h3>
                     <p className="text-sm md:text-base text-slate-700  leading-[1.85] font-medium border-l-[3px] border-blue-100 pl-5 py-1">
@@ -796,7 +796,7 @@ const PerformanceMarketing = () => {
         <CTASection
           title={<>Ready to Stop Guessing <br className="hidden sm:block" /> and Start Scaling?</>}
           description={<>Join 500+ businesses who rely on Socio Bhaarat <br className="hidden sm:block" /> to deliver consistent leads and massive ROI through performance marketing.</>}
-          buttonText="Claim Your Free ROI Audit Now"
+          buttonText="Claim Free ROI Audit Now"
         />
 
       </div>

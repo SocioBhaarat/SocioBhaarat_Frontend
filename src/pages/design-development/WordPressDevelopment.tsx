@@ -263,13 +263,13 @@ const WordPressDevelopment = () => {
 
                 <div className="w-8 h-0.5 bg-blue-600 mb-6 rounded-full" />
 
-                <h2 className=" text-4xl sm:text-5xl font-bold leading-tight mb-5 text-slate-800">
+                <h2 className=" text-3xl sm:text-5xl font-bold leading-tight mb-5 text-slate-800">
                   Why choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
                     Socio Bhaarat
                   </span> for WordPress?
                 </h2>
 
-                <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-10 max-w-md">
+                <p className=" text-sm md:text-lg leading-relaxed mb-10 max-w-md font-medium">
                   We combine creative design, technical expertise, and strategic planning to deliver WordPress websites that are fast, secure, SEO-friendly, and easy to manage. We don't just build sites; we build digital assets that scale with your business goals.
                 </p>
 
@@ -306,8 +306,8 @@ const WordPressDevelopment = () => {
                         {item.icon}
                       </span>
                     </div>
-                    <h4 className="text-md font-medium mb-1.5">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                    <h4 className="text-md font-semibold mb-1.5">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed font-medium">{item.desc}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -323,7 +323,7 @@ const WordPressDevelopment = () => {
 
             {/* Header — split layout, fills the width */}
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 md:mb-14">
-              <h2 className=" text-4xl md:text-5xl font-bold max-w-lg text-slate-800">
+              <h2 className=" text-3xl md:text-5xl font-bold max-w-lg text-slate-800">
                 Why your brand needs <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
                   WordPress
                 </span>
@@ -379,7 +379,7 @@ const WordPressDevelopment = () => {
                   <h3 className=" text-2xl font-semibold text-foreground mb-3 leading-snug">
                     {card.title}
                   </h3>
-                  <p className="text-sm md:text-lg font-semibold text-slate-700 text-muted-foreground leading-relaxed">
+                  <p className="text-sm md:text-lg font-medium text-slate-700 text-muted-foreground leading-relaxed">
                     {card.desc}
                   </p>
 
@@ -399,10 +399,10 @@ const WordPressDevelopment = () => {
           <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
             {/* Section Header: Shifted Left for Modern Engineering Feel */}
             <div className="mb-20 md:mb-10 max-w-6xl">
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-none mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800 leading-none mb-8">
                 What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
               </h2>
-              <p className="text-slate-500 text-lg md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6">
+              <p className="text-slate-700 text-base md:text-2xl max-w-8xl font-medium leading-relaxed border-l-4 border-primary/20 pl-6">
                 Industrial-strength architecture tailored for high-growth business scalability and engineered for performance
               </p>
             </div>

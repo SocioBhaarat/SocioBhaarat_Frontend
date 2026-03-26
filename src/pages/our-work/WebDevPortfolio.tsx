@@ -182,30 +182,34 @@ const WebDevPortfolio = () => {
           </motion.div>
 
           {/* Main content — unchanged */}
-          <div className="container mx-auto max-w-5xl relative z-10 text-center">
+          <div className="container mx-auto max-w-5xl relative z-10 text-center px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="flex flex-col items-center gap-6"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-bold tracking-[0.3em] uppercase shadow-sm">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[9px] md:text-[10px] font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase shadow-sm">
                 <Zap className="w-3 h-3" /> Scalable Web Systems
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter">
-                Web Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium overflow-visible">
+              {/* Heading */}
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.1] md:leading-[0.95] tracking-tighter">
+                Web Development{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium inline-block">
                   Portfolio
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-semibold border-x-4 border-primary/10 px-8">
+              {/* Paragraph: Switched to left-border only on mobile for better readability */}
+              <p className="text-base md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed font-semibold border-l-4 md:border-x-4 border-primary/10 px-6 md:px-8">
                 Code that scales. Design that converts. We don't just build websites; we
                 engineer high-performance digital infrastructure that powers growth.
               </p>
 
-              {/* Stat strip */}
-              <div className="flex items-center gap-0 border border-slate-100 rounded-2xl overflow-hidden bg-white shadow-sm mt-2">
+              {/* Responsive Stat Strip */}
+              <div className="w-full max-w-3xl grid grid-cols-2 md:flex md:items-center gap-0 border border-slate-100 rounded-2xl md:rounded-full overflow-hidden bg-white shadow-sm mt-4">
                 {[
                   { val: "50+", label: "Projects Built", color: "text-blue-600" },
                   { val: "99", label: "PageSpeed Score", color: "text-orange-500" },
@@ -214,18 +218,20 @@ const WebDevPortfolio = () => {
                 ].map((s, i) => (
                   <div
                     key={i}
-                    className={`px-6 py-4 text-center ${i < 3 ? "border-r border-slate-100" : ""}`}
+                    className={`px-4 py-6 md:px-8 md:py-4 flex-1 text-center 
+            ${i % 2 === 0 ? "border-r" : "md:border-r"} 
+            ${i < 2 ? "border-b md:border-b-0" : ""} 
+            border-slate-100 last:border-r-0`}
                   >
-                    <div className={`font-display text-xl font-black leading-none mb-1 ${s.color}`}>
+                    <div className={`font-display text-2xl md:text-xl font-black leading-none mb-1 ${s.color}`}>
                       {s.val}
                     </div>
-                    <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-400">
+                    <div className="text-[8px] md:text-[9px] font-bold uppercase tracking-[.15em] text-slate-400 whitespace-nowrap">
                       {s.label}
                     </div>
                   </div>
                 ))}
               </div>
-
             </motion.div>
           </div>
 

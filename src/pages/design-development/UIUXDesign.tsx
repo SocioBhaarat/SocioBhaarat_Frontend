@@ -315,14 +315,14 @@ const UIUXDesign = () => {
                       Top-Tier Engineering
                     </div>
 
-                    <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-5 text-slate-800">
+                    <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-5 text-slate-800">
                       Why choose{" "}
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
                         Socio Bhaarat
                       </span>
                     </h2>
 
-                    <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
+                    <p className="text-muted-foreground text-base sm:text-lg leading-relaxed font-medium">
                       We blend the psychology of user behavior with the art of visual
                       storytelling to create products that don't just work—they resonate.
                     </p>
@@ -348,7 +348,7 @@ const UIUXDesign = () => {
                         <div className="mt-0.5 w-6 h-6 rounded-md bg-blue-50 border border-blue-100 flex  items-center justify-center text-blue-600 flex-shrink-0">
                           {feat.icon}
                         </div>
-                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{feat.text}</p>
+                        <p className="text-sm md:text-base font-medium text-muted-foreground leading-relaxed">{feat.text}</p>
                       </div>
                     ))}
                   </div>
@@ -413,8 +413,8 @@ const UIUXDesign = () => {
                         {item.icon}
                       </span>
                     </div>
-                    <h4 className="text-md font-medium mb-1.5">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                    <h4 className="text-md font-semibold mb-1.5">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">{item.desc}</p>
                   </motion.div>
                 ))}
               </motion.div>
@@ -430,7 +430,7 @@ const UIUXDesign = () => {
 
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">
                 Our UI & UX Design <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">
                   Services
                 </span>
@@ -469,7 +469,7 @@ const UIUXDesign = () => {
 
                   {/* Card Body */}
                   <div className="p-7 flex-grow flex flex-col">
-                    <p className="text-slate-500 text-sm md:text-md mb-0 font-medium leading-relaxed">
+                    <p className="text-slate-700 text-sm md:text-md mb-0 font-medium leading-relaxed">
                       {service.description}
                     </p>
 
