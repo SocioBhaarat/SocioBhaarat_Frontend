@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Testimonials from "./pages/Testimonials";
 import Hiring from "./pages/Hiring";
+import HiringForm from "./pages/HiringForm";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ContentMarketing from "./pages/digital-marketing/ContentMarketing";
@@ -61,6 +62,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/hiring" element={<Hiring />} />
+          <Route path="/hiring/apply/:jobTitle" element={<HiringForm />} />
           <Route path="/contact" element={<Contact />} />
           
           {/* Digital Marketing */}

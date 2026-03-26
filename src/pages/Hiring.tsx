@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getJobListings } from "@/services/hiringService";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,7 @@ import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 
 const Hiring = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [positions, setPositions] = useState([
     {
@@ -193,7 +195,7 @@ const Hiring = () => {
                     <Button
                       size="lg"
                       className="w-full lg:w-auto h-16 px-12 rounded-full font-black text-sm md:text-lg bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
-                      onClick={() => window.open("https://forms.office.com/r/u7zAwghd9Y", "_blank")}
+                      onClick={() => navigate(`/hiring/apply/${encodeURIComponent(position.title)}`)}
                     >
                       Apply Now <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
