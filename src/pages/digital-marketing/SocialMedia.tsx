@@ -41,7 +41,7 @@ const SocialMedia = () => {
       icon: <Users />,
       color: "#38BDF8", // Indigo
       title: "Influencer Marketing",
-      desc: "Identifying and partnering with the right creators to amplify your brand. We manage the entire process — from outreach and contract negotiation to campaign execution and performance tracking.",
+      desc: "Identifying and partnering with the right creators to amplify your brand. We manage the entire process - from outreach and contract negotiation to campaign execution and performance tracking.",
     },
     {
       icon: <Search />,
@@ -128,7 +128,7 @@ const SocialMedia = () => {
       num: "06",
       title: "Transparent Reporting & Analytics",
       icon: <BarChart3 size={22} />,
-      desc: "Deep-dive monthly reports that break down follower growth, engagement rates, and conversion paths — giving you total clarity on your social media investment.",
+      desc: "Deep-dive monthly reports that break down follower growth, engagement rates, and conversion paths - giving you total clarity on your social media investment.",
       tag: "Data-Driven Insights",
       card: "bg-indigo-50 border-indigo-200",
       iconWrap: "bg-indigo-100 text-indigo-700",
@@ -179,11 +179,11 @@ const SocialMedia = () => {
   ]
 
   const WhyMatters = [
-    { icon: <Share2 size={19} />, title: "Brand Visibility", desc: "Stay top-of-mind with your target audience every single day — before they even know they need your product or service.", iconBg: "bg-blue-100 text-blue-700", bar: "bg-blue-700", tint: "bg-blue-50 border-blue-200" },
+    { icon: <Share2 size={19} />, title: "Brand Visibility", desc: "Stay top-of-mind with your target audience every single day - before they even know they need your product or service.", iconBg: "bg-blue-100 text-blue-700", bar: "bg-blue-700", tint: "bg-blue-50 border-blue-200" },
     { icon: <Users size={19} />, title: "Community Building", desc: "Transform followers into a loyal brand community that advocates for you, defends you, and brings in new customers organically.", iconBg: "bg-purple-100 text-purple-700", bar: "bg-purple-700", tint: "bg-white border-slate-100" },
     { icon: <MapPin size={19} />, title: "Audience Targeting", desc: "Reach exactly the right people in Bhopal and Jabalpur using demographic, interest, and behaviour-based targeting precision.", iconBg: "bg-orange-100 text-orange-700", bar: "bg-orange-700", tint: "bg-fuchsia-50 border-purple-200" },
     { icon: <TrendingUp size={19} />, title: "Competitor Edge", desc: "Monitor competitors, identify gaps in their strategy, and consistently outperform them for your audience's attention and trust.", iconBg: "bg-green-100 text-green-700", bar: "bg-green-700", tint: "bg-orange-50 border-orange-200" },
-    { icon: <Zap size={19} />, title: "Lead Generation", desc: "Convert social engagement into measurable business outcomes — website visits, enquiries, and direct sales every month.", iconBg: "bg-red-100 text-red-700", bar: "bg-red-700", tint: "bg-white border-slate-100" },
+    { icon: <Zap size={19} />, title: "Lead Generation", desc: "Convert social engagement into measurable business outcomes - website visits, enquiries, and direct sales every month.", iconBg: "bg-red-100 text-red-700", bar: "bg-red-700", tint: "bg-white border-slate-100" },
     { icon: <Shield size={19} />, title: "Brand Authority", desc: "Consistent, high-quality content positions your brand as the most credible and trustworthy name in your local industry.", iconBg: "bg-amber-100 text-amber-700", bar: "bg-amber-700", tint: "bg-green-50 border-green-200" },
   ]
 
@@ -370,7 +370,7 @@ const SocialMedia = () => {
               <div className="flex flex-col gap-4 justify-end">
                 <p className="text-sm font-medium text-slate-700 leading-[1.8] border-l-[3px] border-blue-100 pl-4">
                   "Social media is where your customers spend their time and make purchasing
-                  decisions — stay visible or get left behind in the MP business landscape."
+                  decisions - stay visible or get left behind in the MP business landscape."
                 </p>
                 <div className="flex gap-6">
                   {[["4.9B", "Social Users", "text-blue-600"], ["2.5h", "Daily Usage", "text-violet-600"], ["76%", "Buy via Social", "text-orange-500"]].map(([val, lbl, color]) => (

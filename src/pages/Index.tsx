@@ -481,7 +481,7 @@ export default function Index() {
                 {/* Description */}
                 <p className="text-sm md:text-lg text-slate-700 leading-[1.85] border-l-4 border-[#E8F0FB] pl-5 py-1 font-medium">
                   Since 2022, we've transformed the digital landscape for 50+ brands
-                  across Madhya Pradesh. Our focus isn't just clicks — it's sustainable
+                  across Madhya Pradesh. Our focus isn't just clicks - it's sustainable
                   revenue and lasting brand authority that compounds over time.
                 </p>
 
@@ -710,7 +710,7 @@ export default function Index() {
                       businesses grow faster than the competition.
                     </p>
                     <p className="text-sm md:text-base font-medium">
-                      Our team of specialists works as an extension of your business — not just
+                      Our team of specialists works as an extension of your business - not just
                       an agency. Every campaign we run is aligned to your revenue goals, tracked
                       in real time, and optimised relentlessly until your numbers move.
                     </p>
@@ -850,8 +850,8 @@ export default function Index() {
               </div>
               <div className="flex flex-col gap-4">
                 <p className="text-sm sm:text-base text-slate-800 leading-relaxed border-l-[3px] border-blue-100 pl-4 font-medium">
-                  "Your customers are online. If your business isn't visible there, you're
-                  losing opportunities every single day."
+                  Your customers are online. If your business isn't visible there, you're
+                  losing opportunities every single day.
                 </p>
               </div>
             </motion.div>
@@ -859,12 +859,12 @@ export default function Index() {
             {/* Asymmetric bento grid */}
             <div className="grid grid-cols-1 md:grid-cols-6 gap-3 md:gap-4 mb-4">
               {[
-                { span: "md:col-span-3", title: "Precision Targeting", desc: "Reach the right audience at the perfect moment in their buying journey — not just anyone, but the people most likely to buy from you today.", icon: Target, tint: "bg-blue-50 border-blue-200", iconBg: "bg-blue-100 text-blue-700", num: "text-blue-300", bar: "bg-blue-700", ac: "#1d4ed8", wide: false },
-                { span: "md:col-span-3", title: "Consistent Lead Generation", desc: "Build a predictable pipeline of high-quality leads that actually convert — no more relying on word-of-mouth or seasonal walk-ins.", icon: Users, tint: "bg-fuchsia-50 border-purple-200", iconBg: "bg-purple-100 text-purple-700", num: "text-purple-300", bar: "bg-purple-700", ac: "#6d28d9", wide: false },
+                { span: "md:col-span-3", title: "Precision Targeting", desc: "Reach the right audience at the perfect moment in their buying journey - not just anyone, but the people most likely to buy from you today.", icon: Target, tint: "bg-blue-50 border-blue-200", iconBg: "bg-blue-100 text-blue-700", num: "text-blue-300", bar: "bg-blue-700", ac: "#1d4ed8", wide: false },
+                { span: "md:col-span-3", title: "Consistent Lead Generation", desc: "Build a predictable pipeline of high-quality leads that actually convert - no more relying on word-of-mouth or seasonal walk-ins.", icon: Users, tint: "bg-fuchsia-50 border-purple-200", iconBg: "bg-purple-100 text-purple-700", num: "text-purple-300", bar: "bg-purple-700", ac: "#6d28d9", wide: false },
                 { span: "md:col-span-2", title: "Brand Authority", desc: "Establish deep trust through social proof, expert content, and high visibility that makes you the obvious choice.", icon: Award, tint: "bg-orange-50 border-orange-200", iconBg: "bg-orange-100 text-orange-700", num: "text-orange-300", bar: "bg-orange-700", ac: "#c2410c", wide: false },
-                { span: "md:col-span-2", title: "Real-Time Tracking", desc: "Track every rupee with advanced analytics — know exactly what's working and where to invest more.", icon: BarChart3, tint: "bg-green-50 border-green-200", iconBg: "bg-green-100 text-green-700", num: "text-green-300", bar: "bg-green-700", ac: "#15803d", wide: false },
-                { span: "md:col-span-2", title: "Competitive Edge", desc: "Don't just compete — outperform rivals by owning the digital space they're ignoring right now.", icon: ShieldCheck, tint: "bg-red-50 border-red-200", iconBg: "bg-red-100 text-red-700", num: "text-red-300", bar: "bg-red-700", ac: "#b91c1c", wide: false },
-                { span: "md:col-span-6", title: "Scalable ROI", desc: "Scale profitably with targeted ad strategies designed for 2×–5× growth — campaigns that compound in value the longer they run, delivering more revenue per rupee.", icon: Zap, tint: "bg-amber-50 border-amber-200", iconBg: "bg-amber-100 text-amber-700", num: "text-amber-300", bar: "bg-amber-700", ac: "#b45309", wide: true },
+                { span: "md:col-span-2", title: "Real-Time Tracking", desc: "Track every rupee with advanced analytics - know exactly what's working and where to invest more.", icon: BarChart3, tint: "bg-green-50 border-green-200", iconBg: "bg-green-100 text-green-700", num: "text-green-300", bar: "bg-green-700", ac: "#15803d", wide: false },
+                { span: "md:col-span-2", title: "Competitive Edge", desc: "Don't just compete - outperform rivals by owning the digital space they're ignoring right now.", icon: ShieldCheck, tint: "bg-red-50 border-red-200", iconBg: "bg-red-100 text-red-700", num: "text-red-300", bar: "bg-red-700", ac: "#b91c1c", wide: false },
+                { span: "md:col-span-6", title: "Scalable ROI", desc: "Scale profitably with targeted ad strategies designed for 2×-5× growth - campaigns that compound in value the longer they run, delivering more revenue per rupee.", icon: Zap, tint: "bg-amber-50 border-amber-200", iconBg: "bg-amber-100 text-amber-700", num: "text-amber-300", bar: "bg-amber-700", ac: "#b45309", wide: true },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -922,7 +922,7 @@ export default function Index() {
               </div>
 
               <p className="text-sm md:text-lg text-slate-300 italic leading-relaxed md:leading-[1.85] relative z-10 text-center sm:text-left">
-                "Today, <strong className="text-white not-italic font-bold">customers search, compare, and decide online</strong> before making any purchase. Your digital presence directly impacts your growth, credibility, and revenue."
+                Today, <strong className="text-white not-italic font-bold">customers search, compare, and decide online</strong> before making any purchase. Your digital presence directly impacts your growth, credibility, and revenue.
               </p>
 
               {/* Decorative line/accents */}
@@ -951,7 +951,7 @@ export default function Index() {
                 </span>
               </h2>
               <p className="text-sm md:text-lg text-slate-500 font-medium ">
-                "A high-velocity, data-driven approach designed for sustainable growth."
+                A high-velocity, data-driven approach designed for sustainable growth.
               </p>
             </motion.div>
 
@@ -1036,7 +1036,7 @@ export default function Index() {
                 <Rocket className="w-24 h-24 rotate-12" />
               </div>
               <p className="text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed italic">
-                "Your growth isn't a single event—it's a <span className="text-secondary font-bold">continuous evolution</span> powered by data and creativity."
+                Your growth isn't a single event - it's a <span className="text-secondary font-bold">continuous evolution</span> powered by data and creativity.
               </p>
             </motion.div>
           </motion.div>
