@@ -224,14 +224,14 @@ const EcommerceDevelopment = () => {
 
                 <div className="w-8 h-0.5 bg-blue-600 mb-6 rounded-full" />
 
-                <h2 className=" text-4xl sm:text-5xl font-bold mb-5">
-                  Why Choose{" "}
+                <h2 className=" text-3xl sm:text-5xl font-bold mb-5">
+                  Why Choose <br className="block sm:hidden"/>
                   <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
                     Socio Bhaarat
                   </span>
                 </h2>
 
-                <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-10 max-w-md">
+                <p className="text-muted-foreground text-base font-medium sm:text-lg leading-relaxed mb-10 max-w-md">
                   We combine strategy, technology, and customer-focused design to create
                   platforms that deliver seamless shopping experiences and real revenue growth.
                 </p>
@@ -306,7 +306,7 @@ const EcommerceDevelopment = () => {
 
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">
                 Our E-commerce Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">
                   Services
                 </span>
@@ -345,7 +345,7 @@ const EcommerceDevelopment = () => {
 
                   {/* Card Body */}
                   <div className="p-7 flex-grow flex flex-col">
-                    <p className="text-slate-500 text-sm md:text-md mb-0 font-medium leading-relaxed">
+                    <p className="text-slate-700 text-sm md:text-md mb-0 font-medium leading-relaxed">
                       {service.description}
                     </p>
 
@@ -383,7 +383,7 @@ const EcommerceDevelopment = () => {
               <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground mb-4">
                 How we work
               </p>
-              <h2 className=" text-4xl md:text-5xl font-bold text-slate-800">
+              <h2 className=" text-3xl md:text-5xl font-bold text-slate-800">
                 The{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                   Production Roadmap

@@ -272,7 +272,7 @@ function WhatsappBusinessAPI() {
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.22em] text-blue-700 mb-5">
                   <MessageCircle className="w-3 h-3" /> WhatsApp Advantage
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+                <h2 className="text-3xl md:text-5xl font-bold text-slate-900">
                   Why Choose{" "}
                   <em className="bg-gradient-to-r from-blue-500 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                     Socio Bhaarat
@@ -281,7 +281,7 @@ function WhatsappBusinessAPI() {
                 </h2>
               </div>
               <div className="flex flex-col gap-4">
-                <p className="text-base text-slate-700 border-l-[3px] border-blue-200 pl-4 font-medium">
+                <p className="text-sm md:text-base text-slate-700 border-l-[3px] border-blue-200 pl-4 font-medium">
                   We don't just give you API access - we build the entire messaging
                   infrastructure, automation flows, and campaign strategy that turns
                   WhatsApp into your highest-ROI marketing channel.
@@ -314,7 +314,7 @@ function WhatsappBusinessAPI() {
                   </h3>
 
                   {/* Desc */}
-                  <p className="text-base font-medium text-slate-700 flex-1 mb-5">
+                  <p className="text-sm md:text-base font-medium text-slate-700 flex-1 mb-5">
                     {item.desc}
                   </p>
 
@@ -541,7 +541,7 @@ function WhatsappBusinessAPI() {
 
             {/* Split header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-4">
-              <h2 className="font-display text-4xl md:text-5xl font-bold italic tracking-tight text-slate-900">
+              <h2 className="text-3xl md:text-5xl font-bold italic tracking-tight text-slate-900">
                 Our WhatsApp{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   API Services
@@ -618,12 +618,12 @@ function WhatsappBusinessAPI() {
           </div>
         </section>
 
-        <QuoteSection quote="In a world of endless notifications, WhatsApp is the only channel where your message is guaranteed to be seen — make every send count." />
+        <QuoteSection quote="In a world of noise, WhatsApp guarantees your message is seen. Make it count." />
 
         <CTASection
           title={<>Ready to Reach Every Customer <br className="hidden sm:block" /> Instantly on WhatsApp?</>}
-          description={<>Get your WhatsApp Business API access in 24 hours — <br className="hidden sm:block" />no hidden fees, no long contracts, just results for your business.</>}
-          buttonText="Get Free WhatsApp API Access"
+          description={<>Get your WhatsApp Business API access in 24 hours - <br className="hidden sm:block" />no hidden fees, no long contracts, just results for your business.</>}
+          buttonText="Get WhatsApp API Access"
         />
       </div>
     </>

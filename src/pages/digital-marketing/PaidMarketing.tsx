@@ -280,8 +280,8 @@ const PaidMarketing = () => {
               <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
                 The SocioBhaarat Advantage
               </span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
-                Why Brands{" "}
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+                Why Brands <br className="block sm:hidden" />
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Trust Us
                 </span>
@@ -350,14 +350,14 @@ const PaidMarketing = () => {
                   </span>
                 </div>
 
-                <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 leading-[1.05] mb-6">
+                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-[1.05] mb-6">
                   The Speed of{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                     Results
                   </span>
                 </h2>
 
-                <p className="text-base md:text-lg text-slate-800 leading-[1.9] font-medium border-l-4 border-blue-200 pl-5 py-1 mb-10">
+                <p className="text-sm sm:text-base md:text-lg text-slate-800 font-medium border-l-4 border-blue-200 pl-5 py-1 mb-10">
                   Paid marketing helps businesses reach ideal customers instantly. With precise
                   targeting, Meta and Google Ads generate faster revenue growth compared to
                   organic-only strategies.
@@ -406,7 +406,7 @@ const PaidMarketing = () => {
                         className="text-blue-600 group-hover:text-white transition-colors duration-200"
                       />
                     </div>
-                    <span className="text-sm sm:text-[14px] font-medium tracking-[.06em] text-slate-800 group-hover:text-blue-700 transition-colors duration-200 flex-1 leading-snug">
+                    <span className="text-sm sm:text-[14px] tracking-[.06em] font-medium text-slate-800 group-hover:text-blue-700 transition-colors duration-200 flex-1 leading-snug">
                       {point}
                     </span>
                     <span className="text-[10px] sm:text-[11px] font-bold text-slate-200 group-hover:text-blue-200 transition-colors duration-200 font-mono flex-shrink-0">
@@ -446,7 +446,7 @@ const PaidMarketing = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.2em] text-blue-700 mb-5">
                 <Zap className="w-3 h-3" /> Omnichannel Performance
               </div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
                 Strategic{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
                   Placement
@@ -525,7 +525,7 @@ const PaidMarketing = () => {
               >
                 Methodology
               </motion.span>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-none">
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Approach</span>
               </h2>
               <p className="text-slate-700 text-base md:text-lg max-w-2xl mx-auto mt-6 font-medium">

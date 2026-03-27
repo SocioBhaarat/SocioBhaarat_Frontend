@@ -35,7 +35,7 @@ const WebsiteSEO = () => {
       icon: <Zap />,
       color: "#16a34a", // Green
       title: "Technical SEO & Core Vitals",
-      desc: "Fine-tuning your site’s backend for elite performance — optimizing crawl budgets, site speed, mobile responsiveness, and schema markup to meet Google’s strictest ranking criteria.",
+      desc: "Fine-tuning your site’s backend for elite performance - optimizing crawl budgets, site speed, mobile responsiveness, and schema markup to meet Google’s strictest ranking criteria.",
     },
     {
       icon: <BarChart3 />,
@@ -79,7 +79,7 @@ const WebsiteSEO = () => {
     {
       num: "02",
       title: "In-Depth Keyword Research",
-      desc: "Identifying high-intent search terms and long-tail opportunities that bridge the gap between user intent and your brand — capturing leads before the competition.",
+      desc: "Identifying high-intent search terms and long-tail opportunities that bridge the gap between user intent and your brand - capturing leads before the competition.",
       tag: "Intent-Based Targeting",
       card: "bg-orange-50 border-orange-200",
       iconWrap: "bg-orange-100 text-orange-700",
@@ -115,7 +115,7 @@ const WebsiteSEO = () => {
     {
       num: "05",
       title: "High-Quality Link Building",
-      desc: "Architecting a high-authority backlink profile through strategic outreach and PR — establishing the digital domain dominance required to rank for competitive terms.",
+      desc: "Architecting a high-authority backlink profile through strategic outreach and PR - establishing the digital domain dominance required to rank for competitive terms.",
       tag: "Authority Building",
       card: "bg-purple-50 border-purple-200",
       iconWrap: "bg-purple-100 text-purple-700",
@@ -127,7 +127,7 @@ const WebsiteSEO = () => {
     {
       num: "06",
       title: "Transparent Monthly Reporting",
-      desc: "Clear visibility into your SEO health with sentiment scores, keyword movement, and ROI metrics — providing measurable results every 30-day cycle.",
+      desc: "Clear visibility into your SEO health with sentiment scores, keyword movement, and ROI metrics - providing measurable results every 30-day cycle.",
       tag: "Full Visibility",
       card: "bg-rose-50 border-rose-200",
       iconWrap: "bg-rose-100 text-rose-700",
@@ -251,7 +251,7 @@ const WebsiteSEO = () => {
               <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
                 The SocioBhaarat Advantage
               </span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
                 Why Choose{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Our SEO Strategy
@@ -320,7 +320,7 @@ const WebsiteSEO = () => {
                   </span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-bold italic text-slate-900 leading-[1.07]">
+                <h2 className="text-3xl md:text-5xl font-bold italic text-slate-900 leading-[1.07]">
                   Why SEO{" "}
                   <em className=" bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 bg-clip-text text-transparent font-medium">
                     Matters

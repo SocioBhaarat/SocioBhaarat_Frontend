@@ -340,7 +340,7 @@ const Navigation = () => {
                     onClick={() => setIsOpen(false)}
                     className="text-foreground hover:text-accent transition-colors font-medium py-2 px-2"
                   >
-                    Whatsapp-business-api
+                    Whatsapp Business Api
                   </Link>
 
                   <Link
@@ -420,7 +420,7 @@ const Navigation = () => {
                   </Link>
 
                   <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded mt-2"
-                    onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                    onClick={() => window.open("https://wa.me/+919407448837", "_blank")}
                   >
                     BOOK A CALL
                   </Button>

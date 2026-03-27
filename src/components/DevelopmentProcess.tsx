@@ -86,7 +86,7 @@ const ProcessSection = ({
             {titleSuffix}
           </h2>
 
-          <p className="text-slate-500 text-lg md:text-xl max-w-2xl">
+          <p className="text-slate-700 font-medium text-base md:text-xl max-w-2xl">
             {description}
           </p>
         </div>

@@ -350,29 +350,6 @@ const WhatsAppPackages = () => {
         }
       `}</style>
         </section>
-        <section className="relative pt-12 pb-36 px-4 overflow-hidden bg-[#fafafa]">
-          <div className="absolute inset-0 z-0 pointer-events-none">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10 animate-pulse" />
-          </div>
-
-          <div className="container mx-auto max-w-6xl text-center relative z-10">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
-                <Zap className="w-3 h-3" /> Growth Engineering Lab
-              </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-tight tracking-tighter mb-6">
-                Whatsapp Marketing <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
-                  Packages
-                </span>
-              </h1>
-              <p className="text-md md:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed font-semibold">
-                Select a high-performance framework tailored for your business scale. All packages include industrial-grade reporting and dedicated lab support.
-              </p>
-            </motion.div>
-          </div>
-        </section>
 
         <section className="py-16 md:py-24 sm:px-6 lg:px-8 relative z-10">
           <div className="container mx-auto max-w-7xl">

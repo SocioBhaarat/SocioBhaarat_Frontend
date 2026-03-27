@@ -88,52 +88,61 @@ const Hiring = () => {
                 <Sparkles className="w-4 h-4" /> WE ARE RECRUITING TOP TALENT
               </div>
 
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter mb-8">
+              <h1 className=" text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter mb-8">
                 Join Our <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium uppercase">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                   Engineering Team
                 </span>
               </h1>
 
-              <p className="text-base md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-medium italic border-x-0 md:border-x border-slate-200 md:px-12">
-                "Be part of a dynamic squad that's transforming how businesses scale digitally through creative technical excellence."
+              <p className="text-base md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed font-semibold border-x-0 md:border-x border-slate-200 md:px-12">
+                Be part of a dynamic squad that's transforming how businesses scale digitally through creative technical excellence.
               </p>
             </motion.div>
           </div>
         </section>
 
         <section className="py-20 bg-muted/30 relative">
-          <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="container mx-auto max-w-7xl relative z-10">
             <div className="mb-16 border-l-4 border-primary pl-8">
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900">
-                Why Join <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Socio Bhaarat?</span>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900">
+                Why Join <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Socio Bhaarat?</span>
               </h2>
-              <p className="text-slate-500 font-medium italic mt-2">Industrial-grade benefits for high-performance individuals.</p>
+              <p className="text-slate-700 font-medium italic mt-2">Industrial-grade benefits for high-performance individuals.</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
+            <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {benefits.map((benefit) => (
+                <motion.li
+                  key={benefit.title} // Use title or id instead of index
                   whileHover={{ y: -5 }}
-                  className="bg-card p-8 rounded-[2rem] border-2 border-border/50 hover:border-primary/40 transition-all shadow-sm group"
+                  className="group bg-card border-border/50 hover:border-primary/40 rounded-[2rem] border-2 p-8 shadow-sm transition-all"
                 >
-                  <div className={`w-14 h-14 rounded-2xl bg-muted/50 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 ${benefit.color}`}>
+                  <div
+                    className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-muted/50 transition-all duration-300 group-hover:bg-primary group-hover:text-white ${benefit.color}`}
+                    aria-hidden="true"
+                  >
                     {benefit.icon}
                   </div>
-                  <h3 className="font-black text-lg text-slate-900 italic mb-2">{benefit.title}</h3>
-                  <p className="text-slate-500 text-xs leading-relaxed font-medium italic">{benefit.description}</p>
-                </motion.div>
+
+                  <h3 className="mb-2 text-lg font-bold text-slate-900">
+                    {benefit.title}
+                  </h3>
+
+                  <p className="text-xs md:text-sm font-medium leading-relaxed text-slate-700">
+                    {benefit.description}
+                  </p>
+                </motion.li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
         <section className="py-24 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter italic">
-                Open <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 italic font-serif font-medium">Positions</span>
+              <h2 className="text-4xl md:text-6xl font-bold text-slate-900">
+                Open <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500  font-medium">Positions</span>
               </h2>
             </div>
 
@@ -153,8 +162,8 @@ const Hiring = () => {
                         <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest rounded-md">{position.department}</span>
                         <span className="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-black uppercase tracking-widest rounded-md">{position.type}</span>
                       </div>
-                      <h3 className="text-3xl md:text-4xl font-black text-slate-900 italic">{position.title}</h3>
-                      <p className="text-slate-500 italic max-w-xl">{position.description}</p>
+                      <h3 className="text-3xl md:text-4xl font-bold text-slate-900">{position.title}</h3>
+                      <p className="text-slate-700 font-medium max-w-xl">{position.description}</p>
                     </div>
 
                     <Button
@@ -168,12 +177,12 @@ const Hiring = () => {
 
                   {/* Technical Specs List */}
                   <div className="mt-10 pt-10 border-t border-slate-100">
-                    <h4 className="font-black text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-6 italic">Engineering Requirements</h4>
+                    <h4 className="font-bold text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-6 italic">Engineering Requirements</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {position.requirements.map((req, idx) => (
                         <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 group-hover:border-primary/10 transition-colors">
                           <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                          <span className="text-[11px] md:text-xs font-bold text-slate-600 uppercase tracking-tight">{req}</span>
+                          <span className="text-[11px] md:text-xs font-bold text-slate-700">{req}</span>
                         </div>
                       ))}
                     </div>
@@ -194,11 +203,11 @@ const Hiring = () => {
               transition={{ duration: 0.8 }}
             >
 
-              <h2 className="font-display text-3xl md:text-5xl font-black mb-8 tracking-tighter uppercase italic leading-[0.95]">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 uppercase leading-[0.95]">
                 Don't See Your Role?
               </h2>
 
-              <p className="text-sm md:text-lg text-slate-400 mb-12 leading-relaxed font-medium italic border-x-0 md:border-x border-white/10 px-6 md:px-12">
+              <p className="text-sm md:text-lg text-slate-700 mb-12 leading-relaxed font-medium italic border-x-0 md:border-x border-white/10 px-6 md:px-12">
                 "We are always hunting for outliers and technical visionaries. If your expertise doesn't fit a standard box, send us your brief."
               </p>
 
@@ -207,7 +216,7 @@ const Hiring = () => {
                 <Button
                   size="lg"
                   className="h-16 md:h-20 px-10 md:px-16 rounded-full bg-secondary text-slate-900 hover:bg-primary hover:text-white font-black text-lg md:text-xl transition-all shadow-2xl hover:scale-105 group"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                  onClick={() => window.open("https://wa.me/+919407448837", "_blank")}
                 >
                   Send Your Resume
                   <Send className="ml-3 w-5 h-5 group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform" />

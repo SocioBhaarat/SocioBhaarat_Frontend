@@ -4,10 +4,11 @@ import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { AnimatePresence, color, motion } from "framer-motion";
-import { ArrowRight, BarChart3, Calendar, Check, FileText, Heart, Mail, Search, Share2, Shield, ShieldCheck, Sparkles, Star, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
+import { ArrowRight, BarChart3, Calendar, Check, ChevronDown, FileText, Heart, Mail, Search, Share2, Shield, ShieldCheck, Sparkles, Star, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO"
+import ExploralPanel from "@/components/ui/ExploralPanel";
 
 const ContentMarketing = () => {
   const navigate = useNavigate();
@@ -249,7 +250,7 @@ const ContentMarketing = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.22em] text-blue-700 mb-5">
                 <Sparkles className="w-3 h-3" /> The Content Engineering Edge
               </div>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-3">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-3">
                 Why Choose Our{" "}
                 <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
                   Content Ecosystem
@@ -259,83 +260,7 @@ const ContentMarketing = () => {
                 "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
               </p>
             </div>
-
-            {/* Explorer panel */}
-            <div className="border border-slate-200 rounded-2xl overflow-hidden bg-white flex flex-col md:flex-row">
-
-              {/* Left nav */}
-              <div className="md:w-[40%] flex-shrink-0 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200 p-2">
-                {whyChooseUs.map((item, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActive(i)}
-                    className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl border text-left transition-all duration-200 mb-0.5 ${active === i
-                      ? "bg-white border-blue-100 shadow-sm"
-                      : "border-transparent hover:bg-white hover:border-slate-200"
-                      }`}
-                  >
-                    <div className={`w-8 h-8 rounded-[9px] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${active === i ? "scale-105" : ""} ${item.iconBg} ${item.iconColor}`}>
-                      <item.icon size={14} />
-                    </div>
-                    <span className={` text-base font-semibold ${active === i ? "text-blue-700" : "text-slate-600"}`}>
-                      {item.title}
-                    </span>
-                    <span className={`ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
-                      {item.num}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Right panel */}
-              <div className="flex-1 p-10 md:p-12 relative overflow-hidden flex flex-col justify-center min-h-[380px]">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={active}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    {/* Num */}
-                    <span className={`text-[10px] font-bold tracking-[.2em] uppercase mb-3 block ${whyChooseUs[active].numColor}`}>
-                      {whyChooseUs[active].num}
-                    </span>
-
-                    {/* Title */}
-                    <h3
-                      className={`font-display text-3xl md:text-4xl font-extrabold mb-4 ${whyChooseUs[active].iconColor}`}
-                    >
-                      {whyChooseUs[active].title}
-                    </h3>
-
-                    {/* Desc */}
-                    <p
-                      className={`text-sm md:text-lg text-slate-700 max-w-lg mb-7 font-medium border-l-[3px] pl-4 leading-relaxed ${whyChooseUs[active].iconBg.replace("bg-", "border-")}`}
-                    >
-                      {whyChooseUs[active].desc}
-                    </p>
-
-                    {/* Tag */}
-                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-[.15em] ${whyChooseUs[active].tagBg} ${whyChooseUs[active].tagColor}`}>
-                      <Check size={10} strokeWidth={2.5} />
-                      {whyChooseUs[active].tag}
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Watermark number */}
-                <span className="absolute -bottom-5 -right-2 font-display text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.04]">
-                  {whyChooseUs[active].num}
-                </span>
-
-                {/* Ghost icon */}
-                <div className="absolute top-8 right-10 opacity-[0.05]">
-                  {React.createElement(whyChooseUs[active].icon, { size: 80, className: whyChooseUs[active].iconColor })}
-                </div>
-              </div>
-
-            </div>
+            <ExploralPanel content={whyChooseUs}/>
           </div>
         </section>
 
@@ -350,19 +275,19 @@ const ContentMarketing = () => {
               className="grid md:grid-cols-2 rounded-2xl overflow-hidden border border-slate-200 mb-3"
             >
               {/* Left — definition panel */}
-              <div className="bg-blue-50 px-10 py-14 relative overflow-hidden border-r border-blue-100">
+              <div className="bg-blue-50 px-5 md:px-10 py-14 relative overflow-hidden border-r border-blue-100">
                 <div className="absolute top-0 right-0 w-48 h-48 bg-blue-200/30 rounded-full blur-[60px] pointer-events-none" />
                 <span className="text-[10px] font-bold tracking-[.3em] uppercase text-blue-600 mb-5 block">
                   Content Strategy
                 </span>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                <h2 className=" text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                   What is{" "}
                   <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text font-medium text-transparent">
                     Content Marketing
                   </span> ?
                 </h2>
                 <p className="text-sm md:text-base text-slate-700 font-medium leading-[1.85] border-l-[3px] border-blue-200 pl-4 mb-8">
-                  A strategic approach focused on creating and distributing valuable, relevant content to attract and retain a clearly defined audience — building trust long before a sale.
+                  A strategic approach focused on creating and distributing valuable, relevant content to attract and retain a clearly defined audience - building trust long before a sale.
                 </p>
                 <div className="flex gap-8">
                   {[
@@ -383,7 +308,7 @@ const ContentMarketing = () => {
               </div>
 
               {/* Right — why panel */}
-              <div className="bg-white px-10 py-14 flex flex-col justify-center gap-5">
+              <div className="bg-white px-5 md:px-10 py-14 flex flex-col justify-center gap-5">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[10px] font-bold uppercase tracking-[.2em] text-blue-700 w-fit">
                   <Sparkles className="w-3 h-3" /> The Organic Advantage
                 </div>
@@ -394,7 +319,7 @@ const ContentMarketing = () => {
                   </span>
                 </h3>
                 <p className="text-sm md:text-base  text-slate-700 font-medium leading-[1.85]">
-                  Unlike traditional advertising, content marketing establishes your brand as an industry authority — generating qualified leads organically across the Madhya Pradesh business landscape.
+                  Unlike traditional advertising, content marketing establishes your brand as an industry authority - generating qualified leads organically across the Madhya Pradesh business landscape.
                 </p>
                 <div className="w-12 h-[2px] bg-blue-600 rounded-full" />
               </div>

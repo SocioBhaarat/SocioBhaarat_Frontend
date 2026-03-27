@@ -17,19 +17,19 @@ const ORMServices = () => {
       icon: <Shield />,
       color: "#2563eb",
       title: "Reputation Monitoring & Alerts",
-      desc: "Real-time tracking of brand mentions, reviews, and search visibility across all digital platforms — Google, social media, news sites, and review portals — with instant alerts whenever your brand is discussed online.",
+      desc: "Real-time tracking of brand mentions, reviews, and search visibility across all digital platforms - Google, social media, news sites, and review portals - with instant alerts whenever your brand is discussed online.",
     },
     {
       icon: <Star />,
       color: "#7c3aed",
       title: "Review Management & Response",
-      desc: "Professional, on-brand responses to every customer review — positive or negative. We improve your star ratings, resolve complaints publicly, and turn unhappy customers into loyal brand advocates.",
+      desc: "Professional, on-brand responses to every customer review - positive or negative. We improve your star ratings, resolve complaints publicly, and turn unhappy customers into loyal brand advocates.",
     },
     {
       icon: <AlertTriangle />,
       color: "#ea580c",
       title: "Negative Content Suppression",
-      desc: "Strategic SEO and content tactics to push down harmful reviews, false claims, and damaging articles from search results — replacing them with positive, authoritative content that reflects your true brand story.",
+      desc: "Strategic SEO and content tactics to push down harmful reviews, false claims, and damaging articles from search results - replacing them with positive, authoritative content that reflects your true brand story.",
     },
     {
       icon: <TrendingUp />,
@@ -41,25 +41,25 @@ const ORMServices = () => {
       icon: <Shield />,
       color: "#38BDF8",
       title: "Brand Image Building",
-      desc: "Creating and distributing authority-driven content — press releases, thought leadership articles, and case studies — that strengthens your credibility and positions your brand as the leading name in your industry.",
+      desc: "Creating and distributing authority-driven content - press releases, thought leadership articles, and case studies - that strengthens your credibility and positions your brand as the leading name in your industry.",
     },
     {
       icon: <AlertTriangle />,
       color: "#dc2626",
       title: "Crisis Management Strategy",
-      desc: "Rapid-response playbooks, spokesperson guidance, and real-time execution to contain reputation crises — minimising damage, restoring public confidence, and getting your brand back on solid ground fast.",
+      desc: "Rapid-response playbooks, spokesperson guidance, and real-time execution to contain reputation crises - minimising damage, restoring public confidence, and getting your brand back on solid ground fast.",
     },
     {
       icon: <TrendingUp />,
       color: "#d97706",
       title: "Online PR & Media Outreach",
-      desc: "Building relationships with digital journalists, bloggers, and influencers to secure positive media coverage — improving brand visibility, domain authority, and public perception through credible third-party publications.",
+      desc: "Building relationships with digital journalists, bloggers, and influencers to secure positive media coverage - improving brand visibility, domain authority, and public perception through credible third-party publications.",
     },
     {
       icon: <Users />,
       color: "#0d9488",
       title: "Competitor Reputation Analysis",
-      desc: "In-depth monitoring of competitor brand mentions, review trends, and SERP positioning — giving you actionable intelligence to stay ahead, differentiate your offering, and seize opportunities they are missing.",
+      desc: "In-depth monitoring of competitor brand mentions, review trends, and SERP positioning - giving you actionable intelligence to stay ahead, differentiate your offering, and seize opportunities they are missing.",
     },
   ]
 
@@ -68,7 +68,7 @@ const ORMServices = () => {
       num: "01",
       title: "24/7 Reputation Monitoring",
       icon: <ShieldCheck size={22} />,
-      desc: "Round-the-clock surveillance of every mention, review, and conversation across social media, news portals, and review platforms — so nothing slips through unnoticed.",
+      desc: "Round-the-clock surveillance of every mention, review, and conversation across social media, news portals, and review platforms - so nothing slips through unnoticed.",
       tag: "Always-On Protection",
       card: "bg-blue-50 border-blue-200",
       iconWrap: "bg-blue-100 text-blue-700",
@@ -80,7 +80,7 @@ const ORMServices = () => {
       num: "02",
       title: "Expert Review Response",
       icon: <MessageSquare size={22} />,
-      desc: "Professionally crafted responses to every customer review — positive or negative — turning feedback into powerful brand-trust signals on Google, JustDial, and beyond.",
+      desc: "Professionally crafted responses to every customer review - positive or negative - turning feedback into powerful brand-trust signals on Google, JustDial, and beyond.",
       tag: "Human-Led Responses",
       card: "bg-orange-50 border-orange-200",
       iconWrap: "bg-orange-100 text-orange-700",
@@ -92,7 +92,7 @@ const ORMServices = () => {
       num: "03",
       title: "Negative Content Suppression",
       icon: <AlertTriangle size={22} />,
-      desc: "Strategic removal and de-ranking of harmful content, false reviews, and damaging search results — pushing negativity down and your brand story to the top.",
+      desc: "Strategic removal and de-ranking of harmful content, false reviews, and damaging search results - pushing negativity down and your brand story to the top.",
       tag: "Damage Control",
       card: "bg-red-50 border-red-200",
       iconWrap: "bg-red-100 text-red-700",
@@ -116,7 +116,7 @@ const ORMServices = () => {
       num: "05",
       title: "Crisis Management Strategies",
       icon: <Zap size={22} />,
-      desc: "Pre-built response playbooks and rapid deployment protocols for PR crises — minimising exposure and restoring brand confidence fast when it matters most.",
+      desc: "Pre-built response playbooks and rapid deployment protocols for PR crises - minimising exposure and restoring brand confidence fast when it matters most.",
       tag: "Rapid Response Ready",
       card: "bg-green-50 border-green-200",
       iconWrap: "bg-green-100 text-green-700",
@@ -128,7 +128,7 @@ const ORMServices = () => {
       num: "06",
       title: "Transparent Reporting & Analysis",
       icon: <BarChart3 size={22} />,
-      desc: "Clear monthly reports with sentiment scores, review trends, SERP tracking, and ROI metrics — full visibility into your brand's health and our measurable results.",
+      desc: "Clear monthly reports with sentiment scores, review trends, SERP tracking, and ROI metrics - full visibility into your brand's health and our measurable results.",
       tag: "Full Visibility",
       card: "bg-emerald-50 border-emerald-200",
       iconWrap: "bg-emerald-100 text-emerald-700",
@@ -156,19 +156,19 @@ const ORMServices = () => {
     {
       stat: "97%",
       label: "Consumer Trust in Reviews",
-      desc: "Nearly all consumers read online reviews before making a purchase decision — your review profile is your most powerful sales tool.",
+      desc: "Nearly all consumers read online reviews before making a purchase decision - your review profile is your most powerful sales tool.",
       bg: "#eff6ff", // Very Light Blue (Blue-50)
     },
     {
       stat: "70%",
       label: "Leads Lost to Competitors",
-      desc: "A single negative search result diverts the majority of potential customers to a competitor — reputation damage is a direct revenue leak.",
+      desc: "A single negative search result diverts the majority of potential customers to a competitor - reputation damage is a direct revenue leak.",
       bg: "#fff1f2", // Very Light Rose (Rose-50)
     },
     {
       stat: "3.3×",
       label: "Revenue from Positive Image",
-      desc: "Businesses with actively managed reputations generate over three times more revenue — trust directly converts into compounding growth.",
+      desc: "Businesses with actively managed reputations generate over three times more revenue - trust directly converts into compounding growth.",
       bg: "#ecfdf5", // Very Light Emerald (Emerald-50)
     },
     {
@@ -282,7 +282,7 @@ const ORMServices = () => {
               <span className="text-blue-600 font-bold tracking-[0.35em] uppercase text-[10px] block">
                 The SocioBhaarat Advantage
               </span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
                 Why Brands{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Trust Us
@@ -362,13 +362,13 @@ const ORMServices = () => {
                 <TrendingUp className="w-3 h-3" />
                 Market Authority & Revenue
               </div>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-slate-900">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900">
                 The Science of <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Digital Trust
                 </span>
               </h2>
-              <p className="text-sm md:text-[15px] text-slate-500 font-medium italic leading-[1.85] max-w-2xl">
-                "In today's digital world, customers trust online reviews as much as personal recommendations. A single negative search result can divert 70% of potential leads to your competitors."
+              <p className="text-sm md:text-[15px] text-slate-700 font-medium italic leading-[1.85] max-w-2xl">
+                In today's digital world, customers trust online reviews as much as personal recommendations. A single negative search result can divert 70% of potential leads to your competitors.
               </p>
             </motion.div>
 
@@ -391,7 +391,7 @@ const ORMServices = () => {
                   <p className="text-sm md:text-base text-slate-900 font-medium ">
                     Online Reputation Management ensures your business maintains a positive image, builds customer trust, and stays ahead of competitors across{" "}
                     <strong className="text-slate-900  font-semibold">Bhopal & Jabalpur</strong>.
-                    Every review, mention, and search result shapes how potential customers perceive your brand — before they ever contact you.
+                    Every review, mention, and search result shapes how potential customers perceive your brand - before they ever contact you.
                   </p>
                   <p className="text-sm md:text-base text-slate-900 font-medium ">
                     We combine data-driven monitoring with strategic content publishing to keep your digital footprint clean, credible, and compelling at all times.
@@ -508,7 +508,7 @@ const ORMServices = () => {
           </div>
         </section>
 
-        <QuoteSection quote="In the digital age, your reputation is the currency of trust—we ensure your brand never goes bankrupt." />
+        <QuoteSection quote="In the digital age, your reputation is the currency of trust we ensure your brand never goes bankrupt." />
 
         {/* FINAL CTA */}
         <CTASection

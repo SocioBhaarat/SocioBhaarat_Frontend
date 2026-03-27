@@ -285,7 +285,7 @@ const GraphicDesigning = () => {
                 <div className="w-8 h-0.5 bg-blue-600 rounded-full" />
 
                 {/* Headline */}
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+                <h2 className="text-3xl md:text-5xl font-bold text-slate-900">
                   Design is the{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
                     Silent Ambassador
@@ -295,7 +295,7 @@ const GraphicDesigning = () => {
 
                 {/* Quote block */}
                 <div className="relative bg-background border border-border border-l-[3px] border-l-blue-600 rounded-xl rounded-l-none p-5">
-                  <p className="text-[15px] text-muted-foreground leading-relaxed">
+                  <p className="text-[15px] text-muted-foreground leading-relaxed font-medium">
                     "Before a customer ever reads your copy or talks to your team, they
                     judge you by your visuals. Great design builds a psychological bridge
                     of trust."
@@ -318,7 +318,7 @@ const GraphicDesigning = () => {
                   Socio Bhaarat
                 </span> for Graphic Designing?
               </h2>
-              <p className="text-slate-700 text-lg md:text-xl max-w-7xl font-medium leading-relaxed">
+              <p className="text-slate-700 text-base md:text-xl max-w-7xl font-medium leading-relaxed">
 
                 We combine 500+ projects of experience with a <span className="text-slate-900 font-bold underline decoration-primary/30 decoration-4 underline-offset-4">high-end satisfaction</span> rate to deliver pixels that perform.
               </p>
@@ -333,7 +333,7 @@ const GraphicDesigning = () => {
           <div className="container mx-auto max-w-[1400px] px-4 md:px-10 relative z-10">
             {/* Section Header: Shifted Left for Modern Engineering Feel */}
             <div className="mb-20 md:mb-10 max-w-6xl">
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-none mb-8">
                 What <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-6 -mr-6 overflow-visible">Socio Bhaarat</span> Brings to the Table
               </h2>
             </div>
@@ -352,7 +352,7 @@ const GraphicDesigning = () => {
               <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground mb-4">
                 Our process
               </p>
-              <h2 className=" text-4xl md:text-5xl font-bold leading-tight">
+              <h2 className=" text-3xl md:text-5xl font-bold leading-tight">
                 The{" "}
                 <em className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">
                   Creative Journey

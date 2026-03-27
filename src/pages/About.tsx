@@ -93,7 +93,7 @@ const About = () => {
                   </span>
                 </h2>
                 <div className="space-y-6">
-                  <p className="text-lg md:text-xl text-slate-800 leading-relaxed font-medium border-l-4 border-primary/20 pl-8">
+                  <p className="text-base md:text-xl text-slate-800 leading-relaxed font-medium border-l-4 border-primary/20 pl-8">
                     "Socio Bhaarat is a results-driven digital marketing and IT solutions company helping startups, entrepreneurs, and growing businesses scale in the digital world."
                   </p>
                   <p className="text-base md:text-lg text-slate-800 leading-relaxed font-medium">
@@ -181,50 +181,81 @@ const About = () => {
             </div>
 
             {/* Asymmetric bento grid */}
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-2.5">
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:gap-2.5 md:px-0">
               {capabilities.map((c, i) => (
                 <motion.div
                   key={i}
-                  whileHover={{ y: c.wide ? 0 : -4, boxShadow: "0 16px 40px rgba(0,0,0,0.08)" }}
+                  whileHover={{
+                    y: typeof window !== 'undefined' && window.innerWidth > 768 ? (c.wide ? 0 : -4) : 0,
+                    boxShadow: "0 16px 40px rgba(0,0,0,0.08)"
+                  }}
                   transition={{ duration: 0.25 }}
-                  className={`group relative border rounded-2xl overflow-hidden cursor-default transition-all duration-300 ${c.tint} ${c.span} ${c.wide ? "flex items-center gap-6 px-8 py-6" : "flex flex-col p-8"}`}
+                  className={`
+        group relative border rounded-2xl overflow-hidden cursor-default transition-all duration-300 
+        ${c.tint} 
+        ${c.span} /* Desktop spans: md:col-span-x */
+        col-span-1 /* Mobile: Always full width */
+        flex flex-col 
+        ${c.wide ? "md:flex-row md:items-center md:gap-6 md:px-8 md:py-6 p-8" : "p-8"}
+      `}
                 >
                   {/* Icon */}
-                  <div className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${c.wide ? "mb-0" : "mb-5"} ${c.iconBg}`}>
+                  <div
+                    className={`
+          flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center 
+          transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 
+          ${c.wide ? "mb-5 md:mb-0" : "mb-5"} 
+          ${c.iconBg}
+        `}
+                  >
                     <c.icon size={19} />
                   </div>
 
                   {/* Body */}
                   <div className={c.wide ? "flex-1 min-w-0" : ""}>
-                    <span className={`text-sm font-bold uppercase tracking-[.18em] mb-2 block ${c.numColor}`}>{c.num}</span>
-                    <h4 className={`text-lg md:text-xl font-bold text-slate-900 mb-2 leading-snug transition-colors duration-250 group-hover:text-current ${c.wide ? "text-xl" : "text-lg"}`}
-                      style={{ ['--tw-text-opacity' as string]: 1 }}
-                    >
+                    <span className={`text-[10px] md:text-sm font-bold uppercase tracking-[.18em] mb-2 block ${c.numColor}`}>
+                      {c.num}
+                    </span>
+
+                    <h4 className={`
+          font-bold text-slate-900 mb-2 leading-snug transition-colors duration-250 
+          group-hover:text-current 
+          ${c.wide ? "text-xl md:text-2xl" : "text-lg md:text-xl"}
+        `}>
                       {c.title}
                     </h4>
-                    <p className={`text-sm md:text-base text-slate-800 font-medium leading-[1.8] border-l-2 pl-3 ${c.wide ? "mb-0" : "flex-1 mb-5"}`}
+
+                    <p className={`
+          text-sm md:text-base text-slate-700 font-medium leading-relaxed 
+          border-l-2 pl-3 
+          ${c.wide ? "mb-4 md:mb-0" : "flex-1 mb-5"}
+        `}
                       style={{ borderColor: `${c.accent}33` }}
                     >
                       {c.desc}
                     </p>
+
                     {!c.wide && (
                       <div className={`h-[2.5px] w-7 rounded-full group-hover:w-full transition-all duration-500 ${c.bar}`} />
                     )}
                   </div>
 
                   {c.wide && (
-                    <div className={`w-[3px] h-12 rounded-full group-hover:h-full transition-all duration-500 flex-shrink-0 self-stretch ${c.bar}`} />
+                    <div className={`hidden md:block w-[3px] h-12 rounded-full group-hover:h-full transition-all duration-500 flex-shrink-0 self-stretch ${c.bar}`} />
                   )}
 
-                  {/* Watermark */}
-                  {!c.wide && (
-                    <span
-                      className="absolute bottom-0 right-2 font-display text-[5rem] font-black italic leading-none pointer-events-none select-none opacity-[0.05] group-hover:opacity-[0.11] transition-opacity"
-                      style={{ color: c.accent }}
-                    >
-                      {c.num}
-                    </span>
-                  )}
+                  {/* Watermark Number */}
+                  <span
+                    className={`
+          absolute bottom-0 right-2 font-display text-[4rem] md:text-[5rem] font-black italic 
+          leading-none pointer-events-none select-none opacity-[0.05] 
+          group-hover:opacity-[0.11] transition-opacity
+          ${c.wide ? "opacity-[0.02] md:opacity-[0.05]" : ""}
+        `}
+                    style={{ color: c.accent }}
+                  >
+                    {c.num}
+                  </span>
                 </motion.div>
               ))}
             </div>

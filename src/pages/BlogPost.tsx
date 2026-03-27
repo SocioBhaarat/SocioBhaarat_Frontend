@@ -277,8 +277,8 @@ const BlogPost = () => {
               >
                 {copied ? (
                   <>
-                    <CheckCircle className="w-4 h-4 text-emerald-500" />
-                    <span className="text-emerald-600 font-semibold">Copied!</span>
+                    <CheckCircle className="w-4 h-4 text-white" />
+                    <span className="text-white font-semibold">Copied!</span>
                   </>
                 ) : (
                   <>
