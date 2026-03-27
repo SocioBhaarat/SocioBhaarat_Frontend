@@ -42,7 +42,7 @@ const MidNavigation = () => {
                 <Button
                   size="lg"
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full px-6"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                  onClick={() => window.open("https://wa.me/+919407448837", "_blank")}
                 >
                   BOOK A CALL
                 </Button>
@@ -82,7 +82,7 @@ const MidNavigation = () => {
                 ))}
                 <Button
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full"
-                  onClick={() => window.open("https://wa.me/919589581364", "_blank")}
+                  onClick={() => window.open("https://wa.me/+919407448837", "_blank")}
                 >
                   BOOK A CALL
                 </Button>
