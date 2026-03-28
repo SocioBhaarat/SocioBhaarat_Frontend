@@ -157,6 +157,7 @@ const GoogleMapMarketing = () => {
         title="Google Business Profile & Local SEO | Socio Bhaarat"
         description="Boost local visibility and attract nearby customers with optimized Google Business Profile and local SEO strategies."
         keywords="google business profile, local seo, gmb optimization, local search ranking, local seo in jabalpur"
+        url="/digital-marketing/google-map-marketing"
       />
       <div className="min-h-screen bg-background">
 

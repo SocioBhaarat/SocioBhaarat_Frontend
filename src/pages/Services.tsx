@@ -168,6 +168,7 @@ const Services = () => {
         title="Our Services | Digital Marketing & IT Solutions | Socio Bhaarat"
         description="Explore our complete range of services including digital marketing, web development, SEO, and performance marketing solutions."
         keywords="digital marketing services, web development services, seo services, performance marketing services, marketing services in jabalpur"
+        url="/services"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
         {/* Dynamic Header */}

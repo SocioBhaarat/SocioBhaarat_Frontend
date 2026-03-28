@@ -78,6 +78,7 @@ const WebDevelopmentPackages = () => {
         title="Website Development Packages | Socio Bhaarat"
         description="Choose from flexible website development packages tailored for startups, businesses, and e-commerce platforms."
         keywords="website development packages, web design packages, ecommerce packages, website pricing, web development packages in jabalpur"
+        url="/packages/website-development"
       />
       <div className="min-h-screen bg-background">
 

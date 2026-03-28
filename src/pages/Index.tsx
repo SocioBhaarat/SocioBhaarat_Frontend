@@ -284,6 +284,7 @@ export default function Index() {
         title="Digital Marketing & IT Solutions Company | Socio Bhaarat"
         description="We provide digital marketing, performance marketing, and IT solutions to help businesses grow with innovative strategies and technology."
         keywords="digital marketing company, it solutions company, performance marketing, web development services, marketing agency in jabalpur"
+        url="/"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
         {/* Hero Section */}

@@ -117,6 +117,7 @@ const EcommerceDevelopment = () => {
         title="E-commerce Development Services | Socio Bhaarat"
         description="Build scalable and secure e-commerce platforms that drive sales and deliver seamless shopping experiences."
         keywords="ecommerce development, online store development, shopify development, ecommerce website, ecommerce developer in jabalpur"
+        url="/design-development/ecommerce-development"
       />
       <div className="min-h-screen bg-background">
 

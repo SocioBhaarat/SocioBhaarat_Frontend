@@ -153,6 +153,7 @@ const VideoMarketing = () => {
                 title="Video Marketing Services | Socio Bhaarat"
                 description="Boost engagement and brand awareness with high-impact video marketing strategies across digital platforms."
                 keywords="video marketing, video advertising, youtube marketing, reels marketing, video marketing services in jabalpur"
+                url="/digital-marketing/video-marketing"
             />
             <div className="min-h-screen bg-background selection:bg-primary/20">
 

@@ -178,6 +178,7 @@ const AppDevelopment = () => {
         title="App Development Services | Socio Bhaarat"
         description="Create high-performance mobile and web applications with seamless user experience and scalable architecture."
         keywords="app development, mobile app development, android ios apps, web apps, app developers in jabalpur"
+        url="/design-development/app-development"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
 

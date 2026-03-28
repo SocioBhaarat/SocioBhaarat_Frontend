@@ -73,6 +73,7 @@ const Hiring = () => {
         title="Careers | Join Our Team | Socio Bhaarat"
         description="Explore exciting career opportunities and join our team to work on innovative digital marketing and IT projects."
         keywords="careers, hiring, jobs in digital marketing, job opportunities, hiring in jabalpur, marketing jobs in jabalpur"
+        url="/hiring"
       />
       <div className="min-h-screen bg-background">
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-[#fafafa]">

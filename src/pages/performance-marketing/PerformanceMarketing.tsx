@@ -233,6 +233,7 @@ const PerformanceMarketing = () => {
         title="Performance Marketing Services | Socio Bhaarat"
         description="Drive measurable results with data-driven performance marketing strategies focused on ROI, conversions, and scalable growth."
         keywords="performance marketing, ppc marketing, paid ads strategy, conversion optimization, performance marketing agency in jabalpur"
+        url="/performance-marketing"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
 

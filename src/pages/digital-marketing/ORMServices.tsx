@@ -185,6 +185,7 @@ const ORMServices = () => {
         title="Online Reputation Management Services | Socio Bhaarat"
         description="Protect and enhance your brand image with effective online reputation management strategies."
         keywords="orm services, online reputation management, brand reputation, review management, orm services in jabalpur"
+        url="/digital-marketing/orm-services"
       />
       <div className="min-h-screen bg-[#fafafa] selection:bg-primary/10">
 

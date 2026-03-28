@@ -49,6 +49,7 @@ const Testimonials = () => {
         title="Client Testimonials | Socio Bhaarat"
         description="See what our clients say about our digital marketing and IT services, and how we helped them grow their business."
         keywords="client testimonials, customer reviews, marketing agency reviews, client feedback, digital marketing company in jabalpur"
+        url="/testimonials"
       />
       <section className="relative min-h-[90vh] flex items-start pt-12 overflow-hidden bg-[#fafafa]">
 

@@ -153,6 +153,7 @@ const WebsiteSEO = () => {
         title="SEO Services for Website | Socio Bhaarat"
         description="Improve your website ranking and visibility with data-driven SEO strategies and optimization techniques."
         keywords="seo services, website seo, search engine optimization, organic traffic, seo company in jabalpur"
+        url="/digital-marketing/website-seo"
       />
       <div className="min-h-screen bg-background">
 

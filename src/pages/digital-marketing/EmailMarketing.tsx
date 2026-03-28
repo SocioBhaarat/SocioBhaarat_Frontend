@@ -160,6 +160,7 @@ const EmailMarketing = () => {
         title="Email Marketing Services | Socio Bhaarat"
         description="Reach your audience directly with personalized email campaigns that drive engagement, conversions, and customer retention."
         keywords="email marketing, email campaigns, newsletter marketing, email automation, bulk email marketing in jabalpur"
+        url="/digital-marketing/email-marketing"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
         {/* HERO SECTION */}

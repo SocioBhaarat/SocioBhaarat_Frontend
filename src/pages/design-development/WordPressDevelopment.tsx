@@ -157,6 +157,7 @@ const WordPressDevelopment = () => {
         title="WordPress Development Services | Socio Bhaarat"
         description="Get powerful and easy-to-manage WordPress websites designed for performance, flexibility, and business growth."
         keywords="wordpress development, wordpress website design, wordpress customization, cms development, wordpress developer in jabalpur"
+        url="/design-development/wordpress-development"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
 

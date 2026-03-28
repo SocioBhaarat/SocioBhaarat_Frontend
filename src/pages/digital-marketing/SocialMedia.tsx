@@ -193,6 +193,7 @@ const SocialMedia = () => {
         title="Social Media Marketing Services | Socio Bhaarat"
         description="Grow your brand visibility and engagement with result-driven social media marketing strategies."
         keywords="social media marketing, smm services, instagram marketing, facebook marketing, social media marketing in jabalpur"
+        url="/digital-marketing/social-media"
       />
       <div className="min-h-screen bg-background">
 

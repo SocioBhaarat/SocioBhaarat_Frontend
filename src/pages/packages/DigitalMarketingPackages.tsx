@@ -76,6 +76,7 @@ const DigitalMarketingPackages = () => {
         title="Digital Marketing Packages | Socio Bhaarat"
         description="Explore affordable and result-driven digital marketing packages designed to boost your online presence and business growth."
         keywords="digital marketing packages, marketing plans, seo packages, social media packages, digital marketing packages in jabalpur"
+        url="/packages/digital-marketing"
       />
       <div className="min-h-screen bg-background relative overflow-hidden">
         <section className="relative pt-12 pb-5 px-4 overflow-hidden bg-[#fafafa]">

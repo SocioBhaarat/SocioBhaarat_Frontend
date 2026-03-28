@@ -174,6 +174,7 @@ const ContentMarketing = () => {
         title="Content Marketing Services | Socio Bhaarat"
         description="Engage your audience and build authority with strategic and high-quality content marketing solutions."
         keywords="content marketing, blog marketing, seo content, content strategy, content marketing in jabalpur"
+        url="/digital-marketing/content-marketing"
       />
       <div className="min-h-screen bg-background">
         {/* Hero Section */}

@@ -45,6 +45,7 @@ const About = () => {
         title="About Us | Socio Bhaarat"
         description="Learn about our mission, vision, and how we help businesses grow with innovative digital marketing and IT solutions."
         keywords="about marketing company, about digital agency, it solutions company, marketing agency in jabalpur"
+        url="/about"
       />
       <div className="min-h-screen bg-background">
         {/* ABOUT SOCIO BHAARAT */}

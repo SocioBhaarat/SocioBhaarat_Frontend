@@ -87,6 +87,7 @@ const PerformanceMarketingPackages = () => {
         title="Performance Marketing Packages | Socio Bhaarat"
         description="Discover performance marketing packages focused on ROI, lead generation, and scalable paid advertising campaigns."
         keywords="performance marketing packages, ppc packages, paid ads pricing, lead generation packages, performance marketing in jabalpur"
+        url="/packages/performance-marketing"
       />
       <div className="min-h-screen bg-background">
 

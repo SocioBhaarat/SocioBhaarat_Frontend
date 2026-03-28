@@ -55,6 +55,7 @@ const OurImpact = () => {
         title="Our Impact | Results & Case Studies | Socio Bhaarat"
         description="Explore our proven results, success stories, and the impact we’ve created for businesses through our marketing and IT solutions."
         keywords="case studies, marketing results, business growth results, success stories, digital marketing results in jabalpur"
+        url="/our-work/Our-Impact"
       />
       <div className="min-h-screen bg-background">
 

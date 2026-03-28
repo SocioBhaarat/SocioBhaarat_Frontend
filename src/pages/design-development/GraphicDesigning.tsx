@@ -130,6 +130,7 @@ const GraphicDesigning = () => {
         title="Graphic Designing Services | Socio Bhaarat"
         description="Create visually stunning and impactful designs that elevate your brand identity and engage your audience across all platforms."
         keywords="graphic designing services, graphic design company, logo design, branding agency, social media creatives, graphic designer in jabalpur"
+        url="/design-development/graphic-designing"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
 

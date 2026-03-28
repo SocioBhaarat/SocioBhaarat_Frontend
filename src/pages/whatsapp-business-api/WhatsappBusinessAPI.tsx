@@ -147,6 +147,7 @@ function WhatsappBusinessAPI() {
         title="WhatsApp Business API Services | Socio Bhaarat"
         description="Enable seamless customer communication with WhatsApp Business API for bulk messaging, automation, and real-time engagement."
         keywords="whatsapp business api, whatsapp marketing, bulk whatsapp messaging, whatsapp automation, whatsapp api provider in jabalpur"
+        url="/whatsapp-business-api"
       />
       <div className='min-h-screen bg-[#fafafa] selection:bg-primary/10'>
         {/* Hero Section */}

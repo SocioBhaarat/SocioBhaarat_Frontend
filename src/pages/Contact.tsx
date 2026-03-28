@@ -41,6 +41,7 @@ const Contact = () => {
         title="Contact Us | Socio Bhaarat"
         description="Get in touch with us for digital marketing, IT solutions, and business growth strategies tailored to your needs."
         keywords="contact digital marketing company, contact marketing agency, business inquiry, marketing services in jabalpur"
+        url="/contact"
       />
       <div className="min-h-screen bg-[#fafafa] relative overflow-hidden">
 

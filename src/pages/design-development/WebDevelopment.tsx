@@ -249,6 +249,7 @@ const WebDevelopment = () => {
         title="Web Development Services | Socio Bhaarat"
         description="Build fast, scalable, and modern websites tailored to your business needs with our expert web development solutions."
         keywords="web development, website development company, custom websites, frontend backend development, web development in jabalpur"
+        url="/design-development/web-development"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
 

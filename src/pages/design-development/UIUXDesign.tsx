@@ -207,6 +207,7 @@ const UIUXDesign = () => {
         title="UI UX Design Services | Socio Bhaarat"
         description="Design intuitive, engaging, and user-friendly interfaces that enhance user experience and drive conversions."
         keywords="ui ux design, user interface design, user experience design, product design, ui ux designer in jabalpur"
+        url="/design-development/ui-ux-design"
       />
       <div className="min-h-screen bg-background ">
 

@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Shield, ChevronRight, Mail, Phone, Globe } from "lucide-react";
 
@@ -322,130 +323,139 @@ function renderContent(block: any, idx: number) {
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-[#fafafa]">
+    <>
+      <SEO
+        title="Terms & Conditions | Socio Bhaarat"
+        description="Read our terms and conditions to understand the rules, guidelines, and policies governing the use of our website and services."
+        keywords="terms and conditions, website terms, service terms, legal terms, terms and conditions in jabalpur"
+        url="/terms"
+      />
+      <main className="min-h-screen bg-[#fafafa]">
 
-      {/* ── Hero ── */}
-      <section className="relative py-16 overflow-hidden bg-white border-b border-slate-100">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:35px_35px]" />
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full animate-pulse" />
-        </div>
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-start gap-5"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-              <Shield className="w-3 h-3" /> Legal
-            </div>
-            <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 leading-tight tracking-tighter">
-              Terms & Conditions
-            </h1>
-            <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-700 font-medium">
-              <span><span className="font-semibold text-slate-700">Effective Date:</span> 1st January 2026</span>
-              <span><span className="font-semibold text-slate-700">Last Updated:</span> 1st January 2026</span>
-            </div>
-
-            {/* Company info bar */}
-            <div className="w-full rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700 font-medium">
-              <div><span className="font-semibold text-slate-700">Company:</span> Socio Bhaarat - Bhaarat Reliable Ventures Pvt. Ltd.</div>
-              <div><span className="font-semibold text-slate-700">CIN:</span> U96020MP2023PTC065142</div>
-              <div><span className="font-semibold text-slate-700">Registered Office:</span> Jabalpur, Madhya Pradesh - 482001, India</div>
-              <div>
-                <a href="mailto:official@sociobhaarat.com" className="font-semibold text-primary hover:underline">official@sociobhaarat.com</a>
-              </div>
-              <div>
-                <a href="tel:+919589581364" className="hover:text-primary transition-colors">+91 95895 81364</a>
-                {" | "}
-                <a href="tel:+919407448837" className="hover:text-primary transition-colors">+91 94074 48837</a>
-              </div>
-              <div>
-                <a href="https://www.sociobhaarat.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  www.sociobhaarat.com
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── Content ── */}
-      <section className="py-10 md:py-14">
-        <div className="container mx-auto max-w-4xl">
-
-          {/* Mobile Jump-to Selector (Only visible on mobile) */}
-          <div className="lg:hidden mb-8">
-            <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Jump to section</label>
-            <select
-              onChange={(e) => document.getElementById(`section-${e.target.value}`)?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full p-3 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-700 outline-none focus:ring-2 focus:ring-primary/20"
+        {/* ── Hero ── */}
+        <section className="relative py-16 overflow-hidden bg-white border-b border-slate-100">
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:35px_35px]" />
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full animate-pulse" />
+          </div>
+          <div className="container mx-auto max-w-4xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-start gap-5"
             >
-              {sections.map((s) => (
-                <option key={s.id} value={s.id}>{s.id}. {s.title}</option>
-              ))}
-            </select>
-          </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                <Shield className="w-3 h-3" /> Legal
+              </div>
+              <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 leading-tight tracking-tighter">
+                Terms & Conditions
+              </h1>
+              <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-700 font-medium">
+                <span><span className="font-semibold text-slate-700">Effective Date:</span> 1st January 2026</span>
+                <span><span className="font-semibold text-slate-700">Last Updated:</span> 1st January 2026</span>
+              </div>
 
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
-
-            {/* Sticky TOC (Hidden on mobile) */}
-            <aside className="hidden lg:block w-56 shrink-0 sticky top-24">
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 px-1">Contents</p>
-              <nav className="flex flex-col gap-0.5">
-                {sections.map((s) => (
-                  <a
-                    key={s.id}
-                    href={`#section-${s.id}`}
-                    className="group flex items-center gap-2 px-3 py-1.5 rounded-lg text-[13px] text-slate-500 hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
-                  >
-                    <span className="text-[10px] font-bold text-slate-500 group-hover:text-primary/60 w-5 shrink-0">{s.id}.</span>
-                    <span className="truncate text-slate-700">{s.title}</span>
+              {/* Company info bar */}
+              <div className="w-full rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700 font-medium">
+                <div><span className="font-semibold text-slate-700">Company:</span> Socio Bhaarat - Bhaarat Reliable Ventures Pvt. Ltd.</div>
+                <div><span className="font-semibold text-slate-700">CIN:</span> U96020MP2023PTC065142</div>
+                <div><span className="font-semibold text-slate-700">Registered Office:</span> Jabalpur, Madhya Pradesh - 482001, India</div>
+                <div>
+                  <a href="mailto:official@sociobhaarat.com" className="font-semibold text-primary hover:underline">official@sociobhaarat.com</a>
+                </div>
+                <div>
+                  <a href="tel:+919589581364" className="hover:text-primary transition-colors">+91 95895 81364</a>
+                  {" | "}
+                  <a href="tel:+919407448837" className="hover:text-primary transition-colors">+91 94074 48837</a>
+                </div>
+                <div>
+                  <a href="https://www.sociobhaarat.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    www.sociobhaarat.com
                   </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ── Content ── */}
+        <section className="py-10 md:py-14">
+          <div className="container mx-auto max-w-4xl">
+
+            {/* Mobile Jump-to Selector (Only visible on mobile) */}
+            <div className="lg:hidden mb-8">
+              <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Jump to section</label>
+              <select
+                onChange={(e) => document.getElementById(`section-${e.target.value}`)?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full p-3 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-700 outline-none focus:ring-2 focus:ring-primary/20"
+              >
+                {sections.map((s) => (
+                  <option key={s.id} value={s.id}>{s.id}. {s.title}</option>
                 ))}
-              </nav>
-            </aside>
-
-            {/* Sections */}
-            <div className="flex-1 space-y-4 md:space-y-6 w-full">
-              {sections.map((section, i) => (
-                <motion.div
-                  key={section.id}
-                  id={`section-${section.id}`}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.4, delay: 0.05 * (i % 5) }}
-                  className="bg-white border border-slate-100 rounded-2xl p-5 md:p-8 shadow-sm hover:shadow-md hover:border-slate-200 transition-all duration-300 scroll-mt-24"
-                >
-                  {/* Section header */}
-                  <div className="flex items-center gap-3 mb-4 md:mb-5">
-                    <span className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-[11px] font-bold text-primary shrink-0">
-                      {section.id}
-                    </span>
-                    <h2 className="text-base md:text-lg font-semibold text-slate-800">{section.title}</h2>
-                  </div>
-
-                  {/* Section content - Responsive padding */}
-                  <div className="space-y-4 pl-0 md:pl-11 text-sm md:text-base leading-relaxed text-slate-600">
-                    {section.content.map((block, idx) => renderContent(block, idx))}
-                  </div>
-                </motion.div>
-              ))}
+              </select>
             </div>
 
+            <div className="flex flex-col lg:flex-row gap-10 items-start">
+
+              {/* Sticky TOC (Hidden on mobile) */}
+              <aside className="hidden lg:block w-56 shrink-0 sticky top-24">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 px-1">Contents</p>
+                <nav className="flex flex-col gap-0.5">
+                  {sections.map((s) => (
+                    <a
+                      key={s.id}
+                      href={`#section-${s.id}`}
+                      className="group flex items-center gap-2 px-3 py-1.5 rounded-lg text-[13px] text-slate-500 hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                    >
+                      <span className="text-[10px] font-bold text-slate-500 group-hover:text-primary/60 w-5 shrink-0">{s.id}.</span>
+                      <span className="truncate text-slate-700">{s.title}</span>
+                    </a>
+                  ))}
+                </nav>
+              </aside>
+
+              {/* Sections */}
+              <div className="flex-1 space-y-4 md:space-y-6 w-full">
+                {sections.map((section, i) => (
+                  <motion.div
+                    key={section.id}
+                    id={`section-${section.id}`}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.4, delay: 0.05 * (i % 5) }}
+                    className="bg-white border border-slate-100 rounded-2xl p-5 md:p-8 shadow-sm hover:shadow-md hover:border-slate-200 transition-all duration-300 scroll-mt-24"
+                  >
+                    {/* Section header */}
+                    <div className="flex items-center gap-3 mb-4 md:mb-5">
+                      <span className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-[11px] font-bold text-primary shrink-0">
+                        {section.id}
+                      </span>
+                      <h2 className="text-base md:text-lg font-semibold text-slate-800">{section.title}</h2>
+                    </div>
+
+                    {/* Section content - Responsive padding */}
+                    <div className="space-y-4 pl-0 md:pl-11 text-sm md:text-base leading-relaxed text-slate-600">
+                      {section.content.map((block, idx) => renderContent(block, idx))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+            </div>
           </div>
+        </section>
+
+        {/* ── Footer note ── */}
+        <div className="border-t border-slate-100 bg-white py-10 px-6 text-center">
+          <p className="text-[11px] md:text-xs text-slate-500 max-w-xl mx-auto leading-relaxed font-medium">
+            These Terms & Conditions were last updated on <span className="font-semibold text-slate-900">1st January 2026</span> and are effective immediately. By continuing to use our services, you acknowledge that you have read, understood, and agreed to these terms.
+          </p>
         </div>
-      </section>
 
-      {/* ── Footer note ── */}
-      <div className="border-t border-slate-100 bg-white py-10 px-6 text-center">
-        <p className="text-[11px] md:text-xs text-slate-500 max-w-xl mx-auto leading-relaxed font-medium">
-          These Terms & Conditions were last updated on <span className="font-semibold text-slate-900">1st January 2026</span> and are effective immediately. By continuing to use our services, you acknowledge that you have read, understood, and agreed to these terms.
-        </p>
-      </div>
+      </main>
+    </>
 
-    </main>
   );
 }
