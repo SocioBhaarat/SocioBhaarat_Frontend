@@ -62,17 +62,6 @@ const Navigation = () => {
         path: "/design-development/graphic-designing",
       },
     ],
-    whatsapp: [
-      {
-        name: "Bulk Broadcasting",
-        path: "/whatsapp-marketing/bulk-broadcasting",
-      },
-      { name: "Custom Chatbot", path: "/whatsapp-marketing/custom-chatbot" },
-      {
-        name: "Number Verification",
-        path: "/whatsapp-marketing/number-verification",
-      },
-    ],
     packages: [
       {
         name: "Digital Marketing Packages",
