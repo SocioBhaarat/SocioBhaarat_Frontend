@@ -45,6 +45,11 @@ const HiringForm = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
     formData.append("jobTitle", decodedTitle);
+    formData.append("date", new Date().toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    }))
 
     try {
       await submitApplication(formData);
@@ -232,6 +237,20 @@ const HiringForm = () => {
                             className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base"
                           />
                         </div>
+                      </div>
+
+                      {/* Skills */}
+                      <div className="space-y-2">
+                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                          <Briefcase className="w-3 h-3" /> Skills *
+                        </label>
+                        <Input
+                          type="text"
+                          name="skills"
+                          required
+                          placeholder="e.g. Communication, Team Management, Decision Making"
+                          className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base"
+                        />
                       </div>
 
                       {/* Experience */}

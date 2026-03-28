@@ -23,6 +23,11 @@ const Contact = () => {
       email: formData.get("email"),
       phone: formData.get("phone"),
       message: formData.get("message"),
+      date: new Date().toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      })
     };
 
     try {
@@ -279,12 +284,12 @@ const Contact = () => {
                       </Button>
 
                       {submitStatus === "success" && (
-                        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} className="p-4 mt-4 text-sm text-green-800 bg-green-100 rounded-xl border border-green-200">
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-4 mt-4 text-sm text-green-800 bg-green-100 rounded-xl border border-green-200">
                           Message transmitted successfully! We'll get back to you soon.
                         </motion.div>
                       )}
                       {submitStatus === "error" && (
-                        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} className="p-4 mt-4 text-sm text-red-800 bg-red-100 rounded-xl border border-red-200">
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-4 mt-4 text-sm text-red-800 bg-red-100 rounded-xl border border-red-200">
                           Failed to transmit message. Please try again later or use the direct contacts.
                         </motion.div>
                       )}
