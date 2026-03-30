@@ -103,7 +103,7 @@ const DigitalMarketingPackages = () => {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-800">
-                  Strategic Marketing <br />
+                  Digital Marketing <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                     Packages
                   </span>

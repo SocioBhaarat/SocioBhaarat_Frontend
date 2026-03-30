@@ -230,7 +230,7 @@ const PerformanceMarketing = () => {
   return (
     <>
       <SEO
-        title="Performance Marketing Services | Socio Bhaarat"
+        title="Performance Marketing Services | Best Marketing Agency"
         description="Drive measurable results with data-driven performance marketing strategies focused on ROI, conversions, and scalable growth."
         keywords="performance marketing, ppc marketing, paid ads strategy, conversion optimization, performance marketing agency in jabalpur"
         url="/performance-marketing"
@@ -264,8 +264,8 @@ const PerformanceMarketing = () => {
                   <Zap className="w-3 h-3 fill-current" /> ROI-Driven Engineering Lab
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  Drive <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Measurable Growth</span> Through Data.
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Performance Marketing Services</span> for Scalable Growth
                 </h1>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">

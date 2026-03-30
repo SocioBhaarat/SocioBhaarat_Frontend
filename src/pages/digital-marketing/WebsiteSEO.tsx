@@ -150,7 +150,7 @@ const WebsiteSEO = () => {
   return (
     <>
       <SEO
-        title="SEO Services for Website | Socio Bhaarat"
+        title="Website SEO Services | Best SEO Company in India for Organic Growth"
         description="Improve your website ranking and visibility with data-driven SEO strategies and optimization techniques."
         keywords="seo services, website seo, search engine optimization, organic traffic, seo company in jabalpur"
         url="/digital-marketing/website-seo"
@@ -184,9 +184,8 @@ const WebsiteSEO = () => {
                   <Sparkles className="w-3 h-3" /> SEO for Website
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  Rank Higher <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">& Grow Organically.</span>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">SEO Services</span> That Drive Organic Growth
                 </h1>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">

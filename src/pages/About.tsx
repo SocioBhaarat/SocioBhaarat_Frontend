@@ -42,7 +42,7 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About Us | Socio Bhaarat"
+        title="About Socio Bhaarat | Leading Digital Marketing & IT Solutions Company in Jabalpur"
         description="Learn about our mission, vision, and how we help businesses grow with innovative digital marketing and IT solutions."
         keywords="about marketing company, about digital agency, it solutions company, marketing agency in jabalpur"
         url="/about"
@@ -87,12 +87,12 @@ const About = () => {
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase shadow-sm">
                   <Cpu className="w-3 h-3" /> Growth Engineering Lab
                 </div>
-                <h2 className="text-4xl md:text-6xl font-bold text-slate-800 leading-[0.95]">
+                <h1 className="text-4xl md:text-6xl font-bold text-slate-800 leading-[0.95]">
                   About <br />
                   <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium overflow-visible">
                     Socio Bhaarat
                   </span>
-                </h2>
+                </h1>
                 <div className="space-y-6">
                   <p className="text-base md:text-xl text-slate-800 leading-relaxed font-medium border-l-4 border-primary/20 pl-8">
                     "Socio Bhaarat is a results-driven digital marketing and IT solutions company helping startups, entrepreneurs, and growing businesses scale in the digital world."

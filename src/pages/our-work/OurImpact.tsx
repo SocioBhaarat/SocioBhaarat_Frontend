@@ -157,7 +157,7 @@ const OurImpact = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter">
                 Our{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
-                  Impact
+                  Impact & <br /> Case Studies
                 </span>
               </h1>
 

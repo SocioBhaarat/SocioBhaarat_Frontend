@@ -246,7 +246,7 @@ const WebDevelopment = () => {
   return (
     <>
       <SEO
-        title="Web Development Services | Socio Bhaarat"
+        title="Professional Web Development Services in India | Socio Bhaarat"
         description="Build fast, scalable, and modern websites tailored to your business needs with our expert web development solutions."
         keywords="web development, website development company, custom websites, frontend backend development, web development in jabalpur"
         url="/design-development/web-development"
@@ -280,7 +280,7 @@ const WebDevelopment = () => {
                   <Code2 className="w-3 h-3" /> Build High Performing Websites
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
                   Professional <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Web Development</span> Services.
                 </h1>

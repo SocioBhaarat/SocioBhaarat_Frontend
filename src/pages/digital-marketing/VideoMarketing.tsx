@@ -17,14 +17,6 @@ import { useNavigate } from "react-router-dom";
 const VideoMarketing = () => {
     const navigate = useNavigate();
 
-    const [active, setActive] = useState(0)
-
-    const heroData = {
-        heading: "Tell Your Brand Story with High-Impact Video Marketing",
-        subtext: "We create captivating video content that stops the scroll, explains your value, and converts viewers into loyal customers across YouTube, Instagram, and LinkedIn.",
-        cta: "Start Your Production",
-    };
-
     const whyChoosePoints = [
         { title: "Pro-Grade Production", icon: <Film /> },
         { title: "Strategic Storytelling", icon: <Clapperboard /> },
@@ -150,7 +142,7 @@ const VideoMarketing = () => {
     return (
         <>
             <SEO
-                title="Video Marketing Services | Socio Bhaarat"
+                title="Video Marketing Services | Video Marketing Agency in India"
                 description="Boost engagement and brand awareness with high-impact video marketing strategies across digital platforms."
                 keywords="video marketing, video advertising, youtube marketing, reels marketing, video marketing services in jabalpur"
                 url="/digital-marketing/video-marketing"
@@ -183,9 +175,7 @@ const VideoMarketing = () => {
                                     <Play className="w-3 h-3 fill-current" /> Video Marketing
                                 </div>
 
-                                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                                    Tell Your Story with <br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Cinematic Impact.</span>
+                                <h1 className=" text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Video Marketing Services </span> That Drives Engagement
                                 </h1>
 
                                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">

@@ -70,7 +70,7 @@ const Hiring = () => {
   return (
     <>
       <SEO
-        title="Careers | Join Our Team | Socio Bhaarat"
+        title="Careers at Socio Bhaarat | Jobs & Internships"
         description="Explore exciting career opportunities and join our team to work on innovative digital marketing and IT projects."
         keywords="careers, hiring, jobs in digital marketing, job opportunities, hiring in jabalpur, marketing jobs in jabalpur"
         url="/hiring"
@@ -90,9 +90,9 @@ const Hiring = () => {
               </div>
 
               <h1 className=" text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter mb-8">
-                Join Our <br />
+                Careers at <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
-                  Engineering Team
+                  Socio Bhaarat
                 </span>
               </h1>
 

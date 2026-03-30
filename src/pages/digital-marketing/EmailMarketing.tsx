@@ -157,7 +157,7 @@ const EmailMarketing = () => {
   return (
     <>
       <SEO
-        title="Email Marketing Services | Socio Bhaarat"
+        title="Email Marketing Services | Best Email Marketing Company in India"
         description="Reach your audience directly with personalized email campaigns that drive engagement, conversions, and customer retention."
         keywords="email marketing, email campaigns, newsletter marketing, email automation, bulk email marketing in jabalpur"
         url="/digital-marketing/email-marketing"
@@ -190,9 +190,7 @@ const EmailMarketing = () => {
                   <Mail className="w-3 h-3 fill-primary/20" /> Email Marketing
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  Convert Subscribers into Customers with <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Smart Email Automation</span>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Email Marketing Services</span> That Converts Subscribers
                 </h1>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">

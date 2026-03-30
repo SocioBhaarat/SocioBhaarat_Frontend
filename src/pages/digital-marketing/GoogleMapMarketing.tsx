@@ -154,7 +154,7 @@ const GoogleMapMarketing = () => {
   return (
     <>
       <SEO
-        title="Google Business Profile & Local SEO | Socio Bhaarat"
+        title="Google Business Profile Optimization | Local SEO Services in India"
         description="Boost local visibility and attract nearby customers with optimized Google Business Profile and local SEO strategies."
         keywords="google business profile, local seo, gmb optimization, local search ranking, local seo in jabalpur"
         url="/digital-marketing/google-map-marketing"
@@ -188,9 +188,9 @@ const GoogleMapMarketing = () => {
                   <MapPin className="w-3 h-3" /> Google Business Profile & SEO
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  Rank Higher on <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Google Search</span>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  Google
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible"> Business Profile & Local SEO </span> Services
                 </h1>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">

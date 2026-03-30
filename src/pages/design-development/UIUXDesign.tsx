@@ -204,7 +204,7 @@ const UIUXDesign = () => {
   return (
     <>
       <SEO
-        title="UI UX Design Services | Socio Bhaarat"
+        title="UI UX Design Services in India | User-Centric Product Design"
         description="Design intuitive, engaging, and user-friendly interfaces that enhance user experience and drive conversions."
         keywords="ui ux design, user interface design, user experience design, product design, ui ux designer in jabalpur"
         url="/design-development/ui-ux-design"
@@ -239,8 +239,8 @@ const UIUXDesign = () => {
                   <Palette className="w-3 h-3" /> UI & UX Design
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Design Experiences
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">UI UX Design Services
                   </span> That Users Love
                 </h1>
 

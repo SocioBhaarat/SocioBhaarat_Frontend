@@ -223,7 +223,7 @@ const WebDevelopmentPackages = () => {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-800 leading-tight tracking-tighter">
-                  Web Development <br />
+                  Website Development <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                     Packages
                   </span>

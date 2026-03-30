@@ -11,9 +11,11 @@ const SEO = ({ title, description, keywords, url }) => {
       <link rel="canonical" href={`${baseUrl}${url}`} />
 
       {/* Open Graph (for social sharing) */}
+      <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={`${baseUrl}${url}`} />
+      <meta name="robots" content="index, follow" />
 
     </Helmet>
   );

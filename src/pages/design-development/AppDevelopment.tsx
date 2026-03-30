@@ -175,7 +175,7 @@ const AppDevelopment = () => {
   return (
     <>
       <SEO
-        title="App Development Services | Socio Bhaarat"
+        title="Professional App Development Services in India | Android & iOS Apps"
         description="Create high-performance mobile and web applications with seamless user experience and scalable architecture."
         keywords="app development, mobile app development, android ios apps, web apps, app developers in jabalpur"
         url="/design-development/app-development"
@@ -210,7 +210,7 @@ const AppDevelopment = () => {
                 </div>
                 {/* Build High-Performance
               Mobile Applications For Your Business */}
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
                   Professional <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">App Development</span> Services.
                 </h1>
