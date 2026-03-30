@@ -38,7 +38,7 @@ const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact Socio Bhaarat | Digital Marketing Services"
+        title="Looking for Best Digital Marketing and IT Company?- Get in Touch"
         description="Get in touch with us for digital marketing, IT solutions, and business growth strategies tailored to your needs."
         keywords="contact digital marketing company, contact marketing agency, business inquiry, marketing services in jabalpur"
         url="/contact"
@@ -72,10 +72,9 @@ const Contact = () => {
 
                 {/* Heading: Responsive text sizes */}
                 <div>
-                  <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.1] tracking-tighter mb-4">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
-                      Contact <br />
-                    </span> Our Team
+                  <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 leading-[1.1] tracking-tighter mb-4">
+                    Looking for  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Best Digital Marketing and IT Company?
+                    </span> <br /> <div className="text-3xl md:text-4xl sm:pt-3 md:pt-5" >- Get in Touch</div>
                   </h1>
                   <p className="text-sm sm:text-base md:text-lg text-slate-500 italic font-medium leading-relaxed border-l-4 border-primary/20 pl-4 sm:pl-5 py-1">
                     Have a project in mind? Let's architect a high-performance roadmap to

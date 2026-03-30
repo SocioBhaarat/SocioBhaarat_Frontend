@@ -179,7 +179,7 @@ const PaidMarketing = () => {
   return (
     <>
       <SEO
-        title="Paid Marketing Services | Meta Ads & Google Ads | Socio Bhaarat"
+        title="Paid Marketing Services | Meta Ads & Google Ads | PPC | Socio Bhaarat"
         description="Drive targeted traffic and maximize ROI with high-performing paid advertising campaigns across multiple platforms."
         keywords="google ads, meta ads, paid marketing, ppc services, Paid marketing in jabalpur"
         url="/digital-marketing/paid-marketing"

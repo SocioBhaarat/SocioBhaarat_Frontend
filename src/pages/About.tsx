@@ -42,7 +42,7 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About Socio Bhaarat | Leading Digital Marketing & IT Solutions Company in Jabalpur"
+        title="About Socio Bhaarat | Leading Digital Solutions & IT Company in India"
         description="Learn about our mission, vision, and how we help businesses grow with innovative digital marketing and IT solutions."
         keywords="about marketing company, about digital agency, it solutions company, marketing agency in jabalpur"
         url="/about"

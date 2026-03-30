@@ -165,11 +165,12 @@ const Services = () => {
   return (
     <>
       <SEO
-        title="Digital Marketing & IT Services | Our Services - Socio Bhaarat"
+        title="Services At Socio Bhaarat - Marketing, Automation & IT Solutions"
         description="Explore our complete range of services including digital marketing, web development, SEO, and performance marketing solutions."
         keywords="digital marketing services, web development services, seo services, performance marketing services, marketing services in jabalpur"
         url="/services"
       />
+      {/* services at socio bharat */}
       <div className="min-h-screen bg-background selection:bg-primary/20">
         {/* Dynamic Header */}
 
@@ -198,8 +199,12 @@ const Services = () => {
               >
 
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Digital Marketing <br />& IT</span> Services
+                  Services at<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible"> Socio Bhaarat</span>
                 </h1>
+
+                <p className="text-lg md:text-xl text-slate-700 font-semibold border-full">
+                  Marketing, Automation & IT Solutions
+                </p>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6 py-5">
                   SocioBhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with industrial-grade precision.

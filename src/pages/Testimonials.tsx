@@ -46,7 +46,7 @@ const Testimonials = () => {
   return (
     <>
       <SEO
-        title="Client Testimonials | Socio Bhaarat Reviews & Results"
+        title="Testimonials - Hear From Our Clients | Socio Bhaarat Reviews"
         description="See what our clients say about our digital marketing and IT services, and how we helped them grow their business."
         keywords="client testimonials, customer reviews, marketing agency reviews, client feedback, digital marketing company in jabalpur"
         url="/testimonials"
@@ -70,7 +70,7 @@ const Testimonials = () => {
                 <Star className="w-3 h-3" /> Client Success Stories
               </div>
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter mb-6">
-                Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Testimonials <br />& Reviews</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Testimonials</span> - Hear From Our Clients
               </h1>
               <p className="text-base md:text-xl text-slate-700 font-semibold font-montserrat tracking-wider pl-6">
                 Don't just take our word for it. Here's how we've engineered growth for businesses across Bhopal & Jabalpur.

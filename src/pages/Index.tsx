@@ -281,9 +281,9 @@ export default function Index() {
   return (
     <>
       <SEO
-        title="Digital Marketing & IT Solutions Company | Socio Bhaarat"
-        description="We provide digital marketing, performance marketing, and IT solutions to help businesses grow with innovative strategies and technology."
-        keywords="digital marketing company, it solutions company, performance marketing, web development services, marketing agency in jabalpur"
+        title="Digital Solutions & IT Company for Bhaarat - Socio Bhaarat"
+        description="We provide digital business solutions, marketing solutions, performance marketing, and IT solutions to help businesses grow with innovative strategies, AI and technology."
+        keywords="Social media markerting, it solutions company, performance marketing company, website development services, app development company in jabalpur"
         url="/"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
@@ -345,7 +345,7 @@ export default function Index() {
 
               <motion.h1 custom={0.22} variants={fadeUp} initial="hidden" animate="visible" className="leading-[1.06]">
                 <span className="text-4xl md:text-6xl  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 leading-[1.25]">
-                  Creative Marketing & IT Solutions
+                 Digital Solutions & IT Company <br className="hidden sm:block"/>
                 </span>{"  "}<span className="text-4xl md:text-6xl font-bold text-slate-900 leading-[1.25]">
                   For Bhaarat.
                 </span>
@@ -792,7 +792,7 @@ export default function Index() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
-                    className="absolute -bottom-14 -left-10 md:-bottom-1 md:-left-12 z-20 bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-border p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-2xl max-w-[200px] md:max-w-xs"
+                    className="absolute -bottom-14 -left-10 md:-bottom-[1px] md:-left-12 z-20 bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-border p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-2xl max-w-[200px] md:max-w-xs"
                   >
                     <div className="flex items-center gap-3 mb-2 md:mb-3">
                       <div className=" rounded-full bg-blue-500/20 flex items-center justify-center text-blue-600">
