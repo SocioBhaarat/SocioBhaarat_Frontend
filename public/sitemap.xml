@@ -69,6 +69,16 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.sociobhaarat.com/digital-marketing/email-marketing</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sociobhaarat.com/digital-marketing/video-marketing</loc>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Design & Development -->
   <url>
     <loc>https://www.sociobhaarat.com/design-development/web-development</loc>
@@ -95,20 +105,15 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.sociobhaarat.com/design-development/graphic-designing</loc>
+    <priority>0.7</priority>
+  </url>
+
   <!-- WhatsApp Marketing -->
   <url>
-    <loc>https://www.sociobhaarat.com/whatsapp-marketing/bulk-broadcasting</loc>
+    <loc>https://www.sociobhaarat.com/whatsapp-business-api</loc>
     <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.sociobhaarat.com/whatsapp-marketing/custom-chatbot</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.sociobhaarat.com/whatsapp-marketing/number-verification</loc>
-    <priority>0.7</priority>
   </url>
 
   <!-- Performance Marketing -->
@@ -140,17 +145,12 @@
 
   <!-- Our Work -->
   <url>
-    <loc>https://www.sociobhaarat.com/our-work/meta-ads</loc>
+    <loc>https://www.sociobhaarat.com/our-work/our-impact</loc>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.sociobhaarat.com/our-work/web-development</loc>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.sociobhaarat.com/our-work/content-work</loc>
+    <loc>https://www.sociobhaarat.com/our-work/web-development-projects</loc>
     <priority>0.7</priority>
   </url>
 
@@ -160,5 +160,21 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+
+<!-- Legal -->
+  <url>
+  <loc>https://www.sociobhaarat.com/privacy</loc>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>https://www.sociobhaarat.com/terms</loc>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>https://www.sociobhaarat.com/refunds</loc>
+  <priority>0.3</priority>
+</url>
 
 </urlset>

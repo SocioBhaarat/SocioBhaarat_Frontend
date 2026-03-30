@@ -171,9 +171,10 @@ const ContentMarketing = () => {
   return (
     <>
       <SEO
-        title="Content Marketing Services | Socio Bhaarat"
+        title="Content Marketing Services | Best Content Marketing Company in India"
         description="Engage your audience and build authority with strategic and high-quality content marketing solutions."
         keywords="content marketing, blog marketing, seo content, content strategy, content marketing in jabalpur"
+        url="/digital-marketing/content-marketing"
       />
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
@@ -200,12 +201,10 @@ const ContentMarketing = () => {
                 className="lg:col-span-7 space-y-8 text-left"
               >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-                  <Sparkles className="w-3 h-3" /> Content Marketing
+                  <Sparkles className="w-3 h-3" /> Engage, Educate & Convert
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  Engage, Educate <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">& Convert.</span>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Content Marketing</span> Services
                 </h1>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">
@@ -260,7 +259,7 @@ const ContentMarketing = () => {
                 "We build digital assets that scale your brand authority and drive measurable growth across the Bhopal & Jabalpur business landscape."
               </p>
             </div>
-            <ExploralPanel content={whyChooseUs}/>
+            <ExploralPanel content={whyChooseUs} />
           </div>
         </section>
 

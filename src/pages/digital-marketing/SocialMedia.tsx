@@ -190,9 +190,10 @@ const SocialMedia = () => {
   return (
     <>
       <SEO
-        title="Social Media Marketing Services | Socio Bhaarat"
+        title="Strategic Social Media Marketing Services | Social Media Marketing Company in India"
         description="Grow your brand visibility and engagement with result-driven social media marketing strategies."
         keywords="social media marketing, smm services, instagram marketing, facebook marketing, social media marketing in jabalpur"
+        url="/digital-marketing/social-media"
       />
       <div className="min-h-screen bg-background">
 
@@ -223,8 +224,8 @@ const SocialMedia = () => {
                   <Sparkles className="w-3 h-3" /> Strategic Social Impact
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  Grow Your Brand With Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Social Media Marketing </span>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium">Social Media Marketing </span> Services
                 </h1>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">

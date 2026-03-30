@@ -70,9 +70,10 @@ const Hiring = () => {
   return (
     <>
       <SEO
-        title="Careers | Join Our Team | Socio Bhaarat"
+        title="Join Our Team | Work With Socio Bhaarat | Jobs & Internships"
         description="Explore exciting career opportunities and join our team to work on innovative digital marketing and IT projects."
         keywords="careers, hiring, jobs in digital marketing, job opportunities, hiring in jabalpur, marketing jobs in jabalpur"
+        url="/hiring"
       />
       <div className="min-h-screen bg-background">
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-[#fafafa]">
@@ -85,13 +86,13 @@ const Hiring = () => {
           <div className="container mx-auto px-4 relative z-10 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
-                <Sparkles className="w-4 h-4" /> WE ARE RECRUITING TOP TALENT
+                <Sparkles className="w-4 h-4" /> Work With Socio Bhaarat
               </div>
 
               <h1 className=" text-4xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tighter mb-8">
-                Join Our <br />
+                Join <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
-                  Engineering Team
+                  Our Team
                 </span>
               </h1>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Lock, ChevronRight, Mail, Phone, Globe, User } from "lucide-react";
 
@@ -390,134 +391,143 @@ function renderContent(block: any, idx: number) {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-[#fafafa]">
+    <>
+      <SEO
+        title="Privacy Policy | Socio Bhaarat"
+        description="Learn how we collect, use, and protect your personal information while ensuring privacy and data security."
+        keywords="privacy policy, data protection, user privacy, personal data policy, privacy policy in jabalpur"
+        url="/privacy"
+      />
+      <main className="min-h-screen bg-[#fafafa]">
 
-      {/* ── Hero ── */}
-      <section className="relative py-16 overflow-hidden bg-white border-b border-slate-100">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:35px_35px]" />
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full animate-pulse" />
-        </div>
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-start gap-5"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
-              <Lock className="w-3 h-3" /> Legal
-            </div>
-            <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 leading-tight tracking-tighter">
-              Privacy Policy
-            </h1>
-            <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-700 font-medium">
-              <span><span className="font-semibold text-slate-700">Effective Date:</span> 1st January 2026</span>
-              <span><span className="font-semibold text-slate-700">Last Updated:</span> 1st January 2026</span>
-            </div>
-
-            {/* Company info bar */}
-            <div className="w-full rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700 font-medium">
-              <div><span className="font-semibold text-slate-700">Company:</span> Socio Bhaarat - Bhaarat Reliable Ventures Pvt. Ltd.</div>
-              <div><span className="font-semibold text-slate-700">CIN:</span> U96020MP2023PTC065142</div>
-              <div><span className="font-semibold text-slate-700">Registered Office:</span> Jabalpur, Madhya Pradesh - 482001, India</div>
-              <div>
-                <a href="mailto:official@sociobhaarat.com" className="font-semibold text-primary hover:underline">official@sociobhaarat.com</a>
-              </div>
-              <div>
-                <a href="tel:+919589581364" className="hover:text-primary transition-colors">+91 95895 81364</a>
-                {" | "}
-                <a href="tel:+919407448837" className="hover:text-primary transition-colors">+91 94074 48837</a>
-              </div>
-              <div>
-                <a href="https://www.sociobhaarat.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  www.sociobhaarat.com
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── Content ── */}
-      <section className="py-10 md:py-14">
-        <div className="container mx-auto max-w-4xl">
-
-          {/* Mobile Dropdown Menu (Only visible on mobile) */}
-          <div className="lg:hidden mb-8">
-            <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block px-1">Quick Navigation</label>
-            <select
-              onChange={(e) => {
-                const element = document.getElementById(`section-${e.target.value}`);
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              }}
-              className="w-full p-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm outline-none focus:ring-2 focus:ring-primary/20 appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_12px_center] bg-no-repeat"
+        {/* ── Hero ── */}
+        <section className="relative py-16 overflow-hidden bg-white border-b border-slate-100">
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:35px_35px]" />
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 blur-[100px] rounded-full animate-pulse" />
+          </div>
+          <div className="container mx-auto max-w-4xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-start gap-5"
             >
-              {sections.map((s) => (
-                <option key={s.id} value={s.id}>{s.id}. {s.title}</option>
-              ))}
-            </select>
-          </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm">
+                <Lock className="w-3 h-3" /> Legal
+              </div>
+              <h1 className="text-4xl md:text-5xl font-semibold text-slate-800 leading-tight tracking-tighter">
+                Privacy Policy
+              </h1>
+              <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-700 font-medium">
+                <span><span className="font-semibold text-slate-700">Effective Date:</span> 1st January 2026</span>
+                <span><span className="font-semibold text-slate-700">Last Updated:</span> 1st January 2026</span>
+              </div>
 
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
-
-            {/* Sticky TOC (Desktop) */}
-            <aside className="hidden lg:block w-56 shrink-0 sticky top-24">
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 px-1">Contents</p>
-              <nav className="flex flex-col gap-0.5">
-                {sections.map((s) => (
-                  <a
-                    key={s.id}
-                    href={`#section-${s.id}`}
-                    className="group flex items-center gap-2 px-3 py-1.5 rounded-lg text-[13px] text-slate-700 hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
-                  >
-                    <span className="text-[10px] font-bold text-slate-500 group-hover:text-primary/60 w-5 shrink-0">{s.id}.</span>
-                    <span className="truncate">{s.title}</span>
+              {/* Company info bar */}
+              <div className="w-full rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700 font-medium">
+                <div><span className="font-semibold text-slate-700">Company:</span> Socio Bhaarat - Bhaarat Reliable Ventures Pvt. Ltd.</div>
+                <div><span className="font-semibold text-slate-700">CIN:</span> U96020MP2023PTC065142</div>
+                <div><span className="font-semibold text-slate-700">Registered Office:</span> Jabalpur, Madhya Pradesh - 482001, India</div>
+                <div>
+                  <a href="mailto:official@sociobhaarat.com" className="font-semibold text-primary hover:underline">official@sociobhaarat.com</a>
+                </div>
+                <div>
+                  <a href="tel:+919589581364" className="hover:text-primary transition-colors">+91 95895 81364</a>
+                  {" | "}
+                  <a href="tel:+919407448837" className="hover:text-primary transition-colors">+91 94074 48837</a>
+                </div>
+                <div>
+                  <a href="https://www.sociobhaarat.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    www.sociobhaarat.com
                   </a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ── Content ── */}
+        <section className="py-10 md:py-14">
+          <div className="container mx-auto max-w-4xl">
+
+            {/* Mobile Dropdown Menu (Only visible on mobile) */}
+            <div className="lg:hidden mb-8">
+              <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block px-1">Quick Navigation</label>
+              <select
+                onChange={(e) => {
+                  const element = document.getElementById(`section-${e.target.value}`);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className="w-full p-3.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 shadow-sm outline-none focus:ring-2 focus:ring-primary/20 appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2364748b%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_12px_center] bg-no-repeat"
+              >
+                {sections.map((s) => (
+                  <option key={s.id} value={s.id}>{s.id}. {s.title}</option>
                 ))}
-              </nav>
-            </aside>
-
-            {/* Sections */}
-            <div className="flex-1 space-y-4 md:space-y-6 w-full">
-              {sections.map((section, i) => (
-                <motion.div
-                  key={section.id}
-                  id={`section-${section.id}`}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.4, delay: 0.05 * (i % 5) }}
-                  className="bg-white border border-slate-100 rounded-2xl p-5 md:p-8 shadow-sm hover:shadow-md hover:border-slate-200 transition-all duration-300 scroll-mt-24"
-                >
-                  <div className="flex items-center gap-3 mb-4 md:mb-5">
-                    <span className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-[11px] font-bold text-primary shrink-0">
-                      {section.id}
-                    </span>
-                    <h2 className="text-base md:text-lg font-semibold text-slate-800">{section.title}</h2>
-                  </div>
-
-                  {/* Section content - Responsive padding */}
-                  <div className="space-y-4 pl-0 md:pl-11 text-sm md:text-base leading-relaxed text-slate-600">
-                    {section.content.map((block, idx) => renderContent(block, idx))}
-                  </div>
-                </motion.div>
-              ))}
+              </select>
             </div>
 
+            <div className="flex flex-col lg:flex-row gap-10 items-start">
+
+              {/* Sticky TOC (Desktop) */}
+              <aside className="hidden lg:block w-56 shrink-0 sticky top-24">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 px-1">Contents</p>
+                <nav className="flex flex-col gap-0.5">
+                  {sections.map((s) => (
+                    <a
+                      key={s.id}
+                      href={`#section-${s.id}`}
+                      className="group flex items-center gap-2 px-3 py-1.5 rounded-lg text-[13px] text-slate-700 hover:text-primary hover:bg-primary/5 transition-all duration-150 font-medium"
+                    >
+                      <span className="text-[10px] font-bold text-slate-500 group-hover:text-primary/60 w-5 shrink-0">{s.id}.</span>
+                      <span className="truncate">{s.title}</span>
+                    </a>
+                  ))}
+                </nav>
+              </aside>
+
+              {/* Sections */}
+              <div className="flex-1 space-y-4 md:space-y-6 w-full">
+                {sections.map((section, i) => (
+                  <motion.div
+                    key={section.id}
+                    id={`section-${section.id}`}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.4, delay: 0.05 * (i % 5) }}
+                    className="bg-white border border-slate-100 rounded-2xl p-5 md:p-8 shadow-sm hover:shadow-md hover:border-slate-200 transition-all duration-300 scroll-mt-24"
+                  >
+                    <div className="flex items-center gap-3 mb-4 md:mb-5">
+                      <span className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-[11px] font-bold text-primary shrink-0">
+                        {section.id}
+                      </span>
+                      <h2 className="text-base md:text-lg font-semibold text-slate-800">{section.title}</h2>
+                    </div>
+
+                    {/* Section content - Responsive padding */}
+                    <div className="space-y-4 pl-0 md:pl-11 text-sm md:text-base leading-relaxed text-slate-600">
+                      {section.content.map((block, idx) => renderContent(block, idx))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+            </div>
           </div>
+        </section>
+
+        {/* ── Footer note ── */}
+        <div className="border-t border-slate-100 bg-white py-10 px-6 text-center">
+          <p className="text-[11px] md:text-xs text-slate-700 max-w-xl mx-auto leading-relaxed font-medium">
+            This Privacy Policy was last updated on <span className="font-semibold text-slate-900">1st January 2026</span>. By continuing to use our website or services, you acknowledge that you have read and agreed to this policy.
+          </p>
         </div>
-      </section>
 
-      {/* ── Footer note ── */}
-      <div className="border-t border-slate-100 bg-white py-10 px-6 text-center">
-        <p className="text-[11px] md:text-xs text-slate-700 max-w-xl mx-auto leading-relaxed font-medium">
-          This Privacy Policy was last updated on <span className="font-semibold text-slate-900">1st January 2026</span>. By continuing to use our website or services, you acknowledge that you have read and agreed to this policy.
-        </p>
-      </div>
+      </main>
+    </>
 
-    </main>
   );
 }

@@ -42,9 +42,10 @@ const Blog = () => {
   return (
     <>
       <SEO
-        title="Digital Marketing Blog | Insights & Tips | Socio Bhaarat"
+        title="Digital Marketing Blog | SEO Tips & Growth Strategies"
         description="Explore expert insights, marketing strategies, SEO tips, and growth hacks to scale your business online."
         keywords="digital marketing blog, seo tips, growth hacks, content marketing, marketing blog in jabalpur"
+        url="/blog"
       />
       <div className="min-h-screen bg-background">
         <section className="relative pt-14 pb-32 px-4 overflow-hidden bg-[#fafafa]">

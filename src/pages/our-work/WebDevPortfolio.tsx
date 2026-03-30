@@ -71,6 +71,7 @@ const WebDevPortfolio = () => {
         title="Web Development Projects | Portfolio | Socio Bhaarat"
         description="Browse our web development portfolio showcasing modern, scalable, and high-performing websites built for various industries."
         keywords="web development projects, portfolio, website portfolio, web design work, web development company in jabalpur"
+        url="/our-work/web-development-projects"
       />
       <div className="min-h-screen bg-background relative overflow-hidden">
 

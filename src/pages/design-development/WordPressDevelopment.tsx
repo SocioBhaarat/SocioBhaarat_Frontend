@@ -154,9 +154,10 @@ const WordPressDevelopment = () => {
   return (
     <>
       <SEO
-        title="WordPress Development Services | Socio Bhaarat"
+        title="Custom WordPress Development Services in India | Socio Bhaarat"
         description="Get powerful and easy-to-manage WordPress websites designed for performance, flexibility, and business growth."
         keywords="wordpress development, wordpress website design, wordpress customization, cms development, wordpress developer in jabalpur"
+        url="/design-development/wordpress-development"
       />
       <div className="min-h-screen bg-background selection:bg-primary/20">
 
@@ -187,9 +188,8 @@ const WordPressDevelopment = () => {
                   <Wrench className="w-3 h-3" /> Managed Ecosystems Lab
                 </div>
 
-                <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  Custom <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Wordpress Websites</span> That Drive Growth.
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
+                  Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 ">Wordpress Development</span> Services.
                 </h1>
 
                 <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6">

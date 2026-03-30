@@ -88,6 +88,7 @@ const WhatsAppPackages = () => {
         title="WhatsApp Marketing Packages | Socio Bhaarat"
         description="Get scalable WhatsApp marketing packages for bulk messaging, automation, and customer engagement."
         keywords="whatsapp marketing packages, whatsapp api pricing, bulk messaging plans, whatsapp automation services, whatsapp marketing in jabalpur"
+        url="/packages/whatsapp-marketing"
       />
       <div className="min-h-screen bg-background">
         <section className="relative pt-10 pb-12 overflow-hidden bg-[#fafafa]">
