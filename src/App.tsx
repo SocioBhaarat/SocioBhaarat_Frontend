@@ -32,6 +32,8 @@ import WebDevPortfolio from "./pages/our-work/WebDevPortfolio";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import WhatsAppWidget from "./components/WhatsAppWidget";
+import FAQWidget from "./components/FAQWidget";
+import WelcomePopup from "./components/ui/WelcomePopup";
 import ScrollToTop from "./hooks/ScrollToTop";
 import { Analytics } from "@vercel/analytics/react"
 import Navigation from "./components/Navigation";
@@ -51,10 +53,13 @@ const App = () => (
       <Toaster />
       <Sonner />
       <WhatsAppWidget />
+      <WelcomePopup />
       <BrowserRouter>
         <ScrollToTop />
+        <FAQWidget />
         <Analytics/>
         <Navigation />
+        <main>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
@@ -109,6 +114,7 @@ const App = () => (
           
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </main>
         <Footer />
       </BrowserRouter>
     </TooltipProvider>

@@ -481,7 +481,7 @@ const ORMServices = () => {
               <h2 className="text-3xl md:text-4xl font-extrabold italic tracking-tight text-slate-900 mb-2">
                 Enterprise-Grade Coverage
               </h2>
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-slate-700">
                 Everything included — no hidden add-ons, no surprises.
               </p>
             </div>

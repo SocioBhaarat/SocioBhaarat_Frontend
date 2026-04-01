@@ -88,14 +88,6 @@ const ServiceCard = ({
       <div
         className={`h-[2.5px] w-7 rounded-full group-hover:w-full transition-all duration-500 bg-gradient-to-r ${c.bar}`}
       />
-
-      {/* Watermark number */}
-      <span
-        className="absolute bottom-0 right-2 font-display text-[5rem] font-black italic leading-none pointer-events-none select-none opacity-[0.05] group-hover:opacity-[0.1] transition-opacity"
-        style={{ color: c.wm }}
-      >
-        {String(index + 1).padStart(2, "0")}
-      </span>
     </div>
   )
 }
