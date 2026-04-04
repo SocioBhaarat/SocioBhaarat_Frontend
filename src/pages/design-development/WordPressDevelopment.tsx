@@ -274,12 +274,12 @@ const WordPressDevelopment = () => {
                 </p>
 
                 <div className="grid grid-cols-2 gap-3 sm:max-w-xs">
-                  <div className="bg-muted rounded-2xl p-5">
+                  <div className="bg-slate-200 rounded-2xl p-5">
                     <div className="font-serif text-[2.6rem] font-normal text-blue-600 leading-none mb-1.5">500+</div>
                     <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">Successful Projects</p>
                   </div>
-                  <div className="bg-muted rounded-2xl p-5">
-                    <div className="font-serif text-[2.6rem] font-normal text-orange-500 leading-none mb-1.5">98%</div>
+                  <div className="bg-slate-200 rounded-2xl p-5">
+                    <div className="font-serif text-[2.6rem] font-normal text-orange-700 leading-none mb-1.5">98%</div>
                     <p className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">Client Satisfaction</p>
                   </div>
                 </div>

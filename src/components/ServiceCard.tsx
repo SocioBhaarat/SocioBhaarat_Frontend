@@ -59,10 +59,6 @@ const ServiceCard = ({
         {icon}
       </div>
 
-      {/* Number */}
-      <span className={`text-[10px] font-bold tracking-[.18em] uppercase mb-2 block ${c.num}`}>
-        {String(index + 1).padStart(2, "0")}
-      </span>
 
       {/* Title */}
       <h3 className={`font-display text-lg font-bold text-slate-900 mb-2 leading-snug tracking-tight transition-colors duration-200 ${c.hover}`}>

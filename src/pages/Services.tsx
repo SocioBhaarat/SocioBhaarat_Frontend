@@ -271,7 +271,7 @@ const Services = () => {
                     <div className="mt-[-20px] px-6 pb-6 relative z-10">
                       <Button
                         variant="outline"
-                        className="w-full rounded-xl bg-blue-500 text-white group-hover:bg-primary group-hover:text-primary-foreground transition-all font-semibold"
+                        className="w-full rounded-xl bg-blue-700 text-white group-hover:bg-blue-800 group-hover:text-primary-foreground transition-all font-semibold"
                         onClick={() => navigate(service.path)}
                       >
                         View Service Details

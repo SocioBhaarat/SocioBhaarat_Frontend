@@ -243,7 +243,7 @@ const VideoMarketing = () => {
                     </div>
                 </section>
 
-                {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
+                {/* WHY CHOOSE SOCIO BHAARAT*/}
                 <section className="py-12 lg:px-10 bg-[#f8f9fb] relative overflow-hidden">
                     <div className="container mx-auto max-w-7xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -349,9 +349,9 @@ const VideoMarketing = () => {
                                             <span className={`text-[9px] font-bold uppercase tracking-[.2em] mb-1.5 block transition-colors ${p.tagColor}`}>
                                                 {p.tag}
                                             </span>
-                                            <h4 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-blue-700 tracking-wider transition-colors mb-1.5 leading-snug">
+                                            <div className="text-base md:text-lg font-bold text-slate-900 group-hover:text-blue-700 tracking-wider transition-colors mb-1.5 leading-snug">
                                                 {p.title}
-                                            </h4>
+                                            </div>
                                             <p className="text-sm md:text-base text-slate-5=800 font-medium leading-[1.75]">{p.desc}</p>
                                         </div>
                                     </motion.div>

@@ -241,9 +241,9 @@ const GraphicDesigning = () => {
                   {/* Card title */}
                   <div className="flex items-center gap-2.5 mb-6">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-br from-blue-600 to-orange-500" />
-                    <h3 className="text-xl md:text-2xl font-normal text-foreground">
+                    <div className="text-xl md:text-2xl font-normal text-foreground">
                       Design Impact Analysis
-                    </h3>
+                    </div>
                   </div>
 
                   {/* Points */}

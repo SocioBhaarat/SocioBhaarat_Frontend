@@ -76,7 +76,7 @@ const Contact = () => {
                     Looking for  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Best Digital Marketing and IT Company?
                     </span> <br /> <div className="text-3xl md:text-4xl sm:pt-3 md:pt-5" >- Get in Touch</div>
                   </h1>
-                  <p className="text-sm sm:text-base md:text-lg text-slate-500 italic font-medium leading-relaxed border-l-4 border-primary/20 pl-4 sm:pl-5 py-1">
+                  <p className="text-sm sm:text-base md:text-lg text-slate-700 font-medium leading-relaxed border-l-4 border-primary/20 pl-4 sm:pl-5 py-1">
                     Have a project in mind? Let's architect a high-performance roadmap to
                     achieve your digital growth milestones.
                   </p>
@@ -97,7 +97,7 @@ const Contact = () => {
                       <div className="w-7 h-7 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-200">
                         <f.icon size={14} />
                       </div>
-                      <span className="text-xs sm:text-sm font-medium text-slate-600 group-hover:text-slate-900 transition-colors">
+                      <span className="text-xs sm:text-sm font-medium text-slate-800 group-hover:text-slate-900 transition-colors">
                         {f.text}
                       </span>
                     </div>
@@ -164,7 +164,7 @@ const Contact = () => {
                       <item.icon size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[.25em] text-slate-400 mb-0.5 italic">
+                      <p className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[.25em] text-slate-700 mb-0.5 italic">
                         {item.label}
                       </p>
                       <p className="text-sm sm:text-base font-semibold text-slate-900 truncate">
@@ -232,7 +232,7 @@ const Contact = () => {
                   <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:30px_30px] group-hover:bg-[size:20px_20px] transition-all duration-1000" />
                   <div className="relative z-10 space-y-2 md:space-y-4">
                     <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-secondary">Regional Headquarter</p>
-                    <h4 className="text-lg md:text-xl font-bold italic tracking-tight">Jabalpur, Madhya Pradesh</h4>
+                    <div className="text-lg md:text-xl font-bold italic tracking-tight">Jabalpur, Madhya Pradesh</div>
                     <p className="text-slate-800 text-xs md:text-sm italic border-l border-white/20 pl-4 font-medium">Serving the digital heart of Central India since 2024.</p>
                   </div>
                 </div>
@@ -245,22 +245,22 @@ const Contact = () => {
                     <form className="space-y-5 md:space-y-6" onSubmit={handleSubmit}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-2">
-                          <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Full Name *</label>
+                          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Full Name *</label>
                           <Input name="name" required placeholder="Enter Your Full Name" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 focus:border-primary transition-all text-sm md:text-base" />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Email Address *</label>
+                          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Email Address *</label>
                           <Input type="email" name="email" required placeholder="example@email.com" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Phone Number</label>
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Phone Number</label>
                         <Input type="tel" name="phone" placeholder="Enter Your Phone Number" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Project Brief *</label>
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Project Brief *</label>
                         <Textarea name="message" required placeholder="Tell us about your project goals..." className="min-h-[120px] md:min-h-[150px] rounded-2xl md:rounded-3xl border-2 p-4 md:p-6 text-sm md:text-base" />
                       </div>
 
@@ -268,7 +268,7 @@ const Contact = () => {
                         type="submit"
                         size="lg"
                         disabled={submitting}
-                        className="w-full h-14 md:h-16 rounded-full bg-slate-900 hover:bg-primary text-white font-black text-base md:text-lg transition-all shadow-xl hover:scale-[1.01] active:scale-95"
+                        className="w-full h-14 md:h-16 rounded-full bg-slate-900 hover:bg-primary text-white font-bold text-base md:text-lg transition-all shadow-xl hover:scale-[1.01] active:scale-95"
                       >
                         {submitting ? "PROCESSING..." : "TRANSMIT MESSAGE"}
                         <Send className="ml-2 h-4 w-4 md:h-5 md:w-5" />

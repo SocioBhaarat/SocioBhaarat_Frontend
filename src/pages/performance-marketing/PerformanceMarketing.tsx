@@ -141,7 +141,7 @@ const PerformanceMarketing = () => {
       desc: "High-ROAS shopping funnels, dynamic product ads, and abandoned cart retargeting — built to scale revenue without inflating acquisition costs.",
       bg: "bg-blue-50 border-blue-200",
       iconBg: "from-blue-600 to-indigo-600",
-      labelColor: "text-blue-300",
+      labelColor: "text-blue-700",
       titleHover: "group-hover:text-blue-700",
       bar: "bg-blue-600",
       wm: "text-blue-600",
@@ -153,7 +153,7 @@ const PerformanceMarketing = () => {
       desc: "LinkedIn-led lead generation and Google Search campaigns targeting high-value decision-makers at the exact moment they need your solution.",
       bg: "bg-fuchsia-50 border-purple-200",
       iconBg: "from-violet-600 to-purple-500",
-      labelColor: "text-purple-300",
+      labelColor: "text-purple-700",
       titleHover: "group-hover:text-violet-700",
       bar: "bg-violet-600",
       wm: "text-violet-600",
@@ -165,7 +165,7 @@ const PerformanceMarketing = () => {
       desc: "Compliant patient acquisition campaigns with precise local geo-targeting across Bhopal and Jabalpur — driving enquiries without policy violations.",
       bg: "bg-orange-50 border-orange-200",
       iconBg: "from-orange-500 to-amber-500",
-      labelColor: "text-orange-300",
+      labelColor: "text-orange-700",
       titleHover: "group-hover:text-orange-700",
       bar: "bg-orange-500",
       wm: "text-orange-500",
@@ -177,7 +177,7 @@ const PerformanceMarketing = () => {
       desc: "High-intent buyer and investor funnels for residential and commercial property leads — with WhatsApp integration and CRM-ready lead delivery.",
       bg: "bg-green-50 border-green-200",
       iconBg: "from-emerald-600 to-teal-500",
-      labelColor: "text-green-300",
+      labelColor: "text-green-700",
       titleHover: "group-hover:text-emerald-700",
       bar: "bg-emerald-600",
       wm: "text-emerald-600",
@@ -456,9 +456,9 @@ const PerformanceMarketing = () => {
                         <Check size={12} strokeWidth={2.5} className="text-blue-600 group-hover:text-white transition-colors duration-200" />
                       </div>
                       <div>
-                        <h4 className="text-sm md:text-base font-bold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">
+                        <div className="text-sm md:text-base font-bold text-slate-900 group-hover:text-blue-700 transition-colors mb-1">
                           {item.label}
-                        </h4>
+                        </div>
                         <p className="text-sm font-medium text-slate-700 leading-relaxed">{item.sub}</p>
                       </div>
                     </motion.div>
@@ -502,9 +502,6 @@ const PerformanceMarketing = () => {
                     </h3>
                     <p className="text-sm md:text-base text-slate-800 font-medium leading-[1.75] flex-1 mb-4">{b.desc}</p>
                     <div className={`h-[2.5px] w-6 rounded-full group-hover:w-full transition-all duration-500 ${b.bar}`} />
-                    <span className={`absolute bottom-0 right-2 font-display text-[4.5rem] font-black italic leading-none pointer-events-none select-none opacity-[0.05] group-hover:opacity-[0.11] transition-opacity ${b.wm}`}>
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -720,7 +717,7 @@ const PerformanceMarketing = () => {
                       <IndianRupee size={18} className="text-blue-700" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold uppercase tracking-[.18em] text-blue-400 mb-0.5">
+                      <p className="text-sm font-bold uppercase tracking-[.18em] text-blue-700 mb-0.5">
                         Minimum Budget
                       </p>
                       <p className="text-lg font-black text-blue-700">
@@ -734,7 +731,7 @@ const PerformanceMarketing = () => {
                     {[["15%", "Starter"], ["18%", "Growth"], ["20%", "Scale"]].map(([val, label]) => (
                       <div key={label} className="flex-1 text-center py-4 rounded-xl bg-slate-50 border border-slate-100">
                         <div className="font-display text-2xl font-black text-blue-600 leading-none mb-1.5">{val}</div>
-                        <div className="text-xs md:text-sm font-bold uppercase tracking-[.12em] text-slate-400">{label}</div>
+                        <div className="text-xs md:text-sm font-bold uppercase tracking-[.12em] text-slate-700">{label}</div>
                       </div>
                     ))}
                   </div>
@@ -743,7 +740,7 @@ const PerformanceMarketing = () => {
                 {/* RIGHT — Standard Terms */}
                 <div className="p-8 md:p-12 flex flex-col gap-7">
                   <div className="flex flex-col gap-3">
-                    <span className="text-sm font-bold tracking-[.25em] uppercase text-slate-400">
+                    <span className="text-sm font-bold tracking-[.25em] uppercase text-slate-700">
                       Standard Terms
                     </span>
                     <h3 className="text-2xl md:text-4xl font-bold text-slate-900 leading-tight">
