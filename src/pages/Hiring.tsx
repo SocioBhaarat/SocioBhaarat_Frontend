@@ -48,9 +48,9 @@ const Hiring = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const data = await getJobListings();
-        if (data && data.length > 0) {
-          setPositions(data);
+        const res = await getJobListings();
+        if (res.success && res.data) {
+          setPositions(res.data);
         }
       } catch (err) {
         console.error("Failed to fetch jobs:", err);
@@ -160,61 +160,109 @@ const Hiring = () => {
         </section>
 
         <section className="py-24 bg-background">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-bold text-slate-900">
-                Open <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500  font-medium">Positions</span>
+          <div className="container mx-auto max-w-6xl px-4 sm:px-6">
+
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary/70 mb-4">
+                Join Our Team
+              </p>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+                Open{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-semibold">
+                  Positions
+                </span>
               </h2>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {loading ? (
                 <div className="text-center py-20 text-slate-500">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-                  <p>Loading open positions...</p>
+                  <div className="animate-spin rounded-full h-10 w-10 border-2 border-primary/30 border-t-primary mx-auto mb-4" />
+                  <p className="text-sm font-medium text-slate-400">Loading open positions…</p>
                 </div>
-              ) : positions.map((position, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="group bg-white rounded-[2.5rem] p-8 md:p-12 border-2 border-border/50 hover:border-primary/30 transition-all shadow-xl hover:shadow-primary/5 relative overflow-hidden"
-                >
+              ) : (
+                positions.map((position, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
+                    className="group bg-white rounded-3xl border border-slate-200 hover:border-primary/40 shadow-sm hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 overflow-hidden"
+                  >
+                    {/* Top accent bar */}
+                    <div className="h-1 w-full bg-gradient-to-r from-blue-500 via-primary to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 relative z-10">
-                    <div className="space-y-4">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest rounded-md">{position.department}</span>
-                        <span className="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-black uppercase tracking-widest rounded-md">{position.type}</span>
-                      </div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-slate-900">{position.title}</h3>
-                      <p className="text-slate-700 font-medium max-w-xl">{position.description}</p>
-                    </div>
+                    <div className="p-8 md:p-10">
 
-                    <Button
-                      size="lg"
-                      className="w-full lg:w-auto h-16 px-12 rounded-full font-black text-sm md:text-lg bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all hover:scale-105"
-                      onClick={() => navigate(`/hiring/apply/${encodeURIComponent(position.title)}`)}
-                    >
-                      Apply Now <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </div>
+                      {/* Header Row */}
+                      <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
 
-                  {/* Technical Specs List */}
-                  <div className="mt-10 pt-10 border-t border-slate-100">
-                    <h4 className="font-bold text-[10px] uppercase tracking-[0.3em] text-slate-400 mb-6 italic">Engineering Requirements</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {position.requirements.map((req, idx) => (
-                        <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 group-hover:border-primary/10 transition-colors">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                          <span className="text-[11px] md:text-xs font-bold text-slate-700">{req}</span>
+                        {/* Left: Meta + Title + Description */}
+                        <div className="flex-1 space-y-4">
+
+                          {/* Badges */}
+                          <div className="flex flex-wrap gap-2">
+                            <span className="inline-flex items-center px-3 py-1 rounded-lg bg-primary/8 text-primary text-[11px] font-semibold uppercase tracking-wider border border-primary/15">
+                              {position.department}
+                            </span>
+                            <span className="inline-flex items-center px-3 py-1 rounded-lg bg-slate-100 text-slate-500 text-[11px] font-semibold uppercase tracking-wider border border-slate-200">
+                              {position.type}
+                            </span>
+                          </div>
+
+                          {/* Role Title */}
+                          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-snug">
+                            {position.title}
+                          </h3>
+
+                          {/* Description */}
+                          <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+                            {position.description}
+                          </p>
                         </div>
-                      ))}
+
+                        {/* Right: CTA */}
+                        <div className="flex-shrink-0 flex items-center lg:items-start lg:pt-2">
+                          <Button
+                            size="lg"
+                            className="w-full sm:w-auto h-14 px-10 rounded-full font-semibold text-sm tracking-wide bg-primary hover:bg-primary/90 text-white shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 hover:scale-[1.03] transition-all duration-200 flex items-center gap-2"
+                            onClick={() => navigate(`/hiring/apply/${encodeURIComponent(position.title)}`)}
+                          >
+                            Apply Now
+                            <ArrowRight className="w-4 h-4" />
+                          </Button>
+                        </div>
+                      </div>
+
+                      {/* Divider */}
+                      <div className="my-8 border-t border-slate-100" />
+
+                      {/* Requirements */}
+                      <div>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-400 mb-5">
+                          Requirements
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                          {position.requirements.map((req, idx) => (
+                            <div
+                              key={idx}
+                              className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 group-hover:border-primary/10 group-hover:bg-blue-50/40 transition-colors duration-200"
+                            >
+                              <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-px" />
+                              <span className="text-xs sm:text-[13px] font-medium text-slate-700 leading-snug">
+                                {req}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))
+              )}
             </div>
           </div>
         </section>

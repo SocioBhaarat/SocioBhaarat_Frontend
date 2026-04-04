@@ -31,10 +31,12 @@ const HiringForm = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
   const [fileName, setFileName] = useState<string | null>(null);
+  const [file, setFile] = useState<File | null>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    setFileName(file ? file.name : null);
+    const selectedFile = e.target.files?.[0] || null;
+    setFile(selectedFile);
+    setFileName(selectedFile ? selectedFile.name : null);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -44,18 +46,26 @@ const HiringForm = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    formData.append("jobTitle", decodedTitle);
-    formData.append("date", new Date().toLocaleDateString('en-GB', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
-    }))
 
     try {
+      if (!file) {
+        throw new Error("Resume file is required");
+      }
+      const allowed = ["application/pdf"];
+      if (!allowed.includes(file.type)) {
+        throw new Error("Only PDF allowed");
+      }
+      
+      formData.append("jobTitle", decodedTitle);
+      formData.append("date", new Date().toISOString());
+
       await submitApplication(formData);
+
       setSubmitStatus("success");
       form.reset();
+      setFile(null);
       setFileName(null);
+
     } catch (err) {
       console.error("Application submission failed:", err);
       setSubmitStatus("error");

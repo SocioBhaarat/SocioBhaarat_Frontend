@@ -17,25 +17,29 @@ const Contact = () => {
     setSubmitting(true);
     setSubmitStatus(null);
 
-    const formData = new FormData(e.target);
+    const form = e.target;
+    const formData = new FormData(form);
+
     const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      message: formData.get("message"),
-      date: new Date().toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-      })
+      name: formData.get("name")?.toString().trim(),
+      email: formData.get("email")?.toString().trim(),
+      phone: formData.get("phone")?.toString().trim(),
+      message: formData.get("message")?.toString().trim(),
     };
 
     try {
+      if (!data.name || !data.email || !data.phone || !data.message) {
+        throw new Error("All fields are required");
+      }
+
       await submitContactForm(data);
+
       setSubmitStatus("success");
-      e.target.reset();
+      form.reset();
+
     } catch (err) {
-      console.error(err);
+      console.error("Contact form error:", err);
+
       setSubmitStatus("error");
     } finally {
       setSubmitting(false);
@@ -265,7 +269,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Phone Number</label>
-                        <Input type="tel" name="phone" placeholder="Enter Your Phone Number" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
+                        <Input type="tel" name="phone" placeholder="Enter Your 10 Digit Phone Number" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
                       </div>
 
                       <div className="space-y-2">

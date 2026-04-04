@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { Calendar, User, ArrowLeft, Share2, Clock, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { getBlogById } from "@/services/blogService";
+import { getBlogByID } from "@/services/blogService";
 
 const blogContent: Record<string, any> = {
   "seo-trends-2026": {
@@ -145,7 +145,7 @@ const blogContent: Record<string, any> = {
 
 const BlogPost = () => {
   const { postId } = useParams();
-  const [post, setPost] = useState(blogContent[postId || ""]);
+  const [post, setPost] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [copied, setCopied] = useState(false);
 
@@ -153,9 +153,9 @@ const BlogPost = () => {
     const fetchPost = async () => {
       setLoading(true);
       try {
-        const data = await getBlogById(postId);
-        if (data) {
-          setPost(data);
+        const res = await getBlogByID(postId);
+        if (res.success && res.data) {
+          setPost(res.data);
         }
       } catch (error) {
         console.error("Failed to fetch blog post:", error);
@@ -210,7 +210,7 @@ const BlogPost = () => {
       }
     }
 
-    // Desktop fallback — copy to clipboard
+    
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
@@ -231,83 +231,114 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden font-sans">
-      {/* Background Engineering Mesh */}
-      <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+      {/* Background Grid */}
+      <div className="absolute inset-0 opacity-[0.025] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-      {/* 1. NAVIGATION LAYER (Always Top) */}
-      <nav className="container mx-auto max-w-6xl pt-12 px-4 relative z-20">
-        <Link to="/blog" className="group inline-flex items-center text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-primary transition-colors">
+      {/* Navigation */}
+      <nav className="container mx-auto max-w-6xl pt-10 px-4 relative z-20">
+        <Link
+          to="/blog"
+          className="group inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-500 hover:text-primary transition-colors"
+        >
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-          Back to Intelligence Stream
+          Back to Blog
         </Link>
       </nav>
 
-      {/* 2. HERO LAYER: Title & Visual Identity */}
-      <header className="container mx-auto max-w-6xl px-4 py-12 relative z-10">
-        <div className="max-w-4xl">
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-slate-900 text-white text-[10px] font-black uppercase tracking-widest italic">
+      {/* Hero */}
+      <header className="container mx-auto max-w-6xl px-4 pt-8 pb-10 relative z-10">
+        <div className="max-w-3xl">
+          <span className="inline-block px-4 py-1.5 mb-5 rounded-full bg-slate-900 text-white text-[10px] font-semibold uppercase tracking-widest">
             {post.category}
-          </div>
+          </span>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[0.95] italic mb-8">
-            <span className="relative inline-block py-1 pr-4 -mr-4 overflow-visible">
-              {post.title}
-            </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-6">
+            {post.title}
           </h1>
 
-          {/* Technical Metadata Row */}
-          <div className="flex flex-wrap items-center gap-8 py-6 border-y border-slate-100">
-            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
-              <User className="w-4 h-4 text-primary" /> {post.author}
+          {/* Metadata */}
+          <div className="flex flex-wrap items-center gap-6 py-5 border-y border-slate-100">
+            <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-slate-700">
+              <User className="w-3.5 h-3.5 text-primary" /> {post.author}
             </div>
-            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
-              <Calendar className="w-4 h-4 text-secondary" /> {post.date}
+            <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-slate-700">
+              <Calendar className="w-3.5 h-3.5 text-primary" /> {post.date}
             </div>
-            <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
-              <Clock className="w-4 h-4 text-accent" /> {post.readTime}
+            <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-slate-700">
+              <Clock className="w-3.5 h-3.5 text-primary" /> {post.readTime}
             </div>
           </div>
         </div>
 
-        <div className="mt-12 relative group">
-          <div className="absolute -inset-4 bg-primary/5 rounded-[3.5rem] blur-3xl opacity-50" />
-          <div className="relative rounded-[2.5rem] p-3 bg-white border-2 border-slate-100 shadow-2xl overflow-hidden">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-[350px] md:h-[550px] object-cover rounded-[2rem] group-hover:scale-105 transition-transform duration-1000"
-            />
-          </div>
-        </div>
       </header>
 
-      {/* 3. CORE ARCHITECTURE: Content & Sidebar */}
+      {/* Main Content */}
       <main className="container mx-auto px-4 max-w-6xl pb-24 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-16">
+        <div className="grid lg:grid-cols-12 gap-10 xl:gap-16">
 
-          <article className="lg:col-span-8">
+          {/* Article */}
+          <article className="lg:col-span-8 min-w-0 overflow-x-hidden">
+
+            {/* Cover Image — compact, inside article column */}
+            {post.image && (
+              <div className="mb-8 rounded-2xl overflow-hidden border border-slate-100 shadow-md group">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-[220px] object-cover group-hover:scale-[1.02] transition-transform duration-700"
+                />
+              </div>
+            )}
+
             <div
-              className="prose prose-slate max-w-none 
-              prose-h2:text-2xl prose-h2:font-black prose-h2: prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-slate-900
-              prose-p:text-slate-600 prose-p:text-md prose-p:leading-relaxed prose-p:mb-6 prose-p:italic prose-p:font-medium
-              prose-strong:text-slate-900 prose-strong:font-black
-              prose-ul:my-8 prose-ul:list-disc prose-ul:pl-5
-              prose-li:text-slate-600 prose-li:mb-2 prose-li:font-medium"
+              className="
+            blog-content overflow-x-hidden
+            prose prose-slate max-w-none
+
+            prose-h1:text-3xl prose-h1:font-bold prose-h1:text-slate-900 prose-h1:mt-10 prose-h1:mb-4 prose-h1:leading-snug
+            prose-h2:text-2xl prose-h2:font-bold prose-h2:text-slate-900 prose-h2:mt-10 prose-h2:mb-4 prose-h2:leading-snug
+            prose-h3:text-xl prose-h3:font-semibold prose-h3:text-slate-800 prose-h3:mt-8 prose-h3:mb-3
+
+            prose-p:text-slate-800 prose-p:text-base prose-p:leading-[1.85] prose-p:mb-5
+
+            prose-strong:text-slate-900 prose-strong:font-semibold
+            prose-em:text-slate-600
+
+            prose-a:text-primary prose-a:font-medium prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-primary/80
+
+            prose-ul:my-6 prose-ul:list-disc prose-ul:pl-5
+            prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-5
+            prose-li:text-slate-600 prose-li:mb-2 prose-li:leading-relaxed
+
+            prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-5 prose-blockquote:italic prose-blockquote:text-slate-500 prose-blockquote:my-8
+
+            prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:rounded-xl prose-pre:p-5 prose-pre:overflow-x-auto prose-pre:text-sm prose-pre:my-8
+            prose-code:text-primary prose-code:bg-primary/8 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-medium
+
+            prose-img:rounded-xl prose-img:shadow-md prose-img:my-8 prose-img:w-full prose-img:h-auto
+
+            prose-table:text-sm prose-table:w-full
+            prose-th:bg-slate-100 prose-th:text-slate-700 prose-th:font-semibold prose-th:text-left prose-th:px-4 prose-th:py-3
+            prose-td:px-4 prose-td:py-3 prose-td:border-b prose-td:border-slate-100 prose-td:text-slate-600
+          "
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
             {/* Share Module */}
-            <div className="mt-12 p-8 rounded-[2rem] bg-slate-50 border border-slate-100 flex items-center justify-between">
-              <p className="text-xs font-black uppercase tracking-widest text-slate-400">Distribute this Intelligence</p>
+            <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">Found this helpful?</p>
+                <p className="text-sm text-slate-500">Share it with your network.</p>
+              </div>
               <Button
                 variant="outline"
                 onClick={handleShare}
-                className="rounded-full gap-2 transition-all duration-200"
+                className="rounded-full gap-2 transition-all duration-200 flex-shrink-0"
               >
                 {copied ? (
                   <>
-                    <CheckCircle className="w-4 h-4 text-white" />
-                    <span className="text-white font-semibold">Copied!</span>
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="font-semibold text-green-600">Copied!</span>
                   </>
                 ) : (
                   <>
@@ -319,24 +350,59 @@ const BlogPost = () => {
             </div>
           </article>
 
-          <aside className="lg:col-span-4 space-y-8">
-            <div className="sticky top-24 p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 overflow-hidden">
-              <div className="absolute top-0 right-0 p-4 text-slate-200 font-black italic text-4xl select-none opacity-20">DATA</div>
+          {/* Sidebar */}
+          <aside className="lg:col-span-4">
+            <div className="sticky top-24 space-y-6">
 
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-6 italic">Engineering Brief</h4>
-              <p className="text-sm text-slate-500 italic font-medium leading-relaxed mb-8">
-                Our lab analyzes industry shifts in real-time. This intelligence is part of the SocioBhaarat growth system.
-              </p>
+              {/* About Card */}
+              <div className="rounded-2xl bg-slate-50 border border-slate-100 p-7 overflow-hidden relative">
+                <div className="absolute top-3 right-4 text-slate-200 font-bold italic text-3xl select-none opacity-30 pointer-events-none">
+                  INFO
+                </div>
+                <h4 className="text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-3">
+                  About This Post
+                </h4>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  Our team analyzes industry shifts in real-time. This article is part of the SocioBhaarat growth intelligence system.
+                </p>
+              </div>
 
-              <div className="space-y-4">
-                <h5 className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Growth CTA</h5>
+              {/* CTA Card */}
+              <div className="rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
                 <Link to="/contact" className="block group">
-                  <div className="p-6 rounded-2xl bg-slate-900 text-white group-hover:bg-primary transition-all duration-500">
-                    <p className="text-lg font-black italic tracking-tighter mb-2 leading-none">Ready to scale?</p>
-                    <p className="text-xs text-slate-400 group-hover:text-white/80 transition-colors">Request a free audit today.</p>
+                  <div className="p-7 bg-slate-900 text-white group-hover:bg-primary transition-all duration-500">
+                    <p className="text-lg font-bold leading-snug mb-2">
+                      Ready to grow your business?
+                    </p>
+                    <p className="text-sm text-slate-400 group-hover:text-white/70 transition-colors leading-relaxed">
+                      Get a free digital marketing audit tailored to your business goals.
+                    </p>
+                    <div className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/60 group-hover:text-white/90 transition-colors">
+                      Request Audit <ArrowLeft className="w-3 h-3 rotate-180" />
+                    </div>
                   </div>
                 </Link>
               </div>
+
+              {/* Tags (if available) */}
+              {post.tags?.length > 0 && (
+                <div className="rounded-2xl bg-slate-50 border border-slate-100 p-7">
+                  <h4 className="text-[10px] font-semibold uppercase tracking-[0.25em] text-slate-400 mb-4">
+                    Tags
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.map((tag: string, i: number) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 rounded-full bg-white border border-slate-200 text-[11px] font-medium text-slate-500"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
             </div>
           </aside>
 
