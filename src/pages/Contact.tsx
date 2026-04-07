@@ -258,22 +258,22 @@ const Contact = () => {
                     <form className="space-y-5 md:space-y-6" onSubmit={handleSubmit}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-2">
-                          <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Full Name *</label>
+                          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Full Name *</label>
                           <Input name="name" required placeholder="Enter Your Full Name" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 focus:border-primary transition-all text-sm md:text-base" />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Email Address *</label>
+                          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Email Address *</label>
                           <Input type="email" name="email" required placeholder="example@email.com" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Phone Number</label>
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Phone Number</label>
                         <Input type="tel" name="phone" placeholder="Enter Your 10 Digit Phone Number" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">Project Brief *</label>
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Project Brief *</label>
                         <Textarea name="message" required placeholder="Tell us about your project goals..." className="min-h-[120px] md:min-h-[150px] rounded-2xl md:rounded-3xl border-2 p-4 md:p-6 text-sm md:text-base" />
                       </div>
 

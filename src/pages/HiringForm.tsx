@@ -198,7 +198,7 @@ const HiringForm = () => {
                       {/* Full name & Email */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-2">
-                          <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
                             <User className="w-3 h-3" /> Full Name *
                           </label>
                           <Input
@@ -209,7 +209,7 @@ const HiringForm = () => {
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
                             <Mail className="w-3 h-3" /> Email Address *
                           </label>
                           <Input
@@ -225,7 +225,7 @@ const HiringForm = () => {
                       {/* Phone & LinkedIn */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-2">
-                          <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
                             <Phone className="w-3 h-3" /> Phone Number *
                           </label>
                           <Input
@@ -237,7 +237,7 @@ const HiringForm = () => {
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                          <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
                             <Linkedin className="w-3 h-3" /> LinkedIn Profile
                           </label>
                           <Input
@@ -251,7 +251,7 @@ const HiringForm = () => {
 
                       {/* Skills */}
                       <div className="space-y-2">
-                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
                           <Briefcase className="w-3 h-3" /> Skills *
                         </label>
                         <Input
@@ -265,7 +265,7 @@ const HiringForm = () => {
 
                       {/* Experience */}
                       <div className="space-y-2">
-                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
                           <Briefcase className="w-3 h-3" /> Years of Experience *
                         </label>
                         <Input
@@ -279,7 +279,7 @@ const HiringForm = () => {
 
                       {/* Cover Letter */}
                       <div className="space-y-2">
-                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
                           <FileText className="w-3 h-3" /> Cover Letter / Why This Role? *
                         </label>
                         <Textarea
@@ -290,9 +290,22 @@ const HiringForm = () => {
                         />
                       </div>
 
+                      <div className="space-y-2">
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
+                          <Briefcase className="w-3 h-3" /> Portfolio link
+                        </label>
+                        <Input
+                          type="text"
+                          name="portfolio"
+                          required
+                          placeholder="e.g. https://...."
+                          className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base"
+                        />
+                      </div>
+
                       {/* Resume Upload */}
                       <div className="space-y-2">
-                        <label className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2 flex items-center gap-1.5">
+                        <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-900 ml-2 flex items-center gap-1.5">
                           <Upload className="w-3 h-3" /> Upload Resume (PDF/DOC) *
                         </label>
                         <div className="relative">
