@@ -5,7 +5,7 @@ import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
-import { Instagram, Facebook, Linkedin, Youtube, TrendingUp, ArrowRight, Sparkles, BarChart3, Palette, ShieldCheck, Target, Users, Zap, Rocket, MessageSquare, Search, ShieldAlert, Link2, Megaphone, MessageCircle, MapPin, Share2, Shield, } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Youtube, TrendingUp, ArrowRight, Sparkles, BarChart3, Palette, Target, Users, Zap, MessageSquare, Search, ShieldAlert, MapPin, Share2, Shield, } from "lucide-react";
 import { FaGoogle } from "react-icons/fa"
 import { useNavigate } from "react-router-dom";
 

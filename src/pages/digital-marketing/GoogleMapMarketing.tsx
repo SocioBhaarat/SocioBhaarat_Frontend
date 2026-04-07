@@ -5,8 +5,7 @@ import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
-import { Check, MapPin, Star, Search, TrendingUp, ArrowRight, BarChart3, LinkIcon, Target, Zap, Locate, SearchCode, CheckCircle2, Globe2, Eye, Phone, Users } from "lucide-react";
-import React from "react";
+import { MapPin, Star, Search, TrendingUp, ArrowRight, BarChart3, LinkIcon, Target, Zap, Locate, SearchCode, CheckCircle2, Globe2, Eye, Phone, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const GoogleMapMarketing = () => {

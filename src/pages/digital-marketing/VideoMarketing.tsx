@@ -1,17 +1,15 @@
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import ExploralPanel from "@/components/ui/ExploralPanel";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
     Video, Play, Youtube, MonitorPlay, Film, Share2,
-    TrendingUp, BarChart3, CheckCircle2, ArrowRight,
-    Zap, Users, Clapperboard, Layers,
+    TrendingUp, BarChart3, ArrowRight,
+     Clapperboard, Layers,
     Smartphone,
     Check
 } from "lucide-react";
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const VideoMarketing = () => {

@@ -3,8 +3,8 @@ import { Card } from "@/components/ui/card";
 import QuoteSection from "@/components/ui/QuoteSection";
 import {
   Palette, Users, Smartphone, Zap, Layout, Target,
-  Check, ArrowRight, Sparkles, Search, MousePointer2,
-  Layers, ShieldCheck, Brush, PenTool,
+  Check, Search, MousePointer2,
+  Layers, ShieldCheck,
   Rocket,
   Heart,
   BadgeCheck,

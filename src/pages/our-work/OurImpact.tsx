@@ -1,12 +1,9 @@
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { TrendingUp, Users, DollarSign, Target, Zap, Send, BarChart3 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { TrendingUp, Users, DollarSign, Target, Zap, BarChart3 } from "lucide-react";
 
 const OurImpact = () => {
-  const navigate = useNavigate();
   const caseStudies = [
     {
       client: "SN REALITIES",

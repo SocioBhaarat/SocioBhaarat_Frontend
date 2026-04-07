@@ -1,15 +1,13 @@
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
 import {
-  Megaphone, Palette, Target, Code, BarChart, TrendingUp,
+  Megaphone, Palette, Target, BarChart,
   Mail, Video, MessageSquare, Globe, Layout, Search,
-  Settings, Smartphone, ShieldCheck, Bot, ShoppingCart, Eye,
-  Sparkles
+  Settings, Smartphone, ShoppingCart, Eye,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO";
-import { useState } from "react";
 
 const Services = () => {
   const navigate = useNavigate();

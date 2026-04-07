@@ -1,10 +1,8 @@
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2, Check, CheckCircle, DollarSign, Eye, MousePointerClick, TrendingUp, Zap } from "lucide-react";
-import { features } from "process";
+import { ArrowRight, Check, CheckCircle, DollarSign, Eye, MousePointerClick, TrendingUp, Zap } from "lucide-react";
 
 const PerformanceMarketingPackages = () => {
   const packages = [

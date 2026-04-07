@@ -1,13 +1,10 @@
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { ExternalLink, Code, Smartphone, Zap, Send, Globe } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { ExternalLink, Smartphone, Zap, Globe } from "lucide-react";
 
 const WebDevPortfolio = () => {
-  const navigate = useNavigate();
   const projects = [
     {
       title: "Pune News 24",

@@ -3,16 +3,15 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
-import { AnimatePresence, color, motion } from "framer-motion";
-import { ArrowRight, BarChart3, Calendar, Check, ChevronDown, FileText, Heart, Mail, Search, Share2, Shield, ShieldCheck, Sparkles, Star, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, BarChart3, Calendar, FileText, Mail, Search, Share2, Shield, Sparkles, Star, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO"
 import ExploralPanel from "@/components/ui/ExploralPanel";
 
 const ContentMarketing = () => {
   const navigate = useNavigate();
-  const [active, setActive] = useState(0)
 
   const whyChooseUs = [
     {

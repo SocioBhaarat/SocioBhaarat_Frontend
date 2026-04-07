@@ -1,6 +1,5 @@
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import FeatureGrid from "@/components/ui/FeatureGrid";
 import ServiceList from "@/components/ui/ServiceList";
@@ -8,8 +7,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
   Palette, Layers, PenTool, Layout, Box, Image,
-  CheckCircle2, ArrowRight, Zap, Target, MousePointer2,
-  Sparkles, Brush, Component,
+  CheckCircle2, ArrowRight, Target, MousePointer2,
+  Sparkles, Brush,
   Lightbulb,
   Paintbrush,
   Rocket,

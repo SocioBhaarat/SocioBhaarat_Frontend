@@ -27,9 +27,8 @@ const Contact = () => {
       Project: ${message}`
         );
 
-  const whatsappNumber = "919407448837 "; // replace with your number
 
-  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+  const url = `https://wa.me/?text=919407448837${text}`;
 
   window.open(url, "_blank");
 };

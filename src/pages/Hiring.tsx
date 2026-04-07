@@ -1,6 +1,6 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { Button } from "@/components/ui/button";
-import { Briefcase, Users, TrendingUp, Heart, MapPin, Clock, DollarSign, Sparkles, ArrowRight, Send, Zap } from "lucide-react";
+import { Users, TrendingUp, Heart, DollarSign, Sparkles, ArrowRight, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
 

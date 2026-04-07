@@ -6,10 +6,8 @@ import ExploralPanel from "@/components/ui/ExploralPanel";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Mail, Zap, Users, BarChart3, ShieldCheck, MousePointer2,
-  RefreshCcw, LayoutTemplate, Send, Search, CheckCircle2, ArrowRight,
+  RefreshCcw,Send, ArrowRight,
   TrendingUp,
-  Check,
-  Sparkles,
   Phone,
   Shield,
   Star,
@@ -21,7 +19,6 @@ import { useNavigate } from "react-router-dom";
 
 const EmailMarketing = () => {
   const navigate = useNavigate();
-  const [active, setActive] = useState(0)
 
   const whyChoosePoints = [
     {

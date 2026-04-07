@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { MessageCircle, ArrowRight, Check, Shield, BarChart3, MessageSquare, RefreshCcw, ShieldCheck, Users, Zap, X, Star, Target } from 'lucide-react'
+import { MessageCircle, ArrowRight, Check, BarChart3, MessageSquare, RefreshCcw, ShieldCheck, Users, Zap, X, Star, Target } from 'lucide-react'
 import React from 'react'
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";

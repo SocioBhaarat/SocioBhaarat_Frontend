@@ -2,11 +2,9 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { Zap, ArrowRight, Check, BarChart3, PieChart, ShieldCheck, TrendingUp, Target, Users } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Zap, ArrowRight, Check, BarChart3, ShieldCheck, Target, Users } from "lucide-react";
 
 const DigitalMarketingPackages = () => {
-  const navigate = useNavigate()
   const packages = [
     {
       name: "Starter",

@@ -1,5 +1,3 @@
-"use client";
-
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Lock, ChevronRight, Mail, Phone, Globe, User } from "lucide-react";

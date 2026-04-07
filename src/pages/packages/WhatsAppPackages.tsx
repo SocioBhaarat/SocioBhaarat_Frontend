@@ -2,7 +2,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion, useReducedMotion } from "framer-motion";
-import { Activity, ArrowRight, BarChart3, Bell, Check, CheckCircle, Database, Layers, MessageCircle, MessageSquare, Send, ShieldCheck, Smartphone, Users, Zap } from "lucide-react";
+import { ArrowRight, BarChart3, Bell, Check, CheckCircle, MessageCircle, Send, Smartphone, Users, Zap } from "lucide-react";
 
 const WhatsAppPackages = () => {
   const reduce = useReducedMotion();

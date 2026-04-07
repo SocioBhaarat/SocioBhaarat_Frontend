@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import QuoteSection from "@/components/ui/QuoteSection";
 import {
-  Check, Code, Cpu, Layers, Rocket, Shield, Smartphone,
-  ArrowRight, Search, Layout, Database, Terminal,
-  MonitorSmartphone, Lock, Zap, SmartphoneNfc, AppWindow,
+  Code, Cpu, Layers, Rocket, Smartphone,
+  ArrowRight, MonitorSmartphone, Lock, Zap, SmartphoneNfc, AppWindow,
   Palette
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -18,7 +17,6 @@ import SEO from "@/components/SEO";
 const AppDevelopment = () => {
   const navigate = useNavigate();
 
-  /* DATA */
   const process = [
     {
       title: "Discovery & Strategy",
