@@ -190,7 +190,7 @@ const Services = () => {
           <div className="container mx-auto px-4 relative z-10 mt-12">
             <div className="grid lg:grid-cols-12 gap-12 items-start">
 
-              {/* LEFT COLUMN: Narrative (Text Upwards) */}
+              {/* LEFT COLUMN: Narrative */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -211,7 +211,7 @@ const Services = () => {
                       transition={{ delay: 0.4 + i * 0.1, duration: 0.4 }}
                       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide
         ${i === 0 ? "bg-blue-600 text-white shadow-[0_2px_12px_#2563eb25]"
-                          : i === 1 ? "bg-[#E8610A] text-white shadow-[0_2px_12px_#E8610A25]"
+                          : i === 1 ? "bg-orange-700 text-white shadow-[0_2px_12px_#E8610A25]"
                             : "border border-slate-200 text-slate-500"}`}
                     >
                       <span className={`w-1 h-1 rounded-full ${i === 2 ? "bg-blue-400" : "bg-white/60"}`} />

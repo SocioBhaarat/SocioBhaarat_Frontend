@@ -306,7 +306,7 @@ const WordPressDevelopment = () => {
                         {item.icon}
                       </span>
                     </div>
-                    <h4 className="text-md font-semibold mb-1.5">{item.title}</h4>
+                    <div className="text-md font-semibold mb-1.5">{item.title}</div>
                     <p className="text-sm text-muted-foreground leading-relaxed font-medium">{item.desc}</p>
                   </motion.div>
                 ))}
@@ -376,9 +376,9 @@ const WordPressDevelopment = () => {
                   </div>
 
                   {/* Text */}
-                  <h3 className=" text-2xl font-semibold text-foreground mb-3 leading-snug">
+                  <div className=" text-2xl font-semibold text-foreground mb-3 leading-snug">
                     {card.title}
-                  </h3>
+                  </div>
                   <p className="text-sm md:text-lg font-medium text-slate-700 text-muted-foreground leading-relaxed">
                     {card.desc}
                   </p>

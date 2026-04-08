@@ -412,9 +412,9 @@ const WebDevelopment = () => {
 
                   {/* 3. Right Side: Content */}
                   <div className="space-y-4 md:space-y-6 flex-grow">
-                    <h4 className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">
+                    <div className="text-xl md:text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors leading-tight">
                       {item.title}
-                    </h4>
+                    </div>
 
                     <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed tracking-wide font-medium pl-4 md:pl-6 transition-all">
                       {item.desc}

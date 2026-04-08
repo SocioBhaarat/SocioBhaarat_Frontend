@@ -97,7 +97,7 @@ const Blog = () => {
                 transition={{ duration: 0.8 }}
                 className="flex flex-col gap-6"
               >
-                <p className="text-base font-bold uppercase tracking-[.1em] text-slate-400">
+                <p className="text-base font-bold uppercase tracking-[.1em] text-slate-700">
                   Digital Marketing Blog
                 </p>
 
@@ -109,8 +109,8 @@ const Blog = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-slate-500 max-w-lg leading-relaxed font-semibold">
-                  "Stay ahead of the curve with expert strategies, industry trends, and
-                  actionable tips to grow your business online."
+                  Stay ahead of the curve with expert strategies, industry trends, and
+                  actionable tips to grow your business online.
                 </p>
               </motion.div>
 
@@ -209,21 +209,21 @@ const Blog = () => {
 
                     <CardContent className="p-8 pt-4">
                       {/* Technical Metadata Row */}
-                      <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6 italic">
+                      <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-slate-700 mb-6 italic">
                         <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-primary" /> {post.date}</div>
                         <div className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-secondary" /> {post.readTime}</div>
                       </div>
 
-                      <h3 className="text-xl font-black text-slate-900 mb-4 group-hover:text-primary">
+                      <div className="text-xl font-black text-slate-900 mb-4 group-hover:text-primary">
                         {post.title}
-                      </h3>
+                      </div>
 
                       <p className="text-slate-500 text-sm italic font-medium leading-relaxed border-l-2 border-primary/10 pl-4 mb-8 line-clamp-3">
                         {post.excerpt}
                       </p>
 
                       <div className="flex items-center justify-between pt-6 border-t border-slate-50">
-                        <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                        <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-700">
                           <User className="w-3.5 h-3.5 text-accent" />
                           <span>{post.author}</span>
                         </div>

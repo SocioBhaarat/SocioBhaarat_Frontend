@@ -187,7 +187,7 @@ const Contact = () => {
                     <MapPin size={20} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[.25em] text-slate-400 mb-0.5 italic">
+                    <p className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[.25em] text-slate-700 mb-0.5 italic">
                       Visit Us
                     </p>
                     <p className="text-xs sm:text-sm font-semibold text-slate-900 leading-snug">

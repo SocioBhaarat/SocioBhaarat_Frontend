@@ -339,7 +339,7 @@ const WebDevPortfolio = () => {
               </span>
             </button> */}
 
-              <p className="mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">
+              <p className="mt-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
                 42+ Additional Projects available upon request
               </p>
             </div>

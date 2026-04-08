@@ -414,7 +414,7 @@ const UIUXDesign = () => {
                         {item.icon}
                       </span>
                     </div>
-                    <h4 className="text-md font-semibold mb-1.5">{item.title}</h4>
+                    <h3 className="text-md font-semibold mb-1.5">{item.title}</h3>
                     <p className="text-sm text-muted-foreground font-medium leading-relaxed">{item.desc}</p>
                   </motion.div>
                 ))}

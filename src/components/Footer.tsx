@@ -97,9 +97,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="md:col-span-5 flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-600 text-center md:text-left">
+            <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-600 text-center md:text-left">
               Architecture
-            </h3>
+            </div>
             <div className="grid grid-cols-2 gap-2">
               {footerData.quickLinks.map((link, i) => (
                 <Link
@@ -120,9 +120,9 @@ const Footer = () => {
 
           {/* Marketing Stack */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Marketing Stack
-            </h3>
+            </div>
             <ul className="flex flex-col gap-3">
               {footerData.marketing.map((link, i) => (
                 <li key={i}>
@@ -139,9 +139,9 @@ const Footer = () => {
 
           {/* Dev & Design Stack */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Dev & Design
-            </h3>
+            </div>
             <ul className="flex flex-col gap-3">
               {footerData.development.map((link, i) => (
                 <li key={i}>
@@ -158,9 +158,9 @@ const Footer = () => {
 
           {/* Automation Stack */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Automation
-            </h3>
+            </div>
             <ul className="flex flex-col gap-3">
               {footerData.automation.map((link, i) => (
                 <li key={i}>
@@ -177,9 +177,9 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="col-span-2 lg:col-span-1 flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Direct Line
-            </h3>
+            </div>
             <ul className="flex flex-col gap-5">
               {footerData.contact.map((item, i) => (
                 <li key={i} className="flex items-center gap-4 group">

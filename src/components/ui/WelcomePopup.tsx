@@ -34,14 +34,15 @@ const WelcomePopup = () => {
             stiffness: 260, 
             damping: 20 
           }}
-          className="fixed bottom-5 right-[80px] z-[100] flex items-center gap-2 sm:gap-3 bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-slate-100 w-[220px] sm:w-[260px] pointer-events-auto"
+          className="fixed bottom-5 right-[90px] z-[100] flex items-center gap-2 sm:gap-3 bg-white p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-slate-100 w-[220px] sm:w-[260px] pointer-events-auto"
         >
           {/* Close Button */}
           <button 
+            aria-label="Close chat"
             onClick={() => setIsVisible(false)}
-            className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-white border border-slate-100 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-600 shadow-sm transition-colors"
+            className="absolute -top-1.5 md:-top-4 -right-1.5 md:w-10 md:h-10 bg-white border border-slate-100 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-600 shadow-sm transition-colors"
           >
-            <X size={11} />
+            <X size={20} />
           </button>
 
           {/* Icon — hidden on very small screens to save space */}

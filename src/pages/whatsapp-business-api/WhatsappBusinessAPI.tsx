@@ -304,9 +304,9 @@ function WhatsappBusinessAPI() {
                   </div>
 
                   {/* Num */}
-                  <span className={`text-sm font-bold tracking-[.18em] uppercase mb-2 ${item.numColor}`}>
+                  {/* <span className={`text-sm font-bold tracking-[.18em] uppercase mb-2 ${item.numColor}`}>
                     {item.num}
-                  </span>
+                  </span> */}
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-slate-900 mb-3 leading-snug">
@@ -470,9 +470,9 @@ function WhatsappBusinessAPI() {
                     <p className="text-[10px] md:text-sm font-bold uppercase tracking-[.2em] text-blue-200 mb-1">
                       Ready to upgrade?
                     </p>
-                    <h4 className="font-display text-lg md:text-xl font-extrabold italic text-white leading-tight">
+                    <div className="text-lg md:text-xl font-extrabold italic text-white leading-tight">
                       Get API access in 24 hours.
-                    </h4>
+                    </div>
                   </div>
                   <Button
                     className="w-full md:w-auto rounded-xl px-5 h-11 text-sm font-bold bg-white hover:bg-blue-50 text-blue-700 transition-all flex items-center justify-center"

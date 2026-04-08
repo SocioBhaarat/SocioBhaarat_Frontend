@@ -15,14 +15,6 @@ import { useNavigate } from "react-router-dom";
 const VideoMarketing = () => {
     const navigate = useNavigate();
 
-    const whyChoosePoints = [
-        { title: "Pro-Grade Production", icon: <Film /> },
-        { title: "Strategic Storytelling", icon: <Clapperboard /> },
-        { title: "Multi-Platform SEO", icon: <Youtube /> },
-        { title: "High-End Motion Graphics", icon: <Layers /> },
-        { title: "Performance Tracking", icon: <BarChart3 /> },
-        { title: "Viral Engagement Growth", icon: <TrendingUp /> },
-    ];
 
     const whyNeedPoints = [
         "88% Increase in User Time on Site",
@@ -312,19 +304,19 @@ const VideoMarketing = () => {
                                 {[
                                     {
                                         tag: "Scripting", icon: Clapperboard,
-                                        iconBg: "bg-blue-100 text-blue-700", accentBg: "bg-blue-50", tagColor: "text-blue-300 group-hover:text-blue-600",
+                                        iconBg: "bg-blue-100 text-blue-700", accentBg: "bg-blue-50", tagColor: "text-blue-700 group-hover:text-blue-600",
                                         title: "Data-Backed Scripting",
                                         desc: "Every word is chosen based on psychological retention triggers — keeping viewers watching and moving them toward the desired action.",
                                     },
                                     {
                                         tag: "Equipment", icon: MonitorPlay,
-                                        iconBg: "bg-purple-100 text-purple-700", accentBg: "bg-purple-50", tagColor: "text-purple-300 group-hover:text-purple-600",
+                                        iconBg: "bg-purple-100 text-purple-700", accentBg: "bg-purple-50", tagColor: "text-purple-700 group-hover:text-purple-600",
                                         title: "Ultra-HD Infrastructure",
                                         desc: "Cinema-grade 4K/6K equipment ensures your brand looks premium on every screen — from mobile to billboard-size displays.",
                                     },
                                     {
                                         tag: "Distribution", icon: Layers,
-                                        iconBg: "bg-orange-100 text-orange-700", accentBg: "bg-orange-50", tagColor: "text-orange-300 group-hover:text-orange-600",
+                                        iconBg: "bg-orange-100 text-orange-700", accentBg: "bg-orange-50", tagColor: "text-orange-700 group-hover:text-orange-600",
                                         title: "Platform-Specific Editing",
                                         desc: "Custom-cut versions for TikTok, YouTube, and LinkedIn — each optimised for native algorithms to maximise organic reach.",
                                     },
