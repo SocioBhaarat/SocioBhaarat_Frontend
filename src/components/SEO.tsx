@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SEO = ({ title, description, keywords, url }) => {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
+  const baseUrl = "https://www.sociobhaarat.com";
   return (
     <Helmet>
       <title>{title}</title>

@@ -3,16 +3,15 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
-import { AnimatePresence, color, motion } from "framer-motion";
-import { ArrowRight, BarChart3, Calendar, Check, ChevronDown, FileText, Heart, Mail, Search, Share2, Shield, ShieldCheck, Sparkles, Star, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, BarChart3, Calendar, FileText, Mail, Search, Share2, Shield, Sparkles, Star, Target, TrendingUp, Users, Video, Zap } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO"
 import ExploralPanel from "@/components/ui/ExploralPanel";
 
 const ContentMarketing = () => {
   const navigate = useNavigate();
-  const [active, setActive] = useState(0)
 
   const whyChooseUs = [
     {
@@ -20,7 +19,7 @@ const ContentMarketing = () => {
       icon: Search,
       iconBg: "bg-blue-100",
       iconColor: "text-blue-700",
-      numColor: "text-blue-300",
+      numColor: "text-blue-600",
       tagBg: "bg-blue-50",
       tagColor: "text-blue-700",
       tag: "Organic Growth",
@@ -32,7 +31,7 @@ const ContentMarketing = () => {
       icon: Share2,
       iconBg: "bg-purple-100",
       iconColor: "text-purple-700",
-      numColor: "text-purple-300",
+      numColor: "text-purple-600",
       tagBg: "bg-purple-50",
       tagColor: "text-purple-700",
       tag: "Brand Reach",
@@ -44,7 +43,7 @@ const ContentMarketing = () => {
       icon: Video,
       iconBg: "bg-orange-100",
       iconColor: "text-orange-700",
-      numColor: "text-orange-300",
+      numColor: "text-orange-600",
       tagBg: "bg-orange-50",
       tagColor: "text-orange-700",
       tag: "High Retention",
@@ -56,7 +55,7 @@ const ContentMarketing = () => {
       icon: Shield,
       iconBg: "bg-green-100",
       iconColor: "text-green-700",
-      numColor: "text-green-300",
+      numColor: "text-green-600",
       tagBg: "bg-green-50",
       tagColor: "text-green-700",
       tag: "Authority Building",
@@ -68,7 +67,7 @@ const ContentMarketing = () => {
       icon: Mail,
       iconBg: "bg-red-100",
       iconColor: "text-red-700",
-      numColor: "text-red-300",
+      numColor: "text-red-600",
       tagBg: "bg-red-50",
       tagColor: "text-red-700",
       tag: "Direct Revenue",
@@ -80,7 +79,7 @@ const ContentMarketing = () => {
       icon: Calendar,
       iconBg: "bg-teal-100",
       iconColor: "text-teal-700",
-      numColor: "text-teal-300",
+      numColor: "text-teal-600",
       tagBg: "bg-teal-50",
       tagColor: "text-teal-700",
       tag: "90-Day Roadmap",
@@ -92,7 +91,7 @@ const ContentMarketing = () => {
       icon: Zap,
       iconBg: "bg-amber-100",
       iconColor: "text-amber-700",
-      numColor: "text-amber-300",
+      numColor: "text-amber-600",
       tagBg: "bg-amber-50",
       tagColor: "text-amber-700",
       tag: "Revenue Copy",
@@ -104,7 +103,7 @@ const ContentMarketing = () => {
       icon: BarChart3,
       iconBg: "bg-sky-100",
       iconColor: "text-sky-700",
-      numColor: "text-sky-300",
+      numColor: "text-sky-600",
       tagBg: "bg-sky-50",
       tagColor: "text-sky-700",
       tag: "Link Earning",
@@ -231,7 +230,7 @@ const ContentMarketing = () => {
                 ].map((stat, i) => (
                   <div key={i} className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
                     <div className="text-primary mb-4 group-hover:scale-110 transition-transform">{stat.icon}</div>
-                    <h3 className="text-3xl font-black text-slate-900">{stat.val}</h3>
+                    <p className="text-3xl font-black text-slate-900">{stat.val}</p>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</p>
                   </div>
                 ))}

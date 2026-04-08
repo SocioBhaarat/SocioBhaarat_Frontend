@@ -1,10 +1,8 @@
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2, Check, CheckCircle, DollarSign, Eye, MousePointerClick, TrendingUp, Zap } from "lucide-react";
-import { features } from "process";
+import { ArrowRight, Check, CheckCircle, DollarSign, Eye, MousePointerClick, TrendingUp, Zap } from "lucide-react";
 
 const PerformanceMarketingPackages = () => {
   const packages = [
@@ -236,9 +234,9 @@ const PerformanceMarketingPackages = () => {
                   <div className="relative z-10 flex flex-col flex-grow">
                     {/* Header Area */}
                     <div className="mb-6 md:mb-8">
-                      <h3 className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
+                      <div className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
                         {pkg.name}
-                      </h3>
+                      </div>
                       <p className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">
                         {pkg.description}
                       </p>
@@ -289,7 +287,7 @@ const PerformanceMarketingPackages = () => {
             </div>
 
             {/* Footer text */}
-            <p className="text-[10px] md:text-xs text-center mt-12 md:mt-16 text-slate-400 font-bold uppercase tracking-[0.2em] italic max-w-2xl mx-auto px-4">
+            <p className="text-[10px] md:text-xs text-center mt-12 md:mt-16 text-slate-600 font-bold uppercase tracking-[0.2em] italic max-w-2xl mx-auto px-4">
               *Precision delivery based on custom requirements and allocation.*
             </p>
           </div>

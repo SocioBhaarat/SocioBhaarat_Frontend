@@ -5,9 +5,7 @@ import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
-import { Check, TrendingUp, Target, DollarSign, BarChart, Zap, PlayCircle, RefreshCw, Search, Share2, ShoppingBag, ArrowRight, BarChart3, FlaskConical, ShieldCheck, Shield, Users, Instagram, Briefcase, MessageSquare } from "lucide-react";
-import { platform } from "os";
-import React from "react";
+import { Check, TrendingUp, Target, DollarSign, BarChart, Zap, PlayCircle, RefreshCw, Search, Share2, ShoppingBag, ArrowRight, BarChart3, Users, Instagram, Briefcase, MessageSquare } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const PaidMarketing = () => {

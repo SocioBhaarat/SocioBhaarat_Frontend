@@ -20,9 +20,9 @@ const AnnouncementBar = () => {
   }, []);
 
   return (
-    <div className="bg-secondary text-secondary-foreground py-4 md:py-2.5 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="fixed md:static top-0 left-0 w-full z-50 bg-secondary text-secondary-foreground py-4 md:py-2.5 sm:px-6 lg:px-8 overflow-hidden">
       <div className="container mx-auto flex items-center justify-center gap-2 text-sm font-medium relative">
-        <div className="relative flex-1 h-6 flex items-center justify-center">
+        <div className="relative flex-1 h-2 sm:h-6 flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.span
               key={messages[index]}
@@ -30,7 +30,7 @@ const AnnouncementBar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
-              className="absolute w-full text-center flex justify-center items-center text-lg lg:text-xl font-semibold"
+              className="absolute w-full text-center flex justify-center items-center text-sm lg:text-xl font-semibold"
             >
               <Sparkles className="hidden md:flex h-4 w-4 animate-pulse shrink-0" />&nbsp;
               {messages[index]}

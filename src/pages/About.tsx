@@ -31,12 +31,12 @@ const About = () => {
   ];
 
   const capabilities = [
-    { num: "01", icon: Globe, title: "Web Development", desc: "High-performance, responsive websites built for speed, security, and scalability — engineered to convert visitors into customers.", tint: "bg-blue-50 border-blue-200", iconBg: "bg-blue-100 text-blue-700", numColor: "text-blue-300", bar: "bg-blue-700", accent: "#1d4ed8", span: "md:col-span-3" },
-    { num: "02", icon: Smartphone, title: "App Development", desc: "Custom mobile and web applications designed for seamless user experience across every device and platform.", tint: "bg-fuchsia-50 border-purple-200", iconBg: "bg-purple-100 text-purple-700", numColor: "text-purple-300", bar: "bg-purple-700", accent: "#6d28d9", span: "md:col-span-3" },
-    { num: "03", icon: Zap, title: "Digital Marketing", desc: "Strategic campaigns across social and paid platforms to drive qualified leads and measurable revenue.", tint: "bg-orange-50 border-orange-200", iconBg: "bg-orange-100 text-orange-700", numColor: "text-orange-300", bar: "bg-orange-700", accent: "#c2410c", span: "md:col-span-2" },
-    { num: "04", icon: Layers, title: "UI/UX Design", desc: "User-centred designs that elevate brand experience, reduce friction, and increase engagement at every touchpoint.", tint: "bg-green-50 border-green-200", iconBg: "bg-green-100 text-green-700", numColor: "text-green-300", bar: "bg-green-700", accent: "#15803d", span: "md:col-span-2" },
-    { num: "05", icon: TrendingUp, title: "SEO & Performance", desc: "Data-driven optimisation strategies to dominate search rankings and maximise organic ROI month over month.", tint: "bg-red-50 border-red-200", iconBg: "bg-red-100 text-red-700", numColor: "text-red-300", bar: "bg-red-700", accent: "#b91c1c", span: "md:col-span-2" },
-    { num: "06", icon: Cpu, title: "Strategy & Consulting", desc: "Expert strategy sessions that align your technology stack, marketing channels, and business goals into one unified growth roadmap.", tint: "bg-amber-50 border-amber-200", iconBg: "bg-amber-100 text-amber-700", numColor: "text-amber-300", bar: "bg-amber-700", accent: "#b45309", span: "md:col-span-6", wide: true },
+    { num: "01", icon: Globe, title: "Web Development", desc: "High-performance, responsive websites built for speed, security, and scalability — engineered to convert visitors into customers.", tint: "bg-blue-50 border-blue-200", iconBg: "bg-blue-100 text-blue-700", numColor: "text-blue-700", bar: "bg-blue-700", accent: "#1d4ed8", span: "md:col-span-3" },
+    { num: "02", icon: Smartphone, title: "App Development", desc: "Custom mobile and web applications designed for seamless user experience across every device and platform.", tint: "bg-fuchsia-50 border-purple-200", iconBg: "bg-purple-100 text-purple-700", numColor: "text-purple-700", bar: "bg-purple-700", accent: "#6d28d9", span: "md:col-span-3" },
+    { num: "03", icon: Zap, title: "Digital Marketing", desc: "Strategic campaigns across social and paid platforms to drive qualified leads and measurable revenue.", tint: "bg-orange-50 border-orange-200", iconBg: "bg-orange-100 text-orange-700", numColor: "text-orange-700", bar: "bg-orange-700", accent: "#c2410c", span: "md:col-span-2" },
+    { num: "04", icon: Layers, title: "UI/UX Design", desc: "User-centred designs that elevate brand experience, reduce friction, and increase engagement at every touchpoint.", tint: "bg-green-50 border-green-200", iconBg: "bg-green-100 text-green-700", numColor: "text-green-700", bar: "bg-green-700", accent: "#15803d", span: "md:col-span-2" },
+    { num: "05", icon: TrendingUp, title: "SEO & Performance", desc: "Data-driven optimisation strategies to dominate search rankings and maximise organic ROI month over month.", tint: "bg-red-50 border-red-200", iconBg: "bg-red-100 text-red-700", numColor: "text-red-700", bar: "bg-red-700", accent: "#b91c1c", span: "md:col-span-2" },
+    { num: "06", icon: Cpu, title: "Strategy & Consulting", desc: "Expert strategy sessions that align your technology stack, marketing channels, and business goals into one unified growth roadmap.", tint: "bg-amber-50 border-amber-20<PASSWORD>", iconBg: "bg-amber-1<PASSWORD> text-amber-7<PASSWORD>", numColor: "text-amber-7<PASSWORD>", bar: "bg-amber-7<PASSWORD>", accent: "#b453<PASSWORD>", span: "md:col-span-6", wide: true },
   ]
 
   return (
@@ -120,7 +120,7 @@ const About = () => {
                 className="lg:col-span-7 space-y-8 order-1 lg:order-1 hidden lg:block"
               >
                 <div>
-                  <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-4 italic">Origin Protocol</h2>
+                  <h2 className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-700 mb-4">Origin Protocol</h2>
                   <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-none">
                     Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Story</span>
                   </h3>
@@ -169,14 +169,14 @@ const About = () => {
             {/* Header */}
             <div className="grid grid-cols-[1fr_auto] gap-8 items-end mb-14">
               <div>
-                <span className="text-sm font-bold tracking-[.4em] uppercase text-slate-400 italic mb-3 block">
+                <span className="text-sm font-bold tracking-[.4em] uppercase text-slate-600 italic mb-3 block">
                   Capabilities Lab
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.07] mb-3">
                   What <em className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">We Do</em>
                 </h2>
                 <p className="text-base text-slate-700 max-w-md leading-[1.8] font-medium">
-                  "We provide complete digital growth solutions tailored to modern business needs."
+                  We provide complete digital growth solutions tailored to modern business needs."
                 </p>
               </div>
             </div>
@@ -192,13 +192,13 @@ const About = () => {
                   }}
                   transition={{ duration: 0.25 }}
                   className={`
-        group relative border rounded-2xl overflow-hidden cursor-default transition-all duration-300 
-        ${c.tint} 
-        ${c.span} /* Desktop spans: md:col-span-x */
-        col-span-1 /* Mobile: Always full width */
-        flex flex-col 
-        ${c.wide ? "md:flex-row md:items-center md:gap-6 md:px-8 md:py-6 p-8" : "p-8"}
-      `}
+                  group relative border rounded-2xl overflow-hidden cursor-default transition-all duration-300 
+                  ${c.tint} 
+                  ${c.span} /* Desktop spans: md:col-span-x */
+                  col-span-1 /* Mobile: Always full width */
+                  flex flex-col 
+                  ${c.wide ? "md:flex-row md:items-center md:gap-6 md:px-8 md:py-6 p-8" : "p-8"}
+                `}
                 >
                   {/* Icon */}
                   <div
@@ -218,13 +218,13 @@ const About = () => {
                       {c.num}
                     </span>
 
-                    <h4 className={`
+                    <div className={`
           font-bold text-slate-900 mb-2 leading-snug transition-colors duration-250 
           group-hover:text-current 
           ${c.wide ? "text-xl md:text-2xl" : "text-lg md:text-xl"}
         `}>
                       {c.title}
-                    </h4>
+                    </div>
 
                     <p className={`
           text-sm md:text-base text-slate-700 font-medium leading-relaxed 
@@ -245,18 +245,6 @@ const About = () => {
                     <div className={`hidden md:block w-[3px] h-12 rounded-full group-hover:h-full transition-all duration-500 flex-shrink-0 self-stretch ${c.bar}`} />
                   )}
 
-                  {/* Watermark Number */}
-                  <span
-                    className={`
-          absolute bottom-0 right-2 font-display text-[4rem] md:text-[5rem] font-black italic 
-          leading-none pointer-events-none select-none opacity-[0.05] 
-          group-hover:opacity-[0.11] transition-opacity
-          ${c.wide ? "opacity-[0.02] md:opacity-[0.05]" : ""}
-        `}
-                    style={{ color: c.accent }}
-                  >
-                    {c.num}
-                  </span>
                 </motion.div>
               ))}
             </div>
@@ -271,11 +259,11 @@ const About = () => {
               {/* Narrative Side */}
               <div className="lg:col-span-6 space-y-12">
                 <div>
-                  <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-4 italic">Verification Protocol</h2>
-                  <h3 className="text-3xl md:text-5xl font-bold text-slate-800">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-700 mb-4">Verification Protocol</p>
+                  <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
                     Why Partner with <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">Socio Bhaarat?</span>
-                  </h3>
+                  </h2>
                 </div>
 
                 {/* Animation Logic: One by one lines from left/right */}

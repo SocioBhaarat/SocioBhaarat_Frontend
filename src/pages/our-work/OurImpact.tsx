@@ -1,12 +1,9 @@
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { TrendingUp, Users, DollarSign, Target, Zap, Send, BarChart3 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { TrendingUp, Users, DollarSign, Target, Zap, BarChart3 } from "lucide-react";
 
 const OurImpact = () => {
-  const navigate = useNavigate();
   const caseStudies = [
     {
       client: "SN REALITIES",
@@ -170,7 +167,7 @@ const OurImpact = () => {
               <div className="w-full max-w-2xl grid grid-cols-2 md:grid-cols-4 gap-0 border border-slate-100 rounded-2xl md:rounded-3xl overflow-hidden bg-white shadow-sm mt-4">
                 {[
                   { val: "50+", label: "Brands", color: "text-blue-600" },
-                  { val: "5×", label: "Avg ROI", color: "text-orange-500" },
+                  { val: "5×", label: "Avg ROI", color: "text-orange-600" },
                   { val: "80%", label: "Retention", color: "text-violet-600" },
                   { val: "10M+", label: "Impressions", color: "text-green-600" },
                 ].map((s, i) => (
@@ -238,9 +235,9 @@ const OurImpact = () => {
                       <div className="inline-block px-2 py-0.5 rounded-md bg-slate-900 text-white text-[8px] font-bold uppercase tracking-[0.2em]">
                         {study.industry}
                       </div>
-                      <h3 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+                      <div className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
                         {study.client}
-                      </h3>
+                      </div>
                     </div>
 
                     {/* Compact Challenge & Solution Stack */}
@@ -260,7 +257,7 @@ const OurImpact = () => {
                           <div className="w-1 h-1 rounded-full bg-secondary" />
                           Solution
                         </span>
-                        <p className="text-slate-700 text-sm font-medium leading-snug border-l border-secondary/20 pl-4`">
+                        <p className="text-slate-700 text-sm font-medium leading-snug border-l border-secondary/20 pl-4">
                           {study.solution}
                         </p>
                       </div>
@@ -269,11 +266,11 @@ const OurImpact = () => {
                     {/* Compact Metrics Grid */}
                     <div className="grid grid-cols-2 gap-3">
                       {study.results.map((result, i) => (
-                        <div key={i} className="p-4 bg-slate-50 rounded-2xl border border-slate-100 group hover:bg-slate-900 transition-all duration-500">
+                        <div key={i} className="p-4 bg-slate-50 rounded-2xl border border-slate-100 group hover:bg-slate-700 transition-all duration-500">
                           <div className="text-xl md:text-2xl font-black text-slate-900 group-hover:text-white transition-colors">
                             {result.value}
                           </div>
-                          <div className="text-[8px] font-black text-slate-400 uppercase tracking-widest mt-0.5">
+                          <div className="text-[8px] font-bold text-slate-500 uppercase group-hover:text-white tracking-widest mt-0.5">
                             {result.metric}
                           </div>
                         </div>

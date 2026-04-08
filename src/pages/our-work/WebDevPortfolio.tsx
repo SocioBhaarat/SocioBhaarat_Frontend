@@ -1,13 +1,10 @@
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { ExternalLink, Code, Smartphone, Zap, Send, Globe } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { ExternalLink, Smartphone, Zap, Globe } from "lucide-react";
 
 const WebDevPortfolio = () => {
-  const navigate = useNavigate();
   const projects = [
     {
       title: "Pune News 24",
@@ -213,7 +210,7 @@ const WebDevPortfolio = () => {
               <div className="w-full max-w-3xl grid grid-cols-2 md:flex md:items-center gap-0 border border-slate-100 rounded-2xl md:rounded-full overflow-hidden bg-white shadow-sm mt-4">
                 {[
                   { val: "50+", label: "Projects Built", color: "text-blue-600" },
-                  { val: "99", label: "PageSpeed Score", color: "text-orange-500" },
+                  { val: "99", label: "PageSpeed Score", color: "text-orange-600" },
                   { val: "99.9%", label: "Uptime", color: "text-green-600" },
                   { val: "100%", label: "Mobile Ready", color: "text-violet-600" },
                 ].map((s, i) => (
@@ -227,7 +224,7 @@ const WebDevPortfolio = () => {
                     <div className={`font-display text-2xl md:text-xl font-black leading-none mb-1 ${s.color}`}>
                       {s.val}
                     </div>
-                    <div className="text-[8px] md:text-[9px] font-bold uppercase tracking-[.15em] text-slate-400 whitespace-nowrap">
+                    <div className="text-[8px] md:text-[9px] font-bold uppercase tracking-[.15em] text-slate-700 whitespace-nowrap">
                       {s.label}
                     </div>
                   </div>
@@ -293,9 +290,9 @@ const WebDevPortfolio = () => {
                       <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">
                         {project.category} // UNIT_0{index + 1}
                       </span>
-                      <h3 className="text-4xl lg:text-5xl font-black text-slate-900 ">
+                      <div className="text-4xl lg:text-5xl font-black text-slate-900 ">
                         {project.title}
-                      </h3>
+                      </div>
                     </div>
 
                     <p className="text-slate-500 text-lg leading-relaxed italic font-medium border-l-4 border-slate-100 pl-6">

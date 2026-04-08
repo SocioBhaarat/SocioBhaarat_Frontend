@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
 import {
-  Megaphone, Palette, Target, Code, BarChart, TrendingUp,
+  Megaphone, Palette, Target, BarChart,
   Mail, Video, MessageSquare, Globe, Layout, Search,
-  Settings, Smartphone, ShieldCheck, Bot, ShoppingCart, Eye,
-  Sparkles
+  Settings, Smartphone, ShoppingCart, Eye,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +11,6 @@ import SEO from "@/components/SEO";
 
 const Services = () => {
   const navigate = useNavigate();
-
   const serviceCategories = [
     {
       category: "Digital Marketing",
@@ -162,6 +160,8 @@ const Services = () => {
     }
   ];
 
+
+
   return (
     <>
       <SEO
@@ -195,18 +195,32 @@ const Services = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="lg:col-span-7 space-y-8 text-left mt-8"
+                className="lg:col-span-7 space-y-5 text-left mt-8"
               >
 
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
                   Services at<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible"> Socio Bhaarat</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-slate-700 font-semibold border-full">
-                  Marketing, Automation & IT Solutions
-                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  {["Marketing", "Automation", "IT Solutions"].map((label, i) => (
+                    <motion.span
+                      key={label}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 + i * 0.1, duration: 0.4 }}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide
+        ${i === 0 ? "bg-blue-600 text-white shadow-[0_2px_12px_#2563eb25]"
+                          : i === 1 ? "bg-[#E8610A] text-white shadow-[0_2px_12px_#E8610A25]"
+                            : "border border-slate-200 text-slate-500"}`}
+                    >
+                      <span className={`w-1 h-1 rounded-full ${i === 2 ? "bg-blue-400" : "bg-white/60"}`} />
+                      {label}
+                    </motion.span>
+                  ))}
+                </div>
 
-                <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6 py-5">
+                <p className="text-base md:text-xl text-slate-700 max-w-2xl font-semibold font-montserrat border-l-4 tracking-wider border-primary/30 pl-6 py-3">
                   SocioBhaarat offers a unified suite of services across marketing, development, and automation to scale your brand with industrial-grade precision.
                 </p>
               </motion.div>
@@ -255,7 +269,7 @@ const Services = () => {
                     <div className="mt-[-20px] px-6 pb-6 relative z-10">
                       <Button
                         variant="outline"
-                        className="w-full rounded-xl bg-blue-500 text-white group-hover:bg-primary group-hover:text-primary-foreground transition-all font-semibold"
+                        className="w-full rounded-xl bg-blue-700 text-white group-hover:bg-blue-800 group-hover:text-primary-foreground transition-all font-semibold"
                         onClick={() => navigate(service.path)}
                       >
                         View Service Details

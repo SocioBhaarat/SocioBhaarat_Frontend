@@ -1,17 +1,15 @@
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import ExploralPanel from "@/components/ui/ExploralPanel";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
     Video, Play, Youtube, MonitorPlay, Film, Share2,
-    TrendingUp, BarChart3, CheckCircle2, ArrowRight,
-    Zap, Users, Clapperboard, Layers,
+    TrendingUp, BarChart3, ArrowRight,
+     Clapperboard, Layers,
     Smartphone,
     Check
 } from "lucide-react";
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const VideoMarketing = () => {
@@ -243,7 +241,7 @@ const VideoMarketing = () => {
                     </div>
                 </section>
 
-                {/* WHY CHOOSE SOCIO BHAARAT (Enhanced) */}
+                {/* WHY CHOOSE SOCIO BHAARAT*/}
                 <section className="py-12 lg:px-10 bg-[#f8f9fb] relative overflow-hidden">
                     <div className="container mx-auto max-w-7xl">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -285,7 +283,7 @@ const VideoMarketing = () => {
                                     {[
                                         { val: "500+", label: "Projects Delivered", color: "text-blue-600", bar: "bg-blue-600" },
                                         { val: "98%", label: "Client Satisfaction", color: "text-violet-600", bar: "bg-violet-600" },
-                                        { val: "80%", label: "Retention Rate", color: "text-orange-500", bar: "bg-orange-500" },
+                                        { val: "80%", label: "Retention Rate", color: "text-orange-700", bar: "bg-orange-500" },
                                         { val: "3.5×", label: "ROI Average", color: "text-teal-600", bar: "bg-teal-600" },
                                     ].map((s, i) => (
                                         <div
@@ -349,9 +347,9 @@ const VideoMarketing = () => {
                                             <span className={`text-[9px] font-bold uppercase tracking-[.2em] mb-1.5 block transition-colors ${p.tagColor}`}>
                                                 {p.tag}
                                             </span>
-                                            <h4 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-blue-700 tracking-wider transition-colors mb-1.5 leading-snug">
+                                            <div className="text-base md:text-lg font-bold text-slate-900 group-hover:text-blue-700 tracking-wider transition-colors mb-1.5 leading-snug">
                                                 {p.title}
-                                            </h4>
+                                            </div>
                                             <p className="text-sm md:text-base text-slate-5=800 font-medium leading-[1.75]">{p.desc}</p>
                                         </div>
                                     </motion.div>

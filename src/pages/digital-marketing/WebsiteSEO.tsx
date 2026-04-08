@@ -5,8 +5,7 @@ import { CTASection } from "@/components/ui/CTASection";
 import HorizontalServiceList from "@/components/ui/HorizontalServiceList";
 import QuoteSection from "@/components/ui/QuoteSection";
 import { motion } from "framer-motion";
-import { Check, Search, TrendingUp, FileText, Link2, ShieldCheck, BarChart3, ArrowRight, Sparkles, Cpu, SearchCode, Users, Globe, Zap } from "lucide-react";
-import React from "react";
+import { Check, Search, FileText, Link2, ShieldCheck, BarChart3, ArrowRight, Sparkles, Cpu, SearchCode, Users, Globe, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const WebsiteSEO = () => {

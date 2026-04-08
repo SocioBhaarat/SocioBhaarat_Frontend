@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { MessageCircle, ArrowRight, Check, Shield, BarChart3, MessageSquare, RefreshCcw, ShieldCheck, Users, Zap, X, Star, Target } from 'lucide-react'
+import { MessageCircle, ArrowRight, Check, BarChart3, MessageSquare, RefreshCcw, ShieldCheck, Users, Zap, X, Star, Target } from 'lucide-react'
 import React from 'react'
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +19,7 @@ function WhatsappBusinessAPI() {
       bg: "bg-blue-50",
       border: "border-blue-200",
       iconBg: "bg-blue-100 text-blue-700",
-      numColor: "text-blue-300",
+      numColor: "text-blue-600",
       tagBg: "bg-blue-50",
       tagColor: "text-blue-700",
       tag: "Verified Access",
@@ -32,7 +32,7 @@ function WhatsappBusinessAPI() {
       bg: "bg-green-50",
       border: "border-green-200",
       iconBg: "bg-green-100 text-green-700",
-      numColor: "text-green-300",
+      numColor: "text-green-600",
       tagBg: "bg-green-50",
       tagColor: "text-green-700",
       tag: "Mass Messaging",
@@ -45,7 +45,7 @@ function WhatsappBusinessAPI() {
       bg: "bg-orange-50",
       border: "border-orange-200",
       iconBg: "bg-orange-100 text-orange-700",
-      numColor: "text-orange-300",
+      numColor: "text-orange-600",
       tagBg: "bg-orange-50",
       tagColor: "text-orange-700",
       tag: "Fast Onboarding",
@@ -58,7 +58,7 @@ function WhatsappBusinessAPI() {
       bg: "bg-indigo-50",
       border: "border-indigo-200",
       iconBg: "bg-indigo-100 text-indigo-700",
-      numColor: "text-indigo-300",
+      numColor: "text-indigo-600",
       tagBg: "bg-indigo-50",
       tagColor: "text-indigo-700",
       tag: "Local Expertise",
@@ -71,7 +71,7 @@ function WhatsappBusinessAPI() {
       bg: "bg-teal-50",
       border: "border-teal-200",
       iconBg: "bg-teal-100 text-teal-700",
-      numColor: "text-teal-300",
+      numColor: "text-teal-600",
       tagBg: "bg-teal-50",
       tagColor: "text-teal-700",
       tag: "Full Visibility",
@@ -84,7 +84,7 @@ function WhatsappBusinessAPI() {
       bg: "bg-emerald-50",
       border: "border-emerald-200",
       iconBg: "bg-emerald-100 text-emerald-700",
-      numColor: "text-emerald-300",
+      numColor: "text-emerald-600",
       tagBg: "bg-emerald-50",
       tagColor: "text-emerald-700",
       tag: "Always-On Automation",
@@ -334,10 +334,6 @@ function WhatsappBusinessAPI() {
                             "from-emerald-600 to-emerald-400"
                     }`} />
 
-                  {/* Watermark */}
-                  <span className={`absolute bottom-0 right-2 font-display text-[5rem] font-black italic leading-none pointer-events-none select-none opacity-[0.06] group-hover:opacity-[0.13] transition-opacity ${item.numColor}`}>
-                    {item.num}
-                  </span>
                 </motion.div>
               ))}
             </div>
@@ -437,9 +433,9 @@ function WhatsappBusinessAPI() {
                 {/* Comparison — API vs Regular App - Added overflow-x-auto to prevent right-shift */}
                 <div className="rounded-2xl border border-slate-200 overflow-hidden bg-white mb-5">
                   <div className="px-5 md:px-6 py-4 border-b border-slate-100 flex items-center justify-between">
-                    <h4 className="text-sm md:text-base font-bold text-slate-900">
+                    <div className="text-sm md:text-base font-bold text-slate-900">
                       API vs Regular App
-                    </h4>
+                    </div>
                     <span className="text-[10px] md:text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
                       Differences
                     </span>
@@ -514,7 +510,7 @@ function WhatsappBusinessAPI() {
               {[
                 { val: "98%", label: "Open Rates", color: "text-blue-600" },
                 { val: "45–60%", label: "Click Rates", color: "text-violet-600" },
-                { val: "2.60Bn+", label: "Active Users", color: "text-orange-500" },
+                { val: "2.60Bn+", label: "Active Users", color: "text-orange-600" },
                 { val: "70%", label: "Engagement Rate", color: "text-teal-600" },
               ].map((s, i) => (
                 <div

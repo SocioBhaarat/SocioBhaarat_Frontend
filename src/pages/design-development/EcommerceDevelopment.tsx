@@ -8,14 +8,11 @@ import {
   Check,
   Store,
   Layers,
-  Globe,
   TrendingUp,
   ArrowRight,
   Zap,
   Search,
   Layout,
-  MousePointer2,
-  Users,
   Rocket,
   Smartphone,
   ShieldCheck,
@@ -238,7 +235,7 @@ const EcommerceDevelopment = () => {
 
                 <div className="grid grid-cols-2 gap-3 sm:max-w-xs">
                   <div className="bg-background rounded-2xl border border-border p-5">
-                    <div className=" text-[2.6rem] font-normal text-orange-500 leading-none mb-1.5">
+                    <div className=" text-[2.6rem] font-normal text-orange-700 leading-none mb-1.5">
                       500+
                     </div>
                     <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
@@ -284,9 +281,9 @@ const EcommerceDevelopment = () => {
                     </div>
 
                     <div>
-                      <h4 className="text-[15px] font-semibold text-foreground mb-1">
+                      <div className="text-[15px] font-semibold text-foreground mb-1">
                         {item.title}
-                      </h4>
+                      </div>
                       <p className="text-[13px] text-muted-foreground leading-relaxed">
                         {item.desc}
                       </p>
@@ -416,7 +413,7 @@ const EcommerceDevelopment = () => {
                         {step.icon}
                       </span>
                     </div>
-                    <span className=" text-[3.8rem] font-normal leading-none text-slate-200 group-hover:text-blue-100 transition-colors duration-300 select-none">
+                    <span className=" text-[3.8rem] font-normal leading-none text-slate-300 group-hover:text-blue-100 transition-colors duration-300 select-none">
                       {step.id}
                     </span>
                   </div>
@@ -447,7 +444,7 @@ const EcommerceDevelopment = () => {
 
         {/* TECH CLOUD */}
 
-        <section className="py-24 bg-white relative">
+        <section className="py-12 bg-white relative">
           {/* Soft Background Accents */}
           <div className="absolute top-20 left-0 w-72 h-72 bg-blue-50 rounded-full blur-3xl opacity-50" />
           <div className="absolute bottom-20 right-0 w-72 h-72 bg-orange-50 rounded-full blur-3xl opacity-50" />

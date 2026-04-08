@@ -1,6 +1,5 @@
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { CTASection } from "@/components/ui/CTASection";
 import FeatureGrid from "@/components/ui/FeatureGrid";
 import ServiceList from "@/components/ui/ServiceList";
@@ -8,8 +7,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import {
   Palette, Layers, PenTool, Layout, Box, Image,
-  CheckCircle2, ArrowRight, Zap, Target, MousePointer2,
-  Sparkles, Brush, Component,
+  CheckCircle2, ArrowRight, Target, MousePointer2,
+  Sparkles, Brush,
   Lightbulb,
   Paintbrush,
   Rocket,
@@ -241,9 +240,9 @@ const GraphicDesigning = () => {
                   {/* Card title */}
                   <div className="flex items-center gap-2.5 mb-6">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-br from-blue-600 to-orange-500" />
-                    <h3 className="text-xl md:text-2xl font-normal text-foreground">
+                    <div className="text-xl md:text-2xl font-normal text-foreground">
                       Design Impact Analysis
-                    </h3>
+                    </div>
                   </div>
 
                   {/* Points */}

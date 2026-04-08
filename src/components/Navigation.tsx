@@ -95,7 +95,7 @@ const Navigation = () => {
       <TopBar />
       <AnnouncementBar />
       <MidNavigation />
-      <div className="sticky top-0 left-0 right-0 bg-white z-50  backdrop-blur-sm border-b border-border shadow-sm">
+      <div className="sticky top-10 left-10 sm:top-0 sm:left-0 right-0 bg-white z-50  backdrop-blur-sm border-b border-border shadow-sm">
         <nav className="bg-blue-400/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-6">
             <div className="flex items-center justify-between h-20">
@@ -246,7 +246,9 @@ const Navigation = () => {
               </div>
 
               {/* Mobile Menu Toggle Button */}
-              <button onClick={() => setIsOpen(!isOpen)} className="xl:hidden text-foreground">
+              <button onClick={() => setIsOpen(!isOpen)} className="xl:hidden text-foreground"
+              aria-label="Toggle Button"  
+              >
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>

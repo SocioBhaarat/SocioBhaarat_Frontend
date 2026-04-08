@@ -2,11 +2,9 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/ui/CTASection";
 import { motion } from "framer-motion";
-import { Zap, ArrowRight, Check, BarChart3, PieChart, ShieldCheck, TrendingUp, Target, Users } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Zap, ArrowRight, Check, BarChart3, ShieldCheck, Target, Users } from "lucide-react";
 
 const DigitalMarketingPackages = () => {
-  const navigate = useNavigate()
   const packages = [
     {
       name: "Starter",
@@ -118,7 +116,7 @@ const DigitalMarketingPackages = () => {
                 <div className="grid grid-cols-2 gap-2">
                   {[
                     { val: "3", label: "Plan Tiers", color: "text-blue-600", bg: "bg-blue-50 border-blue-100" },
-                    { val: "₹9,999", label: "Starts At", color: "text-orange-500", bg: "bg-orange-50 border-orange-100" },
+                    { val: "₹9,999", label: "Starts At", color: "text-orange-600", bg: "bg-orange-50 border-orange-100" },
                     { val: "5×", label: "Avg ROI", color: "text-violet-600", bg: "bg-violet-50 border-violet-100" },
                     { val: "0", label: "Lock-In Period", color: "text-green-600", bg: "bg-green-50 border-green-100" },
                   ].map((s, i) => (
@@ -129,7 +127,7 @@ const DigitalMarketingPackages = () => {
                       <div className={`font-display text-2xl font-black leading-none mb-1 ${s.color}`}>
                         {s.val}
                       </div>
-                      <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-400">
+                      <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-700">
                         {s.label}
                       </div>
                     </div>
@@ -257,7 +255,7 @@ const DigitalMarketingPackages = () => {
                         <span className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">
                           {pkg.price}
                         </span>
-                        <span className="text-slate-400 text-xs md:text-sm font-bold sm:ml-2 italic">
+                        <span className="text-slate-700 text-xs md:text-sm font-bold sm:ml-2 italic">
                           {pkg.period}
                         </span>
                       </div>
@@ -295,7 +293,7 @@ const DigitalMarketingPackages = () => {
               ))}
             </div>
 
-            <p className="text-[10px] md:text-xs text-center mt-12 md:mt-16 text-slate-400 font-bold uppercase tracking-[0.2em] italic max-w-2xl mx-auto px-4">
+            <p className="text-[10px] md:text-xs text-center mt-12 md:mt-16 text-slate-700 font-bold uppercase tracking-[0.2em] italic max-w-2xl mx-auto px-4">
               *Precision delivery based on custom requirements and allocation.*
             </p>
           </div>

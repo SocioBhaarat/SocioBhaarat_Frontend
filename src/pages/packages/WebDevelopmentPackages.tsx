@@ -82,123 +82,6 @@ const WebDevelopmentPackages = () => {
       />
       <div className="min-h-screen bg-background">
 
-        {/* <section className="relative pt-16 overflow-hidden bg-[#fafafa]">
-          <div className="absolute inset-0 z-0 pointer-events-none">
-           
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
-            
-            <div className="absolute top-0 right-0 w-[560px] h-[560px] bg-primary/5 blur-[130px] rounded-full animate-pulse" />
-            <div className="absolute bottom-10 left-0 w-[400px] h-[400px] bg-blue-400/5 blur-[100px] rounded-full animate-pulse [animation-delay:1.5s]" />
-
-
-          </div>
-
-          {floatingBadges.map(({ icon: Icon, label, value, color, pos, delay }) => (
-            <motion.div
-              key={label}
-              className={`absolute ${pos} hidden lg:flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border backdrop-blur-sm shadow-sm z-20 ${color}`}
-              initial={{ opacity: 0, scale: 0.85, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 + delay }}
-              whileHover={{ scale: 1.05, y: -2 }}
-            >
-              <Icon className="w-4 h-4 shrink-0" />
-              <div>
-                <p className="text-[10px] font-semibold opacity-70 leading-none mb-0.5">{label}</p>
-                <p className="text-sm font-bold leading-none">{value}</p>
-              </div>
-            </motion.div>
-          ))}
-
-        
-          <div className="container mx-auto max-w-6xl text-center relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col items-center"
-            >
-             
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
-                <Zap className="w-3 h-3" /> Growth Engineering Lab
-              </div>
-
-    
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-tight tracking-tighter mb-6">
-                Web Development <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">
-                  Packages
-                </span>
-              </h1>
-
-          
-              <p className="text-md md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10 font-semibold">
-                Select a high-performance framework tailored for your business scale. All packages include
-                industrial-grade reporting and dedicated lab support.
-              </p>
-
-           
-              <motion.div
-                className="flex flex-wrap items-center justify-center gap-2 mb-12"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                <span className="text-xs text-slate-400 font-medium mr-1">Built with</span>
-                {pills.map((pill) => (
-                  <span
-                    key={pill}
-                    className="px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-600 shadow-sm"
-                  >
-                    {pill}
-                  </span>
-                ))}
-              </motion.div>
-
-              {/* Code snippet block */}
-        {/* <motion.div
-              className="w-full max-w-xl mx-auto rounded-2xl border border-slate-200 bg-white shadow-xl overflow-hidden text-left"
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.6 }}
-            >
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-100 bg-slate-50">
-                <span className="w-3 h-3 rounded-full bg-red-400" />
-                <span className="w-3 h-3 rounded-full bg-yellow-400" />
-                <span className="w-3 h-3 rounded-full bg-green-400" />
-                <span className="ml-auto text-[10px] font-mono text-slate-400">sociobhaarat.config.ts</span>
-              </div>
-              <div className="px-5 py-4 space-y-2 font-mono text-xs">
-                {codeLines.map(({ text, delay }) => (
-                  <motion.p
-                    key={text}
-                    className="text-slate-500"
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 1 + delay }}
-                  >
-                    <span className="text-primary font-semibold">{">"}</span>{" "}
-                    <span className="text-slate-700">{text}</span>
-                  </motion.p>
-                ))}
-                <motion.span
-                  className="inline-block w-2 h-4 bg-primary rounded-sm ml-3"
-                  animate={{ opacity: [1, 0, 1] }}
-                  transition={{ duration: 1, repeat: Infinity }}
-                />
-              </div>
-            </motion.div> 
-            </motion.div>
-          </div>
-
-          <style jsx>{`
-        @keyframes spin {
-          from { transform: translate(-50%, -50%) rotate(0deg); }
-          to   { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-      `}</style>
-        </section> */}
-
         <section className="relative pt-12 pb-10 md:pb-36 overflow-hidden bg-[#fafafa]">
 
           {/* Background */}
@@ -238,7 +121,7 @@ const WebDevelopmentPackages = () => {
                 <div className="grid grid-cols-2 gap-2">
                   {[
                     { val: "3", label: "Plan Tiers", color: "text-blue-600", bg: "bg-blue-50 border-blue-100" },
-                    { val: "7 Days", label: "Go Live In", color: "text-orange-500", bg: "bg-orange-50 border-orange-100" },
+                    { val: "7 Days", label: "Go Live In", color: "text-orange-600", bg: "bg-orange-50 border-orange-100" },
                     { val: "99+", label: "PageSpeed", color: "text-violet-600", bg: "bg-violet-50 border-violet-100" },
                     { val: "100%", label: "You Own It", color: "text-green-600", bg: "bg-green-50 border-green-100" },
                   ].map((s, i) => (
@@ -249,7 +132,7 @@ const WebDevelopmentPackages = () => {
                       <div className={`font-display text-2xl font-black leading-none mb-1 ${s.color}`}>
                         {s.val}
                       </div>
-                      <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-400">
+                      <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-700">
                         {s.label}
                       </div>
                     </div>
@@ -380,7 +263,7 @@ const WebDevelopmentPackages = () => {
                     </h3>
                     <div className="flex items-baseline gap-1 mb-4">
                       <span className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">{pkg.price}</span>
-                      <span className="text-slate-400 text-xs font-bold uppercase italic">/ cycle</span>
+                      <span className="text-slate-700 text-xs font-bold uppercase italic">/ cycle</span>
                     </div>
                     <p className="text-slate-500 text-xs md:text-sm font-medium leading-relaxed italic border-l-2 border-primary/20 pl-4">
                       {pkg.description}

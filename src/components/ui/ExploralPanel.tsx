@@ -29,7 +29,7 @@ function ExploralPanel({ content }) {
                         </span>
 
                         {/* Number: Hidden on mobile to save space */}
-                        <span className={`hidden md:block ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-400"}`}>
+                        <span className={`hidden md:block ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-600"}`}>
                             {item.num}
                         </span>
                     </button>
@@ -68,11 +68,6 @@ function ExploralPanel({ content }) {
                         </div>
                     </motion.div>
                 </AnimatePresence>
-
-                {/* Decorative Watermark: Scaled down for mobile */}
-                <span className="absolute -bottom-4 -right-2 font-display text-[6rem] md:text-[9rem] font-black italic leading-none pointer-events-none select-none text-blue-600 opacity-[0.03]">
-                    {content[active].num}
-                </span>
 
                 {/* Ghost icon: Hidden on small mobile screens to prevent overlap */}
                 <div className="hidden sm:block absolute top-8 right-10 opacity-[0.05]">

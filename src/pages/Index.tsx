@@ -1,6 +1,12 @@
 
 import { staggerContainer, fadeLeft, fadeRight, cardAnimation } from "@/components/ui/animation";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { motion, useInView, Variants } from "framer-motion";
 import { ArrowRight, TrendingUp, Zap, CheckCircle, Star, Sparkles, Users, Award, BarChart3, Globe, ShieldCheck, Target, Megaphone, ChevronLeft, ChevronRight, BarChart, Code, Palette, Rocket } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -246,6 +252,89 @@ const badgeIn: Variants = {
 };
 
 
+const faqs = [
+  {
+    question: "What is Socio Bhaarat?",
+    answer:
+      "Socio Bhaarat (Bhaarat Reliable Ventures Pvt. Ltd.) is a full-service digital marketing and IT solutions agency based in Bhopal and Jabalpur, Madhya Pradesh. We help businesses across India grow their digital presence through data-driven strategies and custom-built technology.",
+  },
+  {
+    question: "What makes Socio Bhaarat different from other agencies?",
+    answer:
+      "We focus on measurable outcomes, not vanity metrics. As one of Madhya Pradesh's fastest-growing agencies, we combine deep local market understanding with advanced technical expertise — ensuring every campaign we run is built for real ROI.",
+  },
+  {
+    question: "What industries do you work with?",
+    answer:
+      "We've partnered with businesses in education, healthcare, real estate, e-commerce, hospitality, retail, manufacturing, and professional services. If your business needs a digital presence, we have the expertise to help.",
+  },
+  {
+    question: "What services does Socio Bhaarat offer?",
+    answer:
+      "Our core services include Web Design & Development, SEO, Performance Marketing (Google & Meta Ads), WhatsApp Marketing, Social Media Management, Online Reputation Management (ORM), Content Marketing, and IT solutions for businesses.",
+  },
+  {
+    question: "Do you build custom websites or use templates?",
+    answer:
+      "Every website we build is fully custom — designed from scratch using modern tech stacks like React and Next.js. No cookie-cutter templates, ever.",
+  },
+  {
+    question: "Can you manage our social media end-to-end?",
+    answer:
+      "Yes. We handle everything from content creation and scheduling to community management and monthly performance reporting — so you can focus on running your business.",
+  },
+  {
+    question: "What is WhatsApp Marketing and how does it benefit my business?",
+    answer:
+      "WhatsApp Marketing uses the WhatsApp Business API to send personalized messages, promotions, and updates directly to your customers. With open rates far higher than email, it's one of the most effective channels for customer engagement and re-marketing.",
+  },
+  {
+    question: "Do you run paid advertising campaigns?",
+    answer:
+      "Absolutely. We manage performance marketing campaigns on Google Ads, Meta (Facebook & Instagram), and other platforms — with full tracking, continuous optimization, and transparent ROI reporting.",
+  },
+  {
+    question: "Is there a minimum contract period?",
+    answer:
+      "For project-based work like web development, there's no long-term lock-in. For ongoing services like SEO and social media management, we recommend a minimum of 3 months to deliver meaningful, sustainable results.",
+  },
+  {
+    question: "Do you work with startups and small businesses?",
+    answer:
+      "Absolutely — many of our clients are startups and small businesses. We have affordable packages designed to help early-stage companies build a strong digital foundation without stretching their budget.",
+  },
+  {
+    question: "How do I get started with Socio Bhaarat?",
+    answer:
+      "Simply fill out our contact form, call us, or send us a WhatsApp message. We'll schedule a free discovery call to understand your goals and recommend the right services for your business.",
+  },
+  {
+    question: "What does your onboarding process look like?",
+    answer:
+      "After the discovery call, we prepare a detailed proposal. Once approved, we run a strategy session, collect necessary assets, set up tracking and reporting, and begin execution — all within a structured timeline.",
+  },
+  {
+    question: "How often will I receive performance reports?",
+    answer:
+      "You'll receive monthly performance reports for all ongoing services. For active ad campaigns, we share weekly or bi-weekly updates depending on your preference. Full transparency, always.",
+  },
+  {
+    question: "How long does SEO take to show results?",
+    answer:
+      "SEO is a long-term investment. Most clients begin seeing measurable improvements within 3–6 months, with significant growth typically visible within 6–12 months. Paid ads deliver faster results and work well alongside SEO.",
+  },
+  {
+    question: "Can you guarantee results?",
+    answer:
+      "We don't make empty guarantees — no ethical agency does. What we do promise is transparent strategy, consistent execution, and honest reporting. Our results speak for themselves.",
+  },
+  {
+    question: "Do you provide case studies or client references?",
+    answer:
+      "Yes. We're happy to share relevant case studies and client references during our discovery call, so you can make an informed decision before committing.",
+  },
+];
+
 export default function Index() {
   const navigate = useNavigate();
   const videoRef1 = useRef(null);
@@ -319,7 +408,7 @@ export default function Index() {
               </div>
               <div>
                 <p className="text-sm font-bold text-slate-900 leading-tight">{b.val}</p>
-                <p className="text-[10px] text-slate-400 mt-0.5">{b.sub}</p>
+                <p className="text-[10px] text-slate-700 mt-0.5">{b.sub}</p>
               </div>
             </motion.div>
           ))}
@@ -345,7 +434,7 @@ export default function Index() {
 
               <motion.h1 custom={0.22} variants={fadeUp} initial="hidden" animate="visible" className="leading-[1.06]">
                 <span className="text-4xl md:text-6xl  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 leading-[1.25]">
-                 Digital Solutions & IT Company <br className="hidden sm:block"/>
+                  Digital Solutions & IT Company <br className="hidden sm:block" />
                 </span>{"  "}<span className="text-4xl md:text-6xl font-bold text-slate-900 leading-[1.25]">
                   For Bhaarat.
                 </span>
@@ -363,7 +452,8 @@ export default function Index() {
               className="flex flex-wrap justify-center gap-4 mt-8 mb-6"
             >
               <motion.a
-                onClick={() => window.open("https://wa.me/+919407448837 ", "_blank")}
+                href="https://wa.me/+919407448837 "
+                target="_blank"
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.97 }}
                 className="inline-flex items-center gap-3 pl-2 pr-7 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-['DM_Sans'] font-bold text-sm transition-colors shadow-lg shadow-blue-200"
@@ -425,11 +515,6 @@ export default function Index() {
               {/* Top accent bar */}
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-600 via-violet-600 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              {/* Watermark number */}
-              <span className="absolute -bottom-3 -right-1 font-display text-[5rem] font-black italic leading-none text-slate-900 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity pointer-events-none select-none">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-
               {/* Value */}
               <p className="font-display text-4xl md:text-5xl font-black text-slate-900 leading-none mb-2">
                 {num}
@@ -439,7 +524,7 @@ export default function Index() {
               </p>
 
               {/* Label */}
-              <p className="text-sm font-semibold text-slate-400 leading-snug mt-1 uppercase tracking-[.12em]">
+              <p className="text-sm font-semibold text-slate-700 leading-snug mt-1 uppercase tracking-[.12em]">
                 {label}
               </p>
 
@@ -698,8 +783,8 @@ export default function Index() {
                   </div>
 
                   {/* Paragraphs */}
-                  <div className="space-y-4 text-base md:text-lg tracking-wide leading-relaxed text-muted-foreground">
-                    <p className="border-l-4 border-primary/30 pl-4 md:pl-6 italic font-medium">
+                  <div className="space-y-4 tracking-wide leading-relaxed text-muted-foreground">
+                    <p className="border-l-4 border-primary/30 text-sm md:text-base pl-4 md:pl-6  font-medium">
                       <strong>Socio Bhaarat</strong> is a performance-driven digital agency
                       helping businesses across India scale with strategy, creativity,
                       and technology.
@@ -779,8 +864,10 @@ export default function Index() {
                       ref={videoRef1}
                       loop
                       playsInline
-                      preload="auto"
+                      preload="metadata"
                       muted={false}
+                      autoPlay
+                      controls
                       className="w-full h-full object-cover scale-105"
                     >
                       <source src="/socio bhaarat1.3running.webm" type="video/webm" />
@@ -1008,10 +1095,12 @@ export default function Index() {
                   <div className="relative z-10 overflow-hidden rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.3)] border-[8px] border-white aspect-[9/16] bg-slate-900 w-full">
                     <video
                       ref={videoRef2}
-                      autoPlay
                       loop
-                      muted={false}
                       playsInline
+                      preload="metadata"
+                      muted={false}   
+                      autoPlay
+                      controls
                       className="w-full h-full object-cover"
                     >
                       <source src="/GrowthSteps.webm" type="video/webm" />
@@ -1048,7 +1137,7 @@ export default function Index() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8 relative z-10">
               <div className="max-w-2xl">
-                <h2 className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 mb-4 italic">System Versatility</h2>
+                <h2 className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-600 mb-4 italic">System Versatility</h2>
                 <h3 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">
                   Expertise Across <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                     Verticals
@@ -1061,10 +1150,10 @@ export default function Index() {
 
               {/* Navigation Controls */}
               <div className="flex gap-4">
-                <button className="prev-btn w-14 h-14 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:bg-primary hover:text-white transition-all shadow-xl active:scale-90 group">
+                <button className="prev-btn w-14 h-14 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:bg-primary hover:text-white transition-all shadow-xl active:scale-90 group" aria-label="Previous Slide">
                   <ChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
                 </button>
-                <button className="next-btn w-14 h-14 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:bg-primary hover:text-white transition-all shadow-xl active:scale-90 group">
+                <button className="next-btn w-14 h-14 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:bg-primary hover:text-white transition-all shadow-xl active:scale-90 group" aria-label="Next Slide">
                   <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -1141,6 +1230,99 @@ export default function Index() {
                 Explore All 12+ Services <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* ── FAQ Section ── */}
+        <section id="faq" className="py-12 bg-white relative overflow-hidden">
+          {/* Background blobs */}
+          <div className="absolute top-0 left-0 w-80 h-80 bg-blue-50/60 rounded-full blur-[100px] -z-10 pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-50/60 rounded-full blur-[100px] -z-10 pointer-events-none" />
+
+          <div className="container mx-auto max-w-7xl px-4 md:px-6">
+            {/* Header */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeUp}
+              className="text-center mb-14 space-y-4"
+            >
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold uppercase tracking-widest text-blue-600">
+                Got Questions?
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
+                Frequently Asked{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
+                  Questions
+                </span>
+              </h2>
+              <p className="text-muted-foreground text-base md:text-lg max-w-3xl mx-auto font-medium">
+                Everything you need to know about scaling your business with Socio Bhaarat.
+              </p>
+            </motion.div>
+
+            
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={fadeUp}
+              className="grid md:grid-cols-2 gap-4 items-start"
+            >
+              
+              <Accordion type="single" collapsible className="w-full space-y-3">
+                {faqs.slice(0, Math.ceil(faqs.length / 2)).map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`faq-left-${index}`}
+                    className="border border-slate-100 bg-slate-50/80 rounded-2xl px-6 py-1 hover:bg-[#EEF4FF]/60 hover:border-blue-200 transition-all duration-300 shadow-sm hover:shadow-md"
+                  >
+                    <AccordionTrigger className="text-left font-bold text-slate-800 text-base md:text-lg hover:no-underline [&[data-state=open]]:text-blue-600 transition-colors py-5">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-slate-700 text-sm md:text-base font-medium leading-relaxed pb-5">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+
+              
+              <Accordion type="single" collapsible className="w-full space-y-3">
+                {faqs.slice(Math.ceil(faqs.length / 2)).map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`faq-right-${index}`}
+                    className="border border-slate-100 bg-slate-50/80 rounded-2xl px-6 py-1 hover:bg-[#EEF4FF]/60 hover:border-blue-200 transition-all duration-300 shadow-sm hover:shadow-md"
+                  >
+                    <AccordionTrigger className="text-left font-bold text-slate-800 text-base md:text-lg hover:no-underline [&[data-state=open]]:text-blue-600 transition-colors py-5">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-slate-600 text-sm md:text-base leading-relaxed pb-5">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </motion.div>
+
+            {/* Bottom CTA nudge */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              className="mt-12 text-center"
+            >
+              <p className="text-slate-500 text-sm font-medium mb-4">Still have questions? We're happy to help.</p>
+              <Button
+                className="rounded-full px-8 h-11 text-sm font-bold bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all hover:scale-105"
+                onClick={() => window.open("https://wa.me/+919407448837", "_blank")}
+              >
+                Chat With Us on WhatsApp
+              </Button>
+            </motion.div>
           </div>
         </section>
 

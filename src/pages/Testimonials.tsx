@@ -119,7 +119,7 @@ const Testimonials = () => {
                         </div>
                       </div>
                       <div className="ml-5">
-                        <h3 className="font-bold text-slate-900 leading-none">{testimonial.name}</h3>
+                        <div className="font-bold text-slate-900 leading-none">{testimonial.name}</div>
                         <div className="flex mt-2">
                           {[...Array(testimonial.rating)].map((_, i) => (
                             <Star key={i} className="h-3 w-3 fill-orange-400 text-orange-400" />
@@ -129,7 +129,7 @@ const Testimonials = () => {
                     </div>
 
                     <p className="text-slate-900 leading-relaxed text-sm mb-8 flex-grow font-medium">
-                      "{testimonial.content}"
+                      {testimonial.content}
                     </p>
 
                     <div className="pt-6 border-t border-slate-50 flex items-center justify-between">

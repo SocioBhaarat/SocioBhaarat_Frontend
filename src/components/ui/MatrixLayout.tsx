@@ -64,14 +64,14 @@ function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProp
               >
                 0{index + 1}
               </div>
-              <h4
+              <div
                 className={cn(
                   "text-[11px] font-semibold leading-tight tracking-wide",
                   activePhase === index ? "text-slate-900" : "text-slate-500"
                 )}
               >
                 {step.title}
-              </h4>
+              </div>
               {activePhase === index && (
                 <motion.div
                   layoutId="activeDotMobile"
@@ -189,9 +189,9 @@ function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProp
                 </span>
                 <div className="flex items-center gap-1.5">
                   {process.map((_, i) => (
-                    <button
+                    <div
                       key={i}
-                      onClick={() => setActivePhase(i)}
+                      aria-label='decorative-footer-btn'
                       className={cn(
                         "h-1.5 rounded-full transition-all duration-300 bg-white",
                         i === activePhase ? "w-5 opacity-100" : "w-1.5 opacity-35"

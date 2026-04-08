@@ -6,10 +6,8 @@ import ExploralPanel from "@/components/ui/ExploralPanel";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Mail, Zap, Users, BarChart3, ShieldCheck, MousePointer2,
-  RefreshCcw, LayoutTemplate, Send, Search, CheckCircle2, ArrowRight,
+  RefreshCcw,Send, ArrowRight,
   TrendingUp,
-  Check,
-  Sparkles,
   Phone,
   Shield,
   Star,
@@ -21,7 +19,6 @@ import { useNavigate } from "react-router-dom";
 
 const EmailMarketing = () => {
   const navigate = useNavigate();
-  const [active, setActive] = useState(0)
 
   const whyChoosePoints = [
     {
@@ -282,12 +279,12 @@ const EmailMarketing = () => {
                       {item.iconL}
                     </div>
                     <div>
-                      <h4
+                      <div
                         className="text-base md:text-lg font-bold text-slate-900 mb-1 leading-snug transition-colors duration-200 group-hover:text-current"
                         style={{}}
                       >
                         {item.leftTitle}
-                      </h4>
+                      </div>
                       <p className="text-sm md:text-base text-slate-600 font-medium leading-relaxed">{item.leftSub}</p>
                       <span
                         className={`text-[9px] font-bold uppercase tracking-[.18em] px-2.5 py-1 rounded-full mt-2 inline-block ${item.tagBg}`}
@@ -319,9 +316,9 @@ const EmailMarketing = () => {
                       {item.iconR}
                     </div>
                     <div>
-                      <h4 className="text-base md:text-lg font-bold text-slate-900 mb-1 leading-snug">
+                      <div className="text-base md:text-lg font-bold text-slate-900 mb-1 leading-snug">
                         {item.rightTitle}
-                      </h4>
+                      </div>
                       <p className="text-sm md:text-base text-slate-700 leading-relaxed">{item.rightSub}</p>
                     </div>
                   </div>
