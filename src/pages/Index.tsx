@@ -864,8 +864,10 @@ export default function Index() {
                       ref={videoRef1}
                       loop
                       playsInline
-                      preload="auto"
+                      preload="metadata"
                       muted={false}
+                      autoPlay
+                      controls
                       className="w-full h-full object-cover scale-105"
                     >
                       <source src="/socio bhaarat1.3running.webm" type="video/webm" />
@@ -1093,10 +1095,12 @@ export default function Index() {
                   <div className="relative z-10 overflow-hidden rounded-[3rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.3)] border-[8px] border-white aspect-[9/16] bg-slate-900 w-full">
                     <video
                       ref={videoRef2}
-                      autoPlay
                       loop
-                      muted={false}
                       playsInline
+                      preload="metadata"
+                      muted={false}   
+                      autoPlay
+                      controls
                       className="w-full h-full object-cover"
                     >
                       <source src="/GrowthSteps.webm" type="video/webm" />
