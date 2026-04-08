@@ -28,7 +28,7 @@ const Contact = () => {
         );
 
 
-  const url = `https://wa.me/?text=919407448837${text}`;
+  const url = `https://wa.me/919407448837?text=${text}`;
 
   window.open(url, "_blank");
 };
@@ -44,7 +44,7 @@ const Contact = () => {
       />
       <div className="min-h-screen bg-[#fafafa] relative overflow-hidden">
 
-        <section className="relative pt-10 pb-16 overflow-hidden">
+        <section className="relative pt-10 sm:pt-2 pb-16 overflow-hidden">
           {/* Background - Added overflow-x-hidden to prevent horizontal scroll */}
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />

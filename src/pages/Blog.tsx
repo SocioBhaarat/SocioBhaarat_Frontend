@@ -48,7 +48,7 @@ const Blog = () => {
         url="/blog"
       />
       <div className="min-h-screen bg-background">
-        <section className="relative pt-14 pb-32 px-4 overflow-hidden bg-[#fafafa]">
+        <section className="relative pt-14 pb-12 overflow-hidden bg-[#fafafa]">
 
           {/* Background */}
           <div className="absolute inset-0 z-0 pointer-events-none">
@@ -78,10 +78,10 @@ const Blog = () => {
             </motion.div>
           ))}
 
-          <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="container pt-5 mx-auto max-w-6xl relative z-10">
 
             {/* Top row — badge + stats */}
-            <div className="flex items-center justify-between mb-10">
+            <div className="flex items-center justify-between mb-10 md:mb-1" >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-primary text-[10px] font-black tracking-[0.3em] uppercase shadow-sm">
                 <BookOpen className="w-3 h-3" /> Intelligence Stream
               </div>
@@ -178,9 +178,6 @@ const Blog = () => {
 
             </div>
           </div>
-
-          {/* Bottom fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
         </section>
         <section className="py-20 md:px-4 bg-white relative">
           <div className="container mx-auto max-w-7xl relative z-10">

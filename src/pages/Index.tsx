@@ -420,7 +420,7 @@ export default function Index() {
             <motion.div custom={0.05} variants={fadeUp} initial="hidden" animate="visible" className="mb-6">
               <span className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-300 text-yellow-800 rounded-full px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F5C518] animate-pulse" />
-                MP's #1 Growth Partner &nbsp;·&nbsp; Bhopal &amp; Jabalpur
+                Socio Bhaarat &nbsp;-&nbsp; Serving clients across the globe.
               </span>
             </motion.div>
 
