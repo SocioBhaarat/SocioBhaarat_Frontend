@@ -53,8 +53,7 @@ const Contact = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 md:w-[400px] md:h-[400px] bg-blue-500/[0.04] blur-[60px] md:blur-[100px] rounded-full" />
           </div>
 
-          <div className="container mx-auto max-w-7xl relative z-10">
-            {/* Grid: 1 column on mobile, 2 on LG screens */}
+          <div className="container mx-auto max-w-7xl relative z-10 py-10">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
 
               {/* ── LEFT ── */}

@@ -56,7 +56,7 @@ const OurImpact = () => {
       />
       <div className="min-h-screen bg-background">
 
-        <section className="relative pt-12 pb-32 px-4 overflow-hidden bg-[#fafafa]">
+        <section className="relative pt-12 pb-12 px-4 overflow-hidden bg-[#fafafa]">
 
           {/* Background */}
           <div className="absolute inset-0 z-0 pointer-events-none">
@@ -138,7 +138,7 @@ const OurImpact = () => {
           </motion.div>
 
           {/* Main content — unchanged */}
-          <div className="container mx-auto max-w-5xl relative z-10 text-center px-4">
+          <div className="container mx-auto max-w-5xl relative z-10 text-center px-4 pt-5">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ const OurImpact = () => {
               </div>
 
               {/* Heading */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[0.95] tracking-tighter">
                 Our{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                   Impact & <br /> Case Studies
