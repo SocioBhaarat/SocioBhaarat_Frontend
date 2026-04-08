@@ -43,11 +43,8 @@ const Footer = () => {
       { name: "E-commerce Solutions", path: "/design-development/ecommerce-development" },
       { name: "Graphic Designing", path: "/design-development/graphic-designing" },
     ],
-    // Specialized Automation
     automation: [
-      { name: "WhatsApp Broadcasting", path: "whatsapp-marketing/bulk-broadcasting" },
-      { name: "Custom Chatbots", path: "/whatsapp-marketing/custom-chatbot" },
-      { name: "Number Verification", path: "/whatsapp-marketing/number-verification" },
+      { name: "WhatsApp Business API", path: "/whatsapp-business-api" },
     ],
     legal: [
       { name: "Terms & Conditions", path: "/terms" },
@@ -75,8 +72,8 @@ const Footer = () => {
               alt="Socio Bhaarat"
               className="h-10 md:h-12 md:w-32 md:mx-0 object-contain"
             />
-            <p className="text-slate-500 text-sm md:text-base leading-relaxed font-medium italic border-l-0 md:border-l-4 border-primary/20 md:pl-6 max-w-xl mx-auto md:mx-0">
-              "{footerData.about.description}"
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed font-medium border-l-0 md:border-l-4 border-primary/20 md:pl-6 max-w-xl mx-auto md:mx-0">
+              {footerData.about.description}
             </p>
             <div className="flex justify-center md:justify-start gap-3">
               {footerData.about.socials.map((social, i) => (
@@ -86,7 +83,7 @@ const Footer = () => {
                   target="_blank"
                   aria-label={social.name}
                   rel="noopener noreferrer"
-                  className={`p-3 rounded-xl bg-slate-50 text-slate-500 ${social.color} transition-all border border-slate-100 hover:shadow-sm active:scale-95`}
+                  className={`p-3 rounded-xl bg-slate-50 text-slate-700 ${social.color} transition-all border border-slate-100 hover:shadow-sm active:scale-95`}
 
                 >
                   {React.cloneElement(social.icon as React.ReactElement, { size: 18 })}
@@ -97,9 +94,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="md:col-span-5 flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-600 text-center md:text-left">
+            <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-600 text-center md:text-left">
               Architecture
-            </h3>
+            </div>
             <div className="grid grid-cols-2 gap-2">
               {footerData.quickLinks.map((link, i) => (
                 <Link
@@ -116,13 +113,13 @@ const Footer = () => {
         </div>
 
         {/* ROW 2: Service Stacks + Contact */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
 
           {/* Marketing Stack */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Marketing Stack
-            </h3>
+            </div>
             <ul className="flex flex-col gap-3">
               {footerData.marketing.map((link, i) => (
                 <li key={i}>
@@ -139,9 +136,9 @@ const Footer = () => {
 
           {/* Dev & Design Stack */}
           <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Dev & Design
-            </h3>
+            </div>
             <ul className="flex flex-col gap-3">
               {footerData.development.map((link, i) => (
                 <li key={i}>
@@ -154,13 +151,9 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Automation Stack */}
-          <div className="flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3 pt-5">
               Automation
-            </h3>
+            </div>
             <ul className="flex flex-col gap-3">
               {footerData.automation.map((link, i) => (
                 <li key={i}>
@@ -177,9 +170,9 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="col-span-2 lg:col-span-1 flex flex-col gap-5">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-600 italic border-b border-slate-100 pb-3">
               Direct Line
-            </h3>
+            </div>
             <ul className="flex flex-col gap-5">
               {footerData.contact.map((item, i) => (
                 <li key={i} className="flex items-center gap-4 group">

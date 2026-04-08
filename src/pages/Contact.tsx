@@ -28,7 +28,7 @@ const Contact = () => {
         );
 
 
-  const url = `https://wa.me/?text=919407448837${text}`;
+  const url = `https://wa.me/919407448837?text=${text}`;
 
   window.open(url, "_blank");
 };
@@ -44,7 +44,7 @@ const Contact = () => {
       />
       <div className="min-h-screen bg-[#fafafa] relative overflow-hidden">
 
-        <section className="relative pt-10 pb-16 overflow-hidden">
+        <section className="relative pt-10 sm:pt-2 pb-16 overflow-hidden">
           {/* Background - Added overflow-x-hidden to prevent horizontal scroll */}
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
@@ -53,8 +53,7 @@ const Contact = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 md:w-[400px] md:h-[400px] bg-blue-500/[0.04] blur-[60px] md:blur-[100px] rounded-full" />
           </div>
 
-          <div className="container mx-auto max-w-7xl relative z-10">
-            {/* Grid: 1 column on mobile, 2 on LG screens */}
+          <div className="container mx-auto max-w-7xl relative z-10 py-10">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
 
               {/* ── LEFT ── */}
@@ -187,7 +186,7 @@ const Contact = () => {
                     <MapPin size={20} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[.25em] text-slate-400 mb-0.5 italic">
+                    <p className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[.25em] text-slate-700 mb-0.5 italic">
                       Visit Us
                     </p>
                     <p className="text-xs sm:text-sm font-semibold text-slate-900 leading-snug">

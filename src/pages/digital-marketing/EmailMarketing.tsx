@@ -58,7 +58,7 @@ const EmailMarketing = () => {
       num: "01",
       icon: Zap, iconBg: "bg-yellow-100",
       iconColor: "text-yellow-700",
-      numColor: "text-yellow-300",
+      numColor: "text-yellow-700",
       tagBg: "bg-yellow-50",
       tagColor: "text-yellow-700",
       tag: "Always-On Automation",
@@ -69,7 +69,7 @@ const EmailMarketing = () => {
       num: "02",
       icon: Mail, iconBg: "bg-blue-100",
       iconColor: "text-blue-700",
-      numColor: "text-blue-300",
+      numColor: "text-blue-700",
       tagBg: "bg-blue-50",
       tagColor: "text-blue-700",
       tag: "Brand Consistency",
@@ -80,7 +80,7 @@ const EmailMarketing = () => {
       num: "03",
       icon: Users, iconBg: "bg-green-100",
       iconColor: "text-green-700",
-      numColor: "text-green-300",
+      numColor: "text-green-700",
       tagBg: "bg-green-50",
       tagColor: "text-green-700",
       tag: "List Health",
@@ -91,7 +91,7 @@ const EmailMarketing = () => {
       num: "04",
       icon: Send, iconBg: "bg-indigo-100",
       iconColor: "text-indigo-700",
-      numColor: "text-indigo-300",
+      numColor: "text-indigo-700",
       tagBg: "bg-indigo-50",
       tagColor: "text-indigo-700",
       tag: "Post-Purchase Experience",
@@ -103,7 +103,7 @@ const EmailMarketing = () => {
       icon: MousePointer2,
       iconBg: "bg-orange-100",
       iconColor: "text-orange-700",
-      numColor: "text-orange-300",
+      numColor: "text-orange-700",
       tagBg: "bg-orange-50",
       tagColor: "text-orange-700",
       tag: "Revenue Campaigns",
@@ -115,7 +115,7 @@ const EmailMarketing = () => {
       icon: BarChart3,
       iconBg: "bg-teal-100",
       iconColor: "text-teal-700",
-      numColor: "text-teal-300",
+      numColor: "text-teal-700",
       tagBg: "bg-teal-50",
       tagColor: "text-teal-700",
       tag: "Full Visibility",
@@ -377,9 +377,9 @@ const EmailMarketing = () => {
                         <f.icon size={14} className="text-blue-600 group-hover:text-white transition-colors duration-200" />
                       </div>
                       <div>
-                        <h4 className=" text-[14px] font-bold text-slate-900 mb-1 group-hover:text-blue-700 transition-colors">
+                        <div className=" text-[14px] font-bold text-slate-900 mb-1 group-hover:text-blue-700 transition-colors">
                           {f.title}
-                        </h4>
+                        </div>
                         <p className="text-[12px] text-slate-700 font-medium leading-relaxed">{f.sub}</p>
                       </div>
                     </div>
@@ -429,9 +429,9 @@ const EmailMarketing = () => {
                       <m.icon size={17} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className=" text-base font-bold text-slate-900 leading-snug mb-0.5">
+                      <div className=" text-base font-bold text-slate-900 leading-snug mb-0.5">
                         {m.title}
-                      </h4>
+                      </div>
                       <p className="text-sm text-slate-800 font-medium">{m.sub}</p>
                     </div>
                     <span className={`text-[9px] font-bold uppercase tracking-[.15em] px-3 py-1.5 rounded-full flex-shrink-0 ${m.badgeBg}`}>
@@ -446,9 +446,9 @@ const EmailMarketing = () => {
                     <p className="text-[9px] font-bold uppercase tracking-[.2em] text-blue-200 mb-1">
                       Retention Strategy
                     </p>
-                    <h4 className="text-base tracking-wide font-bold text-white">
+                    <div className="text-base tracking-wide font-bold text-white">
                       Automated Lifecycle Engine
-                    </h4>
+                    </div>
                   </div>
                   <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
                     <RefreshCcw size={20} className="text-white" />

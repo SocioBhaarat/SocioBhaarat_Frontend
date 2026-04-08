@@ -41,7 +41,7 @@ const MidNavigation = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-full px-6"
+                  className="bg-blue-600 hover:bg-accent/90 text-accent-foreground font-semibold rounded-full px-6"
                   onClick={() => window.open("https://wa.me/+919407448837", "_blank")}
                 >
                   BOOK A CALL

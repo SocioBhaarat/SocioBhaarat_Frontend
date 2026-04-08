@@ -180,7 +180,7 @@ const WhatsAppPackages = () => {
           </motion.div>
 
           {/* ── Main content ── */}
-          <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="container mx-auto max-w-6xl relative z-10 pt-5">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
               {/* ── LEFT: Text content ── */}

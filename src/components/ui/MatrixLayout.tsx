@@ -191,7 +191,6 @@ function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProp
                   {process.map((_, i) => (
                     <div
                       key={i}
-                      aria-label='decorative-footer-btn'
                       className={cn(
                         "h-1.5 rounded-full transition-all duration-300 bg-white",
                         i === activePhase ? "w-5 opacity-100" : "w-1.5 opacity-35"

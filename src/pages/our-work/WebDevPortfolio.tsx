@@ -98,7 +98,7 @@ const WebDevPortfolio = () => {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
       </section> */}
 
-        <section className="relative pt-12 pb-32 px-4 overflow-hidden bg-[#fafafa]">
+        <section className="relative pt-12 pb-12 px-4 overflow-hidden bg-[#fafafa]">
 
           {/* Background */}
           <div className="absolute inset-0 z-0 pointer-events-none">
@@ -180,7 +180,7 @@ const WebDevPortfolio = () => {
           </motion.div>
 
           {/* Main content — unchanged */}
-          <div className="container mx-auto max-w-5xl relative z-10 text-center px-4 md:px-6">
+          <div className="container mx-auto max-w-5xl relative z-10 text-center px-4 md:px-6 pt-5">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -295,7 +295,7 @@ const WebDevPortfolio = () => {
                       </div>
                     </div>
 
-                    <p className="text-slate-500 text-lg leading-relaxed italic font-medium border-l-4 border-slate-100 pl-6">
+                    <p className="text-slate-700 text-lg leading-relaxed font-medium border-l-4 border-slate-100 pl-6">
                       {project.description}
                     </p>
 
@@ -312,7 +312,7 @@ const WebDevPortfolio = () => {
                       ))}
                     </div>
 
-                    <Button asChild className="h-14 px-8 rounded-full bg-slate-900 hover:bg-primary text-white font-black text-xs tracking-[0.2em] transition-all group/btn shadow-xl shadow-slate-200">
+                    <Button asChild className="h-14 px-8 rounded-full bg-slate-900 hover:bg-primary text-white font-bold text-xs tracking-[0.2em] transition-all group/btn shadow-xl shadow-slate-200">
                       <a href={project.live} target="_blank" rel="noopener noreferrer">
                         EXPLORE DEPLOYMENT
                         <ExternalLink className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
@@ -339,7 +339,7 @@ const WebDevPortfolio = () => {
               </span>
             </button> */}
 
-              <p className="mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">
+              <p className="mt-4 text-[10px] font-bold text-slate-600 uppercase tracking-widest">
                 42+ Additional Projects available upon request
               </p>
             </div>

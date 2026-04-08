@@ -29,7 +29,7 @@ function ExploralPanel({ content }) {
                         </span>
 
                         {/* Number: Hidden on mobile to save space */}
-                        <span className={`hidden md:block ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-300" : "text-slate-600"}`}>
+                        <span className={`hidden md:block ml-auto text-[9px] font-bold tracking-[.15em] flex-shrink-0 ${active === i ? "text-blue-700" : "text-slate-700"}`}>
                             {item.num}
                         </span>
                     </button>

@@ -14,8 +14,6 @@ const WebDevelopmentPackages = () => {
     { icon: Layers, label: "Projects Shipped", value: "240+", color: "bg-orange-50 border-orange-200 text-orange-700", pos: "bottom-[15%] left-[4%]", delay: 0.3 },
     { icon: CheckCircle2, label: "Client Satisfaction", value: "4.9★", color: "bg-violet-50 border-violet-200 text-violet-700", pos: "bottom-[24%] right-[5%]", delay: 0.45 },
   ];
-
-  const pills = ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Vercel"];
   const packages = [
     {
       name: "Starter Package",
@@ -83,42 +81,42 @@ const WebDevelopmentPackages = () => {
       <div className="min-h-screen bg-background">
 
         <section className="relative pt-12 pb-10 md:pb-36 overflow-hidden bg-[#fafafa]">
-
           {/* Background */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -z-10 animate-pulse" />
-            <div className="absolute bottom-[-80px] left-[-60px] w-[360px] h-[360px] bg-orange-500/[0.04] rounded-full blur-[90px]" />
+            <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary/5 blur-[80px] md:blur-[120px] rounded-full -z-10 animate-pulse" />
+            <div className="absolute bottom-[-40px] left-[-30px] md:bottom-[-80px] md:left-[-60px] w-[260px] md:w-[360px] h-[260px] md:h-[360px] bg-orange-500/[0.04] rounded-full blur-[60px] md:blur-[90px]" />
           </div>
 
-          <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-center">
+          <div className="container mx-auto pt-10 md:px-4 max-w-7xl relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 lg:gap-12 items-start lg:items-center">
 
               {/* ── LEFT — benefits ── */}
               <motion.div
                 initial={{ opacity: 0, x: 24 }}
-                animate={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-                className="flex flex-col gap-6"
+                className="flex flex-col gap-6 text-center lg:text-left"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm w-fit">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md text-primary text-[10px] font-bold tracking-[0.2em] uppercase shadow-sm w-fit mx-auto lg:mx-0">
                   <Zap className="w-3 h-3" /> Growth Engineering Lab
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-800 leading-tight tracking-tighter">
-                  Website Development <br />
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-slate-800 leading-tight tracking-tighter">
+                  Website Development <br className="hidden sm:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-orange-500 font-medium">
                     Packages
                   </span>
                 </h1>
 
-                <p className="text-base md:text-lg text-slate-600 max-w-lg leading-relaxed font-semibold">
+                <p className="text-sm md:text-base lg:text-lg text-slate-600 max-w-lg leading-relaxed font-semibold mx-auto lg:mx-0">
                   Select a high-performance framework tailored for your business scale.
                   All packages include dedicated support and full source code delivery.
                 </p>
 
                 {/* 2×2 Stat grid */}
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 max-w-md mx-auto lg:mx-0">
                   {[
                     { val: "3", label: "Plan Tiers", color: "text-blue-600", bg: "bg-blue-50 border-blue-100" },
                     { val: "7 Days", label: "Go Live In", color: "text-orange-600", bg: "bg-orange-50 border-orange-100" },
@@ -127,12 +125,12 @@ const WebDevelopmentPackages = () => {
                   ].map((s, i) => (
                     <div
                       key={i}
-                      className={`flex flex-col items-center justify-center py-5 rounded-2xl border ${s.bg}`}
+                      className={`flex flex-col items-center justify-center p-8 md:py-5 rounded-2xl border ${s.bg}`}
                     >
-                      <div className={`font-display text-2xl font-black leading-none mb-1 ${s.color}`}>
+                      <div className={`font-display text-xl md:text-2xl font-black leading-none mb-1 ${s.color}`}>
                         {s.val}
                       </div>
-                      <div className="text-[9px] font-bold uppercase tracking-[.18em] text-slate-700">
+                      <div className="text-[10px] md:text-[9px] font-bold uppercase tracking-[.18em] text-slate-700">
                         {s.label}
                       </div>
                     </div>
@@ -140,16 +138,16 @@ const WebDevelopmentPackages = () => {
                 </div>
 
                 {/* CTA */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
                   <Button
-                    className="rounded-full px-7 h-11 text-sm font-bold bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all hover:scale-105"
+                    className="rounded-full px-7 h-11 text-xs sm:text-sm font-bold bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all hover:scale-105"
                     onClick={() => navigate("/contact")}
                   >
                     View All Packages <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                   <Button
                     variant="outline"
-                    className="rounded-full px-7 h-11 text-sm font-bold border-2 border-primary/25 text-primary hover:bg-primary/5 transition-all"
+                    className="rounded-full px-7 h-11 text-xs sm:text-sm font-bold border-2 border-primary/25 text-primary hover:bg-primary/5 transition-all"
                     onClick={() => navigate("/contact")}
                   >
                     Book a Free Call
@@ -158,22 +156,23 @@ const WebDevelopmentPackages = () => {
               </motion.div>
 
 
-              {/* ── RIGHT — heading + stats + CTA ── */}
+              {/* ── RIGHT — content ── */}
               <motion.div
                 initial={{ opacity: 0, x: -24 }}
-                animate={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 className="flex flex-col gap-6"
               >
                 {/* Eyebrow */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center justify-center lg:justify-start gap-2">
                   <div className="w-5 h-[2px] bg-primary rounded-full" />
                   <span className="text-sm font-bold tracking-[.28em] uppercase text-primary">
                     What You Get
                   </span>
                 </div>
 
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight text-center lg:text-left">
                   Websites that work{" "}
                   <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent">
                     while you sleep.
@@ -209,31 +208,30 @@ const WebDevelopmentPackages = () => {
                 </div>
 
                 {/* Possibilities */}
-                <div className="flex flex-col gap-2 pt-2 border-t border-slate-100">
+                <div className="flex flex-col gap-2 pt-2 border-t border-slate-100 items-center lg:items-start">
                   <p className="text-[10px] font-bold uppercase tracking-[.25em] text-slate-400 mb-1">
                     What becomes possible
                   </p>
-                  {[
-                    "Go live in 7–14 days from sign-off",
-                    "2× more leads from the same traffic",
-                    "Rank on Google Page 1 within 90 days",
-                    "Full ownership — your code, your domain",
-                  ].map((p, i) => (
-                    <div key={i} className="flex items-center gap-2.5">
-                      <div className="w-4 h-4 rounded-md bg-green-50 flex items-center justify-center flex-shrink-0">
-                        <Check size={10} strokeWidth={3} className="text-green-600" />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-4 gap-y-2">
+                    {[
+                      "Go live in 7–14 days from sign-off",
+                      "2× more leads from the same traffic",
+                      "Rank on Google Page 1 within 90 days",
+                      "Full ownership — your code, your domain",
+                    ].map((p, i) => (
+                      <div key={i} className="flex items-center gap-2.5">
+                        <div className="w-4 h-4 rounded-md bg-green-50 flex items-center justify-center flex-shrink-0">
+                          <Check size={10} strokeWidth={3} className="text-green-600" />
+                        </div>
+                        <span className="text-xs font-semibold text-slate-600">{p}</span>
                       </div>
-                      <span className="text-xs font-semibold text-slate-600">{p}</span>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </motion.div>
 
             </div>
           </div>
-
-          {/* Bottom fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none" />
         </section>
 
         <section className=" md:py-12 sm:px-6 lg:px-8 relative z-10">

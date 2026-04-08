@@ -328,7 +328,7 @@ const About = () => {
               <div className="relative h-auto md:h-64 transition-transform duration-500 preserve-3d group-hover:rotate-y-12 bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-xl">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 bg-primary/10 rounded-xl text-primary"><Target size={24} /></div>
-                  <h4 className="text-2xl font-bold uppercase">Our Mission</h4>
+                  <div className="text-2xl font-bold uppercase">Our Mission</div>
                 </div>
                 <p className="text-slate-800 text-base font-medium leading-relaxed">
                   To empower businesses with innovative digital marketing solutions that increase visibility and generate measurable revenue growth.
@@ -345,7 +345,7 @@ const About = () => {
               <div className="relative h-auto md:h-64 transition-transform duration-500 preserve-3d group-hover:-rotate-y-12 bg-slate-600 p-10 rounded-[2.5rem] text-white shadow-2xl">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-3 bg-white/10 rounded-xl text-white"><Eye size={24} /></div>
-                  <h4 className="text-2xl font-bold uppercase">Our Vision</h4>
+                  <div className="text-2xl font-bold uppercase">Our Vision</div>
                 </div>
                 <p className="text-slate-100 font-medium leading-relaxed">
                   To become a trusted digital transformation partner known for delivering impactful strategies and scalable solutions.
@@ -368,9 +368,9 @@ const About = () => {
                 { val: "95%", label: "Satisfaction Rate" }
               ].map((stat, i) => (
                 <div key={i} className="text-center group">
-                  <h4 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter group-hover:text-primary transition-colors">
+                  <div className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter group-hover:text-primary transition-colors">
                     {stat.val}
-                  </h4>
+                  </div>
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mt-2">{stat.label}</p>
                 </div>
               ))}

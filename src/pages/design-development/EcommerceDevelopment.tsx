@@ -222,7 +222,7 @@ const EcommerceDevelopment = () => {
                 <div className="w-8 h-0.5 bg-blue-600 mb-6 rounded-full" />
 
                 <h2 className=" text-3xl sm:text-5xl font-bold mb-5">
-                  Why Choose <br className="block sm:hidden"/>
+                  Why Choose <br className="block sm:hidden" />
                   <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 font-medium">
                     Socio Bhaarat
                   </span>
@@ -371,7 +371,6 @@ const EcommerceDevelopment = () => {
         </section>
 
         {/* PRODUCTION ROADMAP */}
-
         <section className="py-5 bg-slate-50">
           <div className="container mx-auto max-w-7xl px-4">
 
@@ -395,25 +394,17 @@ const EcommerceDevelopment = () => {
                   key={step.id}
                   whileHover={{ backgroundColor: "rgb(248 250 252)" }}
                   className={cn(
-                    "relative bg-white p-9 flex flex-col gap-0 group transition-colors duration-200 cursor-default overflow-hidden",
-                    // right border: all except last in each row
-                    i % 3 !== 2 && "lg:border-r border-border",
-                    i % 2 !== 1 && "sm:border-r lg:border-r-0 border-border",
-                    i % 3 === 2 && "lg:border-r-0",
-                    // bottom border: all except last row
-                    i < arr.length - 3 && "lg:border-b border-border",
-                    i < arr.length - 2 && "sm:border-b lg:border-b-0 border-border",
-                    i < arr.length - 1 && "border-b lg:border-b-0 sm:border-b-0 border-border",
+                    "relative bg-white p-9 flex flex-col gap-0 group transition-colors duration-200 cursor-default overflow-hidden border"
                   )}
                 >
                   {/* Top row: icon + number */}
                   <div className="flex items-start justify-between mb-7">
-                    <div className="w-12 h-12 rounded-[14px] border border-border bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-200 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-[14px] border border-border bg-slate-50 flex items-center justify-center group-hover:bg-gray-50 group-hover:border-blue-200 transition-all duration-300">
                       <span className="text-blue-500">
                         {step.icon}
                       </span>
                     </div>
-                    <span className=" text-[3.8rem] font-normal leading-none text-slate-300 group-hover:text-blue-100 transition-colors duration-300 select-none">
+                    <span className=" text-[3.8rem] font-normal leading-none text-slate-600 group-hover:text-slate-700 transition-colors duration-300 select-none">
                       {step.id}
                     </span>
                   </div>
@@ -429,7 +420,7 @@ const EcommerceDevelopment = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[15px] text-muted-foreground italic leading-relaxed">
+                  <p className="text-[15px] text-muted-foreground font-medium leading-relaxed">
                     {step.description}
                   </p>
 
@@ -465,47 +456,42 @@ const EcommerceDevelopment = () => {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {ecomTechStack.map((tech, index) => (
+              {ecomTechStack.map((tech) => (
                 <motion.div
-                  key={index}
+                  key={tech.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -10 }}
-                  className="group bg-slate-50 border border-slate-100 p-8 rounded-[2.5rem] flex flex-col items-center shadow-lg hover:shadow-xl transition-all duration-500"
+                  whileHover={{ y: -4 }} // very subtle lift
+                  transition={{ duration: 0.3 }}
+                  role="group"
+                  className="group bg-white border border-slate-300 p-8 rounded-[2rem] flex flex-col items-center transition-all duration-300"
                 >
-                  {/* Icon Container */}
-                  <div className="relative w-16 h-16 md:w-20 md:h-20 bg-white rounded-3xl flex items-center justify-center group-hover:bg-white transition-all duration-500 border border-transparent group-hover:border-slate-100 shadow-inner group-hover:shadow-none overflow-hidden">
-
-                    {/* Dynamic Background Glow */}
+                  {/* Icon */}
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-200">
                     <div
-                      className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl rounded-full"
-                      style={{ backgroundColor: tech.color }}
-                    />
-
-                    {/* React Icon Component */}
-                    <div
-                      className="text-4xl md:text-5xl transition-all duration-500 "
+                      aria-hidden="true"
+                      className="text-4xl md:text-5xl transition-transform duration-300 group-hover:scale-105"
                       style={{ color: tech.color }}
                     >
                       {tech.icon}
                     </div>
                   </div>
 
-                  {/* Text Info */}
-                  <h3 className="text-lg font-bold text-slate-800 transition-colors group-hover:text-black">
+                  {/* Title */}
+                  <h3 className="mt-5 text-lg font-bold text-slate-800">
                     {tech.name}
                   </h3>
 
-                  <div className="mt-3 px-3 py-1 rounded-full bg-slate-50 group-hover:bg-white border border-transparent group-hover:border-slate-100 transition-all">
-                    <span className="text-[10px] font-bold tracking-widest text-slate-400 group-hover:text-slate-600">
-                      {tech.category}
-                    </span>
-                  </div>
+                  {/* Category */}
+                  <span className="mt-2 text-xs tracking-wide font-medium text-slate-800">
+                    {tech.category}
+                  </span>
 
-                  {/* Decorative Line */}
+                  {/* Minimal Accent Line */}
                   <div
-                    className="mt-6 h-1 w-0 group-hover:w-8 transition-all duration-500 rounded-full"
+                    aria-hidden="true"
+                    className="mt-5 h-[2px] w-6 group-hover:w-8 transition-all duration-300 rounded-full"
                     style={{ backgroundColor: tech.color }}
                   />
                 </motion.div>
