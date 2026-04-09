@@ -222,6 +222,9 @@ const GoogleMapMarketing = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775723702/photo-1526628953301-3e589a6a8b74_kq8vc7.jpg"
                       alt="Google Business Profile Optimization"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 
@@ -256,7 +259,7 @@ const GoogleMapMarketing = () => {
                 The SocioBhaarat Advantage
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-                Why Brands <br className="block sm:hidden"/>
+                Why Brands <br className="block sm:hidden" />
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Trust Us
                 </span>

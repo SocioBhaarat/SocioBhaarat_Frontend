@@ -246,6 +246,9 @@ const PaidMarketing = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724149/Paid-Marketing_s0lu9s.webp"
                       alt="Performance Marketing ROI Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

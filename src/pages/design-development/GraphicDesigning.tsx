@@ -194,6 +194,9 @@ const GraphicDesigning = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722861/photo-1626785774573-4b799315345d_swvhti.jpg"
                       alt="High-End Brand Identity Design"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

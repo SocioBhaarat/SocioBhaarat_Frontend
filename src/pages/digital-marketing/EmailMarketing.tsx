@@ -220,6 +220,9 @@ const EmailMarketing = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775723583/photo-1596526131083-e8c633c948d2_ic0xq2.jpg"
                       alt="Email Marketing Automation"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="relative rounded-[2rem] md:rounded-[3rem] group-hover:scale-105 transition-transform duration-1000"
                     />
 

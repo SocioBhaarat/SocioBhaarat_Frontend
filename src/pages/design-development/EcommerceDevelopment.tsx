@@ -179,6 +179,9 @@ const EcommerceDevelopment = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722828/photo-1557821552-17105176677c_guucjo.jpg"
                       alt="Advanced E-commerce Dashboard Engineering"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

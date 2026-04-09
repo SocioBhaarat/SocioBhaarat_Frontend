@@ -298,6 +298,9 @@ const PerformanceMarketing = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724485/photo-1460925895917-afdab827c52f_lntbjr.jpg"
                       alt="Data Analytics and Growth Performance Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

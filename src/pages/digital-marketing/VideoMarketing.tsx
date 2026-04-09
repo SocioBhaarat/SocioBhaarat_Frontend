@@ -204,6 +204,9 @@ const VideoMarketing = () => {
                                         <img
                                             src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775723878/video-production-concept-illustration_114360-1145_egjy7w.jpg"
                                             alt="Video Production Process"
+                                            loading="eager"
+                                            fetchPriority="high"
+                                            decoding="async"
                                             className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                                         />
 

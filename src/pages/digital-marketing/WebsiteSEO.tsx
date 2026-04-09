@@ -217,6 +217,9 @@ const WebsiteSEO = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775723958/photo-1600469984476-c713650f1b1b_kuh1vf.jpg"
                       alt="SEO Performance Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

@@ -49,9 +49,11 @@ const TechGrid = ({ techStack }: TechGridProps) => {
                   <img
                     src={`https://cdn.simpleicons.org/${tech.logo}`}
                     alt={tech.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-contain"
-                    onError={(e) => { 
-                      e.target.src = 'https://cdn.simpleicons.org/codeigniter'; 
+                    onError={(e) => {
+                      e.target.src = 'https://cdn.simpleicons.org/codeigniter';
                     }}
                   />
                 </div>

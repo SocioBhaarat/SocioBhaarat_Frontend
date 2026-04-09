@@ -243,6 +243,9 @@ const AppDevelopment = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722659/photo-1512941937669-90a1b58e7e9c_oxxoia.jpg"
                       alt="Web Development Engineering Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 
