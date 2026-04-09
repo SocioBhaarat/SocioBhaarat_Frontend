@@ -6,7 +6,7 @@ import ExploralPanel from "@/components/ui/ExploralPanel";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Mail, Zap, Users, BarChart3, ShieldCheck, MousePointer2,
-  RefreshCcw,Send, ArrowRight,
+  RefreshCcw, Send, ArrowRight,
   TrendingUp,
   Phone,
   Shield,
@@ -218,7 +218,7 @@ const EmailMarketing = () => {
 
                   <div className="relative p-3 bg-white border-2 border-slate-200 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775723583/photo-1596526131083-e8c633c948d2_ic0xq2.jpg"
                       alt="Email Marketing Automation"
                       className="relative rounded-[2rem] md:rounded-[3rem] group-hover:scale-105 transition-transform duration-1000"
                     />
@@ -475,7 +475,7 @@ const EmailMarketing = () => {
               </p>
             </div>
 
-            <ExploralPanel content={services}/>
+            <ExploralPanel content={services} />
           </div>
         </section>
 

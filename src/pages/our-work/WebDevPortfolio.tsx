@@ -12,7 +12,7 @@ const WebDevPortfolio = () => {
       description: "A multilingual news platform delivering Pune, national, and current affairs updates in multiple languages.",
       technologies: ["React", "Node.js", "MongoDB", "SEO Optimization"],
       results: ["Daily news publishing system", "Multilingual news delivery", "High SEO visibility"],
-      image: "/webDevPortfolio/puneNews24.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725765/puneNews24_f4r06t.webp",
       live: "https://punenews24.in"
     },
     {
@@ -21,7 +21,7 @@ const WebDevPortfolio = () => {
       description: "A personal growth and mental wellness platform empowering individuals with emotional balance, confidence, and life skills.",
       technologies: ["React", "Node.js", "MongoDB", "Content Platform"],
       results: ["Personal development resources", "Mental well-being guidance", "Self-growth learning platform"],
-      image: "/webDevPortfolio/calmChase.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725760/calmChase_hrudkd.webp",
       live: "https://calmchase.com"
     },
 
@@ -35,7 +35,7 @@ const WebDevPortfolio = () => {
         "Improved online property inquiries",
         "Lead generation for real estate projects"
       ],
-      image: "/webDevPortfolio/SNRealities.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725768/SNRealities_cfzzw4.webp",
       live: "https://snrealities.com"
     },
     {
@@ -48,7 +48,7 @@ const WebDevPortfolio = () => {
         "Simplified job posting and candidate application process",
         "Improved recruitment visibility for companies"
       ],
-      image: "/webDevPortfolio/lotusGroup.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725763/lotusGroup_z9mpkx.webp",
       live: "https://www.lotusjobgroup.com/"
     },
     {
@@ -57,7 +57,7 @@ const WebDevPortfolio = () => {
       description: "A purpose-driven initiative empowering entrepreneurs and skilled talent through innovation, partnerships, and impact-led growth.",
       technologies: ["React", "Next.js", "Node.js", "SEO Optimization"],
       results: ["Entrepreneur ecosystem support", "Innovation-driven collaboration", "Impact-led initiatives"],
-      image: "/webDevPortfolio/theresonance.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725771/theresonance_yuh4cg.webp",
       live: "https://theresonance.co.in"
     },
   ]

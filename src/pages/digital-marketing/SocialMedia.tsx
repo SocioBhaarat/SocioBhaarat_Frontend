@@ -261,7 +261,7 @@ const SocialMedia = () => {
                       poster="/images/video-placeholder.jpg"
                     >
                       {/* Replace with your actual video source URL */}
-                      <source src="/socialMedia.webm" type="video/webm" />
+                      <source src="https://res.cloudinary.com/djady4qza/video/upload/q_auto/f_auto/v1775722291/socialMedia_x1ktct.webm" type="video/webm" />
                     </video>
 
                     {/* Floating Mini-Metric Overlay */}

@@ -296,7 +296,7 @@ const PerformanceMarketing = () => {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724485/photo-1460925895917-afdab827c52f_lntbjr.jpg"
                       alt="Data Analytics and Growth Performance Dashboard"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
@@ -360,7 +360,7 @@ const PerformanceMarketing = () => {
                 The SocioBhaarat Advantage
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-                Why Brands <br className="block sm:hidden"/>
+                Why Brands <br className="block sm:hidden" />
                 <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
                   Trust Us
                 </span>

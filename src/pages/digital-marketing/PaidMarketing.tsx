@@ -212,7 +212,7 @@ const PaidMarketing = () => {
                 </div>
 
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold text-slate-800 leading-[1.05] tracking-tighter">
-                  
+
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-orange-500 font-medium pr-4 -mr-4 overflow-visible">Paid Marketing Service</span> for Traffic & Leads
                 </h1>
 
@@ -244,7 +244,7 @@ const PaidMarketing = () => {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="/images/Paid-Marketing.webp"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724149/Paid-Marketing_s0lu9s.webp"
                       alt="Performance Marketing ROI Dashboard"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
@@ -426,7 +426,7 @@ const PaidMarketing = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
                 Our Paid <span className="bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                 Marketing Services
+                  Marketing Services
                 </span>
               </h2>
             </div>

@@ -101,7 +101,7 @@ const Navigation = () => {
             <div className="flex items-center justify-between h-20">
               {/* Mobile Logo */}
               <Link to="/" className="md:hidden flex items-center">
-                <img src="/images/logo-full.webp" alt="Socio Bhaarat" className="h-20 sm:h-14 w-auto" />
+                <img src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722270/logo-full_fsgbzx.webp" alt="Socio Bhaarat" className="h-20 sm:h-14 w-auto" />
               </Link>
 
               {/* Desktop Menu */}
@@ -247,7 +247,7 @@ const Navigation = () => {
 
               {/* Mobile Menu Toggle Button */}
               <button onClick={() => setIsOpen(!isOpen)} className="xl:hidden text-foreground"
-              aria-label="Toggle Button"  
+                aria-label="Toggle Button"
               >
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>

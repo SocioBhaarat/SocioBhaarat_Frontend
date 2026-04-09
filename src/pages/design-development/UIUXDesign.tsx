@@ -272,7 +272,7 @@ const UIUXDesign = () => {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722963/photo-1551650975-87deedd944c3_ivk1uu.jpg"
                       alt="UI/UX Research and Design Dashboard"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
