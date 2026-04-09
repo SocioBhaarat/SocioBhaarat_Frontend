@@ -71,6 +71,9 @@ const About = () => {
                   <img
                     src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725156/photo-1460925895917-afdab827c52f_saocdn.jpg"
                     alt="Growth Engineering"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     className="w-full h-auto object-cover rounded-[2rem] group-hover:scale-105 transition-transform duration-1000"
                   />
                 </div>
@@ -153,6 +156,8 @@ const About = () => {
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725090/photo-1522071820081-009f0129c71c_mrqgix.jpg"
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000 aspect-square lg:aspect-auto"
                       alt="Engineering Team"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -303,6 +308,8 @@ const About = () => {
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725265/photo-1552664730-d307ca884978_wpqdxw.jpg"
                       alt="Team Collaboration"
+                      loading="lazy"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto shadow-2xl"
                     />
                     {/* Technical Watermark */}

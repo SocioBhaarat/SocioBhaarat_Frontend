@@ -20,7 +20,7 @@ const AnnouncementBar = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 left-0 w-full z-50 bg-secondary text-secondary-foreground py-4 md:py-2.5 sm:px-6 md:px-8 overflow-hidden">
+    <div className="sticky top-0 left-0 w-full z-50 bg-secondary text-secondary-foreground py-4 lg:py-2.5 sm:px-6 md:px-8 overflow-hidden">
       <div className="container mx-auto flex items-center justify-center gap-2 text-sm font-medium relative">
         <div className="relative flex-1 py-1 md:py-2 lg:py-3 flex items-center justify-center">
           <AnimatePresence mode="wait">

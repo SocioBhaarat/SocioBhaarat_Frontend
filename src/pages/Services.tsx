@@ -8,9 +8,15 @@ import {
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO";
+import { useEffect, useState } from "react";
 
 const Services = () => {
   const navigate = useNavigate();
+  const [showServices, setShowServices] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setShowServices(true), 1000);
+  }, []);
   const serviceCategories = [
     {
       category: "Digital Marketing",
@@ -178,12 +184,7 @@ const Services = () => {
         <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
           {/* 1. TECHNICAL BACKGROUND DESIGN */}
           <div className="absolute inset-0 z-0 pointer-events-none">
-            {/* Grid Overlay - Matches Brand Protection Lab */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
-
-            {/* Atmospheric Mesh Blobs */}
-            <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
           </div>
 
           {/* 2. MAIN CONTENT GRID */}
@@ -234,12 +235,15 @@ const Services = () => {
               >
                 <div className="relative group">
                   {/* Decorative Glow behind image */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem]" />
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725428/photo-1766853297154-3dcb4d3b38f8_nqwgox.jpg"
                       alt="Brand Reputation Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
                   </div>
@@ -254,7 +258,7 @@ const Services = () => {
         </section>
 
         {/* Dynamic Categories Section */}
-        {serviceCategories.map((cat, catIdx) => (
+        {showServices && serviceCategories.map((cat, catIdx) => (
           <section key={catIdx} className="py-16 sm:px-6 lg:px-8 border-b border-border last:border-0">
             <div className="container mx-auto">
               <div className="mb-12">

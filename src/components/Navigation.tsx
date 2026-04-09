@@ -95,7 +95,7 @@ const Navigation = () => {
       <TopBar />
       <AnnouncementBar />
       <MidNavigation />
-      <div className="sticky top-10 left-10 sm:top-11 sm:left-0 right-0 bg-white z-50  backdrop-blur-sm border-b border-border shadow-sm">
+      <div className="sticky top-10 left-10 lg:top-11 sm:left-0 right-0 bg-white z-50  backdrop-blur-sm border-b border-border shadow-sm">
         <nav className="bg-blue-400/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-6">
             <div className="flex items-center justify-between h-20">
