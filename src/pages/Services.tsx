@@ -211,7 +211,7 @@ const Services = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 + i * 0.1, duration: 0.4 }}
                       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide
-        ${i === 0 ? "bg-blue-600 text-white shadow-[0_2px_12px_#2563eb25]"
+                    ${i === 0 ? "bg-blue-600 text-white shadow-[0_2px_12px_#2563eb25]"
                           : i === 1 ? "bg-orange-700 text-white shadow-[0_2px_12px_#E8610A25]"
                             : "border border-slate-200 text-slate-500"}`}
                     >
@@ -258,7 +258,7 @@ const Services = () => {
         </section>
 
         {/* Dynamic Categories Section */}
-        {showServices && serviceCategories.map((cat, catIdx) => (
+        {/* {showServices && serviceCategories.map((cat, catIdx) => (
           <section key={catIdx} className="py-16 sm:px-6 lg:px-8 border-b border-border last:border-0">
             <div className="container mx-auto">
               <div className="mb-12">
@@ -281,6 +281,40 @@ const Services = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+        ))} */}
+
+        {showServices && serviceCategories.map((cat, catIdx) => (
+          <section key={catIdx} className="py-16 sm:px-6 lg:px-8 border-b border-border last:border-0">
+            <div className="container mx-auto">
+              <div className="flex flex-col lg:flex-row gap-10">
+
+                {/* Left: Heading sticky */}
+                <div className="lg:w-1/4 lg:sticky lg:top-36 lg:self-start">
+                  <h2 className="text-3xl font-bold mb-2">{cat.category}</h2>
+                  <p className="text-muted-foreground">{cat.description}</p>
+                </div>
+
+                {/* Right: Cards grid */}
+                <div className="lg:w-3/4 grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {cat.items.map((service, index) => (
+                    <div key={index} className="flex flex-col h-full group">
+                      <ServiceCard {...service} />
+                      <div className="mt-[-20px] px-6 pb-6 relative z-10">
+                        <Button
+                          variant="outline"
+                          className="w-full rounded-xl bg-blue-700 text-white group-hover:bg-blue-800 group-hover:text-primary-foreground transition-all font-semibold"
+                          onClick={() => navigate(service.path)}
+                        >
+                          View Service Details
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
               </div>
             </div>
           </section>
