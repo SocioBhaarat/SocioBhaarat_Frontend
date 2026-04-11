@@ -867,10 +867,9 @@ export default function Index() {
                       preload="metadata"
                       muted={false}
                       autoPlay
-                      controls
                       className="w-full h-full object-cover scale-105"
                     >
-                      <source src="/socio bhaarat1.3running.webm" type="video/webm" />
+                      <source src="https://res.cloudinary.com/djady4qza/video/upload/q_auto/f_auto/v1775721660/socio_bhaarat1.3running_uvoj2a.webm" type="video/webm" />
                     </video>
                   </div>
 
@@ -1100,10 +1099,9 @@ export default function Index() {
                       preload="metadata"
                       muted={false}   
                       autoPlay
-                      controls
                       className="w-full h-full object-cover"
                     >
-                      <source src="/GrowthSteps.webm" type="video/webm" />
+                      <source src="https://res.cloudinary.com/djady4qza/video/upload/q_auto/f_auto/v1775721679/GrowthSteps_lc3oj4.webm" type="video/webm" />
                     </video>
 
                     {/* Subtle Overlay */}
