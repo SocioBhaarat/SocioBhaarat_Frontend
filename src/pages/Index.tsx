@@ -161,77 +161,77 @@ const industries = [
   {
     name: "Real Estate",
     image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893169/photo-1560518883-ce09059eeffa_jl6iqa.jpg",
   },
   {
     name: "Hospitality",
     image:
-      "https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893269/doctor-with-stethoscope-hands-hospital-background_1423-1_jt005f.jpg",
   },
   {
     name: "Retail & Fashion",
     image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893340/photo-1441986300917-64674bd600d8_ztrwpo.jpg",
   },
   {
     name: "Healthcare",
     image:
-      "https://images.unsplash.com/photo-1580281657527-47f249e8f4df",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893401/photo-1580281657527-47f249e8f4df_kn7x5m.jpg",
   },
   {
     name: "Education",
     image:
-      "https://img.freepik.com/free-photo/education-concept-student-studying-brainstorming-campus-concept-close-up-students-discussing-their-subject-books-textbooks-selective-focus_1418-627.jpg",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893464/education-concept-student-studying-brainstorming-campus-concept-close-up-students-discussing-their-subject-books-textbooks-selective-focus_1418-627_evbfzy.jpg",
   },
   {
     name: "Manufacturing",
     image:
-      "https://img.freepik.com/premium-photo/mechanical-arm-welds-car-frame-factory_1208049-4.jpg",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893559/mechanical-arm-welds-car-frame-factory_1208049-4_gpp33m.jpg",
   },
   {
     name: "Restaurants & Hotels",
     image:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893650/photo-1555396273-367ea4eb4db5_mzo9wf.jpg",
   },
   {
     name: "Coaching & Consultancies",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893721/photo-1552664730-d307ca884978_iltrxp.jpg",
   },
   {
     name: "Startups",
     image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893803/photo-1551434678-e076c223a692_z6kgoo.jpg",
   },
   {
     name: "CA Firms",
     image:
-      "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893844/photo-1554224155-8d04cb21cd6c_etvy09.jpg",
   },
   {
     name: "Doctor’s Clinics",
     image:
-      "https://images.unsplash.com/photo-1584982751601-97dcc096659c",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893905/photo-1584982751601-97dcc096659c_wqerlv.jpg",
   },
   {
     name: "Advocates",
     image:
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775893945/photo-1589829545856-d10d557cf95f_jjjwij.jpg",
   },
   {
     name: "Salon & Parlours",
     image:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775894004/photo-1522337360788-8b13dee7a37e_wd8qzb.jpg",
   },
   {
     name: "Cloth & Saree Showrooms",
     image:
-      "https://images.pexels.com/photos/4940756/pexels-photo-4940756.jpeg",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775894065/pexels-photo-4940756_nczbbj.jpg",
   },
   {
     name: "E-commerce",
     image:
-      "https://img.freepik.com/free-photo/laptop-shopping-bags-online-shopping-concept_1423-190.jpg",
+      "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775894116/laptop-shopping-bags-online-shopping-concept_1423-190_nbpoz2.jpg",
   },
 ];
 
