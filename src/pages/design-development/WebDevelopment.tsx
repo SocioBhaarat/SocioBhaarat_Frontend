@@ -259,10 +259,6 @@ const WebDevelopment = () => {
           <div className="absolute inset-0 z-0 pointer-events-none">
             {/* Grid Overlay - Matches Brand Protection Lab */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
-
-            {/* Atmospheric Mesh Blobs */}
-            <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
           </div>
 
           {/* 2. MAIN CONTENT GRID */}
@@ -309,8 +305,7 @@ const WebDevelopment = () => {
               >
                 <div className="relative group">
                   {/* Decorative Glow behind image */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
-
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem]" />
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
                       src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775723023/photo-1555066931-4365d14bab8c_luxj4z.jpg"
@@ -322,7 +317,7 @@ const WebDevelopment = () => {
                     />
 
                     {/* Floating Mini-Metric Overlay */}
-                    <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg animate-bounce-slow">
+                    <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-lg">
                       <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Lighthouse Score</p>
                       <div className="flex items-center gap-2">
                         <p className="text-xl font-black text-slate-900">100/100</p>
