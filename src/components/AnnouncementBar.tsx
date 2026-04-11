@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const messages = [
-  "We exclusively work for only 10 clients annually.",
+  "We exclusively work for only 20 clients annually.",
   "Empower Your Business with Our Digital Solutions.",
   "Creativity has no price tag.",
   "Your Journey to Digital Success Starts Here.",
