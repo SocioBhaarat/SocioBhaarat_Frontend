@@ -365,10 +365,7 @@ const WordPressDevelopment = () => {
                     i < arr.length - 1 && "border-b sm:border-b-0 sm:border-r border-border/50"
                   )}
                 >
-                  {/* Index */}
-                  <span className="hidden md:block text-[4rem] font-normal text-border/40 leading-none mb-8">
-                    {card.index}
-                  </span>
+                  
 
                   {/* Icon */}
                   <div className="w-[46px] h-[46px] rounded-xl border border-border bg-muted flex items-center justify-center mb-6

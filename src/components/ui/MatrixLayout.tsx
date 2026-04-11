@@ -171,9 +171,9 @@ function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProp
                 </span>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white leading-tight">
+                <div className="text-2xl font-bold text-white leading-tight">
                   {process[activePhase].title}
-                </h3>
+                </div>
 
                 {/* Description */}
                 <p className="text-base leading-relaxed font-medium pl-5 relative">
@@ -239,9 +239,9 @@ function MatrixLayout({ process, activePhase, setActivePhase }: MatrixLayoutProp
                   <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" />
                   Unit Matrix // 0{activePhase + 1}
                 </span>
-                <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                <div className="text-3xl md:text-4xl font-bold text-white leading-tight">
                   {process[activePhase].title}
-                </h3>
+                </div>
                 <p className="text-lg md:text-xl leading-relaxed font-medium pl-5 relative">
                   <span className="absolute left-0 top-1 w-[3px] h-10 rounded-full bg-white/70" />
                   {process[activePhase].desc}
