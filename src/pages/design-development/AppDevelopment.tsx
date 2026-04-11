@@ -241,8 +241,11 @@ const AppDevelopment = () => {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722659/photo-1512941937669-90a1b58e7e9c_oxxoia.jpg"
                       alt="Web Development Engineering Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

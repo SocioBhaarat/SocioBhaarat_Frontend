@@ -16,7 +16,7 @@ const OurImpact = () => {
         { metric: "CAC", value: "65%↓", icon: Target },
         { metric: "Revenue", value: "₹6 Cr", icon: DollarSign },
       ],
-      image: "/OurImpact/SNRealities.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725623/SNRealities_by7mhw.webp",
     }, {
       client: "The Shaurya Academy",
       industry: "Education",
@@ -28,7 +28,7 @@ const OurImpact = () => {
         { metric: "Enrollments", value: "420%↑", icon: TrendingUp },
         { metric: "ROAS", value: "6.8x", icon: DollarSign },
       ],
-      image: "/OurImpact/Theshauryaacademy.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725625/Theshauryaacademy_x1mnly.webp",
     },
 
     {
@@ -42,7 +42,7 @@ const OurImpact = () => {
         { metric: "Inventory Sold", value: "₹12Cr+", icon: TrendingUp },
         { metric: "Digital ROI", value: "12x", icon: DollarSign },
       ],
-      image: "/OurImpact/AppleProperties.webp", // Updated image path suggestion
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725621/AppleProperties_u15rj8.webp",
     },
   ];
 

@@ -9,37 +9,37 @@ const Testimonials = () => {
       name: "Shourya Academy",
       content: "Partnering with SocioBhaarat has been highly beneficial for Shourya Academy. From social media management and ad campaigns to professional video shoots and both online and offline marketing assistance, their team supported our promotions end-to-end and helped us reach more students with better engagement and consistent enquiries.",
       rating: 5,
-      image: "/testimonials/ShouryaAcademy.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724638/ShouryaAcademy_fg5g1d.webp",
     },
     {
       name: "Lotus Consultancy",
       content: "We at Lotus Consultancy had a great experience working with SocioBhaarat. Their team helped us with WhatsApp marketing, built our website, provided reliable tech support, and even recovered our hacked Instagram account smoothly. Their prompt response and technical expertise makes them a dependable digital partner for businesses.",
       rating: 5,
-      image: "/testimonials/LotusGroups.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724636/LotusGroups_xmgyai.webp",
     },
     {
       name: "Yuvraaj Associates",
       content: "Working with SocioBhaarat has been excellent for Yuvraaj Associates. Their social media, ads, shoots, and lead generation strategies boosted our visibility, genuine enquiries, and overall business growth, making them a reliable long-term digital marketing partner.",
       rating: 5,
-      image: "/testimonials/YuvrajAssociates.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724641/YuvrajAssociates_lpnaxy.webp",
     },
     {
       name: "Sn Constructions",
       content: "SocioBhaarat handled our shoots, social media management, ads, lead generation, and Google presence with a result-focused approach. We received quality enquiries, improved sales performance, and successfully closed 2 confirmed orders through their marketing efforts.",
       rating: 5,
-      image: "/testimonials/SnConstruction.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724639/SnConstruction_r9sjjp.webp",
     },
     {
       name: "Apple Properties",
       content: "SocioBhaarat managed our shoots and ad campaigns with excellent execution and professionalism. Their creative approach and targeted marketing delivered strong visibility and overall very good results for our business.",
       rating: 5,
-      image: "/testimonials/AppleProperties.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724633/AppleProperties_bfrutf.webp",
     },
     {
       name: "Build Well's",
       content: "From video shoot and editing to social media management and ad campaigns, SocioBhaarat executed everything seamlessly. Their performance marketing approach brought us genuine leads, improved brand visibility, and directly contributed to consistent sales growth.",
       rating: 5,
-      image: "/testimonials/BuildWells.webp",
+      image: "https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724634/BuildWells_lb71jl.webp",
     },
   ];
 

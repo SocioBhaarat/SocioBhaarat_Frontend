@@ -220,8 +220,11 @@ const WordPressDevelopment = () => {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775723089/photo-1620287341056-49a2f1ab2fdc_jzp1ft.jpg"
                       alt="High Speed WordPress Optimization"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 
@@ -362,10 +365,7 @@ const WordPressDevelopment = () => {
                     i < arr.length - 1 && "border-b sm:border-b-0 sm:border-r border-border/50"
                   )}
                 >
-                  {/* Index */}
-                  <span className="hidden md:block text-[4rem] font-normal text-border/40 leading-none mb-8">
-                    {card.index}
-                  </span>
+                  
 
                   {/* Icon */}
                   <div className="w-[46px] h-[46px] rounded-xl border border-border bg-muted flex items-center justify-center mb-6

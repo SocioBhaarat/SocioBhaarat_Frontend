@@ -77,7 +77,7 @@
 
 // export default QuoteSection;
 
-"use client";
+
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -275,7 +275,7 @@ const QuoteSection = ({ quote, className }: QuoteSectionProps) => {
                   </div>
                   <img
                     className="w-9 h-9 rounded-full border-2 border-white shadow-sm"
-                    src="/images/logo-icon.webp"
+                    src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722270/logo-icon_rs8jfn.webp"
                     alt="Brand Logo"
                   />
                 </div>

@@ -205,8 +205,11 @@ function WhatsappBusinessAPI() {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775724402/photo-1611746872915-64382b5c76da_jbpssj.jpg"
                       alt="WhatsApp Business API Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

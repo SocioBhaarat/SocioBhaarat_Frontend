@@ -247,8 +247,11 @@ const ORMServices = () => {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1766853297154-3dcb4d3b38f8"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722510/photo-1766853297154-3dcb4d3b38f8_vcn3po.jpg"
                       alt="Brand Reputation Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

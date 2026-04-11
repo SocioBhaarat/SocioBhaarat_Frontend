@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import {
     Video, Play, Youtube, MonitorPlay, Film, Share2,
     TrendingUp, BarChart3, ArrowRight,
-     Clapperboard, Layers,
+    Clapperboard, Layers,
     Smartphone,
     Check
 } from "lucide-react";
@@ -202,8 +202,11 @@ const VideoMarketing = () => {
 
                                     <div className="relative overflow-hidden rounded-[2rem] md:rounded-[3rem]">
                                         <img
-                                            src="https://img.freepik.com/free-vector/video-production-concept-illustration_114360-1145.jpg"
+                                            src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775723878/video-production-concept-illustration_114360-1145_egjy7w.jpg"
                                             alt="Video Production Process"
+                                            loading="eager"
+                                            fetchPriority="high"
+                                            decoding="async"
                                             className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                                         />
 
@@ -502,7 +505,7 @@ const VideoMarketing = () => {
                         <div className="mb-14">
                             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-3">
                                 Our Video <span className=" bg-gradient-to-r from-blue-600 via-primary to-orange-500 bg-clip-text text-transparent font-medium">
-                                  Marketing Services
+                                    Marketing Services
                                 </span>
                             </h2>
                             <p className="text-sm md:text-base font-medium text-slate-800 leading-[1.8] max-w-2xl border-l-[3px] border-blue-100 pl-4">
@@ -511,7 +514,7 @@ const VideoMarketing = () => {
                         </div>
 
                         {/* Explorer panel */}
-                        <ExploralPanel content={services}/>
+                        <ExploralPanel content={services} />
                     </div>
                 </section>
 

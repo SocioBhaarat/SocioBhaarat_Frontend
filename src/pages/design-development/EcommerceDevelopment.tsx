@@ -177,8 +177,11 @@ const EcommerceDevelopment = () => {
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775722828/photo-1557821552-17105176677c_guucjo.jpg"
                       alt="Advanced E-commerce Dashboard Engineering"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
 

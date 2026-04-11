@@ -8,9 +8,15 @@ import {
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import SEO from "@/components/SEO";
+import { useEffect, useState } from "react";
 
 const Services = () => {
   const navigate = useNavigate();
+  const [showServices, setShowServices] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setShowServices(true), 1000);
+  }, []);
   const serviceCategories = [
     {
       category: "Digital Marketing",
@@ -178,12 +184,7 @@ const Services = () => {
         <section className="relative pb-10 flex items-start overflow-hidden bg-[#fafafa]">
           {/* 1. TECHNICAL BACKGROUND DESIGN */}
           <div className="absolute inset-0 z-0 pointer-events-none">
-            {/* Grid Overlay - Matches Brand Protection Lab */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:35px_35px]" />
-
-            {/* Atmospheric Mesh Blobs */}
-            <div className="absolute top-[-10%] left-[-5%] w-[45%] h-[45%] bg-blue-600/5 blur-[130px] rounded-full animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-orange-500/10 blur-[110px] rounded-full" />
           </div>
 
           {/* 2. MAIN CONTENT GRID */}
@@ -210,7 +211,7 @@ const Services = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 + i * 0.1, duration: 0.4 }}
                       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide
-        ${i === 0 ? "bg-blue-600 text-white shadow-[0_2px_12px_#2563eb25]"
+                    ${i === 0 ? "bg-blue-600 text-white shadow-[0_2px_12px_#2563eb25]"
                           : i === 1 ? "bg-orange-700 text-white shadow-[0_2px_12px_#E8610A25]"
                             : "border border-slate-200 text-slate-500"}`}
                     >
@@ -234,12 +235,15 @@ const Services = () => {
               >
                 <div className="relative group">
                   {/* Decorative Glow behind image */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem] animate-pulse" />
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 blur-3xl rounded-[3rem]" />
 
                   <div className="relative z-10 bg-white p-3 rounded-[3rem] shadow-2xl border border-white/50 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1766853297154-3dcb4d3b38f8"
+                      src="https://res.cloudinary.com/djady4qza/image/upload/q_auto/f_auto/v1775725428/photo-1766853297154-3dcb4d3b38f8_nqwgox.jpg"
                       alt="Brand Reputation Dashboard"
+                      loading="eager"
+                      fetchPriority="high"
+                      decoding="async"
                       className="rounded-[2.5rem] w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
                   </div>
@@ -254,7 +258,7 @@ const Services = () => {
         </section>
 
         {/* Dynamic Categories Section */}
-        {serviceCategories.map((cat, catIdx) => (
+        {/* {showServices && serviceCategories.map((cat, catIdx) => (
           <section key={catIdx} className="py-16 sm:px-6 lg:px-8 border-b border-border last:border-0">
             <div className="container mx-auto">
               <div className="mb-12">
@@ -277,6 +281,40 @@ const Services = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+        ))} */}
+
+        {showServices && serviceCategories.map((cat, catIdx) => (
+          <section key={catIdx} className="py-16 sm:px-6 lg:px-8 border-b border-border last:border-0">
+            <div className="container mx-auto">
+              <div className="flex flex-col lg:flex-row gap-10">
+
+                {/* Left: Heading sticky */}
+                <div className="lg:w-1/4 lg:sticky lg:top-36 lg:self-start">
+                  <h2 className="text-3xl font-bold mb-2">{cat.category}</h2>
+                  <p className="text-muted-foreground">{cat.description}</p>
+                </div>
+
+                {/* Right: Cards grid */}
+                <div className="lg:w-3/4 grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {cat.items.map((service, index) => (
+                    <div key={index} className="flex flex-col h-full group">
+                      <ServiceCard {...service} />
+                      <div className="mt-[-20px] px-6 pb-6 relative z-10">
+                        <Button
+                          variant="outline"
+                          className="w-full rounded-xl bg-blue-700 text-white group-hover:bg-blue-800 group-hover:text-primary-foreground transition-all font-semibold"
+                          onClick={() => navigate(service.path)}
+                        >
+                          View Service Details
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
               </div>
             </div>
           </section>
