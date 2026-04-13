@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { submitContactForm } from "@/services/formService";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,29 +10,41 @@ import SEO from "@/components/SEO";
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
-  const handleSubmit = (e) => {
-  e.preventDefault();
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const formData = new FormData(e.target);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setSubmitStatus(null);
 
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const phone = formData.get("phone");
-  const message = formData.get("message");
+    const form = e.target;
+    const formData = new FormData(form);
 
-  const text = encodeURIComponent(
-    `New Lead:
-      Name: ${name}
-      Email: ${email}
-      Phone: ${phone}
-      Project: ${message}`
-        );
+    const data = {
+      name: formData.get("name")?.toString().trim(),
+      email: formData.get("email")?.toString().trim(),
+      phone: formData.get("phone")?.toString().trim(),
+      message: formData.get("message")?.toString().trim(),
+    };
 
+    try {
+      if (!data.name || !data.email || !data.phone || !data.message) {
+        throw new Error("All fields are required");
+      }
 
-  const url = `https://wa.me/919407448837?text=${text}`;
+      await submitContactForm(data);
 
-  window.open(url, "_blank");
-};
+      setSubmitStatus("success");
+      form.reset();
+
+    } catch (err) {
+      console.error("Contact form error:", err);
+
+      setSubmitStatus("error");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
 
   return (
@@ -230,7 +243,7 @@ const Contact = () => {
                   <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:30px_30px] group-hover:bg-[size:20px_20px] transition-all duration-1000" />
                   <div className="relative z-10 space-y-2 md:space-y-4">
                     <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] text-secondary">Regional Headquarter</p>
-                    <div className="text-lg md:text-xl font-bold italic tracking-tight">Jabalpur, Madhya Pradesh</div>
+                    <h4 className="text-lg md:text-xl font-bold italic tracking-tight">Jabalpur, Madhya Pradesh</h4>
                     <p className="text-slate-800 text-xs md:text-sm italic border-l border-white/20 pl-4 font-medium">Serving the digital heart of Central India since 2024.</p>
                   </div>
                 </div>
@@ -254,7 +267,7 @@ const Contact = () => {
 
                       <div className="space-y-2">
                         <label className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-700 ml-2">Phone Number</label>
-                        <Input type="tel" name="phone" placeholder="Enter Your Phone Number" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
+                        <Input type="tel" name="phone" placeholder="Enter Your 10 Digit Phone Number" className="h-12 md:h-14 rounded-xl md:rounded-2xl border-2 text-sm md:text-base" />
                       </div>
 
                       <div className="space-y-2">
@@ -266,11 +279,22 @@ const Contact = () => {
                         type="submit"
                         size="lg"
                         disabled={submitting}
-                        className="w-full h-14 md:h-16 rounded-full bg-slate-900 hover:bg-primary text-white font-bold text-base md:text-lg transition-all shadow-xl hover:scale-[1.01] active:scale-95"
+                        className="w-full h-14 md:h-16 rounded-full bg-slate-900 hover:bg-primary text-white font-black text-base md:text-lg transition-all shadow-xl hover:scale-[1.01] active:scale-95"
                       >
                         {submitting ? "PROCESSING..." : "TRANSMIT MESSAGE"}
                         <Send className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                       </Button>
+
+                      {submitStatus === "success" && (
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-4 mt-4 text-sm text-green-800 bg-green-100 rounded-xl border border-green-200">
+                          Message transmitted successfully! We'll get back to you soon.
+                        </motion.div>
+                      )}
+                      {submitStatus === "error" && (
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-4 mt-4 text-sm text-red-800 bg-red-100 rounded-xl border border-red-200">
+                          Failed to transmit message. Please try again later or use the direct contacts.
+                        </motion.div>
+                      )}
                     </form>
                   </CardContent>
                 </Card>

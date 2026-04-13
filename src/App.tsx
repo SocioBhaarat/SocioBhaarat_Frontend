@@ -11,6 +11,7 @@ import ScrollToTop from "./hooks/ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import HiringForm from "./pages/HiringForm";
 
 const Index = lazy(() => import("./pages/Index"));
 const Services = lazy(() => import("./pages/Services"));
@@ -86,6 +87,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/hiring" element={<Hiring />} />
+              <Route path="/hiring/apply/:jobTitle" element={<HiringForm />} />
               <Route path="/contact" element={<Contact />} />
 
               {/* Digital Marketing */}
@@ -121,7 +123,6 @@ const App = () => (
               {/* Our Work */}
               <Route path="/our-work/Our-Impact" element={<MetaAdsPortfolio />} />
               <Route path="/our-work/web-development-projects" element={<WebDevPortfolio />} />
-              {/* <Route path="/our-work/content-work" element={<ContentPortfolio />} /> */}
 
               {/* Blog */}
               <Route path="/blog" element={<Blog />} />

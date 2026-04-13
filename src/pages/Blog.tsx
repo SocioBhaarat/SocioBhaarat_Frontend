@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
-import { Calendar, User, ArrowRight, BookOpen, ArrowUpRight, Clock, TrendingUp, Zap } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { getAllBlogs } from "@/services/blogService";
+import { Calendar, User, ArrowRight, BookOpen, ArrowUpRight, Clock, Search, ChevronDown, TrendingUp, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
@@ -39,6 +41,25 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const res = await getAllBlogs();
+        if (res.success && res.data) {
+          setBlogs(res.data);
+        }
+      } catch (err) {
+        console.error("Failed to fetch blogs:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
   return (
     <>
       <SEO
@@ -48,6 +69,7 @@ const Blog = () => {
         url="/blog"
       />
       <div className="min-h-screen bg-background">
+
         <section className="relative pt-14 pb-12 overflow-hidden bg-[#fafafa]">
 
           {/* Background */}
@@ -179,56 +201,82 @@ const Blog = () => {
             </div>
           </div>
         </section>
+
         <section className="py-20 md:px-4 bg-white relative">
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
+              {loading ? (
+                <div className="col-span-1 md:col-span-2 lg:col-span-3 text-center py-20 text-slate-500">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                  <p className="text-sm font-medium text-slate-500">Loading articles...</p>
+                </div>
+              ) : blogs.map((post, index) => (
                 <motion.div
                   key={post.id}
-                  whileHover={{ y: -8 }}
-                  className="relative p-[2px] rounded-[2.5rem] overflow-hidden group bg-transparent transition-all duration-500 border"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  whileHover={{ y: -6 }}
+                  className="group"
                 >
+                  <Card className="relative bg-white border border-slate-200 rounded-2xl h-full overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
 
-                  <Card className="relative bg-white border-slate-100 rounded-[2.4rem] h-full overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
-                    {/* Image Module: Standardized Lab Radius */}
-                    <div className="relative h-56 overflow-hidden m-3 rounded-[2rem]">
+                    {/* Image */}
+                    <div className="relative h-52 overflow-hidden">
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-slate-900/80 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest border border-white/20">
+                      {/* Gradient overlay for category badge readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
+                      <div className="absolute top-3 left-3">
+                        <span className="bg-white text-slate-800 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider shadow-sm border border-slate-100">
                           {post.category}
                         </span>
                       </div>
                     </div>
 
-                    <CardContent className="p-8 pt-4">
-                      {/* Technical Metadata Row */}
-                      <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-slate-700 mb-6 italic">
-                        <div className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-primary" /> {post.date}</div>
-                        <div className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-secondary" /> {post.readTime}</div>
+                    <CardContent className="p-6">
+                      {/* Metadata Row */}
+                      <div className="flex items-center gap-4 text-[11px] font-medium uppercase tracking-wider text-slate-700 mb-4">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5 text-primary" />
+                          <span>{post.date}</span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Clock className="w-3.5 h-3.5 text-slate-400" />
+                          <span>{post.readTime}</span>
+                        </div>
                       </div>
 
-                      <div className="text-xl font-black text-slate-900 mb-4 group-hover:text-primary">
+                      {/* Title */}
+                      <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-primary transition-colors duration-300 line-clamp-2">
                         {post.title}
-                      </div>
+                      </h3>
 
-                      <p className="text-slate-500 text-sm italic font-medium leading-relaxed border-l-2 border-primary/10 pl-4 mb-8 line-clamp-3">
+                      {/* Excerpt */}
+                      <p className="text-slate-700 font-medium text-sm leading-relaxed mb-6 line-clamp-3">
                         {post.excerpt}
                       </p>
 
-                      <div className="flex items-center justify-between pt-6 border-t border-slate-50">
-                        <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-700">
-                          <User className="w-3.5 h-3.5 text-accent" />
-                          <span>{post.author}</span>
+                      {/* Footer */}
+                      <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                            <User className="w-3 h-3 text-primary" />
+                          </div>
+                          <span className="text-xs font-semibold text-slate-600">{post.author}</span>
                         </div>
 
                         <Link to={`/blog/${post.id}`}>
-                          <Button variant="ghost" size="sm" className="group/btn text-[10px] font-black tracking-widest uppercase hover:bg-primary hover:text-white rounded-full transition-all">
-                            Decrypt More
-                            <ArrowUpRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-xs font-semibold tracking-wide text-primary hover:bg-primary hover:text-white rounded-full px-4 transition-all duration-300"
+                          >
+                            Read More
+                            <ArrowUpRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                           </Button>
                         </Link>
                       </div>
@@ -239,6 +287,7 @@ const Blog = () => {
             </div>
           </div>
         </section>
+
       </div>
     </>
 

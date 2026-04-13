@@ -133,4 +133,46 @@
   }
 }
 
+.blog-content {
+  overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
 
+/* Force all images inside Quill output to be responsive */
+.blog-content img {
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  display: block;
+}
+
+/* Scrollable code blocks instead of layout-breaking */
+.blog-content pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+/* Make tables scroll horizontally rather than overflow */
+.blog-content table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Quill sometimes embeds iframes (video embeds) — constrain them */
+.blog-content iframe,
+.blog-content video {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Long URLs / unbreakable strings */
+.blog-content a {
+  word-break: break-all;
+}
