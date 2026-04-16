@@ -11,6 +11,7 @@ import ScrollToTop from "./hooks/ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import HiringForm from "./pages/HiringForm";
 
 const Index = lazy(() => import("./pages/Index"));
 const Services = lazy(() => import("./pages/Services"));
@@ -63,17 +64,17 @@ const App = () => (
         <Navigation />
         <main>
           <Suspense fallback={
-            <div className="min-h-screen flex flex-col items-center justify-center gap-5">
-              <svg width="40" height="40" viewBox="0 0 40 40" className="animate-spin">
-                <circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" strokeWidth="3" className="opacity-10" />
+            <div className="min-h-screen flex flex-col items-center justify-center gap-5 opacity-80">
+              <svg width="40" height="40" viewBox="0 0 40 40" className="animate-spin text-slate-600/80">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" strokeWidth="3" className="opacity-20" />
                 <path d="M20 4 A16 16 0 0 1 36 20" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-              </svg>
+               </svg>
 
               <div className="flex flex-col items-center gap-1.5">
-                <p className="text-sm font-medium text-slate-700 tracking-tight">Getting things ready</p>
+                <p className="text-sm font-medium text-slate-700/80 tracking-tight">Getting things ready</p>
                 <div className="flex gap-1.5 items-center">
                   {[0, 1, 2].map(i => (
-                    <span key={i} className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-pulse"
+                    <span key={i} className="w-1.5 h-1.5 rounded-full bg-slate-400/80 animate-pulse"
                       style={{ animationDelay: `${i * 0.2}s` }} />
                   ))}
                 </div>
@@ -86,6 +87,7 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/testimonials" element={<Testimonials />} />
               <Route path="/hiring" element={<Hiring />} />
+              <Route path="/hiring/apply/:jobTitle" element={<HiringForm />} />
               <Route path="/contact" element={<Contact />} />
 
               {/* Digital Marketing */}
@@ -121,7 +123,6 @@ const App = () => (
               {/* Our Work */}
               <Route path="/our-work/Our-Impact" element={<MetaAdsPortfolio />} />
               <Route path="/our-work/web-development-projects" element={<WebDevPortfolio />} />
-              {/* <Route path="/our-work/content-work" element={<ContentPortfolio />} /> */}
 
               {/* Blog */}
               <Route path="/blog" element={<Blog />} />
